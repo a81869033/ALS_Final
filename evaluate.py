@@ -1,41 +1,39 @@
 #!/usr/bin/env python3
 """Evaluate submitted AIG files for the ALS 2026 final project."""
 
-from __future__ import annotations
-
 import argparse
 import re
 import subprocess
 import sys
-from dataclasses import dataclass
 from pathlib import Path
+from typing import List, Tuple
 
 
 PS_RE = re.compile(r"and\s*=\s*(\d+)\s+lev\s*=\s*(\d+)")
 
 
-@dataclass
 class CaseResult:
-    case: str
-    status: str
-    area: int | None = None
-    delay: int | None = None
-    adp: int | None = None
-    message: str = ""
+    def __init__(self, case, status, area=None, delay=None, adp=None, message=""):
+        self.case = case
+        self.status = status
+        self.area = area
+        self.delay = delay
+        self.adp = adp
+        self.message = message
 
 
-def run_abc(abc: Path, command: str, timeout: int) -> tuple[int, str]:
+def run_abc(abc: Path, command: str, timeout: int) -> Tuple[int, str]:
     result = subprocess.run(
         [str(abc), "-c", command],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        text=True,
+        universal_newlines=True,
         timeout=timeout,
     )
     return result.returncode, result.stdout
 
 
-def is_equivalent(abc: Path, truth: Path, aig: Path, timeout: int) -> tuple[bool, str]:
+def is_equivalent(abc: Path, truth: Path, aig: Path, timeout: int) -> Tuple[bool, str]:
     command = f"read_truth -xf {truth}; st; &get; &cec -t {aig}"
     code, output = run_abc(abc, command, timeout)
     if code != 0:
@@ -43,7 +41,7 @@ def is_equivalent(abc: Path, truth: Path, aig: Path, timeout: int) -> tuple[bool
     return "Networks are equivalent" in output, output.strip()
 
 
-def measure_adp(abc: Path, aig: Path, timeout: int) -> tuple[int, int, int]:
+def measure_adp(abc: Path, aig: Path, timeout: int) -> Tuple[int, int, int]:
     code, output = run_abc(abc, f"read {aig}; ps", timeout)
     if code != 0:
         raise RuntimeError(output.strip())
@@ -79,7 +77,7 @@ def evaluate_case(abc: Path, truth: Path, output_dir: Path, timeout: int) -> Cas
     return CaseResult(case=case, status="OK", area=area, delay=delay, adp=adp)
 
 
-def check_output_filenames(output_dir: Path) -> list[str]:
+def check_output_filenames(output_dir: Path) -> List[str]:
     if not output_dir.is_dir():
         return [f"Output directory not found: {output_dir}"]
     bad = []

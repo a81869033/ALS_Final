@@ -5,8 +5,6 @@ This example intentionally uses a very small ABC flow.  Students should replace
 or extend this script with their own AI/LLM-guided search or optimization flow.
 """
 
-from __future__ import annotations
-
 import argparse
 import subprocess
 import sys
@@ -20,7 +18,7 @@ def run_abc(abc: Path, truth: Path, output: Path) -> None:
         [str(abc), "-c", command],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        text=True,
+        universal_newlines=True,
     )
     if result.returncode != 0:
         raise RuntimeError(f"ABC failed for {truth.name}\n{result.stdout}")
