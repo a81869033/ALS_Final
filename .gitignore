@@ -1,10 +1,13 @@
 .agents/
 .codex/
 abc.history
+__pycache__/
 student/abc
 ref/
 AGENTS.md
 prompt_log.md
+student/work/
+student/results/candidate_history.csv
 student/tools/conda-env/
 student/tools/abc/src/
 student/tools/abc/original_abc_incompatible
