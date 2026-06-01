@@ -10,18 +10,37 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from student.backends.abc_flow import abc_resyn2_candidate, baseline_candidate
+from student.backends.abc_flow import ABC_ALL_FLOWS, ABC_FLOW_COMMANDS, abc_flow_candidate, baseline_candidate
 from student.common.candidate import append_candidates
 
 
 def parse_flows(value):
-    flows = [item.strip() for item in value.split(",") if item.strip()]
-    if not flows:
+    requested = [item.strip() for item in value.split(",") if item.strip()]
+    if not requested:
         raise argparse.ArgumentTypeError("At least one flow is required.")
-    allowed = set(["baseline", "abc_resyn2"])
-    unknown = [flow for flow in flows if flow not in allowed]
+    allowed = set(["baseline", "abc_all"])
+    allowed.update(ABC_FLOW_COMMANDS.keys())
+    unknown = [flow for flow in requested if flow not in allowed]
     if unknown:
         raise argparse.ArgumentTypeError("Unknown flow(s): {0}".format(", ".join(unknown)))
+
+    flows = []
+    for flow in requested:
+        if flow == "abc_all":
+            flows.extend(ABC_ALL_FLOWS)
+        else:
+            flows.append(flow)
+
+    deduped = []
+    seen = set()
+    for flow in flows:
+        if flow not in seen:
+            deduped.append(flow)
+            seen.add(flow)
+    flows = deduped
+
+    if "baseline" not in flows and any(flow in ABC_FLOW_COMMANDS for flow in flows):
+        flows.insert(0, "baseline")
     return flows
 
 
@@ -39,7 +58,9 @@ def parse_args():
         "--flows",
         type=parse_flows,
         default=parse_flows("baseline,abc_resyn2"),
-        help="Comma-separated flows. Supported: baseline,abc_resyn2.",
+        help="Comma-separated flows. Supported: baseline,abc_all,{0}.".format(
+            ",".join(ABC_FLOW_COMMANDS.keys())
+        ),
     )
     parser.add_argument("--abc", type=Path, default=ROOT / "student" / "abc")
     parser.add_argument("--benchmarks", type=Path, default=ROOT / "benchmarks")
@@ -63,7 +84,7 @@ def main():
     candidates = []
     baseline = None
 
-    if "baseline" in args.flows or "abc_resyn2" in args.flows:
+    if "baseline" in args.flows:
         baseline = baseline_candidate(
             case=args.case,
             truth=truth,
@@ -73,10 +94,13 @@ def main():
         )
         candidates.append(baseline)
 
-    if "abc_resyn2" in args.flows:
+    for flow in args.flows:
+        if flow == "baseline":
+            continue
         candidates.append(
-            abc_resyn2_candidate(
+            abc_flow_candidate(
                 case=args.case,
+                flow_name=flow,
                 parent=baseline,
                 truth=truth,
                 work_dir=args.work_dir,

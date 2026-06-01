@@ -316,15 +316,30 @@ Primary AIG cleanup and local optimization tool.
 Candidate commands:
 
 ```text
-strash; balance; rewrite; rewrite -z; balance
-strash; refactor; rewrite; balance
-strash; resub; rewrite; balance
-strash; dc2
-strash; dch -f
-resyn2
+abc_bal_rw       = balance; rewrite; rewrite -z; balance
+abc_resyn        = balance; rewrite; rewrite -z; balance; rewrite -z; balance
+abc_resyn2       = balance; rewrite; refactor; balance; rewrite; rewrite -z; balance; refactor -z; rewrite -z; balance
+abc_resyn2a      = balance; rewrite; balance; rewrite; rewrite -z; balance; rewrite -z; balance
+abc_resyn3       = balance; resub; resub -K 6; balance; resub -z; resub -z -K 6; balance; resub -z -K 5; balance
+abc_compress2    = balance -l; rewrite -l; refactor -l; balance -l; rewrite -l; rewrite -z -l; balance -l; refactor -z -l; rewrite -z -l; balance -l
+abc_resyn2rs     = resyn2-style flow interleaved with resubstitution at K=6,8,10,12
+abc_compress2rs  = level-preserving compress2-style flow interleaved with resubstitution
+abc_dc2          = strash; dc2; balance
+abc_dch          = strash; dch; balance
+abc_dc2_dch      = strash; dc2; dch; balance
+abc_dch_dc2      = strash; dch; dc2; balance
+abc_dc2_rw       = strash; dc2; balance; rewrite; rewrite -z; balance
+abc_dch_rw       = strash; dch; balance; rewrite; rewrite -z; balance
+abc_src_rw       = IWLS-style rewrite-only script
+abc_src_rws      = IWLS-style rewrite/resubstitution script
+abc_delay_try    = strash; dc2; if -K 6; strash; balance; rewrite -z; balance
 ```
 
 Use after nearly every non-ABC tool as cleanup.
+
+Initial survey result: on `ex200-ex209`, `abc_dc2_dch` and `abc_dch_dc2`
+dominated the traditional `resyn2` family for ADP, so they should be part of
+the default cheap ABC portfolio.
 
 ### 8.2 ABC9
 
@@ -541,21 +556,580 @@ These should be explicitly handled in implementation:
 9. Backend tools should be interleaved because one tool's local optimum can be another tool's starting point.
 10. Keep Pareto-like diversity, not only the current best ADP, during search.
 
-## 12. Suggested Implementation Order
+## 12. Current Detailed Execution Plan
 
-1. Fix ABC/evaluate environment.
-2. Create baseline result table.
-3. Implement candidate manager and CEC/ADP measurement.
-4. Implement ABC-only portfolio.
-5. Implement ABC + MockTurtle + ABC flow.
-6. Implement ABC + CULS + ABC flow.
-7. Implement E-Syn seed generation + ABC cleanup.
-8. Implement selected hybrid flows with budget controls.
-9. Attack `ex255-ex279` with AI-generated Verilog seeds.
-10. Attack `ex240-ex254`, then BF16/FP16 groups.
-11. Attack unknown group with split/decision-graph methods.
-12. Run full 100-case pipeline.
-13. Produce final result table and report material.
+This is the active implementation plan after the initial tool bring-up, baseline
+generation, candidate manager, and ABC-flow survey.
+
+### 12.1 Stage 1: Tool Validation and Wrappers
+
+Goal:
+
+```text
+Every synthesis or verification tool should be callable from the project
+pipeline with a clear input format, output format, timeout behavior, and
+verification path.
+```
+
+Tools to validate and wrap:
+
+- ABC
+  - Input/output: AIG -> AIG.
+  - Current status: working through `student/abc`.
+  - Existing wrapper: `student/common/abc.py`.
+  - Current flows: `abc_all` portfolio in `student/backends/abc_flow.py`.
+  - Verification: CEC against `benchmarks/exNNN.truth`, then ABC `ps`.
+
+- ABC9
+  - Input/output: AIG -> AIG.
+  - Role: alternative ABC optimization family, especially for low-level
+    candidates.
+  - Needed file: `student/backends/abc9_flow.py`.
+  - First smoke target: `ex200` from baseline and from best ABC candidate.
+
+- CULS
+  - Input/output: AIG -> AIG.
+  - Current status: built as `student/tools/culs/build/gpuls`.
+  - Constraint: requires non-sandbox GPU access.
+  - Needed file: `student/backends/culs_flow.py`.
+  - First smoke command class: `read input.aig; resyn2; write output.aig`.
+
+- MockTurtle
+  - Input/output target: AIG -> AIG.
+  - Current status: library/examples built, but no project-specific runner yet.
+  - Needed work: write a small C++ AIG-in/AIG-out runner or identify a built
+    example that can be adapted.
+  - Needed file: `student/backends/mockturtle_flow.py`.
+
+- E-Syn
+  - Role: representation-changing seed generator, not final solver.
+  - Target flow:
+
+```text
+AIG -> ABC write_eqn -> E-Syn rewrite -> EQN candidates -> ABC read_eqn/st -> AIG seeds
+```
+
+  - Needed file: `student/backends/esyn_flow.py`.
+
+- Yosys
+  - Input/output: Verilog -> AIG.
+  - Current status: installed in `student/tools/conda-env/bin/yosys`.
+  - Needed file: `student/frontends/yosys_synth.py`.
+
+- RTL simulator / exhaustive verifier
+  - Input/output: Verilog + truth table -> pass/fail + mismatch examples.
+  - Use direct Python evaluation for generated templates where possible, and
+    use a Verilog simulator/Yosys simulation path when needed.
+  - Needed file: `student/frontends/sim_verify.py`.
+
+Success criteria:
+
+```text
+For each tool wrapper:
+1. generate one candidate from ex200
+2. run CEC
+3. measure area/delay/ADP
+4. append candidate metadata to candidate_history.csv
+5. leave output/ untouched
+```
+
+### 12.2 Stage 2: Unified Candidate Pipeline
+
+Goal:
+
+```text
+Every seed and every backend output goes through the same CEC, ADP measurement,
+history logging, and best-candidate selection path.
+```
+
+Core files:
+
+```text
+student/run_pipeline.py
+student/common/abc.py
+student/common/candidate.py
+student/backends/*.py
+student/frontends/*.py
+```
+
+Canonical candidate metadata:
+
+```text
+case
+candidate_id
+parent_id
+source
+tool_chain
+aig_path
+area
+delay
+adp
+equivalent
+runtime_sec
+notes
+```
+
+Result files:
+
+```text
+student/results/candidate_history.csv
+```
+
+Full append-only history. Every generated candidate gets one row.
+
+```text
+student/results/best_candidates.csv
+```
+
+One current best candidate per case. This is the index used later to produce
+submission outputs.
+
+```text
+student/results/<experiment>_summary.csv
+```
+
+One summary per experiment, for example `abc_all_summary.csv`.
+
+Required behavior:
+
+- Candidate generation must never write directly to `output/`.
+- Non-equivalent candidates remain in history but are excluded from best
+  selection.
+- Candidate lineage must be preserved by `parent_id`.
+- The pipeline should eventually support `--case`, `--cases ex200-ex209`, and
+  `--all`.
+
+### 12.3 Stage 3: ABC-Only Portfolio
+
+Goal:
+
+```text
+Run the strongest cheap ABC flows on all cases to establish the first improved
+baseline and prove the pipeline can handle multi-flow, multi-case experiments.
+```
+
+Current default portfolio:
+
+```text
+abc_resyn
+abc_resyn2
+abc_resyn2a
+abc_resyn3
+abc_compress2
+abc_resyn2rs
+abc_compress2rs
+abc_dc2
+abc_dch
+abc_dc2_dch
+abc_dch_dc2
+abc_dc2_rw
+abc_dch_rw
+abc_src_rw
+abc_src_rws
+abc_delay_try
+```
+
+Initial survey result:
+
+```text
+ex200-ex209:
+baseline total ADP = 20956264
+abc_all best total ADP = 6422868
+improvement = 69.35%
+```
+
+Dominant flows in the survey:
+
+```text
+abc_dc2_dch
+abc_dch_dc2
+```
+
+Next implementation tasks:
+
+1. Add batch case support to `student/run_pipeline.py`.
+2. Generate `student/results/abc_all_summary.csv`.
+3. Generate `student/results/best_candidates.csv`.
+4. Copy ABC-only best AIGs to:
+
+```text
+student/work/best/abc_all/exNNN.aig
+```
+
+5. Run `abc_all` over all `ex200-ex299`.
+
+Success criteria:
+
+```text
+100/100 equivalent ABC-only best candidates.
+No writes to output/.
+Summary identifies weak cases that need frontend reconstruction.
+```
+
+### 12.4 Stage 4: Truth Table to Verilog Reverse Engineering
+
+This is the most important stage. It is mandatory for every case, not an
+optional case-specific trick.
+
+Goal:
+
+```text
+For each truth table, recover a synthesis-friendly high-level Verilog
+description or at least a structured Verilog decomposition that is smaller than
+direct truth-table expansion.
+```
+
+Frontend files:
+
+```text
+student/frontends/truth.py
+student/frontends/analyze_truth.py
+student/frontends/verilog_templates.py
+student/frontends/sim_verify.py
+student/frontends/yosys_synth.py
+student/frontends/reverse_engineer.py
+```
+
+File roles:
+
+- `truth.py`
+  - Parse truth table files.
+  - Recover input index order and output bit order.
+  - Provide `input -> output_word` lookup for exhaustive checking.
+
+- `analyze_truth.py`
+  - Run structural probes to help infer function type.
+  - Check symmetry, exponent regions, constants, passthrough regions,
+    arithmetic hypotheses, split dependencies, and class structure.
+
+- `verilog_templates.py`
+  - Generate candidate Verilog from reusable templates.
+  - Templates include BF16/FP16 unary, float conversion, fp8 add, integer
+    arithmetic, LUT-by-exponent, class split, and decision-graph style RTL.
+
+- `sim_verify.py`
+  - Exhaustively verify AI-generated Verilog against the truth table.
+  - Save mismatch examples when a candidate fails.
+
+- `yosys_synth.py`
+  - Convert verified Verilog into AIG seed candidates.
+  - Feed generated AIGs into the unified candidate pipeline.
+
+- `reverse_engineer.py`
+  - Orchestrate analysis, AI prompting/manual hypotheses, Verilog generation,
+    simulation, synthesis, and candidate registration.
+
+Case groups from `introduction.md`:
+
+```text
+ex200-ex219: BF16 unary functions
+ex220-ex239: FP16 unary functions
+ex240-ex254: float conversion and fp8 add
+ex255-ex279: integer arithmetic
+ex280-ex299: unnamed but structured functions
+```
+
+#### BF16 Unary Functions: ex200-ex219
+
+Likely functions:
+
+```text
+exp, log, sin, tan, sqrt, reciprocal, cube root, sigmoid
+```
+
+Probe strategy:
+
+- Interpret input as BF16:
+
+```text
+sign | exponent[7:0] | mantissa[6:0]
+```
+
+- Check sign symmetry:
+  - odd symmetry suggests `sin` or `tan`.
+  - negative-domain NaN/constant behavior suggests `sqrt` or `log`.
+- Check exponent regions:
+  - zero/subnormal behavior
+  - saturation to inf/constant
+  - passthrough regions
+  - canonical NaN handling
+- Use 128-entry mantissa tables where needed.
+- Ensure RNE carry can propagate into exponent.
+
+Verilog shape:
+
+```text
+classify sign/exponent/special values
+case by exponent range
+small mantissa LUT
+round and repack BF16
+```
+
+#### FP16 Unary Functions: ex220-ex239
+
+Format:
+
+```text
+sign | exponent[4:0] | mantissa[9:0]
+```
+
+Probe strategy:
+
+- Split by sign and exponent before considering mantissa tables.
+- Identify exponent regions that are constant, zero, inf, passthrough, or
+  sign-only.
+- Use local mantissa tables only for the few regions that need them.
+- Avoid a full 16-bit truth-table RTL.
+
+Verilog shape:
+
+```text
+case exponent
+  special/constant/passthrough regions
+  local 1024-entry or reduced mantissa table only when necessary
+round and repack FP16
+```
+
+#### Float Conversion and FP8 Add: ex240-ex254
+
+Likely functions:
+
+```text
+BF16/FP16/FP8 conversion
+float-to-int
+int-to-float
+fp8 add
+rounding/saturation/conversion helpers
+```
+
+Probe strategy:
+
+- Check whether sign is preserved.
+- Check exponent bias shifts.
+- Check mantissa truncation, zero extension, and RNE rounding.
+- Check overflow/underflow/saturation behavior.
+- For fp8 add, split input into two 8-bit operands and test:
+
+```text
+a = in[15:8], b = in[7:0]
+a = in[7:0],  b = in[15:8]
+```
+
+Verilog shape:
+
+```text
+decode input format
+handle NaN/inf/zero/subnormal
+align/convert exponent and mantissa
+round
+pack output
+```
+
+#### Integer Arithmetic: ex255-ex279
+
+Likely functions:
+
+```text
+unsigned multiplication
+signed multiplication
+unsigned division
+square
+integer square root
+```
+
+Probe strategy:
+
+- Try input splits:
+
+```text
+a = in[7:0],  b = in[15:8]
+a = in[15:8], b = in[7:0]
+x = in[15:0]
+```
+
+- Compare truth output against:
+  - `a * b`
+  - signed `a * b`
+  - `a / b`
+  - `a % b`
+  - `x * x`
+  - `isqrt(x)`
+- For division, infer divide-by-zero behavior:
+  - zero
+  - max value
+  - input passthrough
+  - fixed saturation
+
+Verilog shape:
+
+```text
+word-level arithmetic expression
+restoring sqrt implementation
+explicit divide-by-zero policy
+```
+
+#### Unknown Structured Functions: ex280-ex299
+
+Goal:
+
+```text
+Recover a synthesis-friendly decomposition even if the function cannot be
+named semantically.
+```
+
+Probe strategy:
+
+- Split input by high bits, low bits, byte, nibble, or class bits.
+- Search for class-based factoring:
+
+```text
+class = f(high bits)
+payload = low bits
+output = g_class(payload)
+```
+
+- Search for rotation/canonical forms.
+- Search for output-bit dependency sets.
+- Detect constants, passthrough bits, permutations, reversals, and rotations.
+- Generate split RTL or decision-graph-like RTL.
+
+Verilog shape:
+
+```text
+classify input
+case class
+  constant output
+  passthrough/permute/rotate output
+  small LUT or simple expression over payload
+```
+
+Success criteria for Stage 4:
+
+```text
+Every case has at least one reverse-engineering attempt record.
+Verified Verilog seeds must pass exhaustive simulation.
+Synthesized AIG seeds must pass CEC.
+Only then can they enter backend optimization.
+```
+
+### 12.5 Stage 5: AI Verilog Seed Generation for Every Case
+
+Goal:
+
+```text
+Every case should get at least one AI-assisted Verilog seed attempt.
+```
+
+Per-case workspace:
+
+```text
+student/work/reverse/exNNN/
+  attempts/
+  verified_verilog/
+  synthesized_aigs/
+  notes.md
+```
+
+For each case, record:
+
+- input/output width and bit order assumptions
+- function hypotheses
+- prompts or AI reasoning summaries
+- generated Verilog candidates
+- simulation status
+- mismatch examples for failures
+- Yosys synthesis result
+- AIG ADP compared to current best
+
+Priority order for first implementation:
+
+1. `ex255-ex279` integer arithmetic
+   - easiest to probe automatically
+   - word-level Verilog should be much better than truth expansion
+2. `ex240-ex254` float conversion / fp8 add
+   - highest expected area improvement
+3. `ex200-ex219` BF16 unary
+   - mantissa tables are small
+4. `ex220-ex239` FP16 unary
+   - requires exponent splitting to avoid huge tables
+5. `ex280-ex299` unknown structured
+   - split/decision-graph approach
+
+### 12.6 Stage 6: Case-by-Case Backend Optimization
+
+Goal:
+
+```text
+Find the best equivalent AIG for each individual case, not one fixed flow that
+is applied blindly to all cases.
+```
+
+Important rule:
+
+```text
+The winning strategy may be different for every exNNN.
+```
+
+Per-case pool:
+
+```text
+truth-table baseline seed
+ABC-only best seed
+AI Verilog/Yosys seed(s)
+E-Syn seed(s)
+CULS transformed seed(s)
+MockTurtle transformed seed(s)
+ABC9 transformed seed(s)
+```
+
+Optimization loop per case:
+
+```text
+for each case:
+    collect all valid seeds
+    run cheap probes across available tools
+    keep top ADP, low-area, low-delay, and diverse candidates
+    invest more runtime only in tool chains that help this case
+    stop when no candidate improves or budget is exhausted
+    write best candidate for this case
+```
+
+Examples:
+
+- If `ex200` responds well to `abc_dc2_dch`, use that as a backend starting
+  point and try CULS/ABC9/MockTurtle around it.
+- If `ex255` is identified as arithmetic, prioritize the arithmetic Verilog
+  seed and then run ABC/CULS cleanup.
+- If `ex252` is a conversion case with a very compact Verilog seed, use that
+  as the main seed and avoid wasting time on baseline-derived AIGs.
+- If `ex299` remains unnamed, use split RTL and decision-graph candidates, then
+  search backend variants case-by-case.
+
+Selection policy:
+
+- final ranking is by ADP
+- preserve a few low-area and low-delay candidates because another backend may
+  improve them later
+- discard non-equivalent candidates from best selection
+- do not assume a globally good flow is best for every case
+
+Final output generation:
+
+```text
+student/results/best_candidates.csv
+-> copy best equivalent AIG for each case
+-> output/ex200.aig ... output/ex299.aig
+-> python3 evaluate.py
+```
+
+### 12.7 Immediate Next Steps
+
+1. Commit the current ABC survey and plan update.
+2. Add batch support and summary CSV generation to `student/run_pipeline.py`.
+3. Run full `abc_all` over `ex200-ex299`.
+4. Implement `truth.py` and verify truth-table indexing against ABC.
+5. Implement `sim_verify.py` and `yosys_synth.py`.
+6. Start reverse engineering with `ex255-ex279`, then `ex240-ex254`.
 
 ## 13. Report Storyline
 
