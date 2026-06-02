@@ -5,6 +5,7 @@ import argparse
 import csv
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -13,11 +14,21 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from student.backends.abc9_flow import abc9_candidate
 from student.backends.abc_flow import ABC_ALL_FLOWS, ABC_FLOW_COMMANDS, abc_flow_candidate, baseline_candidate
+from student.backends.culs_flow import (
+    CulsRuntimeUnavailableError,
+    CulsUnavailableError,
+    culs_resyn2_candidate,
+    default_culs_bin,
+)
+from student.backends.esyn_flow import esyn_seed_candidates_from_eqn, write_aig_to_eqn
+from student.backends.mockturtle_flow import mockturtle_candidate
 from student.common.candidate import FIELDNAMES as CANDIDATE_FIELDNAMES
-from student.common.candidate import append_candidates
+from student.common.candidate import Candidate, append_candidates
 
 
+BACKEND_FLOWS = ["abc9", "mockturtle", "culs", "esyn_from_aig"]
 CASE_RE = re.compile(r"^ex([0-9]{3})$")
 SUMMARY_FIELDNAMES = [
     "case",
@@ -82,6 +93,7 @@ def parse_flows(value):
         raise argparse.ArgumentTypeError("At least one flow is required.")
     allowed = set(["baseline", "abc_all"])
     allowed.update(ABC_FLOW_COMMANDS.keys())
+    allowed.update(BACKEND_FLOWS)
     unknown = [flow for flow in requested if flow not in allowed]
     if unknown:
         raise argparse.ArgumentTypeError("Unknown flow(s): {0}".format(", ".join(unknown)))
@@ -101,7 +113,7 @@ def parse_flows(value):
             seen.add(flow)
     flows = deduped
 
-    if "baseline" not in flows and any(flow in ABC_FLOW_COMMANDS for flow in flows):
+    if "baseline" not in flows and any(flow != "baseline" for flow in flows):
         flows.insert(0, "baseline")
     return flows
 
@@ -123,6 +135,31 @@ def best_candidate(candidates):
     if not valid:
         return None
     return min(valid, key=lambda candidate: candidate.adp)
+
+
+def parent_candidate(candidates, baseline):
+    current_best = best_candidate(candidates)
+    if current_best is not None:
+        return current_best
+    if baseline is not None:
+        return baseline
+    raise RuntimeError("No parent candidate is available. Include baseline before generated flows.")
+
+
+def failed_candidate(case, candidate_id, parent_id, source, tool_chain, aig_path, exc):
+    message = "{0}: {1}".format(type(exc).__name__, exc)
+    if isinstance(exc, subprocess.TimeoutExpired):
+        message = "timeout after {0}s: {1}".format(exc.timeout, " ".join(exc.cmd))
+    return Candidate(
+        case=case,
+        candidate_id=candidate_id,
+        parent_id=parent_id,
+        source=source,
+        tool_chain=tool_chain,
+        aig_path=aig_path,
+        equivalent=False,
+        notes=message[:1000],
+    )
 
 
 def format_optional(value):
@@ -192,17 +229,97 @@ def run_case(args, case):
     for flow in args.flows:
         if flow == "baseline":
             continue
-        candidates.append(
-            abc_flow_candidate(
-                case=case,
-                flow_name=flow,
-                parent=baseline,
-                truth=truth,
-                work_dir=args.work_dir,
-                abc=args.abc,
-                timeout=args.timeout,
+
+        if flow in ABC_FLOW_COMMANDS:
+            try:
+                candidates.append(
+                    abc_flow_candidate(
+                        case=case,
+                        flow_name=flow,
+                        parent=baseline,
+                        truth=truth,
+                        work_dir=args.work_dir,
+                        abc=args.abc,
+                        timeout=args.timeout,
+                    )
+                )
+            except (RuntimeError, subprocess.TimeoutExpired) as exc:
+                print("{0} {1}: failed: {2}".format(case, flow, exc), file=sys.stderr)
+                output_aig = args.work_dir / case / flow / "{0}_{1}.aig".format(case, flow)
+                candidates.append(
+                    failed_candidate(
+                        case=case,
+                        candidate_id="{0}_{1}".format(case, flow),
+                        parent_id=baseline.candidate_id,
+                        source="abc",
+                        tool_chain=flow,
+                        aig_path=output_aig,
+                        exc=exc,
+                    )
+                )
+            continue
+
+        parent = parent_candidate(candidates, baseline)
+        if flow == "abc9":
+            candidates.append(
+                abc9_candidate(
+                    case=case,
+                    parent=parent,
+                    truth=truth,
+                    work_dir=args.work_dir,
+                    abc=args.abc,
+                    timeout=args.timeout,
+                )
             )
-        )
+        elif flow == "mockturtle":
+            candidates.append(
+                mockturtle_candidate(
+                    case=case,
+                    parent=parent,
+                    truth=truth,
+                    work_dir=args.work_dir,
+                    abc=args.abc,
+                    runner=args.mockturtle_runner,
+                    timeout=args.timeout,
+                )
+            )
+        elif flow == "culs":
+            try:
+                candidates.append(
+                    culs_resyn2_candidate(
+                        case=case,
+                        parent=parent,
+                        truth=truth,
+                        work_dir=args.work_dir,
+                        culs_bin=args.culs_bin,
+                        abc=args.abc,
+                        timeout=args.timeout,
+                    )
+                )
+            except (CulsRuntimeUnavailableError, CulsUnavailableError) as exc:
+                print("{0} culs: skipped: {1}".format(case, exc), file=sys.stderr)
+        elif flow == "esyn_from_aig":
+            eqn_dir = args.work_dir / case / "esyn_from_aig"
+            eqn_path = eqn_dir / "{0}_{1}.eqn".format(case, parent.candidate_id)
+            write_aig_to_eqn(parent.aig_path, eqn_path, abc=args.abc, timeout=args.timeout)
+            candidates.extend(
+                esyn_seed_candidates_from_eqn(
+                    eqn_path=eqn_path,
+                    truth=truth,
+                    abc=args.abc,
+                    work_dir=args.work_dir,
+                    case=case,
+                    parent_id=parent.candidate_id,
+                    top_n=args.esyn_top_n,
+                    timeout=args.timeout,
+                    synth_timeout=args.timeout,
+                    eval_timeout=args.timeout,
+                    candidate_prefix="{0}_esyn_from_aig".format(case),
+                    max_outputs=args.esyn_max_outputs,
+                )
+            )
+        else:
+            raise RuntimeError("Unknown flow: {0}".format(flow))
 
     append_candidates(args.results, candidates)
     best = best_candidate(candidates)
@@ -228,8 +345,9 @@ def parse_args():
     parser.add_argument(
         "--flows",
         default="baseline,abc_resyn2",
-        help="Comma-separated flows. Supported: baseline,abc_all,{0}.".format(
-            ",".join(ABC_FLOW_COMMANDS.keys())
+        help="Comma-separated flows. Available: baseline,abc_all,{0},{1}.".format(
+            ",".join(ABC_FLOW_COMMANDS.keys()),
+            ",".join(BACKEND_FLOWS),
         ),
     )
     parser.add_argument("--experiment", default=None, help="Experiment name used for default summary and best paths.")
@@ -242,6 +360,10 @@ def parse_args():
     parser.add_argument("--summary", type=Path, default=None)
     parser.add_argument("--best-results", type=Path, default=ROOT / "student" / "results" / "best_candidates.csv")
     parser.add_argument("--timeout", type=int, default=60)
+    parser.add_argument("--mockturtle-runner", type=Path, default=None)
+    parser.add_argument("--culs-bin", type=Path, default=default_culs_bin())
+    parser.add_argument("--esyn-top-n", type=int, default=3)
+    parser.add_argument("--esyn-max-outputs", type=int, default=None)
     args = parser.parse_args()
 
     flow_spec = args.flows
