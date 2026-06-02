@@ -79,8 +79,34 @@ cmake --build student/tools/mockturtle/build --parallel 4
 ```
 
 - Verified by running the built `cut_enumeration` example from the source example directory.
+- Added a project AIG-in/AIG-out runner:
 
-MockTurtle is usable as a C++ library. It still needs a project-specific AIG-in/AIG-out runner under `student/backends/`.
+```text
+student/tools/mockturtle/mockturtle_aig_runner.cpp
+student/tools/mockturtle/build_mockturtle_runner.sh
+student/tools/mockturtle/bin/mockturtle_aig_runner
+```
+
+The runner supports `resub`, `balance`, `resub_balance`, and `balance_resub`.
+Rebuild it with:
+
+```bash
+student/tools/mockturtle/build_mockturtle_runner.sh
+```
+
+Verified:
+
+```bash
+python3 -m student.backends.mockturtle_flow --status
+python3 -m student.backends.mockturtle_flow \
+  --smoke-ex200 \
+  --work-dir /tmp/mockturtle_cli_smoke \
+  --flow resub_balance \
+  --timeout 120
+```
+
+`--smoke-ex200` reports `equivalent=1`, area `13482`, delay `25`,
+ADP `337050` for `mockturtle_resub_balance`.
 
 ### E-Syn
 
@@ -99,16 +125,45 @@ Local compatibility patches applied inside `student/tools/esyn/src/e-rewriter`:
 - Replaced the XGBoost-based candidate score with a simple local heuristic using expression size/depth/operator counts.
 - Removed the unused `egg` `lp` feature to avoid requiring the missing native `CbcSolver` library.
 
-Verified:
+Verified E-Syn wrapper:
 
 ```bash
-PATH=/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin:$PATH \
-timeout 30 e-rewriter/target/release/e-rewriter \
-  test_data_beta_runner/smoke_expr.txt \
-  test_data_beta_runner/smoke_out.txt
+python3 -m student.backends.esyn_flow --status
+python3 -m student.backends.esyn_flow --smoke --work-dir /tmp/esyn_wrapper_smoke --timeout 60
+python3 -m student.backends.esyn_flow \
+  --rewrite '(* a (+ b (! b)))' \
+  --format sexpr \
+  --work-dir /tmp/esyn_wrapper_rewrite \
+  --timeout 60
 ```
 
-This completes successfully on a minimal expression. A full `run_beta.py` demo on `demos/3.txt` reached `EQN fully unfold` but did not finish within a 120-second smoke-test limit, so E-Syn should be treated as staged and partially verified, not yet integrated into the final optimizer.
+`--smoke` completes on `(a * b)` and produces 30
+`test_data_beta_runner/output_from_egg*.txt` expression candidates.
+The rewrite test simplifies `(* a (+ b (! b)))` to first candidate `a`.
+
+E-Syn is now usable as an expression-level rewriting stage. The backend wrapper
+also exposes a first EQN seed generator:
+
+```bash
+python3 -m student.backends.esyn_flow \
+  --seed-smoke \
+  --aig baselines/abc_st/aigs/ex200.aig \
+  --truth benchmarks/ex200.truth \
+  --abc student/abc \
+  --work-dir /tmp/esyn_seed_smoke \
+  --top-n 3 \
+  --max-outputs 1
+```
+
+`student.backends.esyn_flow.esyn_seed_candidates_from_eqn(...)` depends on a
+separate `student.backends.esyn_eqn` module for EQN read/write and output
+S-expression conversion. When that parser module is unavailable, `--seed-smoke`
+reports `seed_smoke: unavailable` without a traceback. The implemented safe
+mode is per-output single replacement: run E-Syn on one output expression, take
+the first top-N unique rewrites, synthesize each one-output replacement to AIG
+with ABC, deduplicate by AIG hash, then call `evaluate_aig()`. Whole-vector
+replacement remains disabled until the parser/reconstruction contract is
+verified.
 
 ### CULS
 
@@ -135,15 +190,21 @@ student/tools/culs/build/gpuls
 - Verified outside the filesystem sandbox, where CUDA devices are visible:
 
 ```bash
-LD_LIBRARY_PATH=/home/b10507053/ALS_Final_Project/student/tools/conda-env/lib:$LD_LIBRARY_PATH \
 student/tools/culs/build/gpuls \
-  -c "read output/ex200.aig; ps; resyn2; ps; write /tmp/ex200_culs_smoke.aig"
+  -c "read baselines/abc_st/aigs/ex200.aig; ps; resyn2; ps; write /tmp/culs_stage1_ex200_host.aig"
 
-install -D /tmp/ex200_culs_smoke.aig /tmp/culs_smoke_out/ex200.aig
-python3 evaluate.py --case ex200 --output /tmp/culs_smoke_out
+install -D /tmp/culs_stage1_ex200_host.aig /tmp/culs_stage1_eval/ex200.aig
+python3 evaluate.py --case ex200 --output /tmp/culs_stage1_eval
 ```
 
-`evaluate.py` reports `OK`, area `11845`, delay `20`, ADP `236900` for the CULS smoke output.
+`evaluate.py` reports `OK`, area `11861`, delay `20`, ADP `237220` for the CULS smoke output.
+
+Wrapper diagnostics:
+
+```bash
+python3 -m student.backends.culs_flow --probe
+python3 -m student.backends.culs_flow --smoke-ex200 --work-dir /tmp/culs_smoke
+```
 
 Note: running `gpuls` inside the sandbox segfaulted before optimization because the sandbox does not expose the NVIDIA device/runtime state. Run CULS directly in the shell, or use non-sandbox execution from Codex when GPU access is required.
 

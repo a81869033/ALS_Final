@@ -13,6 +13,7 @@ student/tools/abc/src/
 student/tools/abc/original_abc_incompatible
 student/tools/mockturtle/src/
 student/tools/mockturtle/build/
+student/tools/mockturtle/bin/
 student/tools/culs/src/
 student/tools/culs/build/
 student/tools/esyn/src/
