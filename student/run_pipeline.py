@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Run a small candidate-generation pipeline for one benchmark case."""
+"""Run candidate-generation pipelines for ALS benchmark cases."""
 
 import argparse
+import csv
+import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -11,7 +14,66 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from student.backends.abc_flow import ABC_ALL_FLOWS, ABC_FLOW_COMMANDS, abc_flow_candidate, baseline_candidate
+from student.common.candidate import FIELDNAMES as CANDIDATE_FIELDNAMES
 from student.common.candidate import append_candidates
+
+
+CASE_RE = re.compile(r"^ex([0-9]{3})$")
+SUMMARY_FIELDNAMES = [
+    "case",
+    "baseline_area",
+    "baseline_delay",
+    "baseline_adp",
+    "best_candidate_id",
+    "best_flow",
+    "best_area",
+    "best_delay",
+    "best_adp",
+    "improvement_percent",
+    "num_candidates",
+    "num_equivalent",
+    "best_aig_path",
+]
+
+
+def parse_case_name(value):
+    value = value.strip()
+    match = CASE_RE.match(value)
+    if not match:
+        raise argparse.ArgumentTypeError("Invalid case name: {0}".format(value))
+    return value
+
+
+def parse_cases(value):
+    cases = []
+    seen = set()
+    for item in value.split(","):
+        item = item.strip()
+        if not item:
+            continue
+
+        if "-" in item:
+            parts = item.split("-")
+            if len(parts) != 2:
+                raise argparse.ArgumentTypeError("Invalid case range: {0}".format(item))
+            start = parse_case_name(parts[0])
+            end = parse_case_name(parts[1])
+            start_num = int(CASE_RE.match(start).group(1))
+            end_num = int(CASE_RE.match(end).group(1))
+            if start_num > end_num:
+                raise argparse.ArgumentTypeError("Invalid descending case range: {0}".format(item))
+            expanded = ["ex{0:03d}".format(number) for number in range(start_num, end_num + 1)]
+        else:
+            expanded = [parse_case_name(item)]
+
+        for case in expanded:
+            if case not in seen:
+                cases.append(case)
+                seen.add(case)
+
+    if not cases:
+        raise argparse.ArgumentTypeError("At least one case is required.")
+    return cases
 
 
 def parse_flows(value):
@@ -44,6 +106,18 @@ def parse_flows(value):
     return flows
 
 
+def infer_experiment(flow_spec, flows):
+    requested = [item.strip() for item in flow_spec.split(",") if item.strip()]
+    non_baseline = [flow for flow in requested if flow != "baseline"]
+    if non_baseline == ["abc_all"]:
+        return "abc_all"
+    if flows == ["baseline"] + ABC_ALL_FLOWS:
+        return "abc_all"
+    if len(non_baseline) == 1:
+        return non_baseline[0]
+    return "custom"
+
+
 def best_candidate(candidates):
     valid = [candidate for candidate in candidates if candidate.equivalent and candidate.adp is not None]
     if not valid:
@@ -51,42 +125,63 @@ def best_candidate(candidates):
     return min(valid, key=lambda candidate: candidate.adp)
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Run candidate flows for one ALS benchmark case.")
-    parser.add_argument("--case", required=True, help="Benchmark case name, for example ex200.")
-    parser.add_argument(
-        "--flows",
-        type=parse_flows,
-        default=parse_flows("baseline,abc_resyn2"),
-        help="Comma-separated flows. Supported: baseline,abc_all,{0}.".format(
-            ",".join(ABC_FLOW_COMMANDS.keys())
-        ),
-    )
-    parser.add_argument("--abc", type=Path, default=ROOT / "student" / "abc")
-    parser.add_argument("--benchmarks", type=Path, default=ROOT / "benchmarks")
-    parser.add_argument("--baseline-dir", type=Path, default=ROOT / "baselines" / "abc_st" / "aigs")
-    parser.add_argument("--work-dir", type=Path, default=ROOT / "student" / "work" / "pipeline")
-    parser.add_argument("--results", type=Path, default=ROOT / "student" / "results" / "candidate_history.csv")
-    parser.add_argument("--timeout", type=int, default=60)
-    return parser.parse_args()
+def format_optional(value):
+    return "" if value is None else str(value)
 
 
-def main():
-    args = parse_args()
-    if not args.abc.is_file():
-        print("ABC executable not found: {0}".format(args.abc), file=sys.stderr)
-        return 2
-    truth = args.benchmarks / "{0}.truth".format(args.case)
+def improvement_percent(baseline, best):
+    if baseline is None or best is None:
+        return ""
+    if baseline.adp is None or best.adp is None or baseline.adp == 0:
+        return ""
+    return "{0:.2f}".format(100.0 * (baseline.adp - best.adp) / baseline.adp)
+
+
+def write_csv(csv_path, fieldnames, rows):
+    csv_path = Path(csv_path)
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+    with csv_path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+
+
+def candidate_best_row(candidate, best_aig_path):
+    row = candidate.to_row()
+    row["aig_path"] = str(best_aig_path)
+    return row
+
+
+def summary_row(case, baseline, best, candidates, best_aig_path):
+    return {
+        "case": case,
+        "baseline_area": "" if baseline is None else format_optional(baseline.area),
+        "baseline_delay": "" if baseline is None else format_optional(baseline.delay),
+        "baseline_adp": "" if baseline is None else format_optional(baseline.adp),
+        "best_candidate_id": "" if best is None else best.candidate_id,
+        "best_flow": "" if best is None else best.tool_chain,
+        "best_area": "" if best is None else format_optional(best.area),
+        "best_delay": "" if best is None else format_optional(best.delay),
+        "best_adp": "" if best is None else format_optional(best.adp),
+        "improvement_percent": improvement_percent(baseline, best),
+        "num_candidates": str(len(candidates)),
+        "num_equivalent": str(len([candidate for candidate in candidates if candidate.equivalent])),
+        "best_aig_path": "" if best_aig_path is None else str(best_aig_path),
+    }
+
+
+def run_case(args, case):
+    truth = args.benchmarks / "{0}.truth".format(case)
     if not truth.is_file():
-        print("Benchmark truth table not found: {0}".format(truth), file=sys.stderr)
-        return 2
+        raise RuntimeError("Benchmark truth table not found: {0}".format(truth))
 
     candidates = []
     baseline = None
 
     if "baseline" in args.flows:
         baseline = baseline_candidate(
-            case=args.case,
+            case=case,
             truth=truth,
             baseline_dir=args.baseline_dir,
             abc=args.abc,
@@ -99,7 +194,7 @@ def main():
             continue
         candidates.append(
             abc_flow_candidate(
-                case=args.case,
+                case=case,
                 flow_name=flow,
                 parent=baseline,
                 truth=truth,
@@ -110,34 +205,120 @@ def main():
         )
 
     append_candidates(args.results, candidates)
+    best = best_candidate(candidates)
+    best_aig_path = None
+    if best is not None:
+        args.best_dir.mkdir(parents=True, exist_ok=True)
+        best_aig_path = args.best_dir / "{0}.aig".format(case)
+        shutil.copyfile(str(best.aig_path), str(best_aig_path))
 
-    for candidate in candidates:
+    return baseline, best, candidates, best_aig_path
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Run candidate flows for ALS benchmark cases.")
+    case_group = parser.add_mutually_exclusive_group(required=True)
+    case_group.add_argument("--case", type=parse_case_name, help="Benchmark case name, for example ex200.")
+    case_group.add_argument(
+        "--cases",
+        type=parse_cases,
+        help="Comma-separated cases or ranges, for example ex200-ex209 or ex200,ex201.",
+    )
+    case_group.add_argument("--all", action="store_true", help="Run ex200 through ex299.")
+    parser.add_argument(
+        "--flows",
+        default="baseline,abc_resyn2",
+        help="Comma-separated flows. Supported: baseline,abc_all,{0}.".format(
+            ",".join(ABC_FLOW_COMMANDS.keys())
+        ),
+    )
+    parser.add_argument("--experiment", default=None, help="Experiment name used for default summary and best paths.")
+    parser.add_argument("--abc", type=Path, default=ROOT / "student" / "abc")
+    parser.add_argument("--benchmarks", type=Path, default=ROOT / "benchmarks")
+    parser.add_argument("--baseline-dir", type=Path, default=ROOT / "baselines" / "abc_st" / "aigs")
+    parser.add_argument("--work-dir", type=Path, default=ROOT / "student" / "work" / "pipeline")
+    parser.add_argument("--results", type=Path, default=ROOT / "student" / "results" / "candidate_history.csv")
+    parser.add_argument("--best-dir", type=Path, default=None)
+    parser.add_argument("--summary", type=Path, default=None)
+    parser.add_argument("--best-results", type=Path, default=ROOT / "student" / "results" / "best_candidates.csv")
+    parser.add_argument("--timeout", type=int, default=60)
+    args = parser.parse_args()
+
+    flow_spec = args.flows
+    try:
+        args.flows = parse_flows(flow_spec)
+    except argparse.ArgumentTypeError as exc:
+        parser.error(str(exc))
+
+    if args.case is not None:
+        args.cases = [args.case]
+    elif args.all:
+        args.cases = ["ex{0:03d}".format(number) for number in range(200, 300)]
+
+    if args.experiment is None:
+        args.experiment = infer_experiment(flow_spec, args.flows)
+    if args.best_dir is None:
+        args.best_dir = ROOT / "student" / "work" / "best" / args.experiment
+    if args.summary is None:
+        args.summary = ROOT / "student" / "results" / "{0}_summary.csv".format(args.experiment)
+
+    return args
+
+
+def main():
+    args = parse_args()
+    if not args.abc.is_file():
+        print("ABC executable not found: {0}".format(args.abc), file=sys.stderr)
+        return 2
+
+    summary_rows = []
+    best_rows = []
+    exit_code = 0
+
+    for case in args.cases:
+        try:
+            baseline, best, candidates, best_aig_path = run_case(args, case)
+        except RuntimeError as exc:
+            print("{0}: {1}".format(case, exc), file=sys.stderr)
+            return 2
+
+        for candidate in candidates:
+            print(
+                "{case} {cid}: equiv={equiv} area={area} delay={delay} adp={adp} path={path}".format(
+                    case=candidate.case,
+                    cid=candidate.candidate_id,
+                    equiv="yes" if candidate.equivalent else "no",
+                    area="-" if candidate.area is None else candidate.area,
+                    delay="-" if candidate.delay is None else candidate.delay,
+                    adp="-" if candidate.adp is None else candidate.adp,
+                    path=candidate.aig_path,
+                )
+            )
+
+        summary_rows.append(summary_row(case, baseline, best, candidates, best_aig_path))
+        if best is None:
+            print("{0}: no equivalent candidate generated.".format(case), file=sys.stderr)
+            exit_code = 1
+            continue
+
+        best_rows.append(candidate_best_row(best, best_aig_path))
         print(
-            "{case} {cid}: equiv={equiv} area={area} delay={delay} adp={adp} path={path}".format(
-                case=candidate.case,
-                cid=candidate.candidate_id,
-                equiv="yes" if candidate.equivalent else "no",
-                area="-" if candidate.area is None else candidate.area,
-                delay="-" if candidate.delay is None else candidate.delay,
-                adp="-" if candidate.adp is None else candidate.adp,
-                path=candidate.aig_path,
+            "{case} Best: {cid} area={area} delay={delay} adp={adp} best_path={path}".format(
+                case=case,
+                cid=best.candidate_id,
+                area=best.area,
+                delay=best.delay,
+                adp=best.adp,
+                path=best_aig_path,
             )
         )
 
-    best = best_candidate(candidates)
-    if best is None:
-        print("No equivalent candidate generated.", file=sys.stderr)
-        return 1
-    print(
-        "Best: {cid} area={area} delay={delay} adp={adp} path={path}".format(
-            cid=best.candidate_id,
-            area=best.area,
-            delay=best.delay,
-            adp=best.adp,
-            path=best.aig_path,
-        )
-    )
-    return 0
+    write_csv(args.summary, SUMMARY_FIELDNAMES, summary_rows)
+    write_csv(args.best_results, CANDIDATE_FIELDNAMES, best_rows)
+    print("Summary: {0}".format(args.summary))
+    print("Best candidates: {0}".format(args.best_results))
+    print("Best AIG directory: {0}".format(args.best_dir))
+    return exit_code
 
 
 if __name__ == "__main__":
