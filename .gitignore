@@ -7,6 +7,8 @@ ref/
 AGENTS.md
 prompt_log.md
 student/work/
+student/results/logs/
+student/run_pids/
 student/results/candidate_history.csv
 student/tools/conda-env/
 student/tools/abc/src/
