@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex280,ex280_unknown_shared_bdd_12x12_ex280_sift_449,unknown_shared_bdd_12x12,ex280_sift_449,student/work/target_ex280_bdd_eval/ex280/verilog/ex280_unknown_shared_bdd_12x12_ex280_sift_449.v,student/work/target_ex280_bdd_eval/ex280/aigs/ex280_unknown_shared_bdd_12x12_ex280_sift_449.aig,958,21,20118,order_name=ex280_sift_449; order=11:0:1:10:2:9:3:8:4:6:7:5; bdd_nodes=449,unknown function shared-BDD Verilog seed
