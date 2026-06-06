@@ -1,0 +1,5 @@
+case,status,area,delay,adp,returncode
+ex201,OK,1595,15,23925,0
+ex202,OK,3702,16,59232,0
+ex203,OK,4496,18,80928,0
+ex204,OK,1657,18,29826,0

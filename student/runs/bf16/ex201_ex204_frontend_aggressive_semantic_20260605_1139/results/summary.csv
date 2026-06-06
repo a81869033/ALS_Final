@@ -1,0 +1,5 @@
+case,best_candidate_id,best_variant,best_area,best_delay,best_adp,current_best_adp,target_50pct_adp,reference_adp,ratio_to_current_best,meets_50pct_target,notes
+ex201,ex201_bf16_exp2_structural_exp_mant_pair_parallel,parallel_full_case_hint,1599,15,23985,23985,11992,16300,1.000000,0,parallel_case/full_case hints added to current best structural source
+ex202,ex202_bf16_exp10_semantic_sign_exp_field_defaults_parallel,parallel_full_case_hint,3702,16,59232,59232,29616,43344,1.000000,0,parallel_case/full_case hints added to current best semantic source
+ex203,ex203_bf16_log_structural_sign_exp_mant_parallel,parallel_full_case_hint,4546,18,81828,81828,40914,56948,1.000000,0,parallel_case/full_case hints added to current best structural source
+ex204,ex204_bf16_log2_structural_exp_mant_delta_pair_parallel,parallel_full_case_hint,1679,18,30222,30222,15111,15180,1.000000,0,parallel_case/full_case hints added to current best structural source

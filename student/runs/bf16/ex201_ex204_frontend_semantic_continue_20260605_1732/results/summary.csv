@@ -1,0 +1,5 @@
+case,best_candidate_id,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,notes
+ex201,ex201_bf16_exp2_hilo3_field_mode_bits_3_bh1,1647,14,23058,16300,1.414601,1,0,hilo3 field mode base with bit overrides bits=3 bit_hi_bits=1 items=3626
+ex202,ex202_bf16_exp10_sep_fields_e3_m3_s0_bits_14_15_bh4,3478,16,55648,43344,1.283869,1,0,separate fields exp_hi=3 mant_hi=3 sign_hi=0 items=3402; sep bit overrides bits=14_15 bit_hi_bits=4 bit_items=37
+ex203,ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_bh2,4544,17,77248,56948,1.356466,1,0,separate fields exp_hi=3 mant_hi=3 sign_hi=2 items=7941; sep bit overrides bits=14 bit_hi_bits=2 bit_items=35
+ex204,ex204_bf16_log2_log2_arithbase_delta_hilo3_formula_bits_11_14,1545,17,26265,15180,1.730237,0,0,log2 arithmetic base delta_mode=hilo3 items=8591 bit_overrides= bit_items=0; formula bit overrides bits=11_14 bit_items=2

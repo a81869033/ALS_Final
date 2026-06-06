@@ -1,0 +1,6 @@
+case,status,area,delay,adp,notes
+ex215,OK,390,12,4680,evaluate.py official recheck on official_eval_best/ex215.aig
+ex216,OK,437,14,6118,evaluate.py official recheck on official_eval_best/ex216.aig
+ex217,OK,591,14,8274,evaluate.py official recheck on official_eval_best/ex217.aig
+ex218,OK,458,15,6870,evaluate.py official recheck on official_eval_best/ex218.aig
+ex219,OK,630,15,9450,evaluate.py official recheck on official_eval_best/ex219.aig

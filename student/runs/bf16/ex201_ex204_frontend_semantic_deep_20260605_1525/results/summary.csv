@@ -1,0 +1,5 @@
+case,function_guess,best_candidate_id,best_variant,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,previous_best_adp,ratio_to_previous_best,improved_previous,notes
+ex201,DAZ + 2^x + BF16 RNE + FTZ + canonical NaN,ex201_bf16_exp2_hybrid_pair_table_bit9_mode,hybrid_pair_table_bit9_mode,1595,15,23925,16300,1.467791,1,0,23985,0.997498,1,base pair table with bit 9 replaced by bit-mode table
+ex202,DAZ + 10^x + BF16 RNE + FTZ + canonical NaN,ex202_bf16_exp10_best_shape_sign_full_assign,best_shape_sign_full_assign,3702,16,59232,43344,1.366556,1,0,59232,1.000000,0,current-best mode-word field shape; include_sign_assignments=True
+ex203,DAZ + ln(x) + BF16 RNE + FTZ + canonical NaN,ex203_bf16_log_sign_exp_mant_bits_1_11_14_15_override,sign_exp_mant_bits_1_11_14_15_override,4496,18,80928,56948,1.421086,1,0,81828,0.989001,1,greedy expansion of bits 1_14_15 with 1_11_14_15
+ex204,DAZ + log2(x) + BF16 RNE + FTZ + canonical NaN,ex204_bf16_log2_delta_pair_bit2_override,delta_pair_bit2_override,1657,18,29826,15180,1.964822,0,0,30222,0.986897,1,exp_mant_delta_pair base with pair bit 2 overridden

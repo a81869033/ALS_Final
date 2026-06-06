@@ -1,0 +1,27 @@
+{
+  "archive": "student/archive/cleanup_20260606/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600_low_value_intermediates",
+  "archived_rows": 147,
+  "keep_variants": {
+    "ex216": [
+      "aggr_semantic_positive_symmetry_fields",
+      "aggr_semantic_positive_symmetry_fields_bits_14_cmp_fix5_manual_sign_non_nan_fix10",
+      "aggr_semantic_positive_symmetry_fields_manual_sign_non_nan_fix7",
+      "hand_cube_guard_lut"
+    ],
+    "ex218": [
+      "hand_recip_cube_guard_lut",
+      "legacy_value_case_bits_15_cmp_caseattrs_fix9",
+      "legacy_value_case_bits_15_cmp_fix5",
+      "legacy_value_case_manual_sign_non_nan_fix7"
+    ],
+    "ex219": [
+      "delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9",
+      "delta_pair_first_hilo3_bits_6_cmp_fix5",
+      "delta_pair_first_hilo3_caseattrs_fix9",
+      "hand_recip_cbrt_guard_lut_expcase"
+    ]
+  },
+  "kept_rows": 11,
+  "policy": "Keep best plus a few semantically distinct verified seeds per case.",
+  "run_id": "ex216_ex218_ex219_frontend_bf16_deep_20260606_1600"
+}

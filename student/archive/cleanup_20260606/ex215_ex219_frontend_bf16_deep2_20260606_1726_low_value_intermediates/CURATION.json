@@ -1,0 +1,33 @@
+{
+  "archive": "student/archive/cleanup_20260606/ex215_ex219_frontend_bf16_deep2_20260606_1726_low_value_intermediates",
+  "archived_rows": 47,
+  "keep_variants": {
+    "ex215": [
+      "delta_pair_mode_hilo3_bits_9_bh1_fix2_caseattrs_fix12",
+      "delta_pair_mode_hilo3_bits_9_cmp_fix12"
+    ],
+    "ex216": [
+      "aggr_semantic_positive_symmetry_fields_bits_14_cmp_fix5_manual_sign_non_nan_fix10_caseattrs_fix12",
+      "aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_caseattrs_fix13",
+      "aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_fix12"
+    ],
+    "ex217": [
+      "delta_pair_first_hilo3_bits_0_bh2_fix2_manual_sign_non_nan_fix12",
+      "delta_pair_first_hilo3_bits_0_bh3_fix2_manual_sign_non_nan_caseattrs_fix15",
+      "delta_pair_first_hilo3_mod3_bit0_fix12"
+    ],
+    "ex218": [
+      "legacy_value_case_bits_15_cmp_caseattrs_fix9",
+      "legacy_value_case_bits_15_cmp_caseattrs_fix9_bits_13_bh1_fix15",
+      "legacy_value_case_manual_sign_casez_fix13"
+    ],
+    "ex219": [
+      "delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9",
+      "delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9_manual_sign_casez_fix13",
+      "delta_pair_first_hilo3_mod3_bit6_fix12"
+    ]
+  },
+  "kept_rows": 14,
+  "policy": "Keep best plus one or two diagnostic verified seeds per case.",
+  "run_id": "ex215_ex219_frontend_bf16_deep2_20260606_1726"
+}

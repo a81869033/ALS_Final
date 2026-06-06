@@ -1,0 +1,2 @@
+case,best_candidate_id,best_variant,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,previous_best_adp,ratio_to_previous_best,notes
+ex200,ex200_bf16_exp_semantic_exp_default_one_parallel_casez_saturation,semantic_exp_default_one_parallel_casez_saturation,3717,17,63189,40052,1.577674,63733,0.991464,focused semantic BF16 exp RTL; no backend portfolio

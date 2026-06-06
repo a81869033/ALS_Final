@@ -1,0 +1,33 @@
+{
+  "archive_dir": "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315",
+  "full_candidate_count_before_curation": 443,
+  "full_candidates_csv": "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315/full_results_before_curation/candidates_full_with_archive_paths.csv",
+  "noncurated_current_run_dir": "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315/noncurated_current_run",
+  "run_id": "ex201_ex204_frontend_semantic_continue_20260605_1732",
+  "selected_candidate_count": 17,
+  "selected_candidates": [
+    "ex201_bf16_exp2_hilo2_field_mode",
+    "ex201_bf16_exp2_hilo3_field_mode_bits_3_8_bh1",
+    "ex201_bf16_exp2_hilo3_field_mode_bits_3_bh1",
+    "ex201_bf16_exp2_sep_fields_e3_m3_s0_bits_14_cmp",
+    "ex202_bf16_exp10_hilo3_field_mode_bits_14_15_bh4",
+    "ex202_bf16_exp10_hilo3_field_mode_formula_bits_14",
+    "ex202_bf16_exp10_sep_fields_e3_m3_s0",
+    "ex202_bf16_exp10_sep_fields_e3_m3_s0_bits_14_15_bh4",
+    "ex203_bf16_log_hilo3_word_mode_bits_14_bh3",
+    "ex203_bf16_log_sep_fields_e2_m3_s3",
+    "ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_bh2",
+    "ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_pla",
+    "ex204_bf16_log2_delta_pair_first_hilo3_bits_14_bh3",
+    "ex204_bf16_log2_delta_pair_first_hilo3_formula_bits_14",
+    "ex204_bf16_log2_log2_arithbase_delta_hilo3_bits_9_11_14_pla",
+    "ex204_bf16_log2_log2_arithbase_delta_hilo3_formula_bits_11_14",
+    "ex204_bf16_log2_log2_arithbase_delta_hilo3_formulaeq_bits_9_11_14"
+  ],
+  "superseded_work_dirs": [
+    "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315/superseded_work_dirs/ex201_ex204_frontend_bf16_semantic_20260605_0924",
+    "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315/superseded_work_dirs/ex201_ex204_frontend_aggressive_semantic_20260605_1139",
+    "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315/superseded_work_dirs/ex201_ex204_frontend_bitlogic_20260605_1412",
+    "student/archive/cleanup_20260605/ex201_ex204_curated_cleanup_20260605_2315/superseded_work_dirs/ex201_ex204_frontend_semantic_deep_20260605_1525"
+  ]
+}

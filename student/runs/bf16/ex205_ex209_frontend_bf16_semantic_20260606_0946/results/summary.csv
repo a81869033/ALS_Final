@@ -1,0 +1,6 @@
+case,best_candidate_id,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,notes
+ex205,ex205_bf16_log10_sep_fields_e3_m3_s0_bits_15_bh1,4463,17,75871,47128,1.609892,0,0,separate fields exp_hi=3 mant_hi=3 sign_hi=0 items=7913; sep bit overrides bits=15 bit_hi_bits=1 bit_items=8; curated_active_seed
+ex206,ex206_bf16_sin_odd_pos_fullword_h4,26872,21,564312,539049,1.046866,1,0,positive-domain full word with odd sign flip hi_bits=4 items=32359
+ex207,ex207_bf16_tan_odd_pos_fullword_expflip_h4,29873,21,627333,627817,0.999229,1,1,positive-domain full word with odd sign flip hi_bits=4 items=32509; sign flip simplified to exp!=255
+ex208,ex208_bf16_sinh_default_in_const_excepts_h4,2167,15,32505,24505,1.326464,1,0,default expr in with exception hi_bits=4 items=2706; curated_active_seed
+ex209,ex209_bf16_tanh_sign_exp_default_expr_casez,756,13,9828,7320,1.342623,1,0,range-compressed sign-exp default expression groups=3 exceptions=33680 items=33970; curated_active_seed

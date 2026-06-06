@@ -1,0 +1,5 @@
+case,function_guess,current_run_best_candidate,current_run_best_variant,current_run_best_area,current_run_best_delay,current_run_best_adp,previous_best_adp,ratio_to_previous_best,improves_previous,reference_adp,ratio_to_reference,beats_reference,notes
+ex201,DAZ + 2^x + BF16 RNE + FTZ + canonical NaN,ex201_bf16_exp2_exp_mant_pair_no_defaults,exp_mant_pair_no_defaults,1599,15,23985,23985,1.000000,0,16300,1.471472,0,no current-run candidate improved previous best
+ex202,DAZ + 10^x + BF16 RNE + FTZ + canonical NaN,ex202_bf16_exp10_exp_pair_runs_only_116_117_118_119,exp_pair_runs_only_116_117_118_119,3634,17,61778,59232,1.042984,0,43344,1.425295,0,no current-run candidate improved previous best
+ex203,DAZ + ln(x) + BF16 RNE + FTZ + canonical NaN,ex203_bf16_log_sign_exp_mant_no_defaults,sign_exp_mant_no_defaults,4546,18,81828,81828,1.000000,0,56948,1.436890,0,no current-run candidate improved previous best
+ex204,DAZ + log2(x) + BF16 RNE + FTZ + canonical NaN,ex204_bf16_log2_exp_mant_delta_pair_no_defaults,exp_mant_delta_pair_no_defaults,1679,18,30222,30222,1.000000,0,15180,1.990909,0,no current-run candidate improved previous best
