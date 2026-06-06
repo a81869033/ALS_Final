@@ -12,6 +12,8 @@ machine-readable current merge is:
 - Class notes: `student/cases/ex200_ex219_bf16/README.md`
 - Per-case notes: `student/cases/ex200_ex219_bf16/exNNN/frontend_attempts.md`
 - Current merged BF16 registry: `student/runs/bf16/ex200_ex219_current/`
+- Git-tracked current best seeds:
+  `student/seeds/bf16/ex200_ex219_current/`
 - Current work roots:
   - `student/work/ex200_frontend_bf16_semantic_20260605_0748/`
   - `student/work/ex201_ex204_frontend_semantic_continue_20260605_1732/`
@@ -26,6 +28,9 @@ machine-readable current merge is:
 - All cases have real BF16 semantic hypotheses identified.
 - All current best rows are frontend-only seeds measured after Yosys AIG
   synthesis and exact equivalence verification.
+- The current best Verilog/AIG files are tracked under
+  `student/seeds/bf16/ex200_ex219_current/`; broader non-best candidate
+  artifacts remain in local ignored work/archive directories.
 - `ex207` currently beats the reference ADP.
 - Within `1.5x` reference: `ex201`, `ex202`, `ex203`, `ex206`, `ex207`,
   `ex208`, `ex209`, `ex210`, `ex211`, `ex212`, `ex213`, `ex215`, `ex217`.

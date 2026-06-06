@@ -16,6 +16,8 @@ Use these directories consistently:
   candidates, current best files, and baseline summaries.
 - `student/archive/`: old round-specific or intermediate files that should not
   clutter active directories but should not be deleted.
+- `student/seeds/`: small git-tracked Verilog/AIG bundles for current best or
+  otherwise high-value seeds that should be available from a fresh clone.
 - `student/cases/`: case-by-case notes, especially failed hypotheses and
   things that should not be repeated blindly.
 - `student/scripts/`: runnable launchers, search scripts, and collection tools.
@@ -143,6 +145,24 @@ case,candidate_id,parent_id,source,tool_chain,aig_path,area,delay,adp,equivalent
 
 If a backend run produces a new best result worth keeping, preserve a stable
 copy under `student/work/best/`.
+
+## Git-Tracked Seed Bundles
+
+`student/work/` may contain large generated trees and can be ignored by git.
+When a run has current best Verilog/AIG files that future sessions should be
+able to use from a fresh clone, copy only those curated files into:
+
+```text
+student/seeds/<domain>/<run_id>/
+  MANIFEST.md
+  exNNN/
+    verilog/
+    aigs/
+```
+
+The matching `best.csv` should point to `student/seeds/...` paths.  Full
+candidate pools can remain in `student/work/` or `student/archive/` when they
+are too large or low-value to track directly.
 
 ## MANIFEST.md Requirements
 

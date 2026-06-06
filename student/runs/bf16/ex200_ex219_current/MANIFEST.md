@@ -20,6 +20,8 @@ Artifacts:
 - Candidates CSV: `student/runs/bf16/ex200_ex219_current/results/candidates.csv`
 - Summary CSV: `student/runs/bf16/ex200_ex219_current/results/summary.csv`
 - Human progress summary: `student/cases/ex200_ex219_bf16/CURRENT_PROGRESS.md`
+- Git-tracked current best seeds:
+  `student/seeds/bf16/ex200_ex219_current/`
 
 Main current work directories:
 
@@ -32,8 +34,10 @@ Main current work directories:
 Notes:
 
 - This is a merged registry run, not a new synthesis run.
-- `best.csv` contains one current best row per BF16 case.
+- `best.csv` contains one current best row per BF16 case and points to the
+  git-tracked seed bundle.
 - `candidates.csv` contains curated verified candidates from the latest active
-  BF16 frontend runs.
+  BF16 frontend runs.  Non-best rows may still point to local ignored
+  `student/work/` artifacts.
 - Earlier broad-search and low-value intermediate work remains under
   `student/archive/` and older run manifests for traceability.
