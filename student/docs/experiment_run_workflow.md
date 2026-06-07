@@ -110,6 +110,11 @@ student/runs/<domain>/<run_id>/results/summary.csv
 case,candidate_id,hypothesis,variant,verilog_path,aig_path,verified_truth,equivalent,area,delay,adp,notes
 ```
 
+Some existing frontend CSVs use `hypothesis/function_guess` instead of
+`hypothesis`.  Treat this as an accepted alias when collecting or reviewing
+existing runs; new scripts may keep either spelling as long as manifests and
+summaries are clear.
+
 The `verilog_path` and `aig_path` must point to real files after the run is
 finished. If files are moved into `archive/`, update the CSV or leave a
 manifest note with the new location.
