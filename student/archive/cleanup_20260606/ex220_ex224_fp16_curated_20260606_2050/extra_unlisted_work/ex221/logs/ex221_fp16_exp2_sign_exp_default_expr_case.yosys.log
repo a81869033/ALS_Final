@@ -1,0 +1,1054 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_0fqdtb6n.ys' --
+
+1. Executing Verilog-2005 frontend: student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v
+Parsing Verilog input from `student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v' to AST representation.
+Generating RTLIL representation for module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex221_fp16_exp2_sign_exp_default_expr_case
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex221_fp16_exp2_sign_exp_default_expr_case
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 28 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v:10$1 in module ex221_fp16_exp2_sign_exp_default_expr_case.
+Marked 34 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v:10$1 in module ex221_fp16_exp2_sign_exp_default_expr_case.
+Removed a total of 28 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 30 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex221_fp16_exp2_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v:10$1'.
+     1/34: $34\out_r[15:0]
+     2/34: $33\out_r[15:0]
+     3/34: $32\out_r[15:0]
+     4/34: $31\out_r[15:0]
+     5/34: $30\out_r[15:0]
+     6/34: $29\out_r[15:0]
+     7/34: $28\out_r[15:0]
+     8/34: $27\out_r[15:0]
+     9/34: $26\out_r[15:0]
+    10/34: $25\out_r[15:0]
+    11/34: $24\out_r[15:0]
+    12/34: $23\out_r[15:0]
+    13/34: $22\out_r[15:0]
+    14/34: $21\out_r[15:0]
+    15/34: $20\out_r[15:0]
+    16/34: $19\out_r[15:0]
+    17/34: $18\out_r[15:0]
+    18/34: $17\out_r[15:0]
+    19/34: $16\out_r[15:0]
+    20/34: $15\out_r[15:0]
+    21/34: $14\out_r[15:0]
+    22/34: $13\out_r[15:0]
+    23/34: $12\out_r[15:0]
+    24/34: $11\out_r[15:0]
+    25/34: $10\out_r[15:0]
+    26/34: $9\out_r[15:0]
+    27/34: $8\out_r[15:0]
+    28/34: $7\out_r[15:0]
+    29/34: $6\out_r[15:0]
+    30/34: $5\out_r[15:0]
+    31/34: $4\out_r[15:0]
+    32/34: $3\out_r[15:0]
+    33/34: $2\out_r[15:0]
+    34/34: $1\out_r[15:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex221_fp16_exp2_sign_exp_default_expr_case.\out_r' from process `\ex221_fp16_exp2_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v:10$1'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 34 empty switches in `\ex221_fp16_exp2_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v:10$1'.
+Removing empty process `ex221_fp16_exp2_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex221/verilog/ex221_fp16_exp2_sign_exp_default_expr_case.v:10$1'.
+Cleaned up 34 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 1219 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 1184 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 35 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$2387.
+    dead port 2/2 on $mux $procmux$2325.
+    dead port 2/2 on $mux $procmux$2264.
+    dead port 2/2 on $mux $procmux$2204.
+    dead port 2/2 on $mux $procmux$2145.
+    dead port 2/2 on $mux $procmux$2087.
+    dead port 2/2 on $mux $procmux$2030.
+    dead port 2/2 on $mux $procmux$1974.
+    dead port 2/2 on $mux $procmux$1919.
+    dead port 2/2 on $mux $procmux$1865.
+    dead port 2/2 on $mux $procmux$1812.
+    dead port 2/2 on $mux $procmux$1760.
+    dead port 2/2 on $mux $procmux$1709.
+    dead port 2/2 on $mux $procmux$1659.
+    dead port 2/2 on $mux $procmux$1610.
+    dead port 2/2 on $mux $procmux$1562.
+    dead port 2/2 on $mux $procmux$1525.
+    dead port 2/2 on $mux $procmux$1494.
+    dead port 2/2 on $mux $procmux$1464.
+    dead port 2/2 on $mux $procmux$1435.
+    dead port 2/2 on $mux $procmux$1407.
+    dead port 2/2 on $mux $procmux$1380.
+    dead port 2/2 on $mux $procmux$1354.
+    dead port 2/2 on $mux $procmux$1329.
+    dead port 2/2 on $mux $procmux$1305.
+    dead port 2/2 on $mux $procmux$1282.
+    dead port 2/2 on $mux $procmux$1260.
+    dead port 2/2 on $mux $procmux$1239.
+    dead port 2/2 on $mux $procmux$195.
+    dead port 2/2 on $mux $procmux$176.
+    dead port 2/2 on $mux $procmux$158.
+    dead port 2/2 on $mux $procmux$141.
+    dead port 2/2 on $mux $procmux$125.
+Removed 33 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+    New ctrl vector for $pmux cell $procmux$215: { $procmux$216_CMP $auto$opt_reduce.cc:135:opt_pmux$3299 $auto$opt_reduce.cc:135:opt_pmux$3297 $auto$opt_reduce.cc:135:opt_pmux$3295 $auto$opt_reduce.cc:135:opt_pmux$3293 $auto$opt_reduce.cc:135:opt_pmux$3291 $auto$opt_reduce.cc:135:opt_pmux$3289 $auto$opt_reduce.cc:135:opt_pmux$3287 $auto$opt_reduce.cc:135:opt_pmux$3285 $auto$opt_reduce.cc:135:opt_pmux$3283 $auto$opt_reduce.cc:135:opt_pmux$3281 $auto$opt_reduce.cc:135:opt_pmux$3279 $auto$opt_reduce.cc:135:opt_pmux$3277 $auto$opt_reduce.cc:135:opt_pmux$3275 $auto$opt_reduce.cc:135:opt_pmux$3273 $auto$opt_reduce.cc:135:opt_pmux$3271 $auto$opt_reduce.cc:135:opt_pmux$3269 $auto$opt_reduce.cc:135:opt_pmux$3267 $auto$opt_reduce.cc:135:opt_pmux$3265 $auto$opt_reduce.cc:135:opt_pmux$3263 $auto$opt_reduce.cc:135:opt_pmux$3261 $auto$opt_reduce.cc:135:opt_pmux$3259 $auto$opt_reduce.cc:135:opt_pmux$3257 $auto$opt_reduce.cc:135:opt_pmux$3255 $auto$opt_reduce.cc:135:opt_pmux$3253 $auto$opt_reduce.cc:135:opt_pmux$3251 $auto$opt_reduce.cc:135:opt_pmux$3249 $auto$opt_reduce.cc:135:opt_pmux$3247 $auto$opt_reduce.cc:135:opt_pmux$3245 $auto$opt_reduce.cc:135:opt_pmux$3243 $auto$opt_reduce.cc:135:opt_pmux$3241 $auto$opt_reduce.cc:135:opt_pmux$3239 $auto$opt_reduce.cc:135:opt_pmux$3237 $auto$opt_reduce.cc:135:opt_pmux$3235 $auto$opt_reduce.cc:135:opt_pmux$3233 $auto$opt_reduce.cc:135:opt_pmux$3231 $auto$opt_reduce.cc:135:opt_pmux$3229 $auto$opt_reduce.cc:135:opt_pmux$3227 $auto$opt_reduce.cc:135:opt_pmux$3225 $auto$opt_reduce.cc:135:opt_pmux$3223 $auto$opt_reduce.cc:135:opt_pmux$3221 $auto$opt_reduce.cc:135:opt_pmux$3219 $auto$opt_reduce.cc:135:opt_pmux$3217 $auto$opt_reduce.cc:135:opt_pmux$3215 $auto$opt_reduce.cc:135:opt_pmux$3213 $auto$opt_reduce.cc:135:opt_pmux$3211 $auto$opt_reduce.cc:135:opt_pmux$3209 $auto$opt_reduce.cc:135:opt_pmux$3207 $auto$opt_reduce.cc:135:opt_pmux$3205 $auto$opt_reduce.cc:135:opt_pmux$3203 $auto$opt_reduce.cc:135:opt_pmux$3201 $auto$opt_reduce.cc:135:opt_pmux$3199 $auto$opt_reduce.cc:135:opt_pmux$3197 $auto$opt_reduce.cc:135:opt_pmux$3195 $auto$opt_reduce.cc:135:opt_pmux$3193 $auto$opt_reduce.cc:135:opt_pmux$3191 $auto$opt_reduce.cc:135:opt_pmux$3189 $auto$opt_reduce.cc:135:opt_pmux$3187 $auto$opt_reduce.cc:135:opt_pmux$3185 $auto$opt_reduce.cc:135:opt_pmux$3183 $auto$opt_reduce.cc:135:opt_pmux$3181 $auto$opt_reduce.cc:135:opt_pmux$3179 $auto$opt_reduce.cc:135:opt_pmux$3177 $auto$opt_reduce.cc:135:opt_pmux$3175 $auto$opt_reduce.cc:135:opt_pmux$3173 $auto$opt_reduce.cc:135:opt_pmux$3171 $auto$opt_reduce.cc:135:opt_pmux$3169 $auto$opt_reduce.cc:135:opt_pmux$3167 $auto$opt_reduce.cc:135:opt_pmux$3165 $auto$opt_reduce.cc:135:opt_pmux$3163 $auto$opt_reduce.cc:135:opt_pmux$3161 $auto$opt_reduce.cc:135:opt_pmux$3159 $auto$opt_reduce.cc:135:opt_pmux$3157 $auto$opt_reduce.cc:135:opt_pmux$3155 $auto$opt_reduce.cc:135:opt_pmux$3153 $auto$opt_reduce.cc:135:opt_pmux$3151 $auto$opt_reduce.cc:135:opt_pmux$3149 $auto$opt_reduce.cc:135:opt_pmux$3147 $auto$opt_reduce.cc:135:opt_pmux$3145 $auto$opt_reduce.cc:135:opt_pmux$3143 $auto$opt_reduce.cc:135:opt_pmux$3141 $auto$opt_reduce.cc:135:opt_pmux$3139 $auto$opt_reduce.cc:135:opt_pmux$3137 $auto$opt_reduce.cc:135:opt_pmux$3135 $auto$opt_reduce.cc:135:opt_pmux$3133 $auto$opt_reduce.cc:135:opt_pmux$3131 $auto$opt_reduce.cc:135:opt_pmux$3129 $auto$opt_reduce.cc:135:opt_pmux$3127 $auto$opt_reduce.cc:135:opt_pmux$3125 $auto$opt_reduce.cc:135:opt_pmux$3123 $auto$opt_reduce.cc:135:opt_pmux$3121 $auto$opt_reduce.cc:135:opt_pmux$3119 $auto$opt_reduce.cc:135:opt_pmux$3117 $auto$opt_reduce.cc:135:opt_pmux$3115 $auto$opt_reduce.cc:135:opt_pmux$3113 $auto$opt_reduce.cc:135:opt_pmux$3111 $auto$opt_reduce.cc:135:opt_pmux$3109 $auto$opt_reduce.cc:135:opt_pmux$3107 $auto$opt_reduce.cc:135:opt_pmux$3105 $auto$opt_reduce.cc:135:opt_pmux$3103 $auto$opt_reduce.cc:135:opt_pmux$3101 $auto$opt_reduce.cc:135:opt_pmux$3099 $auto$opt_reduce.cc:135:opt_pmux$3097 $auto$opt_reduce.cc:135:opt_pmux$3095 $auto$opt_reduce.cc:135:opt_pmux$3093 $auto$opt_reduce.cc:135:opt_pmux$3091 $auto$opt_reduce.cc:135:opt_pmux$3089 $auto$opt_reduce.cc:135:opt_pmux$3087 $auto$opt_reduce.cc:135:opt_pmux$3085 $auto$opt_reduce.cc:135:opt_pmux$3083 $auto$opt_reduce.cc:135:opt_pmux$3081 $auto$opt_reduce.cc:135:opt_pmux$3079 $auto$opt_reduce.cc:135:opt_pmux$3077 $auto$opt_reduce.cc:135:opt_pmux$3075 $auto$opt_reduce.cc:135:opt_pmux$3073 $auto$opt_reduce.cc:135:opt_pmux$3071 $auto$opt_reduce.cc:135:opt_pmux$3069 $auto$opt_reduce.cc:135:opt_pmux$3067 $auto$opt_reduce.cc:135:opt_pmux$3065 $auto$opt_reduce.cc:135:opt_pmux$3063 $auto$opt_reduce.cc:135:opt_pmux$3061 $auto$opt_reduce.cc:135:opt_pmux$3059 $auto$opt_reduce.cc:135:opt_pmux$3057 $auto$opt_reduce.cc:135:opt_pmux$3055 $auto$opt_reduce.cc:135:opt_pmux$3053 $auto$opt_reduce.cc:135:opt_pmux$3051 $auto$opt_reduce.cc:135:opt_pmux$3049 $auto$opt_reduce.cc:135:opt_pmux$3047 $auto$opt_reduce.cc:135:opt_pmux$3045 $auto$opt_reduce.cc:135:opt_pmux$3043 $auto$opt_reduce.cc:135:opt_pmux$3041 $auto$opt_reduce.cc:135:opt_pmux$3039 $auto$opt_reduce.cc:135:opt_pmux$3037 $auto$opt_reduce.cc:135:opt_pmux$3035 $auto$opt_reduce.cc:135:opt_pmux$3033 $auto$opt_reduce.cc:135:opt_pmux$3031 $auto$opt_reduce.cc:135:opt_pmux$3029 $auto$opt_reduce.cc:135:opt_pmux$3027 $auto$opt_reduce.cc:135:opt_pmux$3025 $auto$opt_reduce.cc:135:opt_pmux$3023 $auto$opt_reduce.cc:135:opt_pmux$3021 $auto$opt_reduce.cc:135:opt_pmux$3019 $auto$opt_reduce.cc:135:opt_pmux$3017 $auto$opt_reduce.cc:135:opt_pmux$3015 $auto$opt_reduce.cc:135:opt_pmux$3013 $auto$opt_reduce.cc:135:opt_pmux$3011 $auto$opt_reduce.cc:135:opt_pmux$3009 $auto$opt_reduce.cc:135:opt_pmux$3007 $auto$opt_reduce.cc:135:opt_pmux$3005 $auto$opt_reduce.cc:135:opt_pmux$3003 $auto$opt_reduce.cc:135:opt_pmux$3001 $auto$opt_reduce.cc:135:opt_pmux$2999 $auto$opt_reduce.cc:135:opt_pmux$2997 $auto$opt_reduce.cc:135:opt_pmux$2995 $auto$opt_reduce.cc:135:opt_pmux$2993 $auto$opt_reduce.cc:135:opt_pmux$2991 $auto$opt_reduce.cc:135:opt_pmux$2989 $auto$opt_reduce.cc:135:opt_pmux$2987 $auto$opt_reduce.cc:135:opt_pmux$2985 $auto$opt_reduce.cc:135:opt_pmux$2983 $auto$opt_reduce.cc:135:opt_pmux$2981 $auto$opt_reduce.cc:135:opt_pmux$2979 $auto$opt_reduce.cc:135:opt_pmux$2977 $auto$opt_reduce.cc:135:opt_pmux$2975 $auto$opt_reduce.cc:135:opt_pmux$2973 $auto$opt_reduce.cc:135:opt_pmux$2971 $auto$opt_reduce.cc:135:opt_pmux$2969 $auto$opt_reduce.cc:135:opt_pmux$2967 $auto$opt_reduce.cc:135:opt_pmux$2965 $auto$opt_reduce.cc:135:opt_pmux$2963 $auto$opt_reduce.cc:135:opt_pmux$2961 $auto$opt_reduce.cc:135:opt_pmux$2959 $auto$opt_reduce.cc:135:opt_pmux$2957 $auto$opt_reduce.cc:135:opt_pmux$2955 $auto$opt_reduce.cc:135:opt_pmux$2953 $auto$opt_reduce.cc:135:opt_pmux$2951 $auto$opt_reduce.cc:135:opt_pmux$2949 $auto$opt_reduce.cc:135:opt_pmux$2947 $auto$opt_reduce.cc:135:opt_pmux$2945 $auto$opt_reduce.cc:135:opt_pmux$2943 $auto$opt_reduce.cc:135:opt_pmux$2941 $auto$opt_reduce.cc:135:opt_pmux$2939 $auto$opt_reduce.cc:135:opt_pmux$2937 $auto$opt_reduce.cc:135:opt_pmux$2935 $auto$opt_reduce.cc:135:opt_pmux$2933 $auto$opt_reduce.cc:135:opt_pmux$2931 $auto$opt_reduce.cc:135:opt_pmux$2929 $auto$opt_reduce.cc:135:opt_pmux$2927 $auto$opt_reduce.cc:135:opt_pmux$2925 $auto$opt_reduce.cc:135:opt_pmux$2923 $auto$opt_reduce.cc:135:opt_pmux$2921 $auto$opt_reduce.cc:135:opt_pmux$2919 $auto$opt_reduce.cc:135:opt_pmux$2917 $auto$opt_reduce.cc:135:opt_pmux$2915 $auto$opt_reduce.cc:135:opt_pmux$2913 $auto$opt_reduce.cc:135:opt_pmux$2911 $auto$opt_reduce.cc:135:opt_pmux$2909 $auto$opt_reduce.cc:135:opt_pmux$2907 $auto$opt_reduce.cc:135:opt_pmux$2905 $auto$opt_reduce.cc:135:opt_pmux$2903 $auto$opt_reduce.cc:135:opt_pmux$2901 $auto$opt_reduce.cc:135:opt_pmux$2899 $auto$opt_reduce.cc:135:opt_pmux$2897 $auto$opt_reduce.cc:135:opt_pmux$2895 $auto$opt_reduce.cc:135:opt_pmux$2893 $auto$opt_reduce.cc:135:opt_pmux$2891 $auto$opt_reduce.cc:135:opt_pmux$2889 $auto$opt_reduce.cc:135:opt_pmux$2887 $auto$opt_reduce.cc:135:opt_pmux$2885 $auto$opt_reduce.cc:135:opt_pmux$2883 $auto$opt_reduce.cc:135:opt_pmux$2881 $auto$opt_reduce.cc:135:opt_pmux$2879 $auto$opt_reduce.cc:135:opt_pmux$2877 $auto$opt_reduce.cc:135:opt_pmux$2875 $auto$opt_reduce.cc:135:opt_pmux$2873 $auto$opt_reduce.cc:135:opt_pmux$2871 $auto$opt_reduce.cc:135:opt_pmux$2869 $auto$opt_reduce.cc:135:opt_pmux$2867 $auto$opt_reduce.cc:135:opt_pmux$2865 $auto$opt_reduce.cc:135:opt_pmux$2863 $auto$opt_reduce.cc:135:opt_pmux$2861 $auto$opt_reduce.cc:135:opt_pmux$2859 $auto$opt_reduce.cc:135:opt_pmux$2857 $auto$opt_reduce.cc:135:opt_pmux$2855 $auto$opt_reduce.cc:135:opt_pmux$2853 $auto$opt_reduce.cc:135:opt_pmux$2851 $auto$opt_reduce.cc:135:opt_pmux$2849 $auto$opt_reduce.cc:135:opt_pmux$2847 $auto$opt_reduce.cc:135:opt_pmux$2845 $auto$opt_reduce.cc:135:opt_pmux$2843 $auto$opt_reduce.cc:135:opt_pmux$2841 $auto$opt_reduce.cc:135:opt_pmux$2839 $auto$opt_reduce.cc:135:opt_pmux$2837 $auto$opt_reduce.cc:135:opt_pmux$2835 $auto$opt_reduce.cc:135:opt_pmux$2833 $auto$opt_reduce.cc:135:opt_pmux$2831 $auto$opt_reduce.cc:135:opt_pmux$2829 $auto$opt_reduce.cc:135:opt_pmux$2827 $auto$opt_reduce.cc:135:opt_pmux$2825 $auto$opt_reduce.cc:135:opt_pmux$2823 $auto$opt_reduce.cc:135:opt_pmux$2821 $auto$opt_reduce.cc:135:opt_pmux$2819 $auto$opt_reduce.cc:135:opt_pmux$2817 $auto$opt_reduce.cc:135:opt_pmux$2815 $auto$opt_reduce.cc:135:opt_pmux$2813 $auto$opt_reduce.cc:135:opt_pmux$2811 $auto$opt_reduce.cc:135:opt_pmux$2809 $auto$opt_reduce.cc:135:opt_pmux$2807 $auto$opt_reduce.cc:135:opt_pmux$2805 $auto$opt_reduce.cc:135:opt_pmux$2803 $auto$opt_reduce.cc:135:opt_pmux$2801 $auto$opt_reduce.cc:135:opt_pmux$2799 $auto$opt_reduce.cc:135:opt_pmux$2797 $auto$opt_reduce.cc:135:opt_pmux$2795 $auto$opt_reduce.cc:135:opt_pmux$2793 $auto$opt_reduce.cc:135:opt_pmux$2791 $auto$opt_reduce.cc:135:opt_pmux$2789 $auto$opt_reduce.cc:135:opt_pmux$2787 $auto$opt_reduce.cc:135:opt_pmux$2785 $auto$opt_reduce.cc:135:opt_pmux$2783 $auto$opt_reduce.cc:135:opt_pmux$2781 $auto$opt_reduce.cc:135:opt_pmux$2779 $auto$opt_reduce.cc:135:opt_pmux$2777 $auto$opt_reduce.cc:135:opt_pmux$2775 $auto$opt_reduce.cc:135:opt_pmux$2773 $auto$opt_reduce.cc:135:opt_pmux$2771 $auto$opt_reduce.cc:135:opt_pmux$2769 $auto$opt_reduce.cc:135:opt_pmux$2767 $auto$opt_reduce.cc:135:opt_pmux$2765 $auto$opt_reduce.cc:135:opt_pmux$2763 $auto$opt_reduce.cc:135:opt_pmux$2761 $auto$opt_reduce.cc:135:opt_pmux$2759 $auto$opt_reduce.cc:135:opt_pmux$2757 $auto$opt_reduce.cc:135:opt_pmux$2755 $auto$opt_reduce.cc:135:opt_pmux$2753 $auto$opt_reduce.cc:135:opt_pmux$2751 $auto$opt_reduce.cc:135:opt_pmux$2749 $auto$opt_reduce.cc:135:opt_pmux$2747 $auto$opt_reduce.cc:135:opt_pmux$2745 $auto$opt_reduce.cc:135:opt_pmux$2743 $auto$opt_reduce.cc:135:opt_pmux$2741 $auto$opt_reduce.cc:135:opt_pmux$2739 $auto$opt_reduce.cc:135:opt_pmux$2737 $auto$opt_reduce.cc:135:opt_pmux$2735 $auto$opt_reduce.cc:135:opt_pmux$2733 $auto$opt_reduce.cc:135:opt_pmux$2731 $auto$opt_reduce.cc:135:opt_pmux$2729 $auto$opt_reduce.cc:135:opt_pmux$2727 $auto$opt_reduce.cc:135:opt_pmux$2725 $procmux$949_CMP $auto$opt_reduce.cc:135:opt_pmux$2723 $auto$opt_reduce.cc:135:opt_pmux$2721 $auto$opt_reduce.cc:135:opt_pmux$2719 $auto$opt_reduce.cc:135:opt_pmux$2717 $auto$opt_reduce.cc:135:opt_pmux$2715 $auto$opt_reduce.cc:135:opt_pmux$2713 $auto$opt_reduce.cc:135:opt_pmux$2711 $auto$opt_reduce.cc:135:opt_pmux$2709 $auto$opt_reduce.cc:135:opt_pmux$2707 $auto$opt_reduce.cc:135:opt_pmux$2705 $auto$opt_reduce.cc:135:opt_pmux$2703 $auto$opt_reduce.cc:135:opt_pmux$2701 $auto$opt_reduce.cc:135:opt_pmux$2699 $auto$opt_reduce.cc:135:opt_pmux$2697 $auto$opt_reduce.cc:135:opt_pmux$2695 $auto$opt_reduce.cc:135:opt_pmux$2693 $auto$opt_reduce.cc:135:opt_pmux$2691 $auto$opt_reduce.cc:135:opt_pmux$2689 $auto$opt_reduce.cc:135:opt_pmux$2687 $auto$opt_reduce.cc:135:opt_pmux$2685 $auto$opt_reduce.cc:135:opt_pmux$2683 $auto$opt_reduce.cc:135:opt_pmux$2681 $auto$opt_reduce.cc:135:opt_pmux$2679 $auto$opt_reduce.cc:135:opt_pmux$2677 $auto$opt_reduce.cc:135:opt_pmux$2675 $auto$opt_reduce.cc:135:opt_pmux$2673 $auto$opt_reduce.cc:135:opt_pmux$2671 $auto$opt_reduce.cc:135:opt_pmux$2669 $auto$opt_reduce.cc:135:opt_pmux$2667 $auto$opt_reduce.cc:135:opt_pmux$2665 $auto$opt_reduce.cc:135:opt_pmux$2663 $auto$opt_reduce.cc:135:opt_pmux$2661 $auto$opt_reduce.cc:135:opt_pmux$2659 $auto$opt_reduce.cc:135:opt_pmux$2657 $auto$opt_reduce.cc:135:opt_pmux$2655 $auto$opt_reduce.cc:135:opt_pmux$2653 $auto$opt_reduce.cc:135:opt_pmux$2651 $auto$opt_reduce.cc:135:opt_pmux$2649 $auto$opt_reduce.cc:135:opt_pmux$2647 $auto$opt_reduce.cc:135:opt_pmux$2645 $auto$opt_reduce.cc:135:opt_pmux$2643 $auto$opt_reduce.cc:135:opt_pmux$2641 $auto$opt_reduce.cc:135:opt_pmux$2639 $auto$opt_reduce.cc:135:opt_pmux$2637 $auto$opt_reduce.cc:135:opt_pmux$2635 $auto$opt_reduce.cc:135:opt_pmux$2633 $auto$opt_reduce.cc:135:opt_pmux$2631 $auto$opt_reduce.cc:135:opt_pmux$2629 $auto$opt_reduce.cc:135:opt_pmux$2627 $auto$opt_reduce.cc:135:opt_pmux$2625 $auto$opt_reduce.cc:135:opt_pmux$2623 $auto$opt_reduce.cc:135:opt_pmux$2621 $auto$opt_reduce.cc:135:opt_pmux$2619 $auto$opt_reduce.cc:135:opt_pmux$2617 $auto$opt_reduce.cc:135:opt_pmux$2615 $auto$opt_reduce.cc:135:opt_pmux$2613 $auto$opt_reduce.cc:135:opt_pmux$2611 $auto$opt_reduce.cc:135:opt_pmux$2609 $auto$opt_reduce.cc:135:opt_pmux$2607 $auto$opt_reduce.cc:135:opt_pmux$2605 $auto$opt_reduce.cc:135:opt_pmux$2603 $auto$opt_reduce.cc:135:opt_pmux$2601 $auto$opt_reduce.cc:135:opt_pmux$2599 $auto$opt_reduce.cc:135:opt_pmux$2597 $auto$opt_reduce.cc:135:opt_pmux$2595 $auto$opt_reduce.cc:135:opt_pmux$2593 $auto$opt_reduce.cc:135:opt_pmux$2591 $auto$opt_reduce.cc:135:opt_pmux$2589 $auto$opt_reduce.cc:135:opt_pmux$2587 $auto$opt_reduce.cc:135:opt_pmux$2585 $auto$opt_reduce.cc:135:opt_pmux$2583 $auto$opt_reduce.cc:135:opt_pmux$2581 $auto$opt_reduce.cc:135:opt_pmux$2579 $auto$opt_reduce.cc:135:opt_pmux$2577 $auto$opt_reduce.cc:135:opt_pmux$2575 $auto$opt_reduce.cc:135:opt_pmux$2573 $auto$opt_reduce.cc:135:opt_pmux$2571 $auto$opt_reduce.cc:135:opt_pmux$2569 $auto$opt_reduce.cc:135:opt_pmux$2567 $auto$opt_reduce.cc:135:opt_pmux$2565 $auto$opt_reduce.cc:135:opt_pmux$2563 $auto$opt_reduce.cc:135:opt_pmux$2561 $auto$opt_reduce.cc:135:opt_pmux$2559 $auto$opt_reduce.cc:135:opt_pmux$2557 $auto$opt_reduce.cc:135:opt_pmux$2555 $auto$opt_reduce.cc:135:opt_pmux$2553 $auto$opt_reduce.cc:135:opt_pmux$2551 $auto$opt_reduce.cc:135:opt_pmux$2549 $auto$opt_reduce.cc:135:opt_pmux$2547 $auto$opt_reduce.cc:135:opt_pmux$2545 $auto$opt_reduce.cc:135:opt_pmux$2543 $auto$opt_reduce.cc:135:opt_pmux$2541 $auto$opt_reduce.cc:135:opt_pmux$2539 $auto$opt_reduce.cc:135:opt_pmux$2537 $auto$opt_reduce.cc:135:opt_pmux$2535 $auto$opt_reduce.cc:135:opt_pmux$2533 $auto$opt_reduce.cc:135:opt_pmux$2531 $auto$opt_reduce.cc:135:opt_pmux$2529 $auto$opt_reduce.cc:135:opt_pmux$2527 $auto$opt_reduce.cc:135:opt_pmux$2525 $auto$opt_reduce.cc:135:opt_pmux$2523 $auto$opt_reduce.cc:135:opt_pmux$2521 $auto$opt_reduce.cc:135:opt_pmux$2519 $auto$opt_reduce.cc:135:opt_pmux$2517 $auto$opt_reduce.cc:135:opt_pmux$2515 $auto$opt_reduce.cc:135:opt_pmux$2513 $auto$opt_reduce.cc:135:opt_pmux$2511 $auto$opt_reduce.cc:135:opt_pmux$2509 $auto$opt_reduce.cc:135:opt_pmux$2507 $auto$opt_reduce.cc:135:opt_pmux$2505 $auto$opt_reduce.cc:135:opt_pmux$2503 $auto$opt_reduce.cc:135:opt_pmux$2501 $auto$opt_reduce.cc:135:opt_pmux$2499 $auto$opt_reduce.cc:135:opt_pmux$2497 $auto$opt_reduce.cc:135:opt_pmux$2495 $auto$opt_reduce.cc:135:opt_pmux$2493 $auto$opt_reduce.cc:135:opt_pmux$2491 $auto$opt_reduce.cc:135:opt_pmux$2489 $auto$opt_reduce.cc:135:opt_pmux$2487 $auto$opt_reduce.cc:135:opt_pmux$2485 $auto$opt_reduce.cc:135:opt_pmux$2483 $auto$opt_reduce.cc:135:opt_pmux$2481 $auto$opt_reduce.cc:135:opt_pmux$2479 $auto$opt_reduce.cc:135:opt_pmux$2477 $auto$opt_reduce.cc:135:opt_pmux$2475 $auto$opt_reduce.cc:135:opt_pmux$2473 $auto$opt_reduce.cc:135:opt_pmux$2471 $auto$opt_reduce.cc:135:opt_pmux$2469 $auto$opt_reduce.cc:135:opt_pmux$2467 $auto$opt_reduce.cc:135:opt_pmux$2465 $auto$opt_reduce.cc:135:opt_pmux$2463 $auto$opt_reduce.cc:135:opt_pmux$2461 $auto$opt_reduce.cc:135:opt_pmux$2459 $auto$opt_reduce.cc:135:opt_pmux$2457 $auto$opt_reduce.cc:135:opt_pmux$2455 }
+    New ctrl vector for $pmux cell $procmux$2389: { $procmux$2390_CMP $auto$opt_reduce.cc:135:opt_pmux$3305 $procmux$2403_CMP $procmux$2404_CMP $procmux$2405_CMP $procmux$2406_CMP $procmux$2407_CMP $procmux$2408_CMP $procmux$2409_CMP $procmux$2410_CMP $procmux$2411_CMP $procmux$2412_CMP $procmux$2413_CMP $procmux$2414_CMP $procmux$2415_CMP $procmux$2416_CMP $procmux$2417_CMP $procmux$2418_CMP $auto$opt_reduce.cc:135:opt_pmux$3303 $procmux$2422_CMP $auto$opt_reduce.cc:135:opt_pmux$3301 $procmux$2435_CMP $procmux$2436_CMP $procmux$2437_CMP $procmux$2438_CMP $procmux$2439_CMP $procmux$2440_CMP $procmux$2441_CMP $procmux$2442_CMP $procmux$2443_CMP $procmux$2444_CMP $procmux$2445_CMP $procmux$2446_CMP $procmux$2447_CMP $procmux$2448_CMP $procmux$2449_CMP }
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 2 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 1577 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+Removed 0 unused cells and 104 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 1577 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 2
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 0
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 1
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 2
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$63: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$63: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$63: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-1 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$55: removing const-0 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$55: removing const-1 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$55: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-1 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 2
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 0
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 1
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 2
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 15
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 1
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 2
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 3
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 4
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 5
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 6
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 7
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 8
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 9
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 10
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 11
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 12
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 13
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 14
+ex221_fp16_exp2_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 15
+Performed a total of 30 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$119'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$119'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\ex221_fp16_exp2_sign_exp_default_expr_case': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+Removed 0 unused cells and 2 unused wires.
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$119 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 13.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$115 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$111 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 13.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$107 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$103 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$99 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$95 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$91 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$87 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 6.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$83 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 5.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$79 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$75 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 3.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$71 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 2.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$63 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$59 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$55 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 13.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$51 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$47 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$43 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$39 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$35 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$31 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$27 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 6.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$23 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 5.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$19 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$15 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 3.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$11 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 2.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$3 in module \ex221_fp16_exp2_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 1.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13325 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13325 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13229 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 96 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+Removed 0 unused cells and 45604 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13229 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 55070 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 36284 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 23613 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 15907 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 11947 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 10437 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9686 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9319 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9143 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9080 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9070 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9067 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 46003 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 9067 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+Removed 0 unused cells and 28542 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 8890 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+Removed 0 unused cells and 27 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 8890 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex221_fp16_exp2_sign_exp_default_expr_case' to `<abc-temp-dir>/input.blif'..
+Replacing 16 occurrences of constant undef bits with constant zero bits
+
+12.1.1. Executed ABC.
+Extracted 8890 gates and 8909 wires to a netlist network with 16 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     8010
+ABC RESULTS:               NOT cells:     5205
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     8877
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13215 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13215 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+Removed 0 unused cells and 4694 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13215 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex221_fp16_exp2_sign_exp_default_expr_case: replaced 0 cells with 0 new cells, skipped 13215 cells.
+  not replaced 2 cell types:
+    8010 $_AND_
+    5205 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13215 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex221_fp16_exp2_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex221_fp16_exp2_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Computing hashes of 13215 cells of `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex221_fp16_exp2_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex221_fp16_exp2_sign_exp_default_expr_case..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex221_fp16_exp2_sign_exp_default_expr_case.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [0] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [1] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [2] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [3] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [4] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [5] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [6] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [7] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [8] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [9] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [10] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [11] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [12] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [13] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [14] like $anyseq.
+Warning: Treating undriven bit ex221_fp16_exp2_sign_exp_default_expr_case.\in [15] like $anyseq.
+Warning: Treating a total of 16 undriven bits in ex221_fp16_exp2_sign_exp_default_expr_case like $anyseq.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: 0b67352cf3, time: 10.33s, user: 9.07s, system: 0.22s, MEM: 328.78 MB peak
+Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+Time spent: 24% 16x opt_expr (2 sec), 14% 1x abc (1 sec), ...

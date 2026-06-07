@@ -1,0 +1,6 @@
+case,status,area,delay,adp,source,notes
+ex225,OK,11488,21,241248,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/ex225/aigs/ex225_manual15_14_13_predecode12_9_abc_g_aig.aig,official evaluate.py wrapper recheck OK
+ex226,OK,33356,22,733832,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/ex226/aigs/ex226_positive_default_exp_mant_case_abc_g_aig.aig,official evaluate.py --case ex226 OK
+ex227,OK,40629,22,893838,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/ex227/aigs/ex227_positive_default_exp_mant_case_abc_g_aig.aig,official evaluate.py --case ex227 OK
+ex228,OK,6627,20,132540,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/ex228/aigs/ex228_semantic_sign_exp_field_defaults_abc_g_aig.aig,official evaluate.py --case ex228 OK
+ex229,OK,3971,19,75449,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/ex229/aigs/ex229_semantic_positive_field_defaults_abc_g_aig.aig,official evaluate.py --case ex229 OK

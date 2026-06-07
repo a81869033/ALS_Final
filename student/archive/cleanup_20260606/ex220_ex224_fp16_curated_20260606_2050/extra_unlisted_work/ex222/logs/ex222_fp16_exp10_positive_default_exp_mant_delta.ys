@@ -1,0 +1,17 @@
+read_verilog "student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_positive_default_exp_mant_delta.v"
+hierarchy -check -top ex222_fp16_exp10_positive_default_exp_mant_delta
+proc
+flatten
+tribuf -logic
+deminout
+opt
+memory
+opt
+techmap
+opt
+abc -g AND
+opt
+aigmap
+opt
+clean
+write_aiger -symbols "student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/aigs/ex222_fp16_exp10_positive_default_exp_mant_delta.aig"

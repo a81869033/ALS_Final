@@ -9,11 +9,19 @@ from student.backends.abc_flow import evaluate_aig
 from student.common.abc import run_aig_flow
 
 
+ABC9_DEEPSYN_FLOW = "abc9_deepsyn"
+ABC9_DEEPSYN_NODE_LIMIT = 10000
+ABC9_DEEPSYN_TIMEOUT = 3000
+
 ABC9_FLOW_COMMANDS = OrderedDict(
     [
         (
             "abc9_syn2_dc2",
             "strash; &get; &st; &syn2; &dc2; &put; strash",
+        ),
+        (
+            ABC9_DEEPSYN_FLOW,
+            "strash; &get; &st; &deepsyn; &put; strash",
         ),
     ]
 )

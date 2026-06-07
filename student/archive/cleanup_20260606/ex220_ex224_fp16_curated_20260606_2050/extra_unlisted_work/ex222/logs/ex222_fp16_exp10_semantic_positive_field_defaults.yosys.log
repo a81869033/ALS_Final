@@ -1,0 +1,1095 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_p_j6t5tu.ys' --
+
+1. Executing Verilog-2005 frontend: student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v
+Parsing Verilog input from `student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v' to AST representation.
+Generating RTLIL representation for module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex222_fp16_exp10_semantic_positive_field_defaults
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex222_fp16_exp10_semantic_positive_field_defaults
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 15 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:12360$2 in module ex222_fp16_exp10_semantic_positive_field_defaults.
+Marked 18 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:12360$2 in module ex222_fp16_exp10_semantic_positive_field_defaults.
+Removed 1 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1 in module ex222_fp16_exp10_semantic_positive_field_defaults.
+Marked 17 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1 in module ex222_fp16_exp10_semantic_positive_field_defaults.
+Removed a total of 16 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 4 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 32 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:12360$2'.
+     1/18: $18\neg_out[15:0]
+     2/18: $17\neg_out[15:0]
+     3/18: $16\neg_out[15:0]
+     4/18: $15\neg_out[15:0]
+     5/18: $14\neg_out[15:0]
+     6/18: $13\neg_out[15:0]
+     7/18: $12\neg_out[15:0]
+     8/18: $11\neg_out[15:0]
+     9/18: $10\neg_out[15:0]
+    10/18: $9\neg_out[15:0]
+    11/18: $8\neg_out[15:0]
+    12/18: $7\neg_out[15:0]
+    13/18: $6\neg_out[15:0]
+    14/18: $5\neg_out[15:0]
+    15/18: $4\neg_out[15:0]
+    16/18: $3\neg_out[15:0]
+    17/18: $2\neg_out[15:0]
+    18/18: $1\neg_out[15:0]
+Creating decoders for process `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1'.
+     1/21: $17\pos_mant[9:0]
+     2/21: $17\pos_exp[4:0]
+     3/21: $17\pos_sign[0:0]
+     4/21: { $16\pos_mant[9:0] $16\pos_exp[4:0] $16\pos_sign[0:0] }
+     5/21: { $15\pos_mant[9:0] $15\pos_exp[4:0] $15\pos_sign[0:0] }
+     6/21: { $14\pos_mant[9:0] $14\pos_exp[4:0] $14\pos_sign[0:0] }
+     7/21: { $13\pos_mant[9:0] $13\pos_exp[4:0] $13\pos_sign[0:0] }
+     8/21: { $12\pos_mant[9:0] $12\pos_exp[4:0] $12\pos_sign[0:0] }
+     9/21: { $11\pos_mant[9:0] $11\pos_exp[4:0] $11\pos_sign[0:0] }
+    10/21: { $10\pos_mant[9:0] $10\pos_exp[4:0] $10\pos_sign[0:0] }
+    11/21: { $9\pos_mant[9:0] $9\pos_exp[4:0] $9\pos_sign[0:0] }
+    12/21: { $8\pos_mant[9:0] $8\pos_exp[4:0] $8\pos_sign[0:0] }
+    13/21: { $7\pos_mant[9:0] $7\pos_exp[4:0] $7\pos_sign[0:0] }
+    14/21: { $6\pos_mant[9:0] $6\pos_exp[4:0] $6\pos_sign[0:0] }
+    15/21: { $5\pos_mant[9:0] $5\pos_exp[4:0] $5\pos_sign[0:0] }
+    16/21: { $4\pos_mant[9:0] $4\pos_exp[4:0] $4\pos_sign[0:0] }
+    17/21: { $3\pos_mant[9:0] $3\pos_exp[4:0] $3\pos_sign[0:0] }
+    18/21: { $2\pos_mant[9:0] $2\pos_exp[4:0] $2\pos_sign[0:0] }
+    19/21: $1\pos_mant[9:0]
+    20/21: $1\pos_exp[4:0]
+    21/21: $1\pos_sign[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex222_fp16_exp10_semantic_positive_field_defaults.\neg_out' from process `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:12360$2'.
+No latch inferred for signal `\ex222_fp16_exp10_semantic_positive_field_defaults.\pos_sign' from process `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1'.
+No latch inferred for signal `\ex222_fp16_exp10_semantic_positive_field_defaults.\pos_exp' from process `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1'.
+No latch inferred for signal `\ex222_fp16_exp10_semantic_positive_field_defaults.\pos_mant' from process `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 18 empty switches in `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:12360$2'.
+Removing empty process `ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:12360$2'.
+Found and cleaned up 17 empty switches in `\ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1'.
+Removing empty process `ex222_fp16_exp10_semantic_positive_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_semantic_positive_field_defaults.v:13$1'.
+Cleaned up 35 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 262 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 144 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 118 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$490.
+    dead port 2/2 on $mux $procmux$468.
+    dead port 2/2 on $mux $procmux$447.
+    dead port 2/2 on $mux $procmux$427.
+    dead port 2/2 on $mux $procmux$408.
+    dead port 2/2 on $mux $procmux$390.
+    dead port 2/2 on $mux $procmux$371.
+    dead port 2/2 on $mux $procmux$367.
+    dead port 2/2 on $mux $procmux$363.
+    dead port 2/2 on $mux $procmux$736.
+    dead port 2/2 on $mux $procmux$337.
+    dead port 2/2 on $mux $procmux$704.
+    dead port 2/2 on $mux $procmux$316.
+    dead port 2/2 on $mux $procmux$297.
+    dead port 2/2 on $mux $procmux$279.
+    dead port 2/2 on $mux $procmux$262.
+    dead port 2/2 on $mux $procmux$672.
+    dead port 2/2 on $mux $procmux$246.
+    dead port 2/2 on $mux $procmux$231.
+    dead port 2/2 on $mux $procmux$643.
+    dead port 2/2 on $mux $procmux$217.
+    dead port 2/2 on $mux $procmux$204.
+    dead port 2/2 on $mux $procmux$615.
+    dead port 2/2 on $mux $procmux$192.
+    dead port 2/2 on $mux $procmux$181.
+    dead port 2/2 on $mux $procmux$588.
+    dead port 2/2 on $mux $procmux$171.
+    dead port 2/2 on $mux $procmux$162.
+    dead port 2/2 on $mux $procmux$562.
+    dead port 2/2 on $mux $procmux$154.
+    dead port 2/2 on $mux $procmux$147.
+    dead port 2/2 on $mux $procmux$537.
+    dead port 2/2 on $mux $procmux$141.
+    dead port 2/2 on $mux $procmux$134.
+    dead port 2/2 on $mux $procmux$513.
+Removed 35 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+    New ctrl vector for $pmux cell $procmux$738: { $procmux$805_CMP $auto$opt_reduce.cc:135:opt_pmux$838 $procmux$819_CMP $procmux$820_CMP $procmux$821_CMP $procmux$822_CMP $procmux$823_CMP $procmux$824_CMP $procmux$825_CMP $procmux$826_CMP $procmux$827_CMP $procmux$828_CMP $procmux$829_CMP $procmux$830_CMP $procmux$831_CMP $procmux$832_CMP $procmux$833_CMP $procmux$834_CMP }
+    New ctrl vector for $pmux cell $procmux$771: { $auto$opt_reduce.cc:135:opt_pmux$842 $procmux$819_CMP $procmux$820_CMP $procmux$821_CMP $procmux$822_CMP $procmux$823_CMP $procmux$824_CMP $procmux$825_CMP $procmux$826_CMP $procmux$827_CMP $procmux$828_CMP $procmux$829_CMP $procmux$830_CMP $procmux$831_CMP $procmux$832_CMP $auto$opt_reduce.cc:135:opt_pmux$840 $procmux$834_CMP }
+    New ctrl vector for $pmux cell $procmux$804: { $auto$opt_reduce.cc:135:opt_pmux$844 $procmux$819_CMP $procmux$820_CMP $procmux$821_CMP $procmux$822_CMP $procmux$823_CMP $procmux$824_CMP $procmux$825_CMP $procmux$826_CMP $procmux$827_CMP $procmux$828_CMP $procmux$829_CMP $procmux$830_CMP $procmux$831_CMP $procmux$832_CMP $procmux$834_CMP }
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 3 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 113 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+Removed 1 unused cells and 202 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 112 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$129: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$129: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$129: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$129: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$125: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$125: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$121: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$121: removing const-0 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$121: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$117: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$117: removing const-0 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$117: removing const-0 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$117: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$113: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$109: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$109: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$109: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$109: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$109: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$109: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$105: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$101: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$97: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$93: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$89: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$77: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$73: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 0
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 6
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$69: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$65: removing const-0 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$65: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$65: removing const-0 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$65: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$65: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$61: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$61: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$57: removing const-0 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$57: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$57: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$57: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$53: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$53: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$53: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$49: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$49: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$49: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$49: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$45: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$45: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$45: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$45: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$45: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$45: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-0 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$41: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$37: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$33: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-1 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$29: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 6
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$25: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 6
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$21: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 6
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$17: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 6
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$13: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 1
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 2
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 3
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 4
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 5
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 6
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 7
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 8
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 9
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-0 lane 10
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$9: removing const-0 lane 15
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$5: removing const-1 lane 11
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$5: removing const-1 lane 12
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$5: removing const-1 lane 13
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$5: removing const-0 lane 14
+ex222_fp16_exp10_semantic_positive_field_defaults.$auto$proc_rom.cc:155:do_switch$5: removing const-0 lane 15
+Performed a total of 32 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$129'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$125'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$121'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$117'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$113'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$109'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$105'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$101'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$97'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$93'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$89'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$85'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$81'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$77'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$73'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$69'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$65'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$61'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$57'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$53'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$49'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$45'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$41'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$37'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$33'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$29'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$25'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$21'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$17'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$13'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$9'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$5'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$129'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$125'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$121'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$117'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$113'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$109'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$105'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$101'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$97'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$93'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$89'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$85'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$81'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$77'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$73'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$69'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$65'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$61'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$57'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$53'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$49'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$45'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$41'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$37'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$33'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$29'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$25'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$21'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$17'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$13'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$9'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$5'[0] in module `\ex222_fp16_exp10_semantic_positive_field_defaults': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+Removed 0 unused cells and 22 unused wires.
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$129 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 256 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$125 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$121 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 13.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$117 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$113 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$109 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$105 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$101 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$97 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$93 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 6.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$89 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 5.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$85 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$81 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 3.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$77 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 512 $dff cells and 0 static cells of width 2.
+  read interface: 0 $dff and 511 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$73 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 1.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$69 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 6.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$65 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 64 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 63 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$61 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$57 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$53 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 13.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$49 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$45 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$41 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$37 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$33 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$29 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$25 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 6.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$21 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 5.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$17 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$13 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 3.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$9 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 1.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$5 in module \ex222_fp16_exp10_semantic_positive_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 12629 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+    New ctrl vector for $pmux cell $procmux$771: { $auto$opt_reduce.cc:135:opt_pmux$92398 $procmux$298_CMP $procmux$172_CMP $procmux$163_CMP $procmux$155_CMP $procmux$148_CMP $procmux$142_CMP $auto$opt_reduce.cc:135:opt_pmux$842 }
+    New ctrl vector for $pmux cell $procmux$804: { $auto$opt_reduce.cc:135:opt_pmux$92400 $procmux$298_CMP $procmux$142_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:129:opt_pmux$92397: { $procmux$359_CMP $procmux$357_CMP $procmux$338_CMP $procmux$317_CMP $procmux$280_CMP $procmux$263_CMP $procmux$247_CMP $procmux$232_CMP $procmux$218_CMP $procmux$205_CMP $procmux$193_CMP $procmux$182_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:129:opt_pmux$92399: { $procmux$752_CMP $procmux$751_CMP $procmux$750_CMP $procmux$749_CMP $procmux$748_CMP $procmux$747_CMP $procmux$746_CMP $procmux$745_CMP $procmux$744_CMP $procmux$743_CMP $procmux$742_CMP $procmux$741_CMP $procmux$740_CMP $procmux$359_CMP $procmux$357_CMP $procmux$338_CMP $procmux$317_CMP $procmux$280_CMP $procmux$263_CMP $procmux$247_CMP $procmux$232_CMP $procmux$218_CMP $procmux$205_CMP $procmux$193_CMP $procmux$182_CMP $procmux$172_CMP $procmux$163_CMP $procmux$155_CMP $procmux$148_CMP $procmux$135_CMP }
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 4 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 12631 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 12608 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 12596 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 35 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+Removed 2 unused cells and 48480 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 12594 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $eq.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 37882 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 26087 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 17573 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 11712 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 8759 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7837 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7545 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7441 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7395 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7368 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7358 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7354 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7353 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 30529 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7353 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+Removed 3 unused cells and 11299 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7284 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+Removed 0 unused cells and 27 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 7284 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex222_fp16_exp10_semantic_positive_field_defaults' to `<abc-temp-dir>/input.blif'..
+Replacing 16 occurrences of constant undef bits with constant zero bits
+
+12.1.1. Executed ABC.
+Extracted 7284 gates and 7303 wires to a netlist network with 16 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:    10615
+ABC RESULTS:               NOT cells:     7522
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     7271
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 18137 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 18137 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+Removed 0 unused cells and 2258 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 18137 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex222_fp16_exp10_semantic_positive_field_defaults: replaced 0 cells with 0 new cells, skipped 18137 cells.
+  not replaced 2 cell types:
+   10615 $_AND_
+    7522 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 18137 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_semantic_positive_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_semantic_positive_field_defaults.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Computing hashes of 18137 cells of `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Finding duplicate cells in `\ex222_fp16_exp10_semantic_positive_field_defaults'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_semantic_positive_field_defaults..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_semantic_positive_field_defaults.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [0] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [1] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [2] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [3] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [4] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [5] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [6] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [7] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [8] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [9] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [10] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [11] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [12] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [13] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [14] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_semantic_positive_field_defaults.\in [15] like $anyseq.
+Warning: Treating a total of 16 undriven bits in ex222_fp16_exp10_semantic_positive_field_defaults like $anyseq.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: f5e62a621f, time: 11.15s, user: 9.97s, system: 0.25s, MEM: 323.92 MB peak
+Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+Time spent: 22% 16x opt_expr (2 sec), 16% 3x read_verilog (1 sec), ...

@@ -1,0 +1,1075 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_m0j81gcb.ys' --
+
+1. Executing Verilog-2005 frontend: student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v
+Parsing Verilog input from `student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v' to AST representation.
+Generating RTLIL representation for module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex224_fp16_log2_positive_default_exp_mant_delta
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex224_fp16_log2_positive_default_exp_mant_delta
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:31955$4 in module ex224_fp16_log2_positive_default_exp_mant_delta.
+Removed 32 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:49$3 in module ex224_fp16_log2_positive_default_exp_mant_delta.
+Marked 32 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:49$3 in module ex224_fp16_log2_positive_default_exp_mant_delta.
+Removed 1 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:12$2 in module ex224_fp16_log2_positive_default_exp_mant_delta.
+Marked 1 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:12$2 in module ex224_fp16_log2_positive_default_exp_mant_delta.
+Removed a total of 33 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 32 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:31955$4'.
+     1/1: $1\neg_out[15:0]
+Creating decoders for process `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:49$3'.
+     1/32: $32\pos_out_delta[15:0]
+     2/32: $31\pos_out_delta[15:0]
+     3/32: $30\pos_out_delta[15:0]
+     4/32: $29\pos_out_delta[15:0]
+     5/32: $28\pos_out_delta[15:0]
+     6/32: $27\pos_out_delta[15:0]
+     7/32: $26\pos_out_delta[15:0]
+     8/32: $25\pos_out_delta[15:0]
+     9/32: $24\pos_out_delta[15:0]
+    10/32: $23\pos_out_delta[15:0]
+    11/32: $22\pos_out_delta[15:0]
+    12/32: $21\pos_out_delta[15:0]
+    13/32: $20\pos_out_delta[15:0]
+    14/32: $19\pos_out_delta[15:0]
+    15/32: $18\pos_out_delta[15:0]
+    16/32: $17\pos_out_delta[15:0]
+    17/32: $16\pos_out_delta[15:0]
+    18/32: $15\pos_out_delta[15:0]
+    19/32: $14\pos_out_delta[15:0]
+    20/32: $13\pos_out_delta[15:0]
+    21/32: $12\pos_out_delta[15:0]
+    22/32: $11\pos_out_delta[15:0]
+    23/32: $10\pos_out_delta[15:0]
+    24/32: $9\pos_out_delta[15:0]
+    25/32: $8\pos_out_delta[15:0]
+    26/32: $7\pos_out_delta[15:0]
+    27/32: $6\pos_out_delta[15:0]
+    28/32: $5\pos_out_delta[15:0]
+    29/32: $4\pos_out_delta[15:0]
+    30/32: $3\pos_out_delta[15:0]
+    31/32: $2\pos_out_delta[15:0]
+    32/32: $1\pos_out_delta[15:0]
+Creating decoders for process `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:12$2'.
+     1/1: $1\pos_out_base[15:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex224_fp16_log2_positive_default_exp_mant_delta.\neg_out' from process `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:31955$4'.
+No latch inferred for signal `\ex224_fp16_log2_positive_default_exp_mant_delta.\pos_out_delta' from process `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:49$3'.
+No latch inferred for signal `\ex224_fp16_log2_positive_default_exp_mant_delta.\pos_out_base' from process `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:12$2'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:31955$4'.
+Removing empty process `ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:31955$4'.
+Found and cleaned up 32 empty switches in `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:49$3'.
+Removing empty process `ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:49$3'.
+Found and cleaned up 1 empty switch in `\ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:12$2'.
+Removing empty process `ex224_fp16_log2_positive_default_exp_mant_delta.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex224/verilog/ex224_fp16_log2_positive_default_exp_mant_delta.v:12$2'.
+Cleaned up 34 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 163 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 131 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 32 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$693.
+    dead port 2/2 on $mux $procmux$660.
+    dead port 2/2 on $mux $procmux$628.
+    dead port 2/2 on $mux $procmux$597.
+    dead port 2/2 on $mux $procmux$567.
+    dead port 2/2 on $mux $procmux$538.
+    dead port 2/2 on $mux $procmux$510.
+    dead port 2/2 on $mux $procmux$483.
+    dead port 2/2 on $mux $procmux$457.
+    dead port 2/2 on $mux $procmux$432.
+    dead port 2/2 on $mux $procmux$408.
+    dead port 2/2 on $mux $procmux$385.
+    dead port 2/2 on $mux $procmux$363.
+    dead port 2/2 on $mux $procmux$342.
+    dead port 2/2 on $mux $procmux$322.
+    dead port 2/2 on $mux $procmux$303.
+    dead port 2/2 on $mux $procmux$285.
+    dead port 2/2 on $mux $procmux$268.
+    dead port 2/2 on $mux $procmux$252.
+    dead port 2/2 on $mux $procmux$237.
+    dead port 2/2 on $mux $procmux$223.
+    dead port 2/2 on $mux $procmux$210.
+    dead port 2/2 on $mux $procmux$198.
+    dead port 2/2 on $mux $procmux$187.
+    dead port 2/2 on $mux $procmux$177.
+    dead port 2/2 on $mux $procmux$168.
+    dead port 2/2 on $mux $procmux$160.
+    dead port 2/2 on $mux $procmux$153.
+    dead port 2/2 on $mux $procmux$147.
+    dead port 2/2 on $mux $procmux$142.
+    dead port 2/2 on $mux $procmux$138.
+Removed 31 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 100 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+Removed 0 unused cells and 105 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 100 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 0
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 1
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 2
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 3
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 4
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 5
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$131: removing const-0 lane 6
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 0
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 1
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 2
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 3
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 4
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 5
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 6
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 7
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$127: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$123: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$123: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$123: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$123: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$123: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$55: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$47: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 8
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 15
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 9
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 10
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 11
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 12
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 13
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 14
+ex224_fp16_log2_positive_default_exp_mant_delta.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 15
+Performed a total of 32 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$131'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$127'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$123'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$119'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$67'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$7'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$131'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$127'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$123'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$119'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$67'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$7'[0] in module `\ex224_fp16_log2_positive_default_exp_mant_delta': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$131 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 32 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 31 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$127 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 1.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$123 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$119 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$115 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$111 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$107 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$103 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$99 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$95 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$91 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$87 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$83 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$79 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$75 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$71 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$67 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$63 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$59 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$55 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$51 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$47 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$43 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$39 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$35 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$31 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$27 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$23 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$19 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$15 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$11 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$7 in module \ex224_fp16_log2_positive_default_exp_mant_delta:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 17277 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 17277 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 15595 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 14561 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 13835 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 13363 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 13089 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12945 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12873 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12837 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12819 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12810 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 4467 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+Removed 0 unused cells and 50746 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+    New ctrl vector for $pmux cell $procmux$695: { $procmux$139_CMP $procmux$143_CMP $auto$opt_reduce.cc:135:opt_pmux$96036 $auto$opt_reduce.cc:135:opt_pmux$96034 $procmux$169_CMP $procmux$211_CMP $auto$opt_reduce.cc:135:opt_pmux$96032 $procmux$238_CMP $procmux$269_CMP $procmux$286_CMP $procmux$304_CMP $procmux$323_CMP $procmux$343_CMP $procmux$364_CMP $procmux$386_CMP $procmux$409_CMP $auto$opt_reduce.cc:135:opt_pmux$96030 $procmux$458_CMP $procmux$511_CMP $auto$opt_reduce.cc:135:opt_pmux$96028 $auto$opt_reduce.cc:135:opt_pmux$96026 $procmux$629_CMP $procmux$136_CMP }
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 1 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12816 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 12816 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+9.23. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 34869 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 24702 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 16924 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 11379 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 8149 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 6529 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 5603 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 5045 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4722 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4536 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4436 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4435 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 30434 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4435 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+Removed 0 unused cells and 12069 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4392 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+Removed 0 unused cells and 17 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 4392 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex224_fp16_log2_positive_default_exp_mant_delta' to `<abc-temp-dir>/input.blif'..
+Replacing 16 occurrences of constant undef bits with constant zero bits
+
+12.1.1. Executed ABC.
+Extracted 4392 gates and 4411 wires to a netlist network with 16 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     6310
+ABC RESULTS:               NOT cells:     4531
+ABC RESULTS:        internal signals:     4379
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 10841 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 10841 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+Removed 0 unused cells and 1458 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 10841 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex224_fp16_log2_positive_default_exp_mant_delta: replaced 0 cells with 0 new cells, skipped 10841 cells.
+  not replaced 2 cell types:
+    6310 $_AND_
+    4531 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 10841 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex224_fp16_log2_positive_default_exp_mant_delta..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex224_fp16_log2_positive_default_exp_mant_delta.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Computing hashes of 10841 cells of `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Finding duplicate cells in `\ex224_fp16_log2_positive_default_exp_mant_delta'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex224_fp16_log2_positive_default_exp_mant_delta..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex224_fp16_log2_positive_default_exp_mant_delta.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [0] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [1] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [2] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [3] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [4] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [5] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [6] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [7] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [8] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [9] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [10] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [11] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [12] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [13] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [14] like $anyseq.
+Warning: Treating undriven bit ex224_fp16_log2_positive_default_exp_mant_delta.\in [15] like $anyseq.
+Warning: Treating a total of 16 undriven bits in ex224_fp16_log2_positive_default_exp_mant_delta like $anyseq.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: 713b178af6, time: 11.88s, user: 11.37s, system: 0.37s, MEM: 318.05 MB peak
+Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+Time spent: 22% 17x opt_expr (2 sec), 16% 11x opt_dff (2 sec), ...

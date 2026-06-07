@@ -14,7 +14,13 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from student.backends.abc9_flow import abc9_candidate
+from student.backends.abc9_flow import (
+    ABC9_DEEPSYN_FLOW,
+    ABC9_DEEPSYN_NODE_LIMIT,
+    ABC9_DEEPSYN_TIMEOUT,
+    ABC9_FLOW_COMMANDS,
+    abc9_flow_candidate,
+)
 from student.backends.abc_flow import ABC_ALL_FLOWS, ABC_FLOW_COMMANDS, abc_flow_candidate, baseline_candidate
 from student.backends.culs_flow import (
     CulsRuntimeUnavailableError,
@@ -261,16 +267,55 @@ def run_case(args, case):
 
         parent = parent_candidate(candidates, baseline)
         if flow == "abc9":
-            candidates.append(
-                abc9_candidate(
-                    case=case,
-                    parent=parent,
-                    truth=truth,
-                    work_dir=args.work_dir,
-                    abc=args.abc,
-                    timeout=args.timeout,
-                )
-            )
+            for abc9_flow in ABC9_FLOW_COMMANDS:
+                abc9_parent = parent_candidate(candidates, baseline)
+                output_aig = args.work_dir / case / abc9_flow / "{0}_{1}.aig".format(case, abc9_flow)
+                if abc9_flow == ABC9_DEEPSYN_FLOW and (
+                    abc9_parent.area is None or abc9_parent.area >= ABC9_DEEPSYN_NODE_LIMIT
+                ):
+                    notes = "skipped: parent AIG nodes {0} is not less than {1}".format(
+                        "unknown" if abc9_parent.area is None else abc9_parent.area,
+                        ABC9_DEEPSYN_NODE_LIMIT,
+                    )
+                    candidates.append(
+                        Candidate(
+                            case=case,
+                            candidate_id="{0}_{1}".format(case, abc9_flow),
+                            parent_id=abc9_parent.candidate_id,
+                            source="abc9",
+                            tool_chain=abc9_flow,
+                            aig_path=output_aig,
+                            equivalent=False,
+                            notes=notes,
+                        )
+                    )
+                    continue
+                flow_timeout = ABC9_DEEPSYN_TIMEOUT if abc9_flow == ABC9_DEEPSYN_FLOW else args.timeout
+                try:
+                    candidates.append(
+                        abc9_flow_candidate(
+                            case=case,
+                            flow_name=abc9_flow,
+                            parent=abc9_parent,
+                            truth=truth,
+                            work_dir=args.work_dir,
+                            abc=args.abc,
+                            timeout=flow_timeout,
+                        )
+                    )
+                except (RuntimeError, subprocess.TimeoutExpired) as exc:
+                    print("{0} {1}: failed: {2}".format(case, abc9_flow, exc), file=sys.stderr)
+                    candidates.append(
+                        failed_candidate(
+                            case=case,
+                            candidate_id="{0}_{1}".format(case, abc9_flow),
+                            parent_id=abc9_parent.candidate_id,
+                            source="abc9",
+                            tool_chain=abc9_flow,
+                            aig_path=output_aig,
+                            exc=exc,
+                        )
+                    )
         elif flow == "mockturtle":
             candidates.append(
                 mockturtle_candidate(

@@ -1,0 +1,1036 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_sppsq5_d.ys' --
+
+1. Executing Verilog-2005 frontend: student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v
+Parsing Verilog input from `student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v' to AST representation.
+Generating RTLIL representation for module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex222_fp16_exp10_exp_mant_delta_pair
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex222_fp16_exp10_exp_mant_delta_pair
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 19 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:48$2 in module ex222_fp16_exp10_exp_mant_delta_pair.
+Marked 19 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:48$2 in module ex222_fp16_exp10_exp_mant_delta_pair.
+Removed 1 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:11$1 in module ex222_fp16_exp10_exp_mant_delta_pair.
+Marked 1 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:11$1 in module ex222_fp16_exp10_exp_mant_delta_pair.
+Removed a total of 20 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 2 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 19 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:48$2'.
+     1/19: $19\delta_pair[31:0]
+     2/19: $18\delta_pair[31:0]
+     3/19: $17\delta_pair[31:0]
+     4/19: $16\delta_pair[31:0]
+     5/19: $15\delta_pair[31:0]
+     6/19: $14\delta_pair[31:0]
+     7/19: $13\delta_pair[31:0]
+     8/19: $12\delta_pair[31:0]
+     9/19: $11\delta_pair[31:0]
+    10/19: $10\delta_pair[31:0]
+    11/19: $9\delta_pair[31:0]
+    12/19: $8\delta_pair[31:0]
+    13/19: $7\delta_pair[31:0]
+    14/19: $6\delta_pair[31:0]
+    15/19: $5\delta_pair[31:0]
+    16/19: $4\delta_pair[31:0]
+    17/19: $3\delta_pair[31:0]
+    18/19: $2\delta_pair[31:0]
+    19/19: $1\delta_pair[31:0]
+Creating decoders for process `\ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:11$1'.
+     1/1: $1\base_pair[31:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex222_fp16_exp10_exp_mant_delta_pair.\delta_pair' from process `\ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:48$2'.
+No latch inferred for signal `\ex222_fp16_exp10_exp_mant_delta_pair.\base_pair' from process `\ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:11$1'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 19 empty switches in `\ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:48$2'.
+Removing empty process `ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:48$2'.
+Found and cleaned up 1 empty switch in `\ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:11$1'.
+Removing empty process `ex222_fp16_exp10_exp_mant_delta_pair.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_exp_mant_delta_pair.v:11$1'.
+Cleaned up 20 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 109 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 91 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 18 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$507.
+    dead port 2/2 on $mux $procmux$474.
+    dead port 2/2 on $mux $procmux$442.
+    dead port 2/2 on $mux $procmux$411.
+    dead port 2/2 on $mux $procmux$381.
+    dead port 2/2 on $mux $procmux$352.
+    dead port 2/2 on $mux $procmux$324.
+    dead port 2/2 on $mux $procmux$297.
+    dead port 2/2 on $mux $procmux$271.
+    dead port 2/2 on $mux $procmux$246.
+    dead port 2/2 on $mux $procmux$222.
+    dead port 2/2 on $mux $procmux$199.
+    dead port 2/2 on $mux $procmux$177.
+    dead port 2/2 on $mux $procmux$156.
+    dead port 2/2 on $mux $procmux$136.
+    dead port 2/2 on $mux $procmux$117.
+    dead port 2/2 on $mux $procmux$99.
+    dead port 2/2 on $mux $procmux$82.
+Removed 18 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+    New ctrl vector for $pmux cell $procmux$509: { $procmux$510_CMP $auto$opt_reduce.cc:135:opt_pmux$544 $procmux$524_CMP $procmux$525_CMP $procmux$526_CMP $procmux$527_CMP $procmux$528_CMP $procmux$529_CMP $procmux$530_CMP $procmux$531_CMP $procmux$532_CMP $procmux$533_CMP $procmux$534_CMP $procmux$535_CMP $procmux$536_CMP $procmux$537_CMP $procmux$538_CMP $procmux$539_CMP $procmux$540_CMP }
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 1 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 74 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+Removed 0 unused cells and 62 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 74 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$78: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$78: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$78: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 0
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 1
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 2
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 3
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 16
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 17
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 18
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 19
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 20
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 21
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$74: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$70: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$66: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$66: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$66: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$66: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$62: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$58: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$54: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$54: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$54: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$54: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$54: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$50: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$46: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$42: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$38: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$34: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$30: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 21
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$26: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 3
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 20
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 21
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$22: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 2
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 3
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 19
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 20
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 21
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$18: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 0
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 1
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 2
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 3
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 17
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 18
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 19
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 20
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 21
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$14: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 1
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 2
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 3
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 16
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 17
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 18
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 19
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 20
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 21
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 22
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 23
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 24
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 25
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 26
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$10: removing const-0 lane 31
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 0
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 1
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 2
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 3
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 4
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 5
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 6
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 7
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 8
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 9
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 10
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 11
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 12
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 13
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 14
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 15
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 27
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 28
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 29
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 30
+ex222_fp16_exp10_exp_mant_delta_pair.$auto$proc_rom.cc:155:do_switch$6: removing const-0 lane 31
+Performed a total of 19 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$78'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$74'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$70'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$66'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$62'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$58'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$54'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$50'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$46'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$42'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$38'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$34'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$30'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$26'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$22'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$18'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$14'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$10'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$6'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$78'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$74'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$70'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$66'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$62'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$58'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$54'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$50'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$46'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$42'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$38'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$34'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$30'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$26'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$22'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$18'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$14'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$10'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$6'[0] in module `\ex222_fp16_exp10_exp_mant_delta_pair': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$78 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 32 $dff cells and 0 static cells of width 29.
+  read interface: 0 $dff and 31 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$74 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$70 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 23.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$66 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 28.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$62 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 25.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$58 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 25.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$54 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 27.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$50 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 20.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$46 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 17.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$42 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 17.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$38 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$34 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 13.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$30 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$26 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$22 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$18 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 5.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$14 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 1.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$10 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 1.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$6 in module \ex222_fp16_exp10_exp_mant_delta_pair:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7260 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7260 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7259 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7258 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 2 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+Removed 0 unused cells and 29687 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7258 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 37958 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 26135 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 17583 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 11701 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 8758 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7886 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7598 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7490 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7429 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7397 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7380 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7379 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 30579 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7379 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+Removed 0 unused cells and 6637 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7313 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+Removed 0 unused cells and 21 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 7313 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex222_fp16_exp10_exp_mant_delta_pair' to `<abc-temp-dir>/input.blif'..
+Replacing 31 occurrences of constant undef bits with constant zero bits
+
+12.1.1. Executed ABC.
+Extracted 7313 gates and 7332 wires to a netlist network with 16 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:    10817
+ABC RESULTS:               NOT cells:     7629
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     7300
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 18446 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 18446 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+Removed 0 unused cells and 1643 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 18446 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex222_fp16_exp10_exp_mant_delta_pair: replaced 0 cells with 0 new cells, skipped 18446 cells.
+  not replaced 2 cell types:
+   10817 $_AND_
+    7629 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 18446 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex222_fp16_exp10_exp_mant_delta_pair..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex222_fp16_exp10_exp_mant_delta_pair.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Computing hashes of 18446 cells of `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Finding duplicate cells in `\ex222_fp16_exp10_exp_mant_delta_pair'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex222_fp16_exp10_exp_mant_delta_pair..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex222_fp16_exp10_exp_mant_delta_pair.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [0] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [1] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [2] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [3] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [4] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [5] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [6] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [7] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [8] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [9] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [10] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [11] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [12] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [13] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [14] like $anyseq.
+Warning: Treating undriven bit ex222_fp16_exp10_exp_mant_delta_pair.\in [15] like $anyseq.
+Warning: Treating a total of 16 undriven bits in ex222_fp16_exp10_exp_mant_delta_pair like $anyseq.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: f653444919, time: 8.67s, user: 7.51s, system: 0.15s, MEM: 289.18 MB peak
+Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+Time spent: 23% 16x opt_expr (2 sec), 16% 1x abc (1 sec), ...

@@ -1,0 +1,46 @@
+case,candidate_id,hypothesis/function_guess,variant,verilog_path,aig_path,verified_truth,synthesized,equivalent,area,delay,adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,runtime_sec,items,classification,notes
+ex224,ex224_fp16_log2_lowseq4,fp16_log2,lowseq4,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/verilog/ex224_fp16_log2_lowseq4.v,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/aigs/ex224_fp16_log2_lowseq4.aig,1,0,0,,,,64708,,,,2.590,"casez_sign+bit11/12 plus clustered low4 exact sequences; clusters=c0=exp1,2,3,4,5,6; c1=exp7,8,9,10; c2=exp11,12; c3=exp13; c4=exp14; c5=exp15; c6=exp16; c7=exp17,18; c8=exp19,20,21,22; c9=exp23,24,25,26,27,28,29,30; table_items=31777; bit=12; threshold=8; const_groups=61; range_groups=3; table_groups=0; range_items=9; table_items=0; bit=11; threshold=8; const_groups=59; range_groups=5; table_groups=0; range_items=18; table_items=0",semantic_hybrid,"SynthError: Yosys failed with exit code 1:
+/----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type ""license"" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_nt_dcecb.y"
+ex224,ex224_fp16_log2_lowseq5,fp16_log2,lowseq5,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/verilog/ex224_fp16_log2_lowseq5.v,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/aigs/ex224_fp16_log2_lowseq5.aig,1,0,0,,,,64708,,,,1.624,"casez_sign+bit11/12 plus clustered low5 exact sequences; clusters=c0=exp1,2,3,4,5,6; c1=exp7,8,9,10; c2=exp11,12; c3=exp13; c4=exp14; c5=exp15; c6=exp16; c7=exp17,18; c8=exp19,20,21,22; c9=exp23,24,25,26,27,28,29,30; table_items=31777; bit=12; threshold=8; const_groups=61; range_groups=3; table_groups=0; range_items=9; table_items=0; bit=11; threshold=8; const_groups=59; range_groups=5; table_groups=0; range_items=18; table_items=0",semantic_hybrid,"SynthError: Yosys failed with exit code 1:
+/----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type ""license"" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_530oig7b.y"
+ex224,ex224_fp16_log2_lowseq6,fp16_log2,lowseq6,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/verilog/ex224_fp16_log2_lowseq6.v,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/aigs/ex224_fp16_log2_lowseq6.aig,1,0,0,,,,64708,,,,1.650,"casez_sign+bit11/12 plus clustered low6 exact sequences; clusters=c0=exp1,2,3,4,5,6; c1=exp7,8,9,10; c2=exp11,12; c3=exp13; c4=exp14; c5=exp15; c6=exp16; c7=exp17,18; c8=exp19,20,21,22; c9=exp23,24,25,26,27,28,29,30; table_items=31777; bit=12; threshold=8; const_groups=61; range_groups=3; table_groups=0; range_items=9; table_items=0; bit=11; threshold=8; const_groups=59; range_groups=5; table_groups=0; range_items=18; table_items=0",semantic_hybrid,"SynthError: Yosys failed with exit code 1:
+/----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type ""license"" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_95fmtiyt.y"
+ex224,ex224_fp16_log2_lowseq7,fp16_log2,lowseq7,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/verilog/ex224_fp16_log2_lowseq7.v,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/aigs/ex224_fp16_log2_lowseq7.aig,1,0,0,,,,64708,,,,1.721,"casez_sign+bit11/12 plus clustered low7 exact sequences; clusters=c0=exp1,2,3,4,5,6; c1=exp7,8,9,10; c2=exp11,12; c3=exp13; c4=exp14; c5=exp15; c6=exp16; c7=exp17,18; c8=exp19,20,21,22; c9=exp23,24,25,26,27,28,29,30; table_items=31777; bit=12; threshold=8; const_groups=61; range_groups=3; table_groups=0; range_items=9; table_items=0; bit=11; threshold=8; const_groups=59; range_groups=5; table_groups=0; range_items=18; table_items=0",semantic_hybrid,"SynthError: Yosys failed with exit code 1:
+/----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type ""license"" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_4kmq5chi.y"
+ex224,ex224_fp16_log2_lowseq8,fp16_log2,lowseq8,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/verilog/ex224_fp16_log2_lowseq8.v,student/work/ex224_frontend_fp16_log2_lowseq_20260607_0756/ex224/aigs/ex224_fp16_log2_lowseq8.aig,1,0,0,,,,64708,,,,1.734,"casez_sign+bit11/12 plus clustered low8 exact sequences; clusters=c0=exp1,3,5; c1=exp2,4,6; c2=exp7,8,9,10; c3=exp11,12; c4=exp13; c5=exp14; c6=exp15; c7=exp16; c8=exp17,18; c9=exp19,20,21,22; c10=exp23,25,27,29; c11=exp24,26,28,30; table_items=31777; bit=12; threshold=8; const_groups=61; range_groups=3; table_groups=0; range_items=9; table_items=0; bit=11; threshold=8; const_groups=59; range_groups=5; table_groups=0; range_items=18; table_items=0",semantic_hybrid,"SynthError: Yosys failed with exit code 1:
+/----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type ""license"" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_zlquz385.y"

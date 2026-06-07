@@ -1,0 +1,6 @@
+case,op,matches,mismatches,first_mismatch_input,expected,actual,notes
+ex225,log10,0,5,0x338f,0xb903,0xb904,"DAZ input, FTZ output, RNE via struct half, canonical NaN"
+ex226,sin,0,4,0x32b3,0x32a7,0x32a6,"DAZ input, FTZ output, RNE via struct half, canonical NaN"
+ex227,tan,0,6,0x2894,0x2895,0x2894,"DAZ input, FTZ output, RNE via struct half, canonical NaN"
+ex228,sinh,0,2,0x40f2,0x45e3,0x45e2,"DAZ input, FTZ output, RNE via struct half, canonical NaN"
+ex229,tanh,1,0,,,,"DAZ input, FTZ output, RNE via struct half, canonical NaN"

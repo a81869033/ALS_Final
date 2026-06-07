@@ -1,0 +1,981 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_u1ojlgw3.ys' --
+
+1. Executing Verilog-2005 frontend: student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v
+Parsing Verilog input from `student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v' to AST representation.
+Generating RTLIL representation for module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex223_fp16_log_sign_exp_default_expr_case
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex223_fp16_log_sign_exp_default_expr_case
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 29 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v:10$1 in module ex223_fp16_log_sign_exp_default_expr_case.
+Marked 32 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v:10$1 in module ex223_fp16_log_sign_exp_default_expr_case.
+Removed a total of 29 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 29 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex223_fp16_log_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v:10$1'.
+     1/32: $32\out_r[15:0]
+     2/32: $31\out_r[15:0]
+     3/32: $30\out_r[15:0]
+     4/32: $29\out_r[15:0]
+     5/32: $28\out_r[15:0]
+     6/32: $27\out_r[15:0]
+     7/32: $26\out_r[15:0]
+     8/32: $25\out_r[15:0]
+     9/32: $24\out_r[15:0]
+    10/32: $23\out_r[15:0]
+    11/32: $22\out_r[15:0]
+    12/32: $21\out_r[15:0]
+    13/32: $20\out_r[15:0]
+    14/32: $19\out_r[15:0]
+    15/32: $18\out_r[15:0]
+    16/32: $17\out_r[15:0]
+    17/32: $16\out_r[15:0]
+    18/32: $15\out_r[15:0]
+    19/32: $14\out_r[15:0]
+    20/32: $13\out_r[15:0]
+    21/32: $12\out_r[15:0]
+    22/32: $11\out_r[15:0]
+    23/32: $10\out_r[15:0]
+    24/32: $9\out_r[15:0]
+    25/32: $8\out_r[15:0]
+    26/32: $7\out_r[15:0]
+    27/32: $6\out_r[15:0]
+    28/32: $5\out_r[15:0]
+    29/32: $4\out_r[15:0]
+    30/32: $3\out_r[15:0]
+    31/32: $2\out_r[15:0]
+    32/32: $1\out_r[15:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex223_fp16_log_sign_exp_default_expr_case.\out_r' from process `\ex223_fp16_log_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v:10$1'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 32 empty switches in `\ex223_fp16_log_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v:10$1'.
+Removing empty process `ex223_fp16_log_sign_exp_default_expr_case.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_sign_exp_default_expr_case.v:10$1'.
+Cleaned up 32 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 1211 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 1180 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 31 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$2692.
+    dead port 2/2 on $mux $procmux$2627.
+    dead port 2/2 on $mux $procmux$2563.
+    dead port 2/2 on $mux $procmux$2500.
+    dead port 2/2 on $mux $procmux$2438.
+    dead port 2/2 on $mux $procmux$2377.
+    dead port 2/2 on $mux $procmux$2317.
+    dead port 2/2 on $mux $procmux$2258.
+    dead port 2/2 on $mux $procmux$2200.
+    dead port 2/2 on $mux $procmux$2143.
+    dead port 2/2 on $mux $procmux$2087.
+    dead port 2/2 on $mux $procmux$2032.
+    dead port 2/2 on $mux $procmux$1978.
+    dead port 2/2 on $mux $procmux$1925.
+    dead port 2/2 on $mux $procmux$1873.
+    dead port 2/2 on $mux $procmux$798.
+    dead port 2/2 on $mux $procmux$748.
+    dead port 2/2 on $mux $procmux$699.
+    dead port 2/2 on $mux $procmux$651.
+    dead port 2/2 on $mux $procmux$604.
+    dead port 2/2 on $mux $procmux$558.
+    dead port 2/2 on $mux $procmux$513.
+    dead port 2/2 on $mux $procmux$469.
+    dead port 2/2 on $mux $procmux$426.
+    dead port 2/2 on $mux $procmux$384.
+    dead port 2/2 on $mux $procmux$343.
+    dead port 2/2 on $mux $procmux$303.
+    dead port 2/2 on $mux $procmux$264.
+    dead port 2/2 on $mux $procmux$226.
+    dead port 2/2 on $mux $procmux$189.
+    dead port 2/2 on $mux $procmux$153.
+Removed 31 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+    New ctrl vector for $pmux cell $procmux$2694: { $auto$opt_reduce.cc:135:opt_pmux$2762 $auto$opt_reduce.cc:135:opt_pmux$2760 $procmux$2727_CMP $procmux$2728_CMP $procmux$2729_CMP $procmux$2730_CMP $procmux$2731_CMP $procmux$2732_CMP $procmux$2733_CMP $procmux$2734_CMP $procmux$2735_CMP $procmux$2736_CMP $procmux$2737_CMP $procmux$2738_CMP $procmux$2739_CMP $procmux$2740_CMP $procmux$2741_CMP $procmux$2742_CMP $procmux$2743_CMP $procmux$2744_CMP $procmux$2745_CMP $procmux$2746_CMP $procmux$2747_CMP $procmux$2748_CMP $procmux$2749_CMP $procmux$2750_CMP $procmux$2751_CMP $procmux$2752_CMP $procmux$2753_CMP $procmux$2754_CMP $procmux$2755_CMP $procmux$2756_CMP $procmux$2757_CMP }
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 1 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 1151 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+Removed 0 unused cells and 96 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 1151 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-1 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 7
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-1 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-1 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$55: removing const-0 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$55: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$47: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 15
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 7
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 8
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 9
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 10
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 11
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 12
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 13
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 14
+ex223_fp16_log_sign_exp_default_expr_case.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 15
+Performed a total of 29 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$67'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$7'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$67'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$7'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\ex223_fp16_log_sign_exp_default_expr_case': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$115 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$111 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$107 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$103 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$99 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$95 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$91 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$87 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$83 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$79 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$75 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$71 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$67 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$63 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$59 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$55 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$51 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$47 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$43 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$39 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$35 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$31 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$27 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$23 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$19 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$15 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$11 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$7 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$3 in module \ex223_fp16_log_sign_exp_default_expr_case:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 17105 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 17105 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 16348 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 16074 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 16026 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 16023 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 1082 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+Removed 0 unused cells and 44433 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 16023 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 64003 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 43451 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 29386 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 20478 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 15619 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13863 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13316 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13159 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13115 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13097 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13091 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13087 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13086 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 50917 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13086 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+Removed 1 unused cells and 40588 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13020 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+Removed 0 unused cells and 39 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 13020 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex223_fp16_log_sign_exp_default_expr_case' to `<abc-temp-dir>/input.blif'..
+Replacing 16 occurrences of constant undef bits with constant zero bits
+
+12.1.1. Executed ABC.
+Extracted 13020 gates and 13039 wires to a netlist network with 16 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:    14005
+ABC RESULTS:               NOT cells:     8888
+ABC RESULTS:        internal signals:    13007
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 22893 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 22893 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+Removed 0 unused cells and 4373 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 22893 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex223_fp16_log_sign_exp_default_expr_case: replaced 0 cells with 0 new cells, skipped 22893 cells.
+  not replaced 2 cell types:
+   14005 $_AND_
+    8888 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 22893 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_sign_exp_default_expr_case..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_sign_exp_default_expr_case.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_sign_exp_default_expr_case'.
+Computing hashes of 22893 cells of `\ex223_fp16_log_sign_exp_default_expr_case'.
+Finding duplicate cells in `\ex223_fp16_log_sign_exp_default_expr_case'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_sign_exp_default_expr_case..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_sign_exp_default_expr_case.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [0] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [1] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [2] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [3] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [4] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [5] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [6] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [7] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [8] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [9] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [10] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [11] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [12] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [13] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [14] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_sign_exp_default_expr_case.\in [15] like $anyseq.
+Warning: Treating a total of 16 undriven bits in ex223_fp16_log_sign_exp_default_expr_case like $anyseq.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: 1535c7af6d, time: 14.28s, user: 12.32s, system: 0.32s, MEM: 386.17 MB peak
+Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+Time spent: 26% 16x opt_expr (3 sec), 18% 1x abc (2 sec), ...

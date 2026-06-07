@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis/function_guess,variant,verilog_path
+ex225,ex225_manual_ex225_bitvec12_9_bit14_attr,fp16_log10,manual_ex225_bitvec12_9_bit14_attr,student/work/ex225_frontend_fp16_current_attr_20260607_1503/ex225/verilog/ex225_fp16_log10_manual_ex225_bitvec12_9_bit14_attr.v

@@ -1,0 +1,2 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex224,fp16_log2,5,5,5,5,0,5,0,ex224_fp16_log2_lowseq8,lowseq8,semantic_hybrid,6281,22,138182,64708,2.135470,0,0,lowseq8:138182; lowseq5:138512; lowseq4:138688; lowseq6:145705; lowseq7:146004,

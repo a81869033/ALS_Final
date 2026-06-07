@@ -73,11 +73,11 @@ Source: `student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv`.
 | ex222 | fp16_exp10 | structural_exact | positive_default_exp_mant_case | 1.345056 | medium |
 | ex223 | fp16_log | structural_exact | sign_exp_mant_case | 2.130022 | high |
 | ex224 | fp16_log2 | structural_exact | sign_exp_mant_case | 2.054955 | high |
-| ex225 | fp16_log10 | structural_exact | sign_exp_mant_case | 2.289828 | high |
-| ex226 | fp16_sin | structural_exact | positive_default_exp_mant_case | 1.309277 | medium |
-| ex227 | fp16_tan | structural_exact | positive_default_exp_mant_case | 1.300915 | medium |
-| ex228 | fp16_sinh | semantic_hybrid | semantic_sign_exp_field_defaults | 1.380495 | medium |
-| ex229 | fp16_tanh | structural_exact | exp_mant_pair_case | 1.444728 | medium |
+| ex225 | fp16_log10 | synthflow_exact | ex225_manual15_14_13_predecode12_9_abc_g_aig | 2.067675 | high |
+| ex226 | fp16_sin | synthflow_exact | positive_default_exp_mant_case_abc_g_aig | 1.248459 | medium |
+| ex227 | fp16_tan | synthflow_exact | positive_default_exp_mant_case_abc_g_aig | 1.238622 | medium |
+| ex228 | fp16_sinh | synthflow_exact | semantic_sign_exp_field_defaults_abc_g_aig | 1.309619 | medium |
+| ex229 | fp16_tanh | synthflow_exact | semantic_positive_field_defaults_abc_g_aig | 1.301563 | medium |
 | ex230 | fp16_sigmoid | structural_exact | sign_exp_mant_case | 1.364457 | medium |
 | ex231 | fp16_reciprocal | structural_exact | positive_default_exp_mant_case | 1.481729 | medium |
 | ex232 | fp16_square | structural_exact | positive_default_exp_mant_delta | 1.732751 | high |
@@ -205,6 +205,37 @@ Source: `student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv`.
   passes, late flatten, and `synth -flatten -noabc`.
 - Follow-up around `abc -g aig` confirmed that `-D 18/19/20/21` gives the same
   AIG QoR, while `gates` and `cmos2` aliases are worse.
+- The same fixed single `abc -g aig` path later improved all ex225-ex229
+  current seeds after an output-directory bug in the synthflow helper was
+  fixed:
+  - `ex225`: `11499/22/252978`, later improved to `11509/21/241689`, then
+    `11488/21/241248`.
+  - `ex226`: `33356/22/733832`.
+  - `ex227`: `40629/22/893838`.
+  - `ex228`: `6627/20/132540`.
+  - `ex229`: `3971/19/75449`.
+- Treat this as a required one-shot frontend seed check for future curated
+  FP16 Verilog candidates.  Do not expand it into a backend portfolio unless
+  explicitly requested.
+- A neighbor check on ex225-ex229 confirmed that `abc_g_aig_d18` through
+  `abc_g_aig_d21` reproduce the same QoR as `abc_g_aig`; `gates` and `cmos2`
+  do not improve.  For future FP16 frontend work, try plain `abc_g_aig` once
+  after a seed is curated, then return to semantic/bit-structure work.
+- When reusing `student/scripts/yosys_synthflow_from_best_csv.py` on seed
+  bundles, the Verilog top module must be parsed from the source file; a
+  current-best candidate ID can name an AIG candidate rather than the module.
+- `ex225/log10` now has a tested true semantic normalizer: exponent-base plus
+  mantissa-correction LUT with exact exception correction.  It is exact and
+  low-area, but too deep (`4028/70/281960` after `abc_g_aig`) versus the
+  current shared-predecode seed (`11488/21/241248`).  Future ex225 work needs a much
+  shallower exact correction/rounding structure, not simply wider fixed-point
+  q-tables.
+- A later ex225 shallow-correction pass found that output bits 12 and 9 should
+  be emitted as a shared vector run-cover, while bit14 is better as a
+  hand-derived threshold predicate.  A deeper shared-threshold-predecode pass
+  then added manual sign/bit14/bit13 predicates plus shared bit12/bit9
+  threshold predecode.  The current ex225 best is
+  `ex225_manual15_14_13_predecode12_9_abc_g_aig`, `11488/21/241248`.
 
 ### 2026-06-06 Setup
 

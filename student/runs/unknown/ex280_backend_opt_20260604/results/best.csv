@@ -1,0 +1,2 @@
+case,candidate_id,parent_id,source,tool_chain,aig_path,area,delay,adp,equivalent,runtime_sec,notes
+ex280,ex280_seed_best_verilog_abc_dc2_dch_1_abc_resyn2rs_x2_2,ex280_seed_best_verilog_abc_dc2_dch_1,abc,abc_resyn2rs_x2,student/archive/cleanup_20260605/ex280_backend_intermediate/work/ex280_backend_search_post_delay_mock/ex280/round_2/abc_resyn2rs_x2/ex280_ex280_seed_best_verilog_abc_dc2_dch_1_abc_resyn2rs_x2.aig,820,21,17220,1,0.414,ex280 backend ABC search

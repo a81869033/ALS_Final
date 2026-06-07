@@ -1,0 +1,6 @@
+case,function,previous_best_area,previous_best_delay,previous_best_adp,current_area,current_delay,current_adp,adp_improvement,reference_adp,current_ratio,notes
+ex225,fp16_log10,11499,22,252978,11488,21,241248,11730,116676,2.067675,"manual sign/bit14/bit13 plus shared threshold predecode bits12+9 source and abc_g_aig AIG"
+ex226,fp16_sin,33460,23,769580,33356,22,733832,35748,587790,1.248459,"positive/default exp-mant source plus abc_g_aig AIG"
+ex227,fp16_tan,40817,23,938791,40629,22,893838,44953,721639,1.238622,"positive/default exp-mant source plus abc_g_aig AIG"
+ex228,fp16_sinh,6653,21,139713,6627,20,132540,7173,101205,1.309619,"semantic sign/exp field-default source plus abc_g_aig AIG"
+ex229,fp16_tanh,3996,20,79920,3971,19,75449,4471,57968,1.301563,"semantic positive-field defaults source plus abc_g_aig AIG"

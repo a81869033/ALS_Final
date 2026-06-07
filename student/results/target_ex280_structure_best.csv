@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex280,ex280_struct_bdd_pair_399a,ex280_targeted_structure,bdd_pair_399a,/home/b10507053/ALS_Final_Project/student/work/target_ex280_structure/ex280/verilog/ex280_struct_bdd_pair_399a.v,/home/b10507053/ALS_Final_Project/student/work/target_ex280_structure/ex280/aigs/ex280_struct_bdd_pair_399a.aig,1049,22,23078,order_name=bdd_pair_399a; order=0:11:1:10:2:9:3:8:4:7:5:6; bdd_nodes=436,targeted ex280 structural Verilog seed

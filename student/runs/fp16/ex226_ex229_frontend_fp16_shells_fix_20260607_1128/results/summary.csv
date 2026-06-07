@@ -1,0 +1,6 @@
+case,old_area,old_delay,old_adp,current_area,current_delay,current_adp,delta_adp,improved,reference_adp,ratio,current_candidate,source_csv
+ex225,11616,23,267168,11573,23,266179,-989,1,116676,2.281352,ex225_fp16_log10_bitrun_bit11_t8,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/results/best.csv
+ex226,33460,23,769580,33460,23,769580,0,0,587790,1.309277,ex226_fp16_sin_positive_default_exp_mant_case,student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv
+ex227,40817,23,938791,40817,23,938791,0,0,721639,1.300915,ex227_fp16_tan_positive_default_exp_mant_case,student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv
+ex228,6653,21,139713,6653,21,139713,0,0,101205,1.380495,ex228_fp16_sinh_semantic_sign_exp_field_defaults,student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv
+ex229,3988,21,83748,3996,20,79920,-3828,1,57968,1.378692,ex229_fp16_tanh_semantic_positive_field_defaults,student/seeds/fp16/ex225_ex229_frontend_fp16_bitrun_shells_current/results/best.csv

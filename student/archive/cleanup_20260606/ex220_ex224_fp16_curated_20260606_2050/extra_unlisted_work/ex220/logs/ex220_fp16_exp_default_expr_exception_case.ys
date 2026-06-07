@@ -1,0 +1,17 @@
+read_verilog "student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex220/verilog/ex220_fp16_exp_default_expr_exception_case.v"
+hierarchy -check -top ex220_fp16_exp_default_expr_exception_case
+proc
+flatten
+tribuf -logic
+deminout
+opt
+memory
+opt
+techmap
+opt
+abc -g AND
+opt
+aigmap
+opt
+clean
+write_aiger -symbols "student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex220/aigs/ex220_fp16_exp_default_expr_exception_case.aig"

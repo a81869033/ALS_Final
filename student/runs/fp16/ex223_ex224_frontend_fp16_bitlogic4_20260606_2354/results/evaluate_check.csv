@@ -1,0 +1,2 @@
+case,status,area,delay,adp,source_aig,notes
+ex224,OK,6250,21,131250,student/work/ex223_ex224_frontend_fp16_bitlogic4_20260606_2354/ex224/aigs/ex224_fp16_log2_casez_sign_bits11_12_t8.aig,official evaluate.py recheck via /tmp/als_fp16_ex223_ex224_best_eval_20260607_0023

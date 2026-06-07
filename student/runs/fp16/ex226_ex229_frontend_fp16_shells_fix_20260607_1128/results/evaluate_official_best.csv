@@ -1,0 +1,2 @@
+case,status,area,delay,adp,source,notes
+ex229,OK,4015,20,80300,student/seeds/fp16/ex225_ex229_frontend_fp16_shells_current/ex229/aigs/ex229_fp16_tanh_odd_tanh_saturation_shell.aig,official evaluate.py --case ex229 OK

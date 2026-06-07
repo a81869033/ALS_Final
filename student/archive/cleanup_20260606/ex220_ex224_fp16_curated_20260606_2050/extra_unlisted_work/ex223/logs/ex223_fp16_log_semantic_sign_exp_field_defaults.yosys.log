@@ -1,0 +1,1007 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/tmp/als_yosys_synth_kkb5tdj9.ys' --
+
+1. Executing Verilog-2005 frontend: student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v
+Parsing Verilog input from `student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v' to AST representation.
+Generating RTLIL representation for module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex223_fp16_log_semantic_sign_exp_field_defaults
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex223_fp16_log_semantic_sign_exp_field_defaults
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1 in module ex223_fp16_log_semantic_sign_exp_field_defaults.
+Marked 32 switch rules as full_case in process $proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1 in module ex223_fp16_log_semantic_sign_exp_field_defaults.
+Removed a total of 1 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 30 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex223_fp16_log_semantic_sign_exp_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1'.
+     1/36: $32\out_mant[9:0]
+     2/36: $32\out_exp[4:0]
+     3/36: $32\out_sign[0:0]
+     4/36: { $31\out_mant[9:0] $31\out_exp[4:0] $31\out_sign[0:0] }
+     5/36: { $30\out_mant[9:0] $30\out_exp[4:0] $30\out_sign[0:0] }
+     6/36: { $29\out_mant[9:0] $29\out_exp[4:0] $29\out_sign[0:0] }
+     7/36: { $28\out_mant[9:0] $28\out_exp[4:0] $28\out_sign[0:0] }
+     8/36: { $27\out_mant[9:0] $27\out_exp[4:0] $27\out_sign[0:0] }
+     9/36: { $26\out_mant[9:0] $26\out_exp[4:0] $26\out_sign[0:0] }
+    10/36: { $25\out_mant[9:0] $25\out_exp[4:0] $25\out_sign[0:0] }
+    11/36: { $24\out_mant[9:0] $24\out_exp[4:0] $24\out_sign[0:0] }
+    12/36: { $23\out_mant[9:0] $23\out_exp[4:0] $23\out_sign[0:0] }
+    13/36: { $22\out_mant[9:0] $22\out_exp[4:0] $22\out_sign[0:0] }
+    14/36: { $21\out_mant[9:0] $21\out_exp[4:0] $21\out_sign[0:0] }
+    15/36: { $20\out_mant[9:0] $20\out_exp[4:0] $20\out_sign[0:0] }
+    16/36: { $19\out_mant[9:0] $19\out_exp[4:0] $19\out_sign[0:0] }
+    17/36: { $18\out_mant[9:0] $18\out_exp[4:0] $18\out_sign[0:0] }
+    18/36: { $17\out_mant[9:0] $17\out_exp[4:0] $17\out_sign[0:0] }
+    19/36: { $16\out_mant[9:0] $16\out_exp[4:0] $16\out_sign[0:0] }
+    20/36: { $15\out_mant[9:0] $15\out_exp[4:0] $15\out_sign[0:0] }
+    21/36: { $14\out_mant[9:0] $14\out_exp[4:0] $14\out_sign[0:0] }
+    22/36: { $13\out_mant[9:0] $13\out_exp[4:0] $13\out_sign[0:0] }
+    23/36: { $12\out_mant[9:0] $12\out_exp[4:0] $12\out_sign[0:0] }
+    24/36: { $11\out_mant[9:0] $11\out_exp[4:0] $11\out_sign[0:0] }
+    25/36: { $10\out_mant[9:0] $10\out_exp[4:0] $10\out_sign[0:0] }
+    26/36: { $9\out_mant[9:0] $9\out_exp[4:0] $9\out_sign[0:0] }
+    27/36: { $8\out_mant[9:0] $8\out_exp[4:0] $8\out_sign[0:0] }
+    28/36: { $7\out_mant[9:0] $7\out_exp[4:0] $7\out_sign[0:0] }
+    29/36: { $6\out_mant[9:0] $6\out_exp[4:0] $6\out_sign[0:0] }
+    30/36: { $5\out_mant[9:0] $5\out_exp[4:0] $5\out_sign[0:0] }
+    31/36: { $4\out_mant[9:0] $4\out_exp[4:0] $4\out_sign[0:0] }
+    32/36: { $3\out_mant[9:0] $3\out_exp[4:0] $3\out_sign[0:0] }
+    33/36: { $2\out_mant[9:0] $2\out_exp[4:0] $2\out_sign[0:0] }
+    34/36: $1\out_mant[9:0]
+    35/36: $1\out_exp[4:0]
+    36/36: $1\out_sign[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex223_fp16_log_semantic_sign_exp_field_defaults.\out_sign' from process `\ex223_fp16_log_semantic_sign_exp_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1'.
+No latch inferred for signal `\ex223_fp16_log_semantic_sign_exp_field_defaults.\out_exp' from process `\ex223_fp16_log_semantic_sign_exp_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1'.
+No latch inferred for signal `\ex223_fp16_log_semantic_sign_exp_field_defaults.\out_mant' from process `\ex223_fp16_log_semantic_sign_exp_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 32 empty switches in `\ex223_fp16_log_semantic_sign_exp_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1'.
+Removing empty process `ex223_fp16_log_semantic_sign_exp_field_defaults.$proc$student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex223/verilog/ex223_fp16_log_semantic_sign_exp_field_defaults.v:12$1'.
+Cleaned up 32 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 323 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 162 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 161 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1744.
+    dead port 2/2 on $mux $procmux$1679.
+    dead port 2/2 on $mux $procmux$1615.
+    dead port 2/2 on $mux $procmux$1552.
+    dead port 2/2 on $mux $procmux$1490.
+    dead port 2/2 on $mux $procmux$1429.
+    dead port 2/2 on $mux $procmux$1369.
+    dead port 2/2 on $mux $procmux$1310.
+    dead port 2/2 on $mux $procmux$1252.
+    dead port 2/2 on $mux $procmux$1195.
+    dead port 2/2 on $mux $procmux$1139.
+    dead port 2/2 on $mux $procmux$1084.
+    dead port 2/2 on $mux $procmux$1030.
+    dead port 2/2 on $mux $procmux$977.
+    dead port 2/2 on $mux $procmux$925.
+    dead port 2/2 on $mux $procmux$874.
+    dead port 2/2 on $mux $procmux$824.
+    dead port 2/2 on $mux $procmux$775.
+    dead port 2/2 on $mux $procmux$727.
+    dead port 2/2 on $mux $procmux$680.
+    dead port 2/2 on $mux $procmux$634.
+    dead port 2/2 on $mux $procmux$589.
+    dead port 2/2 on $mux $procmux$545.
+    dead port 2/2 on $mux $procmux$502.
+    dead port 2/2 on $mux $procmux$460.
+    dead port 2/2 on $mux $procmux$419.
+    dead port 2/2 on $mux $procmux$379.
+    dead port 2/2 on $mux $procmux$340.
+    dead port 2/2 on $mux $procmux$302.
+    dead port 2/2 on $mux $procmux$265.
+    dead port 2/2 on $mux $procmux$229.
+    dead port 2/2 on $mux $procmux$193.
+    dead port 2/2 on $mux $procmux$157.
+Removed 33 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+    New ctrl vector for $pmux cell $procmux$1811: { $auto$opt_reduce.cc:135:opt_pmux$1942 $procmux$1910_CMP $procmux$1911_CMP $procmux$1912_CMP $procmux$1913_CMP $procmux$1914_CMP $procmux$1915_CMP $procmux$1916_CMP $procmux$1917_CMP $procmux$1918_CMP $procmux$1919_CMP $procmux$1920_CMP $procmux$1921_CMP $procmux$1922_CMP $procmux$1923_CMP $procmux$1924_CMP $procmux$1925_CMP $procmux$1926_CMP $procmux$1927_CMP $procmux$1928_CMP $procmux$1929_CMP $procmux$1930_CMP $procmux$1931_CMP $procmux$1932_CMP $procmux$1933_CMP $procmux$1934_CMP $procmux$1935_CMP $procmux$1936_CMP $procmux$1937_CMP $procmux$1938_CMP $procmux$1939_CMP }
+    New ctrl vector for $pmux cell $procmux$1876: { $auto$opt_reduce.cc:135:opt_pmux$1946 $auto$opt_reduce.cc:135:opt_pmux$1944 $procmux$1910_CMP $procmux$1911_CMP $procmux$1912_CMP $procmux$1913_CMP $procmux$1914_CMP $procmux$1915_CMP $procmux$1916_CMP $procmux$1917_CMP $procmux$1918_CMP $procmux$1919_CMP $procmux$1920_CMP $procmux$1921_CMP $procmux$1922_CMP $procmux$1923_CMP $procmux$1924_CMP $procmux$1925_CMP $procmux$1926_CMP $procmux$1927_CMP $procmux$1928_CMP $procmux$1929_CMP $procmux$1930_CMP $procmux$1931_CMP $procmux$1932_CMP $procmux$1933_CMP $procmux$1934_CMP $procmux$1935_CMP $procmux$1936_CMP $procmux$1937_CMP $procmux$1938_CMP $procmux$1939_CMP }
+    New ctrl vector for $pmux cell $procmux$1746: { $auto$opt_reduce.cc:135:opt_pmux$1950 $auto$opt_reduce.cc:135:opt_pmux$1948 $procmux$1909_CMP $procmux$1910_CMP $procmux$1911_CMP $procmux$1912_CMP $procmux$1913_CMP $procmux$1914_CMP $procmux$1915_CMP $procmux$1916_CMP $procmux$1917_CMP $procmux$1918_CMP $procmux$1919_CMP $procmux$1920_CMP $procmux$1921_CMP $procmux$1922_CMP $procmux$1923_CMP $procmux$1924_CMP $procmux$1925_CMP $procmux$1926_CMP $procmux$1927_CMP $procmux$1928_CMP $procmux$1929_CMP $procmux$1930_CMP $procmux$1931_CMP $procmux$1932_CMP $procmux$1933_CMP $procmux$1934_CMP $procmux$1935_CMP $procmux$1936_CMP $procmux$1937_CMP $procmux$1938_CMP $procmux$1939_CMP }
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 3 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 134 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 133 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 1 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+Removed 0 unused cells and 237 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 133 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-1 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$119: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$115: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-1 lane 13
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$111: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$107: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$103: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$103: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$99: removing const-1 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$95: removing const-1 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$91: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$91: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$87: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$83: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$79: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$79: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$75: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$75: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$71: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$67: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$63: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$63: removing const-1 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$63: removing const-1 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$63: removing const-0 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$59: removing const-0 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$55: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$55: removing const-0 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$51: removing const-1 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$51: removing const-0 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$47: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$43: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$39: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$39: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$35: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$35: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$31: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$27: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$23: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$23: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$19: removing const-1 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$15: removing const-1 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$11: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$11: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$7: removing const-0 lane 15
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 0
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 1
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 2
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 3
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 4
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 5
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-1 lane 13
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 14
+ex223_fp16_log_semantic_sign_exp_field_defaults.$auto$proc_rom.cc:155:do_switch$3: removing const-0 lane 15
+Performed a total of 30 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$119'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$67'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$7'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$119'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$115'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$111'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$107'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$103'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$99'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$95'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$91'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$83'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$79'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$75'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$71'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$67'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$63'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$59'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$55'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$51'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$47'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$43'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$39'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$35'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$31'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$27'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$23'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$19'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$15'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$11'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$7'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$3'[0] in module `\ex223_fp16_log_semantic_sign_exp_field_defaults': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+Removed 0 unused cells and 50 unused wires.
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$119 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$115 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$111 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$107 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$103 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$99 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$95 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$91 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$87 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$83 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$79 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$75 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$71 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$67 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$63 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$59 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$55 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 14.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$51 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$47 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 15.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$43 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$39 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$35 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 11.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$31 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$27 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$23 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$19 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$15 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 9.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$11 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$7 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$3 in module \ex223_fp16_log_semantic_sign_exp_field_defaults:
+  created 1024 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 1023 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 17108 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+    New ctrl vector for $pmux cell $procmux$1811: { $auto$opt_reduce.cc:135:opt_pmux$94086 $procmux$1616_CMP $auto$opt_reduce.cc:135:opt_pmux$94084 $procmux$1253_CMP $auto$opt_reduce.cc:135:opt_pmux$94082 $procmux$1085_CMP $procmux$1031_CMP $procmux$1796_CMP $procmux$1795_CMP $procmux$1794_CMP $procmux$1793_CMP $procmux$1790_CMP $procmux$1784_CMP $auto$opt_reduce.cc:135:opt_pmux$1942 }
+    New ctrl vector for $pmux cell $procmux$1876: { $auto$opt_reduce.cc:135:opt_pmux$94090 $auto$opt_reduce.cc:135:opt_pmux$94088 }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:129:opt_pmux$94087: { $procmux$1795_CMP $procmux$1794_CMP $procmux$1793_CMP $procmux$1792_CMP $procmux$1791_CMP $procmux$1790_CMP $procmux$1789_CMP $procmux$1788_CMP $procmux$1787_CMP $procmux$1786_CMP $procmux$1785_CMP $procmux$1784_CMP $procmux$1783_CMP $procmux$1782_CMP $procmux$1781_CMP $procmux$1780_CMP $procmux$1777_CMP $procmux$1776_CMP $procmux$1775_CMP $procmux$1774_CMP $procmux$1773_CMP $procmux$1772_CMP $procmux$1771_CMP $procmux$1770_CMP $procmux$1769_CMP $procmux$1768_CMP $procmux$1767_CMP $procmux$1766_CMP $procmux$1765_CMP $procmux$1764_CMP $procmux$1763_CMP $procmux$1762_CMP $procmux$1761_CMP $procmux$1760_CMP $procmux$1759_CMP $procmux$1758_CMP $procmux$1757_CMP $procmux$1756_CMP $procmux$1755_CMP $procmux$1754_CMP $procmux$1753_CMP $procmux$1752_CMP $procmux$1751_CMP $procmux$1750_CMP $procmux$1749_CMP $procmux$1748_CMP $procmux$1747_CMP $procmux$158_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:129:opt_pmux$94089: { $procmux$1810_CMP $procmux$1796_CMP $procmux$1778_CMP $procmux$1745_CMP $procmux$1680_CMP $procmux$1616_CMP $procmux$1553_CMP $procmux$1491_CMP $procmux$1430_CMP $procmux$1370_CMP $procmux$1311_CMP $procmux$1253_CMP $procmux$1196_CMP $procmux$1140_CMP $procmux$1085_CMP $procmux$1031_CMP }
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 4 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 17113 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 16356 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 16082 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 16034 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 16031 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 1082 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+Removed 1 unused cells and 45458 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 16030 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $eq.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 43555 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 31351 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 21712 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 14699 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 10559 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8801 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8257 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8104 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8066 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8049 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8044 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8040 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8039 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 35516 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 8039 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+Removed 1 unused cells and 14240 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 7972 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+Removed 0 unused cells and 36 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 7972 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex223_fp16_log_semantic_sign_exp_field_defaults' to `<abc-temp-dir>/input.blif'..
+Replacing 16 occurrences of constant undef bits with constant zero bits
+
+12.1.1. Executed ABC.
+Extracted 7972 gates and 7991 wires to a netlist network with 16 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:    11236
+ABC RESULTS:               NOT cells:     7903
+ABC RESULTS:        internal signals:     7959
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 19139 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 19139 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+Removed 0 unused cells and 2832 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 19139 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex223_fp16_log_semantic_sign_exp_field_defaults: replaced 0 cells with 0 new cells, skipped 19139 cells.
+  not replaced 2 cell types:
+   11236 $_AND_
+    7903 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 19139 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex223_fp16_log_semantic_sign_exp_field_defaults.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Computing hashes of 19139 cells of `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Finding duplicate cells in `\ex223_fp16_log_semantic_sign_exp_field_defaults'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex223_fp16_log_semantic_sign_exp_field_defaults..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex223_fp16_log_semantic_sign_exp_field_defaults.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [0] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [1] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [2] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [3] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [4] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [5] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [6] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [7] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [8] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [9] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [10] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [11] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [12] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [13] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [14] like $anyseq.
+Warning: Treating undriven bit ex223_fp16_log_semantic_sign_exp_field_defaults.\in [15] like $anyseq.
+Warning: Treating a total of 16 undriven bits in ex223_fp16_log_semantic_sign_exp_field_defaults like $anyseq.
+
+Warnings: 17 unique messages, 17 total
+End of script. Logfile hash: 1c6fc196c1, time: 13.62s, user: 12.37s, system: 0.35s, MEM: 476.21 MB peak
+Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+Time spent: 22% 16x opt_expr (3 sec), 21% 3x read_verilog (3 sec), ...
