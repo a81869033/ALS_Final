@@ -1,0 +1,1012 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/logs/ex253_semantic_u2_sum8_bytetable_qrange_default.yosys.ys' --
+
+1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v' to AST representation.
+Generating RTLIL representation for module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex253_semantic_u2_sum8_bytetable_qrange
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex253_semantic_u2_sum8_bytetable_qrange
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 29 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18 in module ex253_semantic_u2_sum8_bytetable_qrange.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13 in module ex253_semantic_u2_sum8_bytetable_qrange.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13 in module ex253_semantic_u2_sum8_bytetable_qrange.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8 in module ex253_semantic_u2_sum8_bytetable_qrange.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8 in module ex253_semantic_u2_sum8_bytetable_qrange.
+Removed a total of 2 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 9 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 2 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18'.
+     1/29: $29\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$79
+     2/29: $28\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$77
+     3/29: $27\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$75
+     4/29: $26\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$73
+     5/29: $25\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$71
+     6/29: $24\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$69
+     7/29: $23\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$67
+     8/29: $22\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$65
+     9/29: $21\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$63
+    10/29: $20\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$61
+    11/29: $19\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$59
+    12/29: $18\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$57
+    13/29: $17\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$55
+    14/29: $16\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$53
+    15/29: $15\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$51
+    16/29: $14\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$49
+    17/29: $13\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$47
+    18/29: $12\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$45
+    19/29: $11\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$43
+    20/29: $10\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$41
+    21/29: $9\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$39
+    22/29: $8\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$37
+    23/29: $7\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$35
+    24/29: $6\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$33
+    25/29: $5\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$31
+    26/29: $4\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$29
+    27/29: $3\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$27
+    28/29: $2\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$25
+    29/29: $1\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result[6:0]$23
+Creating decoders for process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13'.
+     1/1: $1\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$5.$result[4:0]$17
+Creating decoders for process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8'.
+     1/1: $1\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$4.$result[4:0]$12
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$3.$result' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.$result' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$6.value' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$2.$result' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$5.$result' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$5.value' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$1.$result' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$4.$result' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8'.
+No latch inferred for signal `\ex253_semantic_u2_sum8_bytetable_qrange.\byte_sum$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$4.value' from process `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 29 empty switches in `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18'.
+Removing empty process `ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:308$18'.
+Found and cleaned up 1 empty switch in `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13'.
+Removing empty process `ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$13'.
+Found and cleaned up 1 empty switch in `\ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8'.
+Removing empty process `ex253_semantic_u2_sum8_bytetable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qrange.v:269$8'.
+Cleaned up 31 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 469 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1382.
+    dead port 1/2 on $mux $procmux$1379.
+    dead port 1/2 on $mux $procmux$1373.
+    dead port 1/2 on $mux $procmux$1370.
+    dead port 1/2 on $mux $procmux$1367.
+    dead port 1/2 on $mux $procmux$1361.
+    dead port 1/2 on $mux $procmux$1358.
+    dead port 1/2 on $mux $procmux$1355.
+    dead port 1/2 on $mux $procmux$1352.
+    dead port 1/2 on $mux $procmux$1346.
+    dead port 1/2 on $mux $procmux$1343.
+    dead port 1/2 on $mux $procmux$1340.
+    dead port 1/2 on $mux $procmux$1337.
+    dead port 1/2 on $mux $procmux$1334.
+    dead port 1/2 on $mux $procmux$1328.
+    dead port 1/2 on $mux $procmux$1325.
+    dead port 1/2 on $mux $procmux$1322.
+    dead port 1/2 on $mux $procmux$1319.
+    dead port 1/2 on $mux $procmux$1316.
+    dead port 1/2 on $mux $procmux$1313.
+    dead port 1/2 on $mux $procmux$1307.
+    dead port 1/2 on $mux $procmux$1304.
+    dead port 1/2 on $mux $procmux$1301.
+    dead port 1/2 on $mux $procmux$1298.
+    dead port 1/2 on $mux $procmux$1295.
+    dead port 1/2 on $mux $procmux$1292.
+    dead port 1/2 on $mux $procmux$1289.
+    dead port 1/2 on $mux $procmux$1283.
+    dead port 1/2 on $mux $procmux$1280.
+    dead port 1/2 on $mux $procmux$1277.
+    dead port 1/2 on $mux $procmux$1274.
+    dead port 1/2 on $mux $procmux$1271.
+    dead port 1/2 on $mux $procmux$1268.
+    dead port 1/2 on $mux $procmux$1265.
+    dead port 1/2 on $mux $procmux$1262.
+    dead port 1/2 on $mux $procmux$1256.
+    dead port 1/2 on $mux $procmux$1253.
+    dead port 1/2 on $mux $procmux$1250.
+    dead port 1/2 on $mux $procmux$1247.
+    dead port 1/2 on $mux $procmux$1244.
+    dead port 1/2 on $mux $procmux$1241.
+    dead port 1/2 on $mux $procmux$1238.
+    dead port 1/2 on $mux $procmux$1235.
+    dead port 1/2 on $mux $procmux$1232.
+    dead port 1/2 on $mux $procmux$1226.
+    dead port 1/2 on $mux $procmux$1223.
+    dead port 1/2 on $mux $procmux$1220.
+    dead port 1/2 on $mux $procmux$1217.
+    dead port 1/2 on $mux $procmux$1214.
+    dead port 1/2 on $mux $procmux$1211.
+    dead port 1/2 on $mux $procmux$1208.
+    dead port 1/2 on $mux $procmux$1205.
+    dead port 1/2 on $mux $procmux$1202.
+    dead port 1/2 on $mux $procmux$1199.
+    dead port 1/2 on $mux $procmux$1193.
+    dead port 1/2 on $mux $procmux$1190.
+    dead port 1/2 on $mux $procmux$1187.
+    dead port 1/2 on $mux $procmux$1184.
+    dead port 1/2 on $mux $procmux$1181.
+    dead port 1/2 on $mux $procmux$1178.
+    dead port 1/2 on $mux $procmux$1175.
+    dead port 1/2 on $mux $procmux$1172.
+    dead port 1/2 on $mux $procmux$1169.
+    dead port 1/2 on $mux $procmux$1166.
+    dead port 1/2 on $mux $procmux$1163.
+    dead port 1/2 on $mux $procmux$1157.
+    dead port 1/2 on $mux $procmux$1154.
+    dead port 1/2 on $mux $procmux$1151.
+    dead port 1/2 on $mux $procmux$1148.
+    dead port 1/2 on $mux $procmux$1145.
+    dead port 1/2 on $mux $procmux$1142.
+    dead port 1/2 on $mux $procmux$1139.
+    dead port 1/2 on $mux $procmux$1136.
+    dead port 1/2 on $mux $procmux$1133.
+    dead port 1/2 on $mux $procmux$1130.
+    dead port 1/2 on $mux $procmux$1127.
+    dead port 1/2 on $mux $procmux$1124.
+    dead port 1/2 on $mux $procmux$1118.
+    dead port 1/2 on $mux $procmux$1115.
+    dead port 1/2 on $mux $procmux$1112.
+    dead port 1/2 on $mux $procmux$1109.
+    dead port 1/2 on $mux $procmux$1106.
+    dead port 1/2 on $mux $procmux$1103.
+    dead port 1/2 on $mux $procmux$1100.
+    dead port 1/2 on $mux $procmux$1097.
+    dead port 1/2 on $mux $procmux$1094.
+    dead port 1/2 on $mux $procmux$1091.
+    dead port 1/2 on $mux $procmux$1088.
+    dead port 1/2 on $mux $procmux$1085.
+    dead port 1/2 on $mux $procmux$1082.
+    dead port 1/2 on $mux $procmux$1076.
+    dead port 1/2 on $mux $procmux$1073.
+    dead port 1/2 on $mux $procmux$1070.
+    dead port 1/2 on $mux $procmux$1067.
+    dead port 1/2 on $mux $procmux$1064.
+    dead port 1/2 on $mux $procmux$1061.
+    dead port 1/2 on $mux $procmux$1058.
+    dead port 1/2 on $mux $procmux$1055.
+    dead port 1/2 on $mux $procmux$1052.
+    dead port 1/2 on $mux $procmux$1049.
+    dead port 1/2 on $mux $procmux$1046.
+    dead port 1/2 on $mux $procmux$1043.
+    dead port 1/2 on $mux $procmux$1040.
+    dead port 1/2 on $mux $procmux$1037.
+    dead port 1/2 on $mux $procmux$1031.
+    dead port 1/2 on $mux $procmux$1028.
+    dead port 1/2 on $mux $procmux$1025.
+    dead port 1/2 on $mux $procmux$1022.
+    dead port 1/2 on $mux $procmux$1019.
+    dead port 1/2 on $mux $procmux$1016.
+    dead port 1/2 on $mux $procmux$1013.
+    dead port 1/2 on $mux $procmux$1010.
+    dead port 1/2 on $mux $procmux$1007.
+    dead port 1/2 on $mux $procmux$1004.
+    dead port 1/2 on $mux $procmux$1001.
+    dead port 1/2 on $mux $procmux$998.
+    dead port 1/2 on $mux $procmux$995.
+    dead port 1/2 on $mux $procmux$992.
+    dead port 1/2 on $mux $procmux$989.
+    dead port 1/2 on $mux $procmux$983.
+    dead port 1/2 on $mux $procmux$980.
+    dead port 1/2 on $mux $procmux$977.
+    dead port 1/2 on $mux $procmux$974.
+    dead port 1/2 on $mux $procmux$971.
+    dead port 1/2 on $mux $procmux$968.
+    dead port 1/2 on $mux $procmux$965.
+    dead port 1/2 on $mux $procmux$962.
+    dead port 1/2 on $mux $procmux$959.
+    dead port 1/2 on $mux $procmux$956.
+    dead port 1/2 on $mux $procmux$953.
+    dead port 1/2 on $mux $procmux$950.
+    dead port 1/2 on $mux $procmux$947.
+    dead port 1/2 on $mux $procmux$944.
+    dead port 1/2 on $mux $procmux$941.
+    dead port 1/2 on $mux $procmux$938.
+    dead port 1/2 on $mux $procmux$932.
+    dead port 1/2 on $mux $procmux$929.
+    dead port 1/2 on $mux $procmux$926.
+    dead port 1/2 on $mux $procmux$923.
+    dead port 1/2 on $mux $procmux$920.
+    dead port 1/2 on $mux $procmux$917.
+    dead port 1/2 on $mux $procmux$914.
+    dead port 1/2 on $mux $procmux$911.
+    dead port 1/2 on $mux $procmux$908.
+    dead port 1/2 on $mux $procmux$905.
+    dead port 1/2 on $mux $procmux$902.
+    dead port 1/2 on $mux $procmux$899.
+    dead port 1/2 on $mux $procmux$896.
+    dead port 1/2 on $mux $procmux$893.
+    dead port 1/2 on $mux $procmux$890.
+    dead port 1/2 on $mux $procmux$887.
+    dead port 1/2 on $mux $procmux$884.
+    dead port 1/2 on $mux $procmux$878.
+    dead port 1/2 on $mux $procmux$875.
+    dead port 1/2 on $mux $procmux$872.
+    dead port 1/2 on $mux $procmux$869.
+    dead port 1/2 on $mux $procmux$866.
+    dead port 1/2 on $mux $procmux$863.
+    dead port 1/2 on $mux $procmux$860.
+    dead port 1/2 on $mux $procmux$857.
+    dead port 1/2 on $mux $procmux$854.
+    dead port 1/2 on $mux $procmux$851.
+    dead port 1/2 on $mux $procmux$848.
+    dead port 1/2 on $mux $procmux$845.
+    dead port 1/2 on $mux $procmux$842.
+    dead port 1/2 on $mux $procmux$839.
+    dead port 1/2 on $mux $procmux$836.
+    dead port 1/2 on $mux $procmux$833.
+    dead port 1/2 on $mux $procmux$830.
+    dead port 1/2 on $mux $procmux$827.
+    dead port 1/2 on $mux $procmux$821.
+    dead port 1/2 on $mux $procmux$818.
+    dead port 1/2 on $mux $procmux$815.
+    dead port 1/2 on $mux $procmux$812.
+    dead port 1/2 on $mux $procmux$809.
+    dead port 1/2 on $mux $procmux$806.
+    dead port 1/2 on $mux $procmux$803.
+    dead port 1/2 on $mux $procmux$800.
+    dead port 1/2 on $mux $procmux$797.
+    dead port 1/2 on $mux $procmux$794.
+    dead port 1/2 on $mux $procmux$791.
+    dead port 1/2 on $mux $procmux$788.
+    dead port 1/2 on $mux $procmux$785.
+    dead port 1/2 on $mux $procmux$782.
+    dead port 1/2 on $mux $procmux$779.
+    dead port 1/2 on $mux $procmux$776.
+    dead port 1/2 on $mux $procmux$773.
+    dead port 1/2 on $mux $procmux$770.
+    dead port 1/2 on $mux $procmux$767.
+    dead port 1/2 on $mux $procmux$761.
+    dead port 1/2 on $mux $procmux$758.
+    dead port 1/2 on $mux $procmux$755.
+    dead port 1/2 on $mux $procmux$752.
+    dead port 1/2 on $mux $procmux$749.
+    dead port 1/2 on $mux $procmux$746.
+    dead port 1/2 on $mux $procmux$743.
+    dead port 1/2 on $mux $procmux$740.
+    dead port 1/2 on $mux $procmux$737.
+    dead port 1/2 on $mux $procmux$734.
+    dead port 1/2 on $mux $procmux$731.
+    dead port 1/2 on $mux $procmux$728.
+    dead port 1/2 on $mux $procmux$725.
+    dead port 1/2 on $mux $procmux$722.
+    dead port 1/2 on $mux $procmux$719.
+    dead port 1/2 on $mux $procmux$716.
+    dead port 1/2 on $mux $procmux$713.
+    dead port 1/2 on $mux $procmux$710.
+    dead port 1/2 on $mux $procmux$707.
+    dead port 1/2 on $mux $procmux$704.
+    dead port 1/2 on $mux $procmux$698.
+    dead port 1/2 on $mux $procmux$695.
+    dead port 1/2 on $mux $procmux$692.
+    dead port 1/2 on $mux $procmux$689.
+    dead port 1/2 on $mux $procmux$686.
+    dead port 1/2 on $mux $procmux$683.
+    dead port 1/2 on $mux $procmux$680.
+    dead port 1/2 on $mux $procmux$677.
+    dead port 1/2 on $mux $procmux$674.
+    dead port 1/2 on $mux $procmux$671.
+    dead port 1/2 on $mux $procmux$668.
+    dead port 1/2 on $mux $procmux$665.
+    dead port 1/2 on $mux $procmux$662.
+    dead port 1/2 on $mux $procmux$659.
+    dead port 1/2 on $mux $procmux$656.
+    dead port 1/2 on $mux $procmux$653.
+    dead port 1/2 on $mux $procmux$650.
+    dead port 1/2 on $mux $procmux$647.
+    dead port 1/2 on $mux $procmux$644.
+    dead port 1/2 on $mux $procmux$641.
+    dead port 1/2 on $mux $procmux$638.
+    dead port 1/2 on $mux $procmux$632.
+    dead port 1/2 on $mux $procmux$629.
+    dead port 1/2 on $mux $procmux$626.
+    dead port 1/2 on $mux $procmux$623.
+    dead port 1/2 on $mux $procmux$620.
+    dead port 1/2 on $mux $procmux$617.
+    dead port 1/2 on $mux $procmux$614.
+    dead port 1/2 on $mux $procmux$611.
+    dead port 1/2 on $mux $procmux$608.
+    dead port 1/2 on $mux $procmux$605.
+    dead port 1/2 on $mux $procmux$602.
+    dead port 1/2 on $mux $procmux$599.
+    dead port 1/2 on $mux $procmux$596.
+    dead port 1/2 on $mux $procmux$593.
+    dead port 1/2 on $mux $procmux$590.
+    dead port 1/2 on $mux $procmux$587.
+    dead port 1/2 on $mux $procmux$584.
+    dead port 1/2 on $mux $procmux$581.
+    dead port 1/2 on $mux $procmux$578.
+    dead port 1/2 on $mux $procmux$575.
+    dead port 1/2 on $mux $procmux$572.
+    dead port 1/2 on $mux $procmux$569.
+    dead port 1/2 on $mux $procmux$563.
+    dead port 1/2 on $mux $procmux$560.
+    dead port 1/2 on $mux $procmux$557.
+    dead port 1/2 on $mux $procmux$554.
+    dead port 1/2 on $mux $procmux$551.
+    dead port 1/2 on $mux $procmux$548.
+    dead port 1/2 on $mux $procmux$545.
+    dead port 1/2 on $mux $procmux$542.
+    dead port 1/2 on $mux $procmux$539.
+    dead port 1/2 on $mux $procmux$536.
+    dead port 1/2 on $mux $procmux$533.
+    dead port 1/2 on $mux $procmux$530.
+    dead port 1/2 on $mux $procmux$527.
+    dead port 1/2 on $mux $procmux$524.
+    dead port 1/2 on $mux $procmux$521.
+    dead port 1/2 on $mux $procmux$518.
+    dead port 1/2 on $mux $procmux$515.
+    dead port 1/2 on $mux $procmux$512.
+    dead port 1/2 on $mux $procmux$509.
+    dead port 1/2 on $mux $procmux$506.
+    dead port 1/2 on $mux $procmux$503.
+    dead port 1/2 on $mux $procmux$500.
+    dead port 1/2 on $mux $procmux$497.
+    dead port 1/2 on $mux $procmux$491.
+    dead port 1/2 on $mux $procmux$488.
+    dead port 1/2 on $mux $procmux$485.
+    dead port 1/2 on $mux $procmux$482.
+    dead port 1/2 on $mux $procmux$479.
+    dead port 1/2 on $mux $procmux$476.
+    dead port 1/2 on $mux $procmux$473.
+    dead port 1/2 on $mux $procmux$470.
+    dead port 1/2 on $mux $procmux$467.
+    dead port 1/2 on $mux $procmux$464.
+    dead port 1/2 on $mux $procmux$461.
+    dead port 1/2 on $mux $procmux$458.
+    dead port 1/2 on $mux $procmux$455.
+    dead port 1/2 on $mux $procmux$452.
+    dead port 1/2 on $mux $procmux$449.
+    dead port 1/2 on $mux $procmux$446.
+    dead port 1/2 on $mux $procmux$443.
+    dead port 1/2 on $mux $procmux$440.
+    dead port 1/2 on $mux $procmux$437.
+    dead port 1/2 on $mux $procmux$434.
+    dead port 1/2 on $mux $procmux$431.
+    dead port 1/2 on $mux $procmux$428.
+    dead port 1/2 on $mux $procmux$425.
+    dead port 1/2 on $mux $procmux$422.
+    dead port 1/2 on $mux $procmux$416.
+    dead port 1/2 on $mux $procmux$413.
+    dead port 1/2 on $mux $procmux$410.
+    dead port 1/2 on $mux $procmux$407.
+    dead port 1/2 on $mux $procmux$404.
+    dead port 1/2 on $mux $procmux$401.
+    dead port 1/2 on $mux $procmux$398.
+    dead port 1/2 on $mux $procmux$395.
+    dead port 1/2 on $mux $procmux$392.
+    dead port 1/2 on $mux $procmux$389.
+    dead port 1/2 on $mux $procmux$386.
+    dead port 1/2 on $mux $procmux$383.
+    dead port 1/2 on $mux $procmux$380.
+    dead port 1/2 on $mux $procmux$377.
+    dead port 1/2 on $mux $procmux$374.
+    dead port 1/2 on $mux $procmux$371.
+    dead port 1/2 on $mux $procmux$368.
+    dead port 1/2 on $mux $procmux$365.
+    dead port 1/2 on $mux $procmux$362.
+    dead port 1/2 on $mux $procmux$359.
+    dead port 1/2 on $mux $procmux$356.
+    dead port 1/2 on $mux $procmux$353.
+    dead port 1/2 on $mux $procmux$350.
+    dead port 1/2 on $mux $procmux$347.
+    dead port 1/2 on $mux $procmux$344.
+    dead port 1/2 on $mux $procmux$338.
+    dead port 1/2 on $mux $procmux$335.
+    dead port 1/2 on $mux $procmux$332.
+    dead port 1/2 on $mux $procmux$329.
+    dead port 1/2 on $mux $procmux$326.
+    dead port 1/2 on $mux $procmux$323.
+    dead port 1/2 on $mux $procmux$320.
+    dead port 1/2 on $mux $procmux$317.
+    dead port 1/2 on $mux $procmux$314.
+    dead port 1/2 on $mux $procmux$311.
+    dead port 1/2 on $mux $procmux$308.
+    dead port 1/2 on $mux $procmux$305.
+    dead port 1/2 on $mux $procmux$302.
+    dead port 1/2 on $mux $procmux$299.
+    dead port 1/2 on $mux $procmux$296.
+    dead port 1/2 on $mux $procmux$293.
+    dead port 1/2 on $mux $procmux$290.
+    dead port 1/2 on $mux $procmux$287.
+    dead port 1/2 on $mux $procmux$284.
+    dead port 1/2 on $mux $procmux$281.
+    dead port 1/2 on $mux $procmux$278.
+    dead port 1/2 on $mux $procmux$275.
+    dead port 1/2 on $mux $procmux$272.
+    dead port 1/2 on $mux $procmux$269.
+    dead port 1/2 on $mux $procmux$266.
+    dead port 1/2 on $mux $procmux$263.
+    dead port 1/2 on $mux $procmux$257.
+    dead port 1/2 on $mux $procmux$254.
+    dead port 1/2 on $mux $procmux$251.
+    dead port 1/2 on $mux $procmux$248.
+    dead port 1/2 on $mux $procmux$245.
+    dead port 1/2 on $mux $procmux$242.
+    dead port 1/2 on $mux $procmux$239.
+    dead port 1/2 on $mux $procmux$236.
+    dead port 1/2 on $mux $procmux$233.
+    dead port 1/2 on $mux $procmux$230.
+    dead port 1/2 on $mux $procmux$227.
+    dead port 1/2 on $mux $procmux$224.
+    dead port 1/2 on $mux $procmux$221.
+    dead port 1/2 on $mux $procmux$218.
+    dead port 1/2 on $mux $procmux$215.
+    dead port 1/2 on $mux $procmux$212.
+    dead port 1/2 on $mux $procmux$209.
+    dead port 1/2 on $mux $procmux$206.
+    dead port 1/2 on $mux $procmux$203.
+    dead port 1/2 on $mux $procmux$200.
+    dead port 1/2 on $mux $procmux$197.
+    dead port 1/2 on $mux $procmux$194.
+    dead port 1/2 on $mux $procmux$191.
+    dead port 1/2 on $mux $procmux$188.
+    dead port 1/2 on $mux $procmux$185.
+    dead port 1/2 on $mux $procmux$182.
+    dead port 1/2 on $mux $procmux$179.
+    dead port 1/2 on $mux $procmux$173.
+    dead port 1/2 on $mux $procmux$170.
+    dead port 1/2 on $mux $procmux$167.
+    dead port 1/2 on $mux $procmux$164.
+    dead port 1/2 on $mux $procmux$161.
+    dead port 1/2 on $mux $procmux$158.
+    dead port 1/2 on $mux $procmux$155.
+    dead port 1/2 on $mux $procmux$152.
+    dead port 1/2 on $mux $procmux$149.
+    dead port 1/2 on $mux $procmux$146.
+    dead port 1/2 on $mux $procmux$143.
+    dead port 1/2 on $mux $procmux$140.
+    dead port 1/2 on $mux $procmux$137.
+    dead port 1/2 on $mux $procmux$134.
+    dead port 1/2 on $mux $procmux$131.
+    dead port 1/2 on $mux $procmux$128.
+    dead port 1/2 on $mux $procmux$125.
+    dead port 1/2 on $mux $procmux$122.
+    dead port 1/2 on $mux $procmux$119.
+    dead port 1/2 on $mux $procmux$116.
+    dead port 1/2 on $mux $procmux$113.
+    dead port 1/2 on $mux $procmux$110.
+    dead port 1/2 on $mux $procmux$107.
+    dead port 1/2 on $mux $procmux$104.
+    dead port 1/2 on $mux $procmux$101.
+    dead port 1/2 on $mux $procmux$98.
+    dead port 1/2 on $mux $procmux$95.
+    dead port 1/2 on $mux $procmux$92.
+Removed 406 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 63 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+Removed 0 unused cells and 888 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 63 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex253_semantic_u2_sum8_bytetable_qrange.$auto$proc_rom.cc:155:do_switch$85: removing const-0 lane 4
+ex253_semantic_u2_sum8_bytetable_qrange.$auto$proc_rom.cc:155:do_switch$81: removing const-0 lane 4
+Performed a total of 2 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$85'[0] in module `\ex253_semantic_u2_sum8_bytetable_qrange': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$81'[0] in module `\ex253_semantic_u2_sum8_bytetable_qrange': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$85'[0] in module `\ex253_semantic_u2_sum8_bytetable_qrange': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$81'[0] in module `\ex253_semantic_u2_sum8_bytetable_qrange': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$85 in module \ex253_semantic_u2_sum8_bytetable_qrange:
+  created 256 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$81 in module \ex253_semantic_u2_sum8_bytetable_qrange:
+  created 256 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 569 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 569 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 337 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 229 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 183 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 165 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 161 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 408 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+Removed 0 unused cells and 920 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 161 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=6:B_WIDTH=6:A_WIDTH=6:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=6:B_WIDTH=6:A_WIDTH=6:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=6:B_WIDTH=6:A_WIDTH=6:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=10:A_WIDTH=10:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=10:A_WIDTH=10:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=10:A_WIDTH=10:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$00298f3f8094950cb9a5ff2fda48d0d8bde8806c\_90_alu for cells of type $alu.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 1267 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 929 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 765 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 652 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 602 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 559 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 538 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 527 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 740 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 527 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+Removed 74 unused cells and 2656 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 441 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+Removed 0 unused cells and 2 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 441 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex253_semantic_u2_sum8_bytetable_qrange' to `<abc-temp-dir>/input.blif'..
+
+12.1.1. Executed ABC.
+Extracted 441 gates and 459 wires to a netlist network with 16 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      258
+ABC RESULTS:               NOT cells:      222
+ABC RESULTS:        internal signals:      436
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 480 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 480 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+Removed 0 unused cells and 217 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 480 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex253_semantic_u2_sum8_bytetable_qrange: replaced 0 cells with 0 new cells, skipped 480 cells.
+  not replaced 2 cell types:
+     258 $_AND_
+     222 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 480 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex253_semantic_u2_sum8_bytetable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex253_semantic_u2_sum8_bytetable_qrange.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Computing hashes of 480 cells of `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Finding duplicate cells in `\ex253_semantic_u2_sum8_bytetable_qrange'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex253_semantic_u2_sum8_bytetable_qrange..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex253_semantic_u2_sum8_bytetable_qrange.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+ERROR: Can't open output file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/aigs/ex253_semantic_u2_sum8_bytetable_qrange_default.aig' for writing: No such file or directory

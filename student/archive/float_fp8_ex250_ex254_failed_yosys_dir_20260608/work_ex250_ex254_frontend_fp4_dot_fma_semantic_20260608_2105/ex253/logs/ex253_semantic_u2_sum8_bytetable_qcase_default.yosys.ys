@@ -1,0 +1,17 @@
+read_verilog "/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/verilog/ex253_semantic_u2_sum8_bytetable_qcase.v"
+hierarchy -check -top ex253_semantic_u2_sum8_bytetable_qcase
+proc
+flatten
+tribuf -logic
+deminout
+opt
+memory
+opt
+techmap
+opt
+abc -g AND
+opt
+aigmap
+opt
+clean
+write_aiger -symbols "/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex253/aigs/ex253_semantic_u2_sum8_bytetable_qcase_default.aig"

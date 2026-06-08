@@ -154,8 +154,15 @@ copy under `student/work/best/`.
 ## Git-Tracked Seed Bundles
 
 `student/work/` may contain large generated trees and can be ignored by git.
-When a run has current best Verilog/AIG files that future sessions should be
-able to use from a fresh clone, copy only those curated files into:
+Do not create `student/seeds/<domain>/..._current` bundles for a partial batch
+while the larger benchmark class is still incomplete.  During per-batch
+frontend exploration, keep verified candidates in `student/runs/<domain>/...`
+and bulky artifacts in `student/work/...`.  Copy curated files into
+`student/seeds/` only after the whole class is complete, or when the user
+explicitly asks for seed-bundle curation.
+
+When a completed class has current best Verilog/AIG files that future sessions
+should be able to use from a fresh clone, copy only those curated files into:
 
 ```text
 student/seeds/<domain>/<run_id>/

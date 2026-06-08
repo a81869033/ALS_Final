@@ -1,0 +1,1877 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/logs/ex250_semantic_fp4_dot2_prodtable_qrange_default.yosys.ys' --
+
+1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v' to AST representation.
+Generating RTLIL representation for module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex250_semantic_fp4_dot2_prodtable_qrange
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex250_semantic_fp4_dot2_prodtable_qrange
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 50 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51 in module ex250_semantic_fp4_dot2_prodtable_qrange.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25 in module ex250_semantic_fp4_dot2_prodtable_qrange.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25 in module ex250_semantic_fp4_dot2_prodtable_qrange.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19 in module ex250_semantic_fp4_dot2_prodtable_qrange.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19 in module ex250_semantic_fp4_dot2_prodtable_qrange.
+Removed a total of 2 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 19 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 2 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51'.
+     1/50: $50\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$154
+     2/50: $49\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$152
+     3/50: $48\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$150
+     4/50: $47\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$148
+     5/50: $46\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$146
+     6/50: $45\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$144
+     7/50: $44\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$142
+     8/50: $43\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$140
+     9/50: $42\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$138
+    10/50: $41\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$136
+    11/50: $40\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$134
+    12/50: $39\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$132
+    13/50: $38\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$130
+    14/50: $37\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$128
+    15/50: $36\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$126
+    16/50: $35\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$124
+    17/50: $34\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$122
+    18/50: $33\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$120
+    19/50: $32\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$118
+    20/50: $31\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$116
+    21/50: $30\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$114
+    22/50: $29\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$112
+    23/50: $28\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$110
+    24/50: $27\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$108
+    25/50: $26\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$106
+    26/50: $25\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$104
+    27/50: $24\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$102
+    28/50: $23\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$100
+    29/50: $22\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$98
+    30/50: $21\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$96
+    31/50: $20\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$94
+    32/50: $19\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$92
+    33/50: $18\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$90
+    34/50: $17\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$88
+    35/50: $16\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$86
+    36/50: $15\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$84
+    37/50: $14\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$82
+    38/50: $13\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$80
+    39/50: $12\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$78
+    40/50: $11\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$76
+    41/50: $10\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$74
+    42/50: $9\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$72
+    43/50: $8\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$70
+    44/50: $7\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$68
+    45/50: $6\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$66
+    46/50: $5\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$64
+    47/50: $4\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$62
+    48/50: $3\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$60
+    49/50: $2\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$58
+    50/50: $1\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result[6:0]$56
+Creating decoders for process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$41'.
+Creating decoders for process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$31'.
+Creating decoders for process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+     1/1: $1\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$7.$result[9:0]$30
+Creating decoders for process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+     1/1: $1\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$6.$result[9:0]$24
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$5.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$10.value' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$4.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$41'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$9.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$41'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$9.a' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$41'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$9.b' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$41'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$3.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$31'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$8.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$31'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$8.a' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$31'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$8.b' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$31'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$2.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$7.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$7.a' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$7.b' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$1.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$6.$result' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$6.a' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_prodtable_qrange.\lane_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$6.b' from process `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 50 empty switches in `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51'.
+Removing empty process `ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:366$51'.
+Removing empty process `ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$41'.
+Removing empty process `ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:365$31'.
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+Removing empty process `ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:360$25'.
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+Removing empty process `ex250_semantic_fp4_dot2_prodtable_qrange.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_prodtable_qrange.v:359$19'.
+Cleaned up 52 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1347 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$3983.
+    dead port 1/2 on $mux $procmux$3977.
+    dead port 1/2 on $mux $procmux$3974.
+    dead port 1/2 on $mux $procmux$3968.
+    dead port 1/2 on $mux $procmux$3965.
+    dead port 1/2 on $mux $procmux$3962.
+    dead port 1/2 on $mux $procmux$3956.
+    dead port 1/2 on $mux $procmux$3953.
+    dead port 1/2 on $mux $procmux$3950.
+    dead port 1/2 on $mux $procmux$3947.
+    dead port 1/2 on $mux $procmux$3941.
+    dead port 1/2 on $mux $procmux$3938.
+    dead port 1/2 on $mux $procmux$3935.
+    dead port 1/2 on $mux $procmux$3932.
+    dead port 1/2 on $mux $procmux$3929.
+    dead port 1/2 on $mux $procmux$3923.
+    dead port 1/2 on $mux $procmux$3920.
+    dead port 1/2 on $mux $procmux$3917.
+    dead port 1/2 on $mux $procmux$3914.
+    dead port 1/2 on $mux $procmux$3911.
+    dead port 1/2 on $mux $procmux$3908.
+    dead port 1/2 on $mux $procmux$3902.
+    dead port 1/2 on $mux $procmux$3899.
+    dead port 1/2 on $mux $procmux$3896.
+    dead port 1/2 on $mux $procmux$3893.
+    dead port 1/2 on $mux $procmux$3890.
+    dead port 1/2 on $mux $procmux$3887.
+    dead port 1/2 on $mux $procmux$3884.
+    dead port 1/2 on $mux $procmux$3878.
+    dead port 1/2 on $mux $procmux$3875.
+    dead port 1/2 on $mux $procmux$3872.
+    dead port 1/2 on $mux $procmux$3869.
+    dead port 1/2 on $mux $procmux$3866.
+    dead port 1/2 on $mux $procmux$3863.
+    dead port 1/2 on $mux $procmux$3860.
+    dead port 1/2 on $mux $procmux$3857.
+    dead port 1/2 on $mux $procmux$3851.
+    dead port 1/2 on $mux $procmux$3848.
+    dead port 1/2 on $mux $procmux$3845.
+    dead port 1/2 on $mux $procmux$3842.
+    dead port 1/2 on $mux $procmux$3839.
+    dead port 1/2 on $mux $procmux$3836.
+    dead port 1/2 on $mux $procmux$3833.
+    dead port 1/2 on $mux $procmux$3830.
+    dead port 1/2 on $mux $procmux$3827.
+    dead port 1/2 on $mux $procmux$3821.
+    dead port 1/2 on $mux $procmux$3818.
+    dead port 1/2 on $mux $procmux$3815.
+    dead port 1/2 on $mux $procmux$3812.
+    dead port 1/2 on $mux $procmux$3809.
+    dead port 1/2 on $mux $procmux$3806.
+    dead port 1/2 on $mux $procmux$3803.
+    dead port 1/2 on $mux $procmux$3800.
+    dead port 1/2 on $mux $procmux$3797.
+    dead port 1/2 on $mux $procmux$3794.
+    dead port 1/2 on $mux $procmux$3788.
+    dead port 1/2 on $mux $procmux$3785.
+    dead port 1/2 on $mux $procmux$3782.
+    dead port 1/2 on $mux $procmux$3779.
+    dead port 1/2 on $mux $procmux$3776.
+    dead port 1/2 on $mux $procmux$3773.
+    dead port 1/2 on $mux $procmux$3770.
+    dead port 1/2 on $mux $procmux$3767.
+    dead port 1/2 on $mux $procmux$3764.
+    dead port 1/2 on $mux $procmux$3761.
+    dead port 1/2 on $mux $procmux$3758.
+    dead port 1/2 on $mux $procmux$3752.
+    dead port 1/2 on $mux $procmux$3749.
+    dead port 1/2 on $mux $procmux$3746.
+    dead port 1/2 on $mux $procmux$3743.
+    dead port 1/2 on $mux $procmux$3740.
+    dead port 1/2 on $mux $procmux$3737.
+    dead port 1/2 on $mux $procmux$3734.
+    dead port 1/2 on $mux $procmux$3731.
+    dead port 1/2 on $mux $procmux$3728.
+    dead port 1/2 on $mux $procmux$3725.
+    dead port 1/2 on $mux $procmux$3722.
+    dead port 1/2 on $mux $procmux$3719.
+    dead port 1/2 on $mux $procmux$3713.
+    dead port 1/2 on $mux $procmux$3710.
+    dead port 1/2 on $mux $procmux$3707.
+    dead port 1/2 on $mux $procmux$3704.
+    dead port 1/2 on $mux $procmux$3701.
+    dead port 1/2 on $mux $procmux$3698.
+    dead port 1/2 on $mux $procmux$3695.
+    dead port 1/2 on $mux $procmux$3692.
+    dead port 1/2 on $mux $procmux$3689.
+    dead port 1/2 on $mux $procmux$3686.
+    dead port 1/2 on $mux $procmux$3683.
+    dead port 1/2 on $mux $procmux$3680.
+    dead port 1/2 on $mux $procmux$3677.
+    dead port 1/2 on $mux $procmux$3671.
+    dead port 1/2 on $mux $procmux$3668.
+    dead port 1/2 on $mux $procmux$3665.
+    dead port 1/2 on $mux $procmux$3662.
+    dead port 1/2 on $mux $procmux$3659.
+    dead port 1/2 on $mux $procmux$3656.
+    dead port 1/2 on $mux $procmux$3653.
+    dead port 1/2 on $mux $procmux$3650.
+    dead port 1/2 on $mux $procmux$3647.
+    dead port 1/2 on $mux $procmux$3644.
+    dead port 1/2 on $mux $procmux$3641.
+    dead port 1/2 on $mux $procmux$3638.
+    dead port 1/2 on $mux $procmux$3635.
+    dead port 1/2 on $mux $procmux$3632.
+    dead port 1/2 on $mux $procmux$3626.
+    dead port 1/2 on $mux $procmux$3623.
+    dead port 1/2 on $mux $procmux$3620.
+    dead port 1/2 on $mux $procmux$3617.
+    dead port 1/2 on $mux $procmux$3614.
+    dead port 1/2 on $mux $procmux$3611.
+    dead port 1/2 on $mux $procmux$3608.
+    dead port 1/2 on $mux $procmux$3605.
+    dead port 1/2 on $mux $procmux$3602.
+    dead port 1/2 on $mux $procmux$3599.
+    dead port 1/2 on $mux $procmux$3596.
+    dead port 1/2 on $mux $procmux$3593.
+    dead port 1/2 on $mux $procmux$3590.
+    dead port 1/2 on $mux $procmux$3587.
+    dead port 1/2 on $mux $procmux$3584.
+    dead port 1/2 on $mux $procmux$3578.
+    dead port 1/2 on $mux $procmux$3575.
+    dead port 1/2 on $mux $procmux$3572.
+    dead port 1/2 on $mux $procmux$3569.
+    dead port 1/2 on $mux $procmux$3566.
+    dead port 1/2 on $mux $procmux$3563.
+    dead port 1/2 on $mux $procmux$3560.
+    dead port 1/2 on $mux $procmux$3557.
+    dead port 1/2 on $mux $procmux$3554.
+    dead port 1/2 on $mux $procmux$3551.
+    dead port 1/2 on $mux $procmux$3548.
+    dead port 1/2 on $mux $procmux$3545.
+    dead port 1/2 on $mux $procmux$3542.
+    dead port 1/2 on $mux $procmux$3539.
+    dead port 1/2 on $mux $procmux$3536.
+    dead port 1/2 on $mux $procmux$3533.
+    dead port 1/2 on $mux $procmux$3527.
+    dead port 1/2 on $mux $procmux$3524.
+    dead port 1/2 on $mux $procmux$3521.
+    dead port 1/2 on $mux $procmux$3518.
+    dead port 1/2 on $mux $procmux$3515.
+    dead port 1/2 on $mux $procmux$3512.
+    dead port 1/2 on $mux $procmux$3509.
+    dead port 1/2 on $mux $procmux$3506.
+    dead port 1/2 on $mux $procmux$3503.
+    dead port 1/2 on $mux $procmux$3500.
+    dead port 1/2 on $mux $procmux$3497.
+    dead port 1/2 on $mux $procmux$3494.
+    dead port 1/2 on $mux $procmux$3491.
+    dead port 1/2 on $mux $procmux$3488.
+    dead port 1/2 on $mux $procmux$3485.
+    dead port 1/2 on $mux $procmux$3482.
+    dead port 1/2 on $mux $procmux$3479.
+    dead port 1/2 on $mux $procmux$3473.
+    dead port 1/2 on $mux $procmux$3470.
+    dead port 1/2 on $mux $procmux$3467.
+    dead port 1/2 on $mux $procmux$3464.
+    dead port 1/2 on $mux $procmux$3461.
+    dead port 1/2 on $mux $procmux$3458.
+    dead port 1/2 on $mux $procmux$3455.
+    dead port 1/2 on $mux $procmux$3452.
+    dead port 1/2 on $mux $procmux$3449.
+    dead port 1/2 on $mux $procmux$3446.
+    dead port 1/2 on $mux $procmux$3443.
+    dead port 1/2 on $mux $procmux$3440.
+    dead port 1/2 on $mux $procmux$3437.
+    dead port 1/2 on $mux $procmux$3434.
+    dead port 1/2 on $mux $procmux$3431.
+    dead port 1/2 on $mux $procmux$3428.
+    dead port 1/2 on $mux $procmux$3425.
+    dead port 1/2 on $mux $procmux$3422.
+    dead port 1/2 on $mux $procmux$3416.
+    dead port 1/2 on $mux $procmux$3413.
+    dead port 1/2 on $mux $procmux$3410.
+    dead port 1/2 on $mux $procmux$3407.
+    dead port 1/2 on $mux $procmux$3404.
+    dead port 1/2 on $mux $procmux$3401.
+    dead port 1/2 on $mux $procmux$3398.
+    dead port 1/2 on $mux $procmux$3395.
+    dead port 1/2 on $mux $procmux$3392.
+    dead port 1/2 on $mux $procmux$3389.
+    dead port 1/2 on $mux $procmux$3386.
+    dead port 1/2 on $mux $procmux$3383.
+    dead port 1/2 on $mux $procmux$3380.
+    dead port 1/2 on $mux $procmux$3377.
+    dead port 1/2 on $mux $procmux$3374.
+    dead port 1/2 on $mux $procmux$3371.
+    dead port 1/2 on $mux $procmux$3368.
+    dead port 1/2 on $mux $procmux$3365.
+    dead port 1/2 on $mux $procmux$3362.
+    dead port 1/2 on $mux $procmux$3356.
+    dead port 1/2 on $mux $procmux$3353.
+    dead port 1/2 on $mux $procmux$3350.
+    dead port 1/2 on $mux $procmux$3347.
+    dead port 1/2 on $mux $procmux$3344.
+    dead port 1/2 on $mux $procmux$3341.
+    dead port 1/2 on $mux $procmux$3338.
+    dead port 1/2 on $mux $procmux$3335.
+    dead port 1/2 on $mux $procmux$3332.
+    dead port 1/2 on $mux $procmux$3329.
+    dead port 1/2 on $mux $procmux$3326.
+    dead port 1/2 on $mux $procmux$3323.
+    dead port 1/2 on $mux $procmux$3320.
+    dead port 1/2 on $mux $procmux$3317.
+    dead port 1/2 on $mux $procmux$3314.
+    dead port 1/2 on $mux $procmux$3311.
+    dead port 1/2 on $mux $procmux$3308.
+    dead port 1/2 on $mux $procmux$3305.
+    dead port 1/2 on $mux $procmux$3302.
+    dead port 1/2 on $mux $procmux$3299.
+    dead port 1/2 on $mux $procmux$3293.
+    dead port 1/2 on $mux $procmux$3290.
+    dead port 1/2 on $mux $procmux$3287.
+    dead port 1/2 on $mux $procmux$3284.
+    dead port 1/2 on $mux $procmux$3281.
+    dead port 1/2 on $mux $procmux$3278.
+    dead port 1/2 on $mux $procmux$3275.
+    dead port 1/2 on $mux $procmux$3272.
+    dead port 1/2 on $mux $procmux$3269.
+    dead port 1/2 on $mux $procmux$3266.
+    dead port 1/2 on $mux $procmux$3263.
+    dead port 1/2 on $mux $procmux$3260.
+    dead port 1/2 on $mux $procmux$3257.
+    dead port 1/2 on $mux $procmux$3254.
+    dead port 1/2 on $mux $procmux$3251.
+    dead port 1/2 on $mux $procmux$3248.
+    dead port 1/2 on $mux $procmux$3245.
+    dead port 1/2 on $mux $procmux$3242.
+    dead port 1/2 on $mux $procmux$3239.
+    dead port 1/2 on $mux $procmux$3236.
+    dead port 1/2 on $mux $procmux$3233.
+    dead port 1/2 on $mux $procmux$3227.
+    dead port 1/2 on $mux $procmux$3224.
+    dead port 1/2 on $mux $procmux$3221.
+    dead port 1/2 on $mux $procmux$3218.
+    dead port 1/2 on $mux $procmux$3215.
+    dead port 1/2 on $mux $procmux$3212.
+    dead port 1/2 on $mux $procmux$3209.
+    dead port 1/2 on $mux $procmux$3206.
+    dead port 1/2 on $mux $procmux$3203.
+    dead port 1/2 on $mux $procmux$3200.
+    dead port 1/2 on $mux $procmux$3197.
+    dead port 1/2 on $mux $procmux$3194.
+    dead port 1/2 on $mux $procmux$3191.
+    dead port 1/2 on $mux $procmux$3188.
+    dead port 1/2 on $mux $procmux$3185.
+    dead port 1/2 on $mux $procmux$3182.
+    dead port 1/2 on $mux $procmux$3179.
+    dead port 1/2 on $mux $procmux$3176.
+    dead port 1/2 on $mux $procmux$3173.
+    dead port 1/2 on $mux $procmux$3170.
+    dead port 1/2 on $mux $procmux$3167.
+    dead port 1/2 on $mux $procmux$3164.
+    dead port 1/2 on $mux $procmux$3158.
+    dead port 1/2 on $mux $procmux$3155.
+    dead port 1/2 on $mux $procmux$3152.
+    dead port 1/2 on $mux $procmux$3149.
+    dead port 1/2 on $mux $procmux$3146.
+    dead port 1/2 on $mux $procmux$3143.
+    dead port 1/2 on $mux $procmux$3140.
+    dead port 1/2 on $mux $procmux$3137.
+    dead port 1/2 on $mux $procmux$3134.
+    dead port 1/2 on $mux $procmux$3131.
+    dead port 1/2 on $mux $procmux$3128.
+    dead port 1/2 on $mux $procmux$3125.
+    dead port 1/2 on $mux $procmux$3122.
+    dead port 1/2 on $mux $procmux$3119.
+    dead port 1/2 on $mux $procmux$3116.
+    dead port 1/2 on $mux $procmux$3113.
+    dead port 1/2 on $mux $procmux$3110.
+    dead port 1/2 on $mux $procmux$3107.
+    dead port 1/2 on $mux $procmux$3104.
+    dead port 1/2 on $mux $procmux$3101.
+    dead port 1/2 on $mux $procmux$3098.
+    dead port 1/2 on $mux $procmux$3095.
+    dead port 1/2 on $mux $procmux$3092.
+    dead port 1/2 on $mux $procmux$3086.
+    dead port 1/2 on $mux $procmux$3083.
+    dead port 1/2 on $mux $procmux$3080.
+    dead port 1/2 on $mux $procmux$3077.
+    dead port 1/2 on $mux $procmux$3074.
+    dead port 1/2 on $mux $procmux$3071.
+    dead port 1/2 on $mux $procmux$3068.
+    dead port 1/2 on $mux $procmux$3065.
+    dead port 1/2 on $mux $procmux$3062.
+    dead port 1/2 on $mux $procmux$3059.
+    dead port 1/2 on $mux $procmux$3056.
+    dead port 1/2 on $mux $procmux$3053.
+    dead port 1/2 on $mux $procmux$3050.
+    dead port 1/2 on $mux $procmux$3047.
+    dead port 1/2 on $mux $procmux$3044.
+    dead port 1/2 on $mux $procmux$3041.
+    dead port 1/2 on $mux $procmux$3038.
+    dead port 1/2 on $mux $procmux$3035.
+    dead port 1/2 on $mux $procmux$3032.
+    dead port 1/2 on $mux $procmux$3029.
+    dead port 1/2 on $mux $procmux$3026.
+    dead port 1/2 on $mux $procmux$3023.
+    dead port 1/2 on $mux $procmux$3020.
+    dead port 1/2 on $mux $procmux$3017.
+    dead port 1/2 on $mux $procmux$3011.
+    dead port 1/2 on $mux $procmux$3008.
+    dead port 1/2 on $mux $procmux$3005.
+    dead port 1/2 on $mux $procmux$3002.
+    dead port 1/2 on $mux $procmux$2999.
+    dead port 1/2 on $mux $procmux$2996.
+    dead port 1/2 on $mux $procmux$2993.
+    dead port 1/2 on $mux $procmux$2990.
+    dead port 1/2 on $mux $procmux$2987.
+    dead port 1/2 on $mux $procmux$2984.
+    dead port 1/2 on $mux $procmux$2981.
+    dead port 1/2 on $mux $procmux$2978.
+    dead port 1/2 on $mux $procmux$2975.
+    dead port 1/2 on $mux $procmux$2972.
+    dead port 1/2 on $mux $procmux$2969.
+    dead port 1/2 on $mux $procmux$2966.
+    dead port 1/2 on $mux $procmux$2963.
+    dead port 1/2 on $mux $procmux$2960.
+    dead port 1/2 on $mux $procmux$2957.
+    dead port 1/2 on $mux $procmux$2954.
+    dead port 1/2 on $mux $procmux$2951.
+    dead port 1/2 on $mux $procmux$2948.
+    dead port 1/2 on $mux $procmux$2945.
+    dead port 1/2 on $mux $procmux$2942.
+    dead port 1/2 on $mux $procmux$2939.
+    dead port 1/2 on $mux $procmux$2933.
+    dead port 1/2 on $mux $procmux$2930.
+    dead port 1/2 on $mux $procmux$2927.
+    dead port 1/2 on $mux $procmux$2924.
+    dead port 1/2 on $mux $procmux$2921.
+    dead port 1/2 on $mux $procmux$2918.
+    dead port 1/2 on $mux $procmux$2915.
+    dead port 1/2 on $mux $procmux$2912.
+    dead port 1/2 on $mux $procmux$2909.
+    dead port 1/2 on $mux $procmux$2906.
+    dead port 1/2 on $mux $procmux$2903.
+    dead port 1/2 on $mux $procmux$2900.
+    dead port 1/2 on $mux $procmux$2897.
+    dead port 1/2 on $mux $procmux$2894.
+    dead port 1/2 on $mux $procmux$2891.
+    dead port 1/2 on $mux $procmux$2888.
+    dead port 1/2 on $mux $procmux$2885.
+    dead port 1/2 on $mux $procmux$2882.
+    dead port 1/2 on $mux $procmux$2879.
+    dead port 1/2 on $mux $procmux$2876.
+    dead port 1/2 on $mux $procmux$2873.
+    dead port 1/2 on $mux $procmux$2870.
+    dead port 1/2 on $mux $procmux$2867.
+    dead port 1/2 on $mux $procmux$2864.
+    dead port 1/2 on $mux $procmux$2861.
+    dead port 1/2 on $mux $procmux$2858.
+    dead port 1/2 on $mux $procmux$2852.
+    dead port 1/2 on $mux $procmux$2849.
+    dead port 1/2 on $mux $procmux$2846.
+    dead port 1/2 on $mux $procmux$2843.
+    dead port 1/2 on $mux $procmux$2840.
+    dead port 1/2 on $mux $procmux$2837.
+    dead port 1/2 on $mux $procmux$2834.
+    dead port 1/2 on $mux $procmux$2831.
+    dead port 1/2 on $mux $procmux$2828.
+    dead port 1/2 on $mux $procmux$2825.
+    dead port 1/2 on $mux $procmux$2822.
+    dead port 1/2 on $mux $procmux$2819.
+    dead port 1/2 on $mux $procmux$2816.
+    dead port 1/2 on $mux $procmux$2813.
+    dead port 1/2 on $mux $procmux$2810.
+    dead port 1/2 on $mux $procmux$2807.
+    dead port 1/2 on $mux $procmux$2804.
+    dead port 1/2 on $mux $procmux$2801.
+    dead port 1/2 on $mux $procmux$2798.
+    dead port 1/2 on $mux $procmux$2795.
+    dead port 1/2 on $mux $procmux$2792.
+    dead port 1/2 on $mux $procmux$2789.
+    dead port 1/2 on $mux $procmux$2786.
+    dead port 1/2 on $mux $procmux$2783.
+    dead port 1/2 on $mux $procmux$2780.
+    dead port 1/2 on $mux $procmux$2777.
+    dead port 1/2 on $mux $procmux$2774.
+    dead port 1/2 on $mux $procmux$2768.
+    dead port 1/2 on $mux $procmux$2765.
+    dead port 1/2 on $mux $procmux$2762.
+    dead port 1/2 on $mux $procmux$2759.
+    dead port 1/2 on $mux $procmux$2756.
+    dead port 1/2 on $mux $procmux$2753.
+    dead port 1/2 on $mux $procmux$2750.
+    dead port 1/2 on $mux $procmux$2747.
+    dead port 1/2 on $mux $procmux$2744.
+    dead port 1/2 on $mux $procmux$2741.
+    dead port 1/2 on $mux $procmux$2738.
+    dead port 1/2 on $mux $procmux$2735.
+    dead port 1/2 on $mux $procmux$2732.
+    dead port 1/2 on $mux $procmux$2729.
+    dead port 1/2 on $mux $procmux$2726.
+    dead port 1/2 on $mux $procmux$2723.
+    dead port 1/2 on $mux $procmux$2720.
+    dead port 1/2 on $mux $procmux$2717.
+    dead port 1/2 on $mux $procmux$2714.
+    dead port 1/2 on $mux $procmux$2711.
+    dead port 1/2 on $mux $procmux$2708.
+    dead port 1/2 on $mux $procmux$2705.
+    dead port 1/2 on $mux $procmux$2702.
+    dead port 1/2 on $mux $procmux$2699.
+    dead port 1/2 on $mux $procmux$2696.
+    dead port 1/2 on $mux $procmux$2693.
+    dead port 1/2 on $mux $procmux$2690.
+    dead port 1/2 on $mux $procmux$2687.
+    dead port 1/2 on $mux $procmux$2681.
+    dead port 1/2 on $mux $procmux$2678.
+    dead port 1/2 on $mux $procmux$2675.
+    dead port 1/2 on $mux $procmux$2672.
+    dead port 1/2 on $mux $procmux$2669.
+    dead port 1/2 on $mux $procmux$2666.
+    dead port 1/2 on $mux $procmux$2663.
+    dead port 1/2 on $mux $procmux$2660.
+    dead port 1/2 on $mux $procmux$2657.
+    dead port 1/2 on $mux $procmux$2654.
+    dead port 1/2 on $mux $procmux$2651.
+    dead port 1/2 on $mux $procmux$2648.
+    dead port 1/2 on $mux $procmux$2645.
+    dead port 1/2 on $mux $procmux$2642.
+    dead port 1/2 on $mux $procmux$2639.
+    dead port 1/2 on $mux $procmux$2636.
+    dead port 1/2 on $mux $procmux$2633.
+    dead port 1/2 on $mux $procmux$2630.
+    dead port 1/2 on $mux $procmux$2627.
+    dead port 1/2 on $mux $procmux$2624.
+    dead port 1/2 on $mux $procmux$2621.
+    dead port 1/2 on $mux $procmux$2618.
+    dead port 1/2 on $mux $procmux$2615.
+    dead port 1/2 on $mux $procmux$2612.
+    dead port 1/2 on $mux $procmux$2609.
+    dead port 1/2 on $mux $procmux$2606.
+    dead port 1/2 on $mux $procmux$2603.
+    dead port 1/2 on $mux $procmux$2600.
+    dead port 1/2 on $mux $procmux$2597.
+    dead port 1/2 on $mux $procmux$2591.
+    dead port 1/2 on $mux $procmux$2588.
+    dead port 1/2 on $mux $procmux$2585.
+    dead port 1/2 on $mux $procmux$2582.
+    dead port 1/2 on $mux $procmux$2579.
+    dead port 1/2 on $mux $procmux$2576.
+    dead port 1/2 on $mux $procmux$2573.
+    dead port 1/2 on $mux $procmux$2570.
+    dead port 1/2 on $mux $procmux$2567.
+    dead port 1/2 on $mux $procmux$2564.
+    dead port 1/2 on $mux $procmux$2561.
+    dead port 1/2 on $mux $procmux$2558.
+    dead port 1/2 on $mux $procmux$2555.
+    dead port 1/2 on $mux $procmux$2552.
+    dead port 1/2 on $mux $procmux$2549.
+    dead port 1/2 on $mux $procmux$2546.
+    dead port 1/2 on $mux $procmux$2543.
+    dead port 1/2 on $mux $procmux$2540.
+    dead port 1/2 on $mux $procmux$2537.
+    dead port 1/2 on $mux $procmux$2534.
+    dead port 1/2 on $mux $procmux$2531.
+    dead port 1/2 on $mux $procmux$2528.
+    dead port 1/2 on $mux $procmux$2525.
+    dead port 1/2 on $mux $procmux$2522.
+    dead port 1/2 on $mux $procmux$2519.
+    dead port 1/2 on $mux $procmux$2516.
+    dead port 1/2 on $mux $procmux$2513.
+    dead port 1/2 on $mux $procmux$2510.
+    dead port 1/2 on $mux $procmux$2507.
+    dead port 1/2 on $mux $procmux$2504.
+    dead port 1/2 on $mux $procmux$2498.
+    dead port 1/2 on $mux $procmux$2495.
+    dead port 1/2 on $mux $procmux$2492.
+    dead port 1/2 on $mux $procmux$2489.
+    dead port 1/2 on $mux $procmux$2486.
+    dead port 1/2 on $mux $procmux$2483.
+    dead port 1/2 on $mux $procmux$2480.
+    dead port 1/2 on $mux $procmux$2477.
+    dead port 1/2 on $mux $procmux$2474.
+    dead port 1/2 on $mux $procmux$2471.
+    dead port 1/2 on $mux $procmux$2468.
+    dead port 1/2 on $mux $procmux$2465.
+    dead port 1/2 on $mux $procmux$2462.
+    dead port 1/2 on $mux $procmux$2459.
+    dead port 1/2 on $mux $procmux$2456.
+    dead port 1/2 on $mux $procmux$2453.
+    dead port 1/2 on $mux $procmux$2450.
+    dead port 1/2 on $mux $procmux$2447.
+    dead port 1/2 on $mux $procmux$2444.
+    dead port 1/2 on $mux $procmux$2441.
+    dead port 1/2 on $mux $procmux$2438.
+    dead port 1/2 on $mux $procmux$2435.
+    dead port 1/2 on $mux $procmux$2432.
+    dead port 1/2 on $mux $procmux$2429.
+    dead port 1/2 on $mux $procmux$2426.
+    dead port 1/2 on $mux $procmux$2423.
+    dead port 1/2 on $mux $procmux$2420.
+    dead port 1/2 on $mux $procmux$2417.
+    dead port 1/2 on $mux $procmux$2414.
+    dead port 1/2 on $mux $procmux$2411.
+    dead port 1/2 on $mux $procmux$2408.
+    dead port 1/2 on $mux $procmux$2402.
+    dead port 1/2 on $mux $procmux$2399.
+    dead port 1/2 on $mux $procmux$2396.
+    dead port 1/2 on $mux $procmux$2393.
+    dead port 1/2 on $mux $procmux$2390.
+    dead port 1/2 on $mux $procmux$2387.
+    dead port 1/2 on $mux $procmux$2384.
+    dead port 1/2 on $mux $procmux$2381.
+    dead port 1/2 on $mux $procmux$2378.
+    dead port 1/2 on $mux $procmux$2375.
+    dead port 1/2 on $mux $procmux$2372.
+    dead port 1/2 on $mux $procmux$2369.
+    dead port 1/2 on $mux $procmux$2366.
+    dead port 1/2 on $mux $procmux$2363.
+    dead port 1/2 on $mux $procmux$2360.
+    dead port 1/2 on $mux $procmux$2357.
+    dead port 1/2 on $mux $procmux$2354.
+    dead port 1/2 on $mux $procmux$2351.
+    dead port 1/2 on $mux $procmux$2348.
+    dead port 1/2 on $mux $procmux$2345.
+    dead port 1/2 on $mux $procmux$2342.
+    dead port 1/2 on $mux $procmux$2339.
+    dead port 1/2 on $mux $procmux$2336.
+    dead port 1/2 on $mux $procmux$2333.
+    dead port 1/2 on $mux $procmux$2330.
+    dead port 1/2 on $mux $procmux$2327.
+    dead port 1/2 on $mux $procmux$2324.
+    dead port 1/2 on $mux $procmux$2321.
+    dead port 1/2 on $mux $procmux$2318.
+    dead port 1/2 on $mux $procmux$2315.
+    dead port 1/2 on $mux $procmux$2312.
+    dead port 1/2 on $mux $procmux$2309.
+    dead port 1/2 on $mux $procmux$2303.
+    dead port 1/2 on $mux $procmux$2300.
+    dead port 1/2 on $mux $procmux$2297.
+    dead port 1/2 on $mux $procmux$2294.
+    dead port 1/2 on $mux $procmux$2291.
+    dead port 1/2 on $mux $procmux$2288.
+    dead port 1/2 on $mux $procmux$2285.
+    dead port 1/2 on $mux $procmux$2282.
+    dead port 1/2 on $mux $procmux$2279.
+    dead port 1/2 on $mux $procmux$2276.
+    dead port 1/2 on $mux $procmux$2273.
+    dead port 1/2 on $mux $procmux$2270.
+    dead port 1/2 on $mux $procmux$2267.
+    dead port 1/2 on $mux $procmux$2264.
+    dead port 1/2 on $mux $procmux$2261.
+    dead port 1/2 on $mux $procmux$2258.
+    dead port 1/2 on $mux $procmux$2255.
+    dead port 1/2 on $mux $procmux$2252.
+    dead port 1/2 on $mux $procmux$2249.
+    dead port 1/2 on $mux $procmux$2246.
+    dead port 1/2 on $mux $procmux$2243.
+    dead port 1/2 on $mux $procmux$2240.
+    dead port 1/2 on $mux $procmux$2237.
+    dead port 1/2 on $mux $procmux$2234.
+    dead port 1/2 on $mux $procmux$2231.
+    dead port 1/2 on $mux $procmux$2228.
+    dead port 1/2 on $mux $procmux$2225.
+    dead port 1/2 on $mux $procmux$2222.
+    dead port 1/2 on $mux $procmux$2219.
+    dead port 1/2 on $mux $procmux$2216.
+    dead port 1/2 on $mux $procmux$2213.
+    dead port 1/2 on $mux $procmux$2210.
+    dead port 1/2 on $mux $procmux$2207.
+    dead port 1/2 on $mux $procmux$2201.
+    dead port 1/2 on $mux $procmux$2198.
+    dead port 1/2 on $mux $procmux$2195.
+    dead port 1/2 on $mux $procmux$2192.
+    dead port 1/2 on $mux $procmux$2189.
+    dead port 1/2 on $mux $procmux$2186.
+    dead port 1/2 on $mux $procmux$2183.
+    dead port 1/2 on $mux $procmux$2180.
+    dead port 1/2 on $mux $procmux$2177.
+    dead port 1/2 on $mux $procmux$2174.
+    dead port 1/2 on $mux $procmux$2171.
+    dead port 1/2 on $mux $procmux$2168.
+    dead port 1/2 on $mux $procmux$2165.
+    dead port 1/2 on $mux $procmux$2162.
+    dead port 1/2 on $mux $procmux$2159.
+    dead port 1/2 on $mux $procmux$2156.
+    dead port 1/2 on $mux $procmux$2153.
+    dead port 1/2 on $mux $procmux$2150.
+    dead port 1/2 on $mux $procmux$2147.
+    dead port 1/2 on $mux $procmux$2144.
+    dead port 1/2 on $mux $procmux$2141.
+    dead port 1/2 on $mux $procmux$2138.
+    dead port 1/2 on $mux $procmux$2135.
+    dead port 1/2 on $mux $procmux$2132.
+    dead port 1/2 on $mux $procmux$2129.
+    dead port 1/2 on $mux $procmux$2126.
+    dead port 1/2 on $mux $procmux$2123.
+    dead port 1/2 on $mux $procmux$2120.
+    dead port 1/2 on $mux $procmux$2117.
+    dead port 1/2 on $mux $procmux$2114.
+    dead port 1/2 on $mux $procmux$2111.
+    dead port 1/2 on $mux $procmux$2108.
+    dead port 1/2 on $mux $procmux$2105.
+    dead port 1/2 on $mux $procmux$2102.
+    dead port 1/2 on $mux $procmux$2096.
+    dead port 1/2 on $mux $procmux$2093.
+    dead port 1/2 on $mux $procmux$2090.
+    dead port 1/2 on $mux $procmux$2087.
+    dead port 1/2 on $mux $procmux$2084.
+    dead port 1/2 on $mux $procmux$2081.
+    dead port 1/2 on $mux $procmux$2078.
+    dead port 1/2 on $mux $procmux$2075.
+    dead port 1/2 on $mux $procmux$2072.
+    dead port 1/2 on $mux $procmux$2069.
+    dead port 1/2 on $mux $procmux$2066.
+    dead port 1/2 on $mux $procmux$2063.
+    dead port 1/2 on $mux $procmux$2060.
+    dead port 1/2 on $mux $procmux$2057.
+    dead port 1/2 on $mux $procmux$2054.
+    dead port 1/2 on $mux $procmux$2051.
+    dead port 1/2 on $mux $procmux$2048.
+    dead port 1/2 on $mux $procmux$2045.
+    dead port 1/2 on $mux $procmux$2042.
+    dead port 1/2 on $mux $procmux$2039.
+    dead port 1/2 on $mux $procmux$2036.
+    dead port 1/2 on $mux $procmux$2033.
+    dead port 1/2 on $mux $procmux$2030.
+    dead port 1/2 on $mux $procmux$2027.
+    dead port 1/2 on $mux $procmux$2024.
+    dead port 1/2 on $mux $procmux$2021.
+    dead port 1/2 on $mux $procmux$2018.
+    dead port 1/2 on $mux $procmux$2015.
+    dead port 1/2 on $mux $procmux$2012.
+    dead port 1/2 on $mux $procmux$2009.
+    dead port 1/2 on $mux $procmux$2006.
+    dead port 1/2 on $mux $procmux$2003.
+    dead port 1/2 on $mux $procmux$2000.
+    dead port 1/2 on $mux $procmux$1997.
+    dead port 1/2 on $mux $procmux$1994.
+    dead port 1/2 on $mux $procmux$1988.
+    dead port 1/2 on $mux $procmux$1985.
+    dead port 1/2 on $mux $procmux$1982.
+    dead port 1/2 on $mux $procmux$1979.
+    dead port 1/2 on $mux $procmux$1976.
+    dead port 1/2 on $mux $procmux$1973.
+    dead port 1/2 on $mux $procmux$1970.
+    dead port 1/2 on $mux $procmux$1967.
+    dead port 1/2 on $mux $procmux$1964.
+    dead port 1/2 on $mux $procmux$1961.
+    dead port 1/2 on $mux $procmux$1958.
+    dead port 1/2 on $mux $procmux$1955.
+    dead port 1/2 on $mux $procmux$1952.
+    dead port 1/2 on $mux $procmux$1949.
+    dead port 1/2 on $mux $procmux$1946.
+    dead port 1/2 on $mux $procmux$1943.
+    dead port 1/2 on $mux $procmux$1940.
+    dead port 1/2 on $mux $procmux$1937.
+    dead port 1/2 on $mux $procmux$1934.
+    dead port 1/2 on $mux $procmux$1931.
+    dead port 1/2 on $mux $procmux$1928.
+    dead port 1/2 on $mux $procmux$1925.
+    dead port 1/2 on $mux $procmux$1922.
+    dead port 1/2 on $mux $procmux$1919.
+    dead port 1/2 on $mux $procmux$1916.
+    dead port 1/2 on $mux $procmux$1913.
+    dead port 1/2 on $mux $procmux$1910.
+    dead port 1/2 on $mux $procmux$1907.
+    dead port 1/2 on $mux $procmux$1904.
+    dead port 1/2 on $mux $procmux$1901.
+    dead port 1/2 on $mux $procmux$1898.
+    dead port 1/2 on $mux $procmux$1895.
+    dead port 1/2 on $mux $procmux$1892.
+    dead port 1/2 on $mux $procmux$1889.
+    dead port 1/2 on $mux $procmux$1886.
+    dead port 1/2 on $mux $procmux$1883.
+    dead port 1/2 on $mux $procmux$1877.
+    dead port 1/2 on $mux $procmux$1874.
+    dead port 1/2 on $mux $procmux$1871.
+    dead port 1/2 on $mux $procmux$1868.
+    dead port 1/2 on $mux $procmux$1865.
+    dead port 1/2 on $mux $procmux$1862.
+    dead port 1/2 on $mux $procmux$1859.
+    dead port 1/2 on $mux $procmux$1856.
+    dead port 1/2 on $mux $procmux$1853.
+    dead port 1/2 on $mux $procmux$1850.
+    dead port 1/2 on $mux $procmux$1847.
+    dead port 1/2 on $mux $procmux$1844.
+    dead port 1/2 on $mux $procmux$1841.
+    dead port 1/2 on $mux $procmux$1838.
+    dead port 1/2 on $mux $procmux$1835.
+    dead port 1/2 on $mux $procmux$1832.
+    dead port 1/2 on $mux $procmux$1829.
+    dead port 1/2 on $mux $procmux$1826.
+    dead port 1/2 on $mux $procmux$1823.
+    dead port 1/2 on $mux $procmux$1820.
+    dead port 1/2 on $mux $procmux$1817.
+    dead port 1/2 on $mux $procmux$1814.
+    dead port 1/2 on $mux $procmux$1811.
+    dead port 1/2 on $mux $procmux$1808.
+    dead port 1/2 on $mux $procmux$1805.
+    dead port 1/2 on $mux $procmux$1802.
+    dead port 1/2 on $mux $procmux$1799.
+    dead port 1/2 on $mux $procmux$1796.
+    dead port 1/2 on $mux $procmux$1793.
+    dead port 1/2 on $mux $procmux$1790.
+    dead port 1/2 on $mux $procmux$1787.
+    dead port 1/2 on $mux $procmux$1784.
+    dead port 1/2 on $mux $procmux$1781.
+    dead port 1/2 on $mux $procmux$1778.
+    dead port 1/2 on $mux $procmux$1775.
+    dead port 1/2 on $mux $procmux$1772.
+    dead port 1/2 on $mux $procmux$1769.
+    dead port 1/2 on $mux $procmux$1763.
+    dead port 1/2 on $mux $procmux$1760.
+    dead port 1/2 on $mux $procmux$1757.
+    dead port 1/2 on $mux $procmux$1754.
+    dead port 1/2 on $mux $procmux$1751.
+    dead port 1/2 on $mux $procmux$1748.
+    dead port 1/2 on $mux $procmux$1745.
+    dead port 1/2 on $mux $procmux$1742.
+    dead port 1/2 on $mux $procmux$1739.
+    dead port 1/2 on $mux $procmux$1736.
+    dead port 1/2 on $mux $procmux$1733.
+    dead port 1/2 on $mux $procmux$1730.
+    dead port 1/2 on $mux $procmux$1727.
+    dead port 1/2 on $mux $procmux$1724.
+    dead port 1/2 on $mux $procmux$1721.
+    dead port 1/2 on $mux $procmux$1718.
+    dead port 1/2 on $mux $procmux$1715.
+    dead port 1/2 on $mux $procmux$1712.
+    dead port 1/2 on $mux $procmux$1709.
+    dead port 1/2 on $mux $procmux$1706.
+    dead port 1/2 on $mux $procmux$1703.
+    dead port 1/2 on $mux $procmux$1700.
+    dead port 1/2 on $mux $procmux$1697.
+    dead port 1/2 on $mux $procmux$1694.
+    dead port 1/2 on $mux $procmux$1691.
+    dead port 1/2 on $mux $procmux$1688.
+    dead port 1/2 on $mux $procmux$1685.
+    dead port 1/2 on $mux $procmux$1682.
+    dead port 1/2 on $mux $procmux$1679.
+    dead port 1/2 on $mux $procmux$1676.
+    dead port 1/2 on $mux $procmux$1673.
+    dead port 1/2 on $mux $procmux$1670.
+    dead port 1/2 on $mux $procmux$1667.
+    dead port 1/2 on $mux $procmux$1664.
+    dead port 1/2 on $mux $procmux$1661.
+    dead port 1/2 on $mux $procmux$1658.
+    dead port 1/2 on $mux $procmux$1655.
+    dead port 1/2 on $mux $procmux$1652.
+    dead port 1/2 on $mux $procmux$1646.
+    dead port 1/2 on $mux $procmux$1643.
+    dead port 1/2 on $mux $procmux$1640.
+    dead port 1/2 on $mux $procmux$1637.
+    dead port 1/2 on $mux $procmux$1634.
+    dead port 1/2 on $mux $procmux$1631.
+    dead port 1/2 on $mux $procmux$1628.
+    dead port 1/2 on $mux $procmux$1625.
+    dead port 1/2 on $mux $procmux$1622.
+    dead port 1/2 on $mux $procmux$1619.
+    dead port 1/2 on $mux $procmux$1616.
+    dead port 1/2 on $mux $procmux$1613.
+    dead port 1/2 on $mux $procmux$1610.
+    dead port 1/2 on $mux $procmux$1607.
+    dead port 1/2 on $mux $procmux$1604.
+    dead port 1/2 on $mux $procmux$1601.
+    dead port 1/2 on $mux $procmux$1598.
+    dead port 1/2 on $mux $procmux$1595.
+    dead port 1/2 on $mux $procmux$1592.
+    dead port 1/2 on $mux $procmux$1589.
+    dead port 1/2 on $mux $procmux$1586.
+    dead port 1/2 on $mux $procmux$1583.
+    dead port 1/2 on $mux $procmux$1580.
+    dead port 1/2 on $mux $procmux$1577.
+    dead port 1/2 on $mux $procmux$1574.
+    dead port 1/2 on $mux $procmux$1571.
+    dead port 1/2 on $mux $procmux$1568.
+    dead port 1/2 on $mux $procmux$1565.
+    dead port 1/2 on $mux $procmux$1562.
+    dead port 1/2 on $mux $procmux$1559.
+    dead port 1/2 on $mux $procmux$1556.
+    dead port 1/2 on $mux $procmux$1553.
+    dead port 1/2 on $mux $procmux$1550.
+    dead port 1/2 on $mux $procmux$1547.
+    dead port 1/2 on $mux $procmux$1544.
+    dead port 1/2 on $mux $procmux$1541.
+    dead port 1/2 on $mux $procmux$1538.
+    dead port 1/2 on $mux $procmux$1535.
+    dead port 1/2 on $mux $procmux$1532.
+    dead port 1/2 on $mux $procmux$1526.
+    dead port 1/2 on $mux $procmux$1523.
+    dead port 1/2 on $mux $procmux$1520.
+    dead port 1/2 on $mux $procmux$1517.
+    dead port 1/2 on $mux $procmux$1514.
+    dead port 1/2 on $mux $procmux$1511.
+    dead port 1/2 on $mux $procmux$1508.
+    dead port 1/2 on $mux $procmux$1505.
+    dead port 1/2 on $mux $procmux$1502.
+    dead port 1/2 on $mux $procmux$1499.
+    dead port 1/2 on $mux $procmux$1496.
+    dead port 1/2 on $mux $procmux$1493.
+    dead port 1/2 on $mux $procmux$1490.
+    dead port 1/2 on $mux $procmux$1487.
+    dead port 1/2 on $mux $procmux$1484.
+    dead port 1/2 on $mux $procmux$1481.
+    dead port 1/2 on $mux $procmux$1478.
+    dead port 1/2 on $mux $procmux$1475.
+    dead port 1/2 on $mux $procmux$1472.
+    dead port 1/2 on $mux $procmux$1469.
+    dead port 1/2 on $mux $procmux$1466.
+    dead port 1/2 on $mux $procmux$1463.
+    dead port 1/2 on $mux $procmux$1460.
+    dead port 1/2 on $mux $procmux$1457.
+    dead port 1/2 on $mux $procmux$1454.
+    dead port 1/2 on $mux $procmux$1451.
+    dead port 1/2 on $mux $procmux$1448.
+    dead port 1/2 on $mux $procmux$1445.
+    dead port 1/2 on $mux $procmux$1442.
+    dead port 1/2 on $mux $procmux$1439.
+    dead port 1/2 on $mux $procmux$1436.
+    dead port 1/2 on $mux $procmux$1433.
+    dead port 1/2 on $mux $procmux$1430.
+    dead port 1/2 on $mux $procmux$1427.
+    dead port 1/2 on $mux $procmux$1424.
+    dead port 1/2 on $mux $procmux$1421.
+    dead port 1/2 on $mux $procmux$1418.
+    dead port 1/2 on $mux $procmux$1415.
+    dead port 1/2 on $mux $procmux$1412.
+    dead port 1/2 on $mux $procmux$1409.
+    dead port 1/2 on $mux $procmux$1403.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 1/2 on $mux $procmux$1382.
+    dead port 1/2 on $mux $procmux$1379.
+    dead port 1/2 on $mux $procmux$1376.
+    dead port 1/2 on $mux $procmux$1373.
+    dead port 1/2 on $mux $procmux$1370.
+    dead port 1/2 on $mux $procmux$1367.
+    dead port 1/2 on $mux $procmux$1364.
+    dead port 1/2 on $mux $procmux$1361.
+    dead port 1/2 on $mux $procmux$1358.
+    dead port 1/2 on $mux $procmux$1355.
+    dead port 1/2 on $mux $procmux$1352.
+    dead port 1/2 on $mux $procmux$1349.
+    dead port 1/2 on $mux $procmux$1346.
+    dead port 1/2 on $mux $procmux$1343.
+    dead port 1/2 on $mux $procmux$1340.
+    dead port 1/2 on $mux $procmux$1337.
+    dead port 1/2 on $mux $procmux$1334.
+    dead port 1/2 on $mux $procmux$1331.
+    dead port 1/2 on $mux $procmux$1328.
+    dead port 1/2 on $mux $procmux$1325.
+    dead port 1/2 on $mux $procmux$1322.
+    dead port 1/2 on $mux $procmux$1319.
+    dead port 1/2 on $mux $procmux$1316.
+    dead port 1/2 on $mux $procmux$1313.
+    dead port 1/2 on $mux $procmux$1310.
+    dead port 1/2 on $mux $procmux$1307.
+    dead port 1/2 on $mux $procmux$1304.
+    dead port 1/2 on $mux $procmux$1301.
+    dead port 1/2 on $mux $procmux$1298.
+    dead port 1/2 on $mux $procmux$1295.
+    dead port 1/2 on $mux $procmux$1292.
+    dead port 1/2 on $mux $procmux$1289.
+    dead port 1/2 on $mux $procmux$1286.
+    dead port 1/2 on $mux $procmux$1283.
+    dead port 1/2 on $mux $procmux$1277.
+    dead port 1/2 on $mux $procmux$1274.
+    dead port 1/2 on $mux $procmux$1271.
+    dead port 1/2 on $mux $procmux$1268.
+    dead port 1/2 on $mux $procmux$1265.
+    dead port 1/2 on $mux $procmux$1262.
+    dead port 1/2 on $mux $procmux$1259.
+    dead port 1/2 on $mux $procmux$1256.
+    dead port 1/2 on $mux $procmux$1253.
+    dead port 1/2 on $mux $procmux$1250.
+    dead port 1/2 on $mux $procmux$1247.
+    dead port 1/2 on $mux $procmux$1244.
+    dead port 1/2 on $mux $procmux$1241.
+    dead port 1/2 on $mux $procmux$1238.
+    dead port 1/2 on $mux $procmux$1235.
+    dead port 1/2 on $mux $procmux$1232.
+    dead port 1/2 on $mux $procmux$1229.
+    dead port 1/2 on $mux $procmux$1226.
+    dead port 1/2 on $mux $procmux$1223.
+    dead port 1/2 on $mux $procmux$1220.
+    dead port 1/2 on $mux $procmux$1217.
+    dead port 1/2 on $mux $procmux$1214.
+    dead port 1/2 on $mux $procmux$1211.
+    dead port 1/2 on $mux $procmux$1208.
+    dead port 1/2 on $mux $procmux$1205.
+    dead port 1/2 on $mux $procmux$1202.
+    dead port 1/2 on $mux $procmux$1199.
+    dead port 1/2 on $mux $procmux$1196.
+    dead port 1/2 on $mux $procmux$1193.
+    dead port 1/2 on $mux $procmux$1190.
+    dead port 1/2 on $mux $procmux$1187.
+    dead port 1/2 on $mux $procmux$1184.
+    dead port 1/2 on $mux $procmux$1181.
+    dead port 1/2 on $mux $procmux$1178.
+    dead port 1/2 on $mux $procmux$1175.
+    dead port 1/2 on $mux $procmux$1172.
+    dead port 1/2 on $mux $procmux$1169.
+    dead port 1/2 on $mux $procmux$1166.
+    dead port 1/2 on $mux $procmux$1163.
+    dead port 1/2 on $mux $procmux$1160.
+    dead port 1/2 on $mux $procmux$1157.
+    dead port 1/2 on $mux $procmux$1154.
+    dead port 1/2 on $mux $procmux$1148.
+    dead port 1/2 on $mux $procmux$1145.
+    dead port 1/2 on $mux $procmux$1142.
+    dead port 1/2 on $mux $procmux$1139.
+    dead port 1/2 on $mux $procmux$1136.
+    dead port 1/2 on $mux $procmux$1133.
+    dead port 1/2 on $mux $procmux$1130.
+    dead port 1/2 on $mux $procmux$1127.
+    dead port 1/2 on $mux $procmux$1124.
+    dead port 1/2 on $mux $procmux$1121.
+    dead port 1/2 on $mux $procmux$1118.
+    dead port 1/2 on $mux $procmux$1115.
+    dead port 1/2 on $mux $procmux$1112.
+    dead port 1/2 on $mux $procmux$1109.
+    dead port 1/2 on $mux $procmux$1106.
+    dead port 1/2 on $mux $procmux$1103.
+    dead port 1/2 on $mux $procmux$1100.
+    dead port 1/2 on $mux $procmux$1097.
+    dead port 1/2 on $mux $procmux$1094.
+    dead port 1/2 on $mux $procmux$1091.
+    dead port 1/2 on $mux $procmux$1088.
+    dead port 1/2 on $mux $procmux$1085.
+    dead port 1/2 on $mux $procmux$1082.
+    dead port 1/2 on $mux $procmux$1079.
+    dead port 1/2 on $mux $procmux$1076.
+    dead port 1/2 on $mux $procmux$1073.
+    dead port 1/2 on $mux $procmux$1070.
+    dead port 1/2 on $mux $procmux$1067.
+    dead port 1/2 on $mux $procmux$1064.
+    dead port 1/2 on $mux $procmux$1061.
+    dead port 1/2 on $mux $procmux$1058.
+    dead port 1/2 on $mux $procmux$1055.
+    dead port 1/2 on $mux $procmux$1052.
+    dead port 1/2 on $mux $procmux$1049.
+    dead port 1/2 on $mux $procmux$1046.
+    dead port 1/2 on $mux $procmux$1043.
+    dead port 1/2 on $mux $procmux$1040.
+    dead port 1/2 on $mux $procmux$1037.
+    dead port 1/2 on $mux $procmux$1034.
+    dead port 1/2 on $mux $procmux$1031.
+    dead port 1/2 on $mux $procmux$1028.
+    dead port 1/2 on $mux $procmux$1025.
+    dead port 1/2 on $mux $procmux$1022.
+    dead port 1/2 on $mux $procmux$1016.
+    dead port 1/2 on $mux $procmux$1013.
+    dead port 1/2 on $mux $procmux$1010.
+    dead port 1/2 on $mux $procmux$1007.
+    dead port 1/2 on $mux $procmux$1004.
+    dead port 1/2 on $mux $procmux$1001.
+    dead port 1/2 on $mux $procmux$998.
+    dead port 1/2 on $mux $procmux$995.
+    dead port 1/2 on $mux $procmux$992.
+    dead port 1/2 on $mux $procmux$989.
+    dead port 1/2 on $mux $procmux$986.
+    dead port 1/2 on $mux $procmux$983.
+    dead port 1/2 on $mux $procmux$980.
+    dead port 1/2 on $mux $procmux$977.
+    dead port 1/2 on $mux $procmux$974.
+    dead port 1/2 on $mux $procmux$971.
+    dead port 1/2 on $mux $procmux$968.
+    dead port 1/2 on $mux $procmux$965.
+    dead port 1/2 on $mux $procmux$962.
+    dead port 1/2 on $mux $procmux$959.
+    dead port 1/2 on $mux $procmux$956.
+    dead port 1/2 on $mux $procmux$953.
+    dead port 1/2 on $mux $procmux$950.
+    dead port 1/2 on $mux $procmux$947.
+    dead port 1/2 on $mux $procmux$944.
+    dead port 1/2 on $mux $procmux$941.
+    dead port 1/2 on $mux $procmux$938.
+    dead port 1/2 on $mux $procmux$935.
+    dead port 1/2 on $mux $procmux$932.
+    dead port 1/2 on $mux $procmux$929.
+    dead port 1/2 on $mux $procmux$926.
+    dead port 1/2 on $mux $procmux$923.
+    dead port 1/2 on $mux $procmux$920.
+    dead port 1/2 on $mux $procmux$917.
+    dead port 1/2 on $mux $procmux$914.
+    dead port 1/2 on $mux $procmux$911.
+    dead port 1/2 on $mux $procmux$908.
+    dead port 1/2 on $mux $procmux$905.
+    dead port 1/2 on $mux $procmux$902.
+    dead port 1/2 on $mux $procmux$899.
+    dead port 1/2 on $mux $procmux$896.
+    dead port 1/2 on $mux $procmux$893.
+    dead port 1/2 on $mux $procmux$890.
+    dead port 1/2 on $mux $procmux$887.
+    dead port 1/2 on $mux $procmux$881.
+    dead port 1/2 on $mux $procmux$878.
+    dead port 1/2 on $mux $procmux$875.
+    dead port 1/2 on $mux $procmux$872.
+    dead port 1/2 on $mux $procmux$869.
+    dead port 1/2 on $mux $procmux$866.
+    dead port 1/2 on $mux $procmux$863.
+    dead port 1/2 on $mux $procmux$860.
+    dead port 1/2 on $mux $procmux$857.
+    dead port 1/2 on $mux $procmux$854.
+    dead port 1/2 on $mux $procmux$851.
+    dead port 1/2 on $mux $procmux$848.
+    dead port 1/2 on $mux $procmux$845.
+    dead port 1/2 on $mux $procmux$842.
+    dead port 1/2 on $mux $procmux$839.
+    dead port 1/2 on $mux $procmux$836.
+    dead port 1/2 on $mux $procmux$833.
+    dead port 1/2 on $mux $procmux$830.
+    dead port 1/2 on $mux $procmux$827.
+    dead port 1/2 on $mux $procmux$824.
+    dead port 1/2 on $mux $procmux$821.
+    dead port 1/2 on $mux $procmux$818.
+    dead port 1/2 on $mux $procmux$815.
+    dead port 1/2 on $mux $procmux$812.
+    dead port 1/2 on $mux $procmux$809.
+    dead port 1/2 on $mux $procmux$806.
+    dead port 1/2 on $mux $procmux$803.
+    dead port 1/2 on $mux $procmux$800.
+    dead port 1/2 on $mux $procmux$797.
+    dead port 1/2 on $mux $procmux$794.
+    dead port 1/2 on $mux $procmux$791.
+    dead port 1/2 on $mux $procmux$788.
+    dead port 1/2 on $mux $procmux$785.
+    dead port 1/2 on $mux $procmux$782.
+    dead port 1/2 on $mux $procmux$779.
+    dead port 1/2 on $mux $procmux$776.
+    dead port 1/2 on $mux $procmux$773.
+    dead port 1/2 on $mux $procmux$770.
+    dead port 1/2 on $mux $procmux$767.
+    dead port 1/2 on $mux $procmux$764.
+    dead port 1/2 on $mux $procmux$761.
+    dead port 1/2 on $mux $procmux$758.
+    dead port 1/2 on $mux $procmux$755.
+    dead port 1/2 on $mux $procmux$752.
+    dead port 1/2 on $mux $procmux$749.
+    dead port 1/2 on $mux $procmux$743.
+    dead port 1/2 on $mux $procmux$740.
+    dead port 1/2 on $mux $procmux$737.
+    dead port 1/2 on $mux $procmux$734.
+    dead port 1/2 on $mux $procmux$731.
+    dead port 1/2 on $mux $procmux$728.
+    dead port 1/2 on $mux $procmux$725.
+    dead port 1/2 on $mux $procmux$722.
+    dead port 1/2 on $mux $procmux$719.
+    dead port 1/2 on $mux $procmux$716.
+    dead port 1/2 on $mux $procmux$713.
+    dead port 1/2 on $mux $procmux$710.
+    dead port 1/2 on $mux $procmux$707.
+    dead port 1/2 on $mux $procmux$704.
+    dead port 1/2 on $mux $procmux$701.
+    dead port 1/2 on $mux $procmux$698.
+    dead port 1/2 on $mux $procmux$695.
+    dead port 1/2 on $mux $procmux$692.
+    dead port 1/2 on $mux $procmux$689.
+    dead port 1/2 on $mux $procmux$686.
+    dead port 1/2 on $mux $procmux$683.
+    dead port 1/2 on $mux $procmux$680.
+    dead port 1/2 on $mux $procmux$677.
+    dead port 1/2 on $mux $procmux$674.
+    dead port 1/2 on $mux $procmux$671.
+    dead port 1/2 on $mux $procmux$668.
+    dead port 1/2 on $mux $procmux$665.
+    dead port 1/2 on $mux $procmux$662.
+    dead port 1/2 on $mux $procmux$659.
+    dead port 1/2 on $mux $procmux$656.
+    dead port 1/2 on $mux $procmux$653.
+    dead port 1/2 on $mux $procmux$650.
+    dead port 1/2 on $mux $procmux$647.
+    dead port 1/2 on $mux $procmux$644.
+    dead port 1/2 on $mux $procmux$641.
+    dead port 1/2 on $mux $procmux$638.
+    dead port 1/2 on $mux $procmux$635.
+    dead port 1/2 on $mux $procmux$632.
+    dead port 1/2 on $mux $procmux$629.
+    dead port 1/2 on $mux $procmux$626.
+    dead port 1/2 on $mux $procmux$623.
+    dead port 1/2 on $mux $procmux$620.
+    dead port 1/2 on $mux $procmux$617.
+    dead port 1/2 on $mux $procmux$614.
+    dead port 1/2 on $mux $procmux$611.
+    dead port 1/2 on $mux $procmux$608.
+    dead port 1/2 on $mux $procmux$602.
+    dead port 1/2 on $mux $procmux$599.
+    dead port 1/2 on $mux $procmux$596.
+    dead port 1/2 on $mux $procmux$593.
+    dead port 1/2 on $mux $procmux$590.
+    dead port 1/2 on $mux $procmux$587.
+    dead port 1/2 on $mux $procmux$584.
+    dead port 1/2 on $mux $procmux$581.
+    dead port 1/2 on $mux $procmux$578.
+    dead port 1/2 on $mux $procmux$575.
+    dead port 1/2 on $mux $procmux$572.
+    dead port 1/2 on $mux $procmux$569.
+    dead port 1/2 on $mux $procmux$566.
+    dead port 1/2 on $mux $procmux$563.
+    dead port 1/2 on $mux $procmux$560.
+    dead port 1/2 on $mux $procmux$557.
+    dead port 1/2 on $mux $procmux$554.
+    dead port 1/2 on $mux $procmux$551.
+    dead port 1/2 on $mux $procmux$548.
+    dead port 1/2 on $mux $procmux$545.
+    dead port 1/2 on $mux $procmux$542.
+    dead port 1/2 on $mux $procmux$539.
+    dead port 1/2 on $mux $procmux$536.
+    dead port 1/2 on $mux $procmux$533.
+    dead port 1/2 on $mux $procmux$530.
+    dead port 1/2 on $mux $procmux$527.
+    dead port 1/2 on $mux $procmux$524.
+    dead port 1/2 on $mux $procmux$521.
+    dead port 1/2 on $mux $procmux$518.
+    dead port 1/2 on $mux $procmux$515.
+    dead port 1/2 on $mux $procmux$512.
+    dead port 1/2 on $mux $procmux$509.
+    dead port 1/2 on $mux $procmux$506.
+    dead port 1/2 on $mux $procmux$503.
+    dead port 1/2 on $mux $procmux$500.
+    dead port 1/2 on $mux $procmux$497.
+    dead port 1/2 on $mux $procmux$494.
+    dead port 1/2 on $mux $procmux$491.
+    dead port 1/2 on $mux $procmux$488.
+    dead port 1/2 on $mux $procmux$485.
+    dead port 1/2 on $mux $procmux$482.
+    dead port 1/2 on $mux $procmux$479.
+    dead port 1/2 on $mux $procmux$476.
+    dead port 1/2 on $mux $procmux$473.
+    dead port 1/2 on $mux $procmux$470.
+    dead port 1/2 on $mux $procmux$467.
+    dead port 1/2 on $mux $procmux$464.
+    dead port 1/2 on $mux $procmux$458.
+    dead port 1/2 on $mux $procmux$455.
+    dead port 1/2 on $mux $procmux$452.
+    dead port 1/2 on $mux $procmux$449.
+    dead port 1/2 on $mux $procmux$446.
+    dead port 1/2 on $mux $procmux$443.
+    dead port 1/2 on $mux $procmux$440.
+    dead port 1/2 on $mux $procmux$437.
+    dead port 1/2 on $mux $procmux$434.
+    dead port 1/2 on $mux $procmux$431.
+    dead port 1/2 on $mux $procmux$428.
+    dead port 1/2 on $mux $procmux$425.
+    dead port 1/2 on $mux $procmux$422.
+    dead port 1/2 on $mux $procmux$419.
+    dead port 1/2 on $mux $procmux$416.
+    dead port 1/2 on $mux $procmux$413.
+    dead port 1/2 on $mux $procmux$410.
+    dead port 1/2 on $mux $procmux$407.
+    dead port 1/2 on $mux $procmux$404.
+    dead port 1/2 on $mux $procmux$401.
+    dead port 1/2 on $mux $procmux$398.
+    dead port 1/2 on $mux $procmux$395.
+    dead port 1/2 on $mux $procmux$392.
+    dead port 1/2 on $mux $procmux$389.
+    dead port 1/2 on $mux $procmux$386.
+    dead port 1/2 on $mux $procmux$383.
+    dead port 1/2 on $mux $procmux$380.
+    dead port 1/2 on $mux $procmux$377.
+    dead port 1/2 on $mux $procmux$374.
+    dead port 1/2 on $mux $procmux$371.
+    dead port 1/2 on $mux $procmux$368.
+    dead port 1/2 on $mux $procmux$365.
+    dead port 1/2 on $mux $procmux$362.
+    dead port 1/2 on $mux $procmux$359.
+    dead port 1/2 on $mux $procmux$356.
+    dead port 1/2 on $mux $procmux$353.
+    dead port 1/2 on $mux $procmux$350.
+    dead port 1/2 on $mux $procmux$347.
+    dead port 1/2 on $mux $procmux$344.
+    dead port 1/2 on $mux $procmux$341.
+    dead port 1/2 on $mux $procmux$338.
+    dead port 1/2 on $mux $procmux$335.
+    dead port 1/2 on $mux $procmux$332.
+    dead port 1/2 on $mux $procmux$329.
+    dead port 1/2 on $mux $procmux$326.
+    dead port 1/2 on $mux $procmux$323.
+    dead port 1/2 on $mux $procmux$320.
+    dead port 1/2 on $mux $procmux$317.
+    dead port 1/2 on $mux $procmux$311.
+    dead port 1/2 on $mux $procmux$308.
+    dead port 1/2 on $mux $procmux$305.
+    dead port 1/2 on $mux $procmux$302.
+    dead port 1/2 on $mux $procmux$299.
+    dead port 1/2 on $mux $procmux$296.
+    dead port 1/2 on $mux $procmux$293.
+    dead port 1/2 on $mux $procmux$290.
+    dead port 1/2 on $mux $procmux$287.
+    dead port 1/2 on $mux $procmux$284.
+    dead port 1/2 on $mux $procmux$281.
+    dead port 1/2 on $mux $procmux$278.
+    dead port 1/2 on $mux $procmux$275.
+    dead port 1/2 on $mux $procmux$272.
+    dead port 1/2 on $mux $procmux$269.
+    dead port 1/2 on $mux $procmux$266.
+    dead port 1/2 on $mux $procmux$263.
+    dead port 1/2 on $mux $procmux$260.
+    dead port 1/2 on $mux $procmux$257.
+    dead port 1/2 on $mux $procmux$254.
+    dead port 1/2 on $mux $procmux$251.
+    dead port 1/2 on $mux $procmux$248.
+    dead port 1/2 on $mux $procmux$245.
+    dead port 1/2 on $mux $procmux$242.
+    dead port 1/2 on $mux $procmux$239.
+    dead port 1/2 on $mux $procmux$236.
+    dead port 1/2 on $mux $procmux$233.
+    dead port 1/2 on $mux $procmux$230.
+    dead port 1/2 on $mux $procmux$227.
+    dead port 1/2 on $mux $procmux$224.
+    dead port 1/2 on $mux $procmux$221.
+    dead port 1/2 on $mux $procmux$218.
+    dead port 1/2 on $mux $procmux$215.
+    dead port 1/2 on $mux $procmux$212.
+    dead port 1/2 on $mux $procmux$209.
+    dead port 1/2 on $mux $procmux$206.
+    dead port 1/2 on $mux $procmux$203.
+    dead port 1/2 on $mux $procmux$200.
+    dead port 1/2 on $mux $procmux$197.
+    dead port 1/2 on $mux $procmux$194.
+    dead port 1/2 on $mux $procmux$191.
+    dead port 1/2 on $mux $procmux$188.
+    dead port 1/2 on $mux $procmux$185.
+    dead port 1/2 on $mux $procmux$182.
+    dead port 1/2 on $mux $procmux$179.
+    dead port 1/2 on $mux $procmux$176.
+    dead port 1/2 on $mux $procmux$173.
+    dead port 1/2 on $mux $procmux$170.
+    dead port 1/2 on $mux $procmux$167.
+Removed 1225 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 122 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+Removed 0 unused cells and 2587 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 122 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$160'[0] in module `\ex250_semantic_fp4_dot2_prodtable_qrange': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$156'[0] in module `\ex250_semantic_fp4_dot2_prodtable_qrange': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$160'[0] in module `\ex250_semantic_fp4_dot2_prodtable_qrange': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$156'[0] in module `\ex250_semantic_fp4_dot2_prodtable_qrange': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$160 in module \ex250_semantic_fp4_dot2_prodtable_qrange:
+  created 256 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$156 in module \ex250_semantic_fp4_dot2_prodtable_qrange:
+  created 256 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 568 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 568 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 416 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 360 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 332 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 236 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+Removed 0 unused cells and 808 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 332 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=11:B_WIDTH=11:A_WIDTH=11:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=11:B_WIDTH=11:A_WIDTH=11:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=11:B_WIDTH=11:A_WIDTH=11:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=11:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=11:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=11:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$neg:Y_WIDTH=11:A_WIDTH=11:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$neg:Y_WIDTH=11:A_WIDTH=11:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$neg:Y_WIDTH=11:A_WIDTH=11:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $xor.
+Running "alumacc" on wrapper $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=10:A_WIDTH=10:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=10:A_WIDTH=10:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=10:A_WIDTH=10:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$c6cac7b66cb5130862ba6df599147e943f2b57cd\_90_alu for cells of type $alu.
+Using template $paramod$b88c814db3182f0c444e9827cc183ec51bbd865d\_90_alu for cells of type $alu.
+Using template $paramod$92a756966432b34ce84eafab06f04f8fcb0d72b0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 4250 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 3327 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 2714 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 2297 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 2052 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1924 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1897 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1892 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1889 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 2361 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1889 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+Removed 691 unused cells and 4412 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1171 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1169 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1168 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 3 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+Removed 0 unused cells and 15 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1168 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex250_semantic_fp4_dot2_prodtable_qrange' to `<abc-temp-dir>/input.blif'..
+
+12.1.1. Executed ABC.
+Extracted 1168 gates and 1186 wires to a netlist network with 16 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      751
+ABC RESULTS:               NOT cells:      591
+ABC RESULTS:        internal signals:     1162
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1342 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1342 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+Removed 0 unused cells and 617 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1342 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex250_semantic_fp4_dot2_prodtable_qrange: replaced 0 cells with 0 new cells, skipped 1342 cells.
+  not replaced 2 cell types:
+     751 $_AND_
+     591 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1342 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_prodtable_qrange..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_prodtable_qrange.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Computing hashes of 1342 cells of `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_prodtable_qrange'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_prodtable_qrange..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_prodtable_qrange.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+ERROR: Can't open output file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/aigs/ex250_semantic_fp4_dot2_prodtable_qrange_default.aig' for writing: No such file or directory

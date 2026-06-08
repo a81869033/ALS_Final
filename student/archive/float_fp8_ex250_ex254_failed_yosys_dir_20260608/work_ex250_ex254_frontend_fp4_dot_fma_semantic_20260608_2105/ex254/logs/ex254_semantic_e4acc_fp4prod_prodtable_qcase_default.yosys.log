@@ -1,0 +1,615 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/logs/ex254_semantic_e4acc_fp4prod_prodtable_qcase_default.yosys.ys' --
+
+1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v' to AST representation.
+Generating RTLIL representation for module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \ex254_semantic_e4acc_fp4prod_prodtable_qcase
+
+2.2. Analyzing design hierarchy..
+Top module:  \ex254_semantic_e4acc_fp4prod_prodtable_qcase
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Removed 1 dead cases from process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25 in module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Removed a total of 3 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 17 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 3 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51'.
+     1/1: $1\quant_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$10.$result[6:0]$55
+Creating decoders for process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$41'.
+Creating decoders for process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+     1/1: $1\fp4_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$8.$result[9:0]$40
+Creating decoders for process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30'.
+     1/1: $1\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$7.$result[18:0]$34
+Creating decoders for process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25'.
+     1/1: $1\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$6.$result[18:0]$29
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\quant_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$5.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\quant_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$10.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\quant_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$10.value' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$4.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$41'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$9.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$41'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$9.a' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$41'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$9.b' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$41'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$3.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$8.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$8.a' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\fp4_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$8.b' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$2.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$7.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$7.code' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$1.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$6.$result' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25'.
+No latch inferred for signal `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.\e4_mag_k$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$6.code' from process `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51'.
+Removing empty process `ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2902$51'.
+Removing empty process `ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2900$41'.
+Found and cleaned up 1 empty switch in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+Removing empty process `ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2894$35'.
+Found and cleaned up 1 empty switch in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30'.
+Removing empty process `ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$30'.
+Found and cleaned up 1 empty switch in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25'.
+Removing empty process `ex254_semantic_e4acc_fp4prod_prodtable_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/verilog/ex254_semantic_e4acc_fp4prod_prodtable_qcase.v:2893$25'.
+Cleaned up 4 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TRIBUF pass.
+
+6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2471 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+    New ctrl vector for $pmux cell $procmux$69: { $auto$opt_reduce.cc:135:opt_pmux$2704 $auto$opt_reduce.cc:135:opt_pmux$2702 $auto$opt_reduce.cc:135:opt_pmux$2700 $auto$opt_reduce.cc:135:opt_pmux$2698 $auto$opt_reduce.cc:135:opt_pmux$2696 $auto$opt_reduce.cc:135:opt_pmux$2694 $auto$opt_reduce.cc:135:opt_pmux$2692 $auto$opt_reduce.cc:135:opt_pmux$2690 $auto$opt_reduce.cc:135:opt_pmux$2688 $auto$opt_reduce.cc:135:opt_pmux$2686 $auto$opt_reduce.cc:135:opt_pmux$2684 $auto$opt_reduce.cc:135:opt_pmux$2682 $auto$opt_reduce.cc:135:opt_pmux$2680 $auto$opt_reduce.cc:135:opt_pmux$2678 $auto$opt_reduce.cc:135:opt_pmux$2676 $auto$opt_reduce.cc:135:opt_pmux$2674 $auto$opt_reduce.cc:135:opt_pmux$2672 $auto$opt_reduce.cc:135:opt_pmux$2670 $auto$opt_reduce.cc:135:opt_pmux$2668 $auto$opt_reduce.cc:135:opt_pmux$2666 $auto$opt_reduce.cc:135:opt_pmux$2664 $auto$opt_reduce.cc:135:opt_pmux$2662 $auto$opt_reduce.cc:135:opt_pmux$2660 $auto$opt_reduce.cc:135:opt_pmux$2658 $auto$opt_reduce.cc:135:opt_pmux$2656 $auto$opt_reduce.cc:135:opt_pmux$2654 $auto$opt_reduce.cc:135:opt_pmux$2652 $auto$opt_reduce.cc:135:opt_pmux$2650 $auto$opt_reduce.cc:135:opt_pmux$2648 $auto$opt_reduce.cc:135:opt_pmux$2646 $auto$opt_reduce.cc:135:opt_pmux$2644 $auto$opt_reduce.cc:135:opt_pmux$2642 $auto$opt_reduce.cc:135:opt_pmux$2640 $auto$opt_reduce.cc:135:opt_pmux$2638 $auto$opt_reduce.cc:135:opt_pmux$2636 $auto$opt_reduce.cc:135:opt_pmux$2634 $auto$opt_reduce.cc:135:opt_pmux$2632 $auto$opt_reduce.cc:135:opt_pmux$2630 $auto$opt_reduce.cc:135:opt_pmux$2628 $auto$opt_reduce.cc:135:opt_pmux$2626 $auto$opt_reduce.cc:135:opt_pmux$2624 $auto$opt_reduce.cc:135:opt_pmux$2622 $auto$opt_reduce.cc:135:opt_pmux$2620 $auto$opt_reduce.cc:135:opt_pmux$2618 $auto$opt_reduce.cc:135:opt_pmux$2616 $auto$opt_reduce.cc:135:opt_pmux$2614 $auto$opt_reduce.cc:135:opt_pmux$2612 $auto$opt_reduce.cc:135:opt_pmux$2610 $auto$opt_reduce.cc:135:opt_pmux$2608 $auto$opt_reduce.cc:135:opt_pmux$2606 $auto$opt_reduce.cc:135:opt_pmux$2604 $auto$opt_reduce.cc:135:opt_pmux$2602 $auto$opt_reduce.cc:135:opt_pmux$2600 $auto$opt_reduce.cc:135:opt_pmux$2598 $auto$opt_reduce.cc:135:opt_pmux$2596 $auto$opt_reduce.cc:135:opt_pmux$2594 $auto$opt_reduce.cc:135:opt_pmux$2592 $auto$opt_reduce.cc:135:opt_pmux$2590 $auto$opt_reduce.cc:135:opt_pmux$2588 $auto$opt_reduce.cc:135:opt_pmux$2586 $auto$opt_reduce.cc:135:opt_pmux$2584 $auto$opt_reduce.cc:135:opt_pmux$2582 $auto$opt_reduce.cc:135:opt_pmux$2580 $auto$opt_reduce.cc:135:opt_pmux$2578 $auto$opt_reduce.cc:135:opt_pmux$2576 $auto$opt_reduce.cc:135:opt_pmux$2574 $auto$opt_reduce.cc:135:opt_pmux$2572 $auto$opt_reduce.cc:135:opt_pmux$2570 $auto$opt_reduce.cc:135:opt_pmux$2568 $auto$opt_reduce.cc:135:opt_pmux$2566 $auto$opt_reduce.cc:135:opt_pmux$2564 $auto$opt_reduce.cc:135:opt_pmux$2562 $auto$opt_reduce.cc:135:opt_pmux$2560 $auto$opt_reduce.cc:135:opt_pmux$2558 $auto$opt_reduce.cc:135:opt_pmux$2556 $auto$opt_reduce.cc:135:opt_pmux$2554 $auto$opt_reduce.cc:135:opt_pmux$2552 $auto$opt_reduce.cc:135:opt_pmux$2550 $auto$opt_reduce.cc:135:opt_pmux$2548 $auto$opt_reduce.cc:135:opt_pmux$2546 $auto$opt_reduce.cc:135:opt_pmux$2544 $auto$opt_reduce.cc:135:opt_pmux$2542 $auto$opt_reduce.cc:135:opt_pmux$2540 $auto$opt_reduce.cc:135:opt_pmux$2538 $auto$opt_reduce.cc:135:opt_pmux$2536 $auto$opt_reduce.cc:135:opt_pmux$2534 $auto$opt_reduce.cc:135:opt_pmux$2532 $auto$opt_reduce.cc:135:opt_pmux$2530 $auto$opt_reduce.cc:135:opt_pmux$2528 $auto$opt_reduce.cc:135:opt_pmux$2526 $auto$opt_reduce.cc:135:opt_pmux$2524 $procmux$2478_CMP $auto$opt_reduce.cc:135:opt_pmux$2522 $procmux$2482_CMP $auto$opt_reduce.cc:135:opt_pmux$2520 $procmux$2485_CMP $procmux$2486_CMP $procmux$2487_CMP $procmux$2488_CMP $procmux$2489_CMP $procmux$2490_CMP $procmux$2491_CMP $procmux$2492_CMP $procmux$2493_CMP $procmux$2494_CMP $procmux$2495_CMP $procmux$2496_CMP $procmux$2497_CMP $procmux$2498_CMP $procmux$2499_CMP $procmux$2500_CMP $procmux$2501_CMP $procmux$2502_CMP $procmux$2503_CMP $procmux$2504_CMP $procmux$2505_CMP $procmux$2506_CMP $procmux$2507_CMP $procmux$2508_CMP $procmux$2509_CMP $procmux$2510_CMP $procmux$2511_CMP $procmux$2512_CMP $procmux$2513_CMP $procmux$2514_CMP $procmux$2515_CMP }
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 1 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2564 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+Removed 0 unused cells and 40 unused wires.
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2564 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+8. Executing MEMORY pass.
+
+8.1. Executing OPT_MEM pass (optimize memories).
+ex254_semantic_e4acc_fp4prod_prodtable_qcase.$auto$proc_rom.cc:155:do_switch$65: removing const-0 lane 18
+ex254_semantic_e4acc_fp4prod_prodtable_qcase.$auto$proc_rom.cc:155:do_switch$61: removing const-0 lane 18
+Performed a total of 2 transformations.
+
+8.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$65'[0] in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$61'[0] in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$57'[0] in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$65'[0] in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$61'[0] in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase': no address FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$57'[0] in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase': no address FF found.
+
+8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+8.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+8.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$65 in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase:
+  created 128 $dff cells and 0 static cells of width 18.
+  read interface: 0 $dff and 127 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$61 in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase:
+  created 128 $dff cells and 0 static cells of width 18.
+  read interface: 0 $dff and 127 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$57 in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase:
+  created 256 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3037 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3037 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2897 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2837 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2807 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2799 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2795 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2793 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2792 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 245 cells.
+
+9.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+Removed 0 unused cells and 787 unused wires.
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 2792 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+9.16. Finished fast OPT passes. (There is nothing left to do.)
+
+10. Executing TECHMAP pass (map to technology primitives).
+
+10.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+10.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Running "alumacc" on wrapper $extern:wrap:$neg:Y_WIDTH=20:A_WIDTH=20:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$neg:Y_WIDTH=20:A_WIDTH=20:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$neg:Y_WIDTH=20:A_WIDTH=20:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $mux.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=20:B_WIDTH=20:A_WIDTH=20:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=20:B_WIDTH=20:A_WIDTH=20:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=20:B_WIDTH=20:A_WIDTH=20:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=20:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=20:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=20:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pmux.
+Using template $paramod$c5b9a035a8d3d1a42a45840811b1f11f19722d80\_90_alu for cells of type $alu.
+Using template $paramod$c4ef20b21801b37ea2d65c32a05dfe56e84a870d\_90_alu for cells of type $alu.
+Using template $paramod$9e063c849228667263119758c3ef2ce4bde04054\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 62916 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 37550 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 22574 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 15072 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 11176 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10728 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10725 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10724 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10723 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 52193 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10723 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+Removed 94 unused cells and 26231 unused wires.
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10614 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+Removed 0 unused cells and 8 unused wires.
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 10614 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase' to `<abc-temp-dir>/input.blif'..
+
+12.1.1. Executed ABC.
+Extracted 10614 gates and 10632 wires to a netlist network with 16 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:     1929
+ABC RESULTS:               NOT cells:     1157
+ABC RESULTS:        internal signals:    10608
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3086 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3086 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+Removed 0 unused cells and 8030 unused wires.
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3086 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing AIGMAP pass (map logic to AIG).
+Module ex254_semantic_e4acc_fp4prod_prodtable_qcase: replaced 0 cells with 0 new cells, skipped 3086 cells.
+  not replaced 2 cell types:
+    1929 $_AND_
+    1157 $_NOT_
+
+15. Executing OPT pass (performing simple optimizations).
+
+15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3086 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+Performed a total of 0 changes.
+
+15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Computing hashes of 3086 cells of `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Finding duplicate cells in `\ex254_semantic_e4acc_fp4prod_prodtable_qcase'.
+Removed a total of 0 cells.
+
+15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex254_semantic_e4acc_fp4prod_prodtable_qcase..
+
+15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex254_semantic_e4acc_fp4prod_prodtable_qcase.
+
+15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+16. Executing AIGER backend.
+ERROR: Can't open output file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex254/aigs/ex254_semantic_e4acc_fp4prod_prodtable_qcase_default.aig' for writing: No such file or directory

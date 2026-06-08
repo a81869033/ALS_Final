@@ -1,0 +1,1359 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.65 (git sha1 aec814bdf3071f7e0fd0fbe43f7f711e99d01e24, g++ 14.3.0-19 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/yosys_1778591527500/work=/usr/local/src/conda/yosys-0.65 -fdebug-prefix-map=/home/b10507053/ALS_Final_Project/student/tools/conda-env=/usr/local/src/conda-prefix -fPIC -O3) [conda-forge/yosys-feedstock]
+
+-- Executing script file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/logs/ex250_semantic_fp4_dot2_arith_qcase_synth_preset.yosys.ys' --
+
+1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v' to AST representation.
+Generating RTLIL representation for module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \ex250_semantic_fp4_dot2_arith_qcase
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \ex250_semantic_fp4_dot2_arith_qcase
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81 in module ex250_semantic_fp4_dot2_arith_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52 in module ex250_semantic_fp4_dot2_arith_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43 in module ex250_semantic_fp4_dot2_arith_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34 in module ex250_semantic_fp4_dot2_arith_qcase.
+Marked 1 switch rules as full_case in process $proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25 in module ex250_semantic_fp4_dot2_arith_qcase.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 31 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81'.
+     1/1: $1\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$14.$result[6:0]$85
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$71'.
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$61'.
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+     1/1: $1\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$11.value[4:0]$58
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+     1/1: $1\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$10.value[4:0]$49
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+     1/1: $1\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$9.value[4:0]$40
+Creating decoders for process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+     1/1: $1\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$8.value[4:0]$31
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$7.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$14.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\quant_scaled$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$14.value' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$6.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$71'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$13.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$71'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$13.a' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$71'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$13.b' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$71'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$5.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$61'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$12.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$61'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$12.a' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$61'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_neg_zero_product$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$12.b' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$61'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$4.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$11.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$11.x' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$11.mag' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$11.value' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$3.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$10.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$10.x' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$10.mag' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$10.value' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$2.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$9.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$9.x' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$9.mag' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$9.value' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$1.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$8.$result' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$8.x' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$8.mag' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+No latch inferred for signal `\ex250_semantic_fp4_dot2_arith_qcase.\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$8.value' from process `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:342$81'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$71'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:341$61'.
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$52'.
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$43'.
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$34'.
+Found and cleaned up 1 empty switch in `\ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+Removing empty process `ex250_semantic_fp4_dot2_arith_qcase.$proc$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$25'.
+Cleaned up 5 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.3. Executing CHECK pass (checking for obvious problems).
+Checking module ex250_semantic_fp4_dot2_arith_qcase...
+Found and reported 0 problems.
+
+2.4. Executing FLATTEN pass (flatten design).
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 1 unused cells and 59 unused wires.
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module ex250_semantic_fp4_dot2_arith_qcase...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 63 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 59 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 4 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 59 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 4 unused wires.
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 59 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing FSM pass (extract and optimize FSM).
+
+2.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 59 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 59 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.10.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 23 address bits (of 32) from memory init port ex250_semantic_fp4_dot2_arith_qcase.$auto$mem.cc:351:emit$89 ($auto$proc_rom.cc:155:do_switch$87).
+Converting cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul) from unsigned to signed.
+Removed top 6 bits (of 11) from port A of cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul).
+Removed top 6 bits (of 11) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul).
+Removed top 1 bits (of 11) from port Y of cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul).
+Converting cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul) from unsigned to signed.
+Removed top 6 bits (of 11) from port A of cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul).
+Removed top 6 bits (of 11) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul).
+Removed top 1 bits (of 11) from port Y of cell ex250_semantic_fp4_dot2_arith_qcase.$mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul).
+Converting cell ex250_semantic_fp4_dot2_arith_qcase.$add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17 ($add) from unsigned to signed.
+Removed top 1 bits (of 11) from port A of cell ex250_semantic_fp4_dot2_arith_qcase.$add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17 ($add).
+Removed top 1 bits (of 11) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17 ($add).
+Removed top 31 bits (of 32) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$lt$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:338$18 ($lt).
+Removed top 1 bits (of 11) from port Y of cell ex250_semantic_fp4_dot2_arith_qcase.$neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:339$19 ($neg).
+Removed top 1 bits (of 11) from port A of cell ex250_semantic_fp4_dot2_arith_qcase.$neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:339$19 ($neg).
+Removed top 1 bits (of 5) from mux cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$94 ($pmux).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$98_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$99_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$100_CMP0 ($eq).
+Removed top 1 bits (of 5) from mux cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$103 ($pmux).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$107_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$108_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$109_CMP0 ($eq).
+Removed top 1 bits (of 5) from mux cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$112 ($pmux).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$116_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$117_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$118_CMP0 ($eq).
+Removed top 1 bits (of 5) from mux cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$121 ($pmux).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$125_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$126_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell ex250_semantic_fp4_dot2_arith_qcase.$procmux$127_CMP0 ($eq).
+Removed top 1 bits (of 5) from wire ex250_semantic_fp4_dot2_arith_qcase.$0\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$10.value[4:0]$48.
+Removed top 1 bits (of 5) from wire ex250_semantic_fp4_dot2_arith_qcase.$0\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$9.value[4:0]$39.
+Removed top 1 bits (of 5) from wire ex250_semantic_fp4_dot2_arith_qcase.$0\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$8.value[4:0]$30.
+Removed top 1 bits (of 5) from wire ex250_semantic_fp4_dot2_arith_qcase.$0\fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$11.value[4:0]$57.
+Removed top 1 bits (of 11) from wire ex250_semantic_fp4_dot2_arith_qcase.neg_sum.
+
+2.12. Executing PEEPOPT pass (run peephole optimizers).
+
+2.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 5 unused wires.
+
+2.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module ex250_semantic_fp4_dot2_arith_qcase:
+  creating $macc model for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$59 ($neg).
+  creating $macc model for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$50 ($neg).
+  creating $macc model for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$41 ($neg).
+  creating $macc model for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$32 ($neg).
+  creating $macc model for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:339$19 ($neg).
+  creating $macc model for $add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17 ($add).
+  creating $macc model for $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul).
+  creating $macc model for $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul).
+  merging $macc model for $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 into $add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17.
+  merging $macc model for $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 into $add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17.
+  creating $alu model for $macc $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:339$19.
+  creating $alu model for $macc $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$32.
+  creating $alu model for $macc $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$41.
+  creating $alu model for $macc $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$50.
+  creating $alu model for $macc $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$59.
+  creating $macc cell for $add$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:337$17: $auto$alumacc.cc:382:replace_macc$134
+  creating $alu model for $lt$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:338$18 ($lt): new $alu
+  creating $alu cell for $lt$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:338$18: $auto$alumacc.cc:512:replace_alu$136
+  creating $alu cell for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$59: $auto$alumacc.cc:512:replace_alu$143
+  creating $alu cell for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$50: $auto$alumacc.cc:512:replace_alu$146
+  creating $alu cell for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$41: $auto$alumacc.cc:512:replace_alu$149
+  creating $alu cell for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:24$32: $auto$alumacc.cc:512:replace_alu$152
+  creating $alu cell for $neg$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:339$19: $auto$alumacc.cc:512:replace_alu$155
+  created 6 $alu and 1 $macc cells.
+
+2.15. Executing SHARE pass (SAT-based resource sharing).
+Found 3 cells in module ex250_semantic_fp4_dot2_arith_qcase that may be considered for resource sharing.
+  Analyzing resource sharing options for $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul):
+    Found cell that is never activated: $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul):
+    Found cell that is never activated: $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16
+    Cell is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $auto$mem.cc:305:emit$88 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal \abs_sum [9].
+    No candidates found.
+Removing 2 cells in module ex250_semantic_fp4_dot2_arith_qcase:
+  Removing cell $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$16 ($mul).
+  Removing cell $mul$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$15 ($mul).
+
+2.16. Executing OPT pass (performing simple optimizations).
+
+2.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 58 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 58 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 1 unused cells and 6 unused wires.
+
+2.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 56 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.16.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.17. Executing MEMORY pass.
+
+2.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex250_semantic_fp4_dot2_arith_qcase': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$87'[0] in module `\ex250_semantic_fp4_dot2_arith_qcase': no address FF found.
+
+2.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 55 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.19.5. Finished fast OPT passes.
+
+2.20. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$87 in module \ex250_semantic_fp4_dot2_arith_qcase:
+  created 512 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 511 $mux cells.
+  write interface: 0 write mux blocks.
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 167 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][7]$948:
+      Old ports: A=7'1000110, B=7'1000111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$b$554
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$b$554 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$b$554 [6:1] = 6'100011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][4]$939:
+      Old ports: A=7'1000000, B=7'1000001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$a$550
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$a$550 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$a$550 [6:1] = 6'100000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][0]$927:
+      Old ports: A=7'0000000, B=7'0101000, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [3]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [6:4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [2:0] } = { 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [3] 4'0000 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][136]$1335:
+      Old ports: A=7'1101000, B=7'1101001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][68]$a$748
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][68]$a$748 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][68]$a$748 [6:1] = 6'110100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][84]$1179:
+      Old ports: A=7'1100010, B=7'1100011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][42]$a$670
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][42]$a$670 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][42]$a$670 [6:1] = 6'110001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][9]$954:
+      Old ports: A=7'1001001, B=7'1001010, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][4]$b$557
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][4]$b$557 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][4]$b$557 [6:2] = 5'10010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][3]$936:
+      Old ports: A=7'0111100, B=7'0111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$b$548
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$b$548 [1]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$b$548 [6:2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$b$548 [0] } = 6'011110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][11]$960:
+      Old ports: A=7'1001011, B=7'1001100, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [6:3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [1] } = { 4'1001 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][116]$1275:
+      Old ports: A=7'1100110, B=7'1100111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][58]$a$718
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][58]$a$718 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][58]$a$718 [6:1] = 6'110011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][1]$930:
+      Old ports: A=7'0110000, B=7'0110100, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$b$545
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$b$545 [2]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$b$545 [6:3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$b$545 [1:0] } = 6'011000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][9]$570:
+      Old ports: A=7'1010001, B=7'1010010, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$b$365
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$b$365 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$b$365 [6:2] = 5'10100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][6]$945:
+      Old ports: A=7'1000100, B=7'1000101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$a$553
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$a$553 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$a$553 [6:1] = 6'100010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][15]$588:
+      Old ports: A=7'1010111, B=7'1011000, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [6:4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [2:1] } = { 3'101 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][29]$1014:
+      Old ports: A=7'1010110, B=7'1010111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][14]$b$587
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][14]$b$587 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][14]$b$587 [6:1] = 6'101011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][13]$582:
+      Old ports: A=7'1010101, B=7'1010110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$b$371
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$b$371 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$b$371 [6:2] = 5'10101
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][144]$1359:
+      Old ports: A=7'1101001, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][25]$1002:
+      Old ports: A=7'1010100, B=7'1010101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][12]$b$581
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][12]$b$581 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][12]$b$581 [6:1] = 6'101010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][58]$1101:
+      Old ports: A=7'1011110, B=7'1011111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][29]$a$631
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][29]$a$631 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][29]$a$631 [6:1] = 6'101111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][2]$933:
+      Old ports: A=7'0111000, B=7'0111010, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$a$547
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$a$547 [1]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$a$547 [6:2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$a$547 [0] } = 6'011100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][15]$396:
+      Old ports: A=7'1011111, B=7'1100000, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [6] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [4:1] } = { 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][13]$390:
+      Old ports: A=7'1011101, B=7'1011110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$b$275
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$b$275 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$b$275 [6:2] = 5'10111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][11]$384:
+      Old ports: A=7'1011011, B=7'1011100, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [6:3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [1] } = { 4'1011 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][9]$378:
+      Old ports: A=7'1011001, B=7'1011010, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$b$269
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$b$269 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$b$269 [6:2] = 5'10110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][21]$990:
+      Old ports: A=7'1010010, B=7'1010011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][10]$b$575
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][10]$b$575 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][10]$b$575 [6:1] = 6'101001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][42]$1053:
+      Old ports: A=7'1011010, B=7'1011011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][21]$a$607
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][21]$a$607 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][21]$a$607 [6:1] = 6'101101
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][11]$576:
+      Old ports: A=7'1010011, B=7'1010100, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [6:3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [1] } = { 4'1010 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][5]$942:
+      Old ports: A=7'1000010, B=7'1000011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$b$551
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$b$551 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$b$551 [6:1] = 6'100001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][34]$1029:
+      Old ports: A=7'1011000, B=7'1011001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][17]$a$595
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][17]$a$595 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][17]$a$595 [6:1] = 6'101100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][17]$978:
+      Old ports: A=7'1010000, B=7'1010001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][8]$b$569
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][8]$b$569 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][8]$b$569 [6:1] = 6'101000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][15]$300:
+      Old ports: A=7'1100111, B=7'1101000, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [6:4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [2:1] } = { 3'110 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][13]$294:
+      Old ports: A=7'1100101, B=7'1100110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$b$227
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$b$227 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$b$227 [6:2] = 5'11001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][11]$288:
+      Old ports: A=7'1100011, B=7'1100100, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [6:3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [1] } = { 4'1100 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][9]$282:
+      Old ports: A=7'1100001, B=7'1100010, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$b$221
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$b$221 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$b$221 [6:2] = 5'11000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][50]$1077:
+      Old ports: A=7'1011100, B=7'1011101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][25]$a$619
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][25]$a$619 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][25]$a$619 [6:1] = 6'101110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][15]$972:
+      Old ports: A=7'1001111, B=7'1010000, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [6:5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [3:1] } = { 2'10 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][68]$1131:
+      Old ports: A=7'1100000, B=7'1100001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][34]$a$646
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][34]$a$646 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][34]$a$646 [6:1] = 6'110000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][100]$1227:
+      Old ports: A=7'1100100, B=7'1100101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][50]$a$694
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][50]$a$694 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][50]$a$694 [6:1] = 6'110010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][8][13]$966:
+      Old ports: A=7'1001101, B=7'1001110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][6]$b$563
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][6]$b$563 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][6]$b$563 [6:2] = 5'10011
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][12]$579:
+      Old ports: A=7'1010100, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][12]$b$581, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$a$370
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][12]$b$581 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$a$370 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$a$370 [6:1] = 6'101010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][68]$747:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][68]$a$748, B=7'1101001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][34]$a$454
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][68]$a$748 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][34]$a$454 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][34]$a$454 [6:1] = 6'110100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][17]$594:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][17]$a$595, B=7'1011001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][8]$b$377
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][17]$a$595 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][8]$b$377 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][8]$b$377 [6:1] = 6'101100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][29]$630:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][29]$a$631, B=7'1011111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][14]$b$395
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][29]$a$631 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][14]$b$395 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][14]$b$395 [6:1] = 6'101111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][34]$645:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][34]$a$646, B=7'1100001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][17]$a$403
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][34]$a$646 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][17]$a$403 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][17]$a$403 [6:1] = 6'110000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][58]$717:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][58]$a$718, B=7'1100111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][29]$a$439
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][58]$a$718 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][29]$a$439 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][29]$a$439 [6:1] = 6'110011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$558:
+      Old ports: A=7'1001010, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$b$359
+      New ports: A=3'010, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][5]$b$560 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$b$359 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$b$359 [6:3] = 4'1001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][14]$585:
+      Old ports: A=7'1010110, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][14]$b$587, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$a$373
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][14]$b$587 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$a$373 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$a$373 [6:1] = 6'101011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][21]$606:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][21]$a$607, B=7'1011011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][10]$b$383
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][21]$a$607 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][10]$b$383 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][10]$b$383 [6:1] = 6'101101
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][50]$693:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][50]$a$694, B=7'1100101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][25]$a$427
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][50]$a$694 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][25]$a$427 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][25]$a$427 [6:1] = 6'110010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$549:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$a$550, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$b$551, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$a$355
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$a$550 [0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$b$551 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$a$355 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$a$355 [6:2] = 5'10000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$546:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$a$547, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$b$548, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$a$547 [1] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][1]$b$548 [1] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2:1]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [6:3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [0] } = 5'01110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$543:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$b$545, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$a$352
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [3] 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [3] 1'0 }, B={ 3'110 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$b$545 [2] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$a$352 [5:2]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$a$352 [6] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$a$352 [1:0] } = 3'000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][4]$555:
+      Old ports: A=7'1001000, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][4]$b$557, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$a$358
+      New ports: A=2'00, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][4]$b$557 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$a$358 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$a$358 [6:2] = 5'10010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$759:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][72]$a$760 [1:0], B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$564:
+      Old ports: A=7'1001110, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362
+      New ports: A=3'010, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][7]$b$566 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [6:5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [3:2] } = { 2'10 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][6]$561:
+      Old ports: A=7'1001100, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][6]$b$563, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$a$361
+      New ports: A=2'00, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][6]$b$563 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$a$361 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$a$361 [6:2] = 5'10011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$552:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$a$553, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$b$554, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$b$356
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$a$553 [0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][3]$b$554 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$b$356 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$b$356 [6:2] = 5'10001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][10]$573:
+      Old ports: A=7'1010010, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][10]$b$575, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$a$367
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][10]$b$575 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$a$367 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$a$367 [6:1] = 6'101001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][42]$669:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][42]$a$670, B=7'1100011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][21]$a$415
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][42]$a$670 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][21]$a$415 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][21]$a$415 [6:1] = 6'110001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][8]$567:
+      Old ports: A=7'1010000, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][8]$b$569, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$a$364
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][8]$b$569 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$a$364 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$a$364 [6:1] = 6'101000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][25]$618:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][25]$a$619, B=7'1011101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][12]$b$389
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][25]$a$619 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][12]$b$389 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][12]$b$389 [6:1] = 6'101110
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$459:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][36]$a$460 [1:0], B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][34]$453:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][34]$a$454, B=7'1101001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][17]$a$307
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][34]$a$454 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][17]$a$307 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][17]$a$307 [6:1] = 6'110100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][29]$438:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][29]$a$439, B=7'1100111, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][14]$b$299
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][29]$a$439 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][14]$b$299 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][14]$b$299 [6:1] = 6'110011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][25]$426:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][25]$a$427, B=7'1100101, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][12]$b$293
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][25]$a$427 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][12]$b$293 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][12]$b$293 [6:1] = 6'110010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][21]$414:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][21]$a$415, B=7'1100011, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][10]$b$287
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][21]$a$415 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][10]$b$287 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][10]$b$287 [6:1] = 6'110001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][17]$402:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][17]$a$403, B=7'1100001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][8]$b$281
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][17]$a$403 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][8]$b$281 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][8]$b$281 [6:1] = 6'110000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][14]$393:
+      Old ports: A=7'1011110, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][14]$b$395, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$a$277
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][14]$b$395 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$a$277 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$a$277 [6:1] = 6'101111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][12]$387:
+      Old ports: A=7'1011100, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][12]$b$389, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$a$274
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][12]$b$389 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$a$274 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$a$274 [6:1] = 6'101110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][10]$381:
+      Old ports: A=7'1011010, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][10]$b$383, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$a$271
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][10]$b$383 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$a$271 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$a$271 [6:1] = 6'101101
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][8]$375:
+      Old ports: A=7'1011000, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][8]$b$377, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$a$268
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][8]$b$377 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$a$268 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$a$268 [6:1] = 6'101100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$372:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$a$373, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$a$373 [0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][7]$b$374 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [6:4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [2] } = { 3'101 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$369:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$a$370, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$b$371, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$a$265
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$a$370 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][6]$b$371 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$a$265 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$a$265 [6:2] = 5'10101
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$366:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$a$367, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$b$263
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$a$367 [0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][5]$b$368 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$b$263 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$b$263 [6:3] = 4'1010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$363:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$a$364, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$b$365, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$a$262
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$a$364 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][4]$b$365 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$a$262 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$a$262 [6:2] = 5'10100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$360:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$a$361, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$a$361 [1:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][3]$b$362 [1:0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [2:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [6:5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [3] } = { 2'10 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [2] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$357:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$a$358, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$b$359, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$a$259
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$a$358 [1:0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][2]$b$359 [2:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$a$259 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$a$259 [6:3] = 4'1001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$354:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$a$355, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$b$356, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$b$257
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$a$355 [1:0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$b$356 [1:0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$b$257 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$b$257 [6:3] = 4'1000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$351:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$a$352, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$a$256
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$a$352 [5:2] 1'0 }, B={ 3'111 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2:1] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$a$256 [5:1]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$a$256 [6] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$a$256 [0] } = 2'00
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$309:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][18]$a$310 [1:0], B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][17]$306:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][17]$a$307, B=7'1101001, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][8]$b$233
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][17]$a$307 [0], B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][8]$b$233 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][8]$b$233 [6:1] = 6'110100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][14]$297:
+      Old ports: A=7'1100110, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][14]$b$299, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$a$229
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][14]$b$299 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$a$229 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$a$229 [6:1] = 6'110011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][12]$291:
+      Old ports: A=7'1100100, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][12]$b$293, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$a$226
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][12]$b$293 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$a$226 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$a$226 [6:1] = 6'110010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][10]$285:
+      Old ports: A=7'1100010, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][10]$b$287, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$a$223
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][10]$b$287 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$a$223 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$a$223 [6:1] = 6'110001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][8]$279:
+      Old ports: A=7'1100000, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][8]$b$281, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$a$220
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][8]$b$281 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$a$220 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$a$220 [6:1] = 6'110000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$276:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$a$277, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$a$277 [0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][7]$b$278 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [6] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [4:2] } = { 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$273:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$a$274, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$b$275, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$a$217
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$a$274 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][6]$b$275 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$a$217 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$a$217 [6:2] = 5'10111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$270:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$a$271, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$b$215
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$a$271 [0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][5]$b$272 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$b$215 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$b$215 [6:3] = 4'1011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$267:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$a$268, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$b$269, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$a$214
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$a$268 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][4]$b$269 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$a$214 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$a$214 [6:2] = 5'10110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$264:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$a$265, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$b$212
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$a$265 [1:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][3]$b$266 [1:0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$b$212 [3:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$b$212 [6:4] = 3'101
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$261:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$a$262, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$b$263, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$a$211
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$a$262 [1:0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][2]$b$263 [2:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$a$211 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$a$211 [6:3] = 4'1010
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$258:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$a$259, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][0]$b$209
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$a$259 [2:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][1]$b$260 [2:0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][0]$b$209 [4:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][0]$b$209 [6:5] = 2'10
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$234:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][9]$a$235 [1:0], B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][8]$231:
+      Old ports: A=7'1101000, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][8]$b$233, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$a$196
+      New ports: A=1'0, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][8]$b$233 [0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$a$196 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$a$196 [6:1] = 6'110100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$228:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$a$229, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$a$229 [0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][7]$b$230 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [6:4] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [2] } = { 3'110 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$225:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$a$226, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$b$227, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$a$193
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$a$226 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][6]$b$227 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$a$193 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$a$193 [6:2] = 5'11001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$222:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$a$223, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$b$191
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$a$223 [0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [0] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][5]$b$224 [0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$b$191 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$b$191 [6:3] = 4'1100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$219:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$a$220, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$b$221, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$a$190
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$a$220 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][4]$b$221 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$a$190 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$a$190 [6:2] = 5'11000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$216:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$a$217, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$a$217 [1:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][3]$b$218 [1:0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [2:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [6] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [4:3] } = { 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [2] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$213:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$a$214, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$b$215, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$a$187
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$a$214 [1:0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][2]$b$215 [2:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$a$187 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$a$187 [6:3] = 4'1011
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$210:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$a$211, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$b$212, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][0]$b$185
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$a$211 [2:0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][4][1]$b$212 [3:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][0]$b$185 [3:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][0]$b$185 [6:4] = 3'101
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$195:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$a$196, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$a$196 [0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][4]$b$197 [1:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$192:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$a$193, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$b$176
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$a$193 [1:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [3] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [1] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][3]$b$194 [1:0] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$b$176 [3:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$b$176 [6:4] = 3'110
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$189:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$a$190, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$b$191, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$a$175
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$a$190 [1:0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][2]$b$191 [2:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$a$175 [2:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$a$175 [6:3] = 4'1100
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$186:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$a$187, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][0]$b$173
+      New ports: A={ 2'01 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$a$187 [2:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [2] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][3][1]$b$188 [2:0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][0]$b$173 [5] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][0]$b$173 [3:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][0]$b$173 [6] $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][0]$b$173 [4] } = { 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][0]$b$173 [3] }
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$177:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][2]$a$178 [1:0], B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$174:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$a$175, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$b$176, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][0]$b$167
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$a$175 [2:0] }, B=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][2][1]$b$176 [3:0], Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][0]$b$167 [3:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][0]$b$167 [6:4] = 3'110
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$168:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169, B=7'1111110, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][0][0]$b$164
+      New ports: A=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][1][1]$a$169 [1:0], B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][0][0]$b$164 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][0][0]$b$164 [6:2] = { 2'11 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][0][0]$b$164 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][0][0]$b$164 [1] }
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 107 changes.
+
+2.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 167 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 134 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 119 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 110 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 105 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 103 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 64 cells.
+
+2.21.6. Executing OPT_SHARE pass.
+
+2.21.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 974 unused wires.
+
+2.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.21.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.21.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.21.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][2]$549:
+      Old ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [3] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][7][0]$a$544 [3] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2:1]
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [1] = \abs_sum [0]
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][1]$354:
+      Old ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2:1] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2:1] }, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$b$257 [2:0]
+      New ports: A=1'0, B=1'1, Y=$memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$b$257 [2]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][5][0]$b$257 [1:0] = $memory$auto$proc_rom.cc:155:do_switch$87$rdmux[0][6][0]$b$353 [2:1]
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 2 changes.
+
+2.21.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 102 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.21.14. Executing OPT_SHARE pass.
+
+2.21.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 2 unused wires.
+
+2.21.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.21.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.21.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.21.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.21.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 100 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.21.22. Executing OPT_SHARE pass.
+
+2.21.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 1 unused wires.
+
+2.21.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.21.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.21.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.21.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+2.21.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 100 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.21.30. Executing OPT_SHARE pass.
+
+2.21.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+2.21.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.21.34. Finished fast OPT passes. (There is nothing left to do.)
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/b10507053/ALS_Final_Project/student/tools/conda-env/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+Using template $paramod$bd91b1311a7e26328ec7b35acb363a89aa87e033\_90_alu for cells of type $alu.
+Using template $paramod$3e96e356bb68fcbd4f9c12f6d97ec8513d1af8c6\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$1.$result * \fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:335$2.$result (5x5 bits, signed)
+  add \fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$3.$result * \fp4_value$func$/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v:336$4.$result (5x5 bits, signed)
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001011 for cells of type $fa.
+Using template $paramod$ec32b97001540459632a2df9accd677d3703ea0f\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001010 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001011 for cells of type $lcu.
+No more expansions possible.
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 976 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 883 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 854 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 840 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 831 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 827 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 823 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 820 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 819 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 157 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 25 unused cells and 640 unused wires.
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing ABC pass (technology mapping using ABC).
+
+2.24.1. Extracting gate netlist of module `\ex250_semantic_fp4_dot2_arith_qcase' to `<abc-temp-dir>/input.blif'..
+
+2.24.1.1. Executed ABC.
+Extracted 794 gates and 812 wires to a netlist network with 16 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.24.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      108
+ABC RESULTS:            ANDNOT cells:       32
+ABC RESULTS:               MUX cells:       15
+ABC RESULTS:              NAND cells:      201
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:               NOT cells:        5
+ABC RESULTS:                OR cells:       32
+ABC RESULTS:             ORNOT cells:       29
+ABC RESULTS:              XNOR cells:       35
+ABC RESULTS:               XOR cells:      100
+ABC RESULTS:        internal signals:      788
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 561 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 305 unused wires.
+
+2.25.5. Finished fast OPT passes.
+
+2.26. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `ex250_semantic_fp4_dot2_arith_qcase'. Setting top module to ex250_semantic_fp4_dot2_arith_qcase.
+
+2.26.1. Analyzing design hierarchy..
+Top module:  \ex250_semantic_fp4_dot2_arith_qcase
+
+2.26.2. Analyzing design hierarchy..
+Top module:  \ex250_semantic_fp4_dot2_arith_qcase
+Removed 0 unused modules.
+
+2.27. Printing statistics.
+
+=== ex250_semantic_fp4_dot2_arith_qcase ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      578 wires
+      693 wire bits
+       25 public wires
+      140 public wire bits
+        2 ports
+       24 port bits
+      561 cells
+       32   $_ANDNOT_
+      108   $_AND_
+       15   $_MUX_
+      201   $_NAND_
+        4   $_NOR_
+        5   $_NOT_
+       29   $_ORNOT_
+       32   $_OR_
+       35   $_XNOR_
+      100   $_XOR_
+
+2.28. Executing CHECK pass (checking for obvious problems).
+Checking module ex250_semantic_fp4_dot2_arith_qcase...
+Found and reported 0 problems.
+
+3. Executing ABC pass (technology mapping using ABC).
+
+3.1. Extracting gate netlist of module `\ex250_semantic_fp4_dot2_arith_qcase' to `<abc-temp-dir>/input.blif'..
+
+3.1.1. Executed ABC.
+Extracted 561 gates and 577 wires to a netlist network with 16 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled May 12 2026 13:26:50)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+3.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      735
+ABC RESULTS:               NOT cells:      687
+ABC RESULTS:        internal signals:      553
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+4. Executing AIGMAP pass (map logic to AIG).
+Module ex250_semantic_fp4_dot2_arith_qcase: replaced 0 cells with 0 new cells, skipped 1422 cells.
+  not replaced 2 cell types:
+     735 $_AND_
+     687 $_NOT_
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 1422 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 1422 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+Removed 0 unused cells and 577 unused wires.
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ex250_semantic_fp4_dot2_arith_qcase..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ex250_semantic_fp4_dot2_arith_qcase.
+Performed a total of 0 changes.
+
+5.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ex250_semantic_fp4_dot2_arith_qcase'.
+Computing hashes of 1422 cells of `\ex250_semantic_fp4_dot2_arith_qcase'.
+Finding duplicate cells in `\ex250_semantic_fp4_dot2_arith_qcase'.
+Removed a total of 0 cells.
+
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ex250_semantic_fp4_dot2_arith_qcase..
+
+5.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ex250_semantic_fp4_dot2_arith_qcase.
+
+5.16. Finished fast OPT passes. (There is nothing left to do.)
+
+6. Executing AIGER backend.
+ERROR: Can't open output file `/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/aigs/ex250_semantic_fp4_dot2_arith_qcase_synth_preset.aig' for writing: No such file or directory

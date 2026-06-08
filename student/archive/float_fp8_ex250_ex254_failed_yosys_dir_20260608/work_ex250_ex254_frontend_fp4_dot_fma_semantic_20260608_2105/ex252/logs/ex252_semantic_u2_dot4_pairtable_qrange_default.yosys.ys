@@ -1,0 +1,17 @@
+read_verilog "/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex252/verilog/ex252_semantic_u2_dot4_pairtable_qrange.v"
+hierarchy -check -top ex252_semantic_u2_dot4_pairtable_qrange
+proc
+flatten
+tribuf -logic
+deminout
+opt
+memory
+opt
+techmap
+opt
+abc -g AND
+opt
+aigmap
+opt
+clean
+write_aiger -symbols "/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex252/aigs/ex252_semantic_u2_dot4_pairtable_qrange_default.aig"

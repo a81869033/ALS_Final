@@ -1,0 +1,7 @@
+read_verilog "/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/verilog/ex250_semantic_fp4_dot2_arith_qcase.v"
+synth -top ex250_semantic_fp4_dot2_arith_qcase -flatten
+abc -g aig
+aigmap
+opt
+clean
+write_aiger -symbols "/home/b10507053/ALS_Final_Project/student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_20260608_2105/ex250/aigs/ex250_semantic_fp4_dot2_arith_qcase_synth_preset_aig.aig"
