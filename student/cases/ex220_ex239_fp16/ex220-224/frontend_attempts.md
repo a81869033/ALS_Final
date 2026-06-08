@@ -78,3 +78,35 @@ Reusable lessons:
 - Direct table synthesis still wins because it preserves bit-level sharing.
 - Avoid repeating: linear run-range chains, balanced range trees, casez cube
   covers, simple case attributes, and selected-bit semantic replacement.
+
+## 2026-06-07 ex223-ex224 Nested Mantissa Breakthrough
+
+Generator:
+- `student/generators/fp16_log_nested_semantic.py`
+
+Curated seed:
+- `student/seeds/fp16/ex223_ex225_frontend_fp16_log_nested_current_20260607_2140/`
+
+Official `evaluate.py` results:
+- `ex223`: `ex223_log_nested_low11_hi5_abc_g_aig`, `10753/19/204307`,
+  reference ratio `1.694805`.
+- `ex224`: `ex224_log_nested_low12_hi6_abc_g_aig`, `6014/16/96224`,
+  reference ratio `1.487050`, now within `1.5x`.
+
+Structure:
+- Keep non-positive/special sign-exp groups as exact special/default table.
+- For positive normal inputs, split by sign+exponent.
+- Emit high output bits as per-exp mantissa run trees.
+- Emit noisy low bits as a nested mantissa hi/lo LUT.
+- Sweep the low-bit boundary only after the source structure is exact.
+
+Lessons:
+- This is the first log/log2 source shape that beats the previous selected-bit
+  and direct sign-exp-mant table seeds.
+- For `ex224`, expanding the nested low table through output bit 11
+  (`low12_hi6`) drops delay to 16 and gets within `1.5x` reference.
+- For `ex223`, the useful boundary is `low11_hi5`; expanding to low12/low13
+  no longer improves ADP.
+- Do not repeat broad casez/bitrun sweeps for these two cases before trying a
+  more arithmetic shallow normalizer; the nested source now supersedes those
+  old baselines.

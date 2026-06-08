@@ -1,0 +1,13 @@
+case,variant,notes
+ex236,formula_high9_8_hi5,"special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=3; exp_delta_max=2; mant_high=9,8; low_width=8; nested_hi=5"
+ex236,formula_high9_8_hi6,"special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=3; exp_delta_max=2; mant_high=9,8; low_width=8; nested_hi=6"
+ex236,formula_high9_hi5,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=3; exp_delta_max=2; mant_high=9; low_width=9; nested_hi=5
+ex236,formula_high9_hi6,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=3; exp_delta_max=2; mant_high=9; low_width=9; nested_hi=6
+ex236,formula_highnone_hi5,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=3; exp_delta_max=2; mant_high=; low_width=10; nested_hi=5
+ex236,formula_highnone_hi6,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=3; exp_delta_max=2; mant_high=; low_width=10; nested_hi=6
+ex238,formula_high9_8_hi5,"special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=4; exp_delta_max=3; mant_high=9,8; low_width=8; nested_hi=5"
+ex238,formula_high9_8_hi6,"special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=4; exp_delta_max=3; mant_high=9,8; low_width=8; nested_hi=6"
+ex238,formula_high9_hi5,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=4; exp_delta_max=3; mant_high=9; low_width=9; nested_hi=5
+ex238,formula_high9_hi6,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=4; exp_delta_max=3; mant_high=9; low_width=9; nested_hi=6
+ex238,formula_highnone_hi5,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=4; exp_delta_max=3; mant_high=; low_width=10; nested_hi=5
+ex238,formula_highnone_hi6,special_const=40; special_full=6; special_items=6184; exp_delta_width=2; exp_delta_runs=4; exp_delta_max=3; mant_high=; low_width=10; nested_hi=6

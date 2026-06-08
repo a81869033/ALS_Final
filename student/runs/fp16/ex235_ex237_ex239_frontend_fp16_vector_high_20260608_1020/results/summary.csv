@@ -1,0 +1,4 @@
+case,variant,notes
+ex235,packed_high_vector,"special_const=33; special_full=1; special_items=1057; low_width=8; nested_hi=6; classes=0,1; high_vector_bits=14,13,12,11,10,9,8; width=7; total_runs=90; max_runs=4; const_groups=0"
+ex237,packed_high_vector,"special_const=2; special_full=2; special_items=2050; low_width=10; nested_hi=6; classes=0,1,2; high_vector_bits=14,13,12,11,10; width=5; total_runs=40; max_runs=2; const_groups=20"
+ex239,packed_high_vector,"special_const=2; special_full=2; special_items=2050; low_width=8; nested_hi=6; classes=0,1,2; high_vector_bits=14,13,12,11,10,9,8; width=7; total_runs=70; max_runs=3; const_groups=0"

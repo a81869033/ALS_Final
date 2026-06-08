@@ -1,0 +1,6 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,classification,notes
+ex235,ex235_open_low8_hi6_abc_g_aig,1685,14,23590,20800,1.134135,1,0,synthflow_exact,Yosys abc gate set aig
+ex236,ex236_sign_only_synth_preset,1531,16,24496,17290,1.416773,1,0,synthflow_exact,Yosys synth preset with flatten
+ex237,ex237_open_low10_hi6_abc_g_aig,1934,16,30944,25440,1.216352,1,0,synthflow_exact,Yosys abc gate set aig
+ex238,ex238_b10_9_formula_expr_abc_g_aig,1553,16,24848,16549,1.501480,0,0,synthflow_exact,Yosys abc gate set aig
+ex239,ex239_open_low8_hi6_abc_g_aig,2049,16,32784,25965,1.262623,1,0,synthflow_exact,Yosys abc gate set aig

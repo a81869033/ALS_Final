@@ -1,0 +1,6 @@
+case,status,area,delay,adp,source,notes
+ex230,OK,6969,20,139380,student/seeds/fp16/ex230_ex234_frontend_fp16_current_20260607_1853/ex230/aigs/ex230_exp_mant_pair_case_abc_g_aig.aig,official evaluate.py --case ex230 OK
+ex231,OK,1286,16,20576,student/seeds/fp16/ex230_ex234_frontend_fp16_current_20260607_1853/ex231/aigs/ex231_semantic_sign_exp_field_defaults_abc_g_aig.aig,official evaluate.py --case ex231 OK
+ex232,OK,1343,16,21488,student/seeds/fp16/ex230_ex234_frontend_fp16_current_20260607_1853/ex232/aigs/ex232_bitvec_bits12_9_t32_abc_g_aig.aig,official evaluate.py --case ex232 OK
+ex233,OK,1674,17,28458,student/seeds/fp16/ex230_ex234_frontend_fp16_current_20260607_1853/ex233/aigs/ex233_bitvec_bits14_13_12_9_t32_abc_g_aig.aig,official evaluate.py --case ex233 OK
+ex234,OK,1355,17,23035,student/seeds/fp16/ex230_ex234_frontend_fp16_current_20260607_1853/ex234/aigs/ex234_sign_pair_case_abc_g_aig.aig,official evaluate.py --case ex234 OK

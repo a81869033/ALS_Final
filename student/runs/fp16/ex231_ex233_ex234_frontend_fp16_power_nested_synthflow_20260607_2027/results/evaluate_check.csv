@@ -1,0 +1,4 @@
+case,status,area,delay,adp,notes
+ex231,OK,1163,14,16282,exact by evaluate_aig; no synthflow improvement
+ex233,OK,1530,15,22950,exact by evaluate_aig; no synthflow improvement
+ex234,OK,1351,17,22967,exact by evaluate_aig; no synthflow improvement

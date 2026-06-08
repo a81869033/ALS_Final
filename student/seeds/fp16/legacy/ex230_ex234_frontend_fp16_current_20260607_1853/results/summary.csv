@@ -1,0 +1,6 @@
+case,function,previous_best_area,previous_best_delay,previous_best_adp,current_area,current_delay,current_adp,adp_improvement,reference_adp,current_ratio,notes
+ex230,fp16_sigmoid,7038,21,147798,6969,20,139380,8418,108320,1.286743,"existing exp-mant pair-case source plus abc_g_aig AIG"
+ex231,fp16_reciprocal,1226,17,20842,1286,16,20576,266,14066,1.462818,"semantic sign/exp field-default source plus abc_g_aig AIG; delay improvement offsets area increase"
+ex232,fp16_square,1365,17,23205,1343,16,21488,1717,13392,1.604540,"selected-bit vector cover for bits12+9 plus abc_g_aig AIG; still above 1.5x reference"
+ex233,fp16_sqrt,1714,18,30852,1674,17,28458,2394,20174,1.410628,"selected-bit vector cover for bits14+13+12+9 plus abc_g_aig AIG"
+ex234,fp16_reciprocal_square,1362,17,23154,1355,17,23035,119,15561,1.480303,"existing sign-pair source plus abc_g_aig AIG"

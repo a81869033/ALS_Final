@@ -1,0 +1,4 @@
+case,status,area,delay,adp,source,notes
+ex231,OK,1163,14,16282,student/seeds/fp16/ex231_ex233_ex234_frontend_fp16_power_nested_current_20260607_2027/ex231/aigs/ex231_nested_bits9_hi6_abc_g_aig.aig,official evaluate.py --case ex231 OK
+ex233,OK,1530,15,22950,student/seeds/fp16/ex231_ex233_ex234_frontend_fp16_power_nested_current_20260607_2027/ex233/aigs/ex233_nested_bits9_8_hi6_abc_g_aig.aig,official evaluate.py --case ex233 OK
+ex234,OK,1351,17,22967,student/seeds/fp16/ex231_ex233_ex234_frontend_fp16_power_nested_current_20260607_2027/ex234/aigs/ex234_nested_bits9_8_hi5_abc_g_aig.aig,official evaluate.py --case ex234 OK

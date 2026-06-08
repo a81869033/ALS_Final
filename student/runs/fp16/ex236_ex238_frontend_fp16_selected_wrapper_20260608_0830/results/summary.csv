@@ -1,0 +1,20 @@
+case,variant,notes
+ex236,sign_only,sign_bit=input_sign
+ex236,mag_b10_t4,sign_bit=input_sign; bits=10; threshold=4; const_groups=21; range_groups=11; table_groups=0; range_items=32; table_items=0; max_runs=3
+ex236,mag_b10_t8,sign_bit=input_sign; bits=10; threshold=8; const_groups=21; range_groups=11; table_groups=0; range_items=32; table_items=0; max_runs=3
+ex236,mag_b9_t8,sign_bit=input_sign; bits=9; threshold=8; const_groups=20; range_groups=12; table_groups=0; range_items=63; table_items=0; max_runs=6
+ex236,mag_b10_9_t8,"sign_bit=input_sign; bits=10,9; threshold=8; const_groups=20; range_groups=12; table_groups=0; range_items=64; table_items=0; max_runs=6"
+ex236,mag_b10_9_8_t16,"sign_bit=input_sign; bits=10,9,8; threshold=16; const_groups=20; range_groups=12; table_groups=0; range_items=124; table_items=0; max_runs=12"
+ex236,mag_b11_10_t8,"sign_bit=input_sign; bits=11,10; threshold=8; const_groups=21; range_groups=11; table_groups=0; range_items=32; table_items=0; max_runs=3"
+ex236,mag_b12_11_10_t8,"sign_bit=input_sign; bits=12,11,10; threshold=8; const_groups=21; range_groups=11; table_groups=0; range_items=32; table_items=0; max_runs=3"
+ex236,mag_b10_9_8_7_t32,"sign_bit=input_sign; bits=10,9,8,7; threshold=32; const_groups=20; range_groups=12; table_groups=0; range_items=244; table_items=0; max_runs=24"
+ex238,sign_only,sign_bit=input_sign
+ex238,mag_b11_t4,sign_bit=input_sign; bits=11; threshold=4; const_groups=21; range_groups=11; table_groups=0; range_items=27; table_items=0; max_runs=3
+ex238,mag_b11_t8,sign_bit=input_sign; bits=11; threshold=8; const_groups=21; range_groups=11; table_groups=0; range_items=27; table_items=0; max_runs=3
+ex238,mag_b10_t4,sign_bit=input_sign; bits=10; threshold=4; const_groups=20; range_groups=12; table_groups=0; range_items=44; table_items=0; max_runs=4
+ex238,mag_b10_t8,sign_bit=input_sign; bits=10; threshold=8; const_groups=20; range_groups=12; table_groups=0; range_items=44; table_items=0; max_runs=4
+ex238,mag_b11_10_t8,"sign_bit=input_sign; bits=11,10; threshold=8; const_groups=20; range_groups=12; table_groups=0; range_items=44; table_items=0; max_runs=4"
+ex238,mag_b11_10_9_t8,"sign_bit=input_sign; bits=11,10,9; threshold=8; const_groups=20; range_groups=12; table_groups=0; range_items=74; table_items=0; max_runs=7"
+ex238,mag_b11_10_9_t16,"sign_bit=input_sign; bits=11,10,9; threshold=16; const_groups=20; range_groups=12; table_groups=0; range_items=74; table_items=0; max_runs=7"
+ex238,mag_b10_9_8_t16,"sign_bit=input_sign; bits=10,9,8; threshold=16; const_groups=20; range_groups=12; table_groups=0; range_items=134; table_items=0; max_runs=13"
+ex238,mag_b11_10_9_8_t16,"sign_bit=input_sign; bits=11,10,9,8; threshold=16; const_groups=20; range_groups=12; table_groups=0; range_items=134; table_items=0; max_runs=13"

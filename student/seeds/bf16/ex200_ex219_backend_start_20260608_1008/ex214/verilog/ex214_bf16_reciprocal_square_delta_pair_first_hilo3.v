@@ -1,0 +1,22328 @@
+module ex214_bf16_reciprocal_square_delta_pair_first_hilo3(in, out);
+  input [15:0] in;
+  output [15:0] out;
+  wire [8:0] sign_exp = in[15:7];
+  wire [6:0] mant = in[6:0];
+  wire mant_hi1 = mant[6];
+  wire [5:0] mant_lo6 = mant[5:0];
+  wire [1:0] mant_hi2 = mant[6:5];
+  wire [4:0] mant_lo5 = mant[4:0];
+  wire [2:0] mant_hi3 = mant[6:4];
+  wire [3:0] mant_lo4 = mant[3:0];
+  wire [3:0] mant_hi4 = mant[6:3];
+  wire [2:0] mant_lo3 = mant[2:0];
+  wire [4:0] mant_hi5 = mant[6:2];
+  wire [1:0] mant_lo2 = mant[1:0];
+  wire [5:0] mant_hi6 = mant[6:1];
+  wire mant_lo1 = mant[0];
+  wire sign = in[15];
+  wire [7:0] exp = in[14:7];
+  reg [31:0] base_pair;
+  reg [31:0] delta_pair;
+  always @* begin
+    case (exp)
+      8'h00: base_pair = 32'h7f807f80;
+      8'h01: base_pair = 32'h7f807f80;
+      8'h02: base_pair = 32'h7f807f80;
+      8'h03: base_pair = 32'h7f807f80;
+      8'h04: base_pair = 32'h7f807f80;
+      8'h05: base_pair = 32'h7f807f80;
+      8'h06: base_pair = 32'h7f807f80;
+      8'h07: base_pair = 32'h7f807f80;
+      8'h08: base_pair = 32'h7f807f80;
+      8'h09: base_pair = 32'h7f807f80;
+      8'h0a: base_pair = 32'h7f807f80;
+      8'h0b: base_pair = 32'h7f807f80;
+      8'h0c: base_pair = 32'h7f807f80;
+      8'h0d: base_pair = 32'h7f807f80;
+      8'h0e: base_pair = 32'h7f807f80;
+      8'h0f: base_pair = 32'h7f807f80;
+      8'h10: base_pair = 32'h7f807f80;
+      8'h11: base_pair = 32'h7f807f80;
+      8'h12: base_pair = 32'h7f807f80;
+      8'h13: base_pair = 32'h7f807f80;
+      8'h14: base_pair = 32'h7f807f80;
+      8'h15: base_pair = 32'h7f807f80;
+      8'h16: base_pair = 32'h7f807f80;
+      8'h17: base_pair = 32'h7f807f80;
+      8'h18: base_pair = 32'h7f807f80;
+      8'h19: base_pair = 32'h7f807f80;
+      8'h1a: base_pair = 32'h7f807f80;
+      8'h1b: base_pair = 32'h7f807f80;
+      8'h1c: base_pair = 32'h7f807f80;
+      8'h1d: base_pair = 32'h7f807f80;
+      8'h1e: base_pair = 32'h7f807f80;
+      8'h1f: base_pair = 32'h7f807f80;
+      8'h20: base_pair = 32'h7f807f80;
+      8'h21: base_pair = 32'h7f807f80;
+      8'h22: base_pair = 32'h7f807f80;
+      8'h23: base_pair = 32'h7f807f80;
+      8'h24: base_pair = 32'h7f807f80;
+      8'h25: base_pair = 32'h7f807f80;
+      8'h26: base_pair = 32'h7f807f80;
+      8'h27: base_pair = 32'h7f807f80;
+      8'h28: base_pair = 32'h7f807f80;
+      8'h29: base_pair = 32'h7f807f80;
+      8'h2a: base_pair = 32'h7f807f80;
+      8'h2b: base_pair = 32'h7f807f80;
+      8'h2c: base_pair = 32'h7f807f80;
+      8'h2d: base_pair = 32'h7f807f80;
+      8'h2e: base_pair = 32'h7f807f80;
+      8'h2f: base_pair = 32'h7f807f80;
+      8'h30: base_pair = 32'h7f807f80;
+      8'h31: base_pair = 32'h7f807f80;
+      8'h32: base_pair = 32'h7f807f80;
+      8'h33: base_pair = 32'h7f807f80;
+      8'h34: base_pair = 32'h7f807f80;
+      8'h35: base_pair = 32'h7f807f80;
+      8'h36: base_pair = 32'h7f807f80;
+      8'h37: base_pair = 32'h7f807f80;
+      8'h38: base_pair = 32'h7f807f80;
+      8'h39: base_pair = 32'h7f807f80;
+      8'h3a: base_pair = 32'h7f807f80;
+      8'h3b: base_pair = 32'h7f807f80;
+      8'h3c: base_pair = 32'h7f807f80;
+      8'h3d: base_pair = 32'h7f807f80;
+      8'h3e: base_pair = 32'h7f807f80;
+      8'h3f: base_pair = 32'h7f807f80;
+      8'h40: base_pair = 32'h7e807e80;
+      8'h41: base_pair = 32'h7d807d80;
+      8'h42: base_pair = 32'h7c807c80;
+      8'h43: base_pair = 32'h7b807b80;
+      8'h44: base_pair = 32'h7a807a80;
+      8'h45: base_pair = 32'h79807980;
+      8'h46: base_pair = 32'h78807880;
+      8'h47: base_pair = 32'h77807780;
+      8'h48: base_pair = 32'h76807680;
+      8'h49: base_pair = 32'h75807580;
+      8'h4a: base_pair = 32'h74807480;
+      8'h4b: base_pair = 32'h73807380;
+      8'h4c: base_pair = 32'h72807280;
+      8'h4d: base_pair = 32'h71807180;
+      8'h4e: base_pair = 32'h70807080;
+      8'h4f: base_pair = 32'h6f806f80;
+      8'h50: base_pair = 32'h6e806e80;
+      8'h51: base_pair = 32'h6d806d80;
+      8'h52: base_pair = 32'h6c806c80;
+      8'h53: base_pair = 32'h6b806b80;
+      8'h54: base_pair = 32'h6a806a80;
+      8'h55: base_pair = 32'h69806980;
+      8'h56: base_pair = 32'h68806880;
+      8'h57: base_pair = 32'h67806780;
+      8'h58: base_pair = 32'h66806680;
+      8'h59: base_pair = 32'h65806580;
+      8'h5a: base_pair = 32'h64806480;
+      8'h5b: base_pair = 32'h63806380;
+      8'h5c: base_pair = 32'h62806280;
+      8'h5d: base_pair = 32'h61806180;
+      8'h5e: base_pair = 32'h60806080;
+      8'h5f: base_pair = 32'h5f805f80;
+      8'h60: base_pair = 32'h5e805e80;
+      8'h61: base_pair = 32'h5d805d80;
+      8'h62: base_pair = 32'h5c805c80;
+      8'h63: base_pair = 32'h5b805b80;
+      8'h64: base_pair = 32'h5a805a80;
+      8'h65: base_pair = 32'h59805980;
+      8'h66: base_pair = 32'h58805880;
+      8'h67: base_pair = 32'h57805780;
+      8'h68: base_pair = 32'h56805680;
+      8'h69: base_pair = 32'h55805580;
+      8'h6a: base_pair = 32'h54805480;
+      8'h6b: base_pair = 32'h53805380;
+      8'h6c: base_pair = 32'h52805280;
+      8'h6d: base_pair = 32'h51805180;
+      8'h6e: base_pair = 32'h50805080;
+      8'h6f: base_pair = 32'h4f804f80;
+      8'h70: base_pair = 32'h4e804e80;
+      8'h71: base_pair = 32'h4d804d80;
+      8'h72: base_pair = 32'h4c804c80;
+      8'h73: base_pair = 32'h4b804b80;
+      8'h74: base_pair = 32'h4a804a80;
+      8'h75: base_pair = 32'h49804980;
+      8'h76: base_pair = 32'h48804880;
+      8'h77: base_pair = 32'h47804780;
+      8'h78: base_pair = 32'h46804680;
+      8'h79: base_pair = 32'h45804580;
+      8'h7a: base_pair = 32'h44804480;
+      8'h7b: base_pair = 32'h43804380;
+      8'h7c: base_pair = 32'h42804280;
+      8'h7d: base_pair = 32'h41804180;
+      8'h7e: base_pair = 32'h40804080;
+      8'h7f: base_pair = 32'h3f803f80;
+      8'h80: base_pair = 32'h3e803e80;
+      8'h81: base_pair = 32'h3d803d80;
+      8'h82: base_pair = 32'h3c803c80;
+      8'h83: base_pair = 32'h3b803b80;
+      8'h84: base_pair = 32'h3a803a80;
+      8'h85: base_pair = 32'h39803980;
+      8'h86: base_pair = 32'h38803880;
+      8'h87: base_pair = 32'h37803780;
+      8'h88: base_pair = 32'h36803680;
+      8'h89: base_pair = 32'h35803580;
+      8'h8a: base_pair = 32'h34803480;
+      8'h8b: base_pair = 32'h33803380;
+      8'h8c: base_pair = 32'h32803280;
+      8'h8d: base_pair = 32'h31803180;
+      8'h8e: base_pair = 32'h30803080;
+      8'h8f: base_pair = 32'h2f802f80;
+      8'h90: base_pair = 32'h2e802e80;
+      8'h91: base_pair = 32'h2d802d80;
+      8'h92: base_pair = 32'h2c802c80;
+      8'h93: base_pair = 32'h2b802b80;
+      8'h94: base_pair = 32'h2a802a80;
+      8'h95: base_pair = 32'h29802980;
+      8'h96: base_pair = 32'h28802880;
+      8'h97: base_pair = 32'h27802780;
+      8'h98: base_pair = 32'h26802680;
+      8'h99: base_pair = 32'h25802580;
+      8'h9a: base_pair = 32'h24802480;
+      8'h9b: base_pair = 32'h23802380;
+      8'h9c: base_pair = 32'h22802280;
+      8'h9d: base_pair = 32'h21802180;
+      8'h9e: base_pair = 32'h20802080;
+      8'h9f: base_pair = 32'h1f801f80;
+      8'ha0: base_pair = 32'h1e801e80;
+      8'ha1: base_pair = 32'h1d801d80;
+      8'ha2: base_pair = 32'h1c801c80;
+      8'ha3: base_pair = 32'h1b801b80;
+      8'ha4: base_pair = 32'h1a801a80;
+      8'ha5: base_pair = 32'h19801980;
+      8'ha6: base_pair = 32'h18801880;
+      8'ha7: base_pair = 32'h17801780;
+      8'ha8: base_pair = 32'h16801680;
+      8'ha9: base_pair = 32'h15801580;
+      8'haa: base_pair = 32'h14801480;
+      8'hab: base_pair = 32'h13801380;
+      8'hac: base_pair = 32'h12801280;
+      8'had: base_pair = 32'h11801180;
+      8'hae: base_pair = 32'h10801080;
+      8'haf: base_pair = 32'h0f800f80;
+      8'hb0: base_pair = 32'h0e800e80;
+      8'hb1: base_pair = 32'h0d800d80;
+      8'hb2: base_pair = 32'h0c800c80;
+      8'hb3: base_pair = 32'h0b800b80;
+      8'hb4: base_pair = 32'h0a800a80;
+      8'hb5: base_pair = 32'h09800980;
+      8'hb6: base_pair = 32'h08800880;
+      8'hb7: base_pair = 32'h07800780;
+      8'hb8: base_pair = 32'h06800680;
+      8'hb9: base_pair = 32'h05800580;
+      8'hba: base_pair = 32'h04800480;
+      8'hbb: base_pair = 32'h03800380;
+      8'hbc: base_pair = 32'h02800280;
+      8'hbd: base_pair = 32'h01800180;
+      8'hbe: base_pair = 32'h00800080;
+      8'hbf: base_pair = 32'h00000000;
+      8'hc0: base_pair = 32'h00000000;
+      8'hc1: base_pair = 32'h00000000;
+      8'hc2: base_pair = 32'h00000000;
+      8'hc3: base_pair = 32'h00000000;
+      8'hc4: base_pair = 32'h00000000;
+      8'hc5: base_pair = 32'h00000000;
+      8'hc6: base_pair = 32'h00000000;
+      8'hc7: base_pair = 32'h00000000;
+      8'hc8: base_pair = 32'h00000000;
+      8'hc9: base_pair = 32'h00000000;
+      8'hca: base_pair = 32'h00000000;
+      8'hcb: base_pair = 32'h00000000;
+      8'hcc: base_pair = 32'h00000000;
+      8'hcd: base_pair = 32'h00000000;
+      8'hce: base_pair = 32'h00000000;
+      8'hcf: base_pair = 32'h00000000;
+      8'hd0: base_pair = 32'h00000000;
+      8'hd1: base_pair = 32'h00000000;
+      8'hd2: base_pair = 32'h00000000;
+      8'hd3: base_pair = 32'h00000000;
+      8'hd4: base_pair = 32'h00000000;
+      8'hd5: base_pair = 32'h00000000;
+      8'hd6: base_pair = 32'h00000000;
+      8'hd7: base_pair = 32'h00000000;
+      8'hd8: base_pair = 32'h00000000;
+      8'hd9: base_pair = 32'h00000000;
+      8'hda: base_pair = 32'h00000000;
+      8'hdb: base_pair = 32'h00000000;
+      8'hdc: base_pair = 32'h00000000;
+      8'hdd: base_pair = 32'h00000000;
+      8'hde: base_pair = 32'h00000000;
+      8'hdf: base_pair = 32'h00000000;
+      8'he0: base_pair = 32'h00000000;
+      8'he1: base_pair = 32'h00000000;
+      8'he2: base_pair = 32'h00000000;
+      8'he3: base_pair = 32'h00000000;
+      8'he4: base_pair = 32'h00000000;
+      8'he5: base_pair = 32'h00000000;
+      8'he6: base_pair = 32'h00000000;
+      8'he7: base_pair = 32'h00000000;
+      8'he8: base_pair = 32'h00000000;
+      8'he9: base_pair = 32'h00000000;
+      8'hea: base_pair = 32'h00000000;
+      8'heb: base_pair = 32'h00000000;
+      8'hec: base_pair = 32'h00000000;
+      8'hed: base_pair = 32'h00000000;
+      8'hee: base_pair = 32'h00000000;
+      8'hef: base_pair = 32'h00000000;
+      8'hf0: base_pair = 32'h00000000;
+      8'hf1: base_pair = 32'h00000000;
+      8'hf2: base_pair = 32'h00000000;
+      8'hf3: base_pair = 32'h00000000;
+      8'hf4: base_pair = 32'h00000000;
+      8'hf5: base_pair = 32'h00000000;
+      8'hf6: base_pair = 32'h00000000;
+      8'hf7: base_pair = 32'h00000000;
+      8'hf8: base_pair = 32'h00000000;
+      8'hf9: base_pair = 32'h00000000;
+      8'hfa: base_pair = 32'h00000000;
+      8'hfb: base_pair = 32'h00000000;
+      8'hfc: base_pair = 32'h00000000;
+      8'hfd: base_pair = 32'h00000000;
+      8'hfe: base_pair = 32'h00000000;
+      8'hff: base_pair = 32'h00000000;
+      default: base_pair = 32'h00000000;
+    endcase
+  end
+  always @* begin
+    delta_pair = 32'h00000000;
+    case (exp)
+      8'h3f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h40: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h41: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h42: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h43: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h44: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h45: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h46: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h47: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h48: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h49: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h4a: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h4b: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h4c: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h4d: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h4e: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h1f7d1f7d;
+              4'h7: delta_pair = 32'h1f7a1f7a;
+              4'h8: delta_pair = 32'h1f781f78;
+              4'h9: delta_pair = 32'h1f751f75;
+              4'ha: delta_pair = 32'h1f721f72;
+              4'hb: delta_pair = 32'h1f701f70;
+              4'hc: delta_pair = 32'h1f6d1f6d;
+              4'hd: delta_pair = 32'h1f6b1f6b;
+              4'he: delta_pair = 32'h1f681f68;
+              4'hf: delta_pair = 32'h1f661f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h1f641f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f611f61;
+              4'h2: delta_pair = 32'h1f5f1f5f;
+              4'h3: delta_pair = 32'h1f5d1f5d;
+              4'h4: delta_pair = 32'h1f5a1f5a;
+              4'h5: delta_pair = 32'h1f581f58;
+              4'h6: delta_pair = 32'h1f561f56;
+              4'h7: delta_pair = 32'h1f541f54;
+              4'h8: delta_pair = 32'h1f521f52;
+              4'h9: delta_pair = 32'h1f501f50;
+              4'ha: delta_pair = 32'h1f4e1f4e;
+              4'hb: delta_pair = 32'h1f4c1f4c;
+              4'hc: delta_pair = 32'h1f4a1f4a;
+              4'hd: delta_pair = 32'h1f481f48;
+              4'he: delta_pair = 32'h1f461f46;
+              4'hf: delta_pair = 32'h1f441f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h1f421f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f401f40;
+              4'h2: delta_pair = 32'h1f3e1f3e;
+              4'h3: delta_pair = 32'h1f3c1f3c;
+              4'h4: delta_pair = 32'h1f3b1f3b;
+              4'h5: delta_pair = 32'h1f391f39;
+              4'h6: delta_pair = 32'h1f371f37;
+              4'h7: delta_pair = 32'h1f351f35;
+              4'h8: delta_pair = 32'h1f341f34;
+              4'h9: delta_pair = 32'h1f321f32;
+              4'ha: delta_pair = 32'h1f311f31;
+              4'hb: delta_pair = 32'h1f2f1f2f;
+              4'hc: delta_pair = 32'h1f2d1f2d;
+              4'hd: delta_pair = 32'h1f2c1f2c;
+              4'he: delta_pair = 32'h1f2a1f2a;
+              4'hf: delta_pair = 32'h1f291f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h1f271f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f261f26;
+              4'h2: delta_pair = 32'h1f241f24;
+              4'h3: delta_pair = 32'h1f231f23;
+              4'h4: delta_pair = 32'h1f211f21;
+              4'h5: delta_pair = 32'h1f201f20;
+              4'h6: delta_pair = 32'h1f1f1f1f;
+              4'h7: delta_pair = 32'h1f1d1f1d;
+              4'h8: delta_pair = 32'h1f1c1f1c;
+              4'h9: delta_pair = 32'h1f1b1f1b;
+              4'ha: delta_pair = 32'h1f191f19;
+              4'hb: delta_pair = 32'h1f181f18;
+              4'hc: delta_pair = 32'h1f171f17;
+              4'hd: delta_pair = 32'h1f151f15;
+              4'he: delta_pair = 32'h1f141f14;
+              4'hf: delta_pair = 32'h1f131f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h1f121f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f101f10;
+              4'h2: delta_pair = 32'h1f0f1f0f;
+              4'h3: delta_pair = 32'h1f0e1f0e;
+              4'h4: delta_pair = 32'h1f0d1f0d;
+              4'h5: delta_pair = 32'h1f0c1f0c;
+              4'h6: delta_pair = 32'h1f0b1f0b;
+              4'h7: delta_pair = 32'h1f091f09;
+              4'h8: delta_pair = 32'h1f081f08;
+              4'h9: delta_pair = 32'h1f071f07;
+              4'ha: delta_pair = 32'h1f061f06;
+              4'hb: delta_pair = 32'h1f051f05;
+              4'hc: delta_pair = 32'h1f041f04;
+              4'hd: delta_pair = 32'h1f031f03;
+              4'he: delta_pair = 32'h1f021f02;
+              4'hf: delta_pair = 32'h1f011f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h4f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h50: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h51: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h52: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h53: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h54: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h55: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h56: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h57: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h58: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h59: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h5a: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h5b: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h5c: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h5d: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h5e: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h3f7d3f7d;
+              4'h7: delta_pair = 32'h3f7a3f7a;
+              4'h8: delta_pair = 32'h3f783f78;
+              4'h9: delta_pair = 32'h3f753f75;
+              4'ha: delta_pair = 32'h3f723f72;
+              4'hb: delta_pair = 32'h3f703f70;
+              4'hc: delta_pair = 32'h3f6d3f6d;
+              4'hd: delta_pair = 32'h3f6b3f6b;
+              4'he: delta_pair = 32'h3f683f68;
+              4'hf: delta_pair = 32'h3f663f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h3f643f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f613f61;
+              4'h2: delta_pair = 32'h3f5f3f5f;
+              4'h3: delta_pair = 32'h3f5d3f5d;
+              4'h4: delta_pair = 32'h3f5a3f5a;
+              4'h5: delta_pair = 32'h3f583f58;
+              4'h6: delta_pair = 32'h3f563f56;
+              4'h7: delta_pair = 32'h3f543f54;
+              4'h8: delta_pair = 32'h3f523f52;
+              4'h9: delta_pair = 32'h3f503f50;
+              4'ha: delta_pair = 32'h3f4e3f4e;
+              4'hb: delta_pair = 32'h3f4c3f4c;
+              4'hc: delta_pair = 32'h3f4a3f4a;
+              4'hd: delta_pair = 32'h3f483f48;
+              4'he: delta_pair = 32'h3f463f46;
+              4'hf: delta_pair = 32'h3f443f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h3f423f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f403f40;
+              4'h2: delta_pair = 32'h3f3e3f3e;
+              4'h3: delta_pair = 32'h3f3c3f3c;
+              4'h4: delta_pair = 32'h3f3b3f3b;
+              4'h5: delta_pair = 32'h3f393f39;
+              4'h6: delta_pair = 32'h3f373f37;
+              4'h7: delta_pair = 32'h3f353f35;
+              4'h8: delta_pair = 32'h3f343f34;
+              4'h9: delta_pair = 32'h3f323f32;
+              4'ha: delta_pair = 32'h3f313f31;
+              4'hb: delta_pair = 32'h3f2f3f2f;
+              4'hc: delta_pair = 32'h3f2d3f2d;
+              4'hd: delta_pair = 32'h3f2c3f2c;
+              4'he: delta_pair = 32'h3f2a3f2a;
+              4'hf: delta_pair = 32'h3f293f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h3f273f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f263f26;
+              4'h2: delta_pair = 32'h3f243f24;
+              4'h3: delta_pair = 32'h3f233f23;
+              4'h4: delta_pair = 32'h3f213f21;
+              4'h5: delta_pair = 32'h3f203f20;
+              4'h6: delta_pair = 32'h3f1f3f1f;
+              4'h7: delta_pair = 32'h3f1d3f1d;
+              4'h8: delta_pair = 32'h3f1c3f1c;
+              4'h9: delta_pair = 32'h3f1b3f1b;
+              4'ha: delta_pair = 32'h3f193f19;
+              4'hb: delta_pair = 32'h3f183f18;
+              4'hc: delta_pair = 32'h3f173f17;
+              4'hd: delta_pair = 32'h3f153f15;
+              4'he: delta_pair = 32'h3f143f14;
+              4'hf: delta_pair = 32'h3f133f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h3f123f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f103f10;
+              4'h2: delta_pair = 32'h3f0f3f0f;
+              4'h3: delta_pair = 32'h3f0e3f0e;
+              4'h4: delta_pair = 32'h3f0d3f0d;
+              4'h5: delta_pair = 32'h3f0c3f0c;
+              4'h6: delta_pair = 32'h3f0b3f0b;
+              4'h7: delta_pair = 32'h3f093f09;
+              4'h8: delta_pair = 32'h3f083f08;
+              4'h9: delta_pair = 32'h3f073f07;
+              4'ha: delta_pair = 32'h3f063f06;
+              4'hb: delta_pair = 32'h3f053f05;
+              4'hc: delta_pair = 32'h3f043f04;
+              4'hd: delta_pair = 32'h3f033f03;
+              4'he: delta_pair = 32'h3f023f02;
+              4'hf: delta_pair = 32'h3f013f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h5f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h60: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h61: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h62: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h63: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h64: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h65: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h66: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h67: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h68: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h69: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h6a: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h6b: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h6c: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h6d: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h6e: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h1f7d1f7d;
+              4'h7: delta_pair = 32'h1f7a1f7a;
+              4'h8: delta_pair = 32'h1f781f78;
+              4'h9: delta_pair = 32'h1f751f75;
+              4'ha: delta_pair = 32'h1f721f72;
+              4'hb: delta_pair = 32'h1f701f70;
+              4'hc: delta_pair = 32'h1f6d1f6d;
+              4'hd: delta_pair = 32'h1f6b1f6b;
+              4'he: delta_pair = 32'h1f681f68;
+              4'hf: delta_pair = 32'h1f661f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h1f641f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f611f61;
+              4'h2: delta_pair = 32'h1f5f1f5f;
+              4'h3: delta_pair = 32'h1f5d1f5d;
+              4'h4: delta_pair = 32'h1f5a1f5a;
+              4'h5: delta_pair = 32'h1f581f58;
+              4'h6: delta_pair = 32'h1f561f56;
+              4'h7: delta_pair = 32'h1f541f54;
+              4'h8: delta_pair = 32'h1f521f52;
+              4'h9: delta_pair = 32'h1f501f50;
+              4'ha: delta_pair = 32'h1f4e1f4e;
+              4'hb: delta_pair = 32'h1f4c1f4c;
+              4'hc: delta_pair = 32'h1f4a1f4a;
+              4'hd: delta_pair = 32'h1f481f48;
+              4'he: delta_pair = 32'h1f461f46;
+              4'hf: delta_pair = 32'h1f441f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h1f421f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f401f40;
+              4'h2: delta_pair = 32'h1f3e1f3e;
+              4'h3: delta_pair = 32'h1f3c1f3c;
+              4'h4: delta_pair = 32'h1f3b1f3b;
+              4'h5: delta_pair = 32'h1f391f39;
+              4'h6: delta_pair = 32'h1f371f37;
+              4'h7: delta_pair = 32'h1f351f35;
+              4'h8: delta_pair = 32'h1f341f34;
+              4'h9: delta_pair = 32'h1f321f32;
+              4'ha: delta_pair = 32'h1f311f31;
+              4'hb: delta_pair = 32'h1f2f1f2f;
+              4'hc: delta_pair = 32'h1f2d1f2d;
+              4'hd: delta_pair = 32'h1f2c1f2c;
+              4'he: delta_pair = 32'h1f2a1f2a;
+              4'hf: delta_pair = 32'h1f291f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h1f271f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f261f26;
+              4'h2: delta_pair = 32'h1f241f24;
+              4'h3: delta_pair = 32'h1f231f23;
+              4'h4: delta_pair = 32'h1f211f21;
+              4'h5: delta_pair = 32'h1f201f20;
+              4'h6: delta_pair = 32'h1f1f1f1f;
+              4'h7: delta_pair = 32'h1f1d1f1d;
+              4'h8: delta_pair = 32'h1f1c1f1c;
+              4'h9: delta_pair = 32'h1f1b1f1b;
+              4'ha: delta_pair = 32'h1f191f19;
+              4'hb: delta_pair = 32'h1f181f18;
+              4'hc: delta_pair = 32'h1f171f17;
+              4'hd: delta_pair = 32'h1f151f15;
+              4'he: delta_pair = 32'h1f141f14;
+              4'hf: delta_pair = 32'h1f131f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h1f121f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f101f10;
+              4'h2: delta_pair = 32'h1f0f1f0f;
+              4'h3: delta_pair = 32'h1f0e1f0e;
+              4'h4: delta_pair = 32'h1f0d1f0d;
+              4'h5: delta_pair = 32'h1f0c1f0c;
+              4'h6: delta_pair = 32'h1f0b1f0b;
+              4'h7: delta_pair = 32'h1f091f09;
+              4'h8: delta_pair = 32'h1f081f08;
+              4'h9: delta_pair = 32'h1f071f07;
+              4'ha: delta_pair = 32'h1f061f06;
+              4'hb: delta_pair = 32'h1f051f05;
+              4'hc: delta_pair = 32'h1f041f04;
+              4'hd: delta_pair = 32'h1f031f03;
+              4'he: delta_pair = 32'h1f021f02;
+              4'hf: delta_pair = 32'h1f011f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h6f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h70: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h71: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h72: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h73: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h74: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h75: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h76: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h77: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h78: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h79: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h7a: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h7b: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h7c: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h7d: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h7e: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h7f7d7f7d;
+              4'h7: delta_pair = 32'h7f7a7f7a;
+              4'h8: delta_pair = 32'h7f787f78;
+              4'h9: delta_pair = 32'h7f757f75;
+              4'ha: delta_pair = 32'h7f727f72;
+              4'hb: delta_pair = 32'h7f707f70;
+              4'hc: delta_pair = 32'h7f6d7f6d;
+              4'hd: delta_pair = 32'h7f6b7f6b;
+              4'he: delta_pair = 32'h7f687f68;
+              4'hf: delta_pair = 32'h7f667f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h7f647f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h7f617f61;
+              4'h2: delta_pair = 32'h7f5f7f5f;
+              4'h3: delta_pair = 32'h7f5d7f5d;
+              4'h4: delta_pair = 32'h7f5a7f5a;
+              4'h5: delta_pair = 32'h7f587f58;
+              4'h6: delta_pair = 32'h7f567f56;
+              4'h7: delta_pair = 32'h7f547f54;
+              4'h8: delta_pair = 32'h7f527f52;
+              4'h9: delta_pair = 32'h7f507f50;
+              4'ha: delta_pair = 32'h7f4e7f4e;
+              4'hb: delta_pair = 32'h7f4c7f4c;
+              4'hc: delta_pair = 32'h7f4a7f4a;
+              4'hd: delta_pair = 32'h7f487f48;
+              4'he: delta_pair = 32'h7f467f46;
+              4'hf: delta_pair = 32'h7f447f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h7f427f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h7f407f40;
+              4'h2: delta_pair = 32'h7f3e7f3e;
+              4'h3: delta_pair = 32'h7f3c7f3c;
+              4'h4: delta_pair = 32'h7f3b7f3b;
+              4'h5: delta_pair = 32'h7f397f39;
+              4'h6: delta_pair = 32'h7f377f37;
+              4'h7: delta_pair = 32'h7f357f35;
+              4'h8: delta_pair = 32'h7f347f34;
+              4'h9: delta_pair = 32'h7f327f32;
+              4'ha: delta_pair = 32'h7f317f31;
+              4'hb: delta_pair = 32'h7f2f7f2f;
+              4'hc: delta_pair = 32'h7f2d7f2d;
+              4'hd: delta_pair = 32'h7f2c7f2c;
+              4'he: delta_pair = 32'h7f2a7f2a;
+              4'hf: delta_pair = 32'h7f297f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h7f277f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h7f267f26;
+              4'h2: delta_pair = 32'h7f247f24;
+              4'h3: delta_pair = 32'h7f237f23;
+              4'h4: delta_pair = 32'h7f217f21;
+              4'h5: delta_pair = 32'h7f207f20;
+              4'h6: delta_pair = 32'h7f1f7f1f;
+              4'h7: delta_pair = 32'h7f1d7f1d;
+              4'h8: delta_pair = 32'h7f1c7f1c;
+              4'h9: delta_pair = 32'h7f1b7f1b;
+              4'ha: delta_pair = 32'h7f197f19;
+              4'hb: delta_pair = 32'h7f187f18;
+              4'hc: delta_pair = 32'h7f177f17;
+              4'hd: delta_pair = 32'h7f157f15;
+              4'he: delta_pair = 32'h7f147f14;
+              4'hf: delta_pair = 32'h7f137f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h7f127f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h7f107f10;
+              4'h2: delta_pair = 32'h7f0f7f0f;
+              4'h3: delta_pair = 32'h7f0e7f0e;
+              4'h4: delta_pair = 32'h7f0d7f0d;
+              4'h5: delta_pair = 32'h7f0c7f0c;
+              4'h6: delta_pair = 32'h7f0b7f0b;
+              4'h7: delta_pair = 32'h7f097f09;
+              4'h8: delta_pair = 32'h7f087f08;
+              4'h9: delta_pair = 32'h7f077f07;
+              4'ha: delta_pair = 32'h7f067f06;
+              4'hb: delta_pair = 32'h7f057f05;
+              4'hc: delta_pair = 32'h7f047f04;
+              4'hd: delta_pair = 32'h7f037f03;
+              4'he: delta_pair = 32'h7f027f02;
+              4'hf: delta_pair = 32'h7f017f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h7f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h80: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h81: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h82: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h83: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h84: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h85: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h86: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h87: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h88: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h89: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h8a: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h8b: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h8c: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h8d: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h8e: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h1f7d1f7d;
+              4'h7: delta_pair = 32'h1f7a1f7a;
+              4'h8: delta_pair = 32'h1f781f78;
+              4'h9: delta_pair = 32'h1f751f75;
+              4'ha: delta_pair = 32'h1f721f72;
+              4'hb: delta_pair = 32'h1f701f70;
+              4'hc: delta_pair = 32'h1f6d1f6d;
+              4'hd: delta_pair = 32'h1f6b1f6b;
+              4'he: delta_pair = 32'h1f681f68;
+              4'hf: delta_pair = 32'h1f661f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h1f641f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f611f61;
+              4'h2: delta_pair = 32'h1f5f1f5f;
+              4'h3: delta_pair = 32'h1f5d1f5d;
+              4'h4: delta_pair = 32'h1f5a1f5a;
+              4'h5: delta_pair = 32'h1f581f58;
+              4'h6: delta_pair = 32'h1f561f56;
+              4'h7: delta_pair = 32'h1f541f54;
+              4'h8: delta_pair = 32'h1f521f52;
+              4'h9: delta_pair = 32'h1f501f50;
+              4'ha: delta_pair = 32'h1f4e1f4e;
+              4'hb: delta_pair = 32'h1f4c1f4c;
+              4'hc: delta_pair = 32'h1f4a1f4a;
+              4'hd: delta_pair = 32'h1f481f48;
+              4'he: delta_pair = 32'h1f461f46;
+              4'hf: delta_pair = 32'h1f441f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h1f421f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f401f40;
+              4'h2: delta_pair = 32'h1f3e1f3e;
+              4'h3: delta_pair = 32'h1f3c1f3c;
+              4'h4: delta_pair = 32'h1f3b1f3b;
+              4'h5: delta_pair = 32'h1f391f39;
+              4'h6: delta_pair = 32'h1f371f37;
+              4'h7: delta_pair = 32'h1f351f35;
+              4'h8: delta_pair = 32'h1f341f34;
+              4'h9: delta_pair = 32'h1f321f32;
+              4'ha: delta_pair = 32'h1f311f31;
+              4'hb: delta_pair = 32'h1f2f1f2f;
+              4'hc: delta_pair = 32'h1f2d1f2d;
+              4'hd: delta_pair = 32'h1f2c1f2c;
+              4'he: delta_pair = 32'h1f2a1f2a;
+              4'hf: delta_pair = 32'h1f291f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h1f271f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f261f26;
+              4'h2: delta_pair = 32'h1f241f24;
+              4'h3: delta_pair = 32'h1f231f23;
+              4'h4: delta_pair = 32'h1f211f21;
+              4'h5: delta_pair = 32'h1f201f20;
+              4'h6: delta_pair = 32'h1f1f1f1f;
+              4'h7: delta_pair = 32'h1f1d1f1d;
+              4'h8: delta_pair = 32'h1f1c1f1c;
+              4'h9: delta_pair = 32'h1f1b1f1b;
+              4'ha: delta_pair = 32'h1f191f19;
+              4'hb: delta_pair = 32'h1f181f18;
+              4'hc: delta_pair = 32'h1f171f17;
+              4'hd: delta_pair = 32'h1f151f15;
+              4'he: delta_pair = 32'h1f141f14;
+              4'hf: delta_pair = 32'h1f131f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h1f121f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f101f10;
+              4'h2: delta_pair = 32'h1f0f1f0f;
+              4'h3: delta_pair = 32'h1f0e1f0e;
+              4'h4: delta_pair = 32'h1f0d1f0d;
+              4'h5: delta_pair = 32'h1f0c1f0c;
+              4'h6: delta_pair = 32'h1f0b1f0b;
+              4'h7: delta_pair = 32'h1f091f09;
+              4'h8: delta_pair = 32'h1f081f08;
+              4'h9: delta_pair = 32'h1f071f07;
+              4'ha: delta_pair = 32'h1f061f06;
+              4'hb: delta_pair = 32'h1f051f05;
+              4'hc: delta_pair = 32'h1f041f04;
+              4'hd: delta_pair = 32'h1f031f03;
+              4'he: delta_pair = 32'h1f021f02;
+              4'hf: delta_pair = 32'h1f011f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h8f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h90: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h91: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h92: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h93: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h94: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h95: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h96: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h97: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h98: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h99: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h9a: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h9b: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h9c: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h9d: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h9e: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h3f7d3f7d;
+              4'h7: delta_pair = 32'h3f7a3f7a;
+              4'h8: delta_pair = 32'h3f783f78;
+              4'h9: delta_pair = 32'h3f753f75;
+              4'ha: delta_pair = 32'h3f723f72;
+              4'hb: delta_pair = 32'h3f703f70;
+              4'hc: delta_pair = 32'h3f6d3f6d;
+              4'hd: delta_pair = 32'h3f6b3f6b;
+              4'he: delta_pair = 32'h3f683f68;
+              4'hf: delta_pair = 32'h3f663f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h3f643f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f613f61;
+              4'h2: delta_pair = 32'h3f5f3f5f;
+              4'h3: delta_pair = 32'h3f5d3f5d;
+              4'h4: delta_pair = 32'h3f5a3f5a;
+              4'h5: delta_pair = 32'h3f583f58;
+              4'h6: delta_pair = 32'h3f563f56;
+              4'h7: delta_pair = 32'h3f543f54;
+              4'h8: delta_pair = 32'h3f523f52;
+              4'h9: delta_pair = 32'h3f503f50;
+              4'ha: delta_pair = 32'h3f4e3f4e;
+              4'hb: delta_pair = 32'h3f4c3f4c;
+              4'hc: delta_pair = 32'h3f4a3f4a;
+              4'hd: delta_pair = 32'h3f483f48;
+              4'he: delta_pair = 32'h3f463f46;
+              4'hf: delta_pair = 32'h3f443f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h3f423f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f403f40;
+              4'h2: delta_pair = 32'h3f3e3f3e;
+              4'h3: delta_pair = 32'h3f3c3f3c;
+              4'h4: delta_pair = 32'h3f3b3f3b;
+              4'h5: delta_pair = 32'h3f393f39;
+              4'h6: delta_pair = 32'h3f373f37;
+              4'h7: delta_pair = 32'h3f353f35;
+              4'h8: delta_pair = 32'h3f343f34;
+              4'h9: delta_pair = 32'h3f323f32;
+              4'ha: delta_pair = 32'h3f313f31;
+              4'hb: delta_pair = 32'h3f2f3f2f;
+              4'hc: delta_pair = 32'h3f2d3f2d;
+              4'hd: delta_pair = 32'h3f2c3f2c;
+              4'he: delta_pair = 32'h3f2a3f2a;
+              4'hf: delta_pair = 32'h3f293f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h3f273f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f263f26;
+              4'h2: delta_pair = 32'h3f243f24;
+              4'h3: delta_pair = 32'h3f233f23;
+              4'h4: delta_pair = 32'h3f213f21;
+              4'h5: delta_pair = 32'h3f203f20;
+              4'h6: delta_pair = 32'h3f1f3f1f;
+              4'h7: delta_pair = 32'h3f1d3f1d;
+              4'h8: delta_pair = 32'h3f1c3f1c;
+              4'h9: delta_pair = 32'h3f1b3f1b;
+              4'ha: delta_pair = 32'h3f193f19;
+              4'hb: delta_pair = 32'h3f183f18;
+              4'hc: delta_pair = 32'h3f173f17;
+              4'hd: delta_pair = 32'h3f153f15;
+              4'he: delta_pair = 32'h3f143f14;
+              4'hf: delta_pair = 32'h3f133f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h3f123f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h3f103f10;
+              4'h2: delta_pair = 32'h3f0f3f0f;
+              4'h3: delta_pair = 32'h3f0e3f0e;
+              4'h4: delta_pair = 32'h3f0d3f0d;
+              4'h5: delta_pair = 32'h3f0c3f0c;
+              4'h6: delta_pair = 32'h3f0b3f0b;
+              4'h7: delta_pair = 32'h3f093f09;
+              4'h8: delta_pair = 32'h3f083f08;
+              4'h9: delta_pair = 32'h3f073f07;
+              4'ha: delta_pair = 32'h3f063f06;
+              4'hb: delta_pair = 32'h3f053f05;
+              4'hc: delta_pair = 32'h3f043f04;
+              4'hd: delta_pair = 32'h3f033f03;
+              4'he: delta_pair = 32'h3f023f02;
+              4'hf: delta_pair = 32'h3f013f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'h9f: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha0: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha1: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha2: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha3: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha4: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha5: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha6: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha7: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha8: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'ha9: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'haa: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hab: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hac: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'had: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hae: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h1f7d1f7d;
+              4'h7: delta_pair = 32'h1f7a1f7a;
+              4'h8: delta_pair = 32'h1f781f78;
+              4'h9: delta_pair = 32'h1f751f75;
+              4'ha: delta_pair = 32'h1f721f72;
+              4'hb: delta_pair = 32'h1f701f70;
+              4'hc: delta_pair = 32'h1f6d1f6d;
+              4'hd: delta_pair = 32'h1f6b1f6b;
+              4'he: delta_pair = 32'h1f681f68;
+              4'hf: delta_pair = 32'h1f661f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h1f641f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f611f61;
+              4'h2: delta_pair = 32'h1f5f1f5f;
+              4'h3: delta_pair = 32'h1f5d1f5d;
+              4'h4: delta_pair = 32'h1f5a1f5a;
+              4'h5: delta_pair = 32'h1f581f58;
+              4'h6: delta_pair = 32'h1f561f56;
+              4'h7: delta_pair = 32'h1f541f54;
+              4'h8: delta_pair = 32'h1f521f52;
+              4'h9: delta_pair = 32'h1f501f50;
+              4'ha: delta_pair = 32'h1f4e1f4e;
+              4'hb: delta_pair = 32'h1f4c1f4c;
+              4'hc: delta_pair = 32'h1f4a1f4a;
+              4'hd: delta_pair = 32'h1f481f48;
+              4'he: delta_pair = 32'h1f461f46;
+              4'hf: delta_pair = 32'h1f441f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h1f421f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f401f40;
+              4'h2: delta_pair = 32'h1f3e1f3e;
+              4'h3: delta_pair = 32'h1f3c1f3c;
+              4'h4: delta_pair = 32'h1f3b1f3b;
+              4'h5: delta_pair = 32'h1f391f39;
+              4'h6: delta_pair = 32'h1f371f37;
+              4'h7: delta_pair = 32'h1f351f35;
+              4'h8: delta_pair = 32'h1f341f34;
+              4'h9: delta_pair = 32'h1f321f32;
+              4'ha: delta_pair = 32'h1f311f31;
+              4'hb: delta_pair = 32'h1f2f1f2f;
+              4'hc: delta_pair = 32'h1f2d1f2d;
+              4'hd: delta_pair = 32'h1f2c1f2c;
+              4'he: delta_pair = 32'h1f2a1f2a;
+              4'hf: delta_pair = 32'h1f291f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h1f271f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f261f26;
+              4'h2: delta_pair = 32'h1f241f24;
+              4'h3: delta_pair = 32'h1f231f23;
+              4'h4: delta_pair = 32'h1f211f21;
+              4'h5: delta_pair = 32'h1f201f20;
+              4'h6: delta_pair = 32'h1f1f1f1f;
+              4'h7: delta_pair = 32'h1f1d1f1d;
+              4'h8: delta_pair = 32'h1f1c1f1c;
+              4'h9: delta_pair = 32'h1f1b1f1b;
+              4'ha: delta_pair = 32'h1f191f19;
+              4'hb: delta_pair = 32'h1f181f18;
+              4'hc: delta_pair = 32'h1f171f17;
+              4'hd: delta_pair = 32'h1f151f15;
+              4'he: delta_pair = 32'h1f141f14;
+              4'hf: delta_pair = 32'h1f131f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h1f121f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h1f101f10;
+              4'h2: delta_pair = 32'h1f0f1f0f;
+              4'h3: delta_pair = 32'h1f0e1f0e;
+              4'h4: delta_pair = 32'h1f0d1f0d;
+              4'h5: delta_pair = 32'h1f0c1f0c;
+              4'h6: delta_pair = 32'h1f0b1f0b;
+              4'h7: delta_pair = 32'h1f091f09;
+              4'h8: delta_pair = 32'h1f081f08;
+              4'h9: delta_pair = 32'h1f071f07;
+              4'ha: delta_pair = 32'h1f061f06;
+              4'hb: delta_pair = 32'h1f051f05;
+              4'hc: delta_pair = 32'h1f041f04;
+              4'hd: delta_pair = 32'h1f031f03;
+              4'he: delta_pair = 32'h1f021f02;
+              4'hf: delta_pair = 32'h1f011f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'haf: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb0: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb1: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb2: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb3: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb4: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb5: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb6: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h0f7d0f7d;
+              4'h7: delta_pair = 32'h0f7a0f7a;
+              4'h8: delta_pair = 32'h0f780f78;
+              4'h9: delta_pair = 32'h0f750f75;
+              4'ha: delta_pair = 32'h0f720f72;
+              4'hb: delta_pair = 32'h0f700f70;
+              4'hc: delta_pair = 32'h0f6d0f6d;
+              4'hd: delta_pair = 32'h0f6b0f6b;
+              4'he: delta_pair = 32'h0f680f68;
+              4'hf: delta_pair = 32'h0f660f66;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h0f640f64;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f610f61;
+              4'h2: delta_pair = 32'h0f5f0f5f;
+              4'h3: delta_pair = 32'h0f5d0f5d;
+              4'h4: delta_pair = 32'h0f5a0f5a;
+              4'h5: delta_pair = 32'h0f580f58;
+              4'h6: delta_pair = 32'h0f560f56;
+              4'h7: delta_pair = 32'h0f540f54;
+              4'h8: delta_pair = 32'h0f520f52;
+              4'h9: delta_pair = 32'h0f500f50;
+              4'ha: delta_pair = 32'h0f4e0f4e;
+              4'hb: delta_pair = 32'h0f4c0f4c;
+              4'hc: delta_pair = 32'h0f4a0f4a;
+              4'hd: delta_pair = 32'h0f480f48;
+              4'he: delta_pair = 32'h0f460f46;
+              4'hf: delta_pair = 32'h0f440f44;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h0f420f42;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f400f40;
+              4'h2: delta_pair = 32'h0f3e0f3e;
+              4'h3: delta_pair = 32'h0f3c0f3c;
+              4'h4: delta_pair = 32'h0f3b0f3b;
+              4'h5: delta_pair = 32'h0f390f39;
+              4'h6: delta_pair = 32'h0f370f37;
+              4'h7: delta_pair = 32'h0f350f35;
+              4'h8: delta_pair = 32'h0f340f34;
+              4'h9: delta_pair = 32'h0f320f32;
+              4'ha: delta_pair = 32'h0f310f31;
+              4'hb: delta_pair = 32'h0f2f0f2f;
+              4'hc: delta_pair = 32'h0f2d0f2d;
+              4'hd: delta_pair = 32'h0f2c0f2c;
+              4'he: delta_pair = 32'h0f2a0f2a;
+              4'hf: delta_pair = 32'h0f290f29;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h0f270f27;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f260f26;
+              4'h2: delta_pair = 32'h0f240f24;
+              4'h3: delta_pair = 32'h0f230f23;
+              4'h4: delta_pair = 32'h0f210f21;
+              4'h5: delta_pair = 32'h0f200f20;
+              4'h6: delta_pair = 32'h0f1f0f1f;
+              4'h7: delta_pair = 32'h0f1d0f1d;
+              4'h8: delta_pair = 32'h0f1c0f1c;
+              4'h9: delta_pair = 32'h0f1b0f1b;
+              4'ha: delta_pair = 32'h0f190f19;
+              4'hb: delta_pair = 32'h0f180f18;
+              4'hc: delta_pair = 32'h0f170f17;
+              4'hd: delta_pair = 32'h0f150f15;
+              4'he: delta_pair = 32'h0f140f14;
+              4'hf: delta_pair = 32'h0f130f13;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h0f120f12;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h0f100f10;
+              4'h2: delta_pair = 32'h0f0f0f0f;
+              4'h3: delta_pair = 32'h0f0e0f0e;
+              4'h4: delta_pair = 32'h0f0d0f0d;
+              4'h5: delta_pair = 32'h0f0c0f0c;
+              4'h6: delta_pair = 32'h0f0b0f0b;
+              4'h7: delta_pair = 32'h0f090f09;
+              4'h8: delta_pair = 32'h0f080f08;
+              4'h9: delta_pair = 32'h0f070f07;
+              4'ha: delta_pair = 32'h0f060f06;
+              4'hb: delta_pair = 32'h0f050f05;
+              4'hc: delta_pair = 32'h0f040f04;
+              4'hd: delta_pair = 32'h0f030f03;
+              4'he: delta_pair = 32'h0f020f02;
+              4'hf: delta_pair = 32'h0f010f01;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb7: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb8: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hb9: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hba: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h077d077d;
+              4'h7: delta_pair = 32'h077a077a;
+              4'h8: delta_pair = 32'h07780778;
+              4'h9: delta_pair = 32'h07750775;
+              4'ha: delta_pair = 32'h07720772;
+              4'hb: delta_pair = 32'h07700770;
+              4'hc: delta_pair = 32'h076d076d;
+              4'hd: delta_pair = 32'h076b076b;
+              4'he: delta_pair = 32'h07680768;
+              4'hf: delta_pair = 32'h07660766;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h07640764;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07610761;
+              4'h2: delta_pair = 32'h075f075f;
+              4'h3: delta_pair = 32'h075d075d;
+              4'h4: delta_pair = 32'h075a075a;
+              4'h5: delta_pair = 32'h07580758;
+              4'h6: delta_pair = 32'h07560756;
+              4'h7: delta_pair = 32'h07540754;
+              4'h8: delta_pair = 32'h07520752;
+              4'h9: delta_pair = 32'h07500750;
+              4'ha: delta_pair = 32'h074e074e;
+              4'hb: delta_pair = 32'h074c074c;
+              4'hc: delta_pair = 32'h074a074a;
+              4'hd: delta_pair = 32'h07480748;
+              4'he: delta_pair = 32'h07460746;
+              4'hf: delta_pair = 32'h07440744;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h07420742;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07400740;
+              4'h2: delta_pair = 32'h073e073e;
+              4'h3: delta_pair = 32'h073c073c;
+              4'h4: delta_pair = 32'h073b073b;
+              4'h5: delta_pair = 32'h07390739;
+              4'h6: delta_pair = 32'h07370737;
+              4'h7: delta_pair = 32'h07350735;
+              4'h8: delta_pair = 32'h07340734;
+              4'h9: delta_pair = 32'h07320732;
+              4'ha: delta_pair = 32'h07310731;
+              4'hb: delta_pair = 32'h072f072f;
+              4'hc: delta_pair = 32'h072d072d;
+              4'hd: delta_pair = 32'h072c072c;
+              4'he: delta_pair = 32'h072a072a;
+              4'hf: delta_pair = 32'h07290729;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h07270727;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07260726;
+              4'h2: delta_pair = 32'h07240724;
+              4'h3: delta_pair = 32'h07230723;
+              4'h4: delta_pair = 32'h07210721;
+              4'h5: delta_pair = 32'h07200720;
+              4'h6: delta_pair = 32'h071f071f;
+              4'h7: delta_pair = 32'h071d071d;
+              4'h8: delta_pair = 32'h071c071c;
+              4'h9: delta_pair = 32'h071b071b;
+              4'ha: delta_pair = 32'h07190719;
+              4'hb: delta_pair = 32'h07180718;
+              4'hc: delta_pair = 32'h07170717;
+              4'hd: delta_pair = 32'h07150715;
+              4'he: delta_pair = 32'h07140714;
+              4'hf: delta_pair = 32'h07130713;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h07120712;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h07100710;
+              4'h2: delta_pair = 32'h070f070f;
+              4'h3: delta_pair = 32'h070e070e;
+              4'h4: delta_pair = 32'h070d070d;
+              4'h5: delta_pair = 32'h070c070c;
+              4'h6: delta_pair = 32'h070b070b;
+              4'h7: delta_pair = 32'h07090709;
+              4'h8: delta_pair = 32'h07080708;
+              4'h9: delta_pair = 32'h07070707;
+              4'ha: delta_pair = 32'h07060706;
+              4'hb: delta_pair = 32'h07050705;
+              4'hc: delta_pair = 32'h07040704;
+              4'hd: delta_pair = 32'h07030703;
+              4'he: delta_pair = 32'h07020702;
+              4'hf: delta_pair = 32'h07010701;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hbb: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hbc: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h037d037d;
+              4'h7: delta_pair = 32'h037a037a;
+              4'h8: delta_pair = 32'h03780378;
+              4'h9: delta_pair = 32'h03750375;
+              4'ha: delta_pair = 32'h03720372;
+              4'hb: delta_pair = 32'h03700370;
+              4'hc: delta_pair = 32'h036d036d;
+              4'hd: delta_pair = 32'h036b036b;
+              4'he: delta_pair = 32'h03680368;
+              4'hf: delta_pair = 32'h03660366;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h03640364;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03610361;
+              4'h2: delta_pair = 32'h035f035f;
+              4'h3: delta_pair = 32'h035d035d;
+              4'h4: delta_pair = 32'h035a035a;
+              4'h5: delta_pair = 32'h03580358;
+              4'h6: delta_pair = 32'h03560356;
+              4'h7: delta_pair = 32'h03540354;
+              4'h8: delta_pair = 32'h03520352;
+              4'h9: delta_pair = 32'h03500350;
+              4'ha: delta_pair = 32'h034e034e;
+              4'hb: delta_pair = 32'h034c034c;
+              4'hc: delta_pair = 32'h034a034a;
+              4'hd: delta_pair = 32'h03480348;
+              4'he: delta_pair = 32'h03460346;
+              4'hf: delta_pair = 32'h03440344;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h03420342;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03400340;
+              4'h2: delta_pair = 32'h033e033e;
+              4'h3: delta_pair = 32'h033c033c;
+              4'h4: delta_pair = 32'h033b033b;
+              4'h5: delta_pair = 32'h03390339;
+              4'h6: delta_pair = 32'h03370337;
+              4'h7: delta_pair = 32'h03350335;
+              4'h8: delta_pair = 32'h03340334;
+              4'h9: delta_pair = 32'h03320332;
+              4'ha: delta_pair = 32'h03310331;
+              4'hb: delta_pair = 32'h032f032f;
+              4'hc: delta_pair = 32'h032d032d;
+              4'hd: delta_pair = 32'h032c032c;
+              4'he: delta_pair = 32'h032a032a;
+              4'hf: delta_pair = 32'h03290329;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h03270327;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03260326;
+              4'h2: delta_pair = 32'h03240324;
+              4'h3: delta_pair = 32'h03230323;
+              4'h4: delta_pair = 32'h03210321;
+              4'h5: delta_pair = 32'h03200320;
+              4'h6: delta_pair = 32'h031f031f;
+              4'h7: delta_pair = 32'h031d031d;
+              4'h8: delta_pair = 32'h031c031c;
+              4'h9: delta_pair = 32'h031b031b;
+              4'ha: delta_pair = 32'h03190319;
+              4'hb: delta_pair = 32'h03180318;
+              4'hc: delta_pair = 32'h03170317;
+              4'hd: delta_pair = 32'h03150315;
+              4'he: delta_pair = 32'h03140314;
+              4'hf: delta_pair = 32'h03130313;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h03120312;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h03100310;
+              4'h2: delta_pair = 32'h030f030f;
+              4'h3: delta_pair = 32'h030e030e;
+              4'h4: delta_pair = 32'h030d030d;
+              4'h5: delta_pair = 32'h030c030c;
+              4'h6: delta_pair = 32'h030b030b;
+              4'h7: delta_pair = 32'h03090309;
+              4'h8: delta_pair = 32'h03080308;
+              4'h9: delta_pair = 32'h03070307;
+              4'ha: delta_pair = 32'h03060306;
+              4'hb: delta_pair = 32'h03050305;
+              4'hc: delta_pair = 32'h03040304;
+              4'hd: delta_pair = 32'h03030303;
+              4'he: delta_pair = 32'h03020302;
+              4'hf: delta_pair = 32'h03010301;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hbd: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00000000;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00fc00fc;
+              4'h2: delta_pair = 32'h00f800f8;
+              4'h3: delta_pair = 32'h00f400f4;
+              4'h4: delta_pair = 32'h00f100f1;
+              4'h5: delta_pair = 32'h00ed00ed;
+              4'h6: delta_pair = 32'h00ea00ea;
+              4'h7: delta_pair = 32'h00e600e6;
+              4'h8: delta_pair = 32'h00e300e3;
+              4'h9: delta_pair = 32'h00df00df;
+              4'ha: delta_pair = 32'h00dc00dc;
+              4'hb: delta_pair = 32'h00d900d9;
+              4'hc: delta_pair = 32'h00d600d6;
+              4'hd: delta_pair = 32'h00d300d3;
+              4'he: delta_pair = 32'h00d000d0;
+              4'hf: delta_pair = 32'h00cd00cd;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00ca00ca;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00c700c7;
+              4'h2: delta_pair = 32'h00c500c5;
+              4'h3: delta_pair = 32'h00c200c2;
+              4'h4: delta_pair = 32'h00bf00bf;
+              4'h5: delta_pair = 32'h00bd00bd;
+              4'h6: delta_pair = 32'h00ba00ba;
+              4'h7: delta_pair = 32'h00b800b8;
+              4'h8: delta_pair = 32'h00b600b6;
+              4'h9: delta_pair = 32'h00b300b3;
+              4'ha: delta_pair = 32'h00b100b1;
+              4'hb: delta_pair = 32'h00af00af;
+              4'hc: delta_pair = 32'h00ac00ac;
+              4'hd: delta_pair = 32'h00aa00aa;
+              4'he: delta_pair = 32'h00a800a8;
+              4'hf: delta_pair = 32'h00a600a6;
+              default: begin end
+            endcase
+          end
+          3'h2: begin
+            delta_pair = 32'h00a400a4;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00a200a2;
+              4'h2: delta_pair = 32'h00a000a0;
+              4'h3: delta_pair = 32'h009e009e;
+              4'h4: delta_pair = 32'h009c009c;
+              4'h5: delta_pair = 32'h009a009a;
+              4'h6: delta_pair = 32'h00980098;
+              4'h7: delta_pair = 32'h00960096;
+              4'h8: delta_pair = 32'h00950095;
+              4'h9: delta_pair = 32'h00930093;
+              4'ha: delta_pair = 32'h00910091;
+              4'hb: delta_pair = 32'h008f008f;
+              4'hc: delta_pair = 32'h008e008e;
+              4'hd: delta_pair = 32'h008c008c;
+              4'he: delta_pair = 32'h008b008b;
+              4'hf: delta_pair = 32'h00890089;
+              default: begin end
+            endcase
+          end
+          3'h3: begin
+            delta_pair = 32'h00870087;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h00860086;
+              4'h2: delta_pair = 32'h00840084;
+              4'h3: delta_pair = 32'h00830083;
+              4'h4: delta_pair = 32'h00810081;
+              4'h5: delta_pair = 32'h00800080;
+              4'h6: delta_pair = 32'h017d017d;
+              4'h7: delta_pair = 32'h017a017a;
+              4'h8: delta_pair = 32'h01780178;
+              4'h9: delta_pair = 32'h01750175;
+              4'ha: delta_pair = 32'h01720172;
+              4'hb: delta_pair = 32'h01700170;
+              4'hc: delta_pair = 32'h016d016d;
+              4'hd: delta_pair = 32'h016b016b;
+              4'he: delta_pair = 32'h01680168;
+              4'hf: delta_pair = 32'h01660166;
+              default: begin end
+            endcase
+          end
+          3'h4: begin
+            delta_pair = 32'h01640164;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01610161;
+              4'h2: delta_pair = 32'h015f015f;
+              4'h3: delta_pair = 32'h015d015d;
+              4'h4: delta_pair = 32'h015a015a;
+              4'h5: delta_pair = 32'h01580158;
+              4'h6: delta_pair = 32'h01560156;
+              4'h7: delta_pair = 32'h01540154;
+              4'h8: delta_pair = 32'h01520152;
+              4'h9: delta_pair = 32'h01500150;
+              4'ha: delta_pair = 32'h014e014e;
+              4'hb: delta_pair = 32'h014c014c;
+              4'hc: delta_pair = 32'h014a014a;
+              4'hd: delta_pair = 32'h01480148;
+              4'he: delta_pair = 32'h01460146;
+              4'hf: delta_pair = 32'h01440144;
+              default: begin end
+            endcase
+          end
+          3'h5: begin
+            delta_pair = 32'h01420142;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01400140;
+              4'h2: delta_pair = 32'h013e013e;
+              4'h3: delta_pair = 32'h013c013c;
+              4'h4: delta_pair = 32'h013b013b;
+              4'h5: delta_pair = 32'h01390139;
+              4'h6: delta_pair = 32'h01370137;
+              4'h7: delta_pair = 32'h01350135;
+              4'h8: delta_pair = 32'h01340134;
+              4'h9: delta_pair = 32'h01320132;
+              4'ha: delta_pair = 32'h01310131;
+              4'hb: delta_pair = 32'h012f012f;
+              4'hc: delta_pair = 32'h012d012d;
+              4'hd: delta_pair = 32'h012c012c;
+              4'he: delta_pair = 32'h012a012a;
+              4'hf: delta_pair = 32'h01290129;
+              default: begin end
+            endcase
+          end
+          3'h6: begin
+            delta_pair = 32'h01270127;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01260126;
+              4'h2: delta_pair = 32'h01240124;
+              4'h3: delta_pair = 32'h01230123;
+              4'h4: delta_pair = 32'h01210121;
+              4'h5: delta_pair = 32'h01200120;
+              4'h6: delta_pair = 32'h011f011f;
+              4'h7: delta_pair = 32'h011d011d;
+              4'h8: delta_pair = 32'h011c011c;
+              4'h9: delta_pair = 32'h011b011b;
+              4'ha: delta_pair = 32'h01190119;
+              4'hb: delta_pair = 32'h01180118;
+              4'hc: delta_pair = 32'h01170117;
+              4'hd: delta_pair = 32'h01150115;
+              4'he: delta_pair = 32'h01140114;
+              4'hf: delta_pair = 32'h01130113;
+              default: begin end
+            endcase
+          end
+          3'h7: begin
+            delta_pair = 32'h01120112;
+            case (mant_lo4)
+              4'h1: delta_pair = 32'h01100110;
+              4'h2: delta_pair = 32'h010f010f;
+              4'h3: delta_pair = 32'h010e010e;
+              4'h4: delta_pair = 32'h010d010d;
+              4'h5: delta_pair = 32'h010c010c;
+              4'h6: delta_pair = 32'h010b010b;
+              4'h7: delta_pair = 32'h01090109;
+              4'h8: delta_pair = 32'h01080108;
+              4'h9: delta_pair = 32'h01070107;
+              4'ha: delta_pair = 32'h01060106;
+              4'hb: delta_pair = 32'h01050105;
+              4'hc: delta_pair = 32'h01040104;
+              4'hd: delta_pair = 32'h01030103;
+              4'he: delta_pair = 32'h01020102;
+              4'hf: delta_pair = 32'h01010101;
+              default: begin end
+            endcase
+          end
+          default: begin end
+        endcase
+      end
+      8'hbe: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h00800080;
+            case (mant_lo4)
+              4'h0: delta_pair = 32'h00000000;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h00800080;
+          end
+          3'h2: begin
+            delta_pair = 32'h00800080;
+          end
+          3'h3: begin
+            delta_pair = 32'h00800080;
+          end
+          3'h4: begin
+            delta_pair = 32'h00800080;
+          end
+          3'h5: begin
+            delta_pair = 32'h00800080;
+          end
+          3'h6: begin
+            delta_pair = 32'h00800080;
+          end
+          3'h7: begin
+            delta_pair = 32'h00800080;
+          end
+          default: begin end
+        endcase
+      end
+      8'hff: begin
+        case (mant_hi3)
+          3'h0: begin
+            delta_pair = 32'h7fc07fc0;
+            case (mant_lo4)
+              4'h0: delta_pair = 32'h00000000;
+              default: begin end
+            endcase
+          end
+          3'h1: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          3'h2: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          3'h3: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          3'h4: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          3'h5: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          3'h6: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          3'h7: begin
+            delta_pair = 32'h7fc07fc0;
+          end
+          default: begin end
+        endcase
+      end
+      default: begin end
+    endcase
+  end
+  wire [31:0] pair = base_pair ^ delta_pair;
+  assign out = sign ? pair[31:16] : pair[15:0];
+endmodule

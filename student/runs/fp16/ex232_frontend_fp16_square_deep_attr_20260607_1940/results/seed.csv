@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis/function_guess,variant,verilog_path,aig_path,verified_truth,equivalent,area,delay,adp,notes
+ex232,ex232_nested_hi6_attr,fp16_square,attr,student/work/ex232_frontend_fp16_square_deep_attr_20260607_1940/ex232/verilog/ex232_fp16_square_exp_formula_hi9_8_low8_nested_hi6_attr.v,,1,1,,,,attribute source hint

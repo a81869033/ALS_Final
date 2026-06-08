@@ -1,0 +1,2 @@
+case,function,previous_best_area,previous_best_delay,previous_best_adp,current_area,current_delay,current_adp,adp_improvement,reference_adp,current_ratio,notes
+ex232,fp16_square,1343,16,21488,1240,13,16120,5368,13392,1.203704,"deep square structure: sign-free exp formula plus mantissa bits9/8 run trees and low8 nested hi6/lo4 LUT"

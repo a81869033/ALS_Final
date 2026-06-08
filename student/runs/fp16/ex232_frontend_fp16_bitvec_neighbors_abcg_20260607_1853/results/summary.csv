@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex232_frontend_fp16_bitvec_neighbors_abcg_20260607_1853,7,7,"neighbor bitvec rows through abc_g_aig","closest rows still worse than bits12_9_t32 current best"

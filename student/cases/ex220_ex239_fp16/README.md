@@ -83,11 +83,11 @@ Source: `student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv`.
 | ex232 | fp16_square | structural_exact | positive_default_exp_mant_delta | 1.732751 | high |
 | ex233 | fp16_sqrt | structural_exact | positive_default_exp_mant_case | 1.529295 | high |
 | ex234 | fp16_reciprocal_square | structural_exact | sign_pair_case | 1.487951 | medium |
-| ex235 | fp16_reciprocal_sqrt | semantic_hybrid | semantic_sign_exp_field_defaults | 1.541250 | high |
-| ex236 | fp16_cube | structural_exact | positive_default_exp_mant_delta | 1.549566 | high |
-| ex237 | fp16_cbrt | structural_exact | positive_default_exp_mant_case | 1.405896 | medium |
-| ex238 | fp16_reciprocal_cube | structural_exact | exp_mant_pair_case | 1.623059 | high |
-| ex239 | fp16_reciprocal_cbrt | semantic_exact | semantic_arith_fields | 1.483998 | watch |
+| ex235 | fp16_reciprocal_sqrt | semantic_structural_exact | ex235_open_low8_hi6_abc_g_aig | 1.134135 | medium |
+| ex236 | fp16_cube | synthflow_exact | ex236_sign_only_synth_preset | 1.416773 | medium |
+| ex237 | fp16_cbrt | semantic_structural_exact | ex237_open_low10_hi6_abc_g_aig | 1.216352 | medium |
+| ex238 | fp16_reciprocal_cube | semantic_selected_bit_formula | ex238_b10_9_formula_expr_abc_g_aig | 1.501480 | high |
+| ex239 | fp16_reciprocal_cbrt | semantic_structural_exact | ex239_open_low8_hi6_abc_g_aig | 1.262623 | medium |
 
 ## Category-Level Attempt Log
 
@@ -236,6 +236,128 @@ Source: `student/runs/fp16/ex220_ex239_semantic_20260604/results/best.csv`.
   then added manual sign/bit14/bit13 predicates plus shared bit12/bit9
   threshold predecode.  The current ex225 best is
   `ex225_manual15_14_13_predecode12_9_abc_g_aig`, `11488/21/241248`.
+
+### 2026-06-07 ex230-ex234 Focused Pass
+
+- Created curated seed bundle
+  `student/seeds/fp16/ex230_ex234_frontend_fp16_current_20260607_1853/`.
+- Official `evaluate.py --case` rechecked all five current-best AIGs:
+  - `ex230`: `ex230_exp_mant_pair_case_abc_g_aig`, `6969/20/139380`.
+  - `ex231`: `ex231_semantic_sign_exp_field_defaults_abc_g_aig`,
+    `1286/16/20576`.
+  - `ex232`: `ex232_bitvec_bits12_9_t32_abc_g_aig`, `1343/16/21488`.
+  - `ex233`: `ex233_bitvec_bits14_13_12_9_t32_abc_g_aig`,
+    `1674/17/28458`.
+  - `ex234`: `ex234_sign_pair_case_abc_g_aig`, `1355/17/23035`.
+- Semantic checks exact-matched `ex231` reciprocal, `ex232` square, `ex233`
+  sqrt, and `ex234` reciprocal-square under DAZ/FTZ/RNE/canonical-NaN
+  assumptions.  `ex230` remains sigmoid-family but not an exact Python sigmoid
+  model due to rounding mismatches starting at input `0x1a00`.
+- `ex232` and `ex233` benefited from selected-bit vector covers plus the
+  one-shot `abc -g aig` flow.  The later ex232 deep square run superseded the
+  selected-bit vector-cover seed with a square-specific exact carry/mantissa
+  structure.
+
+### 2026-06-07 ex232 Deep Square Structure
+
+- `ex232` improved from `1343/16/21488` to `1240/13/16120` and is now within
+  1.5x reference.
+- Curated seed:
+  `student/seeds/fp16/ex232_frontend_fp16_square_deep_current_20260607_1940/`.
+- The key was not another selected-bit sweep.  The exact square structure is:
+  - output sign is constant zero;
+  - active normal exponent range is `8..22`;
+  - `out_exp = 2*exp - 15 + (mant >= 424)`;
+  - normalized output mantissa depends only on input mantissa;
+  - mantissa bits9/8 are run trees;
+  - mantissa low8 is a nested hi6/lo4 LUT.
+- This is the preferred pattern to try next on square-family cases such as
+  `ex236` and `ex238`: derive the arithmetic exponent/carry first, then
+  reshape the mantissa-only correction table.
+
+### 2026-06-07 Applying the ex232 Lesson to Earlier FP16 Cases
+
+- `ex231`, `ex233`, and `ex234` were suitable for the same idea because their
+  normal outputs can be expressed as exponent formulas plus mantissa-only (or
+  parity-class) correction tables.
+- New official `evaluate.py` bests:
+  - `ex231`: reciprocal, `1163/14/16282`, from
+    `out_exp = 30 - exp - (mant != 0)`, mant bit9 run tree, and low9 nested
+    hi6 LUT.
+  - `ex233`: sqrt, `1530/15/22950`, from
+    `out_exp = (exp + 15) >> 1`, exponent parity mantissa classes, bits9/8
+    run trees, and low8 nested hi6 LUT.
+  - `ex234`: reciprocal-square, `1351/17/22967`, from
+    `out_exp = 45 - 2*exp - (mant != 0) - (mant >= 425)`, bits9/8 run trees,
+    and low8 nested hi5 LUT.
+- `ex230` sigmoid is not a good target for this power-family trick.  The next
+  best targets are still `ex236` cube, `ex238` reciprocal-cube, and `ex235`
+  reciprocal-sqrt.
+
+### 2026-06-07 Applying Nested Mantissa Tables to Log-Family Cases
+
+- Added `student/generators/fp16_log_nested_semantic.py`.
+- The useful source structure for `ex223`/`ex224`/`ex225` is:
+  - exact special/non-positive sign-exp table,
+  - positive-normal exponent group,
+  - high output bits as mantissa run trees,
+  - low output bits as nested mantissa hi/lo LUT.
+- Curated seed bundle:
+  `student/seeds/fp16/ex223_ex225_frontend_fp16_log_nested_current_20260607_2140/`.
+- Official `evaluate.py` bests:
+  - `ex223`: `10753/19/204307`, ratio `1.694805`.
+  - `ex224`: `6014/16/96224`, ratio `1.487050`, now within `1.5x`.
+  - `ex225`: `11533/19/219127`, ratio `1.878081`.
+- Practical lesson: for log-family cases, a source-level nested low-bit table
+  can preserve the exact bit sharing that selected-bit and fixed-point
+  normalizer attempts missed.  Choose the low-bit boundary by measured ADP:
+  `ex223` wants low11/hi5, `ex224` wants low12/hi6, and `ex225` wants
+  low12/hi5.
+
+### 2026-06-08 ex235-ex239 Power/Root-Family Follow-Up
+
+- Curated seed bundle:
+  `student/seeds/fp16/ex235_ex239_frontend_fp16_current_direct_special_20260608_0938/`.
+- Official `evaluate.py` bests:
+  - `ex235`: reciprocal-sqrt, `1628/14/22792`, ratio `1.095769`.
+  - `ex236`: cube, `1531/16/24496`, ratio `1.416773`.
+  - `ex237`: cbrt, `1889/16/30224`, ratio `1.188050`.
+  - `ex238`: reciprocal-cube, `1553/16/24848`, ratio `1.501480`.
+  - `ex239`: reciprocal-cbrt, `2026/16/32416`, ratio `1.248450`.
+- `ex235`, `ex237`, and `ex239` benefit from the same broad source shape as
+  the log-family nested run: exact special table, exponent parity/modulo class,
+  high output bits as shallow run trees, and low output bits as a nested
+  mantissa hi/lo LUT.  The best cut point is case-specific.
+- `ex236` did not benefit from selected-bit overlays.  A wrapper around the
+  previous base/delta source plus `synth_preset` was best.  Directly assigning
+  `out[15]=in[15]` was non-equivalent because zero/special behavior matters.
+- `ex238` has a reusable a-ha: replacing only output bits b10/b9 is useful,
+  while b11, b8, b7, and high-bit expansions are harmful.  The normal exponent
+  groups share one mantissa segmentation, and odd exponents toggle b10.  A
+  hand-derived factored expression beats the generated run-cover, but still
+  stops barely above `1.5x` reference.  Future work should integrate this
+  b10/b9 formula into a smaller base source rather than overlaying it.
+- Supported synthflow checks confirmed that `abc_g_aig` is best for ex235,
+  ex237, ex238, and ex239.  `ex236` is the exception where `synth_preset`
+  gives the best AIG.  `no_internal_abc`, `abc_fast`, `extra_opt_share`, and
+  `late_flatten` were consistently worse for this batch.
+- Follow-up found one more useful source-level rewrite for `ex235`, `ex237`,
+  and `ex239`: direct semantic-special guards in the same open-structure
+  source.  This removes full inactive special tables before synthesis.  With
+  that rewrite, `ex235` and `ex237` now prefer `synth_preset`, while `ex239`
+  still prefers `abc_g_aig`.  The ratio columns are tracking metrics only; the
+  optimization target remains lower ADP toward reference, not simply crossing a
+  threshold.
+- A later core-boundary/core-clamp rewrite improved the cube pair:
+  - `ex236`: `1432/15/21480`, ratio `1.242337`.
+  - `ex238`: `1502/15/22530`, ratio `1.361412`.
+  The reusable structure is to keep the exact exponent-delta/mantissa formula
+  for middle exponent groups, isolate only the two irregular rounding boundary
+  exponent groups into local mantissa tables, and drive all other ranges with
+  direct zero/inf/NaN constants.  This beat both selected-bit overlays and the
+  earlier broad formula source.  For `ex236`, the boundary tables can be
+  reduced further to exact clamp predicates; for `ex238`, the clamp form was
+  exact but slower than the boundary table.
 
 ### 2026-06-06 Setup
 

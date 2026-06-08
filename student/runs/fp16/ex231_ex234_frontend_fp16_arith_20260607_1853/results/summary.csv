@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex231_ex234_frontend_fp16_arith_20260607_1853,8,8,"semantic arithmetic/field-default variants for ex231-ex234","exact but superseded by selected-bit or old-row abc_g_aig current bests"

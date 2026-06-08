@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,method,notes
+ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853,21,21,evaluate_aig,"final ex230/ex231/ex234 AIGs rechecked with official evaluate.py in seed bundle"

@@ -1,0 +1,4 @@
+case,observation,value,notes
+ex232,active_normal_exp_range,8..22,exponents <=7 map to zero; exponents 23..30 map to +inf; exp31 maps inf/NaN
+ex232,output_exp_formula,2*exp-15+(mant>=424),fixed threshold across all active exponent groups
+ex232,output_mantissa,function_of_mant_only,same 1024-entry normalized mantissa mapping for exp 8..22

@@ -3,15 +3,25 @@
 Function hypothesis: `fp16_sigmoid`.
 
 Current known best:
-- Run: `ex220_ex239_semantic_20260604`
-- Variant: `sign_exp_mant_case`
-- QoR: `7038/21/147798`
+- Run: `ex230_ex234_frontend_fp16_current_20260607_1853`
+- Variant: `ex230_exp_mant_pair_case_abc_g_aig`
+- QoR: `6969/20/139380`
 - Reference ADP: `108320`
-- Ratio: `1.364457`
-- Classification: `structural_exact`
+- Ratio: `1.286743`
+- Classification: `synthflow_exact structural/semantic-hybrid`
+
+2026-06-07 focused pass:
+- Official `evaluate.py --case ex230` recheck: OK.
+- Best source is still the exp/mant pair-case sigmoid-family seed; re-emitting
+  with Yosys `abc -g aig` lowered delay from 21 to 20.
+- Direct Python DAZ/FTZ/RNE sigmoid model did not exact-match the truth table;
+  first observed mismatch was input `0x1a00`, expected `0x3801`, actual
+  `0x3802`.
+- Treat as sigmoid-family structural/semantic-hybrid until the exact rounding
+  rule is recovered.
 
 Next maintenance items:
-- Verify true DAZ + sigmoid(x) + FP16 RNE + FTZ + canonical NaN semantics.
-- Try constant defaults for saturated ranges, especially 0.0 and 1.0 outputs.
+- Recover the exact sigmoid rounding behavior around tiny positive transition
+  bands before replacing the current pair-case seed.
 - Isolate the small transition exponent bands before mantissa LUT generation.
 - Record whether field reassembly beats packed word tables.

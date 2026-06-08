@@ -179,6 +179,9 @@ def source_kind(path: Path) -> str:
 def result_priority(path: Path) -> int:
     name = path.name
     kind = source_kind(path)
+    parts = path.relative_to(ROOT).parts
+    if kind == "seed" and any(part.endswith("_current") or "_current_" in part for part in parts):
+        return -1
     if kind == "seeds" or kind == "seed":
         return 0
     if name == "best.csv":
@@ -321,7 +324,7 @@ def main() -> int:
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=FIELDNAMES)
+        writer = csv.DictWriter(fh, fieldnames=FIELDNAMES, lineterminator="\n")
         writer.writeheader()
         for case in sorted(best, key=case_key):
             writer.writerow(row_for(best[case], refs))

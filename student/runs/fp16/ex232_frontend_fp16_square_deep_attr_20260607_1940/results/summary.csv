@@ -1,0 +1,2 @@
+case,best_candidate,best_area,best_delay,best_adp,reference_adp,ratio,notes
+ex232,ex232_attr_abc_g_aig,1240,13,16120,13392,1.203704,parallel_case/full_case attributes reproduced the curated best with no improvement

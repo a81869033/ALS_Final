@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex232_ex233_frontend_fp16_oldrows_abcg_20260607_1853,20,20,"old ex232/ex233 rows through abc_g_aig","useful intermediate, superseded by selected-bit bitrun abc_g_aig"

@@ -1,0 +1,5 @@
+case,variant,notes
+ex238,b10_9_formula_case,"hand formula case: shared core mantissa segmentation, odd exp toggled explicitly"
+ex238,b10_9_formula_expr,hand formula expr: factored mantissa thresholds and odd-exp xor
+ex238,b10_9_formula_bitlogic,hand formula bitlogic: full exponent formula; shared threshold predicates
+ex238,b10_9_formula_bitlogic_active,hand formula bitlogic: active-only mux to base; shared threshold predicates

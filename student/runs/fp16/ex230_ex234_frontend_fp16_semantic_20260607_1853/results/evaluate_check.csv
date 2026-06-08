@@ -1,0 +1,6 @@
+case,status,notes
+ex230,semantic_mismatch,"direct Python sigmoid DAZ/FTZ/RNE model first mismatch at input 0x1a00; structural AIG checks are handled in the curated seed bundle"
+ex231,semantic_match,"Python reciprocal model exact matched"
+ex232,semantic_match,"Python square model exact matched"
+ex233,semantic_match,"Python sqrt model exact matched"
+ex234,semantic_match,"Python reciprocal-square model exact matched"

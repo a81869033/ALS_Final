@@ -1,0 +1,4 @@
+case,best_candidate,best_area,best_delay,best_adp,reference_adp,ratio,notes
+ex231,ex231_abc_g_aig_abc_g_aig,1163,14,16282,14066,1.157543,abc_g_aig reproduced source-run best
+ex233,ex233_abc_g_aig_abc_g_aig,1530,15,22950,20174,1.137603,abc_g_aig reproduced source-run best
+ex234,ex234_abc_g_aig_abc_g_aig,1351,17,22967,15561,1.475933,abc_g_aig reproduced source-run best

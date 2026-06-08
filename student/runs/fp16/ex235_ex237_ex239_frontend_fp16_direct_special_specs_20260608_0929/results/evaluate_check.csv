@@ -1,0 +1,4 @@
+case,status,area,delay,adp,notes
+ex235,OK,1628,14,22792,official evaluate.py recheck on direct_special_low8_hi6_synth_preset
+ex237,OK,1889,16,30224,official evaluate.py recheck on direct_special_low10_hi6_synth_preset
+ex239,OK,2026,16,32416,official evaluate.py recheck on direct_special_low7_hi6_abc_g_aig

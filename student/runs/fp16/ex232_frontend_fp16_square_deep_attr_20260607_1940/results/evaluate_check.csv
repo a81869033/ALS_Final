@@ -1,0 +1,2 @@
+case,status,area,delay,adp,notes
+ex232,OK,1240,13,16120,attribute variant exact by evaluate_aig; no improvement

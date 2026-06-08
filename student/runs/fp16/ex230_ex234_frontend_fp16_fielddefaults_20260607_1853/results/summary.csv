@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex230_ex234_frontend_fp16_fielddefaults_20260607_1853,39,39,"field-default variants for ex230-ex234","exact but did not beat curated bests"

@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex232_ex233_frontend_fp16_bitrun_20260607_1853,16,16,"selected-bit vector-cover sources for ex232/ex233","source rows became current bests after abc_g_aig"

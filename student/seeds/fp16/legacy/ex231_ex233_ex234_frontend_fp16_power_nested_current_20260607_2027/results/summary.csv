@@ -1,0 +1,4 @@
+case,function,previous_best_area,previous_best_delay,previous_best_adp,current_area,current_delay,current_adp,adp_improvement,reference_adp,current_ratio,notes
+ex231,fp16_reciprocal,1286,16,20576,1163,14,16282,4294,14066,1.157543,"reciprocal exponent formula plus mant bit9 run tree and low9 nested hi6 LUT"
+ex233,fp16_sqrt,1674,17,28458,1530,15,22950,5508,20174,1.137603,"sqrt exponent parity split plus mant bits9/8 run trees and low8 nested hi6 LUT"
+ex234,fp16_reciprocal_square,1355,17,23035,1351,17,22967,68,15561,1.475933,"reciprocal-square exponent formula plus mant bits9/8 run trees and low8 nested hi5 LUT"

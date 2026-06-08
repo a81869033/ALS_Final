@@ -1,0 +1,6 @@
+case,variant,notes
+ex235,semantic_shell,reciprocal_sqrt shell: base only positive normal; signed zero->signed inf; +inf->+0; NaN/negative normal->canonical NaN
+ex236,semantic_shell,cube shell: base only exp10..20 normal; low magnitudes signed zero; high magnitudes signed inf; NaN canonical
+ex237,semantic_shell,cbrt shell: base only normal exp1..30; signed zero/inf pass; NaN canonical
+ex238,semantic_shell,reciprocal_cube shell: base only exp9..19; low magnitudes signed inf; high magnitudes signed zero; NaN canonical
+ex239,semantic_shell,reciprocal_cbrt shell: base only normal exp1..30; signed zero->inf; signed inf->zero; NaN canonical

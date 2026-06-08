@@ -173,3 +173,40 @@ Next maintenance items:
 - Current best:
   `ex225_manual15_14_13_predecode12_9_abc_g_aig`,
   `11488/21/241248`, reference ratio `2.067675`.
+
+## 2026-06-07 Log-Family Nested Mantissa Follow-Up
+
+Generator:
+- `student/generators/fp16_log_nested_semantic.py`
+
+Curated seed:
+- `student/seeds/fp16/ex223_ex225_frontend_fp16_log_nested_current_20260607_2140/`
+
+Best result:
+- `ex225_log_nested_low12_hi5_abc_g_aig`, official `evaluate.py` OK at
+  `11533/19/219127`, reference ratio `1.878081`.
+
+Structure:
+- Non-positive/special sign-exp groups are exact special/default table.
+- Positive-normal log10 region is split by sign+exponent.
+- Output high bits are per-exp mantissa run trees.
+- Output low12 bits use a nested mantissa hi5/lo5 LUT.
+
+Delta from previous best:
+- Previous current best was `manual15_14_13_predecode12_9_abc_g_aig`,
+  `11488/21/241248`.
+- New nested seed raises area by 45 but cuts delay from 21 to 19, improving ADP
+  by `22121`.
+
+Exclusions from this nested family:
+- `low8`, `low9`, and `low11` were exact and improved earlier rows, but
+  `low12_hi5` was best.
+- `low12_hi6`, `low13_hi5`, and `low13_hi6` did not beat `low12_hi5`.
+- `hi4` gave lower area on some rows but delay 20; `hi6/hi7` generally raised
+  area too much for ex225.
+
+Next useful direction:
+- The nested source is now the best exact frontend seed, but it is still above
+  `1.5x` reference.  Future work should target a shallower arithmetic
+  exponent-base/mantissa-correction normalizer, or compress the low12 nested
+  LUT without reintroducing the high delay seen in the fixed-point normalizer.

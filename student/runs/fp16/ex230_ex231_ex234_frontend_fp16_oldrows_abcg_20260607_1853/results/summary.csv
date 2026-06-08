@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853,21,21,"new ex230/ex231/ex234 bests through old-row abc_g_aig","ex230 6969/20/139380; ex231 1286/16/20576; ex234 1355/17/23035"

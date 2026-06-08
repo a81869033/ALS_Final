@@ -1,0 +1,2 @@
+case,status,area,delay,adp,source,notes
+ex232,OK,1240,13,16120,student/seeds/fp16/ex232_frontend_fp16_square_deep_current_20260607_1940/ex232/aigs/ex232_exp_formula_hi9_8_low8_nested_hi6_abc_g_aig.aig,official evaluate.py --case ex232 OK

@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,method,notes
+ex232_ex233_frontend_fp16_bitrun_20260607_1853,16,16,evaluate_aig,"all selected-bit source candidates exact"

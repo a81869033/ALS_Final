@@ -1,0 +1,2 @@
+run_id,cases,artifact,summary
+ex230_ex234_frontend_fp16_semantic_20260607_1853,ex230-ex234,diagnosis_and_semantic_check,"reciprocal/square/sqrt/reciprocal-square exact semantic matches; sigmoid-family mismatch recorded at 0x1a00"

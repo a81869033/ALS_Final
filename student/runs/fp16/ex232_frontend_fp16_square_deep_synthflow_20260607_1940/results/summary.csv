@@ -1,0 +1,2 @@
+case,best_candidate,best_area,best_delay,best_adp,reference_adp,ratio,notes
+ex232,ex232_abc_g_aig_abc_g_aig,1240,13,16120,13392,1.203704,abc_g_aig reproduced source-run best; no synthflow neighbor improved

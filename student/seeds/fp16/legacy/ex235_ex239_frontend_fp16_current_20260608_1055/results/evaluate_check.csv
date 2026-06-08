@@ -1,0 +1,6 @@
+case,status,area,delay,adp,equivalent,notes
+ex235,OK,1685,14,23590,1,evaluate.py --case ex235 OK
+ex236,OK,1531,16,24496,1,evaluate.py --case ex236 OK
+ex237,OK,1934,16,30944,1,evaluate.py --case ex237 OK
+ex238,OK,1553,16,24848,1,evaluate.py --case ex238 OK
+ex239,OK,2049,16,32784,1,evaluate.py --case ex239 OK

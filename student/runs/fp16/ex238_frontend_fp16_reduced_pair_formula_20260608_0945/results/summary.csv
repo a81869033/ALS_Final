@@ -1,0 +1,2 @@
+case,variant,notes
+ex238,reduced_pair_b10_9_formula,reduced 28-bit sign pair excluding output bits 10/9; const_groups=20; full_groups=12; table_items=12308

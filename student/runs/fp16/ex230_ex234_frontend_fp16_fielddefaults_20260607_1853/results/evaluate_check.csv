@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,method,notes
+ex230_ex234_frontend_fp16_fielddefaults_20260607_1853,39,39,evaluate_aig,"used as exclusion evidence against broad field-default reshaping"

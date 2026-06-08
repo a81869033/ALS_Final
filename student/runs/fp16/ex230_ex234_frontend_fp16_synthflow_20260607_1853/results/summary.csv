@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex230_ex234_frontend_fp16_synthflow_20260607_1853,5,5,"initial abc_g_aig improvements for ex230-ex234","later superseded except ex234 by old-row or selected-bit follow-up"

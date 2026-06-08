@@ -1,0 +1,6 @@
+case,variant,notes
+ex235,exp_formula_wrapper,"active positive reciprocal_sqrt exponent formula; base=22-((exp+1)>>1), odd mant0 bump"
+ex236,exp_formula_wrapper,cube exponent formula; 3*exp-30 plus mantissa normalization delta and saturation
+ex237,exp_formula_wrapper,cbrt exponent formula; floor((exp-15)/3)+15 plus exp%3==2 mantissa endpoint bump
+ex238,exp_formula_wrapper,reciprocal_cube exponent formula; 60-3*exp-delta with high/low saturation
+ex239,exp_formula_wrapper,reciprocal_cbrt exponent formula; 19-floor(exp/3) plus exp%3==0 mantissa-zero bump

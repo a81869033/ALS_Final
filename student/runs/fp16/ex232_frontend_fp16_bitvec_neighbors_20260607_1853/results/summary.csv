@@ -1,0 +1,2 @@
+run_id,candidate_rows,exact_rows,best_summary,notes
+ex232_frontend_fp16_bitvec_neighbors_20260607_1853,7,7,"neighbor bitvec source variants around ex232 bits12/9","exact but no improvement"

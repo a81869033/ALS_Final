@@ -24,6 +24,11 @@ CASE_OPS = {
     "ex227": "tan",
     "ex228": "sinh",
     "ex229": "tanh",
+    "ex230": "sigmoid",
+    "ex231": "reciprocal",
+    "ex232": "square",
+    "ex233": "sqrt",
+    "ex234": "reciprocal_square",
 }
 
 FIELDNAMES = [
@@ -103,6 +108,40 @@ def model(bits, op):
         if exp == 0x1F:
             return (sign | 0x3C00) if mant == 0 else CANONICAL_NAN
         return float_to_half_bits(math.tanh(half_to_float(bits)))
+    if op == "sigmoid":
+        if exp == 0x1F:
+            if mant != 0:
+                return CANONICAL_NAN
+            return 0x0000 if sign else 0x3C00
+        value = half_to_float(bits)
+        try:
+            return float_to_half_bits(1.0 / (1.0 + math.exp(-value)))
+        except OverflowError:
+            return 0x0000
+    if op == "reciprocal":
+        if exp == 0 and mant == 0:
+            return sign | 0x7C00
+        if exp == 0x1F:
+            return CANONICAL_NAN if mant != 0 else sign
+        return float_to_half_bits(1.0 / half_to_float(bits))
+    if op == "square":
+        if exp == 0x1F:
+            return CANONICAL_NAN if mant != 0 else 0x7C00
+        value = half_to_float(bits)
+        return float_to_half_bits(value * value)
+    if op == "sqrt":
+        if exp == 0x1F:
+            return CANONICAL_NAN if sign or mant != 0 else 0x7C00
+        if sign and (exp != 0 or mant != 0):
+            return CANONICAL_NAN
+        return float_to_half_bits(math.sqrt(half_to_float(bits)))
+    if op == "reciprocal_square":
+        if exp == 0 and mant == 0:
+            return 0x7C00
+        if exp == 0x1F:
+            return CANONICAL_NAN if mant != 0 else 0x0000
+        value = half_to_float(bits)
+        return float_to_half_bits(1.0 / (value * value))
     raise RuntimeError("unknown op: {0}".format(op))
 
 
