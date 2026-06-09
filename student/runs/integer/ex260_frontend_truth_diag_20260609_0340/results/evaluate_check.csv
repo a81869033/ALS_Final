@@ -1,0 +1,2 @@
+case,candidate_id,equivalent,area,delay,adp,aig_path,notes
+ex260,ex260_truth_st,1,364,16,5824,student/work/ex260_frontend_truth_diag_20260609_0340/ex260/aigs/ex260_truth_st.aig,ABC read_truth -xf; st exact but worse than Baugh-Wooley+hCLA4

@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex273,750,46,34500,15078,2.288102,0,0,ex273_square_pairadder_tree_synth_preset,exact unsigned 14-bit square x*x over 16384 inputs; source=square_pairadder_tree; flow=synth_preset
+ex274,973,58,56434,21630,2.609061,0,0,ex274_square_pairadder_tree_synth_preset,exact unsigned 16-bit square x*x over 65536 inputs; source=square_pairadder_tree; flow=synth_preset

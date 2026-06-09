@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex270,353,15,5295,2076,2.550578,0,0,ex270_square_hybrid_bdd_top4_mid2_abc_g_aig,exact unsigned 8-bit square x*x over 256 inputs; source=square_hybrid_bdd_top4_mid2; flow=abc_g_aig

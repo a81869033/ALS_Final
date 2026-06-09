@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex256,150,21,3150,1911,1.648352,0,0,ex256_umul_csa_androws_synth_preset_d13,exact unsigned low5 * high5 over 1024 inputs; focused source=csa_androws; flow=synth_preset_d13

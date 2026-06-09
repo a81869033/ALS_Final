@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex268,744,16,11904,7446,1.598711,0,0,ex268_udiv_cof_bhi3_ahi1_bitbdd_wordmux_synth_preset,unsigned low7_high7:a/b dbz=max exact; source=cof_bhi3_ahi1_bitbdd_wordmux; flow=synth_preset
+ex269,1663,20,33260,11760,2.828231,0,0,ex269_udiv_cof_bhi3_ahi1_bitbdd_wordmux_synth_preset,unsigned low8_high8:a/b dbz=max exact; source=cof_bhi3_ahi1_bitbdd_wordmux; flow=synth_preset

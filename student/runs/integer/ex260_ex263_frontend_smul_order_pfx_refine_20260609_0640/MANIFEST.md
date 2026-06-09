@@ -1,0 +1,32 @@
+# ex260_ex263_frontend_smul_order_pfx_refine_20260609_0640
+
+Run ID: `ex260_ex263_frontend_smul_order_pfx_refine_20260609_0640`
+
+Purpose: deep frontend-only signed multiplier seeds for `ex260-ex264`.
+
+Inputs:
+- Truth files: `benchmarks/ex260.truth` through `benchmarks/ex264.truth`
+- Existing baseline: `student/runs/integer/ex255_ex279_current/results/candidates.csv`
+- Generator/script: `student/generators/integer_ex260_ex264_signed_mul_frontend.py`
+
+Artifacts:
+- Work directory: `student/work/ex260_ex263_frontend_smul_order_pfx_refine_20260609_0640`
+- Candidates CSV: `student/runs/integer/ex260_ex263_frontend_smul_order_pfx_refine_20260609_0640/results/candidates.csv`
+- Best CSV: `student/runs/integer/ex260_ex263_frontend_smul_order_pfx_refine_20260609_0640/results/best.csv`
+- Summary CSV: `student/runs/integer/ex260_ex263_frontend_smul_order_pfx_refine_20260609_0640/results/summary.csv`
+
+Methods tried:
+- Direct signed multiply, sign/magnitude multiply, signed unsigned-product correction, Wallace/CSA unsigned core plus sign correction, radix-4 Booth, and split-half signed decomposition where applicable.
+- Limited Yosys frontend synth scripts including `abc -g aig`, `wreduce`, arithmetic sharing, and target-delay synth presets.
+
+Best result:
+- See `results/best.csv` for one row per case.
+
+Notes:
+- Every retained AIG row is checked with ABC CEC against `read_truth -xf` through `evaluate_aig`.
+- No backend optimization portfolio was run.
+
+Run totals:
+- candidates: 120
+- equivalent: 120
+- best cases: 2

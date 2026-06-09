@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex256,594,30,17820,1911,9.324961,0,0,ex256_umul_case_b_const_synth_preset,exact unsigned low5 * high5 over 1024 inputs; source=case_b_const; flow=synth_preset

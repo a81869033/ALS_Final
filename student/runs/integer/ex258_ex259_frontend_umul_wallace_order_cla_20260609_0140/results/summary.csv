@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex258,351,25,8775,6289,1.395293,1,0,ex258_umul_wallace_bits_abc_g_aig,exact unsigned low7 * high7 over 16384 inputs; focused source=wallace_bits; flow=abc_g_aig
+ex259,480,28,13440,10000,1.344000,1,0,ex259_umul_wallace_bits_cla_abc_g_aig,exact unsigned low8 * high8 over 65536 inputs; focused source=wallace_bits_cla; flow=abc_g_aig

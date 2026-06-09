@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex256,ex256_unknown_shared_bdd_10x10_order_9_8_7_6_5_4_3_2_1_0,unknown_shared_bdd_10x10,order_9_8_7_6_5_4_3_2_1_0,student/work/ex256_frontend_bdd_diag_20260609_0044/ex256/verilog/ex256_unknown_shared_bdd_10x10_order_9_8_7_6_5_4_3_2_1_0.v,student/work/ex256_frontend_bdd_diag_20260609_0044/ex256/aigs/ex256_unknown_shared_bdd_10x10_order_9_8_7_6_5_4_3_2_1_0.aig,817,16,13072,order_name=order_9_8_7_6_5_4_3_2_1_0; order=9:8:7:6:5:4:3:2:1:0; bdd_nodes=403,unknown function shared-BDD Verilog seed

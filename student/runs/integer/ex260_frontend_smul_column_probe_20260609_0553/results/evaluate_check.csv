@@ -1,0 +1,2 @@
+case,candidate_id,equivalent,area,delay,adp,aig_path,notes
+ex260,ex260_smul_baugh_wooley_column_arith_abc_g_aig,1,80,31,2480,student/work/ex260_frontend_smul_column_probe_20260609_0553/ex260/aigs/ex260_smul_baugh_wooley_column_arith_abc_g_aig.aig,exact signed low4 * signed high4 over 256 inputs; source=baugh_wooley_column_arith; flow=abc_g_aig

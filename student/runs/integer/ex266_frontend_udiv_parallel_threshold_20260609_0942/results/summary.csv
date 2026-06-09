@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex266,520,25,13000,848,15.330189,0,0,ex266_udiv_ex266_parallel_threshold_synth_preset,unsigned low5_high5:a/b dbz=max exact; source=ex266_parallel_threshold; flow=synth_preset

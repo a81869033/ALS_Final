@@ -1,0 +1,5 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex255,87,14,1218,836,1.456938,1,0,ex255_umul_csa_androws_cla_abc_g_aig,exact unsigned low4 * high4 over 256 inputs; focused source=csa_androws_cla; flow=abc_g_aig
+ex257,263,20,5260,3952,1.330972,1,0,ex257_umul_csa_androws_cla_from3_synth_preset_d13,exact unsigned low6 * high6 over 4096 inputs; focused source=csa_androws_cla_from3; flow=synth_preset_d13
+ex258,372,24,8928,6289,1.419622,1,0,ex258_umul_csa_androws_cla_from3_wreduce_abc_g_aig,exact unsigned low7 * high7 over 16384 inputs; focused source=csa_androws_cla_from3; flow=wreduce_abc_g_aig
+ex259,480,28,13440,10000,1.344000,1,0,ex259_umul_wallace_bits_cla_abc_g_aig,exact unsigned low8 * high8 over 65536 inputs; focused source=wallace_bits_cla; flow=abc_g_aig

@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex256,152,21,3192,1911,1.670330,0,0,ex256_umul_block_split_lo2_abc_g_aig,exact unsigned low5 * high5 over 1024 inputs; focused source=block_split_lo2; flow=abc_g_aig

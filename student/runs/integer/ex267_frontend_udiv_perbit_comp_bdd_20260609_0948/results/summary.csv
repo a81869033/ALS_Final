@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex267,321,15,4815,2651,1.816296,0,0,ex267_udiv_bdd_perbit_search_best_synth_preset,unsigned low6_high6:a/b dbz=max exact; source=bdd_perbit_search_best; flow=synth_preset

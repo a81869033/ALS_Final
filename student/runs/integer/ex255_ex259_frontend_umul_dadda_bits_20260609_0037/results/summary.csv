@@ -1,0 +1,4 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex255,93,14,1302,836,1.557416,0,0,ex255_umul_dadda_bits_prefix_synth_preset,exact unsigned low4 * high4 over 256 inputs; source=dadda_bits_prefix; flow=synth_preset
+ex256,166,21,3486,1911,1.824176,0,0,ex256_umul_dadda_bits_prefix_synth_preset,exact unsigned low5 * high5 over 1024 inputs; source=dadda_bits_prefix; flow=synth_preset
+ex257,274,27,7398,3952,1.871964,0,0,ex257_umul_dadda_bits_prefix_synth_preset,exact unsigned low6 * high6 over 4096 inputs; source=dadda_bits_prefix; flow=synth_preset

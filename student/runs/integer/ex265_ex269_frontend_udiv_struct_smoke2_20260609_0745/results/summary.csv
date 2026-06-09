@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex265,81,8,648,322,2.012422,0,0,ex265_udiv_case_denominator_manual_abc_g_aig,unsigned low4_high4:a/b dbz=max exact; source=case_denominator_manual; flow=abc_g_aig
+ex266,88,28,2464,848,2.905660,0,0,ex266_udiv_direct_gt_guard_abc_g_aig,unsigned low5_high5:a/b dbz=max exact; source=direct_gt_guard; flow=abc_g_aig

@@ -1,0 +1,4 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex265,59,9,531,322,1.649068,0,0,ex265_udiv_bdd_greedy_interleave_msb_synth_preset,unsigned low4_high4:a/b dbz=max exact; source=bdd_greedy_interleave_msb; flow=synth_preset
+ex266,146,13,1898,848,2.238208,0,0,ex266_udiv_bdd_greedy_interleave_msb_synth_preset,unsigned low5_high5:a/b dbz=max exact; source=bdd_greedy_interleave_msb; flow=synth_preset
+ex267,329,16,5264,2651,1.985666,0,0,ex267_udiv_bdd_greedy_interleave_msb_abc_g_aig,unsigned low6_high6:a/b dbz=max exact; source=bdd_greedy_interleave_msb; flow=abc_g_aig

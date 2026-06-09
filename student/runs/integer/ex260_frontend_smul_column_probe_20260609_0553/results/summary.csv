@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex260,80,31,2480,657,3.774734,0,0,ex260_smul_baugh_wooley_column_arith_abc_g_aig,exact signed low4 * signed high4 over 256 inputs; source=baugh_wooley_column_arith; flow=abc_g_aig

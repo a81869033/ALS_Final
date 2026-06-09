@@ -1,0 +1,5 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex260,88,13,1144,657,1.741248,0,0,ex260_smul_baugh_wooley_wallace_rev_hcla4_abc_g_aig,exact signed low4 * signed high4 over 256 inputs; source=baugh_wooley_wallace_rev_hcla4; flow=abc_g_aig
+ex261,164,18,2952,2041,1.446350,1,0,ex261_smul_baugh_wooley_wallace_evenodd_hcla4_abc_g_aig,exact signed low5 * signed high5 over 1024 inputs; source=baugh_wooley_wallace_evenodd_hcla4; flow=abc_g_aig
+ex263,358,25,8950,6840,1.308480,1,0,ex263_smul_baugh_wooley_wallace_outside_rhcla4_synth_preset_d13,exact signed low7 * signed high7 over 16384 inputs; source=baugh_wooley_wallace_outside_rhcla4; flow=synth_preset_d13
+ex264,487,27,13149,9724,1.352221,1,0,ex264_smul_baugh_wooley_wallace_rev_rhcla3_synth_preset_d13,exact signed low8 * signed high8 over 65536 inputs; source=baugh_wooley_wallace_rev_rhcla3; flow=synth_preset_d13

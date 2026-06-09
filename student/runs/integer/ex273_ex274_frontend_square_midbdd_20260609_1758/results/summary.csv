@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex273,1621,31,50251,15078,3.332736,0,0,ex273_square_hybrid_bdd_top4_mid2_synth_preset,exact unsigned 14-bit square x*x over 16384 inputs; source=square_hybrid_bdd_top4_mid2; flow=synth_preset
+ex274,2117,40,84680,21630,3.914933,0,0,ex274_square_hybrid_bdd_top4_mid2_synth_preset,exact unsigned 16-bit square x*x over 65536 inputs; source=square_hybrid_bdd_top4_mid2; flow=synth_preset

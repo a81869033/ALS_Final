@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex266,142,11,1562,848,1.841981,0,0,ex266_udiv_ex266_hybrid_top1_a43_synth_preset,unsigned low5_high5:a/b dbz=max exact; source=udiv_ex266_hybrid_top1_a43; flow=synth_preset
+ex276,130,11,1430,632,2.262658,0,0,ex276_isqrt_threshold_toggle_shared_synth_preset,exact unsigned floor isqrt over 1024 inputs; source=isqrt_threshold_toggle_shared; flow=synth_preset

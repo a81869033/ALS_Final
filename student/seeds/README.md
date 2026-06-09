@@ -21,6 +21,11 @@ Primary bundles:
 - `fp16/ex220_ex239_backend_candidates_20260608_1008/`: non-best FP16
   alternatives for `ex220`-`ex239`; use this as the secondary backend
   starting-point pool after the best-only bundle.
+- `integer/ex255_ex279_current/`: best-only integer arithmetic bundle for
+  `ex255`-`ex279`; exactly one current best verified Verilog/AIG seed per case.
+- `integer/ex255_ex279_backend_candidates_20260609_1809/`: non-best integer
+  alternatives for `ex255`-`ex279`; exactly four verified alternatives per
+  case for backend-start diversity after the best-only bundle.
 
 Legacy FP16 bundles:
 

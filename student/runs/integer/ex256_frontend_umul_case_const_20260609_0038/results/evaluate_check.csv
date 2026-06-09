@@ -1,0 +1,6 @@
+case,candidate_id,equivalent,area,delay,adp,aig_path,notes
+ex256,ex256_umul_case_b_const_default,1,793,29,22997,student/work/ex256_frontend_umul_case_const_20260609_0038/ex256/aigs/ex256_umul_case_b_const_default.aig,exact unsigned low5 * high5 over 1024 inputs; source=case_b_const; flow=default
+ex256,ex256_umul_case_b_const_abc_g_aig,1,786,29,22794,student/work/ex256_frontend_umul_case_const_20260609_0038/ex256/aigs/ex256_umul_case_b_const_abc_g_aig.aig,exact unsigned low5 * high5 over 1024 inputs; source=case_b_const; flow=abc_g_aig
+ex256,ex256_umul_case_b_const_synth_preset,1,594,30,17820,student/work/ex256_frontend_umul_case_const_20260609_0038/ex256/aigs/ex256_umul_case_b_const_synth_preset.aig,exact unsigned low5 * high5 over 1024 inputs; source=case_b_const; flow=synth_preset
+ex256,ex256_umul_case_b_const_abc_g_aig_d20,1,786,29,22794,student/work/ex256_frontend_umul_case_const_20260609_0038/ex256/aigs/ex256_umul_case_b_const_abc_g_aig_d20.aig,exact unsigned low5 * high5 over 1024 inputs; source=case_b_const; flow=abc_g_aig_d20
+ex256,ex256_umul_case_b_const_synth_preset_d20,1,594,30,17820,student/work/ex256_frontend_umul_case_const_20260609_0038/ex256/aigs/ex256_umul_case_b_const_synth_preset_d20.aig,exact unsigned low5 * high5 over 1024 inputs; source=case_b_const; flow=synth_preset_d20

@@ -1,0 +1,74 @@
+module ex269_udiv_radix4_compact_digit(in, out);
+  input [15:0] in;
+  output [7:0] out;
+  wire [7:0] a = in[7:0];
+  wire [7:0] b = in[15:8];
+  wire dbz = (b == 8'b0);
+  reg [7:0] q;
+  reg [17:0] rem;
+  reg [17:0] denom1;
+  reg [17:0] denom2;
+  reg [17:0] denom3;
+  reg [17:0] sub;
+  reg [1:0] digit;
+  reg ge1;
+  reg ge2;
+  reg ge3;
+  always @* begin
+    q = 8'b0;
+    rem = {10'b0, a};
+    denom1 = 18'b0;
+    denom2 = 18'b0;
+    denom3 = 18'b0;
+    sub = 18'b0;
+    digit = 2'b00;
+    ge1 = 1'b0;
+    ge2 = 1'b0;
+    ge3 = 1'b0;
+    if (dbz) begin
+      q = 8'hff;
+    end else begin
+      denom1 = {10'b0, b} << 6;
+      denom2 = denom1 << 1;
+      denom3 = denom2 + denom1;
+      ge1 = (rem >= denom1);
+      ge2 = (rem >= denom2);
+      ge3 = (rem >= denom3);
+      digit = ge3 ? 2'd3 : (ge2 ? 2'd2 : (ge1 ? 2'd1 : 2'd0));
+      sub = ge3 ? denom3 : (ge2 ? denom2 : (ge1 ? denom1 : 18'b0));
+      rem = rem - sub;
+      q[7:6] = digit;
+      denom1 = {10'b0, b} << 4;
+      denom2 = denom1 << 1;
+      denom3 = denom2 + denom1;
+      ge1 = (rem >= denom1);
+      ge2 = (rem >= denom2);
+      ge3 = (rem >= denom3);
+      digit = ge3 ? 2'd3 : (ge2 ? 2'd2 : (ge1 ? 2'd1 : 2'd0));
+      sub = ge3 ? denom3 : (ge2 ? denom2 : (ge1 ? denom1 : 18'b0));
+      rem = rem - sub;
+      q[5:4] = digit;
+      denom1 = {10'b0, b} << 2;
+      denom2 = denom1 << 1;
+      denom3 = denom2 + denom1;
+      ge1 = (rem >= denom1);
+      ge2 = (rem >= denom2);
+      ge3 = (rem >= denom3);
+      digit = ge3 ? 2'd3 : (ge2 ? 2'd2 : (ge1 ? 2'd1 : 2'd0));
+      sub = ge3 ? denom3 : (ge2 ? denom2 : (ge1 ? denom1 : 18'b0));
+      rem = rem - sub;
+      q[3:2] = digit;
+      denom1 = {10'b0, b} << 0;
+      denom2 = denom1 << 1;
+      denom3 = denom2 + denom1;
+      ge1 = (rem >= denom1);
+      ge2 = (rem >= denom2);
+      ge3 = (rem >= denom3);
+      digit = ge3 ? 2'd3 : (ge2 ? 2'd2 : (ge1 ? 2'd1 : 2'd0));
+      sub = ge3 ? denom3 : (ge2 ? denom2 : (ge1 ? denom1 : 18'b0));
+      rem = rem - sub;
+      q[1:0] = digit;
+    end
+  end
+  assign out = q;
+endmodule

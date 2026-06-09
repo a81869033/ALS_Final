@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex256,156,23,3588,1911,1.877551,0,0,ex256_umul_highbit_correction_synth_preset,exact unsigned low5 * high5 over 1024 inputs; source=highbit_correction; flow=synth_preset

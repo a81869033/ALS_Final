@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex266,152,11,1672,848,1.971698,0,0,ex266_udiv_ex266_cof_bhi2_a43_bitbdd_synth_preset,unsigned low5_high5:a/b dbz=max exact; source=ex266_cof_bhi2_a43_bitbdd; flow=synth_preset

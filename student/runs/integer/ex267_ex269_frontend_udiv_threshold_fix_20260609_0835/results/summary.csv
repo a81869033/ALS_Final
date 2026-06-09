@@ -1,0 +1,4 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex267,324,33,10692,2651,4.033195,0,0,ex267_udiv_denom_split_threshold_direct_synth_preset,unsigned low6_high6:a/b dbz=max exact; source=denom_split_threshold_direct; flow=synth_preset
+ex268,703,39,27417,7446,3.682111,0,0,ex268_udiv_denom_split_threshold_direct_synth_preset,unsigned low7_high7:a/b dbz=max exact; source=denom_split_threshold_direct; flow=synth_preset
+ex269,902,61,55022,11760,4.678741,0,0,ex269_udiv_denom_split_threshold_direct_synth_preset,unsigned low8_high8:a/b dbz=max exact; source=denom_split_threshold_direct; flow=synth_preset

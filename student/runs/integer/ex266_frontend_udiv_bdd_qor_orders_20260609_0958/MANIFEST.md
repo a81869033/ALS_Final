@@ -1,0 +1,30 @@
+# ex266_frontend_udiv_bdd_qor_orders_20260609_0958
+
+Run ID: `ex266_frontend_udiv_bdd_qor_orders_20260609_0958`
+
+Purpose: frontend-only unsigned division seeds for `ex265-ex269`.
+
+Inputs:
+- Truth files: `benchmarks/ex265.truth` through `benchmarks/ex269.truth`
+- Existing baseline: `student/runs/integer/ex255_ex279_current/results/candidates.csv`
+- Generator/script: `student/generators/integer_ex265_ex269_udiv_frontend.py`
+
+Artifacts:
+- Work directory: `student/work/ex266_frontend_udiv_bdd_qor_orders_20260609_0958`
+- Candidates CSV: `student/runs/integer/ex266_frontend_udiv_bdd_qor_orders_20260609_0958/results/candidates.csv`
+- Best CSV: `student/runs/integer/ex266_frontend_udiv_bdd_qor_orders_20260609_0958/results/best.csv`
+- Summary CSV: `student/runs/integer/ex266_frontend_udiv_bdd_qor_orders_20260609_0958/results/summary.csv`
+
+Methods tried:
+- Direct guarded division, safe-divisor source rewrite, greater-than-zero guard, narrow restoring divider, constant-denominator manual paths, dividend-range classifiers, quotient threshold classifiers, and small-divisor fast paths.
+- Limited Yosys frontend synth scripts from the existing integer flow.
+
+Notes:
+- Every retained AIG row is checked against the official truth table convention through `evaluate_aig`.
+- No backend optimization portfolio was run.
+- No `student/seeds` bundle is updated in this partial batch.
+
+Run totals:
+- candidates: 18
+- equivalent: 18
+- best cases: 1

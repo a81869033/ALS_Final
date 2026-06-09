@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex267,376,11,4136,2651,1.560166,0,0,ex267_udiv_cof_bhi4_a_hi3_wordmux_abc_g_aig,unsigned low6_high6:a/b dbz=max exact; source=udiv_cof_bhi4_a_hi3_wordmux; flow=abc_g_aig

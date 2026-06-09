@@ -1,0 +1,3 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex268,484,59,28556,7446,3.835079,0,0,ex268_udiv_denom_lz_range_lowbdd_synth_preset,unsigned low7_high7:a/b dbz=max exact; source=denom_lz_range_lowbdd; flow=synth_preset
+ex269,1044,75,78300,11760,6.658163,0,0,ex269_udiv_denom_lz_range_lowbdd_synth_preset,unsigned low8_high8:a/b dbz=max exact; source=denom_lz_range_lowbdd; flow=synth_preset

@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex260,190,9,1710,657,2.602740,0,0,ex260_smul_case_b_signed_const_arith_wreduce_aig,exact signed low4 * signed high4 over 256 inputs; source=case_b_signed_const; flow=arith_wreduce_aig

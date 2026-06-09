@@ -1,0 +1,4 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex266,128,20,2560,848,3.018868,0,0,ex266_udiv_radix4_compact_digit_synth_preset,unsigned low5_high5:a/b dbz=max exact; source=radix4_compact_digit; flow=synth_preset
+ex267,190,28,5320,2651,2.006790,0,0,ex267_udiv_radix4_compact_digit_abc_g_aig,unsigned low6_high6:a/b dbz=max exact; source=radix4_compact_digit; flow=abc_g_aig
+ex269,364,46,16744,11760,1.423810,1,0,ex269_udiv_radix4_compact_digit_wreduce_abc_g_aig,unsigned low8_high8:a/b dbz=max exact; source=radix4_compact_digit; flow=wreduce_abc_g_aig

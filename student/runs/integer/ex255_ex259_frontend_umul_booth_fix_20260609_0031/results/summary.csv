@@ -1,0 +1,6 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex255,130,17,2210,836,2.643541,0,0,ex255_umul_booth_radix4_synth_preset,exact unsigned low4 * high4 over 256 inputs; source=booth_radix4; flow=synth_preset
+ex256,179,22,3938,1911,2.060701,0,0,ex256_umul_booth_radix4_synth_preset,exact unsigned low5 * high5 over 1024 inputs; source=booth_radix4; flow=synth_preset
+ex257,308,30,9240,3952,2.338057,0,0,ex257_umul_booth_radix4_synth_preset,exact unsigned low6 * high6 over 4096 inputs; source=booth_radix4; flow=synth_preset
+ex258,346,37,12802,6289,2.035618,0,0,ex258_umul_booth_radix4_abc_g_aig,exact unsigned low7 * high7 over 16384 inputs; source=booth_radix4; flow=abc_g_aig
+ex259,555,40,22200,10000,2.220000,0,0,ex259_umul_booth_radix4_synth_preset,exact unsigned low8 * high8 over 65536 inputs; source=booth_radix4; flow=synth_preset

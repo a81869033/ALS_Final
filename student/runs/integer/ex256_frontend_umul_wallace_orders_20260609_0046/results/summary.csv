@@ -1,0 +1,2 @@
+case,best_area,best_delay,best_adp,reference_adp,ratio_to_reference,within_1p5_reference,beats_reference,candidate_id,notes
+ex256,158,20,3160,1911,1.653585,0,0,ex256_umul_wallace_bits_outside_abc_g_aig,exact unsigned low5 * high5 over 1024 inputs; source=wallace_bits_outside; flow=abc_g_aig

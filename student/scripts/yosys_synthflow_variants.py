@@ -185,6 +185,10 @@ VARIANTS = [
     ("late_flatten", lambda v, m, o: script_late_flatten(v, m, o), "move flatten after techmap"),
     ("synth_preset", lambda v, m, o: script_synth_preset(v, m, o, noabc=False), "Yosys synth preset with flatten"),
     ("synth_preset_noabc", lambda v, m, o: script_synth_preset(v, m, o, noabc=True), "Yosys synth preset without abc"),
+    ("abc_g_aig_d14", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 14"), "Yosys abc gate set aig delay target 14"),
+    ("abc_g_aig_d15", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 15"), "Yosys abc gate set aig delay target 15"),
+    ("abc_g_aig_d16", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 16"), "Yosys abc gate set aig delay target 16"),
+    ("abc_g_aig_d17", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 17"), "Yosys abc gate set aig delay target 17"),
     ("abc_g_aig_d18", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 18"), "Yosys abc gate set aig delay target 18"),
     ("abc_g_aig_d19", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 19"), "Yosys abc gate set aig delay target 19"),
     ("abc_g_aig_d20", lambda v, m, o: script_default(v, m, o).replace("abc -g AND", "abc -g aig -D 20"), "Yosys abc gate set aig delay target 20"),
@@ -278,7 +282,7 @@ def run_case(args, refs, case, seed):
 def best_rows(rows):
     out = []
     for case in sorted({row["case"] for row in rows}):
-        valid = [row for row in rows if row["equivalent"] == "1" and row["adp"]]
+        valid = [row for row in rows if row["case"] == case and row["equivalent"] == "1" and row["adp"]]
         if valid:
             best = min(valid, key=lambda row: int(row["adp"]))
             out.append({name: best.get(name, "") for name in BEST_FIELDNAMES})
@@ -297,6 +301,7 @@ def parse_args(argv=None):
     parser.add_argument("--timeout", type=int, default=900)
     parser.add_argument("--cases", default="ex223,ex224")
     parser.add_argument("--variants", default="", help="Comma-separated synthesis-flow variant names.")
+    parser.add_argument("--seed-json", type=Path, help="Optional case-to-seed JSON overriding built-in seeds.")
     return parser.parse_args(argv)
 
 
@@ -304,9 +309,14 @@ def main(argv=None):
     args = parse_args(argv)
     args.variant_names = {item.strip() for item in args.variants.split(",") if item.strip()}
     refs = load_reference(args.reference)
+    seeds = SEEDS
+    if args.seed_json:
+        seeds = json.loads(args.seed_json.read_text())
+        for seed in seeds.values():
+            seed["verilog"] = Path(seed["verilog"])
     rows = []
     for case in [item.strip() for item in args.cases.split(",") if item.strip()]:
-        rows.extend(run_case(args, refs, case, SEEDS[case]))
+        rows.extend(run_case(args, refs, case, seeds[case]))
     write_csv(args.results, RESULT_FIELDNAMES, rows)
     write_csv(args.best_results, BEST_FIELDNAMES, best_rows(rows))
     manifest = {
