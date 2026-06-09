@@ -1,0 +1,28 @@
+{
+  "artifacts": [
+    "results/semantic_diagnostics.csv",
+    "results/candidates.csv",
+    "results/best.csv",
+    "results/summary.csv",
+    "results/evaluate_check.csv"
+  ],
+  "hypotheses": [
+    "All four functions preserve Hamming weight exactly over the full truth table.",
+    "Pure compare-exchange network is rejected because output bits are not monotone.",
+    "280-284 mux-coordinate quadratic/compressor structure is rejected: degree-2/3 exact cover solves zero bits for raw and pair-canonical domains.",
+    "Direct weighted modular sum/Gray/reverse rank/elementary CA/layer-BDD decompositions are rejected by low exact-match or worse BDD-size diagnostics.",
+    "Remaining large-drop direction is conservative token-routing / controlled-swap / Fredkin-like or another nonlocal Hamming-weight-preserving process."
+  ],
+  "kind": "frontend semantic diagnostics only; no seed emission",
+  "output_policy": "No output/ writes.",
+  "results_dir": "student/runs/unknown/ex286_ex289_frontend_popcount_semantic_diag_20260609_0754/results",
+  "run_id": "ex286_ex289_frontend_popcount_semantic_diag_20260609_0754",
+  "scope": [
+    "ex286",
+    "ex287",
+    "ex288",
+    "ex289"
+  ],
+  "seed_policy": "No student/seeds update per user instruction.",
+  "work_dir": "student/work/ex286_ex289_frontend_popcount_semantic_diag_20260609_0754"
+}

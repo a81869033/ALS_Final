@@ -1,0 +1,2 @@
+case,input_width,bucket_count,selected_features,feature_mode,feature_count,epochs,seeds,best_seed,exact_rows,total_rows,row_match_ratio,bit_mismatches,total_bits,bit_match_ratio,notes
+ex286,13,8,raw3:raw10:xor6_7,counts_selectors_quad,72,2,1,0,286,8192,0.034912,30792,106496,0.710862,linear top-k score over exact bucket-count features

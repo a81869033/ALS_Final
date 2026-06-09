@@ -1,0 +1,9 @@
+case,width,family,params,twohot_exact,twohot_total,accuracy,first_mismatch
+ex286,13,sumdiff,a=0;b=1;c=9,7,78,0.089744,"twohot(0,1):pred=0x300:exp=0xc"
+ex286,13,symmetric_affine,a=6;b=7;c=7,8,78,0.102564,"twohot(0,1):pred=0x3:exp=0xc"
+ex287,14,sumdiff,a=7;b=6;c=9,9,91,0.098901,"twohot(0,2):pred=0xa00:exp=0x500"
+ex287,14,symmetric_affine,a=0;b=6;c=1,8,91,0.087912,"twohot(0,1):pred=0x82:exp=0xc"
+ex288,15,sumdiff,a=0;b=1;c=5,7,105,0.066667,"twohot(0,1):pred=0x30:exp=0xc"
+ex288,15,symmetric_affine,a=0;b=14;c=0,9,105,0.085714,"twohot(0,1):pred=0x4001:exp=0xc"
+ex289,16,sumdiff,a=8;b=9;c=9,12,120,0.100000,"twohot(0,1):pred=0x3:exp=0xc"
+ex289,16,symmetric_affine,a=3;b=4;c=8,14,120,0.116667,"twohot(0,1):pred=0x1800:exp=0xc"

@@ -1,0 +1,5 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex281,ex281_unknown_split_refine_rotate1_low12,OK,15456,19,293664,15456,19,293664,1,student/runs/unknown/ex281_ex284_frontend_split_refine_20260608_1516/official_replay/ex281.aig,evaluate.py --case replay OK; verified but far worse than current best
+ex282,ex282_unknown_split_refine_rotate1_low13,OK,31058,20,621160,31058,20,621160,1,student/runs/unknown/ex281_ex284_frontend_split_refine_20260608_1516/official_replay/ex282.aig,evaluate.py --case replay OK; verified but far worse than current best
+ex283,ex283_unknown_split_refine_rotate0_low14,OK,58241,22,1281302,58241,22,1281302,1,student/runs/unknown/ex281_ex284_frontend_split_refine_20260608_1516/official_replay/ex283.aig,evaluate.py --case replay OK; verified but far worse than current best
+ex284,,NOT_RUN,,,,,,,,,split/default source scaling was aborted after exit 143 before ex284 started; no ex284 seed from this run

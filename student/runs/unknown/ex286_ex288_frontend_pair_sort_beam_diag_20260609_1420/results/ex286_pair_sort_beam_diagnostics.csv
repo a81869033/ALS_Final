@@ -1,0 +1,27 @@
+case,depth,rank,bit_score,row_mismatches,path,notes
+ex286,0,1,47686,545,,row_mismatches sampled over 559 rows
+ex286,1,1,46118,552,0:9:1,row_mismatches sampled over 559 rows
+ex286,1,2,47174,545,1:10:0,row_mismatches sampled over 559 rows
+ex286,1,3,47280,545,0:10:0,row_mismatches sampled over 559 rows
+ex286,2,1,45606,552,0:9:1;1:10:0,row_mismatches sampled over 559 rows
+ex286,2,2,45744,552,0:9:1;0:10:0,row_mismatches sampled over 559 rows
+ex286,2,3,45830,551,0:9:1;0:2:0,row_mismatches sampled over 559 rows
+ex286,3,1,45318,551,0:9:1;1:10:0;0:2:0,row_mismatches sampled over 559 rows
+ex286,3,2,45334,549,0:9:1;1:10:0;0:8:0,row_mismatches sampled over 559 rows
+ex286,3,3,45340,556,0:9:1;1:10:0;8:11:1,row_mismatches sampled over 559 rows
+ex286,4,1,44986,551,0:9:1;1:10:0;0:2:0;0:12:0,row_mismatches sampled over 559 rows
+ex286,4,2,44996,550,0:9:1;1:10:0;2:8:0;0:2:0,row_mismatches sampled over 559 rows
+ex286,4,3,45012,550,0:9:1;1:10:0;0:2:0;2:8:0,row_mismatches sampled over 559 rows
+ex286,5,1,44680,550,0:9:1;1:10:0;0:2:0;0:12:0;2:8:0,row_mismatches sampled over 559 rows
+ex286,5,2,44720,555,0:9:1;1:10:0;0:2:0;0:12:0;8:11:1,row_mismatches sampled over 559 rows
+ex286,5,3,44756,552,0:9:1;1:10:0;0:2:0;0:12:0;3:8:0,row_mismatches sampled over 559 rows
+ex286,6,1,44464,553,0:9:1;1:10:0;2:8:0;0:2:0;8:12:1;4:12:0,row_mismatches sampled over 559 rows
+ex286,6,2,44472,555,0:9:1;1:10:0;4:11:0;8:11:1;0:2:0;0:12:0,row_mismatches sampled over 559 rows
+ex286,6,3,44490,551,0:9:1;1:10:0;0:2:0;0:12:0;2:8:0;8:12:0,row_mismatches sampled over 559 rows
+ex286,7,1,44226,555,0:9:1;1:10:0;0:10:1;0:2:0;2:8:0;0:12:0;8:12:0,row_mismatches sampled over 559 rows
+ex286,7,2,44248,555,0:9:1;1:10:0;4:11:0;8:11:1;0:2:0;0:12:0;0:4:0,row_mismatches sampled over 559 rows
+ex286,7,3,44304,549,0:9:1;1:10:0;0:2:0;0:12:0;2:8:0;4:11:0;0:4:0,row_mismatches sampled over 559 rows
+ex286,8,1,44074,554,0:9:1;1:10:0;0:10:1;0:2:0;2:8:0;0:12:0;8:12:0;4:11:0,row_mismatches sampled over 559 rows
+ex286,8,2,44088,555,0:9:1;1:10:0;4:11:0;8:11:1;0:2:0;0:12:0;0:4:0;8:12:0,row_mismatches sampled over 559 rows
+ex286,8,3,44114,550,0:9:1;1:10:0;0:2:0;0:12:0;2:8:0;4:11:0;0:4:0;8:12:0,row_mismatches sampled over 559 rows
+ex286,final,1,44074,8154,0:9:1;1:10:0;0:10:1;0:2:0;2:8:0;0:12:0;8:12:0;4:11:0,full row mismatch for final best

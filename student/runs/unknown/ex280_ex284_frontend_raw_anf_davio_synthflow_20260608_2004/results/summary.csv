@@ -1,0 +1,6 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_anf_davio_best_order_abc_g_aig,929,25,23225,2415,9.616977,17220,6005,0,abc_g_aig,,Yosys abc gate set aig
+ex281,ex281_anf_davio_best_order_abc_g_aig,1171,27,31617,2336,13.534675,20592,11025,0,abc_g_aig,,Yosys abc gate set aig
+ex282,ex282_anf_davio_best_order_abc_g_aig,1323,31,41013,2704,15.167530,29812,11201,0,abc_g_aig,,Yosys abc gate set aig
+ex283,ex283_anf_davio_best_order_abc_g_aig,1584,34,53856,3168,17.000000,35670,18186,0,abc_g_aig,,Yosys abc gate set aig
+ex284,ex284_anf_davio_best_order_abc_g_aig,1749,38,66462,4240,15.675000,42945,23517,0,abc_g_aig,,Yosys abc gate set aig

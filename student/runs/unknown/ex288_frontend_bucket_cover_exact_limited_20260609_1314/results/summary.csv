@@ -1,0 +1,2 @@
+case,bits,candidate_limit,cube_count_min,cube_count_max,literal_count_min,literal_count_max,candidate_count_min,candidate_count_max,verdict
+ex288,15,512,637,2524,9030,37758,197,410,reject SOP seed from limited exact cover; cover is far too large even with invalid-key dont-cares

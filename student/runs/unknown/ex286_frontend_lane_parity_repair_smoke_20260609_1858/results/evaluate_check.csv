@@ -1,0 +1,4 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_lane_parity_repair_low,1,2041,22,44902,lane parity degree<=4 repair wrapper over current best
+ex286,ex286_unknown_lane_parity_repair_high,1,2070,23,47610,lane parity degree<=4 repair wrapper over current best
+ex286,ex286_unknown_lane_parity_repair_middle,1,2040,22,44880,lane parity degree<=4 repair wrapper over current best

@@ -1,0 +1,2 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex286,ex286_symbdd_zero_abc_g_aig_d13,OK,1435,17,24395,1435,17,24395,1,student/runs/unknown/ex286_frontend_symmetry_delay_synthflow_20260608_1457/official_replay/ex286.aig,"evaluate.py --case ex286 replay OK; verified near miss, not current best"

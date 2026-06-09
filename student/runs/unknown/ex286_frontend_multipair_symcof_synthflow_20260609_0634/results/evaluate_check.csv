@@ -1,0 +1,5 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_interleave_f00_k4_no_internal_abc,1,1828,30,54840,skip Yosys internal abc pass
+ex286,ex286_interleave_f00_k4_abc_g_aig,1,1447,15,21705,Yosys abc gate set aig
+ex286,ex286_interleave_f00_k4_extra_opt_share,1,1449,16,23184,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex286,ex286_interleave_f00_k4_synth_preset,1,1425,16,22800,Yosys synth preset with flatten

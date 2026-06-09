@@ -1,0 +1,11 @@
+case,candidate_id,verified_truth,synthesized,equivalent,area,delay,adp,verilog_exists,aig_exists,notes
+ex280,ex280_unknown_bdd_key_prefix_parity_reduce_interleave,1,1,1,816,30,24480,1,1,unknown transformed-key shared-BDD Verilog seed
+ex280,ex280_unknown_bdd_key_suffix_parity_reduce_interleave,1,1,1,1446,26,37596,1,1,unknown transformed-key shared-BDD Verilog seed
+ex281,ex281_unknown_bdd_key_prefix_parity_reduce_interleave,1,1,1,957,33,31581,1,1,unknown transformed-key shared-BDD Verilog seed
+ex281,ex281_unknown_bdd_key_suffix_parity_reduce_interleave,1,1,1,1769,30,53070,1,1,unknown transformed-key shared-BDD Verilog seed
+ex282,ex282_unknown_bdd_key_prefix_parity_reduce_interleave,1,1,1,1124,35,39340,1,1,unknown transformed-key shared-BDD Verilog seed
+ex282,ex282_unknown_bdd_key_suffix_parity_reduce_interleave,1,1,1,2105,29,61045,1,1,unknown transformed-key shared-BDD Verilog seed
+ex283,ex283_unknown_bdd_key_prefix_parity_reduce_interleave,1,1,1,1311,40,52440,1,1,unknown transformed-key shared-BDD Verilog seed
+ex283,ex283_unknown_bdd_key_suffix_parity_reduce_interleave,1,1,1,2512,32,80384,1,1,unknown transformed-key shared-BDD Verilog seed
+ex284,ex284_unknown_bdd_key_prefix_parity_reduce_interleave,1,1,1,1480,42,62160,1,1,unknown transformed-key shared-BDD Verilog seed
+ex284,ex284_unknown_bdd_key_suffix_parity_reduce_interleave,1,1,1,2896,38,110048,1,1,unknown transformed-key shared-BDD Verilog seed

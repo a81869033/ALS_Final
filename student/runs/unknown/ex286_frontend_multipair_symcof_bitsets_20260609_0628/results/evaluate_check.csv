@@ -1,0 +1,21 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symcof_interleave_f10_k2,1,1411,18,25398,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_k3,1,1441,17,24497,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_k4,1,1448,17,24616,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_4_5_6_7,1,4455,19,84645,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_4_6_5_7,1,4471,19,84949,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_4_6_0_12,1,4231,18,76158,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_5_7_0_12,1,4216,18,75888,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_4_5_6_7_0,1,4273,18,76914,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_4_5_6_7_12,1,4346,18,78228,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f10_bits_4_5_6_7_0_12,1,4385,17,74545,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_k2,1,1441,18,25938,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_k3,1,1424,17,24208,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_k4,1,1449,16,23184,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_4_5_6_7,1,4455,19,84645,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_4_6_5_7,1,4471,19,84949,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_4_6_0_12,1,3474,18,62532,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_5_7_0_12,1,4260,19,80940,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_4_5_6_7_0,1,4273,18,76914,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_4_5_6_7_12,1,4346,18,78228,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_interleave_f00_bits_4_5_6_7_0_12,1,4385,17,74545,unknown symmetry cofactor class-onehot Verilog seed

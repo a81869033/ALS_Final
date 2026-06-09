@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symbdd_bits_4_5_6_7_0_12_1_11_2_10_3_9_8_f10,1,4616,21,96936,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_4_5_6_7_0_12_1_11_2_10_3_9_8_f00,1,4548,20,90960,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_0_12_1_11_2_10_3_9_8_4_5_6_7_f10,1,1431,18,25758,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_0_12_1_11_2_10_3_9_8_4_5_6_7_f00,1,1439,19,27341,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_4_6_5_7_0_1_2_3_8_9_10_11_12_f10,1,6897,20,137940,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_4_6_5_7_0_1_2_3_8_9_10_11_12_f00,1,6964,21,146244,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_0_1_2_3_8_9_10_11_12_4_6_5_7_f10,1,2397,20,47940,unknown symmetry-canonical shared-BDD seed
+ex286,ex286_unknown_symbdd_bits_0_1_2_3_8_9_10_11_12_4_6_5_7_f00,1,2420,20,48400,unknown symmetry-canonical shared-BDD seed

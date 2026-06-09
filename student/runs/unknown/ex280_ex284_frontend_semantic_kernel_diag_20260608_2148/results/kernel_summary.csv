@@ -1,0 +1,36 @@
+case,kind,name,unique_outputs,anf_total_terms,anf_unique_terms,anf_max_degree,anf_max_bit_terms,first8_bit_terms,notes
+ex280,output,raw,909,2142,712,4,375,11:39:91:67:95:183:235:283,
+ex280,output,reverse_output,909,2142,712,4,375,229:253:281:375:283:235:183:95,
+ex280,residual,rev_out_xor_5x,2126,2507,944,10,374,230:252:281:374:284:234:188:116,reverse(out) xor integer 5*x mod 2^n
+ex280,residual,rev_out_xor_clmul5x,2106,2144,714,4,373,230:252:281:373:281:233:183:95,reverse(out) xor carryless 5*x
+ex280,residual,rev_out_xor_prefix5x,2168,2696,1049,10,376,230:253:281:376:287:236:189:128,reverse(out) xor 5*prefix_parity(x)
+ex280,residual,rev_out_xor_suffix5x,2537,3081,1250,10,383,241:262:283:383:306:249:230:189,reverse(out) xor 5*suffix_parity(x)
+ex280,slice,high_zero_lowhalf,37,,,,,,high=0 exact_matches_5x=6/64 exact_matches_clmul5x=6/64
+ex281,output,raw,1587,3339,994,4,523,11:39:91:175:249:239:283:327,
+ex281,output,reverse_output,1587,3339,994,4,523,283:343:377:523:399:327:283:239,
+ex281,residual,rev_out_xor_5x,4277,3857,1372,11,522,284:342:377:522:400:326:286:248,reverse(out) xor integer 5*x mod 2^n
+ex281,residual,rev_out_xor_clmul5x,4213,3341,996,4,521,284:342:377:521:397:325:281:239,reverse(out) xor carryless 5*x
+ex281,residual,rev_out_xor_prefix5x,4302,4137,1526,11,524,284:343:377:524:403:328:287:254,reverse(out) xor 5*prefix_parity(x)
+ex281,residual,rev_out_xor_suffix5x,4911,4731,1859,11,532,296:353:379:532:425:342:333:334,reverse(out) xor 5*suffix_parity(x)
+ex281,slice,high_zero_lowhalf,37,,,,,,high=0 exact_matches_5x=6/64 exact_matches_clmul5x=6/64
+ex282,output,raw,2950,4266,1340,4,705,11:39:91:175:119:137:295:393,
+ex282,output,reverse_output,2950,4266,1340,4,705,345:455:499:705:549:453:393:295,
+ex282,residual,rev_out_xor_5x,8348,5123,1917,12,704,346:454:499:704:550:452:396:308,reverse(out) xor integer 5*x mod 2^n
+ex282,residual,rev_out_xor_clmul5x,8188,4268,1342,4,703,346:454:499:703:547:451:391:295,reverse(out) xor carryless 5*x
+ex282,residual,rev_out_xor_prefix5x,8531,5523,2163,12,706,346:455:499:706:553:454:397:312,reverse(out) xor 5*prefix_parity(x)
+ex282,residual,rev_out_xor_suffix5x,9800,6532,2689,12,715,359:466:501:715:578:467:450:403,reverse(out) xor 5*suffix_parity(x)
+ex282,slice,high_zero_lowhalf,69,,,,,,high=0 exact_matches_5x=7/128 exact_matches_clmul5x=7/128
+ex283,output,raw,5103,6293,1785,4,929,11:39:91:175:299:405:391:457,
+ex283,output,reverse_output,5103,6293,1785,4,929,411:587:639:929:733:605:521:457,
+ex283,residual,rev_out_xor_5x,16672,7591,2684,13,928,412:586:639:928:734:604:524:468,reverse(out) xor integer 5*x mod 2^n
+ex283,residual,rev_out_xor_clmul5x,16523,6295,1787,4,927,412:586:639:927:731:603:519:455,reverse(out) xor carryless 5*x
+ex283,residual,rev_out_xor_prefix5x,16925,8110,3025,13,930,412:587:639:930:737:606:525:472,reverse(out) xor 5*prefix_parity(x)
+ex283,residual,rev_out_xor_suffix5x,19308,9630,3842,13,940,426:599:641:940:765:620:585:576,reverse(out) xor 5*suffix_parity(x)
+ex283,slice,high_zero_lowhalf,69,,,,,,high=0 exact_matches_5x=7/128 exact_matches_clmul5x=7/128
+ex284,output,raw,9528,7732,2319,4,1195,11:39:91:175:299:193:187:443,
+ex284,output,reverse_output,9528,7732,2319,4,1195,485:745:809:1195:959:799:691:611,
+ex284,residual,rev_out_xor_5x,32768,9721,3713,14,1194,486:744:809:1194:960:798:694:622,reverse(out) xor integer 5*x mod 2^n
+ex284,residual,rev_out_xor_clmul5x,32127,7734,2321,4,1193,486:744:809:1193:957:797:689:609,reverse(out) xor carryless 5*x
+ex284,residual,rev_out_xor_prefix5x,33472,10454,4168,14,1196,486:745:809:1196:963:800:695:626,reverse(out) xor 5*prefix_parity(x)
+ex284,residual,rev_out_xor_suffix5x,38737,12591,5400,14,1207,501:758:811:1207:994:813:762:743,reverse(out) xor 5*suffix_parity(x)
+ex284,slice,high_zero_lowhalf,130,,,,,,high=0 exact_matches_5x=8/256 exact_matches_clmul5x=8/256

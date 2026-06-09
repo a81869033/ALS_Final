@@ -1,0 +1,213 @@
+case,metric,key,value,detail
+ex286,basic,width,13,outputs=8192 preserve=8192/8192 fixed=82
+ex286,hamming_distance,distribution,0:82;2:607;4:2084;6:3062;8:1920;10:420;12:17,
+ex286,global_transform,rot_0,82,rank=1 avg_hdist=5.8210
+ex286,global_transform,revrot_0,57,rank=2 avg_hdist=5.8198
+ex286,global_transform,rot_5,50,rank=3 avg_hdist=5.8037
+ex286,global_transform,revrot_12,44,rank=4 avg_hdist=5.8596
+ex286,global_transform,revrot_1,41,rank=5 avg_hdist=6.0281
+ex286,global_transform,revrot_4,41,rank=6 avg_hdist=6.0828
+ex286,global_transform,rot_1,40,rank=7 avg_hdist=5.8574
+ex286,global_transform,rot_4,39,rank=8 avg_hdist=5.9849
+ex286,local_rule,r0_line_nok,0,conflicts=53248 max_keys=2
+ex286,local_rule,r1_line_nok,0,conflicts=52478 max_keys=8
+ex286,local_rule,r2_line_nok,0,conflicts=51634 max_keys=32
+ex286,local_rule,r3_line_nok,0,conflicts=50796 max_keys=128
+ex286,local_rule,r4_line_nok,0,conflicts=48238 max_keys=512
+ex286,local_rule,r0_ring_nok,0,conflicts=53248 max_keys=2
+ex286,local_rule,r1_ring_nok,0,conflicts=52142 max_keys=8
+ex286,local_rule,r2_ring_nok,0,conflicts=49862 max_keys=32
+ex286,local_rule,r3_ring_nok,0,conflicts=45768 max_keys=128
+ex286,local_rule,r4_ring_nok,0,conflicts=37610 max_keys=512
+ex286,local_rule,r0_line_k,0,conflicts=49154 max_keys=26
+ex286,local_rule,r1_line_k,0,conflicts=49232 max_keys=88
+ex286,local_rule,r2_line_k,0,conflicts=46982 max_keys=288
+ex286,local_rule,r3_line_k,0,conflicts=45328 max_keys=896
+ex286,local_rule,r4_line_k,0,conflicts=41356 max_keys=2560
+ex286,local_rule,r0_ring_k,0,conflicts=49154 max_keys=26
+ex286,local_rule,r1_ring_k,0,conflicts=48916 max_keys=88
+ex286,local_rule,r2_ring_k,0,conflicts=45134 max_keys=288
+ex286,local_rule,r3_ring_k,0,conflicts=39259 max_keys=896
+ex286,local_rule,r4_ring_k,0,conflicts=28501 max_keys=2560
+ex286,prefix_balance,state_counts,"1,3,5,7,9,10,10,11,10,8,7,5,3,1",max_abs=5
+ex286,balance_transducer,fwd_la0,1,conflicts=44459 max_keys=20
+ex286,balance_transducer,fwd_la1,1,conflicts=41977 max_keys=38
+ex286,balance_transducer,fwd_la2,1,conflicts=41869 max_keys=74
+ex286,balance_transducer,fwd_la3,1,conflicts=40636 max_keys=139
+ex286,balance_transducer,fwd_la4,1,conflicts=39082 max_keys=253
+ex286,balance_transducer,fwd_la5,1,conflicts=38320 max_keys=460
+ex286,balance_transducer,fwd_la6,1,conflicts=37208 max_keys=822
+ex286,balance_transducer,rev_la0,1,conflicts=45263 max_keys=20
+ex286,balance_transducer,rev_la1,1,conflicts=43975 max_keys=37
+ex286,balance_transducer,rev_la2,1,conflicts=41890 max_keys=68
+ex286,balance_transducer,rev_la3,1,conflicts=40067 max_keys=126
+ex286,balance_transducer,rev_la4,1,conflicts=39380 max_keys=225
+ex286,balance_transducer,rev_la5,1,conflicts=38331 max_keys=399
+ex286,balance_transducer,rev_la6,1,conflicts=37095 max_keys=706
+ex286,rank_context,r0_nok,1,conflicts=47112
+ex286,rank_context,r1_nok,2,conflicts=45705
+ex286,rank_context,r2_nok,2,conflicts=43889
+ex286,rank_context,r3_nok,2,conflicts=41493
+ex286,rank_context,r0_k,2,conflicts=39644
+ex286,rank_context,r1_k,2,conflicts=39385
+ex286,rank_context,r2_k,2,conflicts=37011
+ex286,rank_context,r3_k,2,conflicts=34270
+ex287,basic,width,14,outputs=16384 preserve=16384/16384 fixed=107
+ex287,hamming_distance,distribution,0:107;2:894;4:3184;6:5563;8:4757;10:1700;12:175;14:4,
+ex287,global_transform,rot_0,107,rank=1 avg_hdist=6.4156
+ex287,global_transform,revrot_12,97,rank=2 avg_hdist=6.4283
+ex287,global_transform,rot_6,75,rank=3 avg_hdist=6.3544
+ex287,global_transform,rot_1,74,rank=4 avg_hdist=6.4207
+ex287,global_transform,revrot_8,70,rank=5 avg_hdist=6.3588
+ex287,global_transform,revrot_0,57,rank=6 avg_hdist=6.4108
+ex287,global_transform,revrot_1,49,rank=7 avg_hdist=6.5332
+ex287,global_transform,rot_13,49,rank=8 avg_hdist=6.5461
+ex287,local_rule,r0_line_nok,0,conflicts=114688 max_keys=2
+ex287,local_rule,r1_line_nok,0,conflicts=112256 max_keys=8
+ex287,local_rule,r2_line_nok,0,conflicts=111592 max_keys=32
+ex287,local_rule,r3_line_nok,0,conflicts=111046 max_keys=128
+ex287,local_rule,r4_line_nok,0,conflicts=108460 max_keys=512
+ex287,local_rule,r0_ring_nok,0,conflicts=114688 max_keys=2
+ex287,local_rule,r1_ring_nok,0,conflicts=112256 max_keys=8
+ex287,local_rule,r2_ring_nok,0,conflicts=110360 max_keys=32
+ex287,local_rule,r3_ring_nok,0,conflicts=101796 max_keys=128
+ex287,local_rule,r4_ring_nok,0,conflicts=87826 max_keys=512
+ex287,local_rule,r0_line_k,0,conflicts=106708 max_keys=28
+ex287,local_rule,r1_line_k,0,conflicts=108084 max_keys=96
+ex287,local_rule,r2_line_k,0,conflicts=104917 max_keys=320
+ex287,local_rule,r3_line_k,0,conflicts=102323 max_keys=1024
+ex287,local_rule,r4_line_k,0,conflicts=96445 max_keys=3072
+ex287,local_rule,r0_ring_k,0,conflicts=106708 max_keys=28
+ex287,local_rule,r1_ring_k,0,conflicts=107558 max_keys=96
+ex287,local_rule,r2_ring_k,0,conflicts=100874 max_keys=320
+ex287,local_rule,r3_ring_k,0,conflicts=90800 max_keys=1024
+ex287,local_rule,r4_ring_k,0,conflicts=71666 max_keys=3072
+ex287,prefix_balance,state_counts,"1,3,5,7,9,10,12,13,12,10,9,7,5,3,1",max_abs=6
+ex287,balance_transducer,fwd_la0,1,conflicts=100137 max_keys=24
+ex287,balance_transducer,fwd_la1,1,conflicts=93152 max_keys=46
+ex287,balance_transducer,fwd_la2,1,conflicts=93136 max_keys=88
+ex287,balance_transducer,fwd_la3,1,conflicts=90619 max_keys=160
+ex287,balance_transducer,fwd_la4,1,conflicts=87478 max_keys=292
+ex287,balance_transducer,fwd_la5,1,conflicts=85585 max_keys=527
+ex287,balance_transducer,fwd_la6,1,conflicts=83810 max_keys=926
+ex287,balance_transducer,rev_la0,1,conflicts=97979 max_keys=24
+ex287,balance_transducer,rev_la1,1,conflicts=96003 max_keys=42
+ex287,balance_transducer,rev_la2,1,conflicts=92837 max_keys=77
+ex287,balance_transducer,rev_la3,1,conflicts=90837 max_keys=138
+ex287,balance_transducer,rev_la4,1,conflicts=88414 max_keys=250
+ex287,balance_transducer,rev_la5,1,conflicts=85964 max_keys=467
+ex287,balance_transducer,rev_la6,1,conflicts=84081 max_keys=841
+ex287,rank_context,r0_nok,1,conflicts=106092
+ex287,rank_context,r1_nok,2,conflicts=102041
+ex287,rank_context,r2_nok,2,conflicts=98357
+ex287,rank_context,r3_nok,2,conflicts=92987
+ex287,rank_context,r0_k,2,conflicts=91576
+ex287,rank_context,r1_k,2,conflicts=89208
+ex287,rank_context,r2_k,2,conflicts=84183
+ex287,rank_context,r3_k,2,conflicts=78649
+ex288,basic,width,15,outputs=32768 preserve=32768/32768 fixed=138
+ex288,hamming_distance,distribution,0:138;2:1243;4:4904;6:10035;8:10683;10:4955;12:784;14:26,
+ex288,global_transform,rot_0,138,rank=1 avg_hdist=6.9305
+ex288,global_transform,rot_7,117,rank=2 avg_hdist=6.8826
+ex288,global_transform,revrot_0,95,rank=3 avg_hdist=6.9294
+ex288,global_transform,revrot_12,93,rank=4 avg_hdist=6.9039
+ex288,global_transform,revrot_14,71,rank=5 avg_hdist=6.9283
+ex288,global_transform,rot_1,64,rank=6 avg_hdist=6.9230
+ex288,global_transform,revrot_4,60,rank=7 avg_hdist=7.0035
+ex288,global_transform,revrot_8,57,rank=8 avg_hdist=6.8844
+ex288,local_rule,r0_line_nok,0,conflicts=245760 max_keys=2
+ex288,local_rule,r1_line_nok,0,conflicts=242342 max_keys=8
+ex288,local_rule,r2_line_nok,0,conflicts=239114 max_keys=32
+ex288,local_rule,r3_line_nok,0,conflicts=238478 max_keys=128
+ex288,local_rule,r4_line_nok,0,conflicts=235206 max_keys=512
+ex288,local_rule,r0_ring_nok,0,conflicts=245760 max_keys=2
+ex288,local_rule,r1_ring_nok,0,conflicts=242590 max_keys=8
+ex288,local_rule,r2_ring_nok,0,conflicts=236096 max_keys=32
+ex288,local_rule,r3_ring_nok,0,conflicts=225404 max_keys=128
+ex288,local_rule,r4_ring_nok,0,conflicts=199658 max_keys=512
+ex288,local_rule,r0_line_k,0,conflicts=228314 max_keys=30
+ex288,local_rule,r1_line_k,0,conflicts=226001 max_keys=104
+ex288,local_rule,r2_line_k,0,conflicts=227782 max_keys=352
+ex288,local_rule,r3_line_k,0,conflicts=222921 max_keys=1152
+ex288,local_rule,r4_line_k,0,conflicts=215214 max_keys=3584
+ex288,local_rule,r0_ring_k,0,conflicts=228314 max_keys=30
+ex288,local_rule,r1_ring_k,0,conflicts=223087 max_keys=104
+ex288,local_rule,r2_ring_k,0,conflicts=219179 max_keys=352
+ex288,local_rule,r3_ring_k,0,conflicts=204377 max_keys=1152
+ex288,local_rule,r4_ring_k,0,conflicts=174901 max_keys=3584
+ex288,prefix_balance,state_counts,"1,3,5,7,9,11,12,14,14,12,10,9,7,5,3,1",max_abs=7
+ex288,balance_transducer,fwd_la0,1,conflicts=212208 max_keys=27
+ex288,balance_transducer,fwd_la1,1,conflicts=202374 max_keys=51
+ex288,balance_transducer,fwd_la2,1,conflicts=198827 max_keys=94
+ex288,balance_transducer,fwd_la3,1,conflicts=194860 max_keys=173
+ex288,balance_transducer,fwd_la4,1,conflicts=191824 max_keys=310
+ex288,balance_transducer,fwd_la5,1,conflicts=189698 max_keys=566
+ex288,balance_transducer,fwd_la6,1,conflicts=185387 max_keys=1044
+ex288,balance_transducer,rev_la0,1,conflicts=210399 max_keys=26
+ex288,balance_transducer,rev_la1,1,conflicts=207683 max_keys=47
+ex288,balance_transducer,rev_la2,1,conflicts=201325 max_keys=85
+ex288,balance_transducer,rev_la3,1,conflicts=198356 max_keys=156
+ex288,balance_transducer,rev_la4,1,conflicts=193382 max_keys=283
+ex288,balance_transducer,rev_la5,1,conflicts=188267 max_keys=522
+ex288,balance_transducer,rev_la6,1,conflicts=185306 max_keys=944
+ex288,rank_context,r0_nok,1,conflicts=224401
+ex288,rank_context,r1_nok,1,conflicts=221677
+ex288,rank_context,r2_nok,2,conflicts=215241
+ex288,rank_context,r3_nok,2,conflicts=207462
+ex288,rank_context,r0_k,1,conflicts=193114
+ex288,rank_context,r1_k,1,conflicts=196184
+ex288,rank_context,r2_k,2,conflicts=186490
+ex288,rank_context,r3_k,2,conflicts=178495
+ex289,basic,width,16,outputs=65536 preserve=65536/65536 fixed=162
+ex289,hamming_distance,distribution,0:162;2:1591;4:7257;6:17341;8:22099;10:13472;12:3310;14:288;16:16,
+ex289,global_transform,rot_0,162,rank=1 avg_hdist=7.5039
+ex289,global_transform,revrot_0,162,rank=2 avg_hdist=7.5039
+ex289,global_transform,rot_1,127,rank=3 avg_hdist=7.5239
+ex289,global_transform,revrot_15,127,rank=4 avg_hdist=7.5239
+ex289,global_transform,rot_7,124,rank=5 avg_hdist=7.4791
+ex289,global_transform,revrot_9,124,rank=6 avg_hdist=7.4791
+ex289,global_transform,rot_12,118,rank=7 avg_hdist=7.4818
+ex289,global_transform,revrot_4,118,rank=8 avg_hdist=7.4818
+ex289,local_rule,r0_line_nok,0,conflicts=524288 max_keys=2
+ex289,local_rule,r1_line_nok,0,conflicts=520318 max_keys=8
+ex289,local_rule,r2_line_nok,0,conflicts=513970 max_keys=32
+ex289,local_rule,r3_line_nok,0,conflicts=508122 max_keys=128
+ex289,local_rule,r4_line_nok,0,conflicts=504628 max_keys=512
+ex289,local_rule,r0_ring_nok,0,conflicts=524288 max_keys=2
+ex289,local_rule,r1_ring_nok,0,conflicts=520318 max_keys=8
+ex289,local_rule,r2_ring_nok,0,conflicts=509330 max_keys=32
+ex289,local_rule,r3_ring_nok,0,conflicts=480858 max_keys=128
+ex289,local_rule,r4_ring_nok,0,conflicts=436222 max_keys=512
+ex289,local_rule,r0_line_k,0,conflicts=485089 max_keys=32
+ex289,local_rule,r1_line_k,0,conflicts=484540 max_keys=112
+ex289,local_rule,r2_line_k,0,conflicts=489360 max_keys=384
+ex289,local_rule,r3_line_k,0,conflicts=488351 max_keys=1280
+ex289,local_rule,r4_line_k,0,conflicts=474532 max_keys=4096
+ex289,local_rule,r0_ring_k,0,conflicts=485089 max_keys=32
+ex289,local_rule,r1_ring_k,0,conflicts=480601 max_keys=112
+ex289,local_rule,r2_ring_k,0,conflicts=473071 max_keys=384
+ex289,local_rule,r3_ring_k,0,conflicts=448881 max_keys=1280
+ex289,local_rule,r4_ring_k,0,conflicts=393771 max_keys=4096
+ex289,prefix_balance,state_counts,"1,3,5,7,9,11,12,14,16,14,12,11,9,7,5,3,1",max_abs=8
+ex289,balance_transducer,fwd_la0,1,conflicts=457817 max_keys=30
+ex289,balance_transducer,fwd_la1,1,conflicts=434258 max_keys=56
+ex289,balance_transducer,fwd_la2,1,conflicts=426059 max_keys=104
+ex289,balance_transducer,fwd_la3,1,conflicts=422167 max_keys=192
+ex289,balance_transducer,fwd_la4,1,conflicts=417668 max_keys=352
+ex289,balance_transducer,fwd_la5,1,conflicts=411745 max_keys=640
+ex289,balance_transducer,fwd_la6,1,conflicts=405028 max_keys=1151
+ex289,balance_transducer,rev_la0,1,conflicts=451841 max_keys=28
+ex289,balance_transducer,rev_la1,1,conflicts=449824 max_keys=52
+ex289,balance_transducer,rev_la2,1,conflicts=436957 max_keys=97
+ex289,balance_transducer,rev_la3,1,conflicts=430534 max_keys=180
+ex289,balance_transducer,rev_la4,1,conflicts=426200 max_keys=324
+ex289,balance_transducer,rev_la5,1,conflicts=419712 max_keys=597
+ex289,balance_transducer,rev_la6,1,conflicts=412340 max_keys=1131
+ex289,rank_context,r0_nok,1,conflicts=488214
+ex289,rank_context,r1_nok,2,conflicts=480047
+ex289,rank_context,r2_nok,2,conflicts=469489
+ex289,rank_context,r3_nok,2,conflicts=448736
+ex289,rank_context,r0_k,2,conflicts=422210
+ex289,rank_context,r1_k,2,conflicts=422975
+ex289,rank_context,r2_k,2,conflicts=407603
+ex289,rank_context,r3_k,2,conflicts=390938

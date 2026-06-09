@@ -1,0 +1,5 @@
+case,best_candidate_id,best_variant,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_candidate_id,current_best_adp,beats_current,delta_adp,notes
+ex281,ex281_unknown_algebraic_13x13_anf_davio_interleave,anf_davio_interleave,1478,27,39906,2336,17.083048,ex281_order_0_12_1_11_2_10_3_9_4_8_5_7_6_synth_preset,25476,0,14430,exact but worse than shared-BDD synthflow current best
+ex282,ex282_unknown_algebraic_14x14_anf_davio_interleave,anf_davio_interleave,1634,31,50654,2704,18.732988,ex282_order_0_13_1_12_2_11_3_10_4_9_5_8_6_7_abc_g_aig,31512,0,19142,exact but worse than shared-BDD synthflow current best
+ex283,ex283_unknown_algebraic_15x15_anf_davio_interleave,anf_davio_interleave,1992,34,67728,3168,21.378788,ex283_order_0_14_1_13_2_12_3_11_4_10_5_9_6_8_7_abc_g_aig,38844,0,28884,exact but worse than shared-BDD synthflow current best
+ex284,ex284_unknown_algebraic_16x16_anf_davio_interleave,anf_davio_interleave,2198,38,83524,4240,19.699057,ex284_order_0_15_1_14_2_13_3_12_4_11_5_10_6_9_7_8_abc_g_aig,50083,0,33441,exact but worse than shared-BDD synthflow current best

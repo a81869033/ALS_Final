@@ -1,0 +1,4 @@
+case,rows,verified,equivalent,best_exact_rows,total_rows,best_row_match_ratio,best_bit_match_ratio,notes
+ex286,3,0,0,286,8192,0.034912,0.710862,diagnostic-only; top-k score model too weak for RTL seed
+ex287,2,0,0,87,16384,0.005310,0.537615,diagnostic-only; top-k score model too weak for RTL seed
+ex288,2,0,0,137,32768,0.004181,0.540771,diagnostic-only; top-k score model too weak for RTL seed

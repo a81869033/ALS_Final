@@ -1,0 +1,5 @@
+case,current_best_adp,reference_adp,current_ratio_to_reference,best_diag_scheme,best_diag_twohot_exact,best_diag_twohot_total,best_diag_full_rows,best_diag_full_total,best_diag_full_bit_accuracy,conclusion
+ex286,21705,2376,9.135101,home_mod3,78,78,370,8192,0.547589,reject finite pair-collision algebra as a large-drop structure
+ex287,27480,5782,4.752681,home_mod8,91,91,604,16384,0.560268,reject finite pair-collision algebra as a large-drop structure
+ex288,31598,16394,1.927412,home_mod8,105,105,852,32768,0.535771,reject finite pair-collision algebra as a large-drop structure
+ex289,19893,13620,1.460573,home_occ,120,120,2001,65536,0.546066,reject finite pair-collision algebra as a large-drop structure

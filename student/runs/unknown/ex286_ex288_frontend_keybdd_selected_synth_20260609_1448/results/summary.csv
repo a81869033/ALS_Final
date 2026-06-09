@@ -1,0 +1,4 @@
+case,rows,verified,equivalent,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,beats_previous_current,notes
+ex286,2,2,2,1453,15,21795,2376,9.172980,0,key-BDD selected-bit source rewrite; exact but not large-drop
+ex287,2,2,2,1856,15,27840,5782,4.814943,0,key-BDD selected-bit source rewrite; exact but not large-drop
+ex288,2,2,2,2257,14,31598,16394,1.927412,1,"new verified best, small ADP improvement only"

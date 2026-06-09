@@ -1,0 +1,5 @@
+case,best_candidate_id,best_variant,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_candidate_id,current_best_adp,beats_current,delta_adp,notes
+ex281,ex281_anf_davio_interleave_abc_g_aig,abc_g_aig,1171,27,31617,2336,13.534675,ex281_order_0_12_1_11_2_10_3_9_4_8_5_7_6_synth_preset,25476,0,6141,exact but worse than shared-BDD synthflow current best
+ex282,ex282_anf_davio_interleave_abc_g_aig,abc_g_aig,1323,31,41013,2704,15.167530,ex282_order_0_13_1_12_2_11_3_10_4_9_5_8_6_7_abc_g_aig,31512,0,9501,exact but worse than shared-BDD synthflow current best
+ex283,ex283_anf_davio_interleave_abc_g_aig,abc_g_aig,1584,34,53856,3168,17.000000,ex283_order_0_14_1_13_2_12_3_11_4_10_5_9_6_8_7_abc_g_aig,38844,0,15012,exact but worse than shared-BDD synthflow current best
+ex284,ex284_anf_davio_interleave_abc_g_aig,abc_g_aig,1749,38,66462,4240,15.675000,ex284_order_0_15_1_14_2_13_3_12_4_11_5_10_6_9_7_8_abc_g_aig,50083,0,16379,exact but worse than shared-BDD synthflow current best

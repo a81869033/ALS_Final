@@ -1,0 +1,6 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex280,ex280_unknown_key_cofactor_bdd_prefix_parity_reduce_top3,755,29,21895,2415,9.066253,17220,4675,unknown transformed-key cofactor-BDD Verilog seed
+ex281,ex281_unknown_key_cofactor_bdd_prefix_parity_reduce_top2,985,30,29550,2336,12.649829,25476,4074,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_top3,1081,33,35673,2704,13.192678,31512,4161,unknown transformed-key cofactor-BDD Verilog seed
+ex283,ex283_unknown_key_cofactor_bdd_prefix_parity_reduce_top3,1169,38,44422,3168,14.022096,38844,5578,unknown transformed-key cofactor-BDD Verilog seed
+ex284,ex284_unknown_key_cofactor_bdd_prefix_parity_reduce_top3,1385,38,52630,4240,12.412736,50083,2547,unknown transformed-key cofactor-BDD Verilog seed

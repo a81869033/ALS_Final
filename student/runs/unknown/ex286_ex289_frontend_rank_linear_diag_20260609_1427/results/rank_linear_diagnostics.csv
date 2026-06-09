@@ -1,0 +1,9 @@
+case,metric,layer,value,detail
+ex286,gf2_input_output_nullity,all,1,vars=26;rank=25;only global parity relation found
+ex286,best_layer_rank_affine,5,14,layer_size=1287;a=1;b=0;reject affine rank map
+ex287,gf2_input_output_nullity,all,1,vars=28;rank=27;only global parity relation found
+ex287,best_layer_rank_affine,9,14,layer_size=2002;a=1;b=0;reject affine rank map
+ex288,gf2_input_output_nullity,all,1,vars=30;rank=29;only global parity relation found
+ex288,best_layer_rank_affine,11,18,layer_size=1365;a=1;b=1;reject affine rank map
+ex289,gf2_input_output_nullity,all,1,vars=32;rank=31;only global parity relation found
+ex289,best_layer_rank_affine,10,20,layer_size=8008;a=1;b=0;reject affine rank map

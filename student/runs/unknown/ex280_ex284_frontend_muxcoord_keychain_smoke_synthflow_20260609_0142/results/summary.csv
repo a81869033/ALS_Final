@@ -1,0 +1,3 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_prefix_parity_full_clamp_simplified_grouped_deg2_abc_g_aig,185,29,5365,2415,2.221532,5460,-95,1,abc_g_aig,,Yosys abc gate set aig
+ex284,ex284_prefix_parity_full_clamp_simplified_grouped_deg2_abc_g_aig,233,37,8621,4240,2.033255,9139,-518,1,abc_g_aig,,Yosys abc gate set aig

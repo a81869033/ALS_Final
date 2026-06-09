@@ -1,0 +1,7 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_split2_f00_bits_0_1_12_13_onehot_group_abc_d20,1,1097,21,23037,Yosys abc delay target 20
+ex289,ex289_split2_f00_bits_0_1_12_13_onehot_group_abc_g_aig,1,1046,20,20920,Yosys abc gate set aig
+ex289,ex289_split2_f00_bits_0_1_12_13_onehot_group_extra_opt_share,1,1097,21,23037,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex289,ex289_split2_f00_bits_0_1_12_13_onehot_group_synth_preset,1,1079,20,21580,Yosys synth preset with flatten
+ex289,ex289_split2_f00_bits_0_1_12_13_onehot_group_abc_g_aig_d18,1,1046,20,20920,Yosys abc gate set aig delay target 18
+ex289,ex289_split2_f00_bits_0_1_12_13_onehot_group_abc_g_aig_d20,1,1046,20,20920,Yosys abc gate set aig delay target 20

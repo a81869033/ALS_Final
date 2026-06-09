@@ -1,0 +1,4 @@
+case,rows,verified,equivalent,max_exact_output_prefix,best_exact_order,best_majority_match_ratio,best_majority_order,min_worst_conflicts,min_conflict_order,notes
+ex286,96,0,0,0,natural->natural+L0,0.892447,onehot_slot->onehot_slot+L6,2021,onehot_slot->onehot_slot+L6,diagnostic-only; no small-lookahead streaming prefix determinism found
+ex287,96,0,0,0,natural->natural+L0,0.777745,onehot_slot->reverse+L6,7298,onehot_slot->reverse+L6,diagnostic-only; no small-lookahead streaming prefix determinism found
+ex288,96,0,0,0,natural->natural+L0,0.673291,onehot_slot->natural+L6,15890,natural->natural+L6,diagnostic-only; no small-lookahead streaming prefix determinism found

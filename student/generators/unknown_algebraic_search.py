@@ -45,6 +45,8 @@ VARIANTS = [
     "anf_shared_bit_reverse",
     "anf_shared_gray",
     "anf_shared_ungray",
+    "anf_shared_prefix_parity",
+    "anf_shared_suffix_parity",
     "anf_shared_best_transform",
     "anf_davio_identity",
     "anf_davio_interleave",
@@ -106,6 +108,26 @@ def ungray(value):
     return out
 
 
+def prefix_parity(value, width):
+    out = 0
+    acc = 0
+    for bit in range(width):
+        acc ^= (value >> bit) & 1
+        if acc:
+            out |= 1 << bit
+    return out
+
+
+def suffix_parity(value, width):
+    out = 0
+    acc = 0
+    for bit in range(width - 1, -1, -1):
+        acc ^= (value >> bit) & 1
+        if acc:
+            out |= 1 << bit
+    return out
+
+
 def bit_reverse_expr(width, source):
     return "{" + ", ".join("{0}[{1}]".format(source, bit) for bit in range(width)) + "}"
 
@@ -131,6 +153,14 @@ def transform_index(name, value, width):
         return gray(value)
     if name == "ungray":
         return ungray(value)
+    if name == "prefix_parity":
+        return prefix_parity(value, width)
+    if name == "suffix_parity":
+        return suffix_parity(value, width)
+    if name == "prefix_parity_reduce":
+        return prefix_parity(value, width)
+    if name == "suffix_parity_reduce":
+        return suffix_parity(value, width)
     if name.startswith("rotl"):
         return rotl(value, width, int(name[4:]))
     raise RuntimeError("unknown transform: {0}".format(name))
@@ -154,6 +184,28 @@ def key_lines_for_transform(transform, width):
         for bit in range(width):
             terms = ["in[{0}]".format(index) for index in range(width - 1, bit - 1, -1)]
             lines.append("  assign key[{0}] = {1};".format(bit, " ^ ".join(terms)))
+        return lines
+    if transform == "prefix_parity":
+        lines = ["  wire {0}key;".format(range_decl(width))]
+        lines.append("  assign key[0] = in[0];")
+        for bit in range(1, width):
+            lines.append("  assign key[{0}] = key[{1}] ^ in[{0}];".format(bit, bit - 1))
+        return lines
+    if transform == "suffix_parity":
+        lines = ["  wire {0}key;".format(range_decl(width))]
+        lines.append("  assign key[{0}] = in[{0}];".format(width - 1))
+        for bit in range(width - 2, -1, -1):
+            lines.append("  assign key[{0}] = key[{1}] ^ in[{0}];".format(bit, bit + 1))
+        return lines
+    if transform == "prefix_parity_reduce":
+        lines = ["  wire {0}key;".format(range_decl(width))]
+        for bit in range(width):
+            lines.append("  assign key[{0}] = ^in[{0}:0];".format(bit))
+        return lines
+    if transform == "suffix_parity_reduce":
+        lines = ["  wire {0}key;".format(range_decl(width))]
+        for bit in range(width):
+            lines.append("  assign key[{0}] = ^in[{1}:{0}];".format(bit, width - 1))
         return lines
     if transform.startswith("rotl"):
         amount = int(transform[4:])
@@ -723,6 +775,10 @@ def render_variant(outputs, module, input_width, output_width, variant, args):
         transform = "gray"
     elif variant == "anf_shared_ungray":
         transform = "ungray"
+    elif variant == "anf_shared_prefix_parity":
+        transform = "prefix_parity"
+    elif variant == "anf_shared_suffix_parity":
+        transform = "suffix_parity"
     elif variant == "anf_shared_best_transform" or variant == "anf_davio_best_transform":
         transform, terms_by_bit, stats = choose_best_transform(outputs, input_width, output_width)
     elif variant == "anf_davio_best_transform_order":

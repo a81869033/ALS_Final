@@ -1,0 +1,433 @@
+case,layer,layer_size,rank,input_order,output_order,input_scheme,output_scheme,transform,matches,match_ratio,param,mean_abs_cyclic_displacement,max_abs_cyclic_displacement,notes
+ex286,1,13,1,onehot_slot,natural,lex,lex,affine_small,6,0.461538,a=1;b=1,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,2,onehot_slot,natural,lex,revlex,affine_small,6,0.461538,a=-1;b=11,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,3,onehot_slot,natural,lex,colex,affine_small,6,0.461538,a=1;b=1,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,4,onehot_slot,natural,lex,revcolex,affine_small,6,0.461538,a=-1;b=11,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,5,onehot_slot,natural,revlex,lex,affine_small,6,0.461538,a=-1;b=0,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,6,onehot_slot,natural,revlex,revlex,affine_small,6,0.461538,a=1;b=12,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,7,onehot_slot,natural,revlex,colex,affine_small,6,0.461538,a=-1;b=0,0.692308,2,best small-multiplier affine modulo layer size
+ex286,1,13,8,onehot_slot,natural,revlex,revcolex,affine_small,6,0.461538,a=1;b=12,0.692308,2,best small-multiplier affine modulo layer size
+ex286,2,78,1,onehot_slot,natural,lex,lex,affine_small,7,0.089744,a=1;b=8,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,2,onehot_slot,natural,lex,revlex,affine_small,7,0.089744,a=-1;b=69,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,3,onehot_slot,natural,revlex,lex,affine_small,7,0.089744,a=-1;b=7,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,4,onehot_slot,natural,revlex,revlex,affine_small,7,0.089744,a=1;b=70,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,5,onehot_slot,reverse,lex,colex,affine_small,7,0.089744,a=-1;b=69,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,6,onehot_slot,reverse,lex,revcolex,affine_small,7,0.089744,a=1;b=8,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,7,onehot_slot,reverse,revlex,colex,affine_small,7,0.089744,a=1;b=70,12.192308,38,best small-multiplier affine modulo layer size
+ex286,2,78,8,onehot_slot,reverse,revlex,revcolex,affine_small,7,0.089744,a=-1;b=7,12.192308,38,best small-multiplier affine modulo layer size
+ex286,3,286,1,outside,onehot_slot_rev,lex,lex,affine_small,8,0.027972,a=1;b=174,59.846154,142,best small-multiplier affine modulo layer size
+ex286,3,286,2,outside,onehot_slot_rev,lex,revlex,affine_small,8,0.027972,a=-1;b=111,59.846154,142,best small-multiplier affine modulo layer size
+ex286,3,286,3,outside,onehot_slot_rev,revlex,lex,affine_small,8,0.027972,a=-1;b=173,59.846154,142,best small-multiplier affine modulo layer size
+ex286,3,286,4,outside,onehot_slot_rev,revlex,revlex,affine_small,8,0.027972,a=1;b=112,59.846154,142,best small-multiplier affine modulo layer size
+ex286,3,286,5,outside,outside,lex,lex,affine_small,8,0.027972,a=-5;b=256,61.979021,143,best small-multiplier affine modulo layer size
+ex286,3,286,6,outside,outside,lex,revlex,affine_small,8,0.027972,a=5;b=29,61.979021,143,best small-multiplier affine modulo layer size
+ex286,3,286,7,outside,outside,revlex,lex,affine_small,8,0.027972,a=5;b=261,61.979021,143,best small-multiplier affine modulo layer size
+ex286,3,286,8,outside,outside,revlex,revlex,affine_small,8,0.027972,a=-5;b=24,61.979021,143,best small-multiplier affine modulo layer size
+ex286,4,715,1,center,center,colex,colex,identity,10,0.013986,,160.072727,356,
+ex286,4,715,2,center,center,colex,colex,affine_small,10,0.013986,a=1;b=0,160.072727,356,best small-multiplier affine modulo layer size
+ex286,4,715,3,center,center,colex,revcolex,reverse,10,0.013986,,160.072727,356,
+ex286,4,715,4,center,center,colex,revcolex,affine_small,10,0.013986,a=-1;b=714,160.072727,356,best small-multiplier affine modulo layer size
+ex286,4,715,5,center,center,revcolex,colex,reverse,10,0.013986,,160.072727,356,
+ex286,4,715,6,center,center,revcolex,colex,affine_small,10,0.013986,a=-1;b=714,160.072727,356,best small-multiplier affine modulo layer size
+ex286,4,715,7,center,center,revcolex,revcolex,identity,10,0.013986,,160.072727,356,
+ex286,4,715,8,center,center,revcolex,revcolex,affine_small,10,0.013986,a=1;b=0,160.072727,356,best small-multiplier affine modulo layer size
+ex286,5,1287,1,outside,outside,colex,colex,identity,14,0.010878,,279.284382,642,
+ex286,5,1287,2,outside,outside,colex,colex,affine_small,14,0.010878,a=1;b=0,279.284382,642,best small-multiplier affine modulo layer size
+ex286,5,1287,3,outside,outside,colex,revcolex,reverse,14,0.010878,,279.284382,642,
+ex286,5,1287,4,outside,outside,colex,revcolex,affine_small,14,0.010878,a=-1;b=1286,279.284382,642,best small-multiplier affine modulo layer size
+ex286,5,1287,5,outside,outside,revcolex,colex,reverse,14,0.010878,,279.284382,642,
+ex286,5,1287,6,outside,outside,revcolex,colex,affine_small,14,0.010878,a=-1;b=1286,279.284382,642,best small-multiplier affine modulo layer size
+ex286,5,1287,7,outside,outside,revcolex,revcolex,identity,14,0.010878,,279.284382,642,
+ex286,5,1287,8,outside,outside,revcolex,revcolex,affine_small,14,0.010878,a=1;b=0,279.284382,642,best small-multiplier affine modulo layer size
+ex286,6,1716,1,outside,outside,colex,colex,identity,10,0.005828,,377.456876,857,
+ex286,6,1716,2,outside,outside,colex,colex,affine_small,10,0.005828,a=1;b=0,377.456876,857,best small-multiplier affine modulo layer size
+ex286,6,1716,3,outside,outside,colex,revcolex,reverse,10,0.005828,,377.456876,857,
+ex286,6,1716,4,outside,outside,colex,revcolex,affine_small,10,0.005828,a=-1;b=1715,377.456876,857,best small-multiplier affine modulo layer size
+ex286,6,1716,5,outside,outside,revcolex,colex,reverse,10,0.005828,,377.456876,857,
+ex286,6,1716,6,outside,outside,revcolex,colex,affine_small,10,0.005828,a=-1;b=1715,377.456876,857,best small-multiplier affine modulo layer size
+ex286,6,1716,7,outside,outside,revcolex,revcolex,identity,10,0.005828,,377.456876,857,
+ex286,6,1716,8,outside,outside,revcolex,revcolex,affine_small,10,0.005828,a=1;b=0,377.456876,857,best small-multiplier affine modulo layer size
+ex286,7,1716,1,natural,onehot_slot,colex,lex,affine_small,10,0.005828,a=1;b=131,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,2,natural,onehot_slot,colex,revlex,affine_small,10,0.005828,a=-1;b=1584,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,3,natural,onehot_slot,revcolex,lex,affine_small,10,0.005828,a=-1;b=130,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,4,natural,onehot_slot,revcolex,revlex,affine_small,10,0.005828,a=1;b=1585,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,5,reverse,onehot_slot,lex,lex,affine_small,10,0.005828,a=-1;b=130,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,6,reverse,onehot_slot,lex,revlex,affine_small,10,0.005828,a=1;b=1585,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,7,reverse,onehot_slot,revlex,lex,affine_small,10,0.005828,a=1;b=131,412.207459,857,best small-multiplier affine modulo layer size
+ex286,7,1716,8,reverse,onehot_slot,revlex,revlex,affine_small,10,0.005828,a=-1;b=1584,412.207459,857,best small-multiplier affine modulo layer size
+ex286,8,1287,1,onehot_slot_rev,onehot_slot_rev,lex,lex,affine_small,12,0.009324,a=1;b=1284,308.881119,643,best small-multiplier affine modulo layer size
+ex286,8,1287,2,onehot_slot_rev,onehot_slot_rev,lex,revlex,affine_small,12,0.009324,a=-1;b=2,308.881119,643,best small-multiplier affine modulo layer size
+ex286,8,1287,3,onehot_slot_rev,onehot_slot_rev,revlex,lex,affine_small,12,0.009324,a=-1;b=1283,308.881119,643,best small-multiplier affine modulo layer size
+ex286,8,1287,4,onehot_slot_rev,onehot_slot_rev,revlex,revlex,affine_small,12,0.009324,a=1;b=3,308.881119,643,best small-multiplier affine modulo layer size
+ex286,8,1287,5,natural,natural,colex,colex,affine_small,9,0.006993,a=1;b=1,287.692308,643,best small-multiplier affine modulo layer size
+ex286,8,1287,6,natural,natural,colex,revcolex,affine_small,9,0.006993,a=-1;b=1285,287.692308,643,best small-multiplier affine modulo layer size
+ex286,8,1287,7,natural,natural,revcolex,colex,affine_small,9,0.006993,a=-1;b=0,287.692308,643,best small-multiplier affine modulo layer size
+ex286,8,1287,8,natural,natural,revcolex,revcolex,affine_small,9,0.006993,a=1;b=1286,287.692308,643,best small-multiplier affine modulo layer size
+ex286,9,715,1,natural,natural,colex,colex,affine_small,12,0.016783,a=1;b=1,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,2,natural,natural,colex,revcolex,affine_small,12,0.016783,a=-1;b=713,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,3,natural,natural,revcolex,colex,affine_small,12,0.016783,a=-1;b=0,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,4,natural,natural,revcolex,revcolex,affine_small,12,0.016783,a=1;b=714,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,5,natural,reverse,colex,lex,affine_small,12,0.016783,a=-1;b=713,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,6,natural,reverse,colex,revlex,affine_small,12,0.016783,a=1;b=1,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,7,natural,reverse,revcolex,lex,affine_small,12,0.016783,a=1;b=714,155.116084,356,best small-multiplier affine modulo layer size
+ex286,9,715,8,natural,reverse,revcolex,revlex,affine_small,12,0.016783,a=-1;b=0,155.116084,356,best small-multiplier affine modulo layer size
+ex286,10,286,1,natural,natural,colex,colex,affine_small,9,0.031469,a=1;b=285,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,2,natural,natural,colex,revcolex,affine_small,9,0.031469,a=-1;b=0,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,3,natural,natural,revcolex,colex,affine_small,9,0.031469,a=-1;b=284,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,4,natural,natural,revcolex,revcolex,affine_small,9,0.031469,a=1;b=1,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,5,natural,reverse,colex,lex,affine_small,9,0.031469,a=-1;b=0,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,6,natural,reverse,colex,revlex,affine_small,9,0.031469,a=1;b=285,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,7,natural,reverse,revcolex,lex,affine_small,9,0.031469,a=1;b=1,53.832168,142,best small-multiplier affine modulo layer size
+ex286,10,286,8,natural,reverse,revcolex,revlex,affine_small,9,0.031469,a=-1;b=284,53.832168,142,best small-multiplier affine modulo layer size
+ex286,11,78,1,natural,natural,colex,colex,identity,11,0.141026,,11.051282,37,
+ex286,11,78,2,natural,natural,colex,colex,affine_small,11,0.141026,a=1;b=0,11.051282,37,best small-multiplier affine modulo layer size
+ex286,11,78,3,natural,natural,colex,revcolex,reverse,11,0.141026,,11.051282,37,
+ex286,11,78,4,natural,natural,colex,revcolex,affine_small,11,0.141026,a=-1;b=77,11.051282,37,best small-multiplier affine modulo layer size
+ex286,11,78,5,natural,natural,revcolex,colex,reverse,11,0.141026,,11.051282,37,
+ex286,11,78,6,natural,natural,revcolex,colex,affine_small,11,0.141026,a=-1;b=77,11.051282,37,best small-multiplier affine modulo layer size
+ex286,11,78,7,natural,natural,revcolex,revcolex,identity,11,0.141026,,11.051282,37,
+ex286,11,78,8,natural,natural,revcolex,revcolex,affine_small,11,0.141026,a=1;b=0,11.051282,37,best small-multiplier affine modulo layer size
+ex286,12,13,1,center,onehot_slot,lex,lex,affine_small,6,0.461538,a=-2;b=10,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,2,center,onehot_slot,lex,revlex,affine_small,6,0.461538,a=2;b=2,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,3,center,onehot_slot,lex,colex,affine_small,6,0.461538,a=-2;b=10,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,4,center,onehot_slot,lex,revcolex,affine_small,6,0.461538,a=2;b=2,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,5,center,onehot_slot,revlex,lex,affine_small,6,0.461538,a=2;b=12,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,6,center,onehot_slot,revlex,revlex,affine_small,6,0.461538,a=-2;b=0,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,7,center,onehot_slot,revlex,colex,affine_small,6,0.461538,a=2;b=12,2.000000,5,best small-multiplier affine modulo layer size
+ex286,12,13,8,center,onehot_slot,revlex,revcolex,affine_small,6,0.461538,a=-2;b=0,2.000000,5,best small-multiplier affine modulo layer size
+ex287,1,14,1,natural,center,lex,lex,affine_small,6,0.428571,a=-1;b=0,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,2,natural,center,lex,revlex,affine_small,6,0.428571,a=1;b=13,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,3,natural,center,lex,colex,affine_small,6,0.428571,a=-1;b=0,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,4,natural,center,lex,revcolex,affine_small,6,0.428571,a=1;b=13,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,5,natural,center,revlex,lex,affine_small,6,0.428571,a=1;b=1,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,6,natural,center,revlex,revlex,affine_small,6,0.428571,a=-1;b=12,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,7,natural,center,revlex,colex,affine_small,6,0.428571,a=1;b=1,1.857143,7,best small-multiplier affine modulo layer size
+ex287,1,14,8,natural,center,revlex,revcolex,affine_small,6,0.428571,a=-1;b=12,1.857143,7,best small-multiplier affine modulo layer size
+ex287,2,91,1,natural,natural,colex,lex,affine_small,8,0.087912,a=-1;b=10,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,2,natural,natural,colex,revlex,affine_small,8,0.087912,a=1;b=80,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,3,natural,natural,revcolex,lex,affine_small,8,0.087912,a=1;b=11,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,4,natural,natural,revcolex,revlex,affine_small,8,0.087912,a=-1;b=79,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,5,natural,reverse,colex,colex,affine_small,8,0.087912,a=1;b=80,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,6,natural,reverse,colex,revcolex,affine_small,8,0.087912,a=-1;b=10,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,7,natural,reverse,revcolex,colex,affine_small,8,0.087912,a=-1;b=79,16.428571,45,best small-multiplier affine modulo layer size
+ex287,2,91,8,natural,reverse,revcolex,revcolex,affine_small,8,0.087912,a=1;b=11,16.428571,45,best small-multiplier affine modulo layer size
+ex287,3,364,1,onehot_slot_rev,center,colex,colex,affine_small,8,0.021978,a=5;b=207,83.173077,181,best small-multiplier affine modulo layer size
+ex287,3,364,2,onehot_slot_rev,center,colex,revcolex,affine_small,8,0.021978,a=-5;b=156,83.173077,181,best small-multiplier affine modulo layer size
+ex287,3,364,3,onehot_slot_rev,center,revcolex,colex,affine_small,8,0.021978,a=-5;b=202,83.173077,181,best small-multiplier affine modulo layer size
+ex287,3,364,4,onehot_slot_rev,center,revcolex,revcolex,affine_small,8,0.021978,a=5;b=161,83.173077,181,best small-multiplier affine modulo layer size
+ex287,3,364,5,center,center,colex,colex,affine_small,8,0.021978,a=-3;b=203,86.365385,182,best small-multiplier affine modulo layer size
+ex287,3,364,6,center,center,colex,revcolex,affine_small,8,0.021978,a=3;b=160,86.365385,182,best small-multiplier affine modulo layer size
+ex287,3,364,7,center,center,revcolex,colex,affine_small,8,0.021978,a=3;b=206,86.365385,182,best small-multiplier affine modulo layer size
+ex287,3,364,8,center,center,revcolex,revcolex,affine_small,8,0.021978,a=-3;b=157,86.365385,182,best small-multiplier affine modulo layer size
+ex287,4,1001,1,natural,natural,colex,colex,identity,11,0.010989,,207.468531,500,
+ex287,4,1001,2,natural,natural,colex,colex,affine_small,11,0.010989,a=1;b=0,207.468531,500,best small-multiplier affine modulo layer size
+ex287,4,1001,3,natural,natural,colex,revcolex,reverse,11,0.010989,,207.468531,500,
+ex287,4,1001,4,natural,natural,colex,revcolex,affine_small,11,0.010989,a=-1;b=1000,207.468531,500,best small-multiplier affine modulo layer size
+ex287,4,1001,5,natural,natural,revcolex,colex,reverse,11,0.010989,,207.468531,500,
+ex287,4,1001,6,natural,natural,revcolex,colex,affine_small,11,0.010989,a=-1;b=1000,207.468531,500,best small-multiplier affine modulo layer size
+ex287,4,1001,7,natural,natural,revcolex,revcolex,identity,11,0.010989,,207.468531,500,
+ex287,4,1001,8,natural,natural,revcolex,revcolex,affine_small,11,0.010989,a=1;b=0,207.468531,500,best small-multiplier affine modulo layer size
+ex287,5,2002,1,center,center,lex,lex,affine_small,15,0.007493,a=1;b=2,447.596903,1000,best small-multiplier affine modulo layer size
+ex287,5,2002,2,center,center,lex,revlex,affine_small,15,0.007493,a=-1;b=1999,447.596903,1000,best small-multiplier affine modulo layer size
+ex287,5,2002,3,center,center,revlex,lex,affine_small,15,0.007493,a=-1;b=1,447.596903,1000,best small-multiplier affine modulo layer size
+ex287,5,2002,4,center,center,revlex,revlex,affine_small,15,0.007493,a=1;b=2000,447.596903,1000,best small-multiplier affine modulo layer size
+ex287,5,2002,5,natural,natural,lex,lex,affine_small,13,0.006494,a=1;b=1,455.942557,1001,best small-multiplier affine modulo layer size
+ex287,5,2002,6,natural,natural,lex,revlex,affine_small,13,0.006494,a=-1;b=2000,455.942557,1001,best small-multiplier affine modulo layer size
+ex287,5,2002,7,natural,natural,revlex,lex,affine_small,13,0.006494,a=-1;b=0,455.942557,1001,best small-multiplier affine modulo layer size
+ex287,5,2002,8,natural,natural,revlex,revlex,affine_small,13,0.006494,a=1;b=2001,455.942557,1001,best small-multiplier affine modulo layer size
+ex287,6,3003,1,center,outside,lex,colex,affine_small,9,0.002997,a=-1;b=229,667.973027,1501,best small-multiplier affine modulo layer size
+ex287,6,3003,2,center,outside,lex,revcolex,affine_small,9,0.002997,a=1;b=2773,667.973027,1501,best small-multiplier affine modulo layer size
+ex287,6,3003,3,center,outside,revlex,colex,affine_small,9,0.002997,a=1;b=230,667.973027,1501,best small-multiplier affine modulo layer size
+ex287,6,3003,4,center,outside,revlex,revcolex,affine_small,9,0.002997,a=-1;b=2772,667.973027,1501,best small-multiplier affine modulo layer size
+ex287,6,3003,5,natural,outside,lex,colex,affine_small,9,0.002997,a=-1;b=377,701.317682,1499,best small-multiplier affine modulo layer size
+ex287,6,3003,6,natural,outside,lex,revcolex,affine_small,9,0.002997,a=1;b=2625,701.317682,1499,best small-multiplier affine modulo layer size
+ex287,6,3003,7,natural,outside,revlex,colex,affine_small,9,0.002997,a=1;b=378,701.317682,1499,best small-multiplier affine modulo layer size
+ex287,6,3003,8,natural,outside,revlex,revcolex,affine_small,9,0.002997,a=-1;b=2624,701.317682,1499,best small-multiplier affine modulo layer size
+ex287,7,3432,1,center,outside,lex,colex,affine_small,9,0.002622,a=-1;b=2,761.000291,1714,best small-multiplier affine modulo layer size
+ex287,7,3432,2,center,outside,lex,revcolex,affine_small,9,0.002622,a=1;b=3429,761.000291,1714,best small-multiplier affine modulo layer size
+ex287,7,3432,3,center,outside,revlex,colex,affine_small,9,0.002622,a=1;b=3,761.000291,1714,best small-multiplier affine modulo layer size
+ex287,7,3432,4,center,outside,revlex,revcolex,affine_small,9,0.002622,a=-1;b=3428,761.000291,1714,best small-multiplier affine modulo layer size
+ex287,7,3432,5,center,onehot_slot,colex,colex,affine_small,9,0.002622,a=1;b=1979,826.538170,1716,best small-multiplier affine modulo layer size
+ex287,7,3432,6,center,onehot_slot,colex,revcolex,affine_small,9,0.002622,a=-1;b=1452,826.538170,1716,best small-multiplier affine modulo layer size
+ex287,7,3432,7,center,onehot_slot,revcolex,colex,affine_small,9,0.002622,a=-1;b=1978,826.538170,1716,best small-multiplier affine modulo layer size
+ex287,7,3432,8,center,onehot_slot,revcolex,revcolex,affine_small,9,0.002622,a=1;b=1453,826.538170,1716,best small-multiplier affine modulo layer size
+ex287,8,3003,1,natural,natural,colex,colex,identity,11,0.003663,,647.543124,1501,
+ex287,8,3003,2,natural,natural,colex,colex,affine_small,11,0.003663,a=1;b=0,647.543124,1501,best small-multiplier affine modulo layer size
+ex287,8,3003,3,natural,natural,colex,revcolex,reverse,11,0.003663,,647.543124,1501,
+ex287,8,3003,4,natural,natural,colex,revcolex,affine_small,11,0.003663,a=-1;b=3002,647.543124,1501,best small-multiplier affine modulo layer size
+ex287,8,3003,5,natural,natural,revcolex,colex,reverse,11,0.003663,,647.543124,1501,
+ex287,8,3003,6,natural,natural,revcolex,colex,affine_small,11,0.003663,a=-1;b=3002,647.543124,1501,best small-multiplier affine modulo layer size
+ex287,8,3003,7,natural,natural,revcolex,revcolex,identity,11,0.003663,,647.543124,1501,
+ex287,8,3003,8,natural,natural,revcolex,revcolex,affine_small,11,0.003663,a=1;b=0,647.543124,1501,best small-multiplier affine modulo layer size
+ex287,9,2002,1,natural,natural,colex,colex,identity,14,0.006993,,428.284715,1000,
+ex287,9,2002,2,natural,natural,colex,colex,affine_small,14,0.006993,a=1;b=0,428.284715,1000,best small-multiplier affine modulo layer size
+ex287,9,2002,3,natural,natural,colex,revcolex,reverse,14,0.006993,,428.284715,1000,
+ex287,9,2002,4,natural,natural,colex,revcolex,affine_small,14,0.006993,a=-1;b=2001,428.284715,1000,best small-multiplier affine modulo layer size
+ex287,9,2002,5,natural,natural,revcolex,colex,reverse,14,0.006993,,428.284715,1000,
+ex287,9,2002,6,natural,natural,revcolex,colex,affine_small,14,0.006993,a=-1;b=2001,428.284715,1000,best small-multiplier affine modulo layer size
+ex287,9,2002,7,natural,natural,revcolex,revcolex,identity,14,0.006993,,428.284715,1000,
+ex287,9,2002,8,natural,natural,revcolex,revcolex,affine_small,14,0.006993,a=1;b=0,428.284715,1000,best small-multiplier affine modulo layer size
+ex287,10,1001,1,natural,natural,colex,colex,identity,13,0.012987,,207.499500,499,
+ex287,10,1001,2,natural,natural,colex,colex,affine_small,13,0.012987,a=1;b=0,207.499500,499,best small-multiplier affine modulo layer size
+ex287,10,1001,3,natural,natural,colex,revcolex,reverse,13,0.012987,,207.499500,499,
+ex287,10,1001,4,natural,natural,colex,revcolex,affine_small,13,0.012987,a=-1;b=1000,207.499500,499,best small-multiplier affine modulo layer size
+ex287,10,1001,5,natural,natural,revcolex,colex,reverse,13,0.012987,,207.499500,499,
+ex287,10,1001,6,natural,natural,revcolex,colex,affine_small,13,0.012987,a=-1;b=1000,207.499500,499,best small-multiplier affine modulo layer size
+ex287,10,1001,7,natural,natural,revcolex,revcolex,identity,13,0.012987,,207.499500,499,
+ex287,10,1001,8,natural,natural,revcolex,revcolex,affine_small,13,0.012987,a=1;b=0,207.499500,499,best small-multiplier affine modulo layer size
+ex287,11,364,1,natural,natural,colex,colex,identity,12,0.032967,,69.774725,182,
+ex287,11,364,2,natural,natural,colex,colex,affine_small,12,0.032967,a=1;b=0,69.774725,182,best small-multiplier affine modulo layer size
+ex287,11,364,3,natural,natural,colex,revcolex,reverse,12,0.032967,,69.774725,182,
+ex287,11,364,4,natural,natural,colex,revcolex,affine_small,12,0.032967,a=-1;b=363,69.774725,182,best small-multiplier affine modulo layer size
+ex287,11,364,5,natural,natural,revcolex,colex,reverse,12,0.032967,,69.774725,182,
+ex287,11,364,6,natural,natural,revcolex,colex,affine_small,12,0.032967,a=-1;b=363,69.774725,182,best small-multiplier affine modulo layer size
+ex287,11,364,7,natural,natural,revcolex,revcolex,identity,12,0.032967,,69.774725,182,
+ex287,11,364,8,natural,natural,revcolex,revcolex,affine_small,12,0.032967,a=1;b=0,69.774725,182,best small-multiplier affine modulo layer size
+ex287,12,91,1,natural,natural,colex,colex,identity,9,0.098901,,14.758242,43,
+ex287,12,91,2,natural,natural,colex,colex,affine_small,9,0.098901,a=1;b=0,14.758242,43,best small-multiplier affine modulo layer size
+ex287,12,91,3,natural,natural,colex,revcolex,reverse,9,0.098901,,14.758242,43,
+ex287,12,91,4,natural,natural,colex,revcolex,affine_small,9,0.098901,a=-1;b=90,14.758242,43,best small-multiplier affine modulo layer size
+ex287,12,91,5,natural,natural,revcolex,colex,reverse,9,0.098901,,14.758242,43,
+ex287,12,91,6,natural,natural,revcolex,colex,affine_small,9,0.098901,a=-1;b=90,14.758242,43,best small-multiplier affine modulo layer size
+ex287,12,91,7,natural,natural,revcolex,revcolex,identity,9,0.098901,,14.758242,43,
+ex287,12,91,8,natural,natural,revcolex,revcolex,affine_small,9,0.098901,a=1;b=0,14.758242,43,best small-multiplier affine modulo layer size
+ex287,13,14,1,onehot_slot,onehot_slot,lex,lex,affine_small,5,0.357143,a=1;b=1,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,2,onehot_slot,onehot_slot,lex,revlex,affine_small,5,0.357143,a=-1;b=12,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,3,onehot_slot,onehot_slot,lex,colex,affine_small,5,0.357143,a=1;b=1,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,4,onehot_slot,onehot_slot,lex,revcolex,affine_small,5,0.357143,a=-1;b=12,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,5,onehot_slot,onehot_slot,revlex,lex,affine_small,5,0.357143,a=-1;b=0,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,6,onehot_slot,onehot_slot,revlex,revlex,affine_small,5,0.357143,a=1;b=13,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,7,onehot_slot,onehot_slot,revlex,colex,affine_small,5,0.357143,a=-1;b=0,1.642857,6,best small-multiplier affine modulo layer size
+ex287,13,14,8,onehot_slot,onehot_slot,revlex,revcolex,affine_small,5,0.357143,a=1;b=13,1.642857,6,best small-multiplier affine modulo layer size
+ex288,1,15,1,onehot_slot,natural,lex,lex,affine_small,6,0.400000,a=1;b=1,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,2,onehot_slot,natural,lex,revlex,affine_small,6,0.400000,a=-1;b=13,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,3,onehot_slot,natural,lex,colex,affine_small,6,0.400000,a=1;b=1,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,4,onehot_slot,natural,lex,revcolex,affine_small,6,0.400000,a=-1;b=13,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,5,onehot_slot,natural,revlex,lex,affine_small,6,0.400000,a=-1;b=0,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,6,onehot_slot,natural,revlex,revlex,affine_small,6,0.400000,a=1;b=14,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,7,onehot_slot,natural,revlex,colex,affine_small,6,0.400000,a=-1;b=0,0.800000,2,best small-multiplier affine modulo layer size
+ex288,1,15,8,onehot_slot,natural,revlex,revcolex,affine_small,6,0.400000,a=1;b=14,0.800000,2,best small-multiplier affine modulo layer size
+ex288,2,105,1,natural,onehot_slot_rev,colex,lex,affine_small,8,0.076190,a=-1;b=96,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,2,natural,onehot_slot_rev,colex,revlex,affine_small,8,0.076190,a=1;b=8,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,3,natural,onehot_slot_rev,revcolex,lex,affine_small,8,0.076190,a=1;b=97,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,4,natural,onehot_slot_rev,revcolex,revlex,affine_small,8,0.076190,a=-1;b=7,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,5,reverse,onehot_slot_rev,lex,lex,affine_small,8,0.076190,a=1;b=97,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,6,reverse,onehot_slot_rev,lex,revlex,affine_small,8,0.076190,a=-1;b=7,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,7,reverse,onehot_slot_rev,revlex,lex,affine_small,8,0.076190,a=-1;b=96,17.809524,52,best small-multiplier affine modulo layer size
+ex288,2,105,8,reverse,onehot_slot_rev,revlex,revlex,affine_small,8,0.076190,a=1;b=8,17.809524,52,best small-multiplier affine modulo layer size
+ex288,3,455,1,natural,natural,lex,colex,affine_small,9,0.019780,a=-1;b=0,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,2,natural,natural,lex,revcolex,affine_small,9,0.019780,a=1;b=454,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,3,natural,natural,revlex,colex,affine_small,9,0.019780,a=1;b=1,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,4,natural,natural,revlex,revcolex,affine_small,9,0.019780,a=-1;b=453,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,5,natural,reverse,lex,lex,affine_small,9,0.019780,a=1;b=454,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,6,natural,reverse,lex,revlex,affine_small,9,0.019780,a=-1;b=0,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,7,natural,reverse,revlex,lex,affine_small,9,0.019780,a=-1;b=453,90.375824,227,best small-multiplier affine modulo layer size
+ex288,3,455,8,natural,reverse,revlex,revlex,affine_small,9,0.019780,a=1;b=1,90.375824,227,best small-multiplier affine modulo layer size
+ex288,4,1365,1,outside,outside,lex,lex,identity,15,0.010989,,298.361172,677,
+ex288,4,1365,2,outside,outside,lex,lex,affine_small,15,0.010989,a=1;b=0,298.361172,677,best small-multiplier affine modulo layer size
+ex288,4,1365,3,outside,outside,lex,revlex,reverse,15,0.010989,,298.361172,677,
+ex288,4,1365,4,outside,outside,lex,revlex,affine_small,15,0.010989,a=-1;b=1364,298.361172,677,best small-multiplier affine modulo layer size
+ex288,4,1365,5,outside,outside,revlex,lex,reverse,15,0.010989,,298.361172,677,
+ex288,4,1365,6,outside,outside,revlex,lex,affine_small,15,0.010989,a=-1;b=1364,298.361172,677,best small-multiplier affine modulo layer size
+ex288,4,1365,7,outside,outside,revlex,revlex,identity,15,0.010989,,298.361172,677,
+ex288,4,1365,8,outside,outside,revlex,revlex,affine_small,15,0.010989,a=1;b=0,298.361172,677,best small-multiplier affine modulo layer size
+ex288,5,3003,1,onehot_slot,onehot_slot,colex,colex,identity,14,0.004662,,683.389610,1501,
+ex288,5,3003,2,onehot_slot,onehot_slot,colex,colex,affine_small,14,0.004662,a=1;b=0,683.389610,1501,best small-multiplier affine modulo layer size
+ex288,5,3003,3,onehot_slot,onehot_slot,colex,revcolex,reverse,14,0.004662,,683.389610,1501,
+ex288,5,3003,4,onehot_slot,onehot_slot,colex,revcolex,affine_small,14,0.004662,a=-1;b=3002,683.389610,1501,best small-multiplier affine modulo layer size
+ex288,5,3003,5,onehot_slot,onehot_slot,revcolex,colex,reverse,14,0.004662,,683.389610,1501,
+ex288,5,3003,6,onehot_slot,onehot_slot,revcolex,colex,affine_small,14,0.004662,a=-1;b=3002,683.389610,1501,best small-multiplier affine modulo layer size
+ex288,5,3003,7,onehot_slot,onehot_slot,revcolex,revcolex,identity,14,0.004662,,683.389610,1501,
+ex288,5,3003,8,onehot_slot,onehot_slot,revcolex,revcolex,affine_small,14,0.004662,a=1;b=0,683.389610,1501,best small-multiplier affine modulo layer size
+ex288,6,5005,1,onehot_slot,onehot_slot,colex,colex,identity,17,0.003397,,1127.513886,2502,
+ex288,6,5005,2,onehot_slot,onehot_slot,colex,colex,affine_small,17,0.003397,a=1;b=0,1127.513886,2502,best small-multiplier affine modulo layer size
+ex288,6,5005,3,onehot_slot,onehot_slot,colex,revcolex,reverse,17,0.003397,,1127.513886,2502,
+ex288,6,5005,4,onehot_slot,onehot_slot,colex,revcolex,affine_small,17,0.003397,a=-1;b=5004,1127.513886,2502,best small-multiplier affine modulo layer size
+ex288,6,5005,5,onehot_slot,onehot_slot,revcolex,colex,reverse,17,0.003397,,1127.513886,2502,
+ex288,6,5005,6,onehot_slot,onehot_slot,revcolex,colex,affine_small,17,0.003397,a=-1;b=5004,1127.513886,2502,best small-multiplier affine modulo layer size
+ex288,6,5005,7,onehot_slot,onehot_slot,revcolex,revcolex,identity,17,0.003397,,1127.513886,2502,
+ex288,6,5005,8,onehot_slot,onehot_slot,revcolex,revcolex,affine_small,17,0.003397,a=1;b=0,1127.513886,2502,best small-multiplier affine modulo layer size
+ex288,7,6435,1,center,center,lex,lex,identity,11,0.001709,,1475.961616,3217,
+ex288,7,6435,2,center,center,lex,lex,affine_small,11,0.001709,a=1;b=0,1475.961616,3217,best small-multiplier affine modulo layer size
+ex288,7,6435,3,center,center,lex,revlex,reverse,11,0.001709,,1475.961616,3217,
+ex288,7,6435,4,center,center,lex,revlex,affine_small,11,0.001709,a=-1;b=6434,1475.961616,3217,best small-multiplier affine modulo layer size
+ex288,7,6435,5,center,center,revlex,lex,reverse,11,0.001709,,1475.961616,3217,
+ex288,7,6435,6,center,center,revlex,lex,affine_small,11,0.001709,a=-1;b=6434,1475.961616,3217,best small-multiplier affine modulo layer size
+ex288,7,6435,7,center,center,revlex,revlex,identity,11,0.001709,,1475.961616,3217,
+ex288,7,6435,8,center,center,revlex,revlex,affine_small,11,0.001709,a=1;b=0,1475.961616,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,1,onehot_slot,center,lex,lex,affine_small,10,0.001554,a=1;b=2544,1551.180420,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,2,onehot_slot,center,lex,revlex,affine_small,10,0.001554,a=-1;b=3890,1551.180420,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,3,onehot_slot,center,revlex,lex,affine_small,10,0.001554,a=-1;b=2543,1551.180420,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,4,onehot_slot,center,revlex,revlex,affine_small,10,0.001554,a=1;b=3891,1551.180420,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,5,natural,outside,lex,lex,affine_small,10,0.001554,a=-1;b=101,1601.241958,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,6,natural,outside,lex,revlex,affine_small,10,0.001554,a=1;b=6333,1601.241958,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,7,natural,outside,revlex,lex,affine_small,10,0.001554,a=1;b=102,1601.241958,3217,best small-multiplier affine modulo layer size
+ex288,8,6435,8,natural,outside,revlex,revlex,affine_small,10,0.001554,a=-1;b=6332,1601.241958,3217,best small-multiplier affine modulo layer size
+ex288,9,5005,1,outside,center,lex,lex,identity,18,0.003596,,1121.811788,2502,
+ex288,9,5005,2,outside,center,lex,lex,affine_small,18,0.003596,a=1;b=0,1121.811788,2502,best small-multiplier affine modulo layer size
+ex288,9,5005,3,outside,center,lex,revlex,reverse,18,0.003596,,1121.811788,2502,
+ex288,9,5005,4,outside,center,lex,revlex,affine_small,18,0.003596,a=-1;b=5004,1121.811788,2502,best small-multiplier affine modulo layer size
+ex288,9,5005,5,outside,center,revlex,lex,reverse,18,0.003596,,1121.811788,2502,
+ex288,9,5005,6,outside,center,revlex,lex,affine_small,18,0.003596,a=-1;b=5004,1121.811788,2502,best small-multiplier affine modulo layer size
+ex288,9,5005,7,outside,center,revlex,revlex,identity,18,0.003596,,1121.811788,2502,
+ex288,9,5005,8,outside,center,revlex,revlex,affine_small,18,0.003596,a=1;b=0,1121.811788,2502,best small-multiplier affine modulo layer size
+ex288,10,3003,1,outside,center,lex,lex,identity,18,0.005994,,663.494838,1499,
+ex288,10,3003,2,outside,center,lex,lex,affine_small,18,0.005994,a=1;b=0,663.494838,1499,best small-multiplier affine modulo layer size
+ex288,10,3003,3,outside,center,lex,revlex,reverse,18,0.005994,,663.494838,1499,
+ex288,10,3003,4,outside,center,lex,revlex,affine_small,18,0.005994,a=-1;b=3002,663.494838,1499,best small-multiplier affine modulo layer size
+ex288,10,3003,5,outside,center,revlex,lex,reverse,18,0.005994,,663.494838,1499,
+ex288,10,3003,6,outside,center,revlex,lex,affine_small,18,0.005994,a=-1;b=3002,663.494838,1499,best small-multiplier affine modulo layer size
+ex288,10,3003,7,outside,center,revlex,revlex,identity,18,0.005994,,663.494838,1499,
+ex288,10,3003,8,outside,center,revlex,revlex,affine_small,18,0.005994,a=1;b=0,663.494838,1499,best small-multiplier affine modulo layer size
+ex288,11,1365,1,outside,center,lex,lex,identity,22,0.016117,,299.118681,682,
+ex288,11,1365,2,outside,center,lex,lex,affine_small,22,0.016117,a=1;b=0,299.118681,682,best small-multiplier affine modulo layer size
+ex288,11,1365,3,outside,center,lex,revlex,reverse,22,0.016117,,299.118681,682,
+ex288,11,1365,4,outside,center,lex,revlex,affine_small,22,0.016117,a=-1;b=1364,299.118681,682,best small-multiplier affine modulo layer size
+ex288,11,1365,5,outside,center,revlex,lex,reverse,22,0.016117,,299.118681,682,
+ex288,11,1365,6,outside,center,revlex,lex,affine_small,22,0.016117,a=-1;b=1364,299.118681,682,best small-multiplier affine modulo layer size
+ex288,11,1365,7,outside,center,revlex,revlex,identity,22,0.016117,,299.118681,682,
+ex288,11,1365,8,outside,center,revlex,revlex,affine_small,22,0.016117,a=1;b=0,299.118681,682,best small-multiplier affine modulo layer size
+ex288,12,455,1,outside,center,lex,lex,identity,16,0.035165,,100.162637,226,
+ex288,12,455,2,outside,center,lex,lex,affine_small,16,0.035165,a=1;b=0,100.162637,226,best small-multiplier affine modulo layer size
+ex288,12,455,3,outside,center,lex,revlex,reverse,16,0.035165,,100.162637,226,
+ex288,12,455,4,outside,center,lex,revlex,affine_small,16,0.035165,a=-1;b=454,100.162637,226,best small-multiplier affine modulo layer size
+ex288,12,455,5,outside,center,revlex,lex,reverse,16,0.035165,,100.162637,226,
+ex288,12,455,6,outside,center,revlex,lex,affine_small,16,0.035165,a=-1;b=454,100.162637,226,best small-multiplier affine modulo layer size
+ex288,12,455,7,outside,center,revlex,revlex,identity,16,0.035165,,100.162637,226,
+ex288,12,455,8,outside,center,revlex,revlex,affine_small,16,0.035165,a=1;b=0,100.162637,226,best small-multiplier affine modulo layer size
+ex288,13,105,1,natural,natural,colex,colex,identity,14,0.133333,,15.914286,51,
+ex288,13,105,2,natural,natural,colex,colex,affine_small,14,0.133333,a=1;b=0,15.914286,51,best small-multiplier affine modulo layer size
+ex288,13,105,3,natural,natural,colex,revcolex,reverse,14,0.133333,,15.914286,51,
+ex288,13,105,4,natural,natural,colex,revcolex,affine_small,14,0.133333,a=-1;b=104,15.914286,51,best small-multiplier affine modulo layer size
+ex288,13,105,5,natural,natural,revcolex,colex,reverse,14,0.133333,,15.914286,51,
+ex288,13,105,6,natural,natural,revcolex,colex,affine_small,14,0.133333,a=-1;b=104,15.914286,51,best small-multiplier affine modulo layer size
+ex288,13,105,7,natural,natural,revcolex,revcolex,identity,14,0.133333,,15.914286,51,
+ex288,13,105,8,natural,natural,revcolex,revcolex,affine_small,14,0.133333,a=1;b=0,15.914286,51,best small-multiplier affine modulo layer size
+ex288,14,15,1,onehot_slot,center,lex,lex,affine_small,6,0.400000,a=2;b=3,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,2,onehot_slot,center,lex,revlex,affine_small,6,0.400000,a=-2;b=11,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,3,onehot_slot,center,lex,colex,affine_small,6,0.400000,a=2;b=3,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,4,onehot_slot,center,lex,revcolex,affine_small,6,0.400000,a=-2;b=11,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,5,onehot_slot,center,revlex,lex,affine_small,6,0.400000,a=-2;b=1,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,6,onehot_slot,center,revlex,revlex,affine_small,6,0.400000,a=2;b=13,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,7,onehot_slot,center,revlex,colex,affine_small,6,0.400000,a=-2;b=1,1.733333,7,best small-multiplier affine modulo layer size
+ex288,14,15,8,onehot_slot,center,revlex,revcolex,affine_small,6,0.400000,a=2;b=13,1.733333,7,best small-multiplier affine modulo layer size
+ex289,1,16,1,onehot_slot,natural,lex,lex,affine_small,5,0.312500,a=1;b=1,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,2,onehot_slot,natural,lex,revlex,affine_small,5,0.312500,a=-1;b=14,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,3,onehot_slot,natural,lex,colex,affine_small,5,0.312500,a=1;b=1,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,4,onehot_slot,natural,lex,revcolex,affine_small,5,0.312500,a=-1;b=14,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,5,onehot_slot,natural,revlex,lex,affine_small,5,0.312500,a=-1;b=0,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,6,onehot_slot,natural,revlex,revlex,affine_small,5,0.312500,a=1;b=15,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,7,onehot_slot,natural,revlex,colex,affine_small,5,0.312500,a=-1;b=0,1.250000,3,best small-multiplier affine modulo layer size
+ex289,1,16,8,onehot_slot,natural,revlex,revcolex,affine_small,5,0.312500,a=1;b=15,1.250000,3,best small-multiplier affine modulo layer size
+ex289,2,120,1,natural,natural,colex,lex,reverse,12,0.100000,,18.350000,59,
+ex289,2,120,2,natural,natural,colex,lex,affine_small,12,0.100000,a=-1;b=119,18.350000,59,best small-multiplier affine modulo layer size
+ex289,2,120,3,natural,natural,colex,revlex,identity,12,0.100000,,18.350000,59,
+ex289,2,120,4,natural,natural,colex,revlex,affine_small,12,0.100000,a=1;b=0,18.350000,59,best small-multiplier affine modulo layer size
+ex289,2,120,5,natural,natural,revcolex,lex,identity,12,0.100000,,18.350000,59,
+ex289,2,120,6,natural,natural,revcolex,lex,affine_small,12,0.100000,a=1;b=0,18.350000,59,best small-multiplier affine modulo layer size
+ex289,2,120,7,natural,natural,revcolex,revlex,reverse,12,0.100000,,18.350000,59,
+ex289,2,120,8,natural,natural,revcolex,revlex,affine_small,12,0.100000,a=-1;b=119,18.350000,59,best small-multiplier affine modulo layer size
+ex289,3,560,1,outside,center,colex,colex,affine_small,14,0.025000,a=1;b=2,130.028571,279,best small-multiplier affine modulo layer size
+ex289,3,560,2,outside,center,colex,revcolex,affine_small,14,0.025000,a=-1;b=557,130.028571,279,best small-multiplier affine modulo layer size
+ex289,3,560,3,outside,center,revcolex,colex,affine_small,14,0.025000,a=-1;b=1,130.028571,279,best small-multiplier affine modulo layer size
+ex289,3,560,4,outside,center,revcolex,revcolex,affine_small,14,0.025000,a=1;b=558,130.028571,279,best small-multiplier affine modulo layer size
+ex289,3,560,5,natural,natural,lex,colex,reverse,13,0.023214,,110.951786,280,
+ex289,3,560,6,natural,natural,lex,colex,affine_small,13,0.023214,a=-1;b=559,110.951786,280,best small-multiplier affine modulo layer size
+ex289,3,560,7,natural,natural,lex,revcolex,identity,13,0.023214,,110.951786,280,
+ex289,3,560,8,natural,natural,lex,revcolex,affine_small,13,0.023214,a=1;b=0,110.951786,280,best small-multiplier affine modulo layer size
+ex289,4,1820,1,natural,natural,lex,colex,reverse,20,0.010989,,403.162637,910,
+ex289,4,1820,2,natural,natural,lex,colex,affine_small,20,0.010989,a=-1;b=1819,403.162637,910,best small-multiplier affine modulo layer size
+ex289,4,1820,3,natural,natural,lex,revcolex,identity,20,0.010989,,403.162637,910,
+ex289,4,1820,4,natural,natural,lex,revcolex,affine_small,20,0.010989,a=1;b=0,403.162637,910,best small-multiplier affine modulo layer size
+ex289,4,1820,5,natural,natural,revlex,colex,identity,20,0.010989,,403.162637,910,
+ex289,4,1820,6,natural,natural,revlex,colex,affine_small,20,0.010989,a=1;b=0,403.162637,910,best small-multiplier affine modulo layer size
+ex289,4,1820,7,natural,natural,revlex,revcolex,reverse,20,0.010989,,403.162637,910,
+ex289,4,1820,8,natural,natural,revlex,revcolex,affine_small,20,0.010989,a=-1;b=1819,403.162637,910,best small-multiplier affine modulo layer size
+ex289,5,4368,1,natural,natural,colex,lex,reverse,18,0.004121,,1015.715430,2181,
+ex289,5,4368,2,natural,natural,colex,lex,affine_small,18,0.004121,a=-1;b=4367,1015.715430,2181,best small-multiplier affine modulo layer size
+ex289,5,4368,3,natural,natural,colex,revlex,identity,18,0.004121,,1015.715430,2181,
+ex289,5,4368,4,natural,natural,colex,revlex,affine_small,18,0.004121,a=1;b=0,1015.715430,2181,best small-multiplier affine modulo layer size
+ex289,5,4368,5,natural,natural,revcolex,lex,identity,18,0.004121,,1015.715430,2181,
+ex289,5,4368,6,natural,natural,revcolex,lex,affine_small,18,0.004121,a=1;b=0,1015.715430,2181,best small-multiplier affine modulo layer size
+ex289,5,4368,7,natural,natural,revcolex,revlex,reverse,18,0.004121,,1015.715430,2181,
+ex289,5,4368,8,natural,natural,revcolex,revlex,affine_small,18,0.004121,a=-1;b=4367,1015.715430,2181,best small-multiplier affine modulo layer size
+ex289,6,8008,1,natural,natural,colex,lex,reverse,20,0.002498,,1846.046953,4003,
+ex289,6,8008,2,natural,natural,colex,lex,affine_small,20,0.002498,a=-1;b=8007,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,6,8008,3,natural,natural,colex,revlex,identity,20,0.002498,,1846.046953,4003,
+ex289,6,8008,4,natural,natural,colex,revlex,affine_small,20,0.002498,a=1;b=0,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,6,8008,5,natural,natural,revcolex,lex,identity,20,0.002498,,1846.046953,4003,
+ex289,6,8008,6,natural,natural,revcolex,lex,affine_small,20,0.002498,a=1;b=0,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,6,8008,7,natural,natural,revcolex,revlex,reverse,20,0.002498,,1846.046953,4003,
+ex289,6,8008,8,natural,natural,revcolex,revlex,affine_small,20,0.002498,a=-1;b=8007,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,7,11440,1,natural,natural,colex,lex,reverse,15,0.001311,,2621.357168,5719,
+ex289,7,11440,2,natural,natural,colex,lex,affine_small,15,0.001311,a=-1;b=11439,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,7,11440,3,natural,natural,colex,revlex,identity,15,0.001311,,2621.357168,5719,
+ex289,7,11440,4,natural,natural,colex,revlex,affine_small,15,0.001311,a=1;b=0,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,7,11440,5,natural,natural,revcolex,lex,identity,15,0.001311,,2621.357168,5719,
+ex289,7,11440,6,natural,natural,revcolex,lex,affine_small,15,0.001311,a=1;b=0,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,7,11440,7,natural,natural,revcolex,revlex,reverse,15,0.001311,,2621.357168,5719,
+ex289,7,11440,8,natural,natural,revcolex,revlex,affine_small,15,0.001311,a=-1;b=11439,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,8,12870,1,natural,natural,colex,lex,identity,16,0.001243,,2946.193862,6435,
+ex289,8,12870,2,natural,natural,colex,lex,affine_small,16,0.001243,a=1;b=0,2946.193862,6435,best small-multiplier affine modulo layer size
+ex289,8,12870,3,natural,natural,colex,revlex,reverse,16,0.001243,,2946.193862,6435,
+ex289,8,12870,4,natural,natural,colex,revlex,affine_small,16,0.001243,a=-1;b=12869,2946.193862,6435,best small-multiplier affine modulo layer size
+ex289,8,12870,5,natural,natural,colex,colex,reverse,16,0.001243,,2946.193862,6435,
+ex289,8,12870,6,natural,natural,colex,colex,affine_small,16,0.001243,a=-1;b=12869,2946.193862,6435,best small-multiplier affine modulo layer size
+ex289,8,12870,7,natural,natural,colex,revcolex,identity,16,0.001243,,2946.193862,6435,
+ex289,8,12870,8,natural,natural,colex,revcolex,affine_small,16,0.001243,a=1;b=0,2946.193862,6435,best small-multiplier affine modulo layer size
+ex289,9,11440,1,natural,natural,colex,colex,identity,15,0.001311,,2621.357168,5719,
+ex289,9,11440,2,natural,natural,colex,colex,affine_small,15,0.001311,a=1;b=0,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,9,11440,3,natural,natural,colex,revcolex,reverse,15,0.001311,,2621.357168,5719,
+ex289,9,11440,4,natural,natural,colex,revcolex,affine_small,15,0.001311,a=-1;b=11439,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,9,11440,5,natural,natural,revcolex,colex,reverse,15,0.001311,,2621.357168,5719,
+ex289,9,11440,6,natural,natural,revcolex,colex,affine_small,15,0.001311,a=-1;b=11439,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,9,11440,7,natural,natural,revcolex,revcolex,identity,15,0.001311,,2621.357168,5719,
+ex289,9,11440,8,natural,natural,revcolex,revcolex,affine_small,15,0.001311,a=1;b=0,2621.357168,5719,best small-multiplier affine modulo layer size
+ex289,10,8008,1,natural,natural,colex,colex,identity,20,0.002498,,1846.046953,4003,
+ex289,10,8008,2,natural,natural,colex,colex,affine_small,20,0.002498,a=1;b=0,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,10,8008,3,natural,natural,colex,revcolex,reverse,20,0.002498,,1846.046953,4003,
+ex289,10,8008,4,natural,natural,colex,revcolex,affine_small,20,0.002498,a=-1;b=8007,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,10,8008,5,natural,natural,revcolex,colex,reverse,20,0.002498,,1846.046953,4003,
+ex289,10,8008,6,natural,natural,revcolex,colex,affine_small,20,0.002498,a=-1;b=8007,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,10,8008,7,natural,natural,revcolex,revcolex,identity,20,0.002498,,1846.046953,4003,
+ex289,10,8008,8,natural,natural,revcolex,revcolex,affine_small,20,0.002498,a=1;b=0,1846.046953,4003,best small-multiplier affine modulo layer size
+ex289,11,4368,1,onehot_slot,onehot_slot,lex,lex,identity,18,0.004121,,1011.763965,2183,
+ex289,11,4368,2,onehot_slot,onehot_slot,lex,lex,affine_small,18,0.004121,a=1;b=0,1011.763965,2183,best small-multiplier affine modulo layer size
+ex289,11,4368,3,onehot_slot,onehot_slot,lex,revlex,reverse,18,0.004121,,1011.763965,2183,
+ex289,11,4368,4,onehot_slot,onehot_slot,lex,revlex,affine_small,18,0.004121,a=-1;b=4367,1011.763965,2183,best small-multiplier affine modulo layer size
+ex289,11,4368,5,onehot_slot,onehot_slot,revlex,lex,reverse,18,0.004121,,1011.763965,2183,
+ex289,11,4368,6,onehot_slot,onehot_slot,revlex,lex,affine_small,18,0.004121,a=-1;b=4367,1011.763965,2183,best small-multiplier affine modulo layer size
+ex289,11,4368,7,onehot_slot,onehot_slot,revlex,revlex,identity,18,0.004121,,1011.763965,2183,
+ex289,11,4368,8,onehot_slot,onehot_slot,revlex,revlex,affine_small,18,0.004121,a=1;b=0,1011.763965,2183,best small-multiplier affine modulo layer size
+ex289,12,1820,1,onehot_slot,onehot_slot,lex,lex,identity,20,0.010989,,402.907692,910,
+ex289,12,1820,2,onehot_slot,onehot_slot,lex,lex,affine_small,20,0.010989,a=1;b=0,402.907692,910,best small-multiplier affine modulo layer size
+ex289,12,1820,3,onehot_slot,onehot_slot,lex,revlex,reverse,20,0.010989,,402.907692,910,
+ex289,12,1820,4,onehot_slot,onehot_slot,lex,revlex,affine_small,20,0.010989,a=-1;b=1819,402.907692,910,best small-multiplier affine modulo layer size
+ex289,12,1820,5,onehot_slot,onehot_slot,revlex,lex,reverse,20,0.010989,,402.907692,910,
+ex289,12,1820,6,onehot_slot,onehot_slot,revlex,lex,affine_small,20,0.010989,a=-1;b=1819,402.907692,910,best small-multiplier affine modulo layer size
+ex289,12,1820,7,onehot_slot,onehot_slot,revlex,revlex,identity,20,0.010989,,402.907692,910,
+ex289,12,1820,8,onehot_slot,onehot_slot,revlex,revlex,affine_small,20,0.010989,a=1;b=0,402.907692,910,best small-multiplier affine modulo layer size
+ex289,13,560,1,onehot_slot,onehot_slot,lex,lex,affine_small,14,0.025000,a=1;b=1,112.973214,280,best small-multiplier affine modulo layer size
+ex289,13,560,2,onehot_slot,onehot_slot,lex,revlex,affine_small,14,0.025000,a=-1;b=558,112.973214,280,best small-multiplier affine modulo layer size
+ex289,13,560,3,onehot_slot,onehot_slot,revlex,lex,affine_small,14,0.025000,a=-1;b=0,112.973214,280,best small-multiplier affine modulo layer size
+ex289,13,560,4,onehot_slot,onehot_slot,revlex,revlex,affine_small,14,0.025000,a=1;b=559,112.973214,280,best small-multiplier affine modulo layer size
+ex289,13,560,5,onehot_slot_rev,onehot_slot,colex,lex,affine_small,14,0.025000,a=-1;b=0,116.376786,279,best small-multiplier affine modulo layer size
+ex289,13,560,6,onehot_slot_rev,onehot_slot,colex,revlex,affine_small,14,0.025000,a=1;b=559,116.376786,279,best small-multiplier affine modulo layer size
+ex289,13,560,7,onehot_slot_rev,onehot_slot,revcolex,lex,affine_small,14,0.025000,a=1;b=1,116.376786,279,best small-multiplier affine modulo layer size
+ex289,13,560,8,onehot_slot_rev,onehot_slot,revcolex,revlex,affine_small,14,0.025000,a=-1;b=558,116.376786,279,best small-multiplier affine modulo layer size
+ex289,14,120,1,natural,natural,colex,colex,identity,12,0.100000,,18.350000,59,
+ex289,14,120,2,natural,natural,colex,colex,affine_small,12,0.100000,a=1;b=0,18.350000,59,best small-multiplier affine modulo layer size
+ex289,14,120,3,natural,natural,colex,revcolex,reverse,12,0.100000,,18.350000,59,
+ex289,14,120,4,natural,natural,colex,revcolex,affine_small,12,0.100000,a=-1;b=119,18.350000,59,best small-multiplier affine modulo layer size
+ex289,14,120,5,natural,natural,revcolex,colex,reverse,12,0.100000,,18.350000,59,
+ex289,14,120,6,natural,natural,revcolex,colex,affine_small,12,0.100000,a=-1;b=119,18.350000,59,best small-multiplier affine modulo layer size
+ex289,14,120,7,natural,natural,revcolex,revcolex,identity,12,0.100000,,18.350000,59,
+ex289,14,120,8,natural,natural,revcolex,revcolex,affine_small,12,0.100000,a=1;b=0,18.350000,59,best small-multiplier affine modulo layer size
+ex289,15,16,1,onehot_slot,onehot_slot,lex,lex,affine_small,6,0.375000,a=1;b=1,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,2,onehot_slot,onehot_slot,lex,revlex,affine_small,6,0.375000,a=-1;b=14,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,3,onehot_slot,onehot_slot,lex,colex,affine_small,6,0.375000,a=1;b=1,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,4,onehot_slot,onehot_slot,lex,revcolex,affine_small,6,0.375000,a=-1;b=14,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,5,onehot_slot,onehot_slot,revlex,lex,affine_small,6,0.375000,a=-1;b=0,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,6,onehot_slot,onehot_slot,revlex,revlex,affine_small,6,0.375000,a=1;b=15,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,7,onehot_slot,onehot_slot,revlex,colex,affine_small,6,0.375000,a=-1;b=0,1.312500,6,best small-multiplier affine modulo layer size
+ex289,15,16,8,onehot_slot,onehot_slot,revlex,revcolex,affine_small,6,0.375000,a=1;b=15,1.312500,6,best small-multiplier affine modulo layer size

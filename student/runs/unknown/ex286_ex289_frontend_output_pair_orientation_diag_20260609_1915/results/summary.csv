@@ -1,0 +1,5 @@
+case,input_width,output_width,encoded_width,truth_rows,unique_outputs,unique_encoded,orientation_conflicts,decode_bad,mixed_pair_hist,raw_bdd_nodes,encoded_bdd_nodes,node_delta,node_ratio,first_conflict,notes
+ex286,13,13,14,8192,2233,1976,608,608,m0:125;m1:797;m2:1994;m3:2566;m4:1870;m5:736;m6:104,837,1336,499,1.596177,x=0x1f;out=0x10e1;encoded=0x3091,adjacent output pairs encoded as count plus one shared mixed-pair orientation bit
+ex287,14,14,15,16384,2609,2609,0,0,m0:128;m1:896;m2:2688;m3:4480;m4:4480;m5:2688;m6:896;m7:128,1088,1031,-57,0.947610,,adjacent output pairs encoded as count plus one shared mixed-pair orientation bit
+ex288,15,15,16,32768,6734,5762,2517,2517,m0:304;m1:1888;m2:5578;m3:9279;m4:8839;m5:5006;m6:1662;m7:212,1170,2493,1323,2.130769,x=0xd;out=0x4081;encoded=0xc041,adjacent output pairs encoded as count plus one shared mixed-pair orientation bit
+ex289,16,16,17,65536,7045,7045,0,0,m0:256;m1:2048;m2:7168;m3:14336;m4:17920;m5:14336;m6:7168;m7:2048;m8:256,1131,1206,75,1.066313,,adjacent output pairs encoded as count plus one shared mixed-pair orientation bit

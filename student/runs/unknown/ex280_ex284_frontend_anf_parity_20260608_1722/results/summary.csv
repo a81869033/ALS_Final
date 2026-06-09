@@ -1,0 +1,6 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex280,ex280_unknown_algebraic_12x12_anf_shared_prefix_parity,1935,34,65790,2415,27.242236,17220,48570,unknown function algebraic Verilog seed
+ex281,ex281_unknown_algebraic_13x13_anf_shared_prefix_parity,2344,37,86728,2336,37.126712,25476,61252,unknown function algebraic Verilog seed
+ex282,ex282_unknown_algebraic_14x14_anf_shared_prefix_parity,2820,40,112800,2704,41.715976,31512,81288,unknown function algebraic Verilog seed
+ex283,ex283_unknown_algebraic_15x15_anf_shared_prefix_parity,3125,41,128125,3168,40.443497,38844,89281,unknown function algebraic Verilog seed
+ex284,ex284_unknown_algebraic_16x16_anf_shared_prefix_parity,3517,44,154748,4240,36.497170,50083,104665,unknown function algebraic Verilog seed

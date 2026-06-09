@@ -1,0 +1,14 @@
+case,input_width,cell_count,out_cell,cell_support,tested_radius,local_exact,key_count,cells,first_mismatch_index,expected,actual,notes
+ex295,12,6,0,0:1:2:3:4:5,0,0,4,0,5,1,3,output cell0 local 2-bit ring test
+ex295,12,6,0,0:1:2:3:4:5,1,0,16,0:1:5,20,0,3,output cell0 local 2-bit ring test
+ex295,12,6,0,0:1:2:3:4:5,2,0,64,0:1:2:4:5,71,2,3,output cell0 local 2-bit ring test
+ex295,12,6,0,0:1:2:3:4:5,3,1,4096,0:1:2:3:4:5,,,,output cell0 local 2-bit ring test
+ex297,14,7,0,0:1:2:3:4:5:6,0,0,4,0,5,1,3,output cell0 local 2-bit ring test
+ex297,14,7,0,0:1:2:3:4:5:6,1,0,16,0:1:6,21,3,2,output cell0 local 2-bit ring test
+ex297,14,7,0,0:1:2:3:4:5:6,2,0,64,0:1:2:5:6,71,2,3,output cell0 local 2-bit ring test
+ex297,14,7,0,0:1:2:3:4:5:6,3,1,16384,0:1:2:3:4:5:6,,,,output cell0 local 2-bit ring test
+ex299,16,8,0,0:1:2:3:4:5:6:7,0,0,4,0,5,1,3,output cell0 local 2-bit ring test
+ex299,16,8,0,0:1:2:3:4:5:6:7,1,0,16,0:1:7,20,0,1,output cell0 local 2-bit ring test
+ex299,16,8,0,0:1:2:3:4:5:6:7,2,0,64,0:1:2:6:7,83,3,1,output cell0 local 2-bit ring test
+ex299,16,8,0,0:1:2:3:4:5:6:7,3,0,256,0:1:2:3:5:6:7,278,2,0,output cell0 local 2-bit ring test
+ex299,16,8,0,0:1:2:3:4:5:6:7,4,1,65536,0:1:2:3:4:5:6:7,,,,output cell0 local 2-bit ring test

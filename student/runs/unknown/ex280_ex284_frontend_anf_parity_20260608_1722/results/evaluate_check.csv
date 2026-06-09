@@ -1,0 +1,11 @@
+case,candidate_id,verified_truth,synthesized,equivalent,area,delay,adp,verilog_exists,aig_exists,notes
+ex280,ex280_unknown_algebraic_12x12_anf_shared_prefix_parity,1,1,1,1935,34,65790,1,1,unknown function algebraic Verilog seed
+ex280,ex280_unknown_algebraic_12x12_anf_shared_suffix_parity,1,1,1,3442,41,141122,1,1,unknown function algebraic Verilog seed
+ex281,ex281_unknown_algebraic_13x13_anf_shared_prefix_parity,1,1,1,2344,37,86728,1,1,unknown function algebraic Verilog seed
+ex281,ex281_unknown_algebraic_13x13_anf_shared_suffix_parity,1,1,1,4299,42,180558,1,1,unknown function algebraic Verilog seed
+ex282,ex282_unknown_algebraic_14x14_anf_shared_prefix_parity,1,1,1,2820,40,112800,1,1,unknown function algebraic Verilog seed
+ex282,ex282_unknown_algebraic_14x14_anf_shared_suffix_parity,1,1,1,5183,46,238418,1,1,unknown function algebraic Verilog seed
+ex283,ex283_unknown_algebraic_15x15_anf_shared_prefix_parity,1,1,1,3125,41,128125,1,1,unknown function algebraic Verilog seed
+ex283,ex283_unknown_algebraic_15x15_anf_shared_suffix_parity,1,1,1,6108,49,299292,1,1,unknown function algebraic Verilog seed
+ex284,ex284_unknown_algebraic_16x16_anf_shared_prefix_parity,1,1,1,3517,44,154748,1,1,unknown function algebraic Verilog seed
+ex284,ex284_unknown_algebraic_16x16_anf_shared_suffix_parity,1,1,1,7073,50,353650,1,1,unknown function algebraic Verilog seed

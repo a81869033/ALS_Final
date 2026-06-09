@@ -1,0 +1,6 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex285,ex285_interleave_f10_synth_preset,OK,1037,17,17629,1037,17,17629,1,student/runs/unknown/ex285_ex289_frontend_symmetry_bdd_synthflow_20260608_1449/official_replay/ex285.aig,evaluate.py --case replay OK
+ex286,ex286_interleave_zero_abc_g_aig,OK,1435,17,24395,1435,17,24395,1,student/runs/unknown/ex285_ex289_frontend_symmetry_bdd_synthflow_20260608_1449/official_replay/ex286.aig,evaluate.py --case replay OK
+ex287,ex287_interleave_f10_synth_preset,OK,1723,18,31014,1723,18,31014,1,student/runs/unknown/ex285_ex289_frontend_symmetry_bdd_synthflow_20260608_1449/official_replay/ex287.aig,evaluate.py --case replay OK
+ex288,ex288_interleave_f10_synth_preset,OK,1877,19,35663,1877,19,35663,1,student/runs/unknown/ex285_ex289_frontend_symmetry_bdd_synthflow_20260608_1449/official_replay/ex288.aig,evaluate.py --case replay OK
+ex289,ex289_interleave_f00_synth_preset,OK,1733,21,36393,1733,21,36393,1,student/runs/unknown/ex285_ex289_frontend_symmetry_bdd_synthflow_20260608_1449/official_replay/ex289.aig,evaluate.py --case replay OK

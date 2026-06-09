@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig,1,1047,19,19893,Yosys abc gate set aig
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_extra_opt_share,1,1101,20,22020,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_late_flatten,1,1101,20,22020,move flatten after techmap
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_synth_preset,1,1078,20,21560,Yosys synth preset with flatten
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig_d18,1,1047,19,19893,Yosys abc gate set aig delay target 18
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig_d19,1,1047,19,19893,Yosys abc gate set aig delay target 19
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig_d20,1,1047,19,19893,Yosys abc gate set aig delay target 20
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig_d21,1,1047,19,19893,Yosys abc gate set aig delay target 21

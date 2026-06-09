@@ -1,0 +1,6 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex280,unknown_bdd_selected_bits,2,2,2,2,0,0,2,ex280_unknown_bdd_selected_support8,support8,structural_exact,1029,22,22638,2415,9.373913,0,0,support8:22638; support10:27510,
+ex281,unknown_bdd_selected_bits,2,2,2,2,0,0,2,ex281_unknown_bdd_selected_support8,support8,structural_exact,1252,24,30048,2336,12.863014,0,0,support8:30048; support10:32062,
+ex282,unknown_bdd_selected_bits,2,2,2,2,0,0,2,ex282_unknown_bdd_selected_support8,support8,structural_exact,1391,25,34775,2704,12.860577,0,0,support8:34775; support10:42614,
+ex283,unknown_bdd_selected_bits,2,2,2,2,0,0,2,ex283_unknown_bdd_selected_support8,support8,structural_exact,1654,27,44658,3168,14.096591,0,0,support8:44658; support10:50764,
+ex284,unknown_bdd_selected_bits,2,2,2,2,0,0,2,ex284_unknown_bdd_selected_support8,support8,structural_exact,1977,29,57333,4240,13.521934,0,0,support8:57333; support10:62234,

@@ -1,0 +1,17 @@
+# ex287_frontend_multipair_symcof_synthflow_20260609_0634
+
+- Run ID: `ex287_frontend_multipair_symcof_synthflow_20260609_0634`
+- Scope: `ex287`
+- Work dir: `student/work/ex287_frontend_multipair_symcof_synthflow_20260609_0634/`
+- Results dir: `student/runs/unknown/ex287_frontend_multipair_symcof_synthflow_20260609_0634/results/`
+- Purpose: Limited Yosys synthflow on ex287 multi-pair cofactor best. abc_g_aig improved current to 1832/15/27480.
+
+## Results
+
+See `results/candidates.csv`, `results/best.csv`, `results/summary.csv`, and `results/evaluate_check.csv`.
+
+```csv
+case,candidate_id,hypothesis/function_guess,variant,verilog_path,aig_path,verified_truth,equivalent,area,delay,adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,classification,notes
+ex287,ex287_interleave_f00_k5_abc_g_aig,unknown_symmetry_cofactor_classonehot,abc_g_aig,student/work/ex287_ex288_frontend_multipair_symcof_20260609_0624/ex287/verilog/ex287_unknown_symcof_interleave_f00_k5.v,student/work/ex287_frontend_multipair_symcof_synthflow_20260609_0634/ex287/aigs/ex287_interleave_f00_k5_abc_g_aig.aig,1,1,1832,15,27480,5782,4.752681,0,0,synthflow_exact,Yosys abc gate set aig
+```
+

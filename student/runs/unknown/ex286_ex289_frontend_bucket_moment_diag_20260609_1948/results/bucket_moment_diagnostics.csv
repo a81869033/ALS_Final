@@ -1,0 +1,143 @@
+case,family,feature_set,feature_count,key_count,matches,total_rows,exact,max_conflict,notes
+ex286,vector,prefix_counts,8,1728,3763,8192,0,20,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,prefix_mod3,8,1296,3187,8192,0,20,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,prefix_mod3_selectors,11,3840,7168,8192,0,2,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,prefix_mod4,8,1728,3763,8192,0,20,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,prefix_parity,8,256,1019,8192,0,30,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,prefix_parity_selectors,11,2048,5120,8192,0,2,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,selector_tuple,3,8,78,8192,0,1020,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,suffix_counts,8,1728,3763,8192,0,20,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,suffix_mod3,8,1296,3187,8192,0,20,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,vector,suffix_parity,8,256,1019,8192,0,30,whole vector coordinate family; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_greedy,base,0,1,32,8192,0,8160,greedy compact moment/residue scalar selection; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_greedy,moment_quad,1,368,1171,8192,0,76,greedy compact moment/residue scalar selection; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_greedy,moment_quad:oddmask,2,1728,3763,8192,0,20,greedy compact moment/residue scalar selection; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_greedy,moment_quad:oddmask:selmix_m4,3,4032,7429,8192,0,2,greedy compact moment/residue scalar selection; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_greedy,moment_quad:oddmask:selmix_m4:sel2,4,4608,8192,8192,1,0,greedy compact moment/residue scalar selection; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:moment_tri,2,1728,3763,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:moment_quad,2,1728,3763,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:gt1mask,2,1728,3763,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:moment_center,2,1696,3731,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:moment_revlin,2,1632,3635,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:moment_lin,2,1600,3603,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_tri:moment_center,2,1458,3328,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_quad:moment_center,2,1458,3328,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_revlin:moment_tri,2,1458,3328,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_revlin:moment_quad,2,1458,3328,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_quad:res_center_m8,2,1450,3318,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_quad:res_revlin_m8,2,1338,3138,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,sumsq:moment_quad,2,1365,3134,8192,0,33,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_quad:res_center_m7,2,1326,3122,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:selmix_m4,2,1024,3087,8192,0,6,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,gt1mask:moment_quad,2,1308,3056,8192,0,41,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,oddmask:res_revlin_m7,2,1184,2987,8192,0,20,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_quad:selmix_m4,2,1274,2945,8192,0,21,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_tri:res_center_m8,2,1188,2940,8192,0,32,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex286,scalar_pair_top,moment_quad:res_tri_m8,2,1190,2838,8192,0,37,top pairwise compact coordinates; buckets=8; selectors=raw3:raw10:xor6_7
+ex287,vector,prefix_counts,7,1440,5617,16384,0,56,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,prefix_mod3,7,648,3792,16384,0,56,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,prefix_mod3_selectors,11,4800,12544,16384,0,6,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,prefix_mod4,7,1152,5041,16384,0,56,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,prefix_parity,7,128,1634,16384,0,120,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,prefix_parity_selectors,11,2048,7704,16384,0,6,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,selector_tuple,4,16,183,16384,0,1019,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,suffix_counts,7,1440,5617,16384,0,56,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,suffix_mod3,7,648,3792,16384,0,56,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,vector,suffix_parity,7,128,1634,16384,0,120,whole vector coordinate family; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_greedy,base,0,1,64,16384,0,16320,greedy compact moment/residue scalar selection; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_greedy,moment_quad,1,259,1945,16384,0,188,greedy compact moment/residue scalar selection; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_greedy,moment_quad:oddmask,2,1440,5617,16384,0,56,greedy compact moment/residue scalar selection; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_greedy,moment_quad:oddmask:selmix_m4,3,3744,9770,16384,0,16,greedy compact moment/residue scalar selection; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_greedy,moment_quad:oddmask:selmix_m4:selmix_m3,4,6144,15152,16384,0,4,greedy compact moment/residue scalar selection; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_greedy,moment_quad:oddmask:selmix_m4:selmix_m3:sel2,5,6912,16384,16384,1,0,greedy compact moment/residue scalar selection; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:moment_quad,2,1440,5617,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:moment_tri,2,1344,5425,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:moment_lin,2,1280,5355,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:moment_revlin,2,1264,5287,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,sumsq:moment_quad,2,1283,5205,16384,0,72,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,moment_revlin:moment_tri,2,1220,5027,16384,0,68,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,moment_revlin:moment_quad,2,1220,5027,16384,0,68,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:gt1mask,2,1152,5025,16384,0,68,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,moment_tri:moment_center,2,1172,4906,16384,0,68,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,sumsq:moment_tri,2,1116,4732,16384,0,100,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,gt1mask:moment_quad,2,1088,4694,16384,0,99,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,moment_quad:moment_center,2,1068,4537,16384,0,80,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,moment_quad:res_center_m7,2,1016,4437,16384,0,80,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:res_quad_m7,2,800,4344,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:moment_center,2,880,4328,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:res_lin_m7,2,800,4320,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,gt1mask:moment_tri,2,950,4273,16384,0,106,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,oddmask:res_center_m7,2,816,4232,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,sumsq:oddmask,2,800,4230,16384,0,56,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex287,scalar_pair_top,moment_quad:res_revlin_m5,2,852,4153,16384,0,72,top pairwise compact coordinates; buckets=7; selectors=xor6_7:xor8_9:raw13:raw12
+ex288,vector,prefix_counts,9,4608,12804,32768,0,28,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,prefix_mod3,9,2592,8196,32768,0,28,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,prefix_mod3_selectors,12,11520,28672,32768,0,4,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,prefix_mod4,9,4608,12804,32768,0,28,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,prefix_parity,9,512,2889,32768,0,62,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,prefix_parity_selectors,12,4096,15392,32768,0,6,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,selector_tuple,3,8,114,32768,0,4088,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,suffix_counts,9,4608,12804,32768,0,28,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,suffix_mod3,9,2592,8196,32768,0,28,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,vector,suffix_parity,9,512,2889,32768,0,62,whole vector coordinate family; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_greedy,base,0,1,64,32768,0,32704,greedy compact moment/residue scalar selection; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_greedy,oddmask,1,512,2889,32768,0,62,greedy compact moment/residue scalar selection; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_greedy,oddmask:moment_quad,2,4608,12804,32768,0,28,greedy compact moment/residue scalar selection; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_greedy,oddmask:moment_quad:selmix_m4,3,11520,28685,32768,0,4,greedy compact moment/residue scalar selection; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_greedy,oddmask:moment_quad:selmix_m4:selmix_m3,4,13824,32768,32768,1,0,greedy compact moment/residue scalar selection; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:moment_quad,2,4608,12804,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:moment_revlin,2,4608,12804,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:gt1mask,2,4608,12804,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:moment_tri,2,4480,12674,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:moment_lin,2,4224,12291,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_revlin_m7,2,2816,9834,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,sumsq:moment_quad,2,3064,9830,32768,0,58,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:moment_center,2,2816,9814,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_center_m7,2,2688,9686,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,moment_revlin:moment_tri,2,2946,9424,32768,0,67,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,moment_revlin:moment_quad,2,2946,9424,32768,0,67,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,moment_quad:moment_center,2,2940,9416,32768,0,67,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_lin_m7,2,2816,9346,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_quad_m7,2,2816,9340,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:selmix_m4,2,2048,9301,32768,0,14,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,sumsq:oddmask,2,2496,9155,32768,0,28,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_center_m5,2,2304,8932,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_revlin_m5,2,2304,8932,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,oddmask:res_lin_m5,2,2304,8932,32768,0,32,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex288,scalar_pair_top,moment_tri:moment_center,2,2516,8444,32768,0,71,top pairwise compact coordinates; buckets=9; selectors=raw13:raw10:xor6_7
+ex289,vector,prefix_counts,8,3600,19210,65536,0,112,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,prefix_mod3,8,1296,11764,65536,0,112,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,prefix_mod3_selectors,12,14400,50208,65536,0,12,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,prefix_mod4,8,2304,15372,65536,0,112,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,prefix_parity,8,256,4944,65536,0,248,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,prefix_parity_selectors,12,4096,25600,65536,0,12,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,selector_tuple,4,16,368,65536,0,4088,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,suffix_counts,8,3600,19210,65536,0,112,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,suffix_mod3,8,1296,11764,65536,0,112,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,vector,suffix_parity,8,256,4944,65536,0,248,whole vector coordinate family; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_greedy,base,0,1,128,65536,0,65408,greedy compact moment/residue scalar selection; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_greedy,oddmask,1,256,4944,65536,0,248,greedy compact moment/residue scalar selection; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_greedy,oddmask:moment_revlin,2,3280,18714,65536,0,112,greedy compact moment/residue scalar selection; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_greedy,oddmask:moment_revlin:selmix_m4,3,9904,36713,65536,0,32,greedy compact moment/residue scalar selection; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_greedy,oddmask:moment_revlin:selmix_m4:selmix_m3,4,17408,58692,65536,0,8,greedy compact moment/residue scalar selection; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_greedy,oddmask:moment_revlin:selmix_m4:selmix_m3:sel2,5,20480,65536,65536,1,0,greedy compact moment/residue scalar selection; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:moment_revlin,2,3280,18714,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:moment_lin,2,3120,18298,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:moment_quad,2,3168,18058,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:moment_tri,2,3168,18020,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,sumsq:moment_quad,2,2734,16221,65536,0,184,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:gt1mask,2,2304,15231,65536,0,164,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:moment_center,2,2176,15068,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,sumsq:oddmask,2,1904,14938,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,moment_tri:moment_center,2,2293,14748,65536,0,170,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,moment_quad:moment_center,2,2293,14748,65536,0,170,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,moment_revlin:moment_tri,2,2293,14748,65536,0,170,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,moment_revlin:moment_quad,2,2293,14748,65536,0,170,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,sumsq:moment_tri,2,2287,14316,65536,0,232,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:res_quad_m7,2,1648,13920,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:res_lin_m7,2,1680,13822,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,gt1mask:moment_quad,2,2150,13755,65536,0,268,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:res_revlin_m7,2,1648,13582,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,moment_quad:res_center_m8,2,1869,13566,65536,0,170,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,oddmask:res_center_m7,2,1632,13364,65536,0,112,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14
+ex289,scalar_pair_top,total:oddmask,2,1280,12940,65536,0,120,top pairwise compact coordinates; buckets=8; selectors=xor10_11:xor6_7:raw15:raw14

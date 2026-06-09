@@ -1,0 +1,2 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_unknown_key_endpoint_fsm_prefix_parity_reduce,8749,85,743665,2415,307.935818,17220,726445,0,prefix_parity_reduce,transform=prefix_parity_reduce; steps=0:11/1:10/2:9/3:8/4:7/5:6; class_counts=4:14:50:178:626:909; transition_counts=16:56:200:712:2504; hash_inputs=4096; hash=1c14b9887b61,unknown endpoint-pair FSM Verilog seed

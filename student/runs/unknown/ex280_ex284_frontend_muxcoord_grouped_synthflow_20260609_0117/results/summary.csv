@@ -1,0 +1,6 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig,195,28,5460,2415,2.260870,7525,-2065,1,abc_g_aig,,Yosys abc gate set aig
+ex281,ex281_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig,201,31,6231,2336,2.667380,10498,-4267,1,abc_g_aig,,Yosys abc gate set aig
+ex282,ex282_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig,215,31,6665,2704,2.464867,9858,-3193,1,abc_g_aig,,Yosys abc gate set aig
+ex283,ex283_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig,236,35,8260,3168,2.607323,13986,-5726,1,abc_g_aig,,Yosys abc gate set aig
+ex284,ex284_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig,247,37,9139,4240,2.155425,15015,-5876,1,abc_g_aig,,Yosys abc gate set aig

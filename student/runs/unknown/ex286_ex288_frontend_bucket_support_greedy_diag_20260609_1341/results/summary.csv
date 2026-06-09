@@ -1,0 +1,4 @@
+case,bits,greedy_exact_bits,best_greedy_bit,best_greedy_match,total_rows,best_greedy_ratio,min_greedy_conflicts,max_greedy_subset_size,verdict
+ex286,13,13,0,8192,8192,1.000000,0,11,reject greedy field-support split; no output bit became exact from adding bucket/selector fields greedily
+ex287,14,14,0,16384,16384,1.000000,0,11,reject greedy field-support split; no output bit became exact from adding bucket/selector fields greedily
+ex288,15,15,0,32768,32768,1.000000,0,12,reject greedy field-support split; no output bit became exact from adding bucket/selector fields greedily

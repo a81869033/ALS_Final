@@ -1,0 +1,5 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex281,unknown_cofactor_bdd,3,3,3,3,0,0,3,ex281_unknown_cofactor_bdd_high1,high1,structural_exact,1153,23,26519,2336,11.352312,0,0,high1:26519; low1:28488; center1:39160,
+ex282,unknown_cofactor_bdd,3,3,3,3,0,0,3,ex282_unknown_cofactor_bdd_low1,low1,structural_exact,1397,24,33528,2704,12.399408,0,0,low1:33528; high1:34325; center1:49896,
+ex283,unknown_cofactor_bdd,3,3,3,3,0,0,3,ex283_unknown_cofactor_bdd_high1,high1,structural_exact,1624,27,43848,3168,13.840909,0,0,high1:43848; low1:44253; center1:66906,
+ex284,unknown_cofactor_bdd,3,3,3,3,0,0,3,ex284_unknown_cofactor_bdd_low1,low1,structural_exact,1832,29,53128,4240,12.530189,0,0,low1:53128; high1:57360; center1:84854,

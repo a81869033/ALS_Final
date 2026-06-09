@@ -1,0 +1,4 @@
+case,classes,inner_width,anf_total_terms,per_group_min_terms,per_group_max_terms,max_bit_terms,max_degree,verdict
+ex286,16,9,10948,553,847,111,8,reject cofactor ANF; term count larger than current BDD/cofactor source
+ex287,32,9,12916,293,553,85,8,reject cofactor ANF; term count larger than current BDD/cofactor source
+ex288,64,9,35964,365,844,106,9,reject cofactor ANF; term count larger than current BDD/cofactor source

@@ -1,0 +1,8 @@
+{
+  "case": "ex286",
+  "conclusion": "worse than current 1447/15/21705",
+  "hypothesis": "popcount-repair smoke on bit 2",
+  "result": "1534/24/36816",
+  "run_id": "ex286_frontend_symcof_pcrepair_20260609_0800",
+  "seed_policy": "student/seeds untouched"
+}

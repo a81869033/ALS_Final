@@ -1,0 +1,5 @@
+case,variant,matches,total_rows,match_ratio,bit_mismatches,total_bits,bit_match_ratio,notes
+ex286,interval_superpose_or,142,8192,0.017334,47670,106496,0.552378,diagnostic-only semantic model
+ex287,interval_superpose_or,183,16384,0.011169,104926,229376,0.542559,diagnostic-only semantic model
+ex288,interval_superpose_or,259,32768,0.007904,228676,491520,0.534757,diagnostic-only semantic model
+ex289,interval_superpose_or,368,65536,0.005615,492691,1048576,0.530133,diagnostic-only semantic model

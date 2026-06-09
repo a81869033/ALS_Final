@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex288,ex288_unknown_bit_hybrid_primary_12_13_14,unknown_bit_hybrid,primary_12_13_14,student/work/ex288_ex289_frontend_split_sym_bit_hybrid_20260608_1629/ex288/verilog/ex288_unknown_bit_hybrid_primary_12_13_14.v,student/work/ex288_ex289_frontend_split_sym_bit_hybrid_20260608_1629/ex288/aigs/ex288_unknown_bit_hybrid_primary_12_13_14.aig,3025,20,60500,primary_bits=12:13:14; secondary_bits=0:1:2:3:4:5:6:7:8:9:10:11; hash=646997bf77ae,bit-hybrid of two verified exact Verilog sources

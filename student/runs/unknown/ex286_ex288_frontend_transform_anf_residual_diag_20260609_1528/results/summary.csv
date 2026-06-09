@@ -1,0 +1,4 @@
+case,rows,verified,equivalent,best_transform,best_degree,best_raw_bdd_nodes_sum,best_residual_bdd_nodes_sum,best_residual_to_raw_ratio,max_exact_low_degree_bits,max_exact_transform,max_exact_degree,notes
+ex286,21,0,0,raw,1,7377,7377,1.000000,0,raw,1,diagnostic-only; low-degree transform residual did not shrink BDDs enough for RTL seed
+ex287,21,0,0,prefix_onehot_slot,1,18108,18106,0.999890,0,raw,1,diagnostic-only; low-degree transform residual did not shrink BDDs enough for RTL seed
+ex288,21,0,0,prefix_natural,1,25054,25035,0.999242,0,raw,1,diagnostic-only; low-degree transform residual did not shrink BDDs enough for RTL seed

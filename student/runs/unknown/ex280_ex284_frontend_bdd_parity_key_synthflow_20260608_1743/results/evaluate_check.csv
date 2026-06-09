@@ -1,0 +1,31 @@
+case,candidate_id,verified_truth,synthesized,equivalent,area,delay,adp,verilog_exists,aig_exists,notes
+ex280,ex280_prefix_parity_interleave_abc_d20,1,1,1,772,33,25476,1,1,Yosys abc delay target 20
+ex280,ex280_prefix_parity_interleave_abc_d24,1,1,1,772,33,25476,1,1,Yosys abc delay target 24
+ex280,ex280_prefix_parity_interleave_abc_g_aig,1,1,1,772,32,24704,1,1,Yosys abc gate set aig
+ex280,ex280_prefix_parity_interleave_extra_opt_share,1,1,1,772,33,25476,1,1,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex280,ex280_prefix_parity_interleave_synth_preset,1,1,1,800,33,26400,1,1,Yosys synth preset with flatten
+ex280,ex280_prefix_parity_interleave_abc_g_aig_d20,1,1,1,772,32,24704,1,1,Yosys abc gate set aig delay target 20
+ex281,ex281_prefix_parity_interleave_abc_d20,1,1,1,937,37,34669,1,1,Yosys abc delay target 20
+ex281,ex281_prefix_parity_interleave_abc_d24,1,1,1,937,37,34669,1,1,Yosys abc delay target 24
+ex281,ex281_prefix_parity_interleave_abc_g_aig,1,1,1,919,37,34003,1,1,Yosys abc gate set aig
+ex281,ex281_prefix_parity_interleave_extra_opt_share,1,1,1,937,37,34669,1,1,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex281,ex281_prefix_parity_interleave_synth_preset,1,1,1,940,38,35720,1,1,Yosys synth preset with flatten
+ex281,ex281_prefix_parity_interleave_abc_g_aig_d20,1,1,1,919,37,34003,1,1,Yosys abc gate set aig delay target 20
+ex282,ex282_prefix_parity_interleave_abc_d20,1,1,1,1082,40,43280,1,1,Yosys abc delay target 20
+ex282,ex282_prefix_parity_interleave_abc_d24,1,1,1,1082,40,43280,1,1,Yosys abc delay target 24
+ex282,ex282_prefix_parity_interleave_abc_g_aig,1,1,1,1071,40,42840,1,1,Yosys abc gate set aig
+ex282,ex282_prefix_parity_interleave_extra_opt_share,1,1,1,1082,40,43280,1,1,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex282,ex282_prefix_parity_interleave_synth_preset,1,1,1,1071,38,40698,1,1,Yosys synth preset with flatten
+ex282,ex282_prefix_parity_interleave_abc_g_aig_d20,1,1,1,1071,40,42840,1,1,Yosys abc gate set aig delay target 20
+ex283,ex283_prefix_parity_interleave_abc_d20,1,1,1,1270,45,57150,1,1,Yosys abc delay target 20
+ex283,ex283_prefix_parity_interleave_abc_d24,1,1,1,1270,45,57150,1,1,Yosys abc delay target 24
+ex283,ex283_prefix_parity_interleave_abc_g_aig,1,1,1,1245,43,53535,1,1,Yosys abc gate set aig
+ex283,ex283_prefix_parity_interleave_extra_opt_share,1,1,1,1270,45,57150,1,1,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex283,ex283_prefix_parity_interleave_synth_preset,1,1,1,1292,44,56848,1,1,Yosys synth preset with flatten
+ex283,ex283_prefix_parity_interleave_abc_g_aig_d20,1,1,1,1245,43,53535,1,1,Yosys abc gate set aig delay target 20
+ex284,ex284_prefix_parity_interleave_abc_d20,1,1,1,1455,45,65475,1,1,Yosys abc delay target 20
+ex284,ex284_prefix_parity_interleave_abc_d24,1,1,1,1455,45,65475,1,1,Yosys abc delay target 24
+ex284,ex284_prefix_parity_interleave_abc_g_aig,1,1,1,1431,45,64395,1,1,Yosys abc gate set aig
+ex284,ex284_prefix_parity_interleave_extra_opt_share,1,1,1,1455,45,65475,1,1,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex284,ex284_prefix_parity_interleave_synth_preset,1,1,1,1464,45,65880,1,1,Yosys synth preset with flatten
+ex284,ex284_prefix_parity_interleave_abc_g_aig_d20,1,1,1,1431,45,64395,1,1,Yosys abc gate set aig delay target 20

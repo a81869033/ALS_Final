@@ -1,0 +1,4 @@
+case,bits,best_cube_cover_max,best_cube_cover_min,cube_lower_bound_min,cube_lower_bound_max,literal_min,literal_max,verdict
+ex286,13,144,144,16,17,5,5,"sampled cubes find some broad implicants, but this is not a complete exact cover; use only as follow-up signal"
+ex287,14,192,72,18,48,5,6,"sampled cubes find some broad implicants, but this is not a complete exact cover; use only as follow-up signal"
+ex288,15,576,108,12,64,4,7,"sampled cubes find some broad implicants, but this is not a complete exact cover; use only as follow-up signal"

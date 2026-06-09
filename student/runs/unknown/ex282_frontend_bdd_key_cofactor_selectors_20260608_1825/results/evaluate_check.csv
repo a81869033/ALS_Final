@@ -1,0 +1,8 @@
+case,candidate_id,verified_truth,synthesized,equivalent,area,delay,adp,verilog_exists,aig_exists,notes
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_2_10,1,1,1,1403,29,40687,1,1,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_2_3,1,1,1,1418,33,46794,1,1,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_3_10,1,1,1,1787,30,53610,1,1,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_10_11,1,1,1,1242,33,40986,1,1,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_2_11_12,1,1,1,980,35,34300,1,1,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_2_11,1,1,1,1020,32,32640,1,1,unknown transformed-key cofactor-BDD Verilog seed
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_2_9,1,1,1,1618,30,48540,1,1,unknown transformed-key cofactor-BDD Verilog seed

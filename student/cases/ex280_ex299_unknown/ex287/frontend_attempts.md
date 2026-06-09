@@ -2,23 +2,151 @@
 
 ## Current Best
 
-- Current best frontend: `decision_tree_greedy`, area `1833`, delay `19`, ADP `34827`.
+- Current best frontend: `ex287_interleave_f00_k5_abc_g_aig`, area `1832`, delay `15`, ADP `27480`.
 - Reference: ADP `5782`.
-- Gap: `6.02x` reference ADP.
+- Gap: `4.75x` reference ADP.
 
 ## Already Tried
 
 - Tried generic unknown variants: `value_case`, `expr_default_exception`, `high_split_default`, `low_split_default`, `rotate_high_split_default`, `rotate_low_split_default`, `decision_tree_greedy`.
 - Top results: `decision_tree_greedy:34827`; `rotate_high_split_default:35790`; `rotate_low_split_default:35790`; `low_split_default:104754`; `value_case:210254`.
 - Algebraic/ANF/Davio/support-LUT candidates exist under `student/work/reverse_unknown_algebraic_20260603_2305_algebraic_safe/ex287`, but they are not the current tracked best.
+- 2026-06-08 diagnostic shared-BDD run: official `evaluate.py` OK; interleave BDD was `1829/21/38409`, worse than current decision tree.
+- 2026-06-08 current structural synthflow run: official `evaluate.py` OK for all variants; `synth_preset` improved to `1743/18/31374`.
+- 2026-06-08 symmetry-canonical BDD run: exact `swap_in_4_5` canonical key was verified with official `evaluate.py`; best was `1768/19/33592`, close but worse than current.
+- 2026-06-08 symmetry-BDD synthflow run: official `evaluate.py` OK; `synth_preset` improved current best to `1723/18/31014`.
+- 2026-06-08 secondary symmetry-BDD synthflow run: official `evaluate.py` OK; all tested delay/gate-set variants were worse than `synth_preset`.
+- 2026-06-08 selected-bit hybrid run: replacing one output bit at a time from the symmetry-BDD source with the structural decision-tree source was exact for recovered rows `primary_0..6`, but best was only `1814/19/34466`; the sweep was stopped before `primary_7` because all completed rows regressed.
+- 2026-06-09 symmetry cofactor class-onehot run: top-3/4/5 interleave cofactor/class-onehot rows were official exact; best `interleave_f00_k4` was `1755/18/31590`, close but worse than current `1723/18/31014`.
+- 2026-06-09 multi-pair symmetry diagnostic found exact input symmetries `(4,5)`, `(6,7)`, and `(8,9)`.
+- 2026-06-09 multi-pair symmetry cofactor class-onehot run: official exact; raw best `1845/15/27675`, and limited `abc_g_aig` improved current to `1832/15/27480`.
+- 2026-06-09 raw multi-pair BDD and direct ANF low-support bit extraction were official exact but worse; ANF extraction had very high delay.
+- 2026-06-09 popcount semantic diagnostic: verified `popcount(out) == popcount(in)` for all `16384` truth rows. This points to a conservative token-routing / controlled-swap style structure. Pure compare-exchange is rejected because the function is not bitwise monotone; transferred mux-coordinate degree-2/3 solved zero bits; weighted-sum best matched only `58/16384`; quadratic-at-origin residual BDD grew from `1088` to `2781` nodes; popcount-layer BDD node sum was `10785`, worse than raw.
+- 2026-06-09 conservative-routing diagnostics: no exact `total_count + interval_count` output-bit predicates, most output bits have full support, and there is no direct width embedding into ex288. This keeps the conservative/token-routing clue alive but rejects simple count-boundary or one-bit recurrence forms.
+- 2026-06-09 selector transfer check: outer bits `(0,1,10,11)` reduced diagnostic nodes relative to k4 default, but official replay was `1648/18/29664`, worse than current `1832/15/27480`.
+- 2026-06-09 bounded token-routing diagnostics: global rotation/reflection, radius<=4 local line/ring rules, prefix-balance transducers with lookahead<=6, and rank-context maps all had large conflicts; no exact compact token-routing RTL form was found.
+- 2026-06-09 nested selector-tree mux replay of the current multi-pair cofactor source was official exact but worse (`1847/18/33246`).
+- 2026-06-09 `synth_preset` replay of selector `(0,1,10,11)` was official exact but worse (`1699/18/30582`) than current `27480`.
+- 2026-06-09 low-weight/semantic probes rejected weighted data-dependent rotate, low-degree one-hot position polynomial, and hidden unate comparator polarity as large-drop structures.
+- 2026-06-09 popcount-layer diagnostic: layer outputs are many-to-one but not small canonical placements; middle layers have `427/445/422` unique outputs for `w6/w7/w8`. No output pair implication/equality constraints were found.
+- 2026-06-09 pair-count MDD source was official exact but worse. Two-pair smoke best was `2468/21/51828`; correct three-pair `reverse` improved to `1771/20/35420`, and limited `synth_preset` reached only `1723/19/32737`, still worse than current.
+- 2026-06-09 conservative big-jump diagnostic: output-state insertion recurrence is not exact (`natural` order has `2237` conflicts); small-slot matching/parking is not compact (`cap8` still fails `4798/16384` rows); generalized symmetry gives only the known invariant swaps `(4,5)`, `(6,7)`, `(8,9)`; simple layer-rank maps match only tiny fractions; independent 4-bit block scatter misses `16242/16384` rows; simple prefix/suffix count transport tops out at `9297/16384`.
+- 2026-06-09 pair-interaction diagnostic: two-hot output matrices have some low-rank bits (`2/4/6/8/10`), but two-hot behavior is not determined by the one-hot output-slot pair (`47` slot-pair conflicts). Degree-2-from-low-weight formulas match only about half the full table, and checked residual BDDs are larger than raw bit BDDs. No seed was emitted.
+- 2026-06-09 top-k/layer diagnostic: simple top-k score families were very weak; best full-table match was only `107/16384`. Complement/reverse duality was not exact (`464/16384` best tested variant).
+- 2026-06-09 conservation-law diagnostic: mod `2/3/5/7` linear invariant nullity was `1`; the only linear conserved quantity is global popcount, so independent block/lane conservation is not the missing structure.
+- 2026-06-09 count-coordinate diagnostic: prefix/suffix/interval count predicates solved no output bits; best matches were about `10432/16384`, not strong enough for selected-bit RTL.
+- 2026-06-09 cross-width embedding diagnostic: ex287 into ex288 found only output bit 7 as a direct fixed-bit restriction; too little structure for source transfer.
+- 2026-06-09 low-delay symcof replay: `interleave_f00_k6` was exact and reached `2077/14/29078` after `abc_g_aig`, worse than current `27480`. D14-D17 tied the same row.
+- 2026-06-09 scan residual diagnostic: prefix residual classes compressed mostly by known pair symmetries and output many-to-one behavior, not a small scan/transducer state space. Center order looked smaller in mid-prefix counts but exact replay was far worse.
+- 2026-06-09 center-order symcof replay: custom order `6,7,5,8,4,9,3,10,2,11,1,12,0,13` was official exact for 12/12 rows, but best was only `12142/20/242840`.
+- 2026-06-09 LTF diagnostic: raw and pair-canonical linear-threshold features solved no output bits; best match was only `9875/16384` (`bit7 rawpm`), too weak for threshold RTL.
+- 2026-06-09 parking/preference diagnostic: static greedy parking/open-addressing using one-hot home slots, two-hot preference slots, multiple token orders, and reverse/rotate output transforms was far from exact. Best full-row match was only `117/16384` (`home_reverse`, `pair_freq`, identity), bit match ratio `0.539873`, so no RTL seed was emitted.
+- 2026-06-09 bucket-count classifier: output is exactly determined by `7` one-hot-derived bucket counts plus selector bits `xor6_7:xor8_9:raw13:raw12` (`16`-bit key, `6912` mapped keys). The flat exact `case(key)` RTL was official exact, but area exploded; best limited synthflow row was `20131/23/463013`, far worse than current. Keep the count-key decomposition as a clue, but do not reuse the flat table emitter.
+- 2026-06-09 bucket-count table decomposition follow-up: invalid-key `default x` and per-output-bit table emitters were official exact but still area-explosive. Best `case_defaultx` was `20106/24/482544`; `perbit_defaultx` was `35587/22/782914`. The next attempt must decompose the count-key function, not change the table wrapper.
+- 2026-06-09 bucket-key BDD: shared BDD over the exact bucket-count key domain found best `selectors_first` order with `6322` nodes and official exact `7852/27/212004` after `abc_g_aig`. This is much smaller than flat table but still `7.71x` worse than current ADP.
+- 2026-06-09 bucket-key formula diagnostic: primitive count/selector predicates solved no output bits, depth-4 greedy primitive trees solved no bits, and key-domain ANF had `17088..29876` terms with max degree up to `16`. No seed emitted.
+- 2026-06-09 bucket-key sampled cube-cover diagnostic: invalid-key don't-care expansion found sampled cubes covering up to `192` on-keys with `5` literals, giving lower-bound cube counts `18..48`. This is not a complete cover and no seed was emitted; it only suggests an optimized exact cover could be checked later.
+- 2026-06-09 split-domain duality diagnostic: tested ex289-like half-domain self-reductions over complement/reverse/input split transforms and output complement/reverse/pair-swap transforms. Best was only `228/8192` matches (`split0`, `comp_all`, identity), no exact relation. ex289 sanity in the same run passed.
+- 2026-06-09 bucket-count LTF diagnostic: over exact bucket counts, selected disambiguation bits, and pairwise count differences, perceptron training solved no output bits; best was bit 5 with `9045/16384` matches. No seed emitted.
+- 2026-06-09 bucket field-support greedy diagnostic: all output bits become exact only after essentially the full bucket/selector field set (`11` fields, `6912` keys). This rejects a small field-support split of the exact bucket-key function.
+- 2026-06-09 cofactored pair-count MDD diagnostic: best row was `reverse k6`, `56` classes, `4711` MDD nodes, not a promising reduction relative to the current cofactor BDD path. No seed emitted.
+- 2026-06-09 semantic big-jump diagnostic: iterative application has many nontrivial cycles, so it is not a normalizer; prefix-threshold BDDs were much larger (`17602` nodes vs `3872` direct nodes); slot arithmetic still matched only `58/16384`.
+- 2026-06-09 rank/linear diagnostic: GF(2) input/output relation nullity was `1`, so only global parity is available for XOR repair. Layer rank-affine scans found no strong relation.
+- 2026-06-09 cofactor ANF diagnostic: current cofactor groups have `12916` total ANF terms, per-group `293..553`, max bit `85` terms, max degree `8`. This is too large to replace BDD groups with ANF.
+- 2026-06-09 low-support key-BDD selected-bit hybrid: emitted bits `6/7` from one shared BDD over the canonical symmetry key and skipped them in the class-onehot cofactor groups. The source was official exact, but limited `abc_g_aig` replay was `1856/15/27840`, worse than current `1832/15/27480`.
+- 2026-06-09 bucket top-k score diagnostic: trained score-and-top-k models over exact bucket counts/selectors. Best full diagnostic matched only `87/16384` rows, so no comparator/top-k RTL seed was emitted.
+- 2026-06-09 delta insertion diagnostic: adding input bit 6/7 has only `26` unique output deltas, but output-only insertion remains conflicted; best output-key conflict count was `388`, and best delta BDD node count was `1103`. No compact token-insertion recurrence was found.
+- 2026-06-09 streaming prefix diagnostic: tested natural/reverse/center/onehot-slot input/output orders with lookahead up to `6`. No row determined even the first output prefix exactly; best majority row was `onehot_slot->reverse+L6` with `0.777745` majority ratio and `7298` worst conflicts. No FSM/transducer RTL seed emitted.
+- 2026-06-09 transform ANF residual diagnostic: tested raw, pair-key, prefix/suffix natural/reverse/onehot-slot coordinate transforms with degree `1/2/3` ANF extraction. No low-degree exact bits were found, and best residual/raw BDD node ratio was only `0.999890`, too small to justify RTL emission.
+- 2026-06-09 finite collision/algebra diagnostic: hidden labels such as `home_mod8`, `home_occ`, and exact-symmetry labels can memorize all two-hot rows (`91/91`), but the shared pair-correction XOR superposition matches only `604/16384` full rows with bit accuracy `0.560268`. Symmetric modular affine pair rules are weaker (`9/91` best). No RTL seed emitted.
+- 2026-06-09 static-feature controlled-swap sampled diagnostic: raw-bit, symmetry-pair, bucket/prefix/suffix count controls did not produce a strong routing lead. After 12 greedy mux-swap layers, best sample mismatch was `1386/1436` from identity and `1390/1436` from pair-canonical start. No RTL seed emitted.
+- 2026-06-09 bucket-count prefix/layout diagnostic: tested whether exact bucket counts plus selectors form a histogram-to-output layout using bucket/output orders and selector-controlled offsets. Best was only `71/16384` rows (`bucket_segment`, `slot_asc`, `onehot_slots_first`) with bit match `0.536682`, so no layout RTL seed emitted.
+- 2026-06-09 Gray-layer order diagnostic: tested BRGC-filtered, bit-reversed Gray, and related same-popcount layer orders with per-layer shift/affine/direct rank transforms. Best was only `121/16384` rows (`affine`, `rev_brgc_index->rev_brgc_index`) with bit match `0.536726`; no rank-successor RTL seed emitted.
+- 2026-06-09 input/output coordinate ANF diagnostic: added output-coordinate transforms on top of input prefix/suffix/Gray transforms to check for ex280-ex284-style low-degree coordinate collapse. Best was only `1/14` exact transformed bits at degree <=4 (`raw->prefix_natural`), with `30801` total ANF terms; no compressor RTL seed emitted.
+- 2026-06-09 bucket-count collision-relaxation diagnostic: treated exact one-hot home bucket counts as initial occupancy and tested parking carry, binary carry, balanced nearest parking, and line/cycle sandpile rules with selector-specific policies. Best was only `97/16384` rows, bit match `0.552080`; no relaxation RTL seed emitted.
+- 2026-06-09 image/canonical representative diagnostic: output image has `2609` unique values; exact bucket-key class output is in its own input class only `107/6912` classes, and best min/max representative model matches only `93/6912` classes. This rejects simple canonical representative selection over exact bucket-key classes.
+- 2026-06-09 exact bucket-key multi-valued MDD diagnostic: treated the exact bucket counts and selectors as true multi-valued variables instead of binary-encoded key bits. Full-order/policy scan found best `word/reuse_first/domain_asc` with `3198` nonterminal nodes, max width `1919`, `2609` terminals, and `6912` mapped keys. This is not a compact factored source for moving current `27480` toward `1.5x` reference; no RTL seed emitted.
+- 2026-06-09 global token-slot matching diagnostic: tested maximum-weight assignment using weights learned from one-hot, two-hot, and low3 rows. Even on the weight<=3 gate, best was only `66/470` rows (`low3_freq`, home bonus `16`, home order, low tie, identity output), so learned matching/preference assignment is not the missing conservative-routing structure. No RTL seed emitted.
+- 2026-06-09 fixed-popcount slice polynomial diagnostic: checked whether each output bit is a low-degree GF(2) polynomial on each Hamming-weight layer. Degree<=3 solved only `112/210` layer-bits; degree<=4 improved to `140/210` by covering boundary layers, but central layer `w7` had `0/14` exact output bits even with feature rank `1001`. No slice-polynomial RTL seed emitted.
+- 2026-06-09 arbitrary output-linear ANF diagnostic: word-level Mobius/nullspace over output linear combinations found degree<=4 nullity `4/14`, with mod-4 lane parity masks `0x1111:0x2222:0x444:0x888` and term counts `80:102:71:91`. This is a semantic clue, but the ex286 wrapper smoke showed the direct lane-repair source form is too expensive, so no ex287 RTL was emitted.
+- 2026-06-09 lane-parity semantic feature-span diagnostic: tested whether the mod-4 output lane parity targets can be expressed more cheaply from input lane parity, home-lane counts, raw pair signals, bucket count bits, or bucket selector bits. Degree 1/2 broad features and degree 3 smaller features solved zero lane targets, so no cheap replacement for the direct ANF cone was found.
+- 2026-06-09 output-linear high-degree ANF diagnostic: nullity grows to `8/14` at degree<=8 with mod-8-like masks, but term counts are large (`281..454`), so direct coordinate emission is not a source.
+- 2026-06-09 corrected image-constraint and adjacent-pair orientation diagnostic: output image has no degree 1/2 constraints and `21` degree-3 constraints. These constraints show all mixed adjacent output pairs share one orientation bit, exact over the full table. However, pair-count+orientation encoding only reduces raw shared-BDD nodes `1088 -> 1031`, too small for the required ADP drop.
+- 2026-06-09 component-wise adjacent-pair orientation diagnostic: all adjacent output pairs are one component, matching the global orientation result. Encoding remains exact but only shrinks raw shared-BDD nodes `1088 -> 1031`, so no RTL seed emitted.
+- 2026-06-09 component pair-field split diagnostic: the global orientation bit is very cheap (`35` BDD nodes), but pair-count fields are still the real cost (`998` BDD nodes) and retain full support (`14/14`). This rejects standalone pair-count/orientation encoding as a route from current `4.75x` reference gap to the target.
+- 2026-06-09 affine complement-duality diagnostic: base affine/rotate/reverse P/Q search found a stronger near relation than the hand-written reverse scan but still far from exact. Best `id|aff13_1` was `76/212` low-weight sample and `4252/16384` full rows. Known-pair-composed exact-sample hashing found no low-weight exact hit, so no ex289-style half-domain seed was emitted.
+- 2026-06-09 bucket moment-coordinate diagnostic: greedy scalar moments `moment_quad:oddmask:selmix_m4:selmix_m3:sel2` were exact (`16384/16384`) but required `6912` keys. Prefix/modulo vector families were not exact. This is not a compact arithmetic decoder.
+- 2026-06-09 output pair-count linear diagnostic: mod-101 affine checks over counts, selectors, prefix coordinates, selector products, count quadratics, and count indicators solved zero adjacent pair-count targets (`0/49` target/family exact). No pair-count RTL seed emitted.
+- 2026-06-09 output pair-count tiny piecewise diagnostic: bounded min/max/clamp/sum-clip checks solved zero pair-count targets; best was pair_count_6 with `mx2_4:mn2_4`, only `9430/16384`. No seed emitted.
+- 2026-06-09 output pair-count cumulative transport diagnostic: prefix-capacity/window transport over exact bucket counts plus selector offsets found no exact formula; best was `prefix_capacity`, bucket `asc`, pair `asc_rot4`, offset `zero`, only `528/16384`. No RTL seed emitted.
 
 ## Do Not Repeat Blindly
 
 - Decision tree and rotated split are close, but both are still far from reference.
+- Do not repeat the tested interleave BDD order without a source rewrite.
+- Symmetry-canonical BDD plus synthflow is current best; natural/sym_first pair-BDD orders were much worse.
+- Do not repeat secondary symmetry-BDD synthflow variants `abc_d20/21/22`, `abc_fast`, `abc_g_simple`, `abc_g_and_mux`, or `synth_preset_noabc`.
+- Do not repeat single-bit structural decision-tree overrides on the symmetry-BDD source; recovered exact rows `primary_0..6` were all worse than current best.
+- Do not repeat the tested interleave top-3/4/5 symmetry cofactor class-onehot rows without a different sharing strategy; exact but slightly worse than current.
+- Do not repeat raw multi-pair BDD or direct ANF selected-bit extraction as tested; cofactor class-onehot plus `abc_g_aig` dominates.
 - Try to find common substructure shared across outputs instead of another full decision tree.
+- Do not repeat the tested mux-coordinate/quadratic transfer, direct weighted modular sum, quadratic-origin residual BDD, elementary CA sample, combinadic rank map, or popcount-layer BDD forms. The next plausible large-drop path is a non-monotone conservative token-routing / controlled-swap model.
+- Do not repeat simple `total_count + interval_count` predicates or direct width insert/delete embedding as tested.
+- Do not repeat selector `(0,1,10,11)` in the same source form; lower node count did not improve ADP.
+- Do not repeat selector `(0,1,10,11)` with `synth_preset`; exact but still worse.
+- Do not repeat nested selector-tree mux for the current cofactor source; exact but delay worsened.
+- Do not repeat bounded local/FSM token-routing, weighted rotate, one-hot position polynomial, or hidden-unate comparator forms without a new coordinate transform.
+- Do not repeat pair-count MDD in the tested orders or simple `abc_g_aig`/`synth_preset` replay; exact but worse than current.
+- Do not repeat output-mask-only insertion recurrences, small candidate-slot matching/parking, generalized swap/output-permutation symmetry scans, simple layer-rank maps, independent 4-bit block scatter, or simple prefix/suffix count transport for ex287; all failed as large-drop structures.
+- Do not repeat simple two-hot pair-slot interaction or degree-2-from-low-weight residual BDD as tested; both failed to expose a large-drop source form.
+- Do not repeat simple top-k score selection or complement/reverse duality for ex287 as tested; both were far from exact.
+- Do not pursue independent block/lane conservation for ex287 without a nonlinear hidden-state idea; only global popcount is linearly conserved.
+- Do not repeat count-coordinate single predicates, narrow cross-width direct embedding, or low-delay `f00_k6` synthflow/D-target replay for ex287 as tested; exact but worse or too weak.
+- Do not repeat center-order residual/symcof replay for ex287 as tested; residual compression did not translate to BDD/cofactor QoR.
+- Do not repeat single-layer LTF/comparator predicates over raw or pair-canonical features for ex287 as tested; no bit was near exact.
+- Do not repeat static one-hot/two-hot preference-list parking or open-addressing models for ex287 as tested; they are much farther from exact than seed-worthy.
+- Do not repeat flat bucket-count key case-table RTL for ex287; exact but `16.85x` worse than current ADP. Only revisit if the count-key table is structurally decomposed.
+- Do not repeat bucket-count `default x` or per-bit key table emitters for ex287; both are exact but worse than the already bad flat table.
+- Do not repeat straightforward shared BDD over the bucket-count key for ex287 as tested; selectors-first was best but still far worse than current.
+- Do not repeat shallow primitive count/selector formulas, depth-4 greedy primitive trees, or direct key-domain ANF for ex287 as tested.
+- Do not rerun the naive full Python cube-cover implementation for ex287; it was too slow. If revisiting cube covers, use a bitset-optimized exact cover.
+- Do not pursue tested ex289-style split-domain duality wrappers for ex287; no transform was close to exact.
+- Do not repeat simple linear-threshold/comparator formulas over bucket-count semantic features for ex287 as tested.
+- Do not repeat bucket field-support split, cofactored pair-count MDD, prefix-threshold BDD, slot arithmetic/rotate, or iterative normalizer as tested for ex287; all failed to expose the reference-scale structure.
+- Do not repeat layer-rank affine maps for ex287 as tested.
+- Do not repeat direct ANF emission of the current cofactor groups for ex287; term count is too high.
+- Do not broaden low-support key-BDD selected-bit hybrids for ex287 as tested; exact bits `6/7` duplicated enough logic to regress ADP.
+- Do not pursue simple bucket-count score/top-k routing for ex287 as tested; row matches stayed at tiny fractions of the truth table.
+- Do not pursue output-only token insertion recurrence for ex287 as tested; low unique deltas on symmetry-pair bits do not translate to an exact compact update rule.
+- Do not pursue small-lookahead streaming prefix/transducer RTL for ex287 as tested; output prefix determinism fails under all tested order/lookahead pairs.
+- Do not pursue low-degree ANF residual hybrids for ex287 under the tested raw/pair-key/prefix/suffix transforms; residual BDDs did not meaningfully shrink.
+- Do not pursue layer-wise combination-rank/unrank transforms for ex287 as tested; the best layer-rank match was only `15/2002`, with zero exact layers and central Johnson-neighborhood average output distance `5.340`.
+- Do not pursue shallow bucket collision/carry formulas for ex287 as tested; single primitives and top-80 two-primitive XOR/AND/OR combinations solved zero output bits, with best bit match only `11040/16384`.
+- Do not pursue direct interval-run relocation/superposition for ex287 as tested; next-combination, interval OR/XOR, modular multiply, reversed-domain multiply, and rotate variants were far from exact. Best row match was only `183/16384`.
+- Do not pursue simple ex289 restriction/projection transfer for ex287 as tested; order-preserving input embeddings with constants and ordered or one-hot-inferred output projections had zero survivors after zero/one-hot/two-hot sample pruning.
+- Do not pursue direct barrel-permutation models for ex287 as tested; fixed rotations, bit-reversal rotations, rotate-by-popcount, and small-control rotates were far from exact. Best row match was only `107/16384`.
+- Do not pursue finite pair-collision algebra or modular affine pair rules for ex287 as tested; two-hot memorization does not extend to full-table exactness.
+- Do not pursue static-feature controlled-swap networks for ex287 with the tested raw/pair/count controls; sampled mismatch stayed near full sample size.
+- Do not pursue simple bucket-count histogram/prefix layout for ex287 as tested; exact count-key structure does not reduce to contiguous/rotated thermometer placement.
+- Do not pursue BRGC/bit-reversed Gray same-popcount layer successor or small affine rank transforms for ex287 as tested.
+- Do not pursue the tested prefix/suffix/Gray input-output coordinate ANF forms for ex287; only one transformed bit becomes low-degree and the remaining terms stay large.
+- Do not pursue simple bucket-count collision relaxation/chip-firing for ex287 as tested; even selector-specific policies are far from exact.
+- Do not pursue exact bucket-key multi-valued MDD emission for ex287 as tested; best graph is still `3198` nodes / width `1919`, with thousands of word terminals.
+- Do not pursue global token-slot maximum matching learned from low-weight behavior for ex287 as tested; it fails on weight<=3 rows.
+- Do not pursue degree<=4 fixed-popcount slice-polynomial RTL for ex287 as tested; the central layer has zero exact output bits.
+- Do not expand the simple mod-4 lane parity repair wrapper to ex287 without a cheaper shared parity implementation; ex286 smoke was exact but much worse.
+- Do not repeat lane-parity feature-span formulas over the tested semantic feature sets for ex287; no lane target was exact up to the tested degrees.
+- Do not pursue adjacent output-pair orientation encoding as a standalone ex287 source; exact but raw BDD node reduction is only about `5%`.
+- Do not pursue component-wise adjacent output-pair orientation encoding for ex287 as tested; it is the same small `5%` node reduction.
+- Do not pursue component pair-count/orientation field split for ex287 as tested; orientation is cheap but pair-count generation remains full-support and dominant.
+- Do not pursue affine/index complement-permutation duality wrappers for ex287 as tested; the best base relation was only `4252/16384`, and the pair-composed exact-sample gate had no hit.
+- Do not pursue bucket moment/residue key re-encoding for ex287 as tested; exactness still needs `6912` keys.
+- Do not pursue affine/quadratic/count-indicator formulas for ex287 adjacent output pair counts as tested; all finite-field systems were inconsistent.
+- Do not pursue tiny min/max/clamp/sum-clip pair-count formulas for ex287 as tested; best match is only `9430/16384`.
+- Do not pursue bucket-key min/max canonical representative selection for ex287 as tested; most outputs are not even members of their exact input class.
+- Do not pursue cumulative capacity/window transport for ex287 adjacent pair counts as tested; best match is only `528/16384`.
 
 ## Sources
 
 - `student/results/unknown_candidates_current_summary.csv`
 - `student/results/unknown_candidates_current_best.csv`
-

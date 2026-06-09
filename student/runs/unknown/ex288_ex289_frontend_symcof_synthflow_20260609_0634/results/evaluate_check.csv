@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex288,ex288_interleave_f10_k4_no_internal_abc,1,2589,36,93204,skip Yosys internal abc pass
+ex288,ex288_interleave_f10_k4_abc_g_aig,1,1910,17,32470,Yosys abc gate set aig
+ex288,ex288_interleave_f10_k4_extra_opt_share,1,1930,18,34740,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex288,ex288_interleave_f10_k4_synth_preset,1,1880,18,33840,Yosys synth preset with flatten
+ex289,ex289_interleave_f00_k4_no_internal_abc,1,2354,38,89452,skip Yosys internal abc pass
+ex289,ex289_interleave_f00_k4_abc_g_aig,1,1745,18,31410,Yosys abc gate set aig
+ex289,ex289_interleave_f00_k4_extra_opt_share,1,1755,19,33345,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex289,ex289_interleave_f00_k4_synth_preset,1,1668,19,31692,Yosys synth preset with flatten

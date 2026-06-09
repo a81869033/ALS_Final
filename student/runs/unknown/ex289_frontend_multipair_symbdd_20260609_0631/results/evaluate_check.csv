@@ -1,0 +1,4 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_symbdd_interleave_f10,1,1815,23,41745,unknown symmetry-canonical shared-BDD seed
+ex289,ex289_unknown_symbdd_interleave_f00,1,1789,22,39358,unknown symmetry-canonical shared-BDD seed
+ex289,ex289_unknown_symbdd_interleave_zero,1,1813,22,39886,unknown symmetry-canonical shared-BDD seed

@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_paircount_mdd_pairs_first,1,6990,21,146790,pair-count multi-valued decision diagram
+ex286,ex286_unknown_paircount_mdd_interleave,1,6942,22,152724,pair-count multi-valued decision diagram
+ex286,ex286_unknown_paircount_mdd_singles_first,1,2339,20,46780,pair-count multi-valued decision diagram
+ex286,ex286_unknown_paircount_mdd_reverse,1,1733,21,36393,pair-count multi-valued decision diagram
+ex287,ex287_unknown_paircount_mdd_pairs_first,1,12257,22,269654,pair-count multi-valued decision diagram
+ex287,ex287_unknown_paircount_mdd_interleave,1,12254,22,269588,pair-count multi-valued decision diagram
+ex287,ex287_unknown_paircount_mdd_singles_first,1,3134,21,65814,pair-count multi-valued decision diagram
+ex287,ex287_unknown_paircount_mdd_reverse,1,2468,21,51828,pair-count multi-valued decision diagram

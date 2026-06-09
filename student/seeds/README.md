@@ -26,6 +26,12 @@ Primary bundles:
 - `integer/ex255_ex279_backend_candidates_20260609_1809/`: non-best integer
   alternatives for `ex255`-`ex279`; exactly four verified alternatives per
   case for backend-start diversity after the best-only bundle.
+- `unknown/ex280_ex299_current/`: best-only unknown bundle for `ex280`-`ex299`;
+  exactly one current best verified Verilog/AIG seed per case.
+- `unknown/ex280_ex299_backend_candidates_20260609_2047/`: non-best unknown
+  alternatives for `ex280`-`ex299`; exactly four verified alternatives per
+  case, selected by low ADP first while avoiding duplicate source structures
+  where possible.
 
 Legacy FP16 bundles:
 

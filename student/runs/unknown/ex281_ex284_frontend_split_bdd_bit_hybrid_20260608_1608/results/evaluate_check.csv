@@ -1,0 +1,5 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex281,ex281_primary_8_9_10_11_12_abc_g_aig,OK,1676,22,36872,1676,22,36872,1,student/runs/unknown/ex281_ex284_frontend_split_bdd_bit_hybrid_20260608_1608/results/official_replay/ex281.aig,official evaluate.py replay on run-local output directory
+ex282,ex282_primary_9_10_11_12_13_synth_preset,OK,1896,22,41712,1896,22,41712,1,student/runs/unknown/ex281_ex284_frontend_split_bdd_bit_hybrid_20260608_1608/results/official_replay/ex282.aig,official evaluate.py replay on run-local output directory
+ex283,ex283_primary_10_11_12_13_14_synth_preset,OK,2361,25,59025,2361,25,59025,1,student/runs/unknown/ex281_ex284_frontend_split_bdd_bit_hybrid_20260608_1608/results/official_replay/ex283.aig,official evaluate.py replay on run-local output directory
+ex284,ex284_primary_11_12_13_15_abc_g_aig,OK,2224,27,60048,2224,27,60048,1,student/runs/unknown/ex281_ex284_frontend_split_bdd_bit_hybrid_20260608_1608/results/official_replay/ex284.aig,official evaluate.py replay on run-local output directory

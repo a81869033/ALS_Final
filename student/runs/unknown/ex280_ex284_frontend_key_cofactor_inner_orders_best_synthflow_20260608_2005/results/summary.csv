@@ -1,0 +1,6 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_prefix_parity_reduce_top6_first_case_endpoint_rev_abc_g_aig,731,25,18275,2415,7.567288,17220,1055,0,abc_g_aig,,Yosys abc gate set aig
+ex281,ex281_prefix_parity_reduce_top6_first_onehot_endpoint_rev_abc_g_aig,889,26,23114,2336,9.894692,20592,2522,0,abc_g_aig,,Yosys abc gate set aig
+ex282,ex282_prefix_parity_reduce_top6_first_case_endpoint_rev_abc_g_aig,971,32,31072,2704,11.491124,29812,1260,0,abc_g_aig,,Yosys abc gate set aig
+ex283,ex283_prefix_parity_reduce_top6_first_onehot_endpoint_rev_abc_g_aig,1110,33,36630,3168,11.562500,35670,960,0,abc_g_aig,,Yosys abc gate set aig
+ex284,ex284_prefix_parity_reduce_top6_first_onehot_endpoint_rev_abc_g_aig,1227,35,42945,4240,10.128538,42945,0,0,abc_g_aig,,Yosys abc gate set aig

@@ -1,0 +1,2 @@
+case,candidate_id,verified_truth,equivalent,area,delay,adp,verilog_path,aig_path,notes
+ex280,ex280_unknown_key_endpoint_fsm_prefix_parity_reduce,1,1,8749,85,743665,student/work/ex280_frontend_key_endpoint_fsm_smoke_20260608_1947/ex280/verilog/ex280_unknown_key_endpoint_fsm_prefix_parity_reduce.v,student/work/ex280_frontend_key_endpoint_fsm_smoke_20260608_1947/ex280/aigs/ex280_unknown_key_endpoint_fsm_prefix_parity_reduce.aig,unknown endpoint-pair FSM Verilog seed

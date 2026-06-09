@@ -1,0 +1,5 @@
+case,best_variant,best_matches,total_rows,best_bit_match,notes
+ex286,identity_rotation,82,8192,0.552321,best row match among fixed/barrel/reversal/popcount-control models was only row-scale
+ex287,identity_rotation,107,16384,0.566703,best bit match came from small-control rotate but row match remained tiny
+ex288,identity_rotation,138,32768,0.543616,best bit match came from small-control rotate but row match remained tiny
+ex289,identity_rotation,162,65536,0.549673,best bit match came from small-control rotate but row match remained tiny

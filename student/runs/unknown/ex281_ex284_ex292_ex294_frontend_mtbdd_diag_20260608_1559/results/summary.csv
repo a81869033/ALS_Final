@@ -1,0 +1,7 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex281,mtbdd_vector_bdd_diagnostic,1,1,0,0,0,0,0,,,,,,,2336,,,,,MTBDD nodes 7289 vs scalar BDD nodes 511; no seed emitted
+ex282,mtbdd_vector_bdd_diagnostic,1,1,0,0,0,0,0,,,,,,,2704,,,,,MTBDD nodes 14490 vs scalar BDD nodes 591; no seed emitted
+ex283,mtbdd_vector_bdd_diagnostic,1,1,0,0,0,0,0,,,,,,,3168,,,,,MTBDD nodes 28788 vs scalar BDD nodes 672; no seed emitted
+ex284,mtbdd_vector_bdd_diagnostic,1,1,0,0,0,0,0,,,,,,,4240,,,,,MTBDD nodes 57156 vs scalar BDD nodes 758; no seed emitted
+ex292,mtbdd_vector_bdd_diagnostic,1,1,0,0,0,0,0,,,,,,,84854,,,,,MTBDD nodes 12257 vs scalar BDD nodes 3807; no seed emitted
+ex294,mtbdd_vector_bdd_diagnostic,1,1,0,0,0,0,0,,,,,,,133365,,,,,MTBDD nodes 42953 vs scalar BDD nodes 6020; no seed emitted

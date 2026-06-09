@@ -1,0 +1,3 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex280,ex280_prefix_parity_reduce_top6_abc_g_aig_d18,731,25,18275,2415,7.567288,17220,1055,Yosys abc gate set aig delay target 18
+ex282,ex282_prefix_parity_reduce_top6_abc_g_aig_d18,995,32,31840,2704,11.775148,31512,328,Yosys abc gate set aig delay target 18

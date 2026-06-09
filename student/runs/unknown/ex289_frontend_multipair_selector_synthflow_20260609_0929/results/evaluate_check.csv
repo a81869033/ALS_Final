@@ -1,0 +1,6 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_interleave_f00_bits_0_1_12_13_case_group_abc_g_aig,1,1395,20,27900,Yosys abc gate set aig
+ex289,ex289_interleave_f00_bits_0_1_12_13_case_group_synth_preset,1,1325,19,25175,Yosys synth preset with flatten
+ex289,ex289_interleave_f00_bits_0_1_12_13_case_group_abc_g_aig_d18,1,1395,20,27900,Yosys abc gate set aig delay target 18
+ex289,ex289_interleave_f00_bits_0_1_12_13_case_group_abc_g_aig_d19,1,1395,20,27900,Yosys abc gate set aig delay target 19
+ex289,ex289_interleave_f00_bits_0_1_12_13_case_group_abc_g_aig_d20,1,1395,20,27900,Yosys abc gate set aig delay target 20

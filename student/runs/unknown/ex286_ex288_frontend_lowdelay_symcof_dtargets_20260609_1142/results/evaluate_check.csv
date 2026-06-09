@@ -1,0 +1,13 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d14,1,1807,13,23491,Yosys abc gate set aig delay target 14
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d15,1,1807,13,23491,Yosys abc gate set aig delay target 15
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d16,1,1807,13,23491,Yosys abc gate set aig delay target 16
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d17,1,1807,13,23491,Yosys abc gate set aig delay target 17
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_abc_g_aig_d14,1,2077,14,29078,Yosys abc gate set aig delay target 14
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_abc_g_aig_d15,1,2077,14,29078,Yosys abc gate set aig delay target 15
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_abc_g_aig_d16,1,2077,14,29078,Yosys abc gate set aig delay target 16
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_abc_g_aig_d17,1,2077,14,29078,Yosys abc gate set aig delay target 17
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d14,1,2281,14,31934,Yosys abc gate set aig delay target 14
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d15,1,2281,14,31934,Yosys abc gate set aig delay target 15
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d16,1,2281,14,31934,Yosys abc gate set aig delay target 16
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig_d17,1,2281,14,31934,Yosys abc gate set aig delay target 17

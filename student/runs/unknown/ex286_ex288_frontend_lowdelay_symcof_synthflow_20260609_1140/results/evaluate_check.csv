@@ -1,0 +1,13 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig,1,1807,13,23491,Yosys abc gate set aig
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_extra_opt_share,1,1811,14,25354,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_late_flatten,1,1811,14,25354,move flatten after techmap
+ex286,ex286_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_synth_preset,1,1739,14,24346,Yosys synth preset with flatten
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_abc_g_aig,1,2077,14,29078,Yosys abc gate set aig
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_extra_opt_share,1,2082,14,29148,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_late_flatten,1,2082,14,29148,move flatten after techmap
+ex287,ex287_unknown_symmetry_cofactor_classonehot_interleave_f00_k6_synth_preset,1,2004,15,30060,Yosys synth preset with flatten
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig,1,2281,14,31934,Yosys abc gate set aig
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_extra_opt_share,1,2281,16,36496,extra opt_reduce/opt_muxtree/wreduce/share before techmap
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_late_flatten,1,2281,16,36496,move flatten after techmap
+ex288,ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_synth_preset,1,2163,15,32445,Yosys synth preset with flatten

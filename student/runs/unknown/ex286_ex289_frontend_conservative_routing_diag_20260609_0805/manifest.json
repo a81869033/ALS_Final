@@ -1,0 +1,13 @@
+{
+  "artifacts": [
+    "results/semantic_diagnostics.csv"
+  ],
+  "run_id": "ex286_ex289_frontend_conservative_routing_diag_20260609_0805",
+  "scope": [
+    "ex286",
+    "ex287",
+    "ex288",
+    "ex289"
+  ],
+  "seed_policy": "student/seeds untouched"
+}

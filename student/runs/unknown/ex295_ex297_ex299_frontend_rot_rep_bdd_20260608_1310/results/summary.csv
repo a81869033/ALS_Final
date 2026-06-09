@@ -1,0 +1,4 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex295,rotation_representative_bdd,1,1,1,1,0,0,1,ex295_unknown_rot_rep_bdd_natural,natural,structural_exact,9792,20,195840,68064,2.877292,0,0,natural:195840,
+ex297,rotation_representative_bdd,1,1,1,1,0,0,1,ex297_unknown_rot_rep_bdd_natural,natural,structural_exact,35431,22,779482,225900,3.450562,0,0,natural:779482,
+ex299,rotation_representative_bdd,1,1,1,1,0,0,1,ex299_unknown_rot_rep_bdd_natural,natural,structural_exact,123601,27,3337227,1013807,3.291777,0,0,natural:3337227,

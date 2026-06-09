@@ -1,0 +1,2 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex287,ex287_interleave_f00_k4_onehot_group_synth_preset,1,1699,18,30582,Yosys synth preset with flatten

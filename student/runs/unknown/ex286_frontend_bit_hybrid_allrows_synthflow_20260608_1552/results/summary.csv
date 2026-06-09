@@ -1,0 +1,2 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex286,unknown_bit_hybrid,6,6,6,6,0,0,0,ex286_primary_7_abc_g_aig,abc_g_aig,synthflow_exact,1864,13,24232,2376,10.198653,0,0,abc_g_aig:24232; abc_g_aig:24349; abc_g_aig:24544; abc_g_aig:25354; abc_g_aig:26124,

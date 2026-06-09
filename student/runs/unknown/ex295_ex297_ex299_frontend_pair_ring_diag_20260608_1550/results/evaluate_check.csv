@@ -1,0 +1,4 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex295,,DIAGNOSTIC_ONLY,,,,,,,,,truth diagnostic only; no AIG emitted
+ex297,,DIAGNOSTIC_ONLY,,,,,,,,,truth diagnostic only; no AIG emitted
+ex299,,DIAGNOSTIC_ONLY,,,,,,,,,truth diagnostic only; no AIG emitted

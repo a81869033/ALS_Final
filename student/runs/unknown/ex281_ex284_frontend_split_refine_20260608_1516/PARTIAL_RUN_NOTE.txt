@@ -1,0 +1,1 @@
+Generator process exited with code 143 after completing ex281, ex282, and two ex283 variants. Results CSVs were reconstructed from per-case manifests, AIGs, and evaluate_aig rechecks. ex284 was not started because split/default source size scaled poorly and completed rows were already far worse than current bests.

@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex289,ex289_unknown_symbdd_interleave_f00,unknown_symmetry_canonical_bdd,interleave_f00,student/work/ex289_frontend_multipair_symbdd_20260609_0631/ex289/verilog/ex289_unknown_symbdd_interleave_f00.v,student/work/ex289_frontend_multipair_symbdd_20260609_0631/ex289/aigs/ex289_unknown_symbdd_interleave_f00.aig,1789,22,39358,"pairs=4:5,6:7,8:9,10:11; order=interleave; invalid_policy=f00; bdd_nodes=1051; hash=f6bdc85470ae",unknown symmetry-canonical shared-BDD seed

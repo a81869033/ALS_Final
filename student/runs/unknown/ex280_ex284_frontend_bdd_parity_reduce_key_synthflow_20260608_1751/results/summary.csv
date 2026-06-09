@@ -1,0 +1,6 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex280,ex280_prefix_parity_reduce_interleave_abc_g_aig,796,29,23084,2415,9.558592,17220,5864,Yosys abc gate set aig
+ex281,ex281_prefix_parity_reduce_interleave_abc_g_aig,932,33,30756,2336,13.166096,25476,5280,Yosys abc gate set aig
+ex282,ex282_prefix_parity_reduce_interleave_abc_g_aig,1088,35,38080,2704,14.082840,31512,6568,Yosys abc gate set aig
+ex283,ex283_prefix_parity_reduce_interleave_abc_g_aig,1266,39,49374,3168,15.585227,38844,10530,Yosys abc gate set aig
+ex284,ex284_prefix_parity_reduce_interleave_synth_preset,1459,38,55442,4240,13.075943,50083,5359,Yosys synth preset with flatten

@@ -1,0 +1,6 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex280,ex280_anf_shared_prefix_parity_abc_g_aig,1514,34,51476,2415,21.315114,17220,34256,Yosys abc gate set aig
+ex281,ex281_anf_shared_prefix_parity_abc_g_aig,1813,36,65268,2336,27.940068,25476,39792,Yosys abc gate set aig
+ex282,ex282_anf_shared_prefix_parity_abc_g_aig,2147,39,83733,2704,30.966346,31512,52221,Yosys abc gate set aig
+ex283,ex283_anf_shared_prefix_parity_abc_g_aig,2382,41,97662,3168,30.827652,38844,58818,Yosys abc gate set aig
+ex284,ex284_anf_shared_prefix_parity_abc_g_aig,2725,43,117175,4240,27.635613,50083,67092,Yosys abc gate set aig

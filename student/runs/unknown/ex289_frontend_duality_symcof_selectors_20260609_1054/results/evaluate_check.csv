@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_duality_symcof_f00_bits_0_1_12_13_14_onehot_group,1,1321,23,30383,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f00_bits_0_1_2_12_13_onehot_group,1,1382,20,27640,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f00_bits_0_1_11_12_13_onehot_group,1,1808,23,41584,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f00_bits_0_1_13_14_onehot_group,1,1347,23,30981,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f10_bits_0_1_12_13_14_onehot_group,1,1355,22,29810,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f10_bits_0_1_2_12_13_onehot_group,1,1365,21,28665,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f10_bits_0_1_11_12_13_onehot_group,1,1967,24,47208,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_f10_bits_0_1_13_14_onehot_group,1,1328,24,31872,unknown duality-wrapped symmetry cofactor seed

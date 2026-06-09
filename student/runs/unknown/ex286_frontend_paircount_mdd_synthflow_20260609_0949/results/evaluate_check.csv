@@ -1,0 +1,3 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_reverse_abc_g_aig,1,1726,20,34520,Yosys abc gate set aig
+ex286,ex286_reverse_synth_preset,1,1651,20,33020,Yosys synth preset with flatten

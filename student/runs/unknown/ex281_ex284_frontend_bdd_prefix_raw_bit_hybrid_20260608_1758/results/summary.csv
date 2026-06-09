@@ -1,0 +1,2 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex281,ex281_unknown_bit_hybrid_primary_4_5_6_7_8_9_10_11_12,1216,23,27968,2336,11.972603,25476,2492,bit-hybrid of two verified exact Verilog sources

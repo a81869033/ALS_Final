@@ -1,0 +1,4 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex295,rot2_equivariant_canonical,1,1,1,1,0,0,1,ex295_unknown_rot2_rot2_canonical_case,rot2_canonical_case,structural_exact,3517,85,298945,68064,4.392116,0,0,rot2_canonical_case:298945,
+ex297,rot2_equivariant_canonical,1,1,1,1,0,0,1,ex297_unknown_rot2_rot2_canonical_case,rot2_canonical_case,structural_exact,10352,112,1159424,225900,5.132466,0,0,rot2_canonical_case:1159424,
+ex299,rot2_equivariant_canonical,1,1,1,1,0,0,1,ex299_unknown_rot2_rot2_canonical_case,rot2_canonical_case,structural_exact,33880,128,4336640,1013807,4.277579,0,0,rot2_canonical_case:4336640,

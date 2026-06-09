@@ -1,0 +1,3 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_symcof_interleave_f00_k4_tree_group,1,1802,23,41446,unknown symmetry cofactor class-onehot Verilog seed
+ex289,ex289_unknown_symcof_interleave_f00_bits_0_1_12_13_tree_group,1,1489,23,34247,unknown symmetry cofactor class-onehot Verilog seed

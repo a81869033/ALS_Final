@@ -1,0 +1,11 @@
+{
+  "artifacts": [
+    "results/selector_node_counts.csv"
+  ],
+  "run_id": "ex287_ex289_frontend_selector01_diag_20260609_0841",
+  "scope": [
+    "ex287",
+    "ex288",
+    "ex289"
+  ]
+}

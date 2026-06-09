@@ -1,0 +1,6 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex280,ex280_unknown_bdd_key_prefix_parity_reduce_interleave,816,30,24480,2415,10.136646,17220,7260,unknown transformed-key shared-BDD Verilog seed
+ex281,ex281_unknown_bdd_key_prefix_parity_reduce_interleave,957,33,31581,2336,13.519264,25476,6105,unknown transformed-key shared-BDD Verilog seed
+ex282,ex282_unknown_bdd_key_prefix_parity_reduce_interleave,1124,35,39340,2704,14.548817,31512,7828,unknown transformed-key shared-BDD Verilog seed
+ex283,ex283_unknown_bdd_key_prefix_parity_reduce_interleave,1311,40,52440,3168,16.553030,38844,13596,unknown transformed-key shared-BDD Verilog seed
+ex284,ex284_unknown_bdd_key_prefix_parity_reduce_interleave,1480,42,62160,4240,14.660377,50083,12077,unknown transformed-key shared-BDD Verilog seed

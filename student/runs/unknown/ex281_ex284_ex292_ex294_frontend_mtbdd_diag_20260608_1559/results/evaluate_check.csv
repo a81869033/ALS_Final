@@ -1,0 +1,7 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex281,,DIAGNOSTIC_ONLY,,,,,,,,,node-count diagnostic only; no AIG emitted
+ex282,,DIAGNOSTIC_ONLY,,,,,,,,,node-count diagnostic only; no AIG emitted
+ex283,,DIAGNOSTIC_ONLY,,,,,,,,,node-count diagnostic only; no AIG emitted
+ex284,,DIAGNOSTIC_ONLY,,,,,,,,,node-count diagnostic only; no AIG emitted
+ex292,,DIAGNOSTIC_ONLY,,,,,,,,,node-count diagnostic only; no AIG emitted
+ex294,,DIAGNOSTIC_ONLY,,,,,,,,,node-count diagnostic only; no AIG emitted

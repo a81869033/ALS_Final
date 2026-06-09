@@ -1,0 +1,7 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex295,ex295_unknown_rot_rep_bdd_interleave,1,11112,19,211128,unknown rotation representative-bit BDD Verilog seed
+ex295,ex295_unknown_rot_rep_bdd_center,1,11054,20,221080,unknown rotation representative-bit BDD Verilog seed
+ex297,ex297_unknown_rot_rep_bdd_interleave,1,42743,24,1025832,unknown rotation representative-bit BDD Verilog seed
+ex297,ex297_unknown_rot_rep_bdd_center,1,40859,24,980616,unknown rotation representative-bit BDD Verilog seed
+ex299,ex299_unknown_rot_rep_bdd_interleave,1,148600,28,4160800,unknown rotation representative-bit BDD Verilog seed
+ex299,ex299_unknown_rot_rep_bdd_center,1,144261,28,4039308,unknown rotation representative-bit BDD Verilog seed

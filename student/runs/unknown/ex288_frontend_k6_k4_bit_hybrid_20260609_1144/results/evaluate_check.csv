@@ -1,0 +1,16 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex288,ex288_unknown_bit_hybrid_primary_0,1,1920,18,34560,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_1,1,1969,18,35442,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_2,1,1976,18,35568,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_3,1,1967,18,35406,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_4,1,1942,18,34956,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_5,1,1994,18,35892,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_6,1,1952,18,35136,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_7,1,1918,18,34524,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_8,1,1932,18,34776,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_9,1,1972,18,35496,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_10,1,1935,18,34830,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_11,1,2013,19,38247,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_12,1,1910,19,36290,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_13,1,1992,18,35856,bit-hybrid of two verified exact Verilog sources
+ex288,ex288_unknown_bit_hybrid_primary_14,1,1957,19,37183,bit-hybrid of two verified exact Verilog sources

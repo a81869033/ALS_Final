@@ -1,0 +1,5 @@
+case,input_width,output_width,encoded_width,components,component_count,truth_rows,unique_outputs,unique_encoded,orientation_conflicts,raw_bdd_nodes,encoded_bdd_nodes,node_delta,node_ratio,first_conflict,notes
+ex286,13,13,16,0:4;1:3:5;2,3,8192,2233,2233,0,837,1417,580,1.692951,,component-wise adjacent output-pair count plus orientation encoding
+ex287,14,14,15,0:1:2:3:4:5:6,1,16384,2609,2609,0,1088,1031,-57,0.947610,,component-wise adjacent output-pair count plus orientation encoding
+ex288,15,15,19,0:4;1:5;2:6;3,4,32768,6734,6734,0,1170,2566,1396,2.193162,,component-wise adjacent output-pair count plus orientation encoding
+ex289,16,16,17,0:1:2:3:4:5:6:7,1,65536,7045,7045,0,1131,1206,75,1.066313,,component-wise adjacent output-pair count plus orientation encoding

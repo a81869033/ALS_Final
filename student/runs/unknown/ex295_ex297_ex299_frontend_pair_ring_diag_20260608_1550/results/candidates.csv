@@ -1,0 +1,14 @@
+case,candidate_id,hypothesis/function_guess,variant,verilog_path,aig_path,verified_truth,synthesized,equivalent,area,delay,adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,classification,items,runtime_sec,notes
+ex295,ex295_pair_ring_radius0,pair_ring_local_rule_diagnostic,radius0,,,0,0,0,,,,68064,,,,diagnostic_only,cell_count=6; cells=0; key_count=4,,not exact local rule; no seed emitted
+ex295,ex295_pair_ring_radius1,pair_ring_local_rule_diagnostic,radius1,,,0,0,0,,,,68064,,,,diagnostic_only,cell_count=6; cells=0:1:5; key_count=16,,not exact local rule; no seed emitted
+ex295,ex295_pair_ring_radius2,pair_ring_local_rule_diagnostic,radius2,,,0,0,0,,,,68064,,,,diagnostic_only,cell_count=6; cells=0:1:2:4:5; key_count=64,,not exact local rule; no seed emitted
+ex295,ex295_pair_ring_radius3,pair_ring_local_rule_diagnostic,radius3,,,1,0,0,,,,68064,,,,diagnostic_only,cell_count=6; cells=0:1:2:3:4:5; key_count=4096,,exact only at full-ring radius; no seed emitted
+ex297,ex297_pair_ring_radius0,pair_ring_local_rule_diagnostic,radius0,,,0,0,0,,,,225900,,,,diagnostic_only,cell_count=7; cells=0; key_count=4,,not exact local rule; no seed emitted
+ex297,ex297_pair_ring_radius1,pair_ring_local_rule_diagnostic,radius1,,,0,0,0,,,,225900,,,,diagnostic_only,cell_count=7; cells=0:1:6; key_count=16,,not exact local rule; no seed emitted
+ex297,ex297_pair_ring_radius2,pair_ring_local_rule_diagnostic,radius2,,,0,0,0,,,,225900,,,,diagnostic_only,cell_count=7; cells=0:1:2:5:6; key_count=64,,not exact local rule; no seed emitted
+ex297,ex297_pair_ring_radius3,pair_ring_local_rule_diagnostic,radius3,,,1,0,0,,,,225900,,,,diagnostic_only,cell_count=7; cells=0:1:2:3:4:5:6; key_count=16384,,exact only at full-ring radius; no seed emitted
+ex299,ex299_pair_ring_radius0,pair_ring_local_rule_diagnostic,radius0,,,0,0,0,,,,1013807,,,,diagnostic_only,cell_count=8; cells=0; key_count=4,,not exact local rule; no seed emitted
+ex299,ex299_pair_ring_radius1,pair_ring_local_rule_diagnostic,radius1,,,0,0,0,,,,1013807,,,,diagnostic_only,cell_count=8; cells=0:1:7; key_count=16,,not exact local rule; no seed emitted
+ex299,ex299_pair_ring_radius2,pair_ring_local_rule_diagnostic,radius2,,,0,0,0,,,,1013807,,,,diagnostic_only,cell_count=8; cells=0:1:2:6:7; key_count=64,,not exact local rule; no seed emitted
+ex299,ex299_pair_ring_radius3,pair_ring_local_rule_diagnostic,radius3,,,0,0,0,,,,1013807,,,,diagnostic_only,cell_count=8; cells=0:1:2:3:5:6:7; key_count=256,,not exact local rule; no seed emitted
+ex299,ex299_pair_ring_radius4,pair_ring_local_rule_diagnostic,radius4,,,1,0,0,,,,1013807,,,,diagnostic_only,cell_count=8; cells=0:1:2:3:4:5:6:7; key_count=65536,,exact only at full-ring radius; no seed emitted

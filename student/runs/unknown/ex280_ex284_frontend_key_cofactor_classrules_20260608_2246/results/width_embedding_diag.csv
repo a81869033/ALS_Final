@@ -1,0 +1,5 @@
+pair,exact_embeddings,best_match,input_insert_pos,input_insert_value,output_remove_pos,inserted_output_bit
+ex280_to_ex281,0,2544,6,0,5,var
+ex281_to_ex282,0,5648,7,0,5,var
+ex282_to_ex283,0,10208,7,0,6,var
+ex283_to_ex284,0,22560,8,0,6,var

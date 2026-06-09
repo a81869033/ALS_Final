@@ -1,0 +1,6 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_prefix_parity_reduce_top4_first_phi_first_synth_preset,865,29,25085,2415,10.387164,17220,7865,0,synth_preset,,Yosys synth preset with flatten
+ex281,ex281_prefix_parity_reduce_top4_first_phi_first_abc_g_aig,1025,34,34850,2336,14.918664,20592,14258,0,abc_g_aig,,Yosys abc gate set aig
+ex282,ex282_prefix_parity_reduce_top4_first_phi_first_abc_g_aig,1206,36,43416,2704,16.056213,31512,11904,0,abc_g_aig,,Yosys abc gate set aig
+ex283,ex283_prefix_parity_reduce_top4_first_phi_first_synth_preset,1363,39,53157,3168,16.779356,36256,16901,0,synth_preset,,Yosys synth preset with flatten
+ex284,ex284_prefix_parity_reduce_top4_first_phi_first_synth_preset,1620,40,64800,4240,15.283019,46908,17892,0,synth_preset,,Yosys synth preset with flatten

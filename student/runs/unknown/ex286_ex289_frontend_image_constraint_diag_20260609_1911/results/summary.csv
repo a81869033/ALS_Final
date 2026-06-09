@@ -1,0 +1,13 @@
+case,degree,output_width,image_size,monomial_count,rank_on_image,constraint_nullity,notes
+ex286,1,13,2233,14,14,14,GF(2) polynomial relations of degree<=target that vanish on output image
+ex286,2,13,2233,92,92,92,GF(2) polynomial relations of degree<=target that vanish on output image
+ex286,3,13,2233,378,374,376,GF(2) polynomial relations of degree<=target that vanish on output image
+ex287,1,14,2609,15,15,15,GF(2) polynomial relations of degree<=target that vanish on output image
+ex287,2,14,2609,106,106,106,GF(2) polynomial relations of degree<=target that vanish on output image
+ex287,3,14,2609,470,449,468,GF(2) polynomial relations of degree<=target that vanish on output image
+ex288,1,15,6734,16,16,16,GF(2) polynomial relations of degree<=target that vanish on output image
+ex288,2,15,6734,121,121,121,GF(2) polynomial relations of degree<=target that vanish on output image
+ex288,3,15,6734,576,573,576,GF(2) polynomial relations of degree<=target that vanish on output image
+ex289,1,16,7045,17,17,17,GF(2) polynomial relations of degree<=target that vanish on output image
+ex289,2,16,7045,137,137,137,GF(2) polynomial relations of degree<=target that vanish on output image
+ex289,3,16,7045,697,669,697,GF(2) polynomial relations of degree<=target that vanish on output image

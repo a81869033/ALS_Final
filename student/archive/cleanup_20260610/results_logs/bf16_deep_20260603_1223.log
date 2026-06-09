@@ -1,0 +1,271 @@
+[bf16-deep] start 2026-06-03 12:23:27 +0800
+[bf16-deep] cases=ex200-ex219
+[bf16-deep] variants=value_case,sign_pair_case,exp_mant_pair_case,sign_exp_mant_case,split_sign_exp_mant_case,magnitude_range_pair,exp_mant_delta_pair,positive_default_exp_mant_case,positive_default_exp_mant_delta,default_expr_exception_case,sign_exp_default_expr_case
+[bf16-deep] timeout=900
+[bf16-deep] work_dir=student/work/reverse_bf16_deep_20260603_1223
+[bf16-deep] results=student/results/bf16_deep_variants_20260603_1223.csv
+[bf16-deep] emitting Verilog variants
+ex200: no verified synthesized BF16 Verilog seed
+ex201: no verified synthesized BF16 Verilog seed
+ex202: no verified synthesized BF16 Verilog seed
+ex203: no verified synthesized BF16 Verilog seed
+ex204: no verified synthesized BF16 Verilog seed
+ex205: no verified synthesized BF16 Verilog seed
+ex206: no verified synthesized BF16 Verilog seed
+ex207: no verified synthesized BF16 Verilog seed
+ex208: no verified synthesized BF16 Verilog seed
+ex209: no verified synthesized BF16 Verilog seed
+ex210: no verified synthesized BF16 Verilog seed
+ex211: no verified synthesized BF16 Verilog seed
+ex212: no verified synthesized BF16 Verilog seed
+ex213: no verified synthesized BF16 Verilog seed
+ex214: no verified synthesized BF16 Verilog seed
+ex215: no verified synthesized BF16 Verilog seed
+ex216: no verified synthesized BF16 Verilog seed
+ex217: no verified synthesized BF16 Verilog seed
+ex218: no verified synthesized BF16 Verilog seed
+ex219: no verified synthesized BF16 Verilog seed
+Results: student/results/bf16_deep_variants_20260603_1223_emit.csv
+Best: student/results/bf16_deep_variants_20260603_1223_emit_best.csv
+Best cases: 0/20
+Emit-only candidates: 220
+[bf16-deep] synthesizing and checking candidates
+ex200: bf16_exp sign_exp_mant_case area=3749 delay=17 adp=63733 verilog=student/work/reverse_bf16_deep_20260603_1223/ex200/verilog/ex200_bf16_exp_sign_exp_mant_case.v
+ex201: bf16_exp2 exp_mant_pair_case area=1599 delay=15 adp=23985 verilog=student/work/reverse_bf16_deep_20260603_1223/ex201/verilog/ex201_bf16_exp2_exp_mant_pair_case.v
+ex202: bf16_exp10 exp_mant_pair_case area=3661 delay=17 adp=62237 verilog=student/work/reverse_bf16_deep_20260603_1223/ex202/verilog/ex202_bf16_exp10_exp_mant_pair_case.v
+ex203: bf16_log sign_exp_mant_case area=4546 delay=18 adp=81828 verilog=student/work/reverse_bf16_deep_20260603_1223/ex203/verilog/ex203_bf16_log_sign_exp_mant_case.v
+ex204: bf16_log2 exp_mant_delta_pair area=1679 delay=18 adp=30222 verilog=student/work/reverse_bf16_deep_20260603_1223/ex204/verilog/ex204_bf16_log2_exp_mant_delta_pair.v
+ex205: bf16_log10 sign_exp_mant_case area=4631 delay=18 adp=83358 verilog=student/work/reverse_bf16_deep_20260603_1223/ex205/verilog/ex205_bf16_log10_sign_exp_mant_case.v
+ex206: bf16_sin split_sign_exp_mant_case area=30492 delay=21 adp=640332 verilog=student/work/reverse_bf16_deep_20260603_1223/ex206/verilog/ex206_bf16_sin_split_sign_exp_mant_case.v
+ex207: bf16_tan exp_mant_pair_case area=35257 delay=22 adp=775654 verilog=student/work/reverse_bf16_deep_20260603_1223/ex207/verilog/ex207_bf16_tan_exp_mant_pair_case.v
+ex208: bf16_sinh split_sign_exp_mant_case area=2208 delay=15 adp=33120 verilog=student/work/reverse_bf16_deep_20260603_1223/ex208/verilog/ex208_bf16_sinh_split_sign_exp_mant_case.v
+ex209: bf16_tanh sign_exp_default_expr_case area=765 delay=13 adp=9945 verilog=student/work/reverse_bf16_deep_20260603_1223/ex209/verilog/ex209_bf16_tanh_sign_exp_default_expr_case.v
+ex210: bf16_sigmoid exp_mant_pair_case area=2307 delay=17 adp=39219 verilog=student/work/reverse_bf16_deep_20260603_1223/ex210/verilog/ex210_bf16_sigmoid_exp_mant_pair_case.v
+ex211: bf16_reciprocal value_case area=280 delay=11 adp=3080 verilog=student/work/reverse_bf16_deep_20260603_1223/ex211/verilog/ex211_bf16_reciprocal_value_case.v
+ex212: bf16_square exp_mant_delta_pair area=318 delay=11 adp=3498 verilog=student/work/reverse_bf16_deep_20260603_1223/ex212/verilog/ex212_bf16_square_exp_mant_delta_pair.v
+ex213: bf16_sqrt value_case area=343 delay=13 adp=4459 verilog=student/work/reverse_bf16_deep_20260603_1223/ex213/verilog/ex213_bf16_sqrt_value_case.v
+ex214: bf16_reciprocal_square value_case area=318 delay=12 adp=3816 verilog=student/work/reverse_bf16_deep_20260603_1223/ex214/verilog/ex214_bf16_reciprocal_square_value_case.v
+ex215: bf16_reciprocal_sqrt sign_pair_case area=385 delay=13 adp=5005 verilog=student/work/reverse_bf16_deep_20260603_1223/ex215/verilog/ex215_bf16_reciprocal_sqrt_sign_pair_case.v
+ex216: bf16_cube sign_pair_case area=443 delay=15 adp=6645 verilog=student/work/reverse_bf16_deep_20260603_1223/ex216/verilog/ex216_bf16_cube_sign_pair_case.v
+ex217: bf16_cbrt positive_default_exp_mant_delta area=679 delay=16 adp=10864 verilog=student/work/reverse_bf16_deep_20260603_1223/ex217/verilog/ex217_bf16_cbrt_positive_default_exp_mant_delta.v
+ex218: bf16_reciprocal_cube value_case area=463 delay=15 adp=6945 verilog=student/work/reverse_bf16_deep_20260603_1223/ex218/verilog/ex218_bf16_reciprocal_cube_value_case.v
+ex219: bf16_reciprocal_cbrt exp_mant_delta_pair area=663 delay=17 adp=11271 verilog=student/work/reverse_bf16_deep_20260603_1223/ex219/verilog/ex219_bf16_reciprocal_cbrt_exp_mant_delta_pair.v
+Results: student/results/bf16_deep_variants_20260603_1223.csv
+Best: student/results/bf16_deep_variants_20260603_1223_best.csv
+Best cases: 20/20
+[bf16-deep] collecting summary from manifests
+rows=220
+best_cases=20/20
+best_total_adp=1899216
+results=student/results/bf16_deep_variants_20260603_1223.csv
+best=student/results/bf16_deep_variants_20260603_1223_best.csv
+summary=student/results/bf16_deep_variants_20260603_1223_summary.csv
+[bf16-deep] re-running official evaluate.py for equivalent candidates
+1/200 OK ex200 default_expr_exception_case eval_adp=75460 expected=75460
+2/200 OK ex200 exp_mant_delta_pair eval_adp=75260 expected=75260
+3/200 OK ex200 exp_mant_pair_case eval_adp=66798 expected=66798
+4/200 OK ex200 positive_default_exp_mant_case eval_adp=73800 expected=73800
+5/200 OK ex200 positive_default_exp_mant_delta eval_adp=78519 expected=78519
+6/200 OK ex200 sign_exp_default_expr_case eval_adp=69048 expected=69048
+7/200 OK ex200 sign_exp_mant_case eval_adp=63733 expected=63733
+8/200 OK ex200 sign_pair_case eval_adp=81598 expected=81598
+9/200 OK ex200 split_sign_exp_mant_case eval_adp=64719 expected=64719
+10/200 OK ex200 value_case eval_adp=75460 expected=75460
+11/200 OK ex201 default_expr_exception_case eval_adp=31996 expected=31996
+12/200 OK ex201 exp_mant_delta_pair eval_adp=31540 expected=31540
+13/200 OK ex201 exp_mant_pair_case eval_adp=23985 expected=23985
+14/200 OK ex201 positive_default_exp_mant_case eval_adp=28746 expected=28746
+15/200 OK ex201 positive_default_exp_mant_delta eval_adp=29124 expected=29124
+16/200 OK ex201 sign_exp_default_expr_case eval_adp=27520 expected=27520
+17/200 OK ex201 sign_exp_mant_case eval_adp=25395 expected=25395
+18/200 OK ex201 sign_pair_case eval_adp=31825 expected=31825
+19/200 OK ex201 split_sign_exp_mant_case eval_adp=25845 expected=25845
+20/200 OK ex201 value_case eval_adp=31996 expected=31996
+21/200 OK ex202 default_expr_exception_case eval_adp=73820 expected=73820
+22/200 OK ex202 exp_mant_delta_pair eval_adp=75800 expected=75800
+23/200 OK ex202 exp_mant_pair_case eval_adp=62237 expected=62237
+24/200 OK ex202 positive_default_exp_mant_case eval_adp=66006 expected=66006
+25/200 OK ex202 positive_default_exp_mant_delta eval_adp=90768 expected=90768
+26/200 OK ex202 sign_exp_default_expr_case eval_adp=62985 expected=62985
+27/200 OK ex202 sign_exp_mant_case eval_adp=63121 expected=63121
+28/200 OK ex202 sign_pair_case eval_adp=74840 expected=74840
+29/200 OK ex202 split_sign_exp_mant_case eval_adp=62951 expected=62951
+30/200 OK ex202 value_case eval_adp=73820 expected=73820
+31/200 OK ex203 default_expr_exception_case eval_adp=103680 expected=103680
+32/200 OK ex203 exp_mant_delta_pair eval_adp=93177 expected=93177
+33/200 OK ex203 exp_mant_pair_case eval_adp=92988 expected=92988
+34/200 OK ex203 positive_default_exp_mant_case eval_adp=88640 expected=88640
+35/200 OK ex203 positive_default_exp_mant_delta eval_adp=92694 expected=92694
+36/200 OK ex203 sign_exp_default_expr_case eval_adp=85860 expected=85860
+37/200 OK ex203 sign_exp_mant_case eval_adp=81828 expected=81828
+38/200 OK ex203 sign_pair_case eval_adp=103488 expected=103488
+39/200 OK ex203 split_sign_exp_mant_case eval_adp=84132 expected=84132
+40/200 OK ex203 value_case eval_adp=103680 expected=103680
+41/200 OK ex204 default_expr_exception_case eval_adp=38390 expected=38390
+42/200 OK ex204 exp_mant_delta_pair eval_adp=30222 expected=30222
+43/200 OK ex204 exp_mant_pair_case eval_adp=37350 expected=37350
+44/200 OK ex204 positive_default_exp_mant_case eval_adp=33040 expected=33040
+45/200 OK ex204 positive_default_exp_mant_delta eval_adp=31844 expected=31844
+46/200 OK ex204 sign_exp_default_expr_case eval_adp=42687 expected=42687
+47/200 OK ex204 sign_exp_mant_case eval_adp=38590 expected=38590
+48/200 OK ex204 sign_pair_case eval_adp=36603 expected=36603
+49/200 OK ex204 split_sign_exp_mant_case eval_adp=35734 expected=35734
+50/200 OK ex204 value_case eval_adp=38390 expected=38390
+51/200 OK ex205 default_expr_exception_case eval_adp=100740 expected=100740
+52/200 OK ex205 exp_mant_delta_pair eval_adp=91959 expected=91959
+53/200 OK ex205 exp_mant_pair_case eval_adp=83885 expected=83885
+54/200 OK ex205 positive_default_exp_mant_case eval_adp=84816 expected=84816
+55/200 OK ex205 positive_default_exp_mant_delta eval_adp=91749 expected=91749
+56/200 OK ex205 sign_exp_default_expr_case eval_adp=91409 expected=91409
+57/200 OK ex205 sign_exp_mant_case eval_adp=83358 expected=83358
+58/200 OK ex205 sign_pair_case eval_adp=96338 expected=96338
+59/200 OK ex205 split_sign_exp_mant_case eval_adp=83467 expected=83467
+60/200 OK ex205 value_case eval_adp=100740 expected=100740
+61/200 OK ex206 default_expr_exception_case eval_adp=1626820 expected=1626820
+62/200 OK ex206 exp_mant_delta_pair eval_adp=714196 expected=714196
+63/200 OK ex206 exp_mant_pair_case eval_adp=680394 expected=680394
+64/200 OK ex206 positive_default_exp_mant_case eval_adp=706376 expected=706376
+65/200 OK ex206 positive_default_exp_mant_delta eval_adp=742512 expected=742512
+66/200 OK ex206 sign_exp_default_expr_case eval_adp=714693 expected=714693
+67/200 OK ex206 sign_exp_mant_case eval_adp=714231 expected=714231
+68/200 OK ex206 sign_pair_case eval_adp=807456 expected=807456
+69/200 OK ex206 split_sign_exp_mant_case eval_adp=640332 expected=640332
+70/200 OK ex206 value_case eval_adp=806104 expected=806104
+71/200 OK ex207 default_expr_exception_case eval_adp=1872048 expected=1872048
+72/200 OK ex207 exp_mant_delta_pair eval_adp=855696 expected=855696
+73/200 OK ex207 exp_mant_pair_case eval_adp=775654 expected=775654
+74/200 OK ex207 positive_default_exp_mant_case eval_adp=780802 expected=780802
+75/200 OK ex207 positive_default_exp_mant_delta eval_adp=854808 expected=854808
+76/200 OK ex207 sign_exp_default_expr_case eval_adp=854876 expected=854876
+77/200 OK ex207 sign_exp_mant_case eval_adp=852038 expected=852038
+78/200 OK ex207 sign_pair_case eval_adp=964062 expected=964062
+79/200 OK ex207 split_sign_exp_mant_case eval_adp=827379 expected=827379
+80/200 OK ex207 value_case eval_adp=958230 expected=958230
+81/200 OK ex208 default_expr_exception_case eval_adp=169312 expected=169312
+82/200 OK ex208 exp_mant_delta_pair eval_adp=39348 expected=39348
+83/200 OK ex208 exp_mant_pair_case eval_adp=35968 expected=35968
+84/200 OK ex208 positive_default_exp_mant_case eval_adp=36144 expected=36144
+85/200 OK ex208 positive_default_exp_mant_delta eval_adp=39690 expected=39690
+86/200 OK ex208 sign_exp_default_expr_case eval_adp=40596 expected=40596
+87/200 OK ex208 sign_exp_mant_case eval_adp=39856 expected=39856
+88/200 OK ex208 sign_pair_case eval_adp=42294 expected=42294
+89/200 OK ex208 split_sign_exp_mant_case eval_adp=33120 expected=33120
+90/200 OK ex208 value_case eval_adp=40392 expected=40392
+91/200 OK ex209 default_expr_exception_case eval_adp=60786 expected=60786
+92/200 OK ex209 exp_mant_delta_pair eval_adp=11952 expected=11952
+93/200 OK ex209 exp_mant_pair_case eval_adp=11578 expected=11578
+94/200 OK ex209 positive_default_exp_mant_case eval_adp=10738 expected=10738
+95/200 OK ex209 positive_default_exp_mant_delta eval_adp=12852 expected=12852
+96/200 OK ex209 sign_exp_default_expr_case eval_adp=9945 expected=9945
+97/200 OK ex209 sign_exp_mant_case eval_adp=20576 expected=20576
+98/200 OK ex209 sign_pair_case eval_adp=13806 expected=13806
+99/200 OK ex209 split_sign_exp_mant_case eval_adp=11816 expected=11816
+100/200 OK ex209 value_case eval_adp=13770 expected=13770
+101/200 OK ex210 default_expr_exception_case eval_adp=49896 expected=49896
+102/200 OK ex210 exp_mant_delta_pair eval_adp=47520 expected=47520
+103/200 OK ex210 exp_mant_pair_case eval_adp=39219 expected=39219
+104/200 OK ex210 positive_default_exp_mant_case eval_adp=41472 expected=41472
+105/200 OK ex210 positive_default_exp_mant_delta eval_adp=41418 expected=41418
+106/200 OK ex210 sign_exp_default_expr_case eval_adp=42874 expected=42874
+107/200 OK ex210 sign_exp_mant_case eval_adp=39882 expected=39882
+108/200 OK ex210 sign_pair_case eval_adp=47660 expected=47660
+109/200 OK ex210 split_sign_exp_mant_case eval_adp=40375 expected=40375
+110/200 OK ex210 value_case eval_adp=49896 expected=49896
+111/200 OK ex211 default_expr_exception_case eval_adp=947518 expected=947518
+112/200 OK ex211 exp_mant_delta_pair eval_adp=3498 expected=3498
+113/200 OK ex211 exp_mant_pair_case eval_adp=9786 expected=9786
+114/200 OK ex211 positive_default_exp_mant_case eval_adp=10452 expected=10452
+115/200 OK ex211 positive_default_exp_mant_delta eval_adp=4056 expected=4056
+116/200 OK ex211 sign_exp_default_expr_case eval_adp=40528 expected=40528
+117/200 OK ex211 sign_exp_mant_case eval_adp=40032 expected=40032
+118/200 OK ex211 sign_pair_case eval_adp=3168 expected=3168
+119/200 OK ex211 split_sign_exp_mant_case eval_adp=5712 expected=5712
+120/200 OK ex211 value_case eval_adp=3080 expected=3080
+121/200 OK ex212 default_expr_exception_case eval_adp=3926 expected=3926
+122/200 OK ex212 exp_mant_delta_pair eval_adp=3498 expected=3498
+123/200 OK ex212 exp_mant_pair_case eval_adp=9338 expected=9338
+124/200 OK ex212 positive_default_exp_mant_case eval_adp=6877 expected=6877
+125/200 OK ex212 positive_default_exp_mant_delta eval_adp=3744 expected=3744
+126/200 OK ex212 sign_exp_default_expr_case eval_adp=12064 expected=12064
+127/200 OK ex212 sign_exp_mant_case eval_adp=9690 expected=9690
+128/200 OK ex212 sign_pair_case eval_adp=3720 expected=3720
+129/200 OK ex212 split_sign_exp_mant_case eval_adp=7756 expected=7756
+130/200 OK ex212 value_case eval_adp=3926 expected=3926
+131/200 OK ex213 default_expr_exception_case eval_adp=4459 expected=4459
+132/200 OK ex213 exp_mant_delta_pair eval_adp=4498 expected=4498
+133/200 OK ex213 exp_mant_pair_case eval_adp=11018 expected=11018
+134/200 OK ex213 positive_default_exp_mant_case eval_adp=10906 expected=10906
+135/200 OK ex213 positive_default_exp_mant_delta eval_adp=4537 expected=4537
+136/200 OK ex213 sign_exp_default_expr_case eval_adp=10575 expected=10575
+137/200 OK ex213 sign_exp_mant_case eval_adp=12152 expected=12152
+138/200 OK ex213 sign_pair_case eval_adp=4900 expected=4900
+139/200 OK ex213 split_sign_exp_mant_case eval_adp=9674 expected=9674
+140/200 OK ex213 value_case eval_adp=4459 expected=4459
+141/200 OK ex214 default_expr_exception_case eval_adp=3816 expected=3816
+142/200 OK ex214 exp_mant_delta_pair eval_adp=4428 expected=4428
+143/200 OK ex214 exp_mant_pair_case eval_adp=8008 expected=8008
+144/200 OK ex214 positive_default_exp_mant_case eval_adp=8554 expected=8554
+145/200 OK ex214 positive_default_exp_mant_delta eval_adp=4560 expected=4560
+146/200 OK ex214 sign_exp_default_expr_case eval_adp=11578 expected=11578
+147/200 OK ex214 sign_exp_mant_case eval_adp=8162 expected=8162
+148/200 OK ex214 sign_pair_case eval_adp=4069 expected=4069
+149/200 OK ex214 split_sign_exp_mant_case eval_adp=8307 expected=8307
+150/200 OK ex214 value_case eval_adp=3816 expected=3816
+151/200 OK ex215 default_expr_exception_case eval_adp=5418 expected=5418
+152/200 OK ex215 exp_mant_delta_pair eval_adp=5434 expected=5434
+153/200 OK ex215 exp_mant_pair_case eval_adp=15855 expected=15855
+154/200 OK ex215 positive_default_exp_mant_case eval_adp=14224 expected=14224
+155/200 OK ex215 positive_default_exp_mant_delta eval_adp=6006 expected=6006
+156/200 OK ex215 sign_exp_default_expr_case eval_adp=21437 expected=21437
+157/200 OK ex215 sign_exp_mant_case eval_adp=16065 expected=16065
+158/200 OK ex215 sign_pair_case eval_adp=5005 expected=5005
+159/200 OK ex215 split_sign_exp_mant_case eval_adp=12152 expected=12152
+160/200 OK ex215 value_case eval_adp=5418 expected=5418
+161/200 OK ex216 default_expr_exception_case eval_adp=648027 expected=648027
+162/200 OK ex216 exp_mant_delta_pair eval_adp=6972 expected=6972
+163/200 OK ex216 exp_mant_pair_case eval_adp=10153 expected=10153
+164/200 OK ex216 positive_default_exp_mant_case eval_adp=10752 expected=10752
+165/200 OK ex216 positive_default_exp_mant_delta eval_adp=7410 expected=7410
+166/200 OK ex216 sign_exp_default_expr_case eval_adp=20528 expected=20528
+167/200 OK ex216 sign_exp_mant_case eval_adp=20505 expected=20505
+168/200 OK ex216 sign_pair_case eval_adp=6645 expected=6645
+169/200 OK ex216 split_sign_exp_mant_case eval_adp=10892 expected=10892
+170/200 OK ex216 value_case eval_adp=6930 expected=6930
+171/200 OK ex217 default_expr_exception_case eval_adp=402025 expected=402025
+172/200 OK ex217 exp_mant_delta_pair eval_adp=10880 expected=10880
+173/200 OK ex217 exp_mant_pair_case eval_adp=13986 expected=13986
+174/200 OK ex217 positive_default_exp_mant_case eval_adp=12628 expected=12628
+175/200 OK ex217 positive_default_exp_mant_delta eval_adp=10864 expected=10864
+176/200 OK ex217 sign_exp_default_expr_case eval_adp=37632 expected=37632
+177/200 OK ex217 sign_exp_mant_case eval_adp=26800 expected=26800
+178/200 OK ex217 sign_pair_case eval_adp=28674 expected=28674
+179/200 OK ex217 split_sign_exp_mant_case eval_adp=13830 expected=13830
+180/200 OK ex217 value_case eval_adp=28836 expected=28836
+181/200 OK ex218 default_expr_exception_case eval_adp=468144 expected=468144
+182/200 OK ex218 exp_mant_delta_pair eval_adp=8624 expected=8624
+183/200 OK ex218 exp_mant_pair_case eval_adp=12450 expected=12450
+184/200 OK ex218 positive_default_exp_mant_case eval_adp=10465 expected=10465
+185/200 OK ex218 positive_default_exp_mant_delta eval_adp=8130 expected=8130
+186/200 OK ex218 sign_exp_default_expr_case eval_adp=24038 expected=24038
+187/200 OK ex218 sign_exp_mant_case eval_adp=20925 expected=20925
+188/200 OK ex218 sign_pair_case eval_adp=7470 expected=7470
+189/200 OK ex218 split_sign_exp_mant_case eval_adp=12360 expected=12360
+190/200 OK ex218 value_case eval_adp=6945 expected=6945
+191/200 OK ex219 default_expr_exception_case eval_adp=488484 expected=488484
+192/200 OK ex219 exp_mant_delta_pair eval_adp=11271 expected=11271
+193/200 OK ex219 exp_mant_pair_case eval_adp=17504 expected=17504
+194/200 OK ex219 positive_default_exp_mant_case eval_adp=15120 expected=15120
+195/200 OK ex219 positive_default_exp_mant_delta eval_adp=11543 expected=11543
+196/200 OK ex219 sign_exp_default_expr_case eval_adp=37188 expected=37188
+197/200 OK ex219 sign_exp_mant_case eval_adp=34697 expected=34697
+198/200 OK ex219 sign_pair_case eval_adp=26962 expected=26962
+199/200 OK ex219 split_sign_exp_mant_case eval_adp=13846 expected=13846
+200/200 OK ex219 value_case eval_adp=28728 expected=28728
+best_copied=20 best_dir=student/work/best/bf16_deep_20260603_1223
+official_eval_ok=200/200 csv=student/results/bf16_deep_variants_20260603_1223_eval_check.csv
+[bf16-deep] done 2026-06-03 15:59:34 +0800
+[bf16-deep] results=student/results/bf16_deep_variants_20260603_1223.csv
+[bf16-deep] best=student/results/bf16_deep_variants_20260603_1223_best.csv
+[bf16-deep] summary=student/results/bf16_deep_variants_20260603_1223_summary.csv
+[bf16-deep] eval_check=student/results/bf16_deep_variants_20260603_1223_eval_check.csv
+[bf16-deep] best_dir=student/work/best/bf16_deep_20260603_1223

@@ -1,0 +1,73 @@
+case,start,depth,score,row_mismatches,gate,notes
+ex286,identity,0,47686,8110,,controls=220; exact_pairs=4-5:6-7
+ex286,identity,1,45520,8090,not(in0):swap8_9:delta-2166,static-feature controlled swap
+ex286,identity,2,43428,8046,in9:swap0_1:delta-2092,static-feature controlled swap
+ex286,identity,3,42394,8052,not(cnt11_12_ge2):swap2_8:delta-1034,static-feature controlled swap
+ex286,identity,4,41500,8045,cnt0_2_ge2:swap0_10:delta-894,static-feature controlled swap
+ex286,identity,5,40780,8047,not(in11):swap3_5:delta-720,static-feature controlled swap
+ex286,identity,6,40122,8031,cnt11_12_eq1:swap3_9:delta-658,static-feature controlled swap
+ex286,identity,7,39578,8033,not(in10):swap1_7:delta-544,static-feature controlled swap
+ex286,identity,8,39050,8025,in2:swap4_12:delta-528,static-feature controlled swap
+ex286,pair_canonical,0,47770,8100,,controls=220; exact_pairs=4-5:6-7
+ex286,pair_canonical,1,45604,8086,not(in0):swap8_9:delta-2166,static-feature controlled swap
+ex286,pair_canonical,2,43512,8032,in9:swap0_1:delta-2092,static-feature controlled swap
+ex286,pair_canonical,3,42478,8045,not(cnt11_12_ge2):swap2_8:delta-1034,static-feature controlled swap
+ex286,pair_canonical,4,41584,8048,cnt0_2_ge2:swap0_10:delta-894,static-feature controlled swap
+ex286,pair_canonical,5,40736,8046,not(in11):swap3_5:delta-848,static-feature controlled swap
+ex286,pair_canonical,6,40064,8046,not(in10):swap1_7:delta-672,static-feature controlled swap
+ex286,pair_canonical,7,39404,8021,cnt11_12_eq1:swap3_9:delta-660,static-feature controlled swap
+ex286,pair_canonical,8,38764,7987,in2:swap4_12:delta-640,static-feature controlled swap
+ex287,identity,0,105114,16277,,controls=246; exact_pairs=4-5:6-7:8-9
+ex287,identity,1,99994,16230,in0:swap10_11:delta-5120,static-feature controlled swap
+ex287,identity,2,95060,16165,in10:swap0_1:delta-4934,static-feature controlled swap
+ex287,identity,3,93516,16186,in2:swap8_12:delta-1544,static-feature controlled swap
+ex287,identity,4,92120,16196,in3:swap5_13:delta-1396,static-feature controlled swap
+ex287,identity,5,90776,16195,not(in12):swap3_6:delta-1344,static-feature controlled swap
+ex287,identity,6,89432,16192,not(in13):swap2_10:delta-1344,static-feature controlled swap
+ex287,identity,7,88188,16194,not(in11):swap0_2:delta-1244,static-feature controlled swap
+ex287,identity,8,87088,16196,not(cnt12_13_ge2):swap3_9:delta-1100,static-feature controlled swap
+ex287,pair_canonical,0,105138,16304,,controls=246; exact_pairs=4-5:6-7:8-9
+ex287,pair_canonical,1,100018,16187,in0:swap10_11:delta-5120,static-feature controlled swap
+ex287,pair_canonical,2,95084,16073,in10:swap0_1:delta-4934,static-feature controlled swap
+ex287,pair_canonical,3,93448,16096,in2:swap8_12:delta-1636,static-feature controlled swap
+ex287,pair_canonical,4,91880,16112,in3:swap4_13:delta-1568,static-feature controlled swap
+ex287,pair_canonical,5,90536,16105,not(in12):swap3_6:delta-1344,static-feature controlled swap
+ex287,pair_canonical,6,89192,16075,not(in13):swap2_10:delta-1344,static-feature controlled swap
+ex287,pair_canonical,7,87948,16072,not(in11):swap0_2:delta-1244,static-feature controlled swap
+ex287,pair_canonical,8,86844,16089,not(in11):swap1_7:delta-1104,static-feature controlled swap
+ex288,identity,0,227098,32630,,controls=260; exact_pairs=4-5:6-7:8-9
+ex288,identity,1,217784,32586,not(in0):swap10_11:delta-9314,static-feature controlled swap
+ex288,identity,2,209070,32508,in11:swap0_1:delta-8714,static-feature controlled swap
+ex288,identity,3,205520,32510,not(in1):swap12_14:delta-3550,static-feature controlled swap
+ex288,identity,4,202832,32500,not(in13):swap3_7:delta-2688,static-feature controlled swap
+ex288,identity,5,200336,32513,in2:swap9_13:delta-2496,static-feature controlled swap
+ex288,identity,6,197872,32527,cnt13_14_eq1:swap3_11:delta-2464,static-feature controlled swap
+ex288,identity,7,195496,32502,not(in14):swap2_14:delta-2376,static-feature controlled swap
+ex288,identity,8,193268,32502,not(in12):swap0_2:delta-2228,static-feature controlled swap
+ex288,pair_canonical,0,227252,32568,,controls=260; exact_pairs=4-5:6-7:8-9
+ex288,pair_canonical,1,217938,32513,not(in0):swap10_11:delta-9314,static-feature controlled swap
+ex288,pair_canonical,2,209224,32355,in11:swap0_1:delta-8714,static-feature controlled swap
+ex288,pair_canonical,3,205674,32344,not(in1):swap12_14:delta-3550,static-feature controlled swap
+ex288,pair_canonical,4,202858,32298,not(in12):swap1_7:delta-2816,static-feature controlled swap
+ex288,pair_canonical,5,200068,32331,not(in14):swap3_8:delta-2790,static-feature controlled swap
+ex288,pair_canonical,6,197572,32407,in2:swap9_13:delta-2496,static-feature controlled swap
+ex288,pair_canonical,7,195196,32405,not(in14):swap2_14:delta-2376,static-feature controlled swap
+ex288,pair_canonical,8,192968,32397,not(in12):swap0_2:delta-2228,static-feature controlled swap
+ex289,identity,0,491776,65374,,controls=286; exact_pairs=4-5:6-7:8-9:10-11
+ex289,identity,1,473074,65309,in0:swap12_13:delta-18702,static-feature controlled swap
+ex289,identity,2,454432,65204,in12:swap0_1:delta-18642,static-feature controlled swap
+ex289,identity,3,447912,65222,not(in15):swap3_13:delta-6520,static-feature controlled swap
+ex289,identity,4,442848,65231,not(in13):swap1_3:delta-5064,static-feature controlled swap
+ex289,identity,5,437964,65285,in2:swap8_14:delta-4884,static-feature controlled swap
+ex289,identity,6,433388,65337,in3:swap4_15:delta-4576,static-feature controlled swap
+ex289,identity,7,428996,65363,not(in14):swap2_5:delta-4392,static-feature controlled swap
+ex289,identity,8,425836,65396,in14:swap11_13:delta-3160,static-feature controlled swap
+ex289,pair_canonical,0,491200,65428,,controls=286; exact_pairs=4-5:6-7:8-9:10-11
+ex289,pair_canonical,1,472498,65142,in0:swap12_13:delta-18702,static-feature controlled swap
+ex289,pair_canonical,2,453856,64851,in12:swap0_1:delta-18642,static-feature controlled swap
+ex289,pair_canonical,3,447336,64860,not(in15):swap3_13:delta-6520,static-feature controlled swap
+ex289,pair_canonical,4,442272,64858,not(in13):swap1_3:delta-5064,static-feature controlled swap
+ex289,pair_canonical,5,437376,65127,in2:swap9_14:delta-4896,static-feature controlled swap
+ex289,pair_canonical,6,432546,65244,in3:swap4_15:delta-4830,static-feature controlled swap
+ex289,pair_canonical,7,428170,65292,not(in14):swap2_6:delta-4376,static-feature controlled swap
+ex289,pair_canonical,8,424834,65336,in14:swap11_13:delta-3336,static-feature controlled swap

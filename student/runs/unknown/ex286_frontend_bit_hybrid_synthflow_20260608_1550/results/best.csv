@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis/function_guess,variant,verilog_path,aig_path,verified_truth,equivalent,area,delay,adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,classification,notes
+ex286,ex286_primary_7_abc_g_aig,unknown_bit_hybrid,abc_g_aig,student/work/ex286_frontend_bit_hybrid_20260608_1548/ex286/verilog/ex286_unknown_bit_hybrid_primary_7.v,student/work/ex286_frontend_bit_hybrid_synthflow_20260608_1550/ex286/aigs/ex286_primary_7_abc_g_aig.aig,1,1,1864,13,24232,2376,10.198653,0,0,synthflow_exact,Yosys abc gate set aig

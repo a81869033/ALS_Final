@@ -1,0 +1,5 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_duality_symcof_split2_f00_bits_0_1_12_13_onehot_group_xor,1,1097,21,23037,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_split2_f00_bits_0_1_12_13_case_group_xor,1,1116,21,23436,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor,1,1101,20,22020,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_case_group_xor,1,1118,20,22360,unknown duality-wrapped symmetry cofactor seed

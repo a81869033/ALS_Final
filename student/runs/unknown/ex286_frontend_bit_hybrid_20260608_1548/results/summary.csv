@@ -1,0 +1,2 @@
+case,hypothesis/function_guess,candidate_count,verified_truth_count,synthesized_count,equivalent_count,semantic_exact_count,semantic_hybrid_count,structural_exact_count,best_candidate_id,best_variant,best_classification,best_area,best_delay,best_adp,reference_adp,adp_ratio_to_reference,within_1p5_reference,beats_reference,top5,notes
+ex286,unknown_bit_hybrid,6,6,6,6,0,0,6,ex286_unknown_bit_hybrid_primary_7,primary_7,structural_exact,1867,14,26138,2376,11.000842,0,0,primary_7:26138; primary_6:26292; primary_5:26544; primary_5_6_7:27390; primary_5_6:28065,

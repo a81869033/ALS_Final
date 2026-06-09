@@ -1,0 +1,17 @@
+case,rank,input_order,output_order,shift,radius,ring,include_popcount,sample_exact_bits,sample_conflicts,full_exact_bits,full_conflicts,max_keys,notes
+ex286,1,reverse,revslot_revbit,8,4,1,1,0,733,0,27635,2560,sample_top=100; sample_size=559
+ex286,2,natural,slot_bit,5,4,1,1,0,733,0,27635,2560,sample_top=100; sample_size=559
+ex286,3,reverse,slot_revbit,2,4,1,1,0,751,0,28090,2560,sample_top=100; sample_size=559
+ex286,4,natural,revslot_bit,11,4,1,1,0,751,0,28090,2560,sample_top=100; sample_size=559
+ex286,5,reverse,natural,3,4,1,1,0,756,0,28593,2560,sample_top=100; sample_size=559
+ex286,6,natural,reverse,10,4,1,1,0,756,0,28593,2560,sample_top=100; sample_size=559
+ex286,7,slot_bit,reverse,1,4,1,1,0,770,0,27041,2560,sample_top=100; sample_size=559
+ex286,8,revslot_revbit,natural,12,4,1,1,0,770,0,27041,2560,sample_top=100; sample_size=559
+ex287,1,reverse,slot_revbit,1,4,1,1,0,964,0,71603,3072,sample_top=100; sample_size=573
+ex287,2,natural,revslot_bit,13,4,1,1,0,964,0,71603,3072,sample_top=100; sample_size=573
+ex287,3,reverse,slot_revbit,0,4,1,1,0,1022,0,71871,3072,sample_top=100; sample_size=573
+ex287,4,natural,revslot_bit,0,4,1,1,0,1022,0,71871,3072,sample_top=100; sample_size=573
+ex287,5,reverse,slot_bit,0,4,1,1,0,1048,0,71071,3072,sample_top=100; sample_size=573
+ex287,6,natural,revslot_revbit,0,4,1,1,0,1048,0,71071,3072,sample_top=100; sample_size=573
+ex287,7,reverse,revslot_revbit,5,4,1,1,0,1064,0,70288,3072,sample_top=100; sample_size=573
+ex287,8,natural,slot_bit,9,4,1,1,0,1064,0,70288,3072,sample_top=100; sample_size=573

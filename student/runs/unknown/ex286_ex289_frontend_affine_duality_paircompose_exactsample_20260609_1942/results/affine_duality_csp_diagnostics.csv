@@ -1,0 +1,20 @@
+case,metric,candidate,sample_matches,sample_total,full_matches,full_total,bit_matches,bit_total,input_perm,output_perm,notes
+ex286,complement_perm_duality_exact_sample,no_exact_sample_hit,0,184,,8192,,2392,,,no P/Q pair in the candidate permutation family matched the low-weight sample exactly
+ex287,complement_perm_duality_exact_sample,no_exact_sample_hit,0,212,,16384,,2968,,,no P/Q pair in the candidate permutation family matched the low-weight sample exactly
+ex288,complement_perm_duality_exact_sample,no_exact_sample_hit,0,242,,32768,,3630,,,no P/Q pair in the candidate permutation family matched the low-weight sample exactly
+ex289,complement_perm_duality_exact_sample,id|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps1|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:6:7:8:9:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps2|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:7:6:8:9:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps3|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:7:6:8:9:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps4|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:6:7:9:8:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps5|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:6:7:9:8:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps6|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:7:6:9:8:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps7|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:7:6:9:8:10:11:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps8|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:6:7:8:9:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+ps9|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:6:7:8:9:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+psa|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:7:6:8:9:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+psb|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:7:6:8:9:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+psc|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:6:7:9:8:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+psd|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:6:7:9:8:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+pse|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:4:5:7:6:9:8:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=
+ex289,complement_perm_duality_exact_sample,id+psf|rev,274,274,65536,65536,1048576,1048576,0:1:2:3:5:4:7:6:9:8:11:10:12:13:14:15,15:14:13:12:11:10:9:8:7:6:5:4:3:2:1:0,full_first_mismatch=

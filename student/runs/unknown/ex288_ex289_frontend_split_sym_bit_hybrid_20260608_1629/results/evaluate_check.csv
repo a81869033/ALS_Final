@@ -1,0 +1,3 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex288,ex288_unknown_bit_hybrid_primary_12_13_14,OK,3025,20,60500,3025,20,60500,1,student/runs/unknown/ex288_ex289_frontend_split_sym_bit_hybrid_20260608_1629/results/official_replay/ex288.aig,official evaluate.py replay on run-local output directory
+ex289,ex289_unknown_bit_hybrid_primary_12_13_14_15,OK,2567,21,53907,2567,21,53907,1,student/runs/unknown/ex288_ex289_frontend_split_sym_bit_hybrid_20260608_1629/results/official_replay/ex289.aig,official evaluate.py replay on run-local output directory

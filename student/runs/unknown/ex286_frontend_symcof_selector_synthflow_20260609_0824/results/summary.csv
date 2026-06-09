@@ -1,0 +1,2 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex286,ex286_bits_0_1_9_10_abc_g_aig,1471,17,25007,2376,10.524832,21705,3302,0,bits_0_1_9_10_abc_g_aig,outer_bits=0:1:9:10; flow=abc_g_aig,selector bitset abc_g_aig

@@ -28,6 +28,23 @@ Use these directories consistently:
 - `student/tools/`: installed third-party tools. Do not manually clean this
   unless the user explicitly asks.
 
+## Scripts vs. Generators
+
+Use this rule when organizing helper code:
+
+- Put code in `student/generators/` when its primary purpose is to emit
+  benchmark-specific candidate Verilog/RTL seeds. It may also synthesize,
+  evaluate, and write run CSVs as part of the generation flow.
+- Put code in `student/scripts/` when it launches runs, diagnoses truth
+  structure, collects results, verifies CSVs, curates seed bundles, writes
+  dossiers, or resynthesizes already-existing Verilog/AIG seeds.
+- Put reusable truth parsing, simulation/equivalence, Yosys wrappers, and
+  shared frontend APIs in `student/frontends/`.
+
+When another session is actively working on a benchmark family, do not
+reorganize that family's dirty files, generated work trees, seed bundles, or
+shared CSV/index rows until that session finishes or the user explicitly asks.
+
 ## Run Naming
 
 Every new experiment run must have a stable run ID:

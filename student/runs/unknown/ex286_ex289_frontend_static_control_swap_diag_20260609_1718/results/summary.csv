@@ -1,0 +1,9 @@
+case,start,initial_score,initial_row_mismatches,best_depth,best_score,best_row_mismatches,score_reduction,row_reduction,conclusion
+ex286,identity,47686,8110,6,40122,8031,7564,79,weak controlled-routing lead
+ex286,pair_canonical,47770,8100,6,40064,8046,7706,54,weak controlled-routing lead
+ex287,identity,105114,16277,6,89302,16221,15812,56,weak controlled-routing lead
+ex287,pair_canonical,105138,16304,6,89046,16193,16092,111,weak controlled-routing lead
+ex288,identity,227098,32630,6,197788,32515,29310,115,weak controlled-routing lead
+ex288,pair_canonical,227252,32568,6,197520,32328,29732,240,weak controlled-routing lead
+ex289,identity,491776,65374,6,433388,65337,58388,37,weak controlled-routing lead
+ex289,pair_canonical,491200,65428,6,432546,65244,58654,184,weak controlled-routing lead

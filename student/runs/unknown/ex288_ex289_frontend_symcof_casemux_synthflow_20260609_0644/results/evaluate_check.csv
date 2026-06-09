@@ -1,0 +1,3 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex288,ex288_interleave_f10_k4_case_abc_g_aig,1,1891,17,32147,Yosys abc gate set aig
+ex289,ex289_interleave_f00_k4_case_abc_g_aig,1,1719,19,32661,Yosys abc gate set aig

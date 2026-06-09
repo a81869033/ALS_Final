@@ -1,0 +1,13 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f00_k4_onehot_group,1,7493,19,142367,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f00_k4_case_group,1,7503,20,150060,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f00_k5_onehot_group,1,7422,19,141018,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f00_k5_case_group,1,7464,19,141816,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f00_k6_onehot_group,1,7346,18,132228,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f00_k6_case_group,1,7417,18,133506,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f10_k4_onehot_group,1,7517,20,150340,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f10_k4_case_group,1,7529,20,150580,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f10_k5_onehot_group,1,7462,19,141778,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f10_k5_case_group,1,7482,19,142158,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f10_k6_onehot_group,1,7342,19,139498,unknown symmetry cofactor class-onehot Verilog seed
+ex286,ex286_unknown_symcof_bits_6_5_7_4_8_3_9_2_10_1_11_0_12_f10_k6_case_group,1,7368,18,132624,unknown symmetry cofactor class-onehot Verilog seed

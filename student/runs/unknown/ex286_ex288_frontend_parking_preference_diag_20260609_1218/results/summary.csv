@@ -1,0 +1,4 @@
+case,hypothesis,best_token_order,best_preference_style,best_output_transform,row_matches,total_rows,row_match_ratio,bit_matches,total_bits,bit_match_ratio,verdict
+ex286,static greedy parking/open-addressing from one-hot homes and two-hot preference slots,reverse,pair_freq,identity,145,8192,0.017700,59342,106496,0.557223,reject: far from exact and not seed-worthy
+ex287,static greedy parking/open-addressing from one-hot homes and two-hot preference slots,home_reverse,pair_freq,identity,117,16384,0.007141,123834,229376,0.539873,reject: far from exact and not seed-worthy
+ex288,static greedy parking/open-addressing from one-hot homes and two-hot preference slots,home,pair_freq,identity,217,32768,0.006622,265524,491520,0.540210,reject: far from exact and not seed-worthy

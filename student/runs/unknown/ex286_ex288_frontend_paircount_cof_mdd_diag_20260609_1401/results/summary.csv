@@ -1,0 +1,4 @@
+case,best_order_style,best_outer_count,best_classes,best_total_mdd_nodes,verdict
+ex286,reverse,3,8,3719,reject cofactored pair-count MDD; node count exceeds current cofactor BDD path
+ex287,reverse,6,56,4711,reject cofactored pair-count MDD; node count exceeds current cofactor BDD path
+ex288,reverse,3,8,11104,reject cofactored pair-count MDD; node count exceeds current cofactor BDD path

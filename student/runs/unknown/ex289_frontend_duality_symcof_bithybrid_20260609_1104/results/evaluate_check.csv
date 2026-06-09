@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_bit_hybrid_primary_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15,1,1156,23,26588,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_0_1_2_3_4_5_6_7,1,2045,21,42945,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_8_9_10_11_12_13_14_15,1,2045,23,47035,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_0_1_2_3_4_5_6_7_8_9_10_11_12_13,1,1597,23,36731,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_2_3_4_5_6_7_8_9_10_11_12_13_14_15,1,1661,22,36542,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_0_1_2_3_12_13_14_15,1,1634,22,35948,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_4_5_6_7_8_9_10_11,1,1675,22,36850,bit-hybrid of two verified exact Verilog sources
+ex289,ex289_unknown_bit_hybrid_primary_none,1,1431,21,30051,bit-hybrid of two verified exact Verilog sources

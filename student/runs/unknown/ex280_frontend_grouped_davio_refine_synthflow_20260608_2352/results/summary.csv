@@ -1,0 +1,2 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_unknown_grouped_anf_davio_prefix_parity_reduce_deg1_high4_node_abc_g_aig,623,27,16821,2415,6.965217,17220,-399,1,prefix_parity_reduce_deg1_high4_node_abc_g_aig,Yosys abc gate set aig,Yosys abc gate set aig

@@ -1,0 +1,13 @@
+case,diagnostic,result,conclusion
+ex286,total+interval count signature,no exact output bits; best collisions per bit still thousands,simple prefix/range count boundary is not the missing structure
+ex287,total+interval count signature,no exact output bits; best collisions per bit still thousands,simple prefix/range count boundary is not the missing structure
+ex288,total+interval count signature,no exact output bits; best collisions per bit still >12000,simple prefix/range count boundary is not enough even for closest case
+ex289,total+interval count signature,no exact output bits; best collisions per bit still >25000,simple prefix/range count boundary is not the missing structure
+ex286,support shape,most bits full support; only bits 5/6/7 have support 11,single local-window rule is unlikely; low-support direct ANF already rejected
+ex287,support shape,most bits full support; bits 6/7 have support 11,single local-window rule is unlikely; low-support direct ANF already rejected
+ex288,support shape,most bits full support; bit 7 has support 11,single local-window rule is unlikely; low-support direct ANF already rejected
+ex289,support shape,all output bits full support,local small-window source is unlikely in the raw order
+ex286-ex289,width embedding,"no exact insert-input/delete-output embedding for ex286->ex287, ex287->ex288, or ex288->ex289",family is not a direct one-bit recursive embedding
+ex286,greedy conservative gate network,pair-sort seeded cost 47682; after 50 greedy sort/cswap/csort gates cost still 40568,simple greedy controlled-swap/controlled-compare recovery is not seed-worthy
+ex286,popcount repair smoke,exact 1534/24/36816,delay-heavy; worse than current 21705
+ex288,popcount repair smoke,exact 1988/27/53676,delay-heavy; worse than current 32147

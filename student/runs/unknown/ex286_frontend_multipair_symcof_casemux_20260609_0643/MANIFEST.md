@@ -1,0 +1,14 @@
+# ex286_frontend_multipair_symcof_casemux_20260609_0643
+
+- Run ID: `ex286_frontend_multipair_symcof_casemux_20260609_0643`
+- Scope: `ex286`
+- Work dir: `student/work/ex286_frontend_multipair_symcof_casemux_20260609_0643/`
+- Results dir: `student/runs/unknown/ex286_frontend_multipair_symcof_casemux_20260609_0643/results/`
+- Purpose: Case-mux source style for ex286 multi-pair cofactor. Exact but worse than onehot/abc_g_aig current.
+
+## Results
+
+```csv
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex286,ex286_unknown_symcof_interleave_f00_k5_case,unknown_symmetry_cofactor_classonehot,interleave_f00_k5_case,student/work/ex286_frontend_multipair_symcof_casemux_20260609_0643/ex286/verilog/ex286_unknown_symcof_interleave_f00_k5_case.v,student/work/ex286_frontend_multipair_symcof_casemux_20260609_0643/ex286/aigs/ex286_unknown_symcof_interleave_f00_k5_case.aig,1583,15,23745,"pairs=4:5,6:7; order=interleave; policy=f00; mux_style=case; outer_bits=0:12:1:11:2; inner_bits=3:4:5:6:7:8:9:10; classes=32; group_nodes=87:87:95:86:90:72:89:83:77:75:53:73:88:87:76:77:69:84:86:83:83:87:91:103:96:83:84:88:84:82:87:76; total_group_nodes=2661; anf_bits=; hash=cd43ca9e8c32",unknown symmetry cofactor class-onehot Verilog seed
+```

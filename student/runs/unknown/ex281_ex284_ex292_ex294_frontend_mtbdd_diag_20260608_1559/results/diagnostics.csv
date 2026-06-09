@@ -1,0 +1,7 @@
+case,input_width,output_width,mtbdd_nodes,mtbdd_leaves,scalar_bdd_nodes,node_ratio_to_scalar,current_frontend_adp,notes
+ex281,13,13,7289,1587,511,14.264,41225,interleave order vector-valued BDD diagnostic
+ex282,14,14,14490,2950,591,24.518,59382,interleave order vector-valued BDD diagnostic
+ex283,15,15,28788,5103,672,42.839,99640,interleave order vector-valued BDD diagnostic
+ex284,16,16,57156,9528,758,75.404,96620,interleave order vector-valued BDD diagnostic
+ex292,14,14,12257,4695,3807,3.220,168300,interleave order vector-valued BDD diagnostic
+ex294,16,16,42953,15966,6020,7.135,349258,interleave order vector-valued BDD diagnostic

@@ -1,0 +1,20 @@
+{
+  "ex286": {
+    "label": "unknown_symcof_keybdd_selected",
+    "module": "ex286_unknown_symcof_interleave_f00_k4_onehot_group_keybdd_5_6_7",
+    "variant": "interleave_f00_k4_keybdd_5_6_7",
+    "verilog": "student/work/ex286_ex288_frontend_keybdd_selected_synth_20260609_1448/ex286/verilog/ex286_unknown_symcof_interleave_f00_k4_onehot_group_keybdd_5_6_7.v"
+  },
+  "ex287": {
+    "label": "unknown_symcof_keybdd_selected",
+    "module": "ex287_unknown_symcof_interleave_f00_k5_onehot_group_keybdd_6_7",
+    "variant": "interleave_f00_k5_keybdd_6_7",
+    "verilog": "student/work/ex286_ex288_frontend_keybdd_selected_synth_20260609_1448/ex287/verilog/ex287_unknown_symcof_interleave_f00_k5_onehot_group_keybdd_6_7.v"
+  },
+  "ex288": {
+    "label": "unknown_symcof_keybdd_selected",
+    "module": "ex288_unknown_symcof_interleave_f10_k6_onehot_group_keybdd_7",
+    "variant": "interleave_f10_k6_keybdd_7",
+    "verilog": "student/work/ex286_ex288_frontend_keybdd_selected_synth_20260609_1448/ex288/verilog/ex288_unknown_symcof_interleave_f10_k6_onehot_group_keybdd_7.v"
+  }
+}

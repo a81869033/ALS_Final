@@ -1,0 +1,4 @@
+case,output_bit,primitive_count,exact_kind,exact_expr,best_expr,best_matches,total_rows,best_match_ratio,notes
+ex286,summary,626,bits=,,(c5_s8>=1)&(sum_c0_8>=6),5397,8192,0.658813,diagnostic-only; exact primitive bits 
+ex287,summary,666,bits=,,(c2_s5==1)&(sum_c1_4==2),11040,16384,0.673828,diagnostic-only; exact primitive bits 
+ex288,summary,840,bits=,,(sum_c1_3>=2)&(c8_s14+raw10>=1),21248,32768,0.648438,diagnostic-only; exact primitive bits 

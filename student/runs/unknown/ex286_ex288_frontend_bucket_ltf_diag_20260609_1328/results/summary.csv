@@ -1,0 +1,4 @@
+case,bits,exact_bits,best_bit,best_matching_rows,total_rows,best_match_ratio,min_matching_rows,verdict
+ex286,13,0,8,4805,8192,0.586548,4123,reject bucket-count/selector linear-threshold formulas as tested
+ex287,14,0,5,9045,16384,0.552063,8107,reject bucket-count/selector linear-threshold formulas as tested
+ex288,15,0,7,19487,32768,0.594696,16566,reject bucket-count/selector linear-threshold formulas as tested

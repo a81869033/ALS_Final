@@ -1,0 +1,5 @@
+case,degree,layers,exact_bit_layers,total_bit_layers,exact_fraction,all_bits_exact_layers,bits_exact_all_layers,max_feature_rank,max_layer_rows,feature_count
+ex286,4,14,130,182,0.714286,10,,715,1716,1093
+ex287,4,15,140,210,0.666667,10,,1001,3432,1471
+ex288,4,16,150,240,0.625000,10,,1365,6435,1941
+ex289,4,17,160,272,0.588235,10,,1820,12870,2517

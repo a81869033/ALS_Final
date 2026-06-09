@@ -1,0 +1,176 @@
+[bf16-aggressive-semantic] start 2026-06-03 17:14:15 +0800
+[bf16-aggressive-semantic] cases=ex200-ex219
+[bf16-aggressive-semantic] variants=semantic_field_reassembly,semantic_sign_exp_field_defaults,semantic_positive_symmetry_fields,semantic_positive_field_defaults,semantic_exp_delta_fields
+[bf16-aggressive-semantic] timeout=900
+[bf16-aggressive-semantic] dedupe_current=student/results/bf16_candidates_current.csv
+[bf16-aggressive-semantic] work_dir=student/work/reverse_bf16_aggressive_semantic_20260603_1711
+[bf16-aggressive-semantic] results=student/results/bf16_aggressive_semantic_20260603_1711.csv
+[bf16-aggressive-semantic] emitting Verilog variants
+ex200: generated=5 verified_truth=5
+ex201: generated=5 verified_truth=5
+ex202: generated=5 verified_truth=5
+ex203: generated=5 verified_truth=5
+ex204: generated=5 verified_truth=5
+ex205: generated=5 verified_truth=5
+ex206: generated=5 verified_truth=5
+ex207: generated=5 verified_truth=5
+ex208: generated=5 verified_truth=5
+ex209: generated=5 verified_truth=5
+ex210: generated=5 verified_truth=5
+ex211: generated=5 verified_truth=5
+ex212: generated=5 verified_truth=5
+ex213: generated=5 verified_truth=5
+ex214: generated=5 verified_truth=5
+ex215: generated=5 verified_truth=5
+ex216: generated=5 verified_truth=5
+ex217: generated=5 verified_truth=5
+ex218: generated=5 verified_truth=5
+ex219: generated=5 verified_truth=5
+Results: student/results/bf16_aggressive_semantic_20260603_1711_emit.csv
+Best: student/results/bf16_aggressive_semantic_20260603_1711_emit_best.csv
+Rows: 100
+Best cases: 0/20
+Emit-only candidates: 100
+[bf16-aggressive-semantic] synthesizing and checking candidates
+ex200: generated=5 verified_truth=5
+ex201: generated=5 verified_truth=5
+ex202: generated=5 verified_truth=5
+ex203: generated=5 verified_truth=5
+ex204: generated=5 verified_truth=5
+ex205: generated=5 verified_truth=5
+ex206: generated=5 verified_truth=5
+ex207: generated=5 verified_truth=5
+ex208: generated=5 verified_truth=5
+ex209: generated=5 verified_truth=5
+ex210: generated=5 verified_truth=5
+ex211: generated=5 verified_truth=5
+ex212: generated=5 verified_truth=5
+ex213: generated=5 verified_truth=5
+ex214: generated=5 verified_truth=5
+ex215: generated=5 verified_truth=5
+ex216: generated=5 verified_truth=5
+ex217: generated=5 verified_truth=5
+ex218: generated=5 verified_truth=5
+ex219: generated=5 verified_truth=5
+Results: student/results/bf16_aggressive_semantic_20260603_1711.csv
+Best: student/results/bf16_aggressive_semantic_20260603_1711_best.csv
+Rows: 100
+Best cases: 20/20
+[bf16-aggressive-semantic] synth_status=0
+[bf16-aggressive-semantic] collecting summary from manifests
+rows=100
+best_cases=20/20
+best_total_adp=2021635
+results=student/results/bf16_aggressive_semantic_20260603_1711.csv
+best=student/results/bf16_aggressive_semantic_20260603_1711_best.csv
+summary=student/results/bf16_aggressive_semantic_20260603_1711_summary.csv
+[bf16-aggressive-semantic] re-running official evaluate.py for equivalent candidates
+1/100 OK ex200 semantic_exp_delta_fields eval_adp=117304 expected=117304
+2/100 OK ex200 semantic_field_reassembly eval_adp=67266 expected=67266
+3/100 OK ex200 semantic_positive_field_defaults eval_adp=74620 expected=74620
+4/100 OK ex200 semantic_positive_symmetry_fields eval_adp=73960 expected=73960
+5/100 OK ex200 semantic_sign_exp_field_defaults eval_adp=76855 expected=76855
+6/100 OK ex201 semantic_exp_delta_fields eval_adp=33060 expected=33060
+7/100 OK ex201 semantic_field_reassembly eval_adp=27344 expected=27344
+8/100 OK ex201 semantic_positive_field_defaults eval_adp=27608 expected=27608
+9/100 OK ex201 semantic_positive_symmetry_fields eval_adp=31768 expected=31768
+10/100 OK ex201 semantic_sign_exp_field_defaults eval_adp=30304 expected=30304
+11/100 OK ex202 semantic_exp_delta_fields eval_adp=119776 expected=119776
+12/100 OK ex202 semantic_field_reassembly eval_adp=63376 expected=63376
+13/100 OK ex202 semantic_positive_field_defaults eval_adp=69255 expected=69255
+14/100 OK ex202 semantic_positive_symmetry_fields eval_adp=74180 expected=74180
+15/100 OK ex202 semantic_sign_exp_field_defaults eval_adp=59232 expected=59232
+16/100 OK ex203 semantic_exp_delta_fields eval_adp=118962 expected=118962
+17/100 OK ex203 semantic_field_reassembly eval_adp=91352 expected=91352
+18/100 OK ex203 semantic_positive_field_defaults eval_adp=92400 expected=92400
+19/100 OK ex203 semantic_positive_symmetry_fields eval_adp=99222 expected=99222
+20/100 OK ex203 semantic_sign_exp_field_defaults eval_adp=88331 expected=88331
+21/100 OK ex204 semantic_exp_delta_fields eval_adp=46020 expected=46020
+22/100 OK ex204 semantic_field_reassembly eval_adp=37760 expected=37760
+23/100 OK ex204 semantic_positive_field_defaults eval_adp=37791 expected=37791
+24/100 OK ex204 semantic_positive_symmetry_fields eval_adp=36687 expected=36687
+25/100 OK ex204 semantic_sign_exp_field_defaults eval_adp=40448 expected=40448
+26/100 OK ex205 semantic_exp_delta_fields eval_adp=106488 expected=106488
+27/100 OK ex205 semantic_field_reassembly eval_adp=92207 expected=92207
+28/100 OK ex205 semantic_positive_field_defaults eval_adp=86374 expected=86374
+29/100 OK ex205 semantic_positive_symmetry_fields eval_adp=100832 expected=100832
+30/100 OK ex205 semantic_sign_exp_field_defaults eval_adp=84042 expected=84042
+31/100 OK ex206 semantic_exp_delta_fields eval_adp=1008368 expected=1008368
+32/100 OK ex206 semantic_field_reassembly eval_adp=707406 expected=707406
+33/100 OK ex206 semantic_positive_field_defaults eval_adp=680108 expected=680108
+34/100 OK ex206 semantic_positive_symmetry_fields eval_adp=809744 expected=809744
+35/100 OK ex206 semantic_sign_exp_field_defaults eval_adp=754292 expected=754292
+36/100 OK ex207 semantic_exp_delta_fields eval_adp=1194862 expected=1194862
+37/100 OK ex207 semantic_field_reassembly eval_adp=855184 expected=855184
+38/100 OK ex207 semantic_positive_field_defaults eval_adp=817397 expected=817397
+39/100 OK ex207 semantic_positive_symmetry_fields eval_adp=1032748 expected=1032748
+40/100 OK ex207 semantic_sign_exp_field_defaults eval_adp=901715 expected=901715
+41/100 OK ex208 semantic_exp_delta_fields eval_adp=63504 expected=63504
+42/100 OK ex208 semantic_field_reassembly eval_adp=44540 expected=44540
+43/100 OK ex208 semantic_positive_field_defaults eval_adp=37104 expected=37104
+44/100 OK ex208 semantic_positive_symmetry_fields eval_adp=42351 expected=42351
+45/100 OK ex208 semantic_sign_exp_field_defaults eval_adp=41312 expected=41312
+46/100 OK ex209 semantic_exp_delta_fields eval_adp=14516 expected=14516
+47/100 OK ex209 semantic_field_reassembly eval_adp=39237 expected=39237
+48/100 OK ex209 semantic_positive_field_defaults eval_adp=13006 expected=13006
+49/100 OK ex209 semantic_positive_symmetry_fields eval_adp=13968 expected=13968
+50/100 OK ex209 semantic_sign_exp_field_defaults eval_adp=21033 expected=21033
+51/100 OK ex210 semantic_exp_delta_fields eval_adp=44536 expected=44536
+52/100 OK ex210 semantic_field_reassembly eval_adp=37872 expected=37872
+53/100 OK ex210 semantic_positive_field_defaults eval_adp=46500 expected=46500
+54/100 OK ex210 semantic_positive_symmetry_fields eval_adp=45030 expected=45030
+55/100 OK ex210 semantic_sign_exp_field_defaults eval_adp=39338 expected=39338
+56/100 OK ex211 semantic_exp_delta_fields eval_adp=5056 expected=5056
+57/100 OK ex211 semantic_field_reassembly eval_adp=22672 expected=22672
+58/100 OK ex211 semantic_positive_field_defaults eval_adp=11232 expected=11232
+59/100 OK ex211 semantic_positive_symmetry_fields eval_adp=3025 expected=3025
+60/100 OK ex211 semantic_sign_exp_field_defaults eval_adp=19703 expected=19703
+61/100 OK ex212 semantic_exp_delta_fields eval_adp=3770 expected=3770
+62/100 OK ex212 semantic_field_reassembly eval_adp=12733 expected=12733
+63/100 OK ex212 semantic_positive_field_defaults eval_adp=9842 expected=9842
+64/100 OK ex212 semantic_positive_symmetry_fields eval_adp=3900 expected=3900
+65/100 OK ex212 semantic_sign_exp_field_defaults eval_adp=9061 expected=9061
+66/100 OK ex213 semantic_exp_delta_fields eval_adp=4576 expected=4576
+67/100 OK ex213 semantic_field_reassembly eval_adp=12908 expected=12908
+68/100 OK ex213 semantic_positive_field_defaults eval_adp=15915 expected=15915
+69/100 OK ex213 semantic_positive_symmetry_fields eval_adp=4970 expected=4970
+70/100 OK ex213 semantic_sign_exp_field_defaults eval_adp=31122 expected=31122
+71/100 OK ex214 semantic_exp_delta_fields eval_adp=9100 expected=9100
+72/100 OK ex214 semantic_field_reassembly eval_adp=11998 expected=11998
+73/100 OK ex214 semantic_positive_field_defaults eval_adp=8671 expected=8671
+74/100 OK ex214 semantic_positive_symmetry_fields eval_adp=3864 expected=3864
+75/100 OK ex214 semantic_sign_exp_field_defaults eval_adp=8580 expected=8580
+76/100 OK ex215 semantic_exp_delta_fields eval_adp=5213 expected=5213
+77/100 OK ex215 semantic_field_reassembly eval_adp=21075 expected=21075
+78/100 OK ex215 semantic_positive_field_defaults eval_adp=12645 expected=12645
+79/100 OK ex215 semantic_positive_symmetry_fields eval_adp=5096 expected=5096
+80/100 OK ex215 semantic_sign_exp_field_defaults eval_adp=18768 expected=18768
+81/100 OK ex216 semantic_exp_delta_fields eval_adp=9108 expected=9108
+82/100 OK ex216 semantic_field_reassembly eval_adp=15232 expected=15232
+83/100 OK ex216 semantic_positive_field_defaults eval_adp=12195 expected=12195
+84/100 OK ex216 semantic_positive_symmetry_fields eval_adp=6118 expected=6118
+85/100 OK ex216 semantic_sign_exp_field_defaults eval_adp=16252 expected=16252
+86/100 OK ex217 semantic_exp_delta_fields eval_adp=29646 expected=29646
+87/100 OK ex217 semantic_field_reassembly eval_adp=25680 expected=25680
+88/100 OK ex217 semantic_positive_field_defaults eval_adp=18480 expected=18480
+89/100 OK ex217 semantic_positive_symmetry_fields eval_adp=26450 expected=26450
+90/100 OK ex217 semantic_sign_exp_field_defaults eval_adp=24330 expected=24330
+91/100 OK ex218 semantic_exp_delta_fields eval_adp=13419 expected=13419
+92/100 OK ex218 semantic_field_reassembly eval_adp=21470 expected=21470
+93/100 OK ex218 semantic_positive_field_defaults eval_adp=11802 expected=11802
+94/100 OK ex218 semantic_positive_symmetry_fields eval_adp=7872 expected=7872
+95/100 OK ex218 semantic_sign_exp_field_defaults eval_adp=15165 expected=15165
+96/100 OK ex219 semantic_exp_delta_fields eval_adp=31108 expected=31108
+97/100 OK ex219 semantic_field_reassembly eval_adp=25120 expected=25120
+98/100 OK ex219 semantic_positive_field_defaults eval_adp=20445 expected=20445
+99/100 OK ex219 semantic_positive_symmetry_fields eval_adp=27040 expected=27040
+100/100 OK ex219 semantic_sign_exp_field_defaults eval_adp=24344 expected=24344
+best_copied=20 best_dir=student/work/best/bf16_aggressive_semantic_20260603_1711
+official_eval_ok=100/100 csv=student/results/bf16_aggressive_semantic_20260603_1711_eval_check.csv
+[bf16-aggressive-semantic] verify_status=0
+[bf16-aggressive-semantic] done 2026-06-03 17:36:48 +0800
+[bf16-aggressive-semantic] results=student/results/bf16_aggressive_semantic_20260603_1711.csv
+[bf16-aggressive-semantic] best=student/results/bf16_aggressive_semantic_20260603_1711_best.csv
+[bf16-aggressive-semantic] summary=student/results/bf16_aggressive_semantic_20260603_1711_summary.csv
+[bf16-aggressive-semantic] eval_check=student/results/bf16_aggressive_semantic_20260603_1711_eval_check.csv
+[bf16-aggressive-semantic] best_dir=student/work/best/bf16_aggressive_semantic_20260603_1711

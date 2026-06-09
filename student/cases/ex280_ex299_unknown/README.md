@@ -3,6 +3,7 @@
 這個資料夾用來追蹤 unknown group 的 frontend reverse engineering 嘗試，避免後續重複走已經驗證過但效果不好的方向。
 
 目前共用資料來源：
+- `student/cases/ex280_ex299_unknown/CURRENT_PROGRESS.md`
 - `student/results/unknown_candidates_current.csv`
 - `student/results/unknown_candidates_current_best.csv`
 - `student/results/unknown_candidates_current_summary.csv`
@@ -10,6 +11,153 @@
 - `student/results/target_ex280_structure*.csv`
 - `student/work/reverse_unknown_20260603_1812/`
 - `student/work/reverse_unknown_algebraic_20260603_2305_algebraic_safe/`
+- `student/work/ex285_ex289_frontend_symmetry_bdd_20260608_1429/`
+- `student/work/ex286_frontend_symmetry_delay_synthflow_20260608_1457/`
+- `student/work/ex281_ex284_frontend_bdd_key_transform_20260608_1500/`
+- `student/work/ex281_ex284_frontend_bdd_cofactor_20260608_1521/`
+- `student/work/ex281_ex284_frontend_split_refine_20260608_1516/`
+- `student/work/ex295_ex297_ex299_frontend_pair_ring_diag_20260608_1550/`
+- `student/work/ex292_ex294_frontend_bdd_cofactor_20260608_1554/`
+- `student/work/ex281_ex284_ex292_ex294_frontend_mtbdd_diag_20260608_1559/`
+- `student/work/ex287_frontend_bit_hybrid_single_20260608_1605/`
+- `student/work/ex281_ex284_frontend_split_bdd_bit_hybrid_20260608_1608/`
+- `student/work/ex292_ex294_frontend_split_bdd_bit_hybrid_20260608_1628/`
+- `student/work/ex288_ex289_frontend_split_sym_bit_hybrid_20260608_1629/`
+- `student/work/ex280_ex284_frontend_anf_parity_20260608_1722/`
+- `student/work/ex280_ex284_frontend_bdd_parity_key_20260608_1735/`
+- `student/work/ex280_ex284_frontend_bdd_parity_reduce_key_20260608_1748/`
+- `student/work/ex280_ex284_frontend_bdd_key_cofactor_top4_20260608_1810/`
+- `student/work/ex280_ex284_frontend_bdd_key_cofactor_top5_20260608_1812/`
+- `student/work/ex280_ex284_frontend_bdd_key_cofactor_top6_20260608_1814/`
+- `student/work/ex280_ex284_frontend_bdd_key_cofactor_synthflow_20260608_1816/`
+- `student/work/ex280_ex284_frontend_key_ac_decomp_20260608_1909/`
+- `student/work/ex280_ex284_frontend_key_canonical_cofactor_20260608_1916/`
+- `student/work/ex280_ex284_frontend_key_perbit_endpoint_bdd_20260608_1928/`
+- `student/work/ex280_ex284_frontend_key_cofactor_onehot_20260608_1931/`
+- `student/work/ex280_ex284_frontend_key_cofactor_inner_orders_20260608_1950/`
+- `student/work/ex280_ex284_frontend_key_cofactor_classonehot_20260608_2025/`
+- `student/work/ex280_ex284_frontend_key_cofactor_classonehot_synthflow_20260608_2027/`
+- `student/work/ex280_ex284_frontend_key_cofactor_classcase_20260608_2055/`
+- `student/work/ex280_ex284_frontend_key_cofactor_classonehottree_20260608_2100/`
+- `student/work/ex280_ex284_frontend_key_cofactor_classonehottree_synthflow_20260608_2058/`
+- `student/work/ex280_ex284_frontend_factorized_anf_20260608_2108/`
+- `student/work/ex280_ex284_frontend_key_classonehot_bitoverride_20260608_2118/`
+- `student/work/ex280_ex284_frontend_prefix_davio_20260608_2305/`
+- `student/work/ex280_ex284_frontend_prefix_davio_orders_20260608_2306/`
+- `student/work/ex280_ex284_frontend_prefix_davio_synthflow_20260608_2315/`
+- `student/work/ex280_ex284_frontend_prefix_davio_thresholds_20260608_2325/`
+- `student/work/ex280_ex284_frontend_prefix_davio_thresholds_synthflow_20260608_2330/`
+- `student/work/ex282_ex284_frontend_davio_classonehot_bithybrid_20260608_2340/`
+- `student/work/ex282_ex284_frontend_davio_classonehot_bithybrid_synthflow_20260608_2345/`
+- `student/work/ex280_ex284_frontend_grouped_davio_order_20260608_2338/`
+- `student/work/ex280_ex284_frontend_grouped_davio_order_synthflow_20260608_2342/`
+- `student/work/ex280_frontend_grouped_davio_refine_20260608_2348/`
+- `student/work/ex280_frontend_grouped_davio_refine_synthflow_20260608_2352/`
+- `student/work/ex280_ex284_frontend_bigjump_diag_20260609_0018/`
+- `student/work/ex280_ex284_frontend_bilinear_rank_20260609_0039/`
+- `student/work/ex280_ex284_frontend_muxcoord_anf_20260609_0039/`
+- `student/work/ex280_ex284_frontend_muxcoord_hybrid_full_20260609_0057/`
+- `student/work/ex280_ex284_frontend_muxcoord_hybrid_synthflow_20260609_0057/`
+- `student/work/ex280_ex284_frontend_muxcoord_full_20260609_0117/`
+- `student/work/ex280_ex284_frontend_muxcoord_full_synthflow_20260609_0117/`
+- `student/work/ex280_ex284_frontend_muxcoord_full_synthflow_d_20260609_0117/`
+- `student/work/ex280_ex284_frontend_muxcoord_grouped_20260609_0117/`
+- `student/work/ex280_ex284_frontend_muxcoord_grouped_synthflow_20260609_0117/`
+- `student/work/ex280_ex284_frontend_muxcoord_grouped_synthflow_d_20260609_0117/`
+- `student/work/ex280_ex284_frontend_muxcoord_simplified_20260609_0142/`
+- `student/work/ex280_ex284_frontend_muxcoord_simplified_synthflow_20260609_0142/`
+- `student/work/ex280_ex284_frontend_muxcoord_keychain_simplified_20260609_0142/`
+- `student/work/ex280_ex284_frontend_muxcoord_keychain_simplified_synthflow_20260609_0142/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_20260609_0216/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_synthflow_20260609_0216/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_synthflow_d_20260609_0216/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_wide_smoke_20260609_0216/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_rank_smoke2_20260609_0216/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_rank_smoke2_synthflow_20260609_0216/`
+- `student/work/ex280_ex284_frontend_quadratic_compressor_direct_smoke_20260609_0241/`
+- `student/work/ex285_ex299_frontend_quadratic_compressor_transfer_20260609_0546/`
+- `student/work/ex285_ex289_frontend_symmetry_cofactor_classonehot_20260609_0548/`
+- `student/work/ex286_ex288_ex289_frontend_symmetry_cofactor_order_smoke2_20260609_0549/`
+- `student/work/ex295_ex297_ex299_frontend_rotation_rep_bdd_20260609_0550/`
+- `student/work/ex286_frontend_multipair_symcof_20260609_0623/`
+- `student/work/ex287_ex288_frontend_multipair_symcof_20260609_0624/`
+- `student/work/ex289_frontend_multipair_symcof_20260609_0624/`
+- `student/work/ex286_frontend_multipair_symcof_bitsets_20260609_0628/`
+- `student/work/ex286_frontend_symcase_dc_20260609_0630/`
+- `student/work/ex286_frontend_multipair_symbdd_20260609_0631/`
+- `student/work/ex287_ex288_frontend_multipair_symbdd_20260609_0631/`
+- `student/work/ex289_frontend_multipair_symbdd_20260609_0631/`
+- `student/work/ex286_frontend_multipair_symcof_anfbits_20260609_0633/`
+- `student/work/ex287_frontend_multipair_symcof_anfbits_20260609_0633/`
+- `student/work/ex288_frontend_multipair_symcof_anfbits_20260609_0633/`
+- `student/work/ex286_frontend_multipair_symcof_synthflow_20260609_0634/`
+- `student/work/ex287_frontend_multipair_symcof_synthflow_20260609_0634/`
+- `student/work/ex288_ex289_frontend_symcof_synthflow_20260609_0634/`
+- `student/work/ex286_frontend_multipair_symbdd_custom_order_20260609_0639/`
+- `student/work/ex286_ex289_frontend_popcount_semantic_diag_20260609_0754/`
+- `student/work/ex286_frontend_symcof_pcrepair_20260609_0800/`
+- `student/work/ex288_frontend_symcof_pcrepair_20260609_0802/`
+- `student/work/ex286_ex289_frontend_conservative_routing_diag_20260609_0805/`
+- `student/work/ex286_frontend_symcof_selector_20260609_0822/`
+- `student/work/ex286_frontend_symcof_selector_synthflow_20260609_0824/`
+- `student/work/ex287_frontend_symcof_selector_20260609_0828/`
+- `student/work/ex288_frontend_symcof_selector_20260609_0828/`
+- `student/work/ex289_frontend_symcof_selector_20260609_0828/`
+- `student/work/ex289_frontend_symcof_selector_synthflow_20260609_0831/`
+- `student/work/ex289_frontend_symcof_selector_k3_20260609_0835/`
+- `student/work/ex287_ex289_frontend_selector01_diag_20260609_0841/`
+- `student/work/ex288_frontend_symcof_selector01_20260609_0847/`
+- `student/work/ex286_frontend_symcof_tree_mux_20260609_0915/`
+- `student/work/ex287_frontend_symcof_tree_mux_20260609_0916/`
+- `student/work/ex288_frontend_symcof_tree_mux_20260609_0916/`
+- `student/work/ex289_frontend_symcof_selector_tree_mux_20260609_0916/`
+- `student/work/ex289_frontend_multipair_selector_20260609_0927/`
+- `student/work/ex289_frontend_multipair_selector_synthflow_20260609_0929/`
+- `student/work/ex288_frontend_multipair_selector_20260609_0931/`
+- `student/work/ex286_ex287_frontend_paircount_mdd_20260609_0944/`
+- `student/work/ex287_frontend_paircount_mdd_3pair_20260609_0947/`
+- `student/work/ex288_frontend_paircount_mdd_3pair_20260609_0947/`
+- `student/work/ex289_frontend_paircount_mdd_4pair_20260609_0947/`
+- `student/work/ex286_frontend_paircount_mdd_synthflow_20260609_0949/`
+- `student/work/ex287_frontend_paircount_mdd_synthflow_20260609_0949/`
+- `student/runs/unknown/ex286_ex289_frontend_conservative_bigjump_diag_20260609_1004/`
+- `student/runs/unknown/ex286_ex289_frontend_pair_interaction_diag_20260609_1007/`
+- `student/work/ex286_frontend_raw_bdd_abcorder_20260609_1007/`
+- `student/runs/unknown/ex286_frontend_fredkin_greedy_diag_20260609_1007/`
+- `student/runs/unknown/ex286_frontend_topk_layer_light_20260609_1036/`
+- `student/runs/unknown/ex287_frontend_topk_layer_tiny_20260609_1039/`
+- `student/runs/unknown/ex288_frontend_topk_layer_tiny_20260609_1040/`
+- `student/runs/unknown/ex289_frontend_topk_layer_tiny_sample_20260609_1044/`
+- `student/work/ex289_frontend_duality_half_bdd_20260609_1048/`
+- `student/work/ex289_frontend_duality_half_bdd_synthflow_20260609_1050/`
+- `student/work/ex289_frontend_duality_symcof_20260609_1052/`
+- `student/work/ex289_frontend_duality_symcof_synthflow_20260609_1053/`
+- `student/work/ex289_frontend_duality_symcof_selectors_20260609_1054/`
+- `student/work/ex289_frontend_duality_symcof_selectors_synthflow_20260609_1055/`
+- `student/runs/unknown/ex286_ex289_frontend_duality_transform_basic_20260609_1102/`
+- `student/work/ex289_frontend_duality_symcof_bithybrid_20260609_1104/`
+- `student/work/ex289_frontend_duality_symcof_splitbits_20260609_1108/`
+- `student/work/ex289_frontend_duality_symcof_splitbits_synthflow_20260609_1109/`
+- `student/work/ex289_frontend_duality_symcof_split2_selectors_20260609_1110/`
+- `student/work/ex289_frontend_duality_symcof_split2_muxshare_20260609_1113/`
+- `student/work/ex289_frontend_duality_symcof_splitbit_matrix_20260609_1114/`
+- `student/work/ex289_frontend_duality_symcof_split2_orders_20260609_1117/`
+- `student/work/ex289_frontend_duality_symcof_split2_near_synthflow_20260609_1124/`
+- `student/work/ex289_frontend_duality_symcof_split2_xorwrap_20260609_1126/`
+- `student/work/ex289_frontend_duality_symcof_split2_xorwrap_synthflow_20260609_1128/`
+- `student/runs/unknown/ex286_ex288_frontend_count_coordinate_diag_20260609_1138/`
+- `student/runs/unknown/ex286_ex288_frontend_width_embedding_diag_20260609_1139/`
+- `student/work/ex286_ex288_frontend_lowdelay_symcof_synthflow_20260609_1140/`
+- `student/work/ex286_ex288_frontend_lowdelay_symcof_dtargets_20260609_1142/`
+- `student/work/ex288_frontend_k6_k4_bit_hybrid_20260609_1144/`
+- `student/runs/unknown/ex286_ex288_frontend_scan_residual_diag_20260609_1154/`
+- `student/work/ex286_frontend_symcof_center_order_20260609_1156/`
+- `student/work/ex287_frontend_symcof_center_order_20260609_1156/`
+- `student/work/ex288_frontend_symcof_center_order_20260609_1156/`
+- `student/runs/unknown/ex286_ex288_frontend_ltf_diag_20260609_1204/`
+- `student/work/ex280_frontend_key_cofactor_classonehot_custom_order_20260608_2140/`
+- `student/work/ex280_ex284_frontend_semantic_kernel_diag_20260608_2148/`
+- `student/work/ex284_frontend_split_classonehot_bit_hybrid_20260608_2153/`
 - `student/work/target_ex280_bdd_eval/`
 - `student/work/target_ex280_structure/`
 
@@ -21,10 +169,119 @@
 - Greedy decision tree: 用 decision graph/decision tree 形式分解 truth table。
 - Shared BDD: 針對 ex280 做過多種 variable order 的 shared BDD seed。
 - Algebraic/ANF/Davio: 對 ex280-ex299 產過 ANF/shared term/Davio/support-LUT 類候選，目前沒有成為整理後 current best。
+- Symmetry-canonical BDD: 對 `ex285-ex289` 的 exact `swap_in_4_5` symmetry 做 `(OR,AND)` canonical key；raw BDD 先改善 `ex289`，limited synthflow 後又改善 `ex287/ex288/ex289`，但 `sym_first`/natural orders 很差。
+- ex286 tight symmetry-BDD delay targets: 對 `f10`/`f00`/`zero` BDD source 跑 `abc -D 13..17` 和 `abc -g aig -D 13..17`，official replay exact；最佳仍是 `1435/17/24395`，沒有超過 current `1860/13/24180`。
+- ex286 bit-hybrid: structural split deep bits plus symmetry-BDD shallow bits 5/6/7 was exact and reached near miss `1864/13/24232`, but still did not beat current `1860/13/24180`.
+- ex281-ex284 cofactor-BDD: 一個 outer bit 的 low/high/center Shannon cofactor source rewrite official replay exact，但沒有超過 current shared-BDD synthflow；不要重複簡單 `low1`/`high1`/`center1`。
+- ex281-ex284 width-minus-one split/default: recovered completed rows for ex281-ex283 were exact but ADP was far worse; ex284 was not continued. Do not repeat without a new compression idea.
+- ex295/ex297/ex299 pair-ring local-rule diagnostic: exact even-rotation equivariance 可以視為 2-bit cell ring，但小半徑 local rule 不成立；output cell support 跨完整 ring。
+- ex292/ex294 cofactor-BDD: 一個 outer bit 的 low/high/center Shannon cofactor source rewrite official replay exact，但沒有超過 current shared-BDD synthflow。
+- ex281-ex284/ex292/ex294 direct MTBDD diagnostic: vector-valued interleave MTBDD 節點數比 scalar shared-BDD 大很多，暫不產生 seed；除非有不同 reduction/source form，不要重跑 direct vector-leaf MTBDD。
+- ex287 selected-bit hybrid: structural decision-tree single-bit overrides on the current symmetry-BDD source were exact for `primary_0..6`, but all were worse than current best; the sweep was stopped before expanding further.
+- ex281-ex284 split/BDD grouped-bit hybrid: rotated split high-bit overrides on shared-BDD sources were exact for 24 raw rows, and limited synthflow on raw bests was also exact, but all four run bests were worse than current shared-BDD synthflow.
+- ex292/ex294 split/BDD selected-bit hybrid: selected rotated-split output bits plus shared-BDD rest were exact, and limited synthflow was exact, but split cone area dominated; do not repeat without a more compact selected-bit source.
+- ex288/ex289 split/symmetry grouped-bit hybrid: grouped rotate-split high-bit overrides on symmetry-BDD sources were exact for 10/10 rows, but best ADPs `60500`/`53907` were worse than current.
+- ex280-ex284 prefix/suffix parity ANF: prefix parity input transform is a real structural signal and greatly reduces ANF terms, but direct shared-product ANF synthesized with too much delay; limited synthflow did not rescue it.
+- ex280-ex284 prefix parity transformed-key BDD: prefix key gives a lower-area BDD family, but a linear prefix XOR chain makes delay too high. Reduction-XOR key source rewrite improves delay and is the preferred base if this direction is revisited.
+- ex280-ex284 prefix-key cofactor BDD: top-k Shannon cofactor split over reduction-XOR prefix key is the base structure. Limited synthflow produced current/near-current rows for ex281 (`858/24/20592`), ex283 (`1133/32/36256` before later classonehot), and ex284 (`1303/36/46908` before later classonehot). ex280 top6 remains a near miss (`731/25/18275`) versus backend current `17220`.
+- ex280/ex282 prefix-key follow-ups: top7/top8, tested custom selector sets, non-prefix ex280 selector sets, and extra gate-set/noabc/flatten synthflow were exact but worse; do not repeat without a different cofactor mux/source form.
+- ex280-ex284 prefix-key AC decomposition: exact diagnostic found consistent outer-state classes (`top4 16->14`, `top5 32->28`, `top6 64->50`) across all five widths, but generic two-stage `phi+h` BDD RTL was delay-dominated after limited synthflow.
+- ex280-ex284 canonical cofactor/per-bit endpoint checks: canonical outer-state sharing reproduced the top-k cofactor family; per-bit endpoint BDDs confirmed endpoint-cone structure but remained worse after synthflow. A narrow bit-parallel elementary-CA endpoint-pair search found no exact semantic hit.
+- ex280-ex284 one-hot cofactor mux: explicit one-hot decode plus OR mux for top5/top6 prefix-key cofactors was exact. Limited synthflow produced new current bests for ex282 (`1028/29/29812`) and ex283 (`1189/30/35670`) before classonehot superseded them; ex284 was a near miss and ex280/ex281 were worse than current.
+- ex280-ex284 class-level one-hot cofactor mux: grouping outer selectors by representative cofactor class is the current strongest source rewrite. Limited synthflow produced new current bests for ex282 (`958/30/28740`), ex283 (`1107/31/34317`), and ex284 (`1184/36/42624`). Class-SOP selector minimization, two-stage class-index `case`, and manual balanced OR-tree classonehot were exact but worse, suggesting equality-comparator sharing and Yosys' flat OR mapping matter.
+- ex280-ex284 split-factorized ANF and classonehot selected-bit overrides: prefix-key ANF has real low-degree structure, but both exact source rewrites were worse after official replay. High-monomial/low-coefficient ANF was area-heavy, and low4/low5 ANF overrides increased ADP despite selected-output BDD node savings.
+- ex280 custom inner BDD order: exhaustive node-count search over the top6 inner bits found only a small improvement (`3576 -> 3512` nodes). The emitted exact row was worse (`858/27/23166`), so do not expand minor inner-order tweaks without a stronger node-count signal.
+- ex280-ex284 reverse-output kernel diagnostics: the `5*x` visual one-hot response is not a compact base plus correction. Integer `5*x` residuals increased ANF degree, carryless `5*x` residuals stayed roughly as large as raw output, and high-zero slices matched only a handful of points.
+- ex284 split/classonehot bit hybrid: selected high bits from the old low-delay split source plus classonehot rest was exact but worse. Best `1642/33/54186`, so this does not solve the delay/area tradeoff.
+- ex280-ex284 layered ANF/Davio: splitting low-degree ANF terms from a high-degree residual Davio DAG was exact and officially replayed `15/15`, but best ADPs `32346`/`43529`/`56067`/`72065`/`90285` were all worse than current. Sparse GF monomial low-HW probes over selected feedback polynomials also found no exact tested-basis hit.
+- ex280-ex284 prefix-key class-rule canonicalization: the shared top6 `64->50` class merge map can be expressed by four predicates, but `classrulescase`/`classrulesonehot` were exact and officially replayed `20/20` with no new best. A cofactor relation diagnostic found no simple output xor/rotate/reverse or tested inner-key permutation transform orbit among the 50 unique class functions.
+- ex280-ex284 width embedding diagnostic: no exact direct `ex(n+1)` fixed-input-bit / removed-output-bit embedding recovered `ex(n)` for adjacent widths, so any scalable recurrence is not a simple bit insertion/deletion relation.
+- ex280-ex284 masked word-pattern ANF: prefix-key ANF relative offset groups can be emitted as masked rotated-word AND/XOR features, but the exact source was much worse after official replay (`86884` to `149880` ADP). Full masked word-pattern expansion is not the missing compact vector stencil.
+- ex280-ex284 prefix-key Davio endpoint orders: full transformed ANF residual as Davio is exact and has low area. A narrow `abc_g_aig` synthflow replay was official `evaluate.py` OK for all 25 rows and produced new current bests for ex282 (`761/35/26635`), ex283 (`851/35/29785`), and ex284 (`921/42/38682`). ex280/ex281 remained behind current at `18662`/`22539`.
+- ex280-ex284 prefix-Davio threshold split: degree-1/2/3 low-degree extraction was exact and officially replayed. Uniform split is not broadly useful; after narrow synthflow it only improved ex284, now `969/39/37791`. ex282 tied full-Davio current and the other cases regressed.
+- ex282-ex284 Davio/classonehot bit hybrid: selected classonehot replacement bits reduce delay in some rows but duplicate too much logic. Raw and `abc_g_aig` synthflow replays were exact; best synthflow ADPs `27895`/`33165`/`39117` were all worse than active Davio current rows.
+- ex280-ex284 grouped prefix-Davio output orders: per-group Davio order is a real improvement. `abc_g_aig` replay produced new ex282 current best `765/33/25245`, and ex280 group-size refinement produced new ex280 current best `623/27/16821`, beating the archived backend current. ex281/ex283/ex284 did not improve.
+- ex280-ex284 high-leverage semantic diagnostics: anchored elementary-symmetric scans solved zero bits; local edge/range scan features left hundreds of residual monomials; simple word-level shifted-key AND/XOR basis had no exact solution; fixed-polarity RM had no large term-count collapse; output reverse did not reduce word-pattern counts; one-direction prefix-state residual counts grew too fast; ABC DSD gave no useful decomposition; `reverse(out)=5*x` variants matched only a few points. These are rejected as currently tested big-drop structures, not seed-producing runs.
+- ex280-ex284 rejected follow-ups: endpoint-pair FSM, tree2/tree3 mux, raw identity ANF/Davio, top7/top8, and non-prefix selector rows were exact but worse. Raw ANF confirms degree-4 structure, but direct ANF/Davio is not competitive.
+- ex280-ex284 mux-coordinate breakthrough: with `key=prefix_parity_reduce(in)`, `mc[i] = key[i] ? (key[n-2-i] ^ key[n-1-i]) : key[i+1]` plus boundary coordinates turns most output bits into small degree-2 ANFs. A hybrid using degree-2 mux-coordinate solved bits plus three residual Davio bits is exact for all five cases. Limited `abc_g_aig` produced new current bests `10710`, `12928`, `13770`, `14580`, and `17794`.
+- ex280-ex284 mux-coordinate exclusions: all-bit degree-3 mux-coordinate ANF is exact but area-heavy, and split bilinear-rank ANF has low algebraic rank but coefficient cones synthesize poorly. Do not repeat these exact forms; continue from degree-2 solved bits and residual-bit reduction.
+- ex280-ex284 full-width mux-coordinate extension: extending the mux coordinate recurrence to all `n` positions removes the residual Davio bits entirely. Flat degree-2 full-coordinate replay was exact and improved bests to `7525`, `10498`, `9858`, `13986`, and `15015` after `abc_g_aig`, but it is now superseded by grouped emit.
+- ex280-ex284 grouped full-clamp mux-coordinate factorization: grouping pair terms as `mc[b] & xor(group)` with shared prefix-XOR helpers is the current active structure. Official `abc_g_aig` replay is exact and current-best ADPs are `5460`, `6231`, `6665`, `8260`, and `9139`. `abc_g_aig_d18..d21` tied plain `abc_g_aig`.
+- ex280-ex284 refined grouped full-clamp sources: simplifying full-clamp coordinate branches with `key[j]^key[j+1] = in[j+1]` improves ex281/ex283 after `abc_g_aig` to `6150` and `7945`. Combining the same simplified coordinates with incremental `prefix_parity` key emission improves ex280/ex284 to `5365` and `8621`. ex282 remains best on the original grouped full-clamp source at `6665`. Direct/balanced XOR emit and dual high/low grouping were exact but worse.
+- ex280-ex284 shared quadratic compressor: keeping the exact mux-coordinate degree-2 model but factoring output pair matrices into shared products of linear forms `(xor mc) & (xor mc)` produced the new active bests after `abc_g_aig`: `ex280 152/31/4712`, `ex281 161/34/5474`, `ex282 176/36/6336`, `ex283 181/36/6516`, and `ex284 200/39/7800`. Delay-target `abc_g_aig_d18..d21` tied plain `abc_g_aig`; a wider neighbor-XOR merged basis smoke tied the basic raw rows and was not expanded.
+- ex280-ex284 rank-decomposition compressor: pair-matrix ranks are very low (`2/4/6`), but the naive rank basis emits area-heavy overlapping linear forms plus correction. ex280/ex284 smoke was exact but worse (`5880`/`9252` after `abc_g_aig`), so rank remains a basis-selection follow-up, not an active seed.
+- ex280-ex284 direct-XOR compressor smoke: emitting range linear forms as direct XOR expressions instead of prefix-helper ranges was exact but area-heavy. Best raw rows `6360`/`10680` were worse than active compressor; do not repeat this source form as tested.
+- ex285-ex299 direct quadratic-compressor transfer: applying the ex280-ex284 full-function mux-coordinate degree-2 compressor to ex285-ex299 failed the coordinate solve for all 60 rows. The exact coordinate map does not transfer wholesale.
+- ex285-ex289 symmetry cofactor class-onehot: applying the ex280-ex284 cofactor/class-onehot source idea to the exact `swap_in_4_5` canonical key was official exact for 30/30 rows and produced new current bests `ex286 1474/16/23584`, `ex288 1930/18/34740`, and `ex289 1755/19/33345`. `ex285`/`ex287` were exact but worse. Non-interleave orders (`reverse`, `natural`, `sym_first`) were exact but far worse.
+- ex286-ex289 multi-pair symmetry: exact input swap symmetries extend beyond `(4,5)`: `ex286` has `(4,5),(6,7)`, `ex287/ex288` add `(8,9)`, and `ex289` also adds `(10,11)`. Multi-pair cofactor class-onehot plus limited `abc_g_aig` produced current bests `ex286 1447/15/21705` and `ex287 1832/15/27480`. For `ex288`, low-delay `interleave_f10_k6` plus a later key-BDD selected-bit rewrite is current best `2257/14/31598`. For `ex289`, split2 duality+symcof XOR-wrapper is current best `1047/19/19893`.
+- ex286-ex289 rejected follow-ups: explicit pair-state outer-bit selectors, canonical case tables with invalid-key `x`, raw multi-pair BDD, direct ANF extraction of low-support bits, and hand-structured ex286 raw BDD orders were exact where applicable but worse. These are not the missing 1.5x-reference structure.
+- ex286-ex289 semantic diagnostics: the functions are not simple sort/canonical normalizers; `f(f(x))` is not idempotent and monotonicity is violated. They exactly preserve Hamming weight, but tested weighted sums, weighted data-dependent rotate, low-degree one-hot position polynomial, hidden-unate comparator polarity, mux-coordinate quadratic transfer, popcount repair, bounded local/FSM token routing, local/count-boundary predicates, direct width embedding, greedy conservative gates, vector BDDs, tree-mux rewrites, key-domain PLA/DC, and ternary pair-count MDD were not seed-worthy. Selector/cofactor search remains useful because it produced the new ex289 best.
+- ex286-ex289 conservative big-jump diagnostic: output-mask-only insertion recurrences, small candidate-slot matching/parking, generalized input/output permutation symmetry beyond known invariant swaps, simple layer-rank maps, independent 4-bit block scatter, simple prefix/suffix count transport, and direct ABC DSD strash were all rejected as large-drop structures. The next plausible path needs a richer controlled-routing state or a different block interaction, not another small-slot/hash/parking model.
+- ex286-ex289 pair/Fredkin follow-up: two-hot output matrices expose some low-rank local bits, but two-hot behavior is not keyed only by one-hot output-slot pairs and the degree-2 low-weight extension leaves larger residual BDDs. An ex286 ABC-order raw BDD replay was exact but worse (`1938/21/40698`), and ex286 greedy Fredkin gates barely reduced exact row mismatches (`8100 -> 8014` of `8192`). These are exclusions, not active seeds.
+- ex286-ex289 top-k/layer diagnostics: simple top-k score families were far from exact (`84/8192`, `107/16384`, `169/32768`; ex289 sample-only `54/604`), so the conservative map is not a simple top-k projection of local/prefix/singleton scores.
+- ex289 complement/reverse duality: ex289 alone has exact `f(~x) = ~reverse(f(x))` over `65536/65536` rows. Wrapping a representative-half multi-pair symcof source with this duality produced new ex289 current best `1115/22/24530` after limited `abc_g_aig`, improving prior `25175` but still above the `1.5x` target `20430`. Raw half-BDD and alternate selector follow-ups were exact but worse.
+- ex289 split-bit duality refinement: choosing split bit 2 for the representative half-domain was the key delay/area improvement. Split2 duality+symcof `(0,1,12,13)` plus limited `abc_g_aig` first produced `1046/20/20920`; rewriting the wrapper as XOR-form and using `f10 onehot` produced new current best `1047/19/19893`, ratio `1.460573`, within the `1.5x` target. Broader basic duality still found no ex286-ex288 equivalent, and ex289 selected-bit hybrid/selector/mux/share/order follow-ups did not beat `f10 onehot xor`.
+- ex286-ex289 linear conservation-law diagnostic: over mod `2/3/5/7`, the only linear invariant is global Hamming weight. This rejects independent block/lane conservation as a large-drop explanation unless a nonlinear hidden state is introduced.
+- ex286-ex288 count/embedding/low-delay follow-up: prefix/suffix/interval count predicates solved no bits, and direct fixed-bit cross-width embedding was too weak. Low-delay symcof replay found ex288 `2281/14/31934`; a later key-BDD selected-bit rewrite improved only slightly to `2257/14/31598`. This still leaves ex288 at `1.927x` reference, so the next ex288 path must find a real area reduction or a different source, not just selected-bit bypasses.
+- ex286-ex288 scan residual follow-up: prefix residual classes show compression from known pair symmetries/output many-to-one behavior, not a compact scan/transducer. Center order looked better diagnostically but exact symcof replay was area-explosive, so do not repeat center-order BDD/cofactor replay as tested.
+- ex286-ex288 LTF/comparator follow-up: raw and pair-canonical linear-threshold features solved no output bits; best matches were weak, so simple score/comparator predicates are not the missing reference-scale structure as tested.
+- ex286-ex288 parking/preference follow-up: static greedy parking/open-addressing from one-hot home slots and two-hot preference slots was far from exact (`145/8192`, `117/16384`, `217/32768` best full-row matches). This rejects simple preference-list parking as the large-drop structure, though richer data-dependent controlled routing remains open.
+- ex286-ex288 bucket-count classifier: one-hot-derived bucket counts plus a few selector bits exactly determine the output (`ex286`: `8` buckets + `raw3:raw10:xor6_7`; `ex287`: `7` buckets + `xor6_7:xor8_9:raw13:raw12`; `ex288`: `9` buckets + `raw13:raw10:xor6_7`). Direct flat `case(key)` RTL was exact but much worse (`274701`, `463013`, `581250` ADP), so this is a structural clue for future table decomposition rather than an active seed.
+- ex286-ex288 bucket-count table wrappers: invalid-key `default x` and per-output-bit key tables were exact but still much worse (`277662`, `482544`, `572400` best ADPs). The count-key decomposition remains useful only if the key-to-output function can be factored into a non-table structure.
+- ex286-ex288 bucket-key BDD: shared BDD over the compact count-key domain reduced the flat table substantially but stayed far from current (`97612`, `212004`, `320975` best ADPs). Selectors-first was the best tested key-bit order for all three cases.
+- ex286-ex288 bucket-key formula diagnostic: primitive count/selector predicates and depth-4 greedy primitive trees solved zero output bits. Direct key-domain ANF was also large (`3112..12042`, `17088..29876`, `5420..24272` term ranges), so shallow formula decomposition is not the missing structure as tested.
+- ex286-ex288 sampled bucket-key cube cover: invalid-key don't-care expansion found some broad cubes (`144`, `192`, `576` on-key coverage maxima), strongest for ex288, but no complete cover or seed was produced. A future exact-cover attempt needs a bitset-optimized implementation, not the naive full Python cover.
+- ex288 limited bucket-key exact cover: bitset greedy cover with `512` representative candidate cubes per bit still required `637..2524` cubes and `9030..37758` literals per bit, so direct SOP over the bucket key is not seed-worthy as tested.
+- ex286-ex288 split-domain duality diagnostic: tested complement/reverse/split transforms analogous to the ex289 breakthrough. No ex286-ex288 relation was close to exact (`32/2048`, `228/8192`, `66/8192` best matches), while ex289 sanity was exact, so this wrapper family is rejected for ex286-ex288 as tested.
+- ex286-ex288 bucket-count LTF diagnostic: exact bucket counts and selector bits are not simple threshold/comparator formulas for output bits; no bit was exact and best matches were weak (`4805/8192`, `9045/16384`, `19487/32768`).
+- ex286-ex288 bucket field-support diagnostic: greedy field selection reaches exactness only with essentially full bucket keys (`11`, `11`, and `12` fields; `4608`, `6912`, and `13824` keys), so there is no small per-bit field-support split of the exact bucket decomposition as tested.
+- ex286-ex288 cofactored pair-count MDD diagnostic: combining outer cofactors with ternary pair-count MDDs did not beat the current BDD/cofactor source structurally; best node counts were `3719`, `4711`, and `11104`, so no seed was emitted.
+- ex286-ex289 semantic big-jump diagnostic: conservation parity repair was exact for ex286 but delay-heavy (`1422/24/34128`); iterative application has nontrivial cycles; prefix-threshold BDDs were much larger than direct output BDDs; slot arithmetic/rotates remained one-hot-scale; ex289 NPN input-transform coverage was only `3678/65536`; direct ABC `read_truth -xf` sanity on ex286 was not reference-scale.
+- ex286 pair-sort beam diagnostic: a depth-8 beam-64 search over unconditioned pair-sort/comparator primitives stayed near full-table mismatch (`8154/8192` rows), rejecting small comparator networks as tested.
+- ex286-ex289 rank/linear diagnostic: GF(2) input/output relation nullity is `1` for every case, so only global parity is available for XOR repair; layer-wise combinadic-rank affine scans had only weak near-full-layer matches.
+- ex286-ex288 cofactor ANF diagnostic: direct ANF for the current cofactor groups is too large (`10948`, `12916`, `35964` total terms), so replacing BDD groups with ANF/Davio-like direct algebra is not promising as tested.
+- ex286-ex288 low-support key-BDD selected-bit hybrid: bypassing selected low-support output bits through a canonical-key shared BDD was official exact. It produced only a small ex288 best (`2257/14/31598`) and regressed ex286/ex287 (`21795`, `27840`), so it is recorded as a verified structural hybrid but not a large-drop path.
+- ex286-ex288 bucket top-k score diagnostic: using the exact bucket-count state, linear count/selector score sorting and an ex286 quadratic smoke were still far from exact (`286/8192`, `87/16384`, `137/32768` best row matches). No comparator/top-k RTL seed was emitted.
+- ex286-ex288 delta insertion diagnostic: low unique deltas exist on known symmetry-pair insert bits (`22`, `26`, `28` masks), but previous-output-state insertion remains conflicted and delta BDDs are still large (`821`, `1103`, `1351` best nodes). No token-insertion recurrence RTL seed was emitted.
+- ex286-ex288 streaming prefix diagnostic: natural/reverse/center/onehot-slot input/output orders with lookahead up to `6` never determined even the first output prefix exactly. This rejects a small-lookahead streaming transducer source as tested.
+- ex286-ex288 transform ANF residual diagnostic: raw, pair-key, and prefix/suffix coordinate transforms with degree `1/2/3` ANF extraction solved zero bits and did not reduce residual BDDs (`1.000000`, `0.999890`, `0.999242` best residual/raw ratios). No low-degree hybrid seed was emitted.
+- ex286-ex289 layer-rank/Johnson diagnostic: broader combination-rank transforms over lex/revlex/colex/revcolex and natural/reverse/center/outside/onehot-slot orders were still far from exact. Best layer matches were `14/1287`, `15/2002`, `22/1365`, and `20/1820`; zero exact layers. Johnson-neighborhood central average output distances were around `5.15..5.88`, not a low-distortion local layer map.
+- ex286 bucket-key PLA/DC ABC probe: direct multi-output PLA minimization of the exact compact bucket key is not the missed large-drop structure. The best key-to-output-only network was `4374/15/65610` after `espresso; bdd; sop; fx; strash; dc2`, before adding bucket counter/key logic.
+- ex286 exact-bit smoke: single-line bit truth extraction works, but ABC `exact` only supports `2..8` variables and aborts on 13-input ex286 bit truth. Direct multi-output `read_truth -xf; bdd; sop; fx; strash; dc2` reached `2560/15`, worse than current, so no candidate was emitted.
+- ex286-ex288 collision/carry formula diagnostic: bucket-count equality/thresholds, prefix/suffix/window count thresholds, subtype selectors, and top-80 two-primitive XOR/AND/OR combinations solved zero output bits. Best matches were only `5397/8192`, `11040/16384`, and `21248/32768`, so shallow formulas over the exact collision state are not the missing source.
+- ex286-ex289 interval relocation diagnostic: contiguous input runs have visible output patterns, but direct interval superposition and next-combination families are not the function. Tested next/previous combination rank-neighbors, bit-reversal variants, interval OR/XOR superposition, modular multiply, reversed-domain multiply, and rotations; best row matches were only `142/8192`, `183/16384`, `259/32768`, and `368/65536`.
+- ex286-ex288 to ex289 embedding diagnostic: a simple restriction/projection transfer from the strong ex289 split2-duality source is not present. Order-preserving input embeddings into ex289, constants on deleted input bits, and ordered or one-hot-inferred output projections had zero survivors after zero/one-hot/two-hot sample pruning.
+- ex286-ex289 barrel permutation diagnostic: fixed rotations, bit-reversal rotations, rotate-by-popcount, and small-control rotates are not the hidden low-area structure. Best row matches were only `82/8192`, `107/16384`, `138/32768`, and `162/65536`.
+- ex286-ex289 finite collision/algebra diagnostic: compact or near-identity hidden labels can memorize the two-hot layer (`78/78`, `91/91`, `105/105`, `120/120`), but shared pair-correction XOR superposition fails on full tables (`370/8192`, `604/16384`, `852/32768`, `2001/65536`). Symmetric modular affine pair rules are much weaker, so finite pair-collision algebra is rejected as the missing large-drop structure.
+- ex286-ex289 static-feature controlled-swap diagnostic: raw-bit, symmetry-pair, bucket, prefix, and suffix count controls were tested as conservative mux-swap routing signals. Sampled mismatches stayed near full sample size after 12 greedy layers (`1301/1352`, `1386/1436`, `1476/1522`, `1557/1594` best per case), and ex286 full-table smoke was also weak, so this is not the missing large-drop structure as tested.
+- ex286-ex289 bucket-count prefix/layout diagnostic: exact bucket counts plus selectors were tested as histogram/thermometer output placement with bucket/output orders and selector-controlled offsets. Best row matches were only `69/8192`, `71/16384`, `115/32768`, and `150/65536`, so the exact count-key clue is not a simple prefix-layout circuit as tested.
+- ex286-ex289 Gray-layer order diagnostic: BRGC-filtered, bit-reversed Gray, rank-gray, and per-layer small affine/shift models over same-popcount layers were tested. Best row matches were only `103/8192`, `121/16384`, `156/32768`, and `194/65536`, so these are not the missing rank-successor circuits as tested.
+- ex286-ex289 input/output coordinate ANF diagnostic: output-coordinate prefix/suffix/Gray transforms were added to the older input-coordinate ANF checks. Best results exposed only one exact transformed bit at degree<=4 for each case (`1/13`, `1/14`, `1/15`, `1/16`) with large total term counts, so there is no ex280-ex284-style coordinate-compressor collapse as tested.
+- ex286-ex289 bucket-count collision-relaxation diagnostic: exact one-hot home counts were treated as initial occupancy and relaxed with parking carry, binary carry, balanced nearest parking, and line/cycle sandpile rules. Even selector-specific policies matched only `130/8192`, `97/16384`, `162/32768`, and `177/65536`, so this is not the missing local-carry count circuit as tested.
+- ex286-ex289 image/canonical representative diagnostic: outputs are not simple representatives of exact bucket-key classes. Output-in-class rates were only `82/4608`, `107/6912`, `138/13824`, and `162/20736`; best min/max representative models matched only `60`, `93`, `94`, and `141` classes.
+- ex286-ex289 exact bucket-key multi-valued MDD diagnostic: treating bucket counts and selectors as true multi-valued variables reduces the binary key-BDD/table view but still leaves large graphs. Best nonterminal nodes were `1710`, `3198`, `2962`, and `4898` with max widths `430`, `1919`, `751`, and `1404`, so no MDD RTL seed was emitted. This rules out a straightforward factored exact bucket-key decision diagram as the large-drop structure.
+- ex286-ex289 global token-slot matching diagnostic: a stronger learned maximum-weight assignment model over one-hot/two-hot/low3 evidence already fails on the weight<=3 gate. Best row matches were only `54/378`, `66/470`, `83/576`, and `101/697`, so this does not explain the conservative routing semantics and no RTL seed was emitted.
+- ex286-ex289 fixed-popcount slice polynomial diagnostic: ordinary ANF can miss layer-local structure, so each Hamming-weight slice was checked against degree<=1/2/3/4 GF(2) monomial spans. Degree<=4 solved only boundary layers; central layers had zero exact output bits (`ex286` w6/w7, `ex287` w7, `ex288` w7/w8, `ex289` w8). No slice-polynomial RTL seed was emitted.
+- ex286-ex289 arbitrary output-linear ANF diagnostic: a real but small hidden coordinate family exists. Degree<=4 output-linear nullity is `4` for every case, corresponding to mod-4 output lane parity masks (`0x1111`, `0x2222`, `0x4444`, `0x8888`, truncated by width). This is useful semantic evidence but not a full output basis.
+- ex286 lane-parity repair smoke: directly exploiting the mod-4 lane parity by skipping one bit per lane and repairing with degree<=4 ANF was exact but much worse (`44880..47610` ADP versus current `21705`). The lane parity clue needs a cheaper shared implementation before it is worth expanding.
+- ex286-ex289 lane-parity feature-span diagnostic: checked whether mod-4 output lane parity is a low-degree function of cheaper semantic features. Degree 1/2 over input lane parity, home lane counts, raw pair signals, bucket counts, and bucket selectors solved zero targets; degree 3 over the smaller feature sets also solved zero targets. No cheap replacement for the direct lane-parity ANF cone was found.
+- ex286-ex289 output-linear ANF high-degree follow-up: nullity continues growing to `8` at degree<=8, with mod-8 parity-like masks. Term counts are large (`281..704` at degree 8), so this is a moment hierarchy clue rather than a direct RTL source.
+- ex286-ex289 corrected image-constraint diagnostic: output image has no degree 1/2 GF(2) constraints. Degree 3 constraints exist (`4`, `21`, `3`, `28` nullity) and mostly express adjacent output-pair orientation relations.
+- ex286-ex289 adjacent output-pair orientation diagnostic: ex287/ex289 exactly share one orientation bit across all mixed adjacent output pairs; ex286/ex288 do not (`608`/`2517` conflicts). Re-encoding outputs as pair-counts plus orientation was not a large-drop BDD signal: ex287 `1088 -> 1031`, ex289 `1131 -> 1206`.
+- ex286-ex289 component-wise adjacent output-pair orientation diagnostic: using degree-3 image constraints as a pair graph gives exact orientation components for all four cases. Components are useful semantic evidence, but encoded BDD nodes are worse for ex286/ex288/ex289 (`837 -> 1417`, `1170 -> 2566`, `1131 -> 1206`) and only slightly better for ex287 (`1088 -> 1031`), so no RTL seed was emitted.
+- ex286-ex289 component pair-field split diagnostic: splitting the exact component encoding shows why it is not a big-drop RTL route. Orientation is cheap for ex287/ex289 (`35`/`41` BDD nodes) but pair-count fields dominate (`1179`, `998`, `2170`, `1172` nodes) and all cases keep full-width max support (`13/13`, `14/14`, `15/15`, `16/16`). Treat this as semantic evidence only; do not emit standalone pair-count/orientation sources without a new cheap pair-count derivation.
+- ex286-ex289 affine complement-duality diagnostics: searched high-leverage `f(P(~x)) = Q(~f(x))` self-reductions beyond the earlier hand-written identity/reverse/pair-swap family. Base affine/rotate/reverse P/Q search caught the known ex289 exact `id|reverse` relation (`65536/65536`) but ex286-ex288 best full matches were only `140/8192`, `4252/16384`, and `4864/32768`. A pair-composed exact-sample hash gate found no low-weight exact hit for ex286-ex288, while ex289 again matched `id|reverse` and known-pair-swap-equivalent variants. This rejects an ex289-style complement-permutation folding source for ex286-ex288 in the tested affine/index family.
+- ex286-ex289 bucket moment-coordinate diagnostic: exact bucket-count classifier state can be re-encoded by moment/residue scalars, but only at nearly the same key cardinality as the original bucket key. Exact greedy scalar rows required `4608`, `6912`, `13824`, and `20480` keys, while prefix/modulo/prefix+selector vector families were not exact. This is a key re-encoding, not a compact arithmetic decoder or large-drop RTL source.
+- ex286-ex289 output pair-count linear diagnostic: directly attacked the component-field bottleneck by testing whether adjacent output pair counts are affine over input bucket counts, selectors, prefix coordinates, selector products, quadratic count terms, or count indicators modulo 101. Every target/family system was inconsistent (`0/49`, `0/49`, `0/56`, `0/56` exact), so component orientation cannot be completed by a simple count-linear/quadratic arithmetic source as tested.
+- ex286-ex289 output pair-count tiny piecewise diagnostic: bounded min/max/clamp/sum-clip single and two-coordinate checks also failed to make adjacent pair counts exact. Best full-row matches were only `5771/8192`, `9430/16384`, `23561/32768`, and `34957/65536`, so cheap comparator/min-max pair-count formulas are not the missing large-drop source as tested.
+- ex286-ex289 output pair-count cumulative transport diagnostic: prefix-capacity/window transport over exact bucket counts plus selector offsets failed even more strongly. Best full-row matches were only `241/8192`, `528/16384`, `422/32768`, and `1074/65536`, so this is not the missing pair-count generator as tested.
+- ex295/ex297/ex299 rotation representative BDD replay: interleave/center representative-bit BDD reconstruction was official exact for all six rows but worse than current (`211128`, `980616`, `4039308` best ADPs), confirming that duplicated representative logic is not the missing ring structure.
 - ex280 targeted structure: 做過 BDD/Davio 特定 pair order、ECA、GF/power-map 類假設搜尋。ECA/GF 類沒有找到 exact semantic hit。
 
 目前觀察：
 - ex290, ex291, ex293, ex296, ex298 的 current frontend ADP 已經比較接近 reference，但仍不是語義化結構。
-- ex280-ex289 多數差距很大，後端優化 ex280 只從 `20118` 降到 `17220`，證明主要瓶頸仍是 frontend Verilog 結構。
+- ex280-ex289 多數差距很大，後端優化 ex280 只從 `20118` 降到 `17220`，證明主要瓶頸仍是 frontend Verilog 結構；ex289 目前已靠 split2 duality + XOR-wrapper source 進入 `1.5x` reference。
+- ex280-ex284 now use shared quadratic compressor sources plus `abc_g_aig`; the older mixed grouped full-clamp rows are superseded for current-best tracking.
+- Prefix-Davio remains useful as historical structural evidence, but the active next step is neither residual-bit Davio reduction nor the older `single mc & xor(group)` emitter. The useful work is a hand-derived exact compressor/linear-form basis over the full-clamp mux coordinates.
+- The next large-drop attempt should not be simple global polarity, elementary-symmetric scan, unmasked shifted-word AND/XOR, one-direction prefix-state scan, bilinear-rank split ANF, all-bit degree-3 mux-coordinate ANF, flat full-coordinate emit, direct/balanced XOR emit, dual high/low grouping, old grouped emit tuning, current wide-basis expansion, naive rank emitter, or direct-XOR compressor linear forms. It should simplify the shared quadratic compressor and reduce delay.
 - ex295-ex299 中 ex297/ex299 特別差，單靠 split/table/tree 類方法不夠。
-

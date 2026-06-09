@@ -1,0 +1,21 @@
+case,depth,score,row_mismatches,gate,notes
+ex286,0,47770,8100,,initial pair-canonical key
+ex286,1,45604,8086,0:8:9:1,greedy Fredkin gate control:left:right:invert
+ex286,2,44218,8091,9:0:7:0,greedy Fredkin gate control:left:right:invert
+ex286,3,42862,8091,8:4:5:1,greedy Fredkin gate control:left:right:invert
+ex286,4,41848,8084,12:2:8:1,greedy Fredkin gate control:left:right:invert
+ex286,5,40856,8068,9:1:6:0,greedy Fredkin gate control:left:right:invert
+ex286,6,40074,8060,11:3:7:1,greedy Fredkin gate control:left:right:invert
+ex286,7,39530,8050,12:3:9:1,greedy Fredkin gate control:left:right:invert
+ex286,8,39098,8044,7:10:11:1,greedy Fredkin gate control:left:right:invert
+ex286,9,38676,8046,8:4:10:1,greedy Fredkin gate control:left:right:invert
+ex286,10,38240,8044,2:4:12:0,greedy Fredkin gate control:left:right:invert
+ex286,11,37878,8019,10:8:12:1,greedy Fredkin gate control:left:right:invert
+ex286,12,37626,8017,4:0:2:0,greedy Fredkin gate control:left:right:invert
+ex286,13,37392,8014,12:1:3:0,greedy Fredkin gate control:left:right:invert
+ex286,14,37162,8009,4:2:6:0,greedy Fredkin gate control:left:right:invert
+ex286,15,37002,8013,10:5:7:1,greedy Fredkin gate control:left:right:invert
+ex286,16,36926,8013,11:5:7:0,greedy Fredkin gate control:left:right:invert
+ex286,17,36860,8000,0:9:11:0,greedy Fredkin gate control:left:right:invert
+ex286,18,36788,8014,9:0:4:0,greedy Fredkin gate control:left:right:invert
+ex286,19,36788,8014,,stopped; no improving Fredkin gate

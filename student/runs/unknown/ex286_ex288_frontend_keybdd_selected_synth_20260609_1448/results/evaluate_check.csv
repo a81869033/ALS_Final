@@ -1,0 +1,7 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symcof_keybdd_selected_interleave_f00_k4_keybdd_5_6_7_abc_g_aig,1,1453,15,21795,Yosys abc gate set aig
+ex286,ex286_unknown_symcof_keybdd_selected_interleave_f00_k4_keybdd_5_6_7_abc_g_aig_d14,1,1453,15,21795,Yosys abc gate set aig delay target 14
+ex287,ex287_unknown_symcof_keybdd_selected_interleave_f00_k5_keybdd_6_7_abc_g_aig,1,1856,15,27840,Yosys abc gate set aig
+ex287,ex287_unknown_symcof_keybdd_selected_interleave_f00_k5_keybdd_6_7_abc_g_aig_d14,1,1856,15,27840,Yosys abc gate set aig delay target 14
+ex288,ex288_unknown_symcof_keybdd_selected_interleave_f10_k6_keybdd_7_abc_g_aig,1,2257,14,31598,Yosys abc gate set aig
+ex288,ex288_unknown_symcof_keybdd_selected_interleave_f10_k6_keybdd_7_abc_g_aig_d14,1,2257,14,31598,Yosys abc gate set aig delay target 14

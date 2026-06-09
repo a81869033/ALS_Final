@@ -1,0 +1,6 @@
+case,candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp,delta_vs_current,beats_current,variant,items,notes
+ex280,ex280_unknown_layered_anf_davio_prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,622,31,19282,2415,7.984265,17220,2062,0,prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,Yosys abc gate set aig,Yosys abc gate set aig
+ex281,ex281_unknown_layered_anf_davio_prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,700,33,23100,2336,9.888699,20592,2508,0,prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,Yosys abc gate set aig,Yosys abc gate set aig
+ex282,ex282_unknown_layered_anf_davio_prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,761,35,26635,2704,9.850222,26635,0,0,prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,Yosys abc gate set aig,Yosys abc gate set aig
+ex283,ex283_unknown_layered_anf_davio_prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,872,39,34008,3168,10.734848,29785,4223,0,prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,Yosys abc gate set aig,Yosys abc gate set aig
+ex284,ex284_unknown_layered_anf_davio_prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,969,39,37791,4240,8.912972,38682,-891,1,prefix_parity_reduce_deg1_endpoint_rev_abc_g_aig,Yosys abc gate set aig,Yosys abc gate set aig

@@ -1,0 +1,2 @@
+case,best_candidate_id,area,delay,adp,reference_adp,adp_ratio_to_reference,current_best_adp_before_update,delta_vs_current_before_update,notes
+ex282,ex282_unknown_key_cofactor_bdd_prefix_parity_reduce_bits_0_13_1_12_2_11,1020,32,32640,2704,12.071006,31512,1128,unknown transformed-key cofactor-BDD Verilog seed

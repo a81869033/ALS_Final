@@ -1,0 +1,5 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_duality_half_bdd_order_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14,1,5834,28,163352,unknown duality half-BDD Verilog seed
+ex289,ex289_unknown_duality_half_bdd_order_14_13_12_11_10_9_8_7_6_5_4_3_2_1_0,1,17650,29,511850,unknown duality half-BDD Verilog seed
+ex289,ex289_unknown_duality_half_bdd_order_0_14_1_13_2_12_3_11_4_10_5_9_6_8_7,1,1415,27,38205,unknown duality half-BDD Verilog seed
+ex289,ex289_unknown_duality_half_bdd_order_0_1_12_13_2_14_3_11_4_5_6_7_8_9_10,1,1176,24,28224,unknown duality half-BDD Verilog seed

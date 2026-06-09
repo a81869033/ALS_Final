@@ -1,0 +1,4 @@
+case,best_variant,best_adp,current_best_adp,best_vs_current_ratio,reference_adp,best_vs_reference_ratio,case_defaultx_best_adp,perbit_defaultx_adp,selected_features,key_width,mapped_keys,verdict
+ex286,abc_g_aig,277662,21705,12.792536,2376,116.861111,277662,431520,raw3:raw10:xor6_7,15,4608,reject default-x and per-bit table emitters; exact count-key still needs non-table decomposition
+ex287,abc_g_aig,482544,27480,17.559825,5782,83.456244,482544,782914,xor6_7:xor8_9:raw13:raw12,16,6912,reject default-x and per-bit table emitters; exact count-key still needs non-table decomposition
+ex288,abc_g_aig,572400,31934,17.924469,16394,34.915213,575472,572400,raw13:raw10:xor6_7,16,13824,reject default-x and per-bit table emitters; exact count-key still needs non-table decomposition

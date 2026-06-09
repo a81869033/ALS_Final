@@ -1,0 +1,4 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex289,ex289_unknown_duality_symcof_split2_f00_bits_0_1_12_13_case_global,1,1116,21,23436,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_split2_f00_bits_0_1_12_13_tree_global,1,1166,24,27984,unknown duality-wrapped symmetry cofactor seed
+ex289,ex289_unknown_duality_symcof_split2_f00_bits_0_1_12_13_onehot_global,1,1097,21,23037,unknown duality-wrapped symmetry cofactor seed

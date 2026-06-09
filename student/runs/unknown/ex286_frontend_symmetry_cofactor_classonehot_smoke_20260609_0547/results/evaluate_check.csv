@@ -1,0 +1,9 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symcof_interleave_f10_k2,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f10_k3,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f10_k4,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f10_k5,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f00_k2,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f00_k3,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f00_k4,0,,,,SynthError: Yosys executable not found: yosys
+ex286,ex286_unknown_symcof_interleave_f00_k5,0,,,,SynthError: Yosys executable not found: yosys

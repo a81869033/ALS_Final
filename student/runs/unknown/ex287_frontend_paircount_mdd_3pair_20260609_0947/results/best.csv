@@ -1,0 +1,2 @@
+case,candidate_id,hypothesis,variant,verilog_path,aig_path,area,delay,adp,items,notes
+ex287,ex287_unknown_paircount_mdd_reverse,unknown_paircount_mdd,reverse,student/work/ex287_frontend_paircount_mdd_3pair_20260609_0947/ex287/verilog/ex287_unknown_paircount_mdd_reverse.v,student/work/ex287_frontend_paircount_mdd_3pair_20260609_0947/ex287/aigs/ex287_unknown_paircount_mdd_reverse.aig,1771,20,35420,"pairs=4:5,6:7,8:9; order_style=reverse; mdd_nodes=992; order=10:9:8:7:6:5:4:3:2:1:0; hash_pending=1; hash=0c4abf8117ee",pair-count multi-valued decision diagram

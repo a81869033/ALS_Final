@@ -1,0 +1,17 @@
+case,input_width,prime,nullity,interpretation
+ex286,13,2,1,only_global_popcount
+ex286,13,3,1,only_global_popcount
+ex286,13,5,1,only_global_popcount
+ex286,13,7,1,only_global_popcount
+ex287,14,2,1,only_global_popcount
+ex287,14,3,1,only_global_popcount
+ex287,14,5,1,only_global_popcount
+ex287,14,7,1,only_global_popcount
+ex288,15,2,1,only_global_popcount
+ex288,15,3,1,only_global_popcount
+ex288,15,5,1,only_global_popcount
+ex288,15,7,1,only_global_popcount
+ex289,16,2,1,only_global_popcount
+ex289,16,3,1,only_global_popcount
+ex289,16,5,1,only_global_popcount
+ex289,16,7,1,only_global_popcount

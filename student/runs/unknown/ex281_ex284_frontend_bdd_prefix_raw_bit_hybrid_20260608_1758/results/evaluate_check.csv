@@ -1,0 +1,6 @@
+case,candidate_id,verified_truth,synthesized,equivalent,area,delay,adp,verilog_exists,aig_exists,notes
+ex281,ex281_unknown_bit_hybrid_primary_7_8_9,1,1,1,1208,32,38656,1,1,bit-hybrid of two verified exact Verilog sources
+ex281,ex281_unknown_bit_hybrid_primary_6_7_8_9_10,1,1,1,1280,31,39680,1,1,bit-hybrid of two verified exact Verilog sources
+ex281,ex281_unknown_bit_hybrid_primary_7_8_9_10_11_12,1,1,1,1253,29,36337,1,1,bit-hybrid of two verified exact Verilog sources
+ex281,ex281_unknown_bit_hybrid_primary_4_5_6_7_8_9_10_11_12,1,1,1,1216,23,27968,1,1,bit-hybrid of two verified exact Verilog sources
+ex281,ex281_unknown_bit_hybrid_primary_8,1,1,1,1114,30,33420,1,1,bit-hybrid of two verified exact Verilog sources

@@ -1,0 +1,7 @@
+case,target_case,mode,input_embeddings,sample_survivors,full_checked,best_matches,total_rows,notes
+ex286,ex289,ordered_input_ordered_output,4480,0,0,0,8192,zero/one-hot/two-hot sample prune before full-table check
+ex286,ex289,ordered_input_onehot_output_permutation,4480,0,0,0,8192,zero/one-hot/two-hot sample prune before full-table check
+ex287,ex289,ordered_input_ordered_output,480,0,0,0,16384,zero/one-hot/two-hot sample prune before full-table check
+ex287,ex289,ordered_input_onehot_output_permutation,480,0,0,0,16384,zero/one-hot/two-hot sample prune before full-table check
+ex288,ex289,ordered_input_ordered_output,32,0,0,0,32768,zero/one-hot/two-hot sample prune before full-table check
+ex288,ex289,ordered_input_onehot_output_permutation,32,0,0,0,32768,zero/one-hot/two-hot sample prune before full-table check

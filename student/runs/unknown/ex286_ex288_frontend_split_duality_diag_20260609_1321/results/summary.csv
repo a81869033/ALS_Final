@@ -1,0 +1,5 @@
+case,best_split_bit,best_input_transform,best_output_transform,best_matches,best_total,best_match_ratio,exact_relations,verdict
+ex286,7,reverse_comp_except_split,identity,32,2048,0.015625,0,reject tested split-domain duality/self-reduction for ex286-ex288
+ex287,0,comp_all,identity,228,8192,0.027832,0,reject tested split-domain duality/self-reduction for ex286-ex288
+ex288,6,reverse_comp_except_split,identity,66,8192,0.008057,0,reject tested split-domain duality/self-reduction for ex286-ex288
+ex289_sanity,0,comp_all,comp_reverse,32768,32768,1.000000,16,sanity pass: script detects known ex289 duality

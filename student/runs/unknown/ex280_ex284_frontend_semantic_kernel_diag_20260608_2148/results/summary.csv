@@ -1,0 +1,6 @@
+case,hypothesis,candidate_count,best_candidate_id,best_adp,notes
+ex280,semantic_kernel_diag,0,,,diagnostic-only run; no Verilog/AIG seed emitted
+ex281,semantic_kernel_diag,0,,,diagnostic-only run; no Verilog/AIG seed emitted
+ex282,semantic_kernel_diag,0,,,diagnostic-only run; no Verilog/AIG seed emitted
+ex283,semantic_kernel_diag,0,,,diagnostic-only run; no Verilog/AIG seed emitted
+ex284,semantic_kernel_diag,0,,,diagnostic-only run; no Verilog/AIG seed emitted

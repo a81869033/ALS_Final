@@ -1,0 +1,5 @@
+case,verified,equivalent,best_rank_layer,best_rank_matches,best_rank_layer_size,best_rank_match_ratio,best_rank_transform,exact_rank_layers,central_johnson_layer,central_avg_output_distance,central_distance2_ratio,notes
+ex286,0,0,5,14,1287,0.010878,identity,0,6,5.151460,0.189033,diagnostic-only; no exact compact layer-rank/unrank structure emitted
+ex287,0,0,5,15,2002,0.007493,affine_small,0,7,5.340279,0.195245,diagnostic-only; no exact compact layer-rank/unrank structure emitted
+ex288,0,0,11,22,1365,0.016117,identity,0,7,5.733866,0.151326,diagnostic-only; no exact compact layer-rank/unrank structure emitted
+ex289,0,0,4,20,1820,0.010989,reverse,0,8,5.875622,0.169279,diagnostic-only; no exact compact layer-rank/unrank structure emitted

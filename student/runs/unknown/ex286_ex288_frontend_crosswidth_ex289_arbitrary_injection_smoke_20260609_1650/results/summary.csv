@@ -1,0 +1,4 @@
+case,target_case,mode,checked_candidates,survivors,total_rows,notes
+ex286,ex289,slot_consistent_arbitrary_injection_twohot_smoke,200001,0,8192,capped smoke; no two-hot-consistent survivor in checked candidates
+ex287,ex289,slot_consistent_arbitrary_injection_twohot_smoke,200001,0,16384,capped smoke; no two-hot-consistent survivor in checked candidates
+ex288,ex289,slot_consistent_arbitrary_injection_twohot_smoke,0,0,32768,zero checked because ex288 has 9 distinct one-hot output slots but ex289 has 8

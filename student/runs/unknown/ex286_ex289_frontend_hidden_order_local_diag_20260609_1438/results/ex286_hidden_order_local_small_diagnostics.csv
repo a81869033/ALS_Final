@@ -1,0 +1,5 @@
+case,rank,input_order,output_order,shift,radius,ring,include_popcount,sample_exact_bits,sample_conflicts,full_exact_bits,full_conflicts,max_keys,notes
+ex286,1,reverse,revslot_revbit,7,2,1,1,0,1719,0,44172,288,sample_top=100; sample_size=559
+ex286,2,natural,slot_bit,6,2,1,1,0,1719,0,44172,288,sample_top=100; sample_size=559
+ex286,3,reverse,natural,3,2,1,1,0,1819,0,45337,288,sample_top=100; sample_size=559
+ex286,4,natural,reverse,10,2,1,1,0,1819,0,45337,288,sample_top=100; sample_size=559

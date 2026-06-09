@@ -1,0 +1,7 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex287,ex287_unknown_symcof_interleave_f10_k4,1,3146,196,616616,unknown symmetry cofactor class-onehot Verilog seed
+ex287,ex287_unknown_symcof_interleave_f10_k5,1,3241,199,644959,unknown symmetry cofactor class-onehot Verilog seed
+ex287,ex287_unknown_symcof_interleave_f10_k6,1,3373,166,559918,unknown symmetry cofactor class-onehot Verilog seed
+ex287,ex287_unknown_symcof_interleave_f00_k4,1,3110,207,643770,unknown symmetry cofactor class-onehot Verilog seed
+ex287,ex287_unknown_symcof_interleave_f00_k5,1,3191,185,590335,unknown symmetry cofactor class-onehot Verilog seed
+ex287,ex287_unknown_symcof_interleave_f00_k6,1,3426,165,565290,unknown symmetry cofactor class-onehot Verilog seed

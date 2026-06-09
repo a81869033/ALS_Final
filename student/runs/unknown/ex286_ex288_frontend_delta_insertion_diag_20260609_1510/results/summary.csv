@@ -1,0 +1,4 @@
+case,rows,verified,equivalent,best_unique_insert_bit,best_unique_deltas,best_node_insert_bit,best_delta_bdd_nodes,best_conflict_insert_bit,best_before_output_conflicts,max_before_output_majority_match,transition_count,notes
+ex286,13,0,0,6,22,8,821,12,266,3383,4096,diagnostic-only; insertion deltas not compact enough for recurrence RTL
+ex287,14,0,0,6,26,6,1103,13,388,6706,8192,diagnostic-only; insertion deltas not compact enough for recurrence RTL
+ex288,15,0,0,6,28,6,1351,14,1073,12776,16384,diagnostic-only; insertion deltas not compact enough for recurrence RTL

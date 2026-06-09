@@ -1,0 +1,2 @@
+case,rows,verified,equivalent,best_adp,reference_adp,adp_ratio_to_reference,current_best_adp,notes
+ex286,1,1,1,40698,2376,17.128788,21705,worse than current; raw BDD ABC-order rejected

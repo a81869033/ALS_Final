@@ -1,0 +1,3 @@
+case,candidate_id,status,area,delay,adp,official_area,official_delay,official_adp,match,replay_aig,notes
+ex292,ex292_unknown_cofactor_bdd_low1,OK,6826,23,156998,6826,23,156998,1,student/runs/unknown/ex292_ex294_frontend_bdd_cofactor_20260608_1554/official_replay/ex292.aig,evaluate.py --case replay OK; verified but worse than current best
+ex294,ex294_unknown_cofactor_bdd_low1,OK,10898,23,250654,10898,23,250654,1,student/runs/unknown/ex292_ex294_frontend_bdd_cofactor_20260608_1554/official_replay/ex294.aig,evaluate.py --case replay OK; verified but worse than current best

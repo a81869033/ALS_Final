@@ -1,0 +1,4 @@
+case,bits,exact_single_bits,exact_tree_bits,min_anf_terms,max_anf_terms,min_anf_degree,max_anf_degree,best_single_match_min,best_single_match_max,verdict
+ex286,13,0,0,3112,12042,12,15,5585,6144,reject primitive count/selector formulas and depth-4 greedy primitive trees; key ANF not compact
+ex287,14,0,0,17088,29876,14,16,11985,12591,reject primitive count/selector formulas and depth-4 greedy primitive trees; key ANF not compact
+ex288,15,0,0,5420,24272,13,16,23475,24576,reject primitive count/selector formulas and depth-4 greedy primitive trees; key ANF not compact

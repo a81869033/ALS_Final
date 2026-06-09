@@ -1,0 +1,2 @@
+case,best_depth,best_bit_score,best_row_mismatches,verdict
+ex286,final,44074,8154,reject small pair-sort comparator beam; final full-row mismatch remains near full table

@@ -1,0 +1,2 @@
+case,candidate_id,verified_truth,equivalent,area,delay,adp,verilog_path,aig_path,notes
+ex286,ex286_bits_0_1_9_10_abc_g_aig,1,1,1471,17,25007,student/work/ex286_frontend_symcof_selector_20260609_0822/ex286/verilog/ex286_unknown_symcof_interleave_f00_bits_0_1_9_10_onehot_group.v,student/work/ex286_frontend_symcof_selector_synthflow_20260609_0824/ex286/aigs/ex286_bits_0_1_9_10_abc_g_aig.aig,selector bitset abc_g_aig

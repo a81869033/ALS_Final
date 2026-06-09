@@ -1,0 +1,3 @@
+case,candidate_id,equivalent,area,delay,adp,notes
+ex286,ex286_unknown_symcase_default_x,1,4942,21,103782,unknown canonical pair-symmetry case table with invalid-key don't-cares
+ex286,ex286_unknown_symcase_default_zero,1,4942,21,103782,unknown canonical pair-symmetry case table with invalid-key don't-cares

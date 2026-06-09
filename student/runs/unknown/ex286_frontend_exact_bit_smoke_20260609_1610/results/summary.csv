@@ -1,0 +1,2 @@
+case,verified,equivalent,best_result,notes
+ex286,0,0,abc_truth_fx_2560_15,ABC single-bit extraction through cone/write_truth failed; extracting one bit-plane as a single-line truth worked, but ABC exact synthesis aborted because exact only supports 2..8 variables. Direct multi-output read_truth bdd/sop/fx smoke was exact-by-construction but large at 2560/15. No candidate emitted.
