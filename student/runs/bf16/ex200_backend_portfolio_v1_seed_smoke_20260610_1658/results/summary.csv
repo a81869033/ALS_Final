@@ -1,0 +1,2 @@
+case,best_candidate_id,best_aig_path,best_area,best_delay,best_adp,reference_area,reference_delay,reference_adp,adp_ratio_to_reference,beats_reference,pareto_points,near_pareto_points,history_rows
+ex200,ex200_r000_seed_seed_palt01_a3717_d17_adp63189_759c0927,student/work/ex200_backend_portfolio_v1_seed_smoke_20260610_1658/ex200/seeds/ex200_r000_seed_seed_palt01_a3717_d17_adp63189_759c0927.aig,3717,17,63189,1292,31,40052,1.577674,0,2,3,5

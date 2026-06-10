@@ -1,0 +1,13 @@
+case,family_id,tool,tool_chain,command,params_json,attempts,equivalent_count,new_pareto_count,timeout_count,failure_count,best_delta_adp,best_delta_area,best_delta_delay,recent_attempts,recent_new_pareto_count,recent_success_rate
+ex200,current,seed,seed,seed,{},1,1,0,0,0,,,,1,0,0.000
+ex200,alt01,seed,seed,seed,{},1,1,0,0,0,,,,1,0,0.000
+ex200,alt02,seed,seed,seed,{},1,1,0,0,0,,,,1,0,0.000
+ex200,alt03,seed,seed,seed,{},1,1,0,0,0,,,,1,0,0.000
+ex200,alt04,seed,seed,seed,{},1,1,0,0,0,,,,1,0,0.000
+ex200,current,abc,abc_resyn,resyn,{},1,1,0,0,0,-4197,-30,-1,1,0,0.000
+ex200,current,abc,abc_resyn2,resyn2,{},1,1,0,0,0,-4309,-37,-1,1,0,0.000
+ex200,current,abc,abc_resyn2a,resyn2a,{},1,1,0,0,0,-4165,-28,-1,1,0,0.000
+ex200,current,abc,abc_dc2,dc2,{},1,1,1,0,0,-4661,-59,-1,1,1,1.000
+ex200,current,abc,abc_dch,dch,{},1,1,0,0,0,-4629,-57,-1,1,0,0.000
+ex200,current,abc,abc_bal_rw,bal_rw,{},1,1,0,0,0,-4149,-27,-1,1,0,0.000
+ex200,current,abc9,abc9_syn2_dc2,abc9_syn2_dc2,{},1,1,1,0,0,7911,1023,-2,1,1,1.000
