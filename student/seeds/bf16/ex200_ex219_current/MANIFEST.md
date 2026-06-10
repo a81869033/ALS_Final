@@ -11,6 +11,11 @@ Contents:
 
 - One Verilog seed per case under `exNNN/verilog/`.
 - One synthesized AIG per case under `exNNN/aigs/`.
+- `results/best.csv` and `results/candidates.csv`: the 20 current-best rows
+  copied into this best-only seed bundle.
+- `results/evaluate_check.csv`: copied verification records for the current
+  best seed files.
+- `results/summary.csv`: one-row-per-case best-seed summary.
 - Total seed files: 40.
 - This bundle tracks only current best seeds.  The larger 255-row curated
   candidate pool remains in `student/runs/bf16/ex200_ex219_current/results/`

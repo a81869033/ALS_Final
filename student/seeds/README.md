@@ -13,9 +13,9 @@ Primary bundles:
 
 - `bf16/ex200_ex219_current/`: current best BF16 frontend seeds for
   `ex200`-`ex219`.
-- `bf16/ex200_ex219_backend_start_20260608_1008/`: backend-start BF16
-  bundle for `ex200`-`ex219`; includes the current best plus low-ADP/diverse
-  verified alternatives per case.
+- `bf16/ex200_ex219_backend_candidates_20260608_1008/`: non-best BF16
+  alternatives for `ex200`-`ex219`; use this as the secondary backend
+  starting-point pool after the best-only bundle.
 - `fp16/ex220_ex239_current/`: best-only FP16 bundle for `ex220`-`ex239`;
   exactly one current best verified Verilog/AIG seed per case.
 - `fp16/ex220_ex239_backend_candidates_20260608_1008/`: non-best FP16
