@@ -1,0 +1,22 @@
+{
+  "adp": 10438,
+  "aig_sha256": "df2ef8012aaeed64ca9bb33d758bb84438fe3b38dba862531496c101aabe0f0e",
+  "area": 307,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_semantic_hypot_delta_maxeff_bdd_expfirst_synth_preset",
+  "case": "ex244",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "fp8_e4m3fn_hypot_abs",
+  "method_signature": "fp8_e4m3fn_hypot_abs",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex240_ex244_frontend_fp8_magbdd_deltaeff_20260608_1401/ex244/aigs/ex244_semantic_hypot_delta_maxeff_bdd_expfirst_synth_preset.aig",
+  "source_csv": "student/runs/float_fp8/ex240_ex244_frontend_fp8_magbdd_deltaeff_20260608_1401/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex240_ex244_frontend_fp8_magbdd_deltaeff_20260608_1401",
+  "source_verilog_path": "student/work/ex240_ex244_frontend_fp8_magbdd_deltaeff_20260608_1401/ex244/verilog/ex244_semantic_hypot_delta_maxeff_bdd_expfirst.v",
+  "variant": "semantic_hypot_delta_maxeff_bdd_expfirst_synth_preset",
+  "verilog_sha256": "8f7c7ff25f556618ff609719fdd517af5203ea9b4eda4062569e2fbf1ca25825"
+}

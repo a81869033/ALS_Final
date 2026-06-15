@@ -1,0 +1,22 @@
+{
+  "adp": 235642,
+  "aig_sha256": "57962e56791214340bc7c1aa3aec37b4e3c44ab5f6efe1d9878631b1c28583f5",
+  "area": 10711,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_r9_route_no_keep_synth_preset",
+  "case": "ex294",
+  "delay": 22,
+  "domain": "unknown",
+  "hypothesis": "The kept route descriptor was bad under default flow, but synth-preset may optimize the unkept route boundary differently.",
+  "method_signature": "ex294|global_state_octant_descriptor_cofactor|route_descriptor_no_keep_synth_preset|shared_endpoint_midpoint_descriptor_without_keep|yosys_synth_flatten_abc_g_aig|official_evaluate|even_plane_route_mux",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/aigs/ex294_r9_route_no_keep_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-wide-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/logs/ex294_r9_route_no_keep_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/verilog/ex294_r9_route_no_keep_synth_preset.v",
+  "variant": "remove keep attributes from route descriptor and run synth-preset",
+  "verilog_sha256": "f1280c4fe58223f8b79e8c0e8f5116c946279da9e03719f845e5944a0fb13a0b"
+}

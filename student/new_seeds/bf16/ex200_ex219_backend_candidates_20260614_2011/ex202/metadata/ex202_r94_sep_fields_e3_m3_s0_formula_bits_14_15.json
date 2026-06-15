@@ -1,0 +1,22 @@
+{
+  "adp": 59262,
+  "aig_sha256": "945701f6b73bee5a75abcbb7c172bf6dbf41318bb7281418f24f8e5551ebf705",
+  "area": 3486,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex202_r94_sep_fields_e3_m3_s0_formula_bits_14_15",
+  "case": "ex202",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp10",
+  "method_signature": "ex202|bf16_exp10_compact_formula_residual|sep_fields_e3_m3_s0_formula_bits_14_15|shared field tables; formula residual for exponent-msb/sign|yosys_abc_g_AND_aigmap|DAZ_exp10_BF16_RNE_FTZ_canonical_NaN|source_level_output_grouping",
+  "reference_adp": 43344,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-exp-log-r94/ex202/aigs/ex202_r94_sep_fields_e3_m3_s0_formula_bits_14_15.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-exp-log-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-exp-log-r94/ex202/logs/ex202_r94_sep_fields_e3_m3_s0_formula_bits_14_15.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-exp-log-r94/ex202/verilog/ex202_r94_sep_fields_e3_m3_s0_formula_bits_14_15.v",
+  "variant": "separate output fields with hand formula for bit14 and constant sign bit",
+  "verilog_sha256": "569dee6f5be384228ee47ffbe1b3368f6a4d05f65a85f0d82ae8615cea6b5218"
+}

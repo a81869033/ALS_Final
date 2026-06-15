@@ -1,0 +1,22 @@
+{
+  "adp": 10500,
+  "aig_sha256": "a44893d50c611f8136f5357abf96731de78262c60209753cdcd43ea1b38f5157",
+  "area": 300,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_r60_gapcofactor_satsplit_raw_abc_g_aig",
+  "case": "ex244",
+  "delay": 35,
+  "domain": "float_fp8",
+  "hypothesis": "gap-cofactored delta tables with saturation split",
+  "method_signature": "gap-cofactored delta tables with saturation split",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round60_20260613_0825/sub-ex244-r60/ex244/aigs/ex244_r60_gapcofactor_satsplit_raw_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round60_20260613_0825/agent_shards/sub-ex244-r60/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round60_20260613_0825",
+  "source_verilog_path": "student/work/frontend_source_parallel_round60_20260613_0825/sub-ex244-r60/ex244/verilog/ex244_r60_gapcofactor_satsplit_raw.v",
+  "variant": "gapcofactor_satsplit/raw/abc_g_aig",
+  "verilog_sha256": "973249419e3235420abadac357254afca895db2304c090b64054c765cafa9de3"
+}

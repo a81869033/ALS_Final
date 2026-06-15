@@ -1,0 +1,22 @@
+{
+  "adp": 24435,
+  "aig_sha256": "a416f0ed82d575186815119936f5827dda5a3a6bcae833a1cb66030d93a40bbd",
+  "area": 1629,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex201_bf16_exp2_hilo2_field_mode",
+  "case": "ex201",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp2",
+  "method_signature": "bf16_exp2",
+  "reference_adp": 16300,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex201_ex204_frontend_semantic_continue_20260605_1732/ex201/aigs/ex201_bf16_exp2_hilo2_field_mode.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex201_ex204_frontend_semantic_continue_20260605_1732",
+  "source_verilog_path": "student/work/ex201_ex204_frontend_semantic_continue_20260605_1732/ex201/verilog/ex201_bf16_exp2_hilo2_field_mode.v",
+  "variant": "hilo2_field_mode",
+  "verilog_sha256": "351434d9ae0a598a0261c0196872527fac67bf22dcca22e5fd6b4a4ab49b0f00"
+}

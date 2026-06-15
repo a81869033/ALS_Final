@@ -1,0 +1,22 @@
+{
+  "adp": 71200,
+  "aig_sha256": "0a133042588468973901ae440b6d0e66d73716868f6863f795e0cabdb4e317b1",
+  "area": 4450,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex205_r95_bf16_log10_transform_source_reuse_out_sign_abc_g_aig",
+  "case": "ex205",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log10_field_decode_source_cleanup",
+  "method_signature": "ex205|bf16_log10_field_decode_source_cleanup|current source reusing out_sign instead of duplicate bit15 block|same field decode but removes duplicate selected sign-bit block|abc_g_aig|abc_xf_official_evaluate|field-reassembled word output",
+  "reference_adp": 47128,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex205/aigs/ex205_r95_bf16_log10_transform_source_reuse_out_sign_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_bf16_unknown_round95_20260614_0627/agent_shards/sub-bf16-log-tight-r95/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex205/logs/ex205_r95_bf16_log10_transform_source_reuse_out_sign_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_bf16_unknown_round95_20260614_0627",
+  "source_verilog_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex205/verilog/ex205_r95_bf16_log10_transform_source_reuse_out_sign.v",
+  "variant": "current source reusing out_sign instead of duplicate bit15 block",
+  "verilog_sha256": "39bf2fb33c8e8a908479e93cca44c69e859c1397bd4a9aa04231e939b22bf1cc"
+}

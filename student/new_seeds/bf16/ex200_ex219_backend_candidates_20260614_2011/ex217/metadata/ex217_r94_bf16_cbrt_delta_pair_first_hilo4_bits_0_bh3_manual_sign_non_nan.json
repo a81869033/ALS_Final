@@ -1,0 +1,22 @@
+{
+  "adp": 8216,
+  "aig_sha256": "e744f9d5a4bd229bad934fbf74a6c8810f94cf4e993ba3e28a2a8074078d7bf1",
+  "area": 632,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex217_r94_bf16_cbrt_delta_pair_first_hilo4_bits_0_bh3_manual_sign_non_nan",
+  "case": "ex217",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_cbrt",
+  "method_signature": "ex217|round94_frontend_structural_bf16|bf16_cbrt|delta_pair_first_hilo4_bits_0_bh3_manual_sign_non_nan|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 5785,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex217/official_eval/ex217_r94_bf16_cbrt_delta_pair_first_hilo4_bits_0_bh3_manual_sign_non_nan/ex217.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/best.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex217/logs/ex217_r94_bf16_cbrt_delta_pair_first_hilo4_bits_0_bh3_manual_sign_non_nan.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex217/verilog/ex217_r94_bf16_cbrt_delta_pair_first_hilo4_bits_0_bh3_manual_sign_non_nan.v",
+  "variant": "hi4 first-delta source grouping with selected bit0 repair",
+  "verilog_sha256": "b5c7df6b4f5db9149fb3fd207fe03a89440b845ba68dbbbc6a24479cea6a5c1b"
+}

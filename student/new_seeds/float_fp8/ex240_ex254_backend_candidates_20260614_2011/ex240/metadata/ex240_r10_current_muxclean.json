@@ -1,0 +1,22 @@
+{
+  "adp": 28215,
+  "aig_sha256": "a2ad0d07c591f3a8b1e62fdb244b48fb071f1c17f8a03c76c658162f70f3c667",
+  "area": 627,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex240_r10_current_muxclean",
+  "case": "ex240",
+  "delay": 45,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex240|E4M3FN packed add high byte plus low byte|current frontend best source with opt_muxtree/opt_reduce before abc -g aig|preserves current shared source while reducing mux tree shape before AIG mapping|muxclean_aig|official_evaluate|frontend_only",
+  "reference_adp": 13299,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex240/aigs/ex240_r10_current_muxclean.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r10/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex240/logs/ex240_r10_current_muxclean.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex240/verilog/ex240_r10_current_muxclean.v",
+  "variant": "current frontend best source with opt_muxtree/opt_reduce before abc -g aig",
+  "verilog_sha256": "fdb9b5b08cd0c71569081ea16cb2799e35cb0a52bd20dd5b2d0318e7cb9b95cb"
+}

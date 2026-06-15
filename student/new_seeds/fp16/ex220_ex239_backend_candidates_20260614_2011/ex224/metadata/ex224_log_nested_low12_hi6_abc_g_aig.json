@@ -1,0 +1,22 @@
+{
+  "adp": 96224,
+  "aig_sha256": "082725037eb2c4c989a0813ee24cf19c96a89a7a4c8c8fcb03a196883540325e",
+  "area": 6014,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex224_log_nested_low12_hi6_abc_g_aig",
+  "case": "ex224",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "positive-normal log-family nested mantissa seed",
+  "method_signature": "ex224|fp16_log2 positive-normal log-family semantic shell|nested_hi_lo_mantissa_lut_high_bit_run_trees|shared_special_sign_exp_decode_per_exp_mantissa_runs|yosys_abc_g_aig|abc_xf_official_evaluate|high_bits_run_trees_low12_nested_hi6",
+  "reference_adp": 64708,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/fp16-agent/ex224/aigs/ex224_log_nested_low12_hi6_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/fp16-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/fp16-agent/ex224/logs/ex224_log_nested_low12_hi6_abc_g_aig_official_evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/fp16-agent/ex224/verilog/ex224_log_nested_low12_hi6.v",
+  "variant": "log_nested_low12_hi6",
+  "verilog_sha256": "50b48d60226e8eac53bfc77b892d5bb7f2905de875469d57b87e7a7df3df64f8"
+}

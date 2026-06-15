@@ -1,0 +1,22 @@
+{
+  "adp": 26424,
+  "aig_sha256": "7946ca7f33dc1156af76449ff3a1f039e3862fae4b15ec43793af6964a4f5d5e",
+  "area": 734,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex273_r9_top2726_interval_overlay",
+  "case": "ex273",
+  "delay": 36,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex273|unsigned_14-bit_square|current_square_hybrid_with_top_two_bits_replaced_by_x^2_interval_thresholds|share_existing_body_and_expose_high_square_bits_as_monotone/range_descriptors|abc_g_aig|official_evaluate_py|frontend_only",
+  "reference_adp": 15078,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex273/aigs/ex273_r9_top2726_interval_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex273/logs/ex273_r9_top2726_interval_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex273/verilog/ex273_r9_top2726_interval_overlay.v",
+  "variant": "current square hybrid with top two bits replaced by x^2 interval thresholds",
+  "verilog_sha256": "0676cfde5b1dfbeacdad7bfcb04599fa4058c2846600e3569c00b798b7d3f14d"
+}

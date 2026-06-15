@@ -1,0 +1,22 @@
+{
+  "adp": 1104,
+  "aig_sha256": "e531f985561c2f71d5959dae3a99959d069647959ca7792ac8f7634f7647deb0",
+  "area": 92,
+  "bundle_type": "current",
+  "candidate_id": "ex260_smul_bw4_center_rhcla2_abc_g_aig",
+  "case": "ex260",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "signed multiplier compressor sharing",
+  "method_signature": "ex260|signed_multiplier_compressor_sharing|Baugh_Wooley_four_input_counter_columns_with_center_order_and_reverse_hCLA2_merge|signed_partial_products_compressed_by_wider_counters_before_a_short_high_carry_merge|abc_g_aig|signed_low4_high4_multiply|full_product_word",
+  "reference_adp": 657,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex260/aigs/ex260_smul_bw4_center_rhcla2_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/integer/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex260/official_eval/ex260_smul_bw4_center_rhcla2_abc_g_aig/ex260_smul_bw4_center_rhcla2_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex260/verilog/ex260_smul_bw4_center_rhcla2.v",
+  "variant": "Baugh-Wooley four-input counter columns with center order and reverse hCLA2 merge",
+  "verilog_sha256": "63540e656563c6049cf834712b4fb13be1ded66cbc6975f823d177184b5a8b08"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 21420,
+  "aig_sha256": "c057aaad4b088988b51d4c9e54966229812a7676d4536ba61c2cda37d0aabda6",
+  "area": 1071,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex289_r7_split2_case_edge_overlay",
+  "case": "ex289",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "The split2 duality source may keep its low delay while case-group cofactors replace only edge output planes.",
+  "method_signature": "ex289|split2_duality_output_plane_overlay|case_group_edge_planes|f10_onehot_xor_base_plus_f10_case_edges|yosys_internal_abc_g_aig|official_evaluate|bits_0_1_14_15",
+  "reference_adp": 13620,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex289/aigs/ex289_r7_split2_case_edge_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-mid-r7/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex289/logs/ex289_r7_split2_case_edge_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex289/verilog/ex289_r7_split2_case_edge_overlay.v",
+  "variant": "f10 case-group donor on outputs 0:1:14:15 over f10 onehot XOR base",
+  "verilog_sha256": "1863c726b7500c117e9727fd369dec6426d64e7f915fee0e4f6fea0b6b5609d3"
+}

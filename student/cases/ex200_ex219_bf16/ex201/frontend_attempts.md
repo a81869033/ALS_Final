@@ -110,3 +110,12 @@ Tried and excluded:
 - Interpretation: PLA reduces the selected-bit critical path versus ordinary
   table logic, but its extra area loses ADP.  The current best remains
   `hilo3_field_mode_bits_3_bh1`, official `evaluate.py` `1647/14/23058`.
+
+## 2026-06-14 bf16-extra-r2 continuation outcome
+
+Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `bf16-extra-r2`.
+
+- Tried field residual, mant64 delta-pair residual, and exact decision-graph bit3 residual families under `student/work/ex204_ex299_frontend_continuation_20260614_1216/bf16-extra-r2/ex201/`.
+- Official `evaluate.py` OK candidates: `ex201_r2_sepfield_e2m4s0_b3bh2` `1708/16/27328`, `ex201_r2_delta_m64h2_b3bh2` `1660/19/31540`, and `ex201_r2_dg_delta_m64h2_b3` `1743/18/31374`.
+- No candidate improved current frontend ADP `23058`; do not repeat these e2/m4, mant64-hilo2, or exact DG bit3 shapes unchanged.
+- Shard CSVs: `student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/bf16-extra-r2/`.

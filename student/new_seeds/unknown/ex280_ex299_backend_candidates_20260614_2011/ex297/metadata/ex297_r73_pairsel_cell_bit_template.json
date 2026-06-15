@@ -1,0 +1,22 @@
+{
+  "adp": 425024,
+  "aig_sha256": "28a7cea0a617a85598d4c3a505800047be10d87572d1fefa98d2eff123f6946c",
+  "area": 26564,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r73_pairsel_cell_bit_template",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit selector-state paired class template",
+  "method_signature": "ex297|cyclic_2bit_selector_state_paired_classes|pairsel_cell_bit_template|cell_default_and_bit_default_templates_selected_by_selector_pair_xor|yosys_internal_abc_g_aig|official_evaluate|cell_pair_outputs",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round73_20260613_1414/sub-unknown-state-r73/ex297/aigs/ex297_r73_pairsel_cell_bit_template.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round73_20260613_1414/agent_shards/sub-unknown-state-r73/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round73_20260613_1414/sub-unknown-state-r73/ex297/logs/ex297_r73_pairsel_cell_bit_template.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round73_20260613_1414",
+  "source_verilog_path": "student/work/frontend_source_parallel_round73_20260613_1414/sub-unknown-state-r73/ex297/verilog/ex297_r73_pairsel_cell_bit_template.v",
+  "variant": "paired selector classes and multi-output cell templates",
+  "verilog_sha256": "96895ba8c89989037c52060283fb9214084810d0f8686b083d4769d7dedcf992"
+}

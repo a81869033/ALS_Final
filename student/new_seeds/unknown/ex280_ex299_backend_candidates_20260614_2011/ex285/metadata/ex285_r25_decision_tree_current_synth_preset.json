@@ -1,0 +1,22 @@
+{
+  "adp": 13175,
+  "aig_sha256": "6d4b9982eb3e561a5f371cefd9782c526d51830d67fa1a7f464982d82c3983dd",
+  "area": 775,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_r25_decision_tree_current_synth_preset",
+  "case": "ex285",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "hamming_weight_preserving_lossy_routing_normalizer",
+  "method_signature": "ex285|hamming_weight_preserving_lossy_routing_normalizer|decision_tree_source_flow_probe|current_best_decision_tree_source|synth_preset_official_evaluate|exact_truth_preserving_source|full_word",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-routing-r25/ex285/aigs/ex285_r25_decision_tree_current_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex240_ex299_frontend_gt2_round25_20260613_0531/agent_shards/unknown-routing-r25/candidates.csv",
+  "source_evaluate_log": "student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-routing-r25/ex285/logs/ex285_r25_decision_tree_current_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex240_ex299_frontend_gt2_round25_20260613_0531",
+  "source_verilog_path": "student/work/reverse_unknown_20260603_1812/ex285/verilog/ex285_unknown_12x12_decision_tree_greedy.v",
+  "variant": "current_best_decision_tree_source_synth_preset",
+  "verilog_sha256": "7db0eaf700ad1fa8f043e618127a95f14f23f0806bc4da2b3d734535288bad14"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 9632,
+  "aig_sha256": "2869598310128f5c018e34d803fb4e3c575978e73bbc8ede37f82f7c563e6c4f",
+  "area": 688,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex219_r97_reciprocal_cbrt_small_lut_selected_overlay_bits_5_bh2_abc_and",
+  "case": "ex219",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cbrt",
+  "method_signature": "ex219|round97_bf16_rootpower|bf16_reciprocal_cbrt|current_frontend_source_with_exact_selected_bit_overlay|reuse current source sharing; replace selected output bit predicates|abc_and|abc_read_truth_xf",
+  "reference_adp": 5640,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_deepstruct_round97_20260614_0724/sub-bf16-rootpower-r97/ex219/official_eval/ex219_r97_reciprocal_cbrt_small_lut_selected_overlay_bits_5_bh2_abc_and/ex219.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_deepstruct_round97_20260614_0724/agent_shards/sub-bf16-rootpower-r97/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_deepstruct_round97_20260614_0724/sub-bf16-rootpower-r97/ex219/logs/ex219_r97_reciprocal_cbrt_small_lut_selected_overlay_bits_5_bh2_abc_and.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_deepstruct_round97_20260614_0724",
+  "source_verilog_path": "student/work/frontend_gt15_deepstruct_round97_20260614_0724/sub-bf16-rootpower-r97/ex219/verilog/ex219_r97_reciprocal_cbrt_small_lut_selected_overlay_bits_5_bh2_abc_and.v",
+  "variant": "current_frontend_source_with_exact_selected_bit_overlay",
+  "verilog_sha256": "68846a5cbc3bd8aeced3ecb805e33d20819d6e7b0d72de44652eb6f54603310d"
+}

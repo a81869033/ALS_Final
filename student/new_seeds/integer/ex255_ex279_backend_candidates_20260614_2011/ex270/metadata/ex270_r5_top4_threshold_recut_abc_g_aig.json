@@ -1,0 +1,22 @@
+{
+  "adp": 3210,
+  "aig_sha256": "4ba62197b8d8a199a6046f460b10b20856bef7bb82c94b7fa3c3384853958929",
+  "area": 214,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex270_r5_top4_threshold_recut_abc_g_aig",
+  "case": "ex270",
+  "delay": 15,
+  "domain": "integer",
+  "hypothesis": "selected high-bit threshold recut over triangular square source",
+  "method_signature": "ex270|unsigned_square_x_times_x|replace_top_four_outputs_with_exact_square_range-threshold_predicates|existing_triangular_square_source_with_range_threshold_recut|abc_g_aig|abc_xf_official_evaluate|frontend_only_no_backend",
+  "reference_adp": 2076,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-square-r5/ex270/aigs/ex270_r5_top4_threshold_recut_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-square-r5/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex204_ex299_frontend_breakthrough_20260614_1051/integer-square-r5/ex270/official_eval/ex270_r5_top4_threshold_recut_abc_g_aig/ex270_r5_top4_threshold_recut_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-square-r5/ex270/verilog/ex270_r5_top4_threshold_recut.v",
+  "variant": "replace top four outputs with exact square range-threshold predicates",
+  "verilog_sha256": "9fc9d14e94cf523f07eb1a7e9fa67524ed2cad00a06c40827cf4a093c2e3fa50"
+}

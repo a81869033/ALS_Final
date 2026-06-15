@@ -1,0 +1,22 @@
+{
+  "adp": 8688,
+  "aig_sha256": "cec44068421c2cf730030debb721ea7b386d7fe713ee80b8645741f45ef1f6ce",
+  "area": 362,
+  "bundle_type": "current",
+  "candidate_id": "ex263_smul_baugh_wooley_wallace_outside_hcla1_mod_synth_preset_d11",
+  "case": "ex263",
+  "delay": 24,
+  "domain": "integer",
+  "hypothesis": "signed low7_high7:a*b",
+  "method_signature": "signed low7_high7:a*b",
+  "reference_adp": 6840,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex260_ex263_frontend_smul_modcarry_20260609_0703/ex263/aigs/ex263_smul_baugh_wooley_wallace_outside_hcla1_mod_synth_preset_d11.aig",
+  "source_csv": "student/runs/integer/ex260_ex263_frontend_smul_modcarry_20260609_0703/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex260_ex263_frontend_smul_modcarry_20260609_0703",
+  "source_verilog_path": "student/work/ex260_ex263_frontend_smul_modcarry_20260609_0703/ex263/verilog/ex263_smul_baugh_wooley_wallace_outside_hcla1_mod.v",
+  "variant": "baugh_wooley_wallace_outside_hcla1_mod+synth_preset_d11",
+  "verilog_sha256": "b888c0d9afb6ce6cfe4c078834ee78fbbe3664484a3818a6840fcf56bf8550f7"
+}

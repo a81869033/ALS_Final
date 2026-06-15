@@ -125,3 +125,11 @@ Interpretation:
   independent carry predicate.  It would need exact multi-output factoring over
   the final two-row compressor representation, or a custom shared compressor
   network whose intermediate carry/save terms are minimized together.
+
+## 2026-06-14 integer-extra-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `integer-extra-r2`.
+
+- Official `evaluate.py` OK rows: 12/12.
+- Best row: `ex256_umul_split_half_abc_g_aig`, `152/21/3192`; nonwinning versus current frontend `158/18/2844`.
+- Failed directions: split-half, CSA-prefix, sorted operands, CSA concat order, Dadda-prefix, and Karatsuba-even all either kept delay near 20-21 or added area. This pass did not find the missing shared final two-row/compressor factoring needed for an ex256 breakthrough.

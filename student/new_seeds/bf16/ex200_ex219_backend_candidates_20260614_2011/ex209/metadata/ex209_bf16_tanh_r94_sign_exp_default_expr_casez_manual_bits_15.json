@@ -1,0 +1,22 @@
+{
+  "adp": 10402,
+  "aig_sha256": "b6a0b4f0fe0d2bc04d5e2910cdb1d6d3315612c469397b380657ad461c04f7f7",
+  "area": 743,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex209_bf16_tanh_r94_sign_exp_default_expr_casez_manual_bits_15",
+  "case": "ex209",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_tanh",
+  "method_signature": "bf16_tanh",
+  "reference_adp": 7320,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-trig-hyp-r94/ex209/aigs/ex209_bf16_tanh_r94_sign_exp_default_expr_casez_manual_bits_15.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-trig-hyp-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-trig-hyp-r94/ex209/logs/ex209_bf16_tanh_r94_sign_exp_default_expr_casez_manual_bits_15.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-trig-hyp-r94/ex209/verilog/ex209_bf16_tanh_r94_sign_exp_default_expr_casez_manual_bits_15.v",
+  "variant": "sign_exp_default_expr_casez_manual_bits_15",
+  "verilog_sha256": "4fa52343d81b751a230706e052ea2525a982782a701338c2a22b70da9df83f47"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 19893,
+  "aig_sha256": "7556406f204b62d9fb039414e221857227bac81b49ca8c2b4003c78a26602318",
+  "area": 1047,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_gates_round2",
+  "case": "ex289",
+  "delay": 19,
+  "domain": "unknown",
+  "hypothesis": "hamming_weight_preserving_lossy_routing_normalizer",
+  "method_signature": "ex289|hamming_weight_preserving_lossy_routing_normalizer|complement_reverse_split2_group_symcof_resynth|group_bdd_node_sharing_with_existing_xor_wrapper|yosys_abc_g_gates|exact_complement_reverse_duality|duality_wrapped_grouped_outputs",
+  "reference_adp": 13620,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round2_20260612_1512/unknown-gf2-agent/ex289/aigs/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_gates_round2.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round2_20260612_1512/agent_shards/unknown-gf2-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round2_20260612_1512/unknown-gf2-agent/ex289/logs/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_gates_round2.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round2_20260612_1512",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round2_20260612_1512/unknown-gf2-agent/ex289/verilog/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_gates_round2.v",
+  "variant": "current_split2_group_xor_abc_g_gates",
+  "verilog_sha256": "3db4454b2c7f889ceaf93024c906e8f275c97b5f1f631b6f0b0072f3b727da8a"
+}

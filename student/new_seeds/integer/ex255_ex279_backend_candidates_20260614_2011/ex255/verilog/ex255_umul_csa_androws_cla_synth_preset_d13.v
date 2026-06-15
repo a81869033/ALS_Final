@@ -1,0 +1,26 @@
+module ex255_umul_csa_androws_cla(in, out);
+  input [7:0] in;
+  output [7:0] out;
+  wire [3:0] a = in[3:0];
+  wire [3:0] b = in[7:4];
+  wire [7:0] row0 = ({8{b[0]}} & {4'b0, a});
+  wire [7:0] row1 = ({8{b[1]}} & ({4'b0, a} << 1));
+  wire [7:0] row2 = ({8{b[2]}} & ({4'b0, a} << 2));
+  wire [7:0] row3 = ({8{b[3]}} & ({4'b0, a} << 3));
+  wire [7:0] s0_0 = row0 ^ row1 ^ row2;
+  wire [7:0] c0_0 = ((row0 & row1) | (row0 & row2) | (row1 & row2)) << 1;
+  wire [7:0] s1_0 = s0_0 ^ c0_0 ^ row3;
+  wire [7:0] c1_0 = ((s0_0 & c0_0) | (s0_0 & row3) | (c0_0 & row3)) << 1;
+  wire [7:0] cla_p = s1_0 ^ c1_0;
+  wire [7:0] cla_g = s1_0 & c1_0;
+  wire [7:0] cla_sum;
+  assign cla_sum[0] = cla_p[0] ^ 1'b0;
+  assign cla_sum[1] = cla_p[1] ^ (cla_g[0]);
+  assign cla_sum[2] = cla_p[2] ^ (cla_g[1] | (cla_p[1] & cla_g[0]));
+  assign cla_sum[3] = cla_p[3] ^ (cla_g[2] | (cla_p[2] & cla_g[1]) | (cla_p[1] & cla_p[2] & cla_g[0]));
+  assign cla_sum[4] = cla_p[4] ^ (cla_g[3] | (cla_p[3] & cla_g[2]) | (cla_p[2] & cla_p[3] & cla_g[1]) | (cla_p[1] & cla_p[2] & cla_p[3] & cla_g[0]));
+  assign cla_sum[5] = cla_p[5] ^ (cla_g[4] | (cla_p[4] & cla_g[3]) | (cla_p[3] & cla_p[4] & cla_g[2]) | (cla_p[2] & cla_p[3] & cla_p[4] & cla_g[1]) | (cla_p[1] & cla_p[2] & cla_p[3] & cla_p[4] & cla_g[0]));
+  assign cla_sum[6] = cla_p[6] ^ (cla_g[5] | (cla_p[5] & cla_g[4]) | (cla_p[4] & cla_p[5] & cla_g[3]) | (cla_p[3] & cla_p[4] & cla_p[5] & cla_g[2]) | (cla_p[2] & cla_p[3] & cla_p[4] & cla_p[5] & cla_g[1]) | (cla_p[1] & cla_p[2] & cla_p[3] & cla_p[4] & cla_p[5] & cla_g[0]));
+  assign cla_sum[7] = cla_p[7] ^ (cla_g[6] | (cla_p[6] & cla_g[5]) | (cla_p[5] & cla_p[6] & cla_g[4]) | (cla_p[4] & cla_p[5] & cla_p[6] & cla_g[3]) | (cla_p[3] & cla_p[4] & cla_p[5] & cla_p[6] & cla_g[2]) | (cla_p[2] & cla_p[3] & cla_p[4] & cla_p[5] & cla_p[6] & cla_g[1]) | (cla_p[1] & cla_p[2] & cla_p[3] & cla_p[4] & cla_p[5] & cla_p[6] & cla_g[0]));
+  assign out = cla_sum;
+endmodule

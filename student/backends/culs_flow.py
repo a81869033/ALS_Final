@@ -1,6 +1,7 @@
 """CULS-backed candidate flows and diagnostics."""
 
 import argparse
+from collections import OrderedDict
 import os
 import subprocess
 import sys
@@ -40,6 +41,18 @@ def default_abc():
 
 def default_baseline_dir():
     return repo_root() / "baselines" / "abc_st" / "aigs"
+
+
+CULS_FLOW_COMMANDS = OrderedDict(
+    [
+        ("culs_resyn2", "resyn2"),
+        ("culs_rewrite", "rewrite"),
+        ("culs_refactor", "refactor"),
+        ("culs_resub", "resub"),
+        ("culs_balance", "balance"),
+        ("culs_rw_rf_rs_bal", "rewrite; refactor; resub; balance"),
+    ]
+)
 
 
 def _format_failure_output(output):
@@ -120,7 +133,9 @@ def _raise_gpuls_failure(result):
     )
 
 
-def run_culs_resyn2(culs_bin, input_aig, output_aig, timeout=120):
+def run_culs_flow(culs_bin, input_aig, output_aig, flow_name="culs_resyn2", timeout=120):
+    if flow_name not in CULS_FLOW_COMMANDS:
+        raise CulsError("Unknown CULS flow: {0}".format(flow_name))
     culs_bin = check_culs_binary(culs_bin)
     input_aig = Path(input_aig)
     output_aig = Path(output_aig)
@@ -131,7 +146,7 @@ def run_culs_resyn2(culs_bin, input_aig, output_aig, timeout=120):
     output_aig.parent.mkdir(parents=True, exist_ok=True)
     if output_aig.exists():
         output_aig.unlink()
-    script = "read {0}; resyn2; write {1}".format(input_aig, output_aig)
+    script = "read {0}; {1}; write {2}".format(input_aig, CULS_FLOW_COMMANDS[flow_name], output_aig)
     result = _run_gpuls_script(culs_bin, script, timeout=timeout)
 
     if result.returncode != 0:
@@ -149,16 +164,22 @@ def run_culs_resyn2(culs_bin, input_aig, output_aig, timeout=120):
     return result.stdout
 
 
-def culs_resyn2_candidate(case, parent, truth, work_dir, culs_bin, abc, timeout=120):
-    flow_name = "culs_resyn2"
+def run_culs_resyn2(culs_bin, input_aig, output_aig, timeout=120):
+    return run_culs_flow(culs_bin, input_aig, output_aig, flow_name="culs_resyn2", timeout=timeout)
+
+
+def culs_flow_candidate(case, parent, truth, work_dir, culs_bin, abc, timeout=120, flow_name="culs_resyn2"):
+    if flow_name not in CULS_FLOW_COMMANDS:
+        raise CulsError("Unknown CULS flow: {0}".format(flow_name))
     flow_dir = Path(work_dir) / case / flow_name
     output_aig = flow_dir / "{0}_{1}.aig".format(case, flow_name)
 
     start = time.time()
-    run_culs_resyn2(
+    run_culs_flow(
         culs_bin=culs_bin,
         input_aig=parent.aig_path,
         output_aig=output_aig,
+        flow_name=flow_name,
         timeout=timeout,
     )
     generation_sec = time.time() - start
@@ -172,14 +193,27 @@ def culs_resyn2_candidate(case, parent, truth, work_dir, culs_bin, abc, timeout=
         aig_path=output_aig,
         truth=truth,
         abc=abc,
-        notes='CULS gpuls: read input; resyn2; write output',
+        notes="CULS gpuls: read input; {0}; write output".format(CULS_FLOW_COMMANDS[flow_name]),
         timeout=timeout,
     )
     candidate.runtime_sec += generation_sec
     return candidate
 
 
-def smoke_ex200(culs_bin=None, abc=None, baseline_dir=None, work_dir="/tmp/culs_smoke", timeout=120):
+def culs_resyn2_candidate(case, parent, truth, work_dir, culs_bin, abc, timeout=120):
+    return culs_flow_candidate(
+        case=case,
+        parent=parent,
+        truth=truth,
+        work_dir=work_dir,
+        culs_bin=culs_bin,
+        abc=abc,
+        timeout=timeout,
+        flow_name="culs_resyn2",
+    )
+
+
+def smoke_ex200(culs_bin=None, abc=None, baseline_dir=None, work_dir="/tmp/culs_smoke", timeout=120, flow_name="culs_resyn2"):
     root = repo_root()
     case = "ex200"
     truth = root / "benchmarks" / "{0}.truth".format(case)
@@ -190,7 +224,7 @@ def smoke_ex200(culs_bin=None, abc=None, baseline_dir=None, work_dir="/tmp/culs_
         abc=abc or default_abc(),
         timeout=timeout,
     )
-    candidate = culs_resyn2_candidate(
+    candidate = culs_flow_candidate(
         case=case,
         parent=parent,
         truth=truth,
@@ -198,6 +232,7 @@ def smoke_ex200(culs_bin=None, abc=None, baseline_dir=None, work_dir="/tmp/culs_
         culs_bin=culs_bin or default_culs_bin(),
         abc=abc or default_abc(),
         timeout=timeout,
+        flow_name=flow_name,
     )
     return parent, candidate
 
@@ -222,6 +257,7 @@ def main(argv=None):
     parser.add_argument("--baseline-dir", default=str(default_baseline_dir()))
     parser.add_argument("--work-dir", default="/tmp/culs_smoke")
     parser.add_argument("--timeout", type=int, default=120)
+    parser.add_argument("--flow", choices=tuple(CULS_FLOW_COMMANDS.keys()), default="culs_resyn2")
     parser.add_argument(
         "--probe",
         action="store_true",
@@ -251,9 +287,10 @@ def main(argv=None):
                 baseline_dir=args.baseline_dir,
                 work_dir=args.work_dir,
                 timeout=args.timeout,
+                flow_name=args.flow,
             )
             _print_candidate("baseline", parent)
-            _print_candidate("culs_resyn2", candidate)
+            _print_candidate(args.flow, candidate)
             if not candidate.equivalent:
                 print("CULS smoke test failed: generated candidate is not equivalent.")
                 return 3

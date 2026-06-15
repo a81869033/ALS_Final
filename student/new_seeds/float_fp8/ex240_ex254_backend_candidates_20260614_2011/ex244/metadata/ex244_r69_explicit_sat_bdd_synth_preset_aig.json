@@ -1,0 +1,22 @@
+{
+  "adp": 10764,
+  "aig_sha256": "a00ab0f1f4f3e20a515f6496b7ee0f8c1241f61bafb648e1633036954568fa9e",
+  "area": 299,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_r69_explicit_sat_bdd_synth_preset_aig",
+  "case": "ex244",
+  "delay": 36,
+  "domain": "float_fp8",
+  "hypothesis": "E4M3FN packed hypot",
+  "method_signature": "ex244|E4M3FN packed hypot|explicit saturation predicate over max plus delta|known-good max/min decode and delta residual, separate saturation selector|explicit_sat_residual|yosys_synth_preset_aig|official_evaluate|max_plus_delta_sat_selector",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round69_20260613_1204/sub-fp8-worst-source-r69/ex244/aigs/ex244_r69_explicit_sat_bdd_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round69_20260613_1204/agent_shards/sub-fp8-worst-source-r69/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round69_20260613_1204/sub-fp8-worst-source-r69/ex244/logs/ex244_r69_explicit_sat_bdd.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round69_20260613_1204",
+  "source_verilog_path": "student/work/frontend_source_parallel_round69_20260613_1204/sub-fp8-worst-source-r69/ex244/verilog/ex244_r69_explicit_sat_bdd.v",
+  "variant": "explicit saturation predicate over max plus delta",
+  "verilog_sha256": "c2a2fa351046cf47ed04aaeae9463154a48b8180ea1289980eddaae4b4068f4d"
+}

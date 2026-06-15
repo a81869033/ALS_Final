@@ -1,0 +1,22 @@
+{
+  "adp": 41454,
+  "aig_sha256": "247b469d9b64efae77250fc7b51af429a77844ae281be6453fbea00cad076080",
+  "area": 987,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex274_r9_keep_low_topbdd_boundary_optfull",
+  "case": "ex274",
+  "delay": 42,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex274|unsigned_16-bit_square|current_top2-BDD_truncated_hybrid_with_keep_attributes_on_low/top_boundary_wires|preserve_lower_truncated_arithmetic_and_selected_top_BDD_boundary_sharing|optfull_aig|official_evaluate_py|frontend_only",
+  "reference_adp": 21630,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex274/aigs/ex274_r9_keep_low_topbdd_boundary_optfull.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex274/logs/ex274_r9_keep_low_topbdd_boundary_optfull.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex274/verilog/ex274_r9_keep_low_topbdd_boundary_optfull.v",
+  "variant": "current top2-BDD truncated hybrid with keep attributes on low/top boundary wires",
+  "verilog_sha256": "8685f7b229b65655a58def56776c4a430752c2bc1b412ad027b8782dbab67b74"
+}

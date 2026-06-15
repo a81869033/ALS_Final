@@ -1,0 +1,22 @@
+{
+  "adp": 1190,
+  "aig_sha256": "2adc57d72258d4c23ebe432c7a1dbb91a56115bbce79c67c4afa85c08d487b69",
+  "area": 85,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex260_smul_ex260_rev_hcla4_qmc_hi2_synth_preset_d13",
+  "case": "ex260",
+  "delay": 14,
+  "domain": "integer",
+  "hypothesis": "signed low4_high4:a*b",
+  "method_signature": "signed low4_high4:a*b",
+  "reference_adp": 657,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex260_frontend_smul_qmc_high_override_20260609_0603/ex260/aigs/ex260_smul_ex260_rev_hcla4_qmc_hi2_synth_preset_d13.aig",
+  "source_csv": "student/runs/integer/ex260_frontend_smul_qmc_high_override_20260609_0603/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex260_frontend_smul_qmc_high_override_20260609_0603",
+  "source_verilog_path": "student/work/ex260_frontend_smul_qmc_high_override_20260609_0603/ex260/verilog/ex260_smul_ex260_rev_hcla4_qmc_hi2.v",
+  "variant": "ex260_rev_hcla4_qmc_hi2+synth_preset_d13",
+  "verilog_sha256": "c4857008b63ee23105283cd5cae6f4b0d7d358f2a7fe048c2b0776173a09a4e9"
+}

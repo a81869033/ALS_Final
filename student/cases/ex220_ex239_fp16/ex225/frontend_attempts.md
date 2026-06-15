@@ -210,3 +210,139 @@ Next useful direction:
   `1.5x` reference.  Future work should target a shallower arithmetic
   exponent-base/mantissa-correction normalizer, or compress the low12 nested
   LUT without reintroducing the high delay seen in the fixed-point normalizer.
+
+## 2026-06-12 mixed-r12 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round12_20260612_2015`, agent `mixed-r12`.
+
+- Method signature: `ex225|fp16_log10_non_nested_normalizer|diagnostic_only|shared_field_decode_without_sparse_or_nested_low_replay|not_run|DAZ_log10_FP16_RNE_FTZ|blocker`.
+- Diagnostic artifact: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round12_20260612_2015/agent_shards/mixed-r12/fp_bf_unary_diagnostics.csv`.
+- Evidence: `positive_total_mode_exceptions=30480`, `sign_exp_full_groups=33`, `negative_canonical_nan=31744`.
+- Outcome: no candidate generated. Sparse residual defaults, mant0-base additive/XOR residuals, and full-bitrun predicates are already official nonwinning rows; next work needs a true shallow log10 correction formula.
+
+## 2026-06-12 fp-bf-r13 checkpoint diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round13_20260612_2045`, agent `fp-bf-r13`.
+
+- Method signature: `ex225|fp16_log10_non_nested_segmented_residual|diagnostic_blocker|shared_field_decode_plus_range_symmetry_output_predicates|not_run|DAZ_log10_FP16_RNE_FTZ|blocker`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round13_20260612_2045/fp-bf-r13/ex225/dossiers/ex225_semantic_dossier.md`.
+- Diagnostic artifact: `student/work/ex200_ex299_frontend_refgap_round13_20260612_2045/fp-bf-r13/ex225/diagnostics/ex225_non_nested_blocker_metrics.csv`.
+- Evidence: positive-normal region has `30720` inputs and `9791` exact word runs; low12 residual has `9745` distinct words and `9761` adjacent changes; hi3/lo7, hi4/lo6, and hi5/lo5 segmentations have zero repeated block shapes; mirror symmetry has zero exact, constant-XOR, or constant-additive matching groups.
+- Outcome: no candidate generated. This is a fresh blocker for range/symmetry segmented mantissa transforms and output-grouped residual predicates beyond the already-known high-bit predicates. Any exact candidate in this family would replay the prohibited dense nested/sparse residual table shape.
+
+## 2026-06-12 fpbf-normal-r17 hard checkpoint
+
+Run ID: `ex200_ex299_frontend_refgap_round17_20260612_2300`, agent `fpbf-normal-r17`.
+
+- Method signature: `ex225|fp16_log10_selected_output_arith_exact_patch_probe|diagnostic_blocker|exact_exception_shell_plus_dense_lowbit_patch_audit|not_run|DAZ_log10_FP16_RNE_FTZ|blocker`.
+- Evidence artifact: `student/work/ex200_ex299_frontend_refgap_round17_20260612_2300/fpbf-normal-r17/ex225/diagnostics/ex225_round17_blocked_no_candidate_evidence.md`.
+- Shard rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round17_20260612_2300/agent_shards/fpbf-normal-r17/failed_hypotheses.csv` and `evaluation_results.csv`.
+- Outcome: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG candidate was claimed. The hard-checkpoint audit kept the scope to first-priority `ex225` and found that any exact selected-output arithmetic approximant with exception patching would still need dense low-bit correction. That would replay prohibited dense residual or nested-low table forms because prior diagnostics already show low12 residual density (`9745` distinct words, `9761` adjacent changes) and no reusable hi3/lo7 through hi6/lo4 segment shapes.
+- Next action: only revisit `ex225` with a genuinely new shallow `log10` correction formula or a synthesis strategy that shares dense low-bit predicates without materializing residual tables.
+
+## 2026-06-13 fp16-r22 round22 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round22_20260613_0218`, agent `fp16-r22`.
+
+- Method signature: `ex225|fp16_log10_non_nested_segment_mode_base_probe|diagnostic_blocker|shared_field_decode_plus_segment_shape_mode_base_metrics|not_run|DAZ_log10_FP16_RNE_FTZ|blocked`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/fp16-r22/ex225/dossiers/ex225_semantic_dossier.md`.
+- Evidence artifact: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/fp16-r22/ex225/diagnostics/ex225_round22_blocker_evidence.md`.
+- Shard rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/fp16-r22/failed_hypotheses.csv`, `evaluation_results.csv`, and `shared_structure_report.csv`.
+- Outcome: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG candidate was claimed. The round22 audit re-derived the FP16 `log10` shell and checked a materially different non-nested segment/mode/base family. Positive-normal density remains high (`9769` distinct words, `9791` word runs), low12 residual density is still `9745` distinct values with `9761` changes, hi3/lo7 through hi6/lo4 segmentations have zero repeated block shapes, and the best mode patch tested (`exp+mant_hi8`) still leaves `8653` exceptions.
+- Next action: only revisit with a genuinely new shallow exact `log10` correction formula or a synthesis method that shares dense low-bit predicates without materializing nested/sparse residual tables.
+
+## 2026-06-13 mixed-r25 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round25_20260613_0506`, agent `mixed-r25`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/mixed-r25/ex225/notes/dossier.md`.
+- Method signatures:
+  - `ex225|fp16_log_family_dense_residual_blocker_non_nested_segment_shape_recheck|segment hi3..hi6 shape reuse diagnostic|shared_field_decode_metrics_only|not_run|DAZ_log10_FP16_RNE_FTZ|diagnostic_blocker`.
+  - `ex225|fp16_log_family_dense_residual_blocker_selected_output_arith_patch_recheck|dense low12 residual exact-patch diagnostic|shared_field_decode_metrics_only|not_run|DAZ_log10_FP16_RNE_FTZ|diagnostic_blocker`.
+- Evidence: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/mixed-r25/ex225/diagnostics/ex225_round25_dense_metrics.csv` and `ex225_round25_segment_shapes.csv`.
+- Outcome: no Verilog/AIG candidate was claimed because round25 explicitly banned nested-LUT replay and the fresh metrics did not expose exact shared segment structure. Next action should require a true shallow log10 correction formula or a new synthesis strategy for dense low-bit sharing.
+
+## 2026-06-13 mixed-r26 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round26_20260613_0539`, agent `mixed-r26`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex225/notes/dossier.md`.
+- Method signatures:
+  - `ex225|fp16_log_family_dense_residual_blocker_non_nested_segment_shape_recheck|segment hi3..hi6 shape reuse diagnostic|shared_field_decode_metrics_only|not_run|DAZ_log10_FP16_RNE_FTZ|diagnostic_blocker`.
+  - `ex225|fp16_log_family_dense_residual_blocker_selected_output_arith_patch_recheck|dense low12 residual exact-patch diagnostic|shared_field_decode_metrics_only|not_run|DAZ_log10_FP16_RNE_FTZ|diagnostic_blocker`.
+- Evidence: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex225/diagnostics/ex225_round26_dense_metrics.csv` and `ex225_round26_segment_shapes.csv`.
+- Outcome: diagnostic only; no Verilog/AIG candidate was claimed. The positive-normal residual remains dense with no reused segment shapes in hi3..hi6, so nested/sparse/full-bitrun replay remains blocked.
+
+## 2026-06-13 sub-fp16-r74 round74
+
+Run ID: `frontend_source_parallel_round74_20260613_1439`, agent `sub-fp16-r74`.
+
+- Dossier: `student/work/frontend_source_parallel_round74_20260613_1439/sub-fp16-r74/ex225/dossier.md`.
+- Families tested:
+  - `ex225|fp16_log10_r74_low10_nested_cut|low10_hi7_nested_lut|shared_special_decode_plus_highbit_runs|yosys_abc_g_aig|abc_xf_official_evaluate|not_round73_segword_or_wordrun`.
+  - `ex225|fp16_log10_r74_flat_low10_table|flat_low10_plus_highbit_runs|shared_special_decode_no_nested_low_lut|yosys_abc_g_aig|abc_xf_official_evaluate|not_round73_segword_or_wordrun`.
+- Official `evaluate.py` results:
+  - `ex225_r74_nested_low10_hi7_abc_g_aig`: `14599/18/262782`, equivalent.
+  - `ex225_r74_flat_low10_hi_runs_abc_g_aig`: `11418/22/251196`, equivalent.
+- Outcome: both are exact but nonwinning versus current frontend ADP `218728`; the flat low10 form lowers area but delay rises to 22. Do not repeat these exact r74 low10 signatures. Next useful direction still needs a genuinely shallow exact `log10` correction formula or a new synthesis strategy for dense low-bit sharing.
+
+## 2026-06-13 sub-fp16-r75 round75
+
+Run ID: `frontend_source_parallel_round75_20260613_1507`, agent `sub-fp16-r75`.
+
+- Dossier: `student/work/frontend_source_parallel_round75_20260613_1507/sub-fp16-r75/ex225/dossier.md`.
+- Family 1 method signature: `ex225|fp16_log10_r75_output_grouped_low_mtbdd|hi12_runs_low12_mtbdd|shared_special_decode_plus_highbit_run_trees_and_shared_low_mtbdd|yosys_abc_g_aig|abc_xf_official_evaluate|low12_mtbdd_not_round74_low10`.
+- Family 2 method signature: `ex225|fp16_log10_r75_output_grouped_low_mtbdd|hi8_runs_low8_mtbdd|shared_special_decode_plus_highbit_run_trees_and_shared_low_mtbdd|yosys_abc_g_aig|abc_xf_official_evaluate|low8_mtbdd_not_round74_low10`.
+- Official `evaluate.py` results:
+  - `ex225_r75_hi12_runs_low12_mtbdd_abc_g_aig`: `11656/24/279744`, equivalent.
+  - `ex225_r75_hi8_runs_low8_mtbdd_abc_g_aig`: `11619/24/278856`, equivalent.
+- Paths: shard CSVs under `student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1507/agent_shards/sub-fp16-r75/`; Verilog/AIG/logs under `student/work/frontend_source_parallel_round75_20260613_1507/sub-fp16-r75/ex225/`; official eval copies under `student/runs/fp16/frontend_source_parallel_round75_20260613_1507/sub-fp16-r75/ex225/official_eval/`.
+- Outcome: both source families are exact and materially different from round74 low10 nested/flat and round73 segword/wordrun threshold variants, but neither beats current frontend ADP `218728` or overall current ADP `205656`. The low8 MTBDD cut was better than low12 within this family, but delay `24` dominates; future work should avoid moving dense low residuals into a shared MTBDD unless a shallower output grouping/order is found.
+
+## 2026-06-13 sub-fp16-r76 round76
+
+Run ID: `frontend_source_parallel_round76_20260613_1706`, agent `sub-fp16-r76`.
+
+Families tested:
+- `segbase_delta_lo5`: `ex225|exact_log/log10_exponent-region_affine_boundary_delta|sign-exp_plus_mant_hi5_base_word_with_exact_mant_lo5_modular_delta|shared_special_shell_and_shared_per-region_base_feeding_one_16-bit_delta_adder|yosys_abc_g_aig|abc_xf_official_evaluate|r76_segbase_delta_lo5`.
+- `ratio_xor_lo6`: `ex225|positive-normal_mantissa_quotient/ratio_descriptor|mant_hi4_leading-ratio_class_base_word_plus_exact_mant_lo6_XOR_residual|shared_leading-region_predicate_and_one_semantic-class_residual_family|yosys_abc_g_aig|abc_xf_official_evaluate|r76_ratio_xor_lo6`.
+
+Official `evaluate.py` results:
+- `ex225_r76_segbase_delta_lo5_segbase_delta_lo5_abc_g_aig`: `12727/46/585442`, equivalent.
+- `ex225_r76_ratio_xor_lo6_ratio_xor_lo6_abc_g_aig`: `12728/21/267288`, equivalent.
+
+Paths: shard CSVs under `student/frontend_campaigns/campaigns/frontend_source_parallel_round76_20260613_1706/agent_shards/sub-fp16-r76/`; Verilog/AIG/logs under `student/work/frontend_source_parallel_round76_20260613_1706/sub-fp16-r76/ex225/`; official eval copies under `student/runs/fp16/frontend_source_parallel_round76_20260613_1706/sub-fp16-r76/ex225/official_eval/`.
+Outcome: best round76 row is `ex225_r76_ratio_xor_lo6_ratio_xor_lo6_abc_g_aig` at ADP `267288`; it did not beat current/reference. The boundary-delta and ratio-class descriptors are materially different from r75 direct-special/MTBDD and prior nested/sparse low-table repeats, but QoR should be treated as source evidence unless a coordinator merges it.
+
+## 2026-06-13 round77 sub-fp16-source-r77
+
+Run ID: `frontend_source_parallel_round77_20260613_1733`, agent `sub-fp16-source-r77`.
+
+- Direction: source-boundary reshaping around current nested log/log10 source and the registry frontend-best source, avoiding r76 ratio-XOR/segbase-delta and r75 sparse/MTBDD/direct-special families as-is.
+- Families tested: selective decode/high-bit `keep`, high-vs-low grouped output assigns, and positive-normal predicate helper module for the generated nested source; selective `keep` and high/low output grouping for the registry frontend-best source.
+- Official result: best shard row `ex225_r77_frontendbest_decode_keep_abc_g_aig`: `11531/19/219089`; beats current/frontend/reference = `0/0/0`.
+- Candidate rows: `student/runs/fp16/frontend_source_parallel_round77_20260613_1733/sub-fp16-source-r77/ex225/results/candidates.csv`.
+- Evaluation rows: `student/runs/fp16/frontend_source_parallel_round77_20260613_1733/sub-fp16-source-r77/ex225/results/evaluation_results.csv`.
+- Failed rows: `student/runs/fp16/frontend_source_parallel_round77_20260613_1733/sub-fp16-source-r77/ex225/results/failed_hypotheses.csv`.
+- Work path: `student/work/frontend_source_parallel_round77_20260613_1733/sub-fp16-source-r77/ex225`.
+- Next action: only continue this boundary direction if a coordinator wants lower-area delay-19/21 neighbors; otherwise a true shallow exact log correction remains the larger gap.
+
+## 2026-06-14 arith-unary-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `arith-unary-r2`.
+
+- Families tested: positive-normal exponent-group high-bit run trees plus nested mantissa low LUT; FP16 bit-run/casez/manual bit-vector hybrids.
+- Official best from this shard: `ex225_log_nested_low13_hi4_abc_g_aig` at `11243/20/224860`.
+- Outcome: all rows were official equivalent but nonwinning versus frontend `11505/19/218595`; bit-vector/casez best was `11551/24/277224`.
+
+## 2026-06-14 fp16-transfer-r1 campaign
+
+Run ID: `ex223_ex225_frontend_fp16_transfer_20260614_1310`, agent `fp16-transfer-r1`.
+
+- Direction: transfer the `ex221` active sign/exponent nested-low and word-mode residual structures to this FP16 log10 case.
+- Official `evaluate.py` OK but nonwinning candidates:
+  - `ex225_transfer_nested_low10_hi5_abc_g_aig`: `11608/19/220552`.
+  - `ex225_transfer_nested_low9_hi6_abc_g_aig`: `12842/18/231156`.
+  - `ex225_transfer_wordmode_mh5_abc_g_aig`: `11532/19/219108`.
+- Outcome: all candidates were equivalent but worse than current frontend best `218595`. The word-mode mh5 form was close (`+513` ADP versus best) but should not be repeated unchanged; only a materially different correction-sharing/output-grouping variant is worth trying.
+- Artifacts: `student/frontend_campaigns/campaigns/ex223_ex225_frontend_fp16_transfer_20260614_1310/results/evaluation_results.csv`; work under `student/work/ex223_ex225_frontend_fp16_transfer_20260614_1310/fp16-transfer-r1/ex225/`.

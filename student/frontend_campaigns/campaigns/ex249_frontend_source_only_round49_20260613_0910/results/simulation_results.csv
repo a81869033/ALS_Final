@@ -1,0 +1,25 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_split_delta_pred_default_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_split_delta_pred_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_split_delta_pred_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_split_delta_pred_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_inc_mux_delta_pred_default_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_inc_mux_delta_pred_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_inc_mux_delta_pred_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_inc_mux_delta_pred_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_split_delta_default_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_split_delta_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_split_delta_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_split_delta_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_inc_mux_default_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_inc_mux_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_inc_mux_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_inc_mux_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_direct_carry_delta_default_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_direct_carry_delta_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_direct_carry_delta_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_direct_carry_delta_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_direct_carry_default_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_direct_carry_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_direct_carry_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex249,float_fp8,local-ex249-source-r49,ex249_ex249_effgap_direct_carry_synth_preset_raw,not_run,,official evaluate.py used for final verification

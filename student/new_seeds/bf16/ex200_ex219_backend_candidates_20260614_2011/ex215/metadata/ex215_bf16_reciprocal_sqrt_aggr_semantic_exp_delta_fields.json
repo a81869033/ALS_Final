@@ -1,0 +1,22 @@
+{
+  "adp": 5213,
+  "aig_sha256": "1234b7c42cab1c9d3ab99827b8daf7d472e5f8d60eb86c4dc7caf62179ce73d6",
+  "area": 401,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex215_bf16_reciprocal_sqrt_aggr_semantic_exp_delta_fields",
+  "case": "ex215",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_sqrt",
+  "method_signature": "bf16_reciprocal_sqrt",
+  "reference_adp": 3150,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex215_ex219_frontend_bf16_semantic_20260606_1447/ex215/aigs/ex215_bf16_reciprocal_sqrt_aggr_semantic_exp_delta_fields.aig",
+  "source_csv": "student/runs/bf16/ex215_ex219_frontend_bf16_semantic_20260606_1447/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex215_ex219_frontend_bf16_semantic_20260606_1447",
+  "source_verilog_path": "student/work/ex215_ex219_frontend_bf16_semantic_20260606_1447/ex215/verilog/ex215_bf16_reciprocal_sqrt_aggr_semantic_exp_delta_fields.v",
+  "variant": "aggr_semantic_exp_delta_fields",
+  "verilog_sha256": "15ec2ddd292baf76e7475d4409510a11059c7845905da945102b7f01540d1c69"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 15580,
+  "aig_sha256": "5e014962e8fd46bdad9cfc31a352a6d60af9cadfb6c56852ed639479d920a327",
+  "area": 380,
+  "bundle_type": "current",
+  "candidate_id": "ex269_udiv_radix4_shift_subtract_wreduce_abc_g_aig",
+  "case": "ex269",
+  "delay": 41,
+  "domain": "integer",
+  "hypothesis": "unsigned low8_high8:a/b dbz=max",
+  "method_signature": "unsigned low8_high8:a/b dbz=max",
+  "reference_adp": 11760,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex266_ex267_ex269_frontend_udiv_radix_shift_20260609_1110/ex269/aigs/ex269_udiv_radix4_shift_subtract_wreduce_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex266_ex267_ex269_frontend_udiv_radix_shift_20260609_1110/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex266_ex267_ex269_frontend_udiv_radix_shift_20260609_1110",
+  "source_verilog_path": "student/work/ex266_ex267_ex269_frontend_udiv_radix_shift_20260609_1110/ex269/verilog/ex269_udiv_radix4_shift_subtract.v",
+  "variant": "radix4_shift_subtract+wreduce_abc_g_aig",
+  "verilog_sha256": "e7953717ce46b2f66cc960a87e01a70022e19918d45a3bb154bab55fe71b5a0a"
+}

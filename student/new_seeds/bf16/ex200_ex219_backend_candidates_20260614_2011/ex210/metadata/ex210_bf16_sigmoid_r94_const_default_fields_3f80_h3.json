@@ -1,0 +1,22 @@
+{
+  "adp": 33750,
+  "aig_sha256": "b65caed0118da424e4d3e2e9cef2933b5b0aa4a7f3911aeb1d9d662c1392fa44",
+  "area": 2250,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex210_bf16_sigmoid_r94_const_default_fields_3f80_h3",
+  "case": "ex210",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_sigmoid",
+  "method_signature": "bf16_sigmoid",
+  "reference_adp": 27053,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-trig-hyp-r94/ex210/aigs/ex210_bf16_sigmoid_r94_const_default_fields_3f80_h3.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-trig-hyp-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-trig-hyp-r94/ex210/logs/ex210_bf16_sigmoid_r94_const_default_fields_3f80_h3.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-trig-hyp-r94/ex210/verilog/ex210_bf16_sigmoid_r94_const_default_fields_3f80_h3.v",
+  "variant": "const_default_fields_3f80_h3",
+  "verilog_sha256": "d954264dd235b5b18b0d4b65f6d2e14578d6ee0648fe1e3ad5898a23f8adc151"
+}

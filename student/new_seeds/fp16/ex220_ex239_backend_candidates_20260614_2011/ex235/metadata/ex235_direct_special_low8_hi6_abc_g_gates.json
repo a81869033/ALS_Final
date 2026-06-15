@@ -1,0 +1,22 @@
+{
+  "adp": 23520,
+  "aig_sha256": "34b82314924980af0cff51e254e2ee30e03a69c7ccd11305239f07fa5870f08a",
+  "area": 1680,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex235_direct_special_low8_hi6_abc_g_gates",
+  "case": "ex235",
+  "delay": 14,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal_sqrt",
+  "method_signature": "fp16_reciprocal_sqrt",
+  "reference_adp": 20800,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex235_ex237_ex239_frontend_fp16_direct_special_allflows_20260608_0926/ex235/aigs/ex235_direct_special_low8_hi6_abc_g_gates.aig",
+  "source_csv": "student/runs/fp16/ex235_ex237_ex239_frontend_fp16_direct_special_allflows_20260608_0926/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex235_ex237_ex239_frontend_fp16_direct_special_allflows_20260608_0926",
+  "source_verilog_path": "student/work/ex235_ex237_ex239_frontend_fp16_direct_special_allflows_20260608_0926/ex235/verilog/ex235_direct_special_low8_hi6.v",
+  "variant": "direct_special_low8_hi6_abc_g_gates",
+  "verilog_sha256": "801c948e5a585ac35f6c8045beb0e3fc198311ee82a1436bba8c275a59c74c65"
+}

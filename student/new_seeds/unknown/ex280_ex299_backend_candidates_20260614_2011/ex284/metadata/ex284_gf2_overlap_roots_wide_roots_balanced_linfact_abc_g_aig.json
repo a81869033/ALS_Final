@@ -1,0 +1,22 @@
+{
+  "adp": 6012,
+  "aig_sha256": "82b57b4d8dabfa07eac7de1b7e0de9b58f4fa87bcc84b1f4cb1f286c1f71d37b",
+  "area": 167,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex284_gf2_overlap_roots_wide_roots_balanced_linfact_abc_g_aig",
+  "case": "ex284",
+  "delay": 36,
+  "domain": "unknown",
+  "hypothesis": "quartic_gf2_event_filter",
+  "method_signature": "ex284|quartic_gf2_event_filter|overlap_root_product_basis_wide_roots|shared_overlapping_linear_roots_with_factored_linear_corrections|yosys_abc_g_aig|exact_full_clamp_mux_coordinate_degree2|balanced_root_products_plus_shared_linear_correction_xor",
+  "reference_adp": 4240,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unknown-gf2-r3/ex284/aigs/ex284_gf2_overlap_roots_wide_roots_balanced_linfact_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round3_20260612_1554/agent_shards/unknown-gf2-r3/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unknown-gf2-r3/ex284/logs/ex284_gf2_overlap_roots_wide_roots_balanced_linfact_abc_g_aig.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round3_20260612_1554",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unknown-gf2-r3/ex284/verilog/ex284_gf2_overlap_roots_wide_roots_balanced_linfact_abc_g_aig.v",
+  "variant": "wide_roots_balanced_linear_factored_abc_g_aig",
+  "verilog_sha256": "762268abe08e0a073e72ffa1b34f72a927108a8b1193b300f75c5b8f4a624969"
+}

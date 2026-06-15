@@ -1,0 +1,22 @@
+{
+  "adp": 201400,
+  "aig_sha256": "45db95a24b03a4d1120b849c1f04b5c00eb78095e90eb78b0795da684831364c",
+  "area": 10600,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex223_expbase_xor_low14_hi5_synth_preset_aig",
+  "case": "ex223",
+  "delay": 19,
+  "domain": "fp16",
+  "hypothesis": "fp16_log",
+  "method_signature": "ex223|fp16_log|expbase_xor_nested_recut|expbase_xor_low14_hi5|shared_sign-exp_base_high_word_plus_exact_XOR_corrections_and_nested_low_LUT|synth_preset_aig|abc_xf_official_evaluate",
+  "reference_adp": 120549,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex223/aigs/ex223_expbase_xor_low14_hi5_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/fp16-r2-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex223/official_eval/ex223_expbase_xor_low14_hi5_synth_preset_aig/ex223_expbase_xor_low14_hi5_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex223/verilog/ex223_r2_expbase_xor_low14_hi5.v",
+  "variant": "expbase_xor_low14_hi5",
+  "verilog_sha256": "3d69dfa9bb47893b17be5a720a541d91064f1e7ec5bc25181a99c0989e8bff1d"
+}

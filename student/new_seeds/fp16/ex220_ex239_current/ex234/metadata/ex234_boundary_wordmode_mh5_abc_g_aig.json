@@ -1,0 +1,22 @@
+{
+  "adp": 17892,
+  "aig_sha256": "d48eeea109624cc95e2f2964d3f6417b612f0162c0d80ce1dd1a2b548d0c98fd",
+  "area": 1278,
+  "bundle_type": "current",
+  "candidate_id": "ex234_boundary_wordmode_mh5_abc_g_aig",
+  "case": "ex234",
+  "delay": 14,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex234|fp16_reciprocal_square_boundary_split|core_formula_boundary_wordmode_mh5|shared core exponent formula plus boundary mantissa-high word-mode defaults|yosys_abc_g_aig|abc_xf_official_evaluate|core_formula_boundary_wordmode_mh5",
+  "reference_adp": 15561,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/aigs/ex234_boundary_wordmode_mh5_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/official_eval/ex234_boundary_wordmode_mh5_abc_g_aig/ex234_boundary_wordmode_mh5_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/verilog/ex234_boundary_wordmode_mh5.v",
+  "variant": "",
+  "verilog_sha256": "436ca1682a1f32e7834700b59772fbd7b039f4b12635cdcf5abf409c7beacc8f"
+}

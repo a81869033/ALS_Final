@@ -1,0 +1,22 @@
+{
+  "adp": 17430,
+  "aig_sha256": "d940205fde17c43a6e279473a2f4133eca6b13ca7af9425fa7436194aa5f2342",
+  "area": 1162,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex231_nested_bits9_8_hi5_abc_g_aig",
+  "case": "ex231",
+  "delay": 15,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal",
+  "method_signature": "fp16_reciprocal",
+  "reference_adp": 14066,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex231_ex233_ex234_frontend_fp16_power_nested_20260607_2027/ex231/aigs/ex231_nested_bits9_8_hi5_abc_g_aig.aig",
+  "source_csv": "student/runs/fp16/ex231_ex233_ex234_frontend_fp16_power_nested_20260607_2027/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex231_ex233_ex234_frontend_fp16_power_nested_20260607_2027",
+  "source_verilog_path": "student/work/ex231_ex233_ex234_frontend_fp16_power_nested_20260607_2027/ex231/verilog/ex231_nested_bits9_8_hi5.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "05fbac95ada1e14d5b748dc1bcfa15ec6d5a0a71fef29ed055111be141599c83"
+}

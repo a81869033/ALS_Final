@@ -1,0 +1,22 @@
+{
+  "adp": 5304,
+  "aig_sha256": "bd6e781d2054c7be60834af8226b5dd2fe22279654a35055054467cbe0fb961a",
+  "area": 408,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex215_r94_bf16_reciprocal_sqrt_arith_semantic_fields",
+  "case": "ex215",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_sqrt",
+  "method_signature": "ex215|round94_frontend_structural_bf16|bf16_reciprocal_sqrt|arith_semantic_fields|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 3150,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex215/official_eval/ex215_r94_bf16_reciprocal_sqrt_arith_semantic_fields/ex215.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex215/logs/ex215_r94_bf16_reciprocal_sqrt_arith_semantic_fields.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex215/verilog/ex215_r94_bf16_reciprocal_sqrt_arith_semantic_fields.v",
+  "variant": "direct reciprocal-sqrt semantic exponent/mantissa fields",
+  "verilog_sha256": "f1395f93d9d37c77849797d62299bc6f0cf42508dee5ccfd2d09ed7d4ed1e71b"
+}

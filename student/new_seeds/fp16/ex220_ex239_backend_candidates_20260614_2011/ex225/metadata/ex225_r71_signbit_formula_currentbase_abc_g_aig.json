@@ -1,0 +1,22 @@
+{
+  "adp": 218576,
+  "aig_sha256": "d5d988b1bd791d793d5081962f86dcb5214df6d2fdcf0de83410365f97e3c34c",
+  "area": 11504,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex225_r71_signbit_formula_currentbase_abc_g_aig",
+  "case": "ex225",
+  "delay": 19,
+  "domain": "fp16",
+  "hypothesis": "fp16_log10_selected_sign_predicate",
+  "method_signature": "ex225|fp16_log10_signbit_currentbase|exact_sign_formula_no_lower_patch|shared_sign_exp_predicate_over_current_source|yosys_abc_g_aig|abc_xf_official_evaluate|local_sign_only",
+  "reference_adp": 116676,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp16-int-local-r71/ex225/aigs/ex225_r71_signbit_formula_currentbase_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round71_20260613_1312/agent_shards/sub-fp16-int-local-r71/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp16-int-local-r71/ex225/logs/ex225_r71_signbit_formula_currentbase_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round71_20260613_1312",
+  "source_verilog_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp16-int-local-r71/ex225/verilog/ex225_r71_signbit_formula_currentbase.v",
+  "variant": "current_source_plus_exact_sign_bit_formula",
+  "verilog_sha256": "1868157649fd583ca04ee496d7373772312aba9bdd38b5618a4d3ff104378f06"
+}

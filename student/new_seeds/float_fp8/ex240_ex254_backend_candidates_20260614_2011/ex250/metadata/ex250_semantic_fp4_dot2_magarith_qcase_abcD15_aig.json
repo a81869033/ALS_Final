@@ -1,0 +1,22 @@
+{
+  "adp": 17056,
+  "aig_sha256": "c871b3577785f62a7a5375145f77c3405471cc651f94ba680c6ea61995718e02",
+  "area": 416,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex250_semantic_fp4_dot2_magarith_qcase_abcD15_aig",
+  "case": "ex250",
+  "delay": 41,
+  "domain": "float_fp8",
+  "hypothesis": "packed_fp4_e2m1_dot2_to_e4m3",
+  "method_signature": "packed_fp4_e2m1_dot2_to_e4m3",
+  "reference_adp": 20355,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex250_frontend_magarith_20260608_2303/ex250/aigs/ex250_semantic_fp4_dot2_magarith_qcase_abcD15_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex250_frontend_magarith_20260608_2303/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex250_frontend_magarith_20260608_2303",
+  "source_verilog_path": "student/work/ex250_frontend_magarith_20260608_2303/ex250/verilog/ex250_semantic_fp4_dot2_magarith_qcase.v",
+  "variant": "semantic_fp4_dot2_magarith_qcase_abcD15_aig",
+  "verilog_sha256": "53889ce43ddad3b2bb00d76aec39f23459b184ce15fb78aaba9a4cc80c1188b4"
+}

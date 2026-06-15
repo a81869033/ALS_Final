@@ -269,3 +269,53 @@ Conclusion:
   Yosys knob that improved both area and delay.
 - Follow-up `abc -g aig -D 18/19/20/21` reproduced the same `6219/20/124380`
   result; `gates` and `cmos2` aliases were worse.
+
+## 2026-06-12 mixed-r12 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round12_20260612_2015`, agent `mixed-r12`.
+
+- Method signature: `ex224|fp16_log2_non_nested_normalizer|diagnostic_only|shared_field_decode_without_nested_low_replay|not_run|DAZ_log2_FP16_RNE_FTZ|blocker`.
+- Diagnostic artifact: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round12_20260612_2015/agent_shards/mixed-r12/fp_bf_unary_diagnostics.csv`.
+- Evidence: `positive_total_mode_exceptions=30501`, `sign_exp_full_groups=33`, `negative_canonical_nan=31744`.
+- Outcome: no candidate generated. Prior clustered correction and exponent-class word-BDD rows are nonwinning; another exact low residual would be a nested-low replay.
+
+## 2026-06-13 fp16-r22 round22 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round22_20260613_0218`, agent `fp16-r22`.
+
+- Method signature: `ex224|fp16_log2_non_nested_segment_mode_base_probe|diagnostic_blocker|shared_field_decode_plus_segment_shape_mode_base_metrics|not_run|DAZ_log2_FP16_RNE_FTZ|blocked`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/fp16-r22/ex224/dossiers/ex224_semantic_dossier.md`.
+- Evidence artifact: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/fp16-r22/ex224/diagnostics/ex224_round22_blocker_evidence.md`.
+- Shard rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/fp16-r22/failed_hypotheses.csv`, `evaluation_results.csv`, and `shared_structure_report.csv`.
+- Outcome: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG candidate was claimed. The round22 audit checked a materially different non-nested segment/mode/base family. Positive-normal density remains high (`9809` distinct words, `9834` word runs), low12 residual density is `9795` distinct values, hi3/lo7 through hi7/lo3 segmentations have zero repeated block shapes, and the best mode patch tested (`exp+mant_hi8`) still leaves `8652` exceptions.
+- Next action: only revisit with a shallower exact `log2` correction formula than the prior clustered-correction normalizer or a synthesis strategy that shares dense low-bit predicates without materializing nested/sparse residual tables.
+
+## 2026-06-14 fp16-extra-r2 campaign shard
+
+- Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `fp16-extra-r2`.
+- Screened out before generation:
+  - `ex224|fp16_log2_prior_sparse_residual_reuse_screen|screened_no_candidate|shared_special_sign_exp_decode_plus_sparse_low12_residual|not_run|abc_xf_official_evaluate|manual_judgment_gate`
+  - Reason: `manual_judgments.csv` already marks the sparse low12 residual default direction as `do_not_repeat_as_is`.
+- Official `evaluate.py` OK but nonwinning candidates:
+  - `ex224_posnormal_wordmode_mh5_abc_g_aig`: `5788/17/98396`.
+  - `ex224_posnormal_nested_low11_hi5_abc_g_aig`: `5805/18/104490`.
+- Method signatures:
+  - `ex224|fp16_log2_non_nested_residual|positive_normal_wordmode_mh5|shared special sign-exp decode plus per mant_hi word-mode defaults|yosys_abc_g_aig|abc_xf_official_evaluate|non_nested_wordmode_mant_hi5`
+  - `ex224|fp16_log2_non_expbase_output_grouping|positive_normal_nested_low11_hi5|shared special sign-exp decode plus high output run trees and low11 nested LUT|yosys_abc_g_aig|abc_xf_official_evaluate|non_expbase_nested_low11_hi5`
+- Artifacts:
+  - `student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex224/`
+  - `student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex224/official_eval/`
+- Outcome: both materially different non-expbase/non-sparse directions were exact but did not beat the campaign target `93072`; word-mode residuals reduce area slightly but add delay, while low11/hi5 output grouping is worse.  Do not repeat these two forms unchanged.
+
+## 2026-06-14 fp16-transfer-r1 campaign
+
+Run ID: `ex223_ex225_frontend_fp16_transfer_20260614_1310`, agent `fp16-transfer-r1`.
+
+- Direction: follow up the non-expbase positive-normal residual family with nearby nested and word-mode cuts, while avoiding the already rejected sparse low12 residual replay.
+- Official `evaluate.py` OK but nonwinning candidates:
+  - `ex224_posnormal_nested_low10_hi6_abc_g_aig`: `6048/17/102816`.
+  - `ex224_posnormal_nested_low12_hi4_abc_g_aig`: `5925/18/106650`.
+  - `ex224_posnormal_wordmode_mh4_abc_g_aig`: `5910/18/106380`.
+  - `ex224_posnormal_wordmode_mh6_abc_g_aig`: `5979/17/101643`.
+- Outcome: all candidates were equivalent but worse than current frontend best `93072`; the nearby word-mode/nested cuts did not recover the delay/area balance.
+- Artifacts: `student/frontend_campaigns/campaigns/ex223_ex225_frontend_fp16_transfer_20260614_1310/results/evaluation_results.csv`; work under `student/work/ex223_ex225_frontend_fp16_transfer_20260614_1310/fp16-transfer-r1/ex224/`.

@@ -98,3 +98,21 @@ Rejected refinements:
   not improve ADP.
 - Full deeper selector and top3 hybrid were exact but area-heavy.
 - Top1 hybrid lowered area to 336 but increased delay to 13, so ADP was worse.
+
+## 2026-06-13 sub-integer-r74 official rows
+
+Run ID: `frontend_source_parallel_round74_20260613_1439`, agent `sub-integer-r74`.
+
+- `ex267_r74_qthreshold_ladder`: descending shared `q*b` threshold ladder; official `evaluate.py` equivalent, `1983/76/150708`.
+- `ex267_r74_divisor_case_const`: divisor-keyed constant quotient arms; official `evaluate.py` equivalent, `541/17/9197`.
+- Shard rows: `student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1439/agent_shards/sub-integer-r74/candidates.csv`.
+- Logs: `student/work/frontend_source_parallel_round74_20260613_1439/sub-integer-r74/ex267/logs/`.
+- Outcome: both are nonwinning versus current frontend `340/12/4080`. The wider divider again rejects generic threshold and divisor-action source forms; future work should stay near compact magnitude cofactor classifiers or a genuinely new quotient sharing scheme.
+
+## 2026-06-14 integer-extra-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `integer-extra-r2`.
+
+- Official `evaluate.py` OK rows: 18/18.
+- Best row: `ex267_udiv_cof_bhi3_ahi1_bitbdd_wordmux_synth_preset_d12`, `326/14/4564`; nonwinning versus current frontend `340/12/4080`.
+- Failed directions: alternate `bhi/ahi` word-mux selectors, complemented per-bit BDDs, denominator-LZ range BDDs, radix-4 compact digit logic, and MTBDD variable orders reduced some area but missed the current hybrid-top2 delay-12 balance.

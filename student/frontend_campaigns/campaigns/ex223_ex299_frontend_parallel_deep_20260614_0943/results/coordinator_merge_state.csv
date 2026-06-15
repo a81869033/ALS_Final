@@ -1,0 +1,10 @@
+item,value
+run_id,ex223_ex299_frontend_parallel_deep_20260614_0943
+completed_agents,10
+evaluation_rows,160
+official_ok_equivalent_rows,157
+candidate_rows,157
+best_improvement_rows,19
+improved_cases,"ex224,ex260,ex285,ex287,ex299"
+frontend_only_scope,verified: no promoted backend portfolio/remap candidates
+index_rebuilt,python3 student/scripts/build_frontend_campaign_index.py

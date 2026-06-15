@@ -1,0 +1,22 @@
+{
+  "adp": 234608,
+  "aig_sha256": "3b8b80f169bc5c6c3ddebb36770cc41d1bec9ab76c04849c91d36f1a4bf09927",
+  "area": 10664,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_r81_octant_plane_descriptor_cofactor",
+  "case": "ex294",
+  "delay": 22,
+  "domain": "unknown",
+  "hypothesis": "larger sparse octant descriptor can cofactor global-state roots beyond round80 mod4 mirror plane",
+  "method_signature": "ex294|global_state_octant_descriptor_cofactor|octant_plane_source_mux|shared_endpoint_midpoint_descriptor_selects_even_plane|yosys_internal_abc_g_aig|official_evaluate|even_plane_0_2_4_6_8_10_12_14",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_radical_parallel_round81_20260613_1958/sub-unknown-descriptor-r81/ex294/aigs/ex294_r81_octant_plane_descriptor_cofactor.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_radical_parallel_round81_20260613_1958/agent_shards/sub-unknown-descriptor-r81/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_radical_parallel_round81_20260613_1958/sub-unknown-descriptor-r81/ex294/logs/ex294_r81_octant_plane_descriptor_cofactor.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_radical_parallel_round81_20260613_1958",
+  "source_verilog_path": "student/work/frontend_radical_parallel_round81_20260613_1958/sub-unknown-descriptor-r81/ex294/verilog/ex294_r81_octant_plane_descriptor_cofactor.v",
+  "variant": "octant_plane_descriptor_source_mux",
+  "verilog_sha256": "0a66f8a33e9e8edf78f7bacf58b37438ad530b6c8707e195a5a97cc55d06c459"
+}

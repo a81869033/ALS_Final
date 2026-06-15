@@ -1,0 +1,22 @@
+{
+  "adp": 26230,
+  "aig_sha256": "f321f4a6c1a1940c4163d4b240793f43ece5b6293f35254c1eba943d12992ecd",
+  "area": 610,
+  "bundle_type": "current",
+  "candidate_id": "ex240_r64_signmag_selected_output_factor_synth_preset",
+  "case": "ex240",
+  "delay": 43,
+  "domain": "float_fp8",
+  "hypothesis": "E4M3FN packed add source restructuring",
+  "method_signature": "ex240|E4M3FN packed add|ex240_r64_signmag_selected_output_factor|shared field decode diff-normalizer and selected-output factoring|repo_yosys_frontend|official_evaluate|full_word|synth_preset",
+  "reference_adp": 13299,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/frontend_source_parallel_round64_20260613_1004/sub-mixed-diffroute-r64/ex240/aigs/ex240_r64_signmag_selected_output_factor_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round64_20260613_1004/sub-mixed-diffroute-r64/ex240/logs/ex240_r64_signmag_selected_output_factor_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "frontend_source_parallel_round64_20260613_1004",
+  "source_verilog_path": "student/work/frontend_source_parallel_round64_20260613_1004/sub-mixed-diffroute-r64/ex240/verilog/ex240_r64_signmag_selected_output_factor.v",
+  "variant": "separate sign/magnitude selected-output factoring",
+  "verilog_sha256": "3f99671a9e513c8e560d0fc87ef0f75e72a28617c5c6fab57bdebbf44f4be18d"
+}

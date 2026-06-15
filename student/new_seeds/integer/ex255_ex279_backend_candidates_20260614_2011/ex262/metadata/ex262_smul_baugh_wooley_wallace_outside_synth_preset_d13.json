@@ -1,0 +1,22 @@
+{
+  "adp": 5819,
+  "aig_sha256": "d45815beb2db20ac89d44a3c4086342321f66bb8bf4690f18fb83d3434ac64b7",
+  "area": 253,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex262_smul_baugh_wooley_wallace_outside_synth_preset_d13",
+  "case": "ex262",
+  "delay": 23,
+  "domain": "integer",
+  "hypothesis": "signed low6_high6:a*b",
+  "method_signature": "signed low6_high6:a*b",
+  "reference_adp": 4900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex260_ex264_frontend_smul_baugh_hcla_all_20260609_0324/ex262/aigs/ex262_smul_baugh_wooley_wallace_outside_synth_preset_d13.aig",
+  "source_csv": "student/runs/integer/ex260_ex264_frontend_smul_baugh_hcla_all_20260609_0324/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex260_ex264_frontend_smul_baugh_hcla_all_20260609_0324",
+  "source_verilog_path": "student/work/ex260_ex264_frontend_smul_baugh_hcla_all_20260609_0324/ex262/verilog/ex262_smul_baugh_wooley_wallace_outside.v",
+  "variant": "baugh_wooley_wallace_outside+synth_preset_d13",
+  "verilog_sha256": "40535e4833eb8986dec9740d2d504c89229a32d6c1527f1d37e7a1dd4094bbff"
+}

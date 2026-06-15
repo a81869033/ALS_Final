@@ -1,0 +1,22 @@
+{
+  "adp": 6342,
+  "aig_sha256": "8d3710e3de6ecc3571da5396cfc3ba281e0a048d3733ed45501449c038fb3716",
+  "area": 453,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex216_r95_bf16_cube_aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_caseattrs_bits_13_cmp",
+  "case": "ex216",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_cube",
+  "method_signature": "ex216|round95_power_tight_bf16|bf16_cube|aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_caseattrs_bits_13_cmp|source_level_field_or_selected_bit_recut|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 3357,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex216/official_eval/ex216_r95_bf16_cube_aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_caseattrs_bits_13_cmp/ex216.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_bf16_unknown_round95_20260614_0627/agent_shards/sub-bf16-power-tight-r95/best.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex216/logs/ex216_r95_bf16_cube_aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_caseattrs_bits_13_cmp.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_bf16_unknown_round95_20260614_0627",
+  "source_verilog_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex216/verilog/ex216_r95_bf16_cube_aggr_semantic_positive_symmetry_fields_cube_bit14_boundary_caseattrs_bits_13_cmp.v",
+  "variant": "current semantic positive-symmetry field base plus selected exp bit13 comparator",
+  "verilog_sha256": "e8792e1f9cc54d2d94192fbbf84ccbcccb9086a0bab413e0d4bdbe3296bd3945"
+}

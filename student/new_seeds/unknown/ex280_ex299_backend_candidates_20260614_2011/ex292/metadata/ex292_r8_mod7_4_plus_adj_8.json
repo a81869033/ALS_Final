@@ -1,0 +1,22 @@
+{
+  "adp": 135300,
+  "aig_sha256": "83109b5a1c3ecf7d775c824b1b68504e03bb86c53a94ae6bca37c20db1015ed1",
+  "area": 6765,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex292_r8_mod7_4_plus_adj_8",
+  "case": "ex292",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "Second-order perturbation around r7 add_mod7_4 near miss to preserve 20-level delay while reducing area.",
+  "method_signature": "ex292|global_state_output_plane_overlay_guarded_sweep|adj_2_3_8_10_11_mod7_0_4_7_13|mod4_base_plus_adjacent_and_mod7_selected_planes|yosys_internal_abc_g_aig|official_evaluate|delay20_guard",
+  "reference_adp": 84854,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex292/aigs/ex292_r8_mod7_4_plus_adj_8.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-mid-r8/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex292/logs/ex292_r8_mod7_4_plus_adj_8.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex292/verilog/ex292_r8_mod7_4_plus_adj_8.v",
+  "variant": "r7 add_mod7_4 mask plus adjacent output 8",
+  "verilog_sha256": "1dfc8d0a58da3373d578a915f86551ae61db9886116a7eba9316db23a5b12e32"
+}

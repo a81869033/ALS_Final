@@ -1,0 +1,22 @@
+{
+  "adp": 9828,
+  "aig_sha256": "3940a7c9fab4e33bff30de6033324b989c81397998c51734948757f0692cbe64",
+  "area": 756,
+  "bundle_type": "current",
+  "candidate_id": "ex209_bf16_tanh_sign_exp_default_expr_casez",
+  "case": "ex209",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_tanh",
+  "method_signature": "ex209|frontend|current",
+  "reference_adp": 7320,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex209/aigs/ex209_bf16_tanh_sign_exp_default_expr_casez.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex209/verilog/ex209_bf16_tanh_sign_exp_default_expr_casez.v",
+  "variant": "sign_exp_default_expr_casez",
+  "verilog_sha256": "d02c4c4dbf92b4888d6ae4336666a774a8f8269e47ed29aac2f7c080aa6a5f96"
+}

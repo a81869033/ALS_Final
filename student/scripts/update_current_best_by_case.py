@@ -161,7 +161,7 @@ def load_reference(path):
 
 def source_domain(path: Path) -> str:
     parts = path.relative_to(ROOT).parts
-    if len(parts) >= 3 and parts[0] in {"student"} and parts[1] in {"runs", "seeds"}:
+    if len(parts) >= 3 and parts[0] in {"student"} and parts[1] in {"runs", "seeds", "new_seeds"}:
         return parts[2]
     return ""
 
@@ -171,6 +171,8 @@ def source_kind(path: Path) -> str:
     if len(parts) >= 2:
         if parts[1] == "seeds":
             return "seed"
+        if parts[1] == "new_seeds":
+            return "new_seed"
         if parts[1] == "runs":
             return "run"
     return ""
@@ -180,9 +182,9 @@ def result_priority(path: Path) -> int:
     name = path.name
     kind = source_kind(path)
     parts = path.relative_to(ROOT).parts
-    if kind == "seed" and any(part.endswith("_current") or "_current_" in part for part in parts):
+    if kind in {"seed", "new_seed"} and any(part.endswith("_current") or "_current_" in part for part in parts):
         return -1
-    if kind == "seeds" or kind == "seed":
+    if kind in {"seed", "new_seed"}:
         return 0
     if name == "best.csv":
         return 1
@@ -195,7 +197,7 @@ def result_priority(path: Path) -> int:
 
 def candidate_csvs():
     paths = []
-    for base in (ROOT / "student" / "runs", ROOT / "student" / "seeds"):
+    for base in (ROOT / "student" / "runs", ROOT / "student" / "seeds", ROOT / "student" / "new_seeds"):
         if not base.exists():
             continue
         for path in base.glob("**/results/*.csv"):
@@ -229,6 +231,14 @@ def read_candidates(path):
             adp = parse_int(row.get("adp") or row.get("best_adp"))
             if area is None or delay is None or adp is None:
                 continue
+            aig_path = (row.get("aig_path") or "").strip()
+            if not aig_path:
+                continue
+            aig_abs = Path(aig_path)
+            if not aig_abs.is_absolute():
+                aig_abs = ROOT / aig_abs
+            if not aig_abs.exists():
+                continue
             hypothesis = (
                 row.get("hypothesis")
                 or row.get("hypothesis/function_guess")
@@ -255,7 +265,7 @@ def read_candidates(path):
                     tool_chain=tool_chain,
                     classification=classification,
                     verilog_path=(row.get("verilog_path") or "").strip(),
-                    aig_path=(row.get("aig_path") or "").strip(),
+                    aig_path=aig_path,
                     source_kind=kind,
                     source_csv=rel(path),
                     notes=(row.get("notes") or "").strip(),

@@ -1,0 +1,22 @@
+{
+  "adp": 105364,
+  "aig_sha256": "6b4c29e0298f2e9f7253a907ed0227ee5b95a052cea6b054985a8ec8c7eb69e6",
+  "area": 7526,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex295_r67_cell_value_cube_defaults_abc_g_aig",
+  "case": "ex295",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit-symbol source factoring over current symbol-plane split",
+  "method_signature": "ex295|cyclic_2bit_symbol_source_factoring|cell_value_cube_defaults|shared_selector_inner_wildcard_cubes|yosys_internal_abc_g_aig|official_truth_exact_partition|2bit_cell_grouped_outputs",
+  "reference_adp": 68064,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round67_20260613_1104/sub-unk-mid-r67/ex295/aigs/ex295_r67_cell_value_cube_defaults_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round67_20260613_1104/agent_shards/sub-unk-mid-r67/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round67_20260613_1104/sub-unk-mid-r67/ex295/logs/ex295_r67_cell_value_cube_defaults_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round67_20260613_1104",
+  "source_verilog_path": "student/work/frontend_source_parallel_round67_20260613_1104/sub-unk-mid-r67/ex295/verilog/ex295_r67_cell_value_cube_defaults_abc_g_aig.v",
+  "variant": "cell_value_cube_defaults",
+  "verilog_sha256": "32a57630ecea00f58bb800144a30fb5e717cac1c036214f5075ff1d3cc2c36fa"
+}

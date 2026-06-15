@@ -1,0 +1,22 @@
+{
+  "adp": 21690,
+  "aig_sha256": "e40a35dd5d24b45282e986c8361f767407758982dcb6e7dbe568a848caa1d3c3",
+  "area": 1446,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex236_core_clamp_hi6_abc_d20",
+  "case": "ex236",
+  "delay": 15,
+  "domain": "fp16",
+  "hypothesis": "fp16_cube",
+  "method_signature": "fp16_cube",
+  "reference_adp": 17290,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex236_ex238_frontend_fp16_core_clamp_allflows_20260608_0953/ex236/aigs/ex236_core_clamp_hi6_abc_d20.aig",
+  "source_csv": "student/runs/fp16/ex236_ex238_frontend_fp16_core_clamp_allflows_20260608_0953/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex236_ex238_frontend_fp16_core_clamp_allflows_20260608_0953",
+  "source_verilog_path": "student/work/ex236_ex238_frontend_fp16_core_clamp_allflows_20260608_0953/ex236/verilog/ex236_core_clamp_hi6.v",
+  "variant": "core_clamp_hi6_abc_d20",
+  "verilog_sha256": "0495f5989c4e1efede7462e92d0afdacab081dd274d9bd222e0a3fa4ef75534f"
+}

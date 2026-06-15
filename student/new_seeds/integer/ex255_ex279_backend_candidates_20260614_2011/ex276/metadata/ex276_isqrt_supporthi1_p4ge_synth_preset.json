@@ -1,0 +1,22 @@
+{
+  "adp": 1030,
+  "aig_sha256": "6ffc4ec1ff5b400b6bce43b725840aeeaf9909195f68c3d729ffad35e59181b1",
+  "area": 103,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex276_isqrt_supporthi1_p4ge_synth_preset",
+  "case": "ex276",
+  "delay": 10,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 632,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex276_frontend_isqrt_supporthi_p4ge_20260609_1656/ex276/aigs/ex276_isqrt_supporthi1_p4ge_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex275_ex276_frontend_isqrt_supporthi_p4ge_20260609_1656/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex276_frontend_isqrt_supporthi_p4ge_20260609_1656",
+  "source_verilog_path": "student/work/ex275_ex276_frontend_isqrt_supporthi_p4ge_20260609_1656/ex276/verilog/ex276_isqrt_supporthi1_p4ge.v",
+  "variant": "supporthi1_p4ge+synth_preset",
+  "verilog_sha256": "2ba4865ef5ce84c4dd3fc6702420c5d04e1db781d4b919062819ed25ce8c13a5"
+}

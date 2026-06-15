@@ -1,0 +1,22 @@
+{
+  "adp": 13396,
+  "aig_sha256": "280bb49ebade162eb4bebbef925d892948dc168a8318f7fa0d25e49c45d25615",
+  "area": 788,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_r77_tree_route_decode_helper_boundary",
+  "case": "ex285",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "hamming_weight_route_source_boundary",
+  "method_signature": "ex285|hamming_weight_route_source_boundary|route_class_decode_helper_plus_tree_residual|only high-fanout pair OR/AND and parity route keys are kept; residual remains current exact tree|yosys_internal_abc_g_aig|official_evaluate|full_word_helper_boundary",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex285/aigs/ex285_r77_tree_route_decode_helper_boundary.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round77_20260613_1733/agent_shards/sub-unknown-source-r77/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round77_20260613_1733",
+  "source_verilog_path": "student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex285/verilog/ex285_r77_tree_route_decode_helper_boundary.v",
+  "variant": "route_class_decode_helper_plus_tree_residual",
+  "verilog_sha256": "b564aef0f488a4255ee9370b5ff2d3c178eefc12b4edd9880dc49dc02bee10bd"
+}

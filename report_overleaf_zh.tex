@@ -1,0 +1,215 @@
+\documentclass[UTF8,fontset=none,10pt,a4paper]{ctexart}
+
+\usepackage[a4paper,margin=1.2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue
+}
+
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{Latin Modern Mono}[Scale=0.90]
+\setCJKmainfont{Noto Serif CJK TC}
+\setCJKsansfont{Noto Sans CJK TC}
+\setCJKmonofont{Noto Sans CJK TC}[Scale=0.90]
+\xeCJKsetup{
+  CJKecglue=\hspace{0.12em},
+  CheckSingle=true
+}
+
+\setlength{\parindent}{1.8em}
+\setlength{\parskip}{0.18em}
+\linespread{1.0}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.05em,topsep=0.1em}
+\setlist[enumerate]{leftmargin=1.4em,itemsep=0.05em,topsep=0.1em}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{0.55em}{}
+\titlespacing*{\section}{0pt}{0.55em}{0.2em}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.35em}{0.15em}
+
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  columns=fullflexible,
+  breaklines=true,
+  frame=single,
+  framerule=0.2pt,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em,
+  aboveskip=0.3em,
+  belowskip=0.3em
+}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+
+\title{\vspace{-1.0em}\sffamily\bfseries AI-Based AIG Optimization Final Project Report}
+\author{傅豐樺 \quad 學號：114501702}
+\date{\vspace{-0.6em}}
+
+\begin{document}
+\maketitle
+\vspace{-1.2em}
+\fontsize{9.2pt}{10.6pt}\selectfont
+
+\section{專案目標與重現方式}
+
+本專案針對 \code{benchmarks/ex200.truth} 到 \code{ex299.truth} 共 100 個 Boolean function，產生功能等價且 area-delay product (ADP) 較低的 AIG。ADP 定義為 $\mathrm{area}\times\mathrm{delay}$，其中 area 是 AIG 中 two-input AND node 數量，delay 是 AIG level。所有輸出都必須通過等價檢查，否則不列入結果。
+
+主要程式與工具放在 \code{student/}。其中 \code{frontends/} 負責 truth-table 解析、Verilog simulation 與 Yosys synthesis，\code{generators/} 產生不同 benchmark family 的 Verilog/RTL，\code{backends/} 執行 AIG 最佳化，\code{scripts/} 負責整理 best result 與更新 \code{output/}。重現目前提交用的 \code{output/exNNN.aig} 可在專案根目錄執行：
+
+\begin{lstlisting}
+cd ALS_Final_Project
+export PATH=$PWD/student/tools/conda-env/bin:$PATH
+python3 student/scripts/update_current_best_by_case.py
+python3 student/scripts/update_output_best.py
+python3 evaluate.py
+\end{lstlisting}
+
+\code{update_current_best_by_case.py} 會掃描已驗證結果並選出每個 case 最低 ADP 的 AIG。\code{update_output_best.py} 會複製成 \code{output/ex200.aig} 到 \code{output/ex299.aig}，並在 \code{student/results/output_current_best_index.csv} 記錄來源、area、delay、ADP 與 hash。
+
+這份 index 也是本報告採用的實驗依據。它不是額外人工整理的表，而是從目前 \code{output/} 實際使用的 AIG 回推來源。每一列都包含輸出檔案、原始 run、來源 CSV、AIG hash 與複製時間，因此可以檢查某個 case 的結果到底來自 frontend seed、後端 GA 還是後續 rescue run。這樣做的好處是報告中的總 ADP 與 case-level 分析都對應到最後提交的 \code{output/}，而不是只對應某次中途實驗。
+
+前端解的來源是 AI-based AIG generation。流程是先由 AI 輔助拆解 truth table 背後的語意，得到 high-level description，再用 generator 或 AI-assisted Verilog rewriting 產生多種 Verilog 寫法，最後交給 Yosys 合成 AIG，並用 \code{evaluate.py} 量測 area、delay、ADP 與等價性：
+
+\begin{center}
+\small
+\code{truth table -> AI reverse engineering -> high-level description -> Verilog generators -> Yosys -> AIG -> evaluate.py}
+\end{center}
+
+若要回到更前面的 reverse engineering 階段，則從對應 case 的 \code{source_run}、\code{source_csv} 或 \code{student/frontend_campaigns/} index 找到當時使用的 generator 與 hypothesis，再重跑該 generator 產生 Verilog。若要重新跑某個 domain 的後端 GA，可使用：
+
+\begin{lstlisting}
+python3 student/scripts/run_backend_portfolio.py \
+  --portfolio-version v3-ga --domain integer --cases ex255-ex279 \
+  --run-id newseeds_integer_v3a_20260614_1952 \
+  --current-bundle student/new_seeds/integer/ex255_ex279_current \
+  --backend-bundle-glob 'student/new_seeds/integer/ex255_ex279_backend_candidates_*' \
+  --jobs 40 --case-jobs 10 --task-jobs 4 \
+  --skip-culs --disable-esyn \
+  --max-generations 8 --population-size 32 \
+  --offspring-per-generation 96 --max-sequence-len 4 \
+  --per-case-runtime-soft-limit 7200 --abc-timeout 90 --resume
+\end{lstlisting}
+
+其他 benchmark family 使用同一套指令結構，只需替換 \code{--domain}、\code{--cases}、\code{--run-id} 與候選 AIG 路徑。最後一律以 \code{python3 evaluate.py} 作為正式等價性與 ADP 檢查。
+
+重現時我沒有要求所有中間搜尋都重新跑完，因為部分 GA 或 deep synthesis run 需要數小時以上。報告中的「可重現」主要分成兩層：第一層是從已驗證結果重建 \code{output/} 並跑 \code{evaluate.py}，這是最終提交必須通過的檢查。第二層才是回到 frontend campaign 或 backend run 的 source path，重跑當時的 generator 或 command sequence。前者確保最後答案可驗證，後者則保留方法來源與除錯線索。
+
+在實際整理結果時，我也盡量讓每個輸出都能追溯到明確來源。除了 \code{output_current_best_index.csv} 之外，相關 run 的 \code{best.csv}、\code{candidates.csv} 與工作目錄會保留 candidate id、來源 AIG、command sequence、area/delay 與 hash。這些欄位讓我可以分辨某個改善是來自新的 frontend Verilog、Yosys synthesis flow，還是後端 GA 的某段指令序列。對報告來說，這比只列最後分數更重要，因為它能說明方法是否真的可重做。
+
+\section{方法架構}
+
+整體 flow 分成前端候選產生、候選整理、後端 GA、結果彙整四層：
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.22\linewidth}p{0.72\linewidth}@{}}
+\toprule
+階段 & 內容 \\
+\midrule
+前端候選產生 & 從 truth table 反推語意或結構化 Verilog，再經 Yosys/ABC 合成為 AIG。\\
+候選整理 & 將已驗證且表現較好的 AIG 按 case 整理，作為後端搜尋起點。\\
+後端 GA & 用 genetic algorithm 在多種 synthesis command sequence 中搜尋更低 ADP。\\
+結果彙整 & 收斂所有通過驗證的結果，更新 \code{current_best_by_case.csv} 與 \code{output/}。\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+前端候選產生的核心是避免直接展開 truth table。直接展開通常會得到很大的 AIG，因此本專案先用 AI 做 reverse engineering，把原本看起來像隨機 bit pattern 的 truth table 轉成 high-level description，再寫成結構化 Verilog。BF16/FP16 主要拆 sign/exponent/mantissa 與 special cases，FP8/float 類 cases 使用 field-class decision graph、alignment 與 residual overlay，integer cases 使用 multiplier/divider/square/isqrt shell，unknown cases 則嘗試 BDD、ANF/Davio、cofactor、prefix/key transform 或 image/route descriptor。每個 Verilog candidate 都經 Yosys/ABC synthesis 成 AIG，再用 \code{evaluate.py} 檢查等價性與 ADP。
+
+前端搜尋時，我通常不只相信單一 semantic guess。即使兩段 Verilog 在功能上等價，Yosys/ABC 合成後的 AIG 結構可能差很多，所以同一個 high-level description 會被改寫成多種 RTL：例如使用 case split、lookup table、decision tree、arithmetic expression 或 shared predicate。這些寫法會造成不同的 area/delay tradeoff，也會影響後端 GA 是否容易再改善。因此前端階段留下多個 verified candidates，比只保留當下最低 ADP 的 candidate 更有價值。
+
+候選整理時，我會把每個 case 分成「目前最好」與「可作為後端起點」兩類。前者負責提供目前最低 ADP 的基準，後者則保留結構多樣性。舉例來說，有些 AIG 的 ADP 略差，但 delay 較低或邏輯結構較平衡，後端 GA 反而可能從這類起點找到更好的結果。因此 \code{student/new_seeds/} 的功能不是代表前端方法本身，而是把已驗證的前端成果整理成後端搜尋可使用的 seed set。
+
+後端 GA 不再修改 truth table 或 Verilog，而是在已等價的 AIG 上搜尋 optimization command sequence。GA 的 individual 可以視為「起始 AIG 加上一串 synthesis 指令」。每個 case 會建立自己的 population，初始化時放入目前最佳 AIG、其他等價候選，以及過去接近最佳的結果。每一代從較好的 result 中選 parent，產生 offspring。產生方式包括改動 command sequence、重組兩個 parent 的指令片段，或從另一個起始 AIG 重新搜尋。保留結果時不只看最低 ADP，也保留不同 area/delay tradeoff，避免搜尋太早集中在單一路線。
+
+後端可選指令主要來自 ABC rewrite/refactor/resub/balance/dc2，以及 ABC9、MockTurtle 的等價重寫與平衡。每個 offspring 執行後都重新量測，只有通過 \code{evaluate.py} 且 ADP 有效的 AIG 會被保留。不等價、timeout 或明顯退化的結果會被丟棄。整體來看，後端 GA 把大量可能的 synthesis script 當成搜尋空間，用實際驗證後的 ADP 作為回饋訊號，逐步改善每個 case。
+
+後端 GA 的另一個重點是保留 diversity。若只保留 ADP 最低的一個 AIG，後續搜尋常會很快收斂到同一種結構，改善幅度有限。因此我在整理候選時會保留不同 root family、不同 delay、不同 area 的結果，讓 population 可以從多個方向出發。對接近 reference 的 case，搜尋會偏向短 sequence 和低風險 rewrite。對落後較多的 case，才會嘗試更長 sequence、較重的 synthesis flow 或從另一個 frontend seed 重新開始。
+
+GA 的 fitness 以 ADP 為主，但我沒有完全忽略 area 與 delay 的個別變化。原因是 ADP 相同時，低 delay 的 AIG 和低 area 的 AIG 在後續 rewrite 中可能有不同潛力。實作上會記錄每個 candidate 的 area、delay、ADP、hash 與來源指令，並用 timeout 控制單一任務成本。若中途停止，後續可以用 resume 繼續接著跑，避免已花時間產生的候選被浪費。
+
+\section{AI/LLM 在流程中的使用}
+
+AI/LLM 在本專案中主要用在實驗設計、假設生成、程式實作與結果分析，並不直接決定最終 AIG 是否正確。正確性仍由 ABC 等價檢查與 \code{evaluate.py} 決定。
+
+第一，LLM 協助做 benchmark family classification 與 high-level function hypothesis。它根據 truth-table pattern、case notes 與既有 run summary，把 cases 分成 BF16、FP16、FP8/float、integer、unknown 等類別，再提出可能的 decomposition。第二，LLM 用來快速建立與修改工具，例如 truth-table analyzer、Verilog generator、後端 GA wrapper、結果彙整與 output update scripts。這些工具讓實驗結果可以固定輸出成 CSV 與 manifest，後續才有辦法重現和比較。
+
+第三，LLM 也被用來平行化前端探索。對於語意不明的 cases，我把不同 case 或不同 hypothesis 分給多個 sub-agent 同時處理。有些 sub-agent 專看 BF16/FP16 的 exponent/mantissa pattern，有些專攻 integer multiplier/divider/isqrt，有些則針對 unknown family 嘗試 BDD、cofactor、ANF 或 image/route descriptor。每個 sub-agent 都要產生可驗證的 Verilog、Yosys synthesis 結果與 evaluation CSV，而不是只回報文字猜測。最後再收斂各 agent shard 的成果與失敗假設，留下真正等價且 ADP 有競爭力的候選。
+
+我對 sub-agent 的要求是產物必須能被主流程驗證。也就是說，文字推論本身不算結果，至少要能留下 generator、Verilog、synthesis log 或 evaluation row。若 hypothesis 失敗，也會記錄失敗原因，例如不等價、ADP 過高、只改善單一 output、或合成後結構爆炸。這些失敗紀錄能避免下一輪重複嘗試同一條路，也讓後續 prompt 可以更精準地限制搜尋方向。
+
+另外，我也用 LLM 把外部方法快速轉成可實驗版本。E-Syn 的核心概念是用 e-graph 保存多種等價 Boolean expression，再抽出 area 或 delay 較好的表示。我根據其 paper 與 GitHub 實作建立了 \code{student/backends/esyn_flow.py} 與 \code{student/backends/esyn_eqn.py}，將 AIG 轉成 EQN/S-expression 後做 per-output rewrite，再接回 AIG 並用 \code{evaluate.py} 檢查。這個版本最後可以作為 optional seed generator，但實測改善不明顯，因此正式結果沒有依賴 E-Syn。
+
+整體來說，LLM 在這個專案裡比較像加速實驗迭代的工具，而不是 correctness oracle。它可以幫忙整理 hypotheses、產生腳本、根據失敗結果提出下一輪方向，也可以讓多個 sub-agent 同時探索不同 family。但所有 AI 產生的 Verilog、AIG 或 command sequence 最後都要通過同一套等價檢查與 ADP 量測。這個界線很重要，因為 truth table benchmark 很容易出現看起來合理但其實不等價的猜測。
+
+\section{實驗結果與觀察}
+
+本節結果以 \code{student/results/output_current_best_index.csv} 為準。這份檔案對應目前實際放在 \code{output/} 的 100 個 AIG，欄位包含每個 case 的 area、delay、ADP、reference ADP、來源 run、來源 CSV、AIG hash 與複製時間。也就是說，下面的統計不是中途某次 run 的摘要，而是目前提交輸出的結果。此版本於 2026-06-15 12:11:46 +0800 更新到 \code{output/}。
+
+目前 100 個 case 都有輸出 AIG，且皆可由 \code{evaluate.py} 做正式檢查。總 ADP 為 7,462,959，reference 總 ADP 為 6,696,028，總和 ratio 約 1.115。若以逐 case 的 \code{ADP/reference ADP} 來看，45 個 case 已優於 reference，68 個 case 低於 1.1x reference，96 個 case 低於 1.5x reference。平均 ratio 約 1.083，median ratio 約 1.012，表示大部分 case 已接近 reference，總分主要被少數落後較多的 case 拉高。
+
+表格中的 \emph{Sum ratio} 是該 domain 的 $\sum ADP / \sum reference\ ADP$，因此會反映大型 case 對總分的影響。\emph{Avg ratio} 則是逐 case ratio 的平均，比較能看出該 domain 中一般 case 的表現。這兩個數字有時會不同，例如 BF16 的 Sum ratio 低於 1，但 Avg ratio 略高於 1，代表少數 ADP 較大的 case 改善很多，而其他 case 大多只是接近 reference。
+
+\begin{center}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Domain & Cases & Sum ratio & Avg ratio & Beat ref & $>$1.5x \\
+\midrule
+BF16 & 20 & 0.888 & 1.034 & 10 & 0 \\
+FP16 & 20 & 1.058 & 1.057 & 10 & 1 \\
+FP8/float & 15 & 0.569 & 0.840 & 10 & 0 \\
+Integer & 25 & 1.073 & 1.075 & 9 & 0 \\
+Unknown & 20 & 1.369 & 1.351 & 6 & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+從 domain summary 來看，FP8/float 是目前效果最明顯的一組，總和 ratio 只有 0.569，15 個 case 中有 10 個 beat reference。這組的改善主要來自前端語意重建，因為這些 function 若能被解讀成 field-level operation 或較小的 decision graph，Yosys/ABC 合成後會比直接展開 truth table 精簡許多。BF16 的總和 ratio 也低於 1，但平均 ratio 略高於 1，代表有幾個大 case 改善明顯，整體分布則仍接近 reference。Integer family 的結果較平均，沒有特別嚴重的 outlier，但也不像 FP8/float 那樣有大幅勝出的 case。
+
+相對地，Unknown family 是目前主要瓶頸。雖然 \code{ex287} ratio 只有 0.488，顯示部分 unknown case 可以透過 decomposition 找到更好的結構，但 \code{ex286}、\code{ex297}、\code{ex299} 仍明顯落後 reference。這幾個 case 的共同問題是前端結構還不夠明確，後端 GA 即使能做局部 rewrite，也很難把一個不夠好的初始結構完全修回來。因此後續若要繼續改善總分，重點應該放在這些 high-ratio case 的 frontend reconstruction，而不是只增加一般後端搜尋時間。
+
+\begin{center}
+\small
+\begin{tabular}{lrrp{0.53\linewidth}}
+\toprule
+Case & Ratio & ADP & 觀察 \\
+\midrule
+\code{ex251} & 0.187 & 7,344 & frontend semantic seed 明顯優於 reference，是目前改善最大的 case。\\
+\code{ex254} & 0.414 & 15,840 & FP8/float 類型受益於較好的 high-level structure。\\
+\code{ex287} & 0.488 & 2,820 & unknown 中少數被 decomposition 打開的 case，顯示此類方法仍有潛力。\\
+\code{ex286} & 5.947 & 14,131 & 結構仍不明確，單靠後端 command sequence 改善有限。\\
+\code{ex297} & 1.764 & 398,400 & ADP 本身很大，仍需要更好的 frontend guess 或 shared predicate。\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+整體而言，本次結果的主要收穫是：前端找對語意時，後端 GA 可以進一步把 area/delay 壓低，甚至大幅 beat reference；但若前端只得到偏展開式或不夠貼近語意的 AIG，後端搜尋很容易進入局部最佳。這也解釋了為什麼結果中同時存在 ratio 低於 0.2 的成功案例，以及少數 ratio 高於 1.5 的瓶頸案例。
+
+從提交角度看，目前結果已經涵蓋全部 100 個 benchmark，且所有輸出都來自 \code{source_kind=run} 的 verified rows。這代表最後的 \code{output/} 不是手動拼接的黑箱，而是由已記錄來源的 run 結果整理而來。後續若要更新成更好的版本，只要新的 run 產生更低 ADP 且通過等價檢查，就可以重新執行 update scripts 產生新的 index 與 output。
+
+\section{困難、限制與改進方向}
+
+第一個困難是搜尋空間很大。即使只考慮 ABC/ABC9 的 command sequence，不同起始 AIG、指令順序、timeout 與 area/delay tradeoff 都會造成結果差異。本專案透過保留多種 tradeoff、記錄指令過去成效、支援 resume，以及設定每個 case 的時間上限來控制成本，但仍不能保證找到 global optimum。
+
+第二個困難是前端初始 AIG 的品質常比後端最佳化更重要。有些 case 透過後端 GA 可以把 ratio 從高於 1.5 拉回 1.1 附近，但也有 case 反覆優化仍停在同一區域，代表 AIG 結構本身不夠好。這類 case 需要更好的 semantic reconstruction，例如 unknown family 的 image/route descriptor、cofactor key、class one-hot mux，或 FP16 selected-bit/exception shell。
+
+第三個限制是部分工具受環境影響。需要 GPU 的最佳化 flow 在本地環境中不一定穩定。E-Syn 目前只保守用在單一輸出 expression rewrite，避免一次替換所有輸出造成轉換成本過高。耗時的深度 synthesis flow 也只適合針對少數落後較多的 cases 做最後補強，而不適合放入每個 case 的一般搜尋。
+
+未來可以改進的方向包括：建立學習式 command selection，讓後端 GA 利用 case feature 預測哪些操作可能有效。對 unknown functions 建立更系統化的 truth-table feature extractor。最後，針對落後較多的 cases 做更深入的 frontend decomposition，而不是只增加後端時間。
+
+另外，報告中的結果也顯示「前端語意」與「後端最佳化」其實不是兩個獨立階段。好的 frontend seed 會決定後端能不能找到更好的局部區域，後端搜尋結果也會反過來提醒哪些 semantic guess 可能不對。未來若有更多時間，我會把這兩者串成更自動化的 loop：當後端長時間無法改善時，自動回到 frontend 產生不同 decomposition，而不是只延長同一條 backend search。
+
+
+\end{document}

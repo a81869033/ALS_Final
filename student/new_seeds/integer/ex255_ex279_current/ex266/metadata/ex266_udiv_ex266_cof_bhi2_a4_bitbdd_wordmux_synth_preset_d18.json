@@ -1,0 +1,22 @@
+{
+  "adp": 1480,
+  "aig_sha256": "377140f1dd4d2b9a018380e5d24ead0185c8f384bd4f1183006c25defa7ba6ef",
+  "area": 148,
+  "bundle_type": "current",
+  "candidate_id": "ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux_synth_preset_d18",
+  "case": "ex266",
+  "delay": 10,
+  "domain": "integer",
+  "hypothesis": "unsigned low5_high5:a/b dbz=max",
+  "method_signature": "ex266|unsigned low5_high5:a/b dbz=max|ex266_cof_bhi2_a4_bitbdd_wordmux|semantic_udiv_exact|synth_preset_d18|semantic_udiv_exact|semantic_udiv_exact",
+  "reference_adp": 848,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round8_20260612_1826/mixed-r8/ex266/ex266/aigs/ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux_synth_preset_d18.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round8_20260612_1826/agent_shards/mixed-r8/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round8_20260612_1826/mixed-r8/ex266/official_eval/ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux_synth_preset_d18.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round8_20260612_1826",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round8_20260612_1826/mixed-r8/ex266/ex266/verilog/ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux.v",
+  "variant": "ex266_cof_bhi2_a4_bitbdd_wordmux+synth_preset_d18",
+  "verilog_sha256": "e42dcece233c5af83e1faccb295f78fde2462342aa7c016dfead70f105ad4ba8"
+}

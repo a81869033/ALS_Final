@@ -1,0 +1,22 @@
+{
+  "adp": 1044,
+  "aig_sha256": "0721559a3dfac8045040e80bf9f4b5432fe2e3e3fdeec6c8f5f846af896100b8",
+  "area": 116,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex276_mix_p4_p5_p5low2_arith_wreduce_aig",
+  "case": "ex276",
+  "delay": 9,
+  "domain": "integer",
+  "hypothesis": "sqrt mixed prefix delay tradeoff",
+  "method_signature": "ex276|sqrt_mixed_prefix_delay_tradeoff|prefix4_prefix5_selected_low_bit_mixed_classifier|top_bits_keep_prefix4_sharing_while_selected_low_bits_use_deeper_prefix5_cuts|arith_wreduce_aig|unsigned_floor_isqrt_10_to_5|mixed_sqrt_output_bits",
+  "reference_adp": 632,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex276/aigs/ex276_mix_p4_p5_p5low2_arith_wreduce_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex276/official_eval/ex276_mix_p4_p5_p5low2_arith_wreduce_aig/ex276_mix_p4_p5_p5low2_arith_wreduce_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex276/verilog/ex276_mix_p4_p5_p5low2.v",
+  "variant": "prefix4/prefix5 selected low-bit mixed classifier",
+  "verilog_sha256": "188f898719898f615ce9d310739c7e3854a9397ddef3148589d3f3d39fa78bf1"
+}

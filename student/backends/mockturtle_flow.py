@@ -14,7 +14,22 @@ from student.backends.abc_flow import baseline_candidate
 
 RUNNER_ENV = "MOCKTURTLE_AIG_RUNNER"
 DEFAULT_FLOW = "resub_balance"
-SUPPORTED_FLOWS = ("resub", "balance", "resub_balance", "balance_resub")
+SUPPORTED_FLOWS = (
+    "crw",
+    "wrw",
+    "rf",
+    "resub",
+    "resub2",
+    "balance",
+    "resub_balance",
+    "balance_resub",
+    "cut_rewrite",
+    "refactor",
+    "sim_resub",
+    "window_rewrite",
+    "cut_refactor",
+    "window_resub_balance",
+)
 
 
 def _project_root():
@@ -78,7 +93,7 @@ def build_runner(root=None, timeout=300):
     return runner
 
 
-def run_mockturtle(input_aig, output_aig, runner=None, flow=DEFAULT_FLOW, timeout=120):
+def run_mockturtle(input_aig, output_aig, runner=None, flow=DEFAULT_FLOW, timeout=120, max_pis=8, max_inserts=2):
     if runner is None:
         runner = discover_runner()
 
@@ -100,6 +115,10 @@ def run_mockturtle(input_aig, output_aig, runner=None, flow=DEFAULT_FLOW, timeou
         str(output_aig),
         "--flow",
         flow,
+        "--max-pis",
+        str(max_pis),
+        "--max-inserts",
+        str(max_inserts),
     ]
     result = subprocess.run(
         command,
@@ -115,7 +134,7 @@ def run_mockturtle(input_aig, output_aig, runner=None, flow=DEFAULT_FLOW, timeou
     return result.stdout.strip()
 
 
-def mockturtle_flow_candidate(case, flow_name, parent, truth, work_dir, abc, runner=None, timeout=120):
+def mockturtle_flow_candidate(case, flow_name, parent, truth, work_dir, abc, runner=None, timeout=120, max_pis=8, max_inserts=2):
     if flow_name not in SUPPORTED_FLOWS:
         raise RuntimeError("Unknown MockTurtle flow: {0}".format(flow_name))
 
@@ -130,6 +149,8 @@ def mockturtle_flow_candidate(case, flow_name, parent, truth, work_dir, abc, run
         runner=runner,
         flow=flow_name,
         timeout=timeout,
+        max_pis=max_pis,
+        max_inserts=max_inserts,
     )
     generation_sec = time.time() - start
 
@@ -149,7 +170,7 @@ def mockturtle_flow_candidate(case, flow_name, parent, truth, work_dir, abc, run
     return candidate
 
 
-def mockturtle_candidate(case, parent, truth, work_dir, abc, runner=None, timeout=120, flow=DEFAULT_FLOW):
+def mockturtle_candidate(case, parent, truth, work_dir, abc, runner=None, timeout=120, flow=DEFAULT_FLOW, max_pis=8, max_inserts=2):
     return mockturtle_flow_candidate(
         case=case,
         flow_name=flow,
@@ -159,10 +180,12 @@ def mockturtle_candidate(case, parent, truth, work_dir, abc, runner=None, timeou
         abc=abc,
         runner=runner,
         timeout=timeout,
+        max_pis=max_pis,
+        max_inserts=max_inserts,
     )
 
 
-def smoke_ex200(work_dir="/tmp/mockturtle_smoke", runner=None, abc=None, baseline_dir=None, flow=DEFAULT_FLOW, timeout=120):
+def smoke_ex200(work_dir="/tmp/mockturtle_smoke", runner=None, abc=None, baseline_dir=None, flow=DEFAULT_FLOW, timeout=120, max_pis=8, max_inserts=2):
     root = _project_root()
     case = "ex200"
     truth = root / "benchmarks" / "{0}.truth".format(case)
@@ -182,6 +205,8 @@ def smoke_ex200(work_dir="/tmp/mockturtle_smoke", runner=None, abc=None, baselin
         runner=runner,
         timeout=timeout,
         flow=flow,
+        max_pis=max_pis,
+        max_inserts=max_inserts,
     )
     return parent, candidate
 
@@ -206,6 +231,8 @@ def main(argv=None):
     parser.add_argument("--baseline-dir", default=str(default_baseline_dir()))
     parser.add_argument("--work-dir", default="/tmp/mockturtle_smoke")
     parser.add_argument("--flow", choices=SUPPORTED_FLOWS, default=DEFAULT_FLOW)
+    parser.add_argument("--max-pis", type=int, default=8)
+    parser.add_argument("--max-inserts", type=int, default=2)
     parser.add_argument("--timeout", type=int, default=120)
     parser.add_argument("--build", action="store_true", help="Build the runner before running other actions.")
     parser.add_argument("--status", action="store_true", help="Print discovered runner path.")
@@ -232,6 +259,8 @@ def main(argv=None):
             baseline_dir=Path(args.baseline_dir),
             flow=args.flow,
             timeout=args.timeout,
+            max_pis=args.max_pis,
+            max_inserts=args.max_inserts,
         )
         _print_candidate("baseline", parent)
         _print_candidate("mockturtle_{0}".format(args.flow), candidate)

@@ -1,0 +1,22 @@
+{
+  "adp": 23298,
+  "aig_sha256": "36c33b8dbf4b4f256be438ba62a50092da4e63299d61266ad8e6319f5dab8bcf",
+  "area": 706,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_r11_r89_active_branch_preset",
+  "case": "ex245",
+  "delay": 33,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex245|E5M2FN packed add high byte plus low byte|r89 active same/diff/pass branch source with explicit synth preset|shared sorted decode plus selected active residual roots before final NaN mux|synth_preset_aig|official_evaluate|full_word",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/aigs/ex245_r11_r89_active_branch_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-hard-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/logs/ex245_r11_r89_active_branch_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/verilog/ex245_r11_r89_active_branch_preset.v",
+  "variant": "r89 active same/diff/pass branch source with explicit synth preset",
+  "verilog_sha256": "106516e81748112acc2b00daed1ffe8c1bfa2fa9a476cacbc3046c7df9584deb"
+}

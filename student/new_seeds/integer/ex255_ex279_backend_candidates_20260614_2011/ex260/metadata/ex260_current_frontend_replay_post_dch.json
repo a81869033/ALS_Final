@@ -1,0 +1,22 @@
+{
+  "adp": 1144,
+  "aig_sha256": "2c5eba6523a82e3089953027cd7fabf1383345b7dc81780fc55f11f473aec822",
+  "area": 88,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex260_current_frontend_replay_post_dch",
+  "case": "ex260",
+  "delay": 13,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex260|current_best_frontend_source_may_need_a_fixed_post-synthesis_rewrite|Baugh-Wooley_reverse_hCLA4_replay_from_current_frontend_best|existing_shared_signed_partial_products_and_hCLA_final_carry|post_dch|signed_low4_high4_multiply|full_product_word",
+  "reference_adp": 657,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex260/aigs/ex260_current_frontend_replay_post_dch.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex260/logs/ex260_current_frontend_replay_post_dch.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex260/verilog/ex260_current_frontend_replay.v",
+  "variant": "Baugh-Wooley reverse hCLA4 replay from current frontend best",
+  "verilog_sha256": "3566ab8cf4a6b8bb929bea93ea4303ce5358c5442fa358c7d062e8db644cb7d1"
+}

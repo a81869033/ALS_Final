@@ -1,0 +1,22 @@
+{
+  "adp": 3564,
+  "aig_sha256": "efd56267c7bbd394331f503a972c6e289b4ac56325063575b949d6399da3cc9a",
+  "area": 324,
+  "bundle_type": "current",
+  "candidate_id": "ex214_r96_bf16_recip_square_bit13_exp_formula_abc_g_aig",
+  "case": "ex214",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_square_bit13_formula",
+  "method_signature": "ex214|round96_bf16_smallgap_source_flow|bf16_reciprocal_square_bit13_formula|sign-independent exponent range formula for bit13|source_to_aig_frontend_only|abc_read_truth_xf",
+  "reference_adp": 2424,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex214/official_eval/ex214_r96_bf16_recip_square_bit13_exp_formula_abc_g_aig/ex214.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex214/logs/ex214_r96_bf16_recip_square_bit13_exp_formula_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "frontend_gt15_structural_round96_20260614_0651",
+  "source_verilog_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex214/verilog/ex214_r96_bf16_recip_square_bit13_exp_formula_abc_g_aig.v",
+  "variant": "sign-independent exponent range formula for bit13",
+  "verilog_sha256": "3db4adb19f64fbf64e77d67c1f4af6d5eaed39825909c01e7af6a6f3008bd5ce"
+}

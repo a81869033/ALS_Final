@@ -1,0 +1,22 @@
+{
+  "adp": 567,
+  "aig_sha256": "e7a1015e318176f1530b8715a8574d59ea5f05323c7cd82622e7d9eb6e9d9051",
+  "area": 63,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex265_udiv_bdd_b_msb_a_lsb_synth_preset",
+  "case": "ex265",
+  "delay": 9,
+  "domain": "integer",
+  "hypothesis": "unsigned low4_high4:a/b dbz=max",
+  "method_signature": "unsigned low4_high4:a/b dbz=max",
+  "reference_adp": 322,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex265_ex269_frontend_udiv_bdd_orders_20260609_0805/ex265/aigs/ex265_udiv_bdd_b_msb_a_lsb_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex265_ex269_frontend_udiv_bdd_orders_20260609_0805/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex265_ex269_frontend_udiv_bdd_orders_20260609_0805",
+  "source_verilog_path": "student/work/ex265_ex269_frontend_udiv_bdd_orders_20260609_0805/ex265/verilog/ex265_udiv_bdd_b_msb_a_lsb.v",
+  "variant": "bdd_b_msb_a_lsb+synth_preset",
+  "verilog_sha256": "b5320a26cfeb881af32e06c2382652b75f49a157174f2a4c8a9527e1aecdd11a"
+}

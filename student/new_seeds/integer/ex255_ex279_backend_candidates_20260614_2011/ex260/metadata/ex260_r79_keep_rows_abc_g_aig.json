@@ -1,0 +1,22 @@
+{
+  "adp": 1131,
+  "aig_sha256": "58a533569143523d72963854bb3c13405eb01c2a268b9cde18c2dd0531253b2f",
+  "area": 87,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex260_r79_keep_rows_abc_g_aig",
+  "case": "ex260",
+  "delay": 13,
+  "domain": "integer",
+  "hypothesis": "signed_low4_high4_multiply",
+  "method_signature": "ex260|signed_low4_high4_multiply|bounded_source_boundary_variant|common_keep_rows_plus_current|yosys_abc_g_aig|abc_xf_official_evaluate|not_r75_r78_exact_repeat",
+  "reference_adp": 657,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round79_20260613_1838/sub-integer-source-r79/ex260/aigs/ex260_r79_keep_rows_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round79_20260613_1838/agent_shards/sub-integer-source-r79/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/frontend_source_parallel_round79_20260613_1838/sub-integer-source-r79/ex260/official_eval/ex260_r79_keep_rows_abc_g_aig/ex260_r79_keep_rows_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round79_20260613_1838",
+  "source_verilog_path": "student/work/frontend_source_parallel_round79_20260613_1838/sub-integer-source-r79/ex260/verilog/ex260_r79_keep_rows.v",
+  "variant": "bounded_source_boundary_variant",
+  "verilog_sha256": "8cbb34ba87cd53c76abccbbe820a6969905a0b414c1f1b3879a2fda2b4ee5ac1"
+}

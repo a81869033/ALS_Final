@@ -1,0 +1,5 @@
+case,domain,candidate_id,shared_structures,sharing_strategy,estimated_benefit,agent_id,run_id,notes
+ex205,bf16,ex205_blocked_no_candidate_r14,none,no fresh small-mantissa shared structure emitted,none,bf16-smallmant-r14,ex200_ex299_frontend_refgap_round14_20260612_2150,Blocked before synthesis; see diagnostic evidence path.
+ex244,float_fp8,ex244_r14_predicate_lattice_blocker,,,,,ex200_ex299_frontend_refgap_round14_20260612_2150,
+ex276,integer,ex276_blocked_no_candidate,hybrid high-prefix plus low residual compare predicates,share residual comparator terms below prefix rather than replaying per-bucket prefix4/shared-ge,unverified follow-up only,integer-isqrt-r14,ex200_ex299_frontend_refgap_round14_20260612_2150,BLOCKED_NO_CANDIDATE
+ex299,unknown,ex299_r14_state_descriptor_anf_blocker,,blocked_before_verilog,,,ex200_ex299_frontend_refgap_round14_20260612_2150,

@@ -1,0 +1,22 @@
+{
+  "adp": 20740,
+  "aig_sha256": "660fea974c8d38163b18ca4d2e89aa9c9a417f518f62b8a2b095e5c8664976c7",
+  "area": 610,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex251_semantic_int3_dot2_prodtable_qcase_abc_g_aig",
+  "case": "ex251",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "packed_int3_signmag_dot2_to_e4m3",
+  "method_signature": "packed_int3_signmag_dot2_to_e4m3",
+  "reference_adp": 39270,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_fix_20260608_2110/ex251/aigs/ex251_semantic_int3_dot2_prodtable_qcase_abc_g_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex250_ex254_frontend_fp4_dot_fma_semantic_fix_20260608_2110/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex250_ex254_frontend_fp4_dot_fma_semantic_fix_20260608_2110",
+  "source_verilog_path": "student/work/ex250_ex254_frontend_fp4_dot_fma_semantic_fix_20260608_2110/ex251/verilog/ex251_semantic_int3_dot2_prodtable_qcase.v",
+  "variant": "semantic_int3_dot2_prodtable_qcase_abc_g_aig",
+  "verilog_sha256": "1c7f94479a7f742c75f7cf5ff7fd8b0d1a5af685dd4f106a36c817dddb6ac55b"
+}

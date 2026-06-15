@@ -1,0 +1,22 @@
+{
+  "adp": 4760,
+  "aig_sha256": "ae72a1b74ac5b0c1ebd52789081d2f3baafaf4588727c0a504b56ac6570fc7e5",
+  "area": 170,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex249_r3_gap_split_delta_planes",
+  "case": "ex249",
+  "delay": 28,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex249|E5M2FN hypot abs high low|gap0-gap1 split delta output planes|shared max/min decode with separate active-gap delta tables|yosys_abc_g_aig_frontend|official_evaluate|gap_split_delta_planes",
+  "reference_adp": 2079,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-output-plane-r3/ex249/aigs/ex249_r3_gap_split_delta_planes.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp8-output-plane-r3/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_continuation_20260614_1216/fp8-output-plane-r3/ex249/logs/ex249_r3_gap_split_delta_planes.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-output-plane-r3/ex249/verilog/ex249_r3_gap_split_delta_planes.v",
+  "variant": "split raw-exponent delta table into separate gap0 and gap1 decision planes",
+  "verilog_sha256": "8f58d37ee82cb48e90ce97cb9563f0e7512bd5c9e90bb1312b6f051899126b78"
+}

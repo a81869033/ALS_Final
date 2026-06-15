@@ -1,0 +1,22 @@
+{
+  "adp": 215916,
+  "aig_sha256": "fd5c12e2da568244f8f760fd00c9d247fdbfe2516f1f1e72d4be6d7ab463e670",
+  "area": 11364,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex225_nested_low14_hi5_synth_preset_aig",
+  "case": "ex225",
+  "delay": 19,
+  "domain": "fp16",
+  "hypothesis": "fp16_log10",
+  "method_signature": "ex225|fp16_log10|truth-derived_positive-normal_nested_mantissa_LUT|shared_special_decode_plus_per-exp_high-bit_run_trees_and_nested_low_LUT|synth_preset_aig|abc_xf_official_evaluate|positive-normal_exp-group_high-bit_run_trees_plus_nested_low_LUT",
+  "reference_adp": 116676,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-agent/ex225/aigs/ex225_nested_low14_hi5_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/fp16-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-agent/ex225/official_eval/ex225_nested_low14_hi5_synth_preset_aig/ex225_nested_low14_hi5_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-agent/ex225/verilog/ex225_nested_low14_hi5.v",
+  "variant": "truth-derived positive-normal nested mantissa LUT",
+  "verilog_sha256": "fd5ee55a87786c19fc88583d684fa4b09082b9f1e48668c50129f3d589d9dd11"
+}

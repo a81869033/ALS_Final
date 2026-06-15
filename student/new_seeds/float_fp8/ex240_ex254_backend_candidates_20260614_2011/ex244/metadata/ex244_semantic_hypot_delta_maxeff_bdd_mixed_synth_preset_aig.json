@@ -1,0 +1,22 @@
+{
+  "adp": 10506,
+  "aig_sha256": "725ff734496fd2821779ec4e75d9eb2862150d7f67988496130c359d8d417ef9",
+  "area": 309,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_semantic_hypot_delta_maxeff_bdd_mixed_synth_preset_aig",
+  "case": "ex244",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "E4M3FN packed hypot of operand magnitudes",
+  "method_signature": "ex244|E4M3FN packed hypot|round16 maxeff gap/sig mixed-order delta BDD|shared max/min decode plus max exponent saturation context in BDD roots|yosys_synth_preset_aig_official_evaluate|exact_e4m3fn_hypot_abs_high_low|output_grouped_delta_bits",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round16_20260612_2233/fp8-struct-r16/ex244/aigs/ex244_semantic_hypot_delta_maxeff_bdd_mixed_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round16_20260612_2233/agent_shards/fp8-struct-r16/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round16_20260612_2233/fp8-struct-r16/ex244/logs/ex244_semantic_hypot_delta_maxeff_bdd_mixed_synth_preset_aig.official_evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round16_20260612_2233",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round16_20260612_2233/fp8-struct-r16/ex244/verilog/ex244_semantic_hypot_delta_maxeff_bdd_mixed.v",
+  "variant": "",
+  "verilog_sha256": "64d8d5d93066c9c0d74aefbe91ce5e7609967d9a76aa0de7d7ba188141af6a9e"
+}

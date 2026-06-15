@@ -64,6 +64,11 @@ machine-readable current merge is:
 
 ## Follow-Up Priorities
 
+- 2026-06-14 Round94 note: frontend-only campaign
+  `frontend_bf16_unknown_struct_round94_20260614_0552` updated `ex219` from
+  `623/15/9345` to `658/14/9212` using a mant64 delta-pair selected-bit6
+  structure.  The regenerated `student/frontend_campaigns/frontend_best_registry.csv`
+  is the current machine-readable source for frontend best rows.
 - `ex218` remains the largest gap after semantic identification.  The current
   best is still a value-case plus selected-bit comparator hybrid, so a better
   field-level reciprocal-cube structure is the main open direction.

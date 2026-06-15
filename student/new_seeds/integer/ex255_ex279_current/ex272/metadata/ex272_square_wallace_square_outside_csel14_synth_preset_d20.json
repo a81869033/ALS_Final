@@ -1,0 +1,22 @@
+{
+  "adp": 15270,
+  "aig_sha256": "2fab2ab56ca20dc767bef3cda459763f665d46ce5eb997fdc8881bfbb7d05339",
+  "area": 509,
+  "bundle_type": "current",
+  "candidate_id": "ex272_square_wallace_square_outside_csel14_synth_preset_d20",
+  "case": "ex272",
+  "delay": 30,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex272|square_final_carry_variants|wallace_square_outside_csel14|triangular_square_partial_products_with_wider_final_carry_and_high-output_sharing|synth_preset_d20|unsigned_12_square|full_square_word",
+  "reference_adp": 10880,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/runs/integer/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/official_eval/ex272_square_wallace_square_outside_csel14_synth_preset_d20/ex272.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/logs/ex272_square_wallace_square_outside_csel14_synth_preset_d20.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/verilog/ex272_square_wallace_square_outside_csel14.v",
+  "variant": "",
+  "verilog_sha256": "8abdae66d5c74095c839a1270f86958f38a51a259a49bec017589f993797f601"
+}

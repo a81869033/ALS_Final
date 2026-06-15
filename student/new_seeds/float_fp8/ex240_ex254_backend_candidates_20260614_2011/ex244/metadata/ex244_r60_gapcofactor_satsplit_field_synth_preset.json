@@ -1,0 +1,22 @@
+{
+  "adp": 10608,
+  "aig_sha256": "80809ddc225aa431a3278ed8cc6c7f713f972e04daae999b3950cdbb8d3e17ef",
+  "area": 312,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_r60_gapcofactor_satsplit_field_synth_preset",
+  "case": "ex244",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "shallow field compare with gap-cofactored delta",
+  "method_signature": "shallow field compare with gap-cofactored delta",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round60_20260613_0825/sub-ex244-r60/ex244/aigs/ex244_r60_gapcofactor_satsplit_field_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round60_20260613_0825/agent_shards/sub-ex244-r60/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round60_20260613_0825",
+  "source_verilog_path": "student/work/frontend_source_parallel_round60_20260613_0825/sub-ex244-r60/ex244/verilog/ex244_r60_gapcofactor_satsplit_field.v",
+  "variant": "gapcofactor_satsplit/field/synth_preset",
+  "verilog_sha256": "ff4ff93a45fa184ce49be14478e526d66e14b8b38ecee25e7fda069a0ae43349"
+}

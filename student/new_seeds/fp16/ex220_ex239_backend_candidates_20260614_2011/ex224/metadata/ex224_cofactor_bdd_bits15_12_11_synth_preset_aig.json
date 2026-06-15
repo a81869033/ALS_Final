@@ -1,0 +1,22 @@
+{
+  "adp": 93504,
+  "aig_sha256": "4639890066ae0524d1ea696d3b011560b66da521921d270ea0bb8093584aabc7",
+  "area": 5844,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex224_cofactor_bdd_bits15_12_11_synth_preset_aig",
+  "case": "ex224",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "fp16_log2",
+  "method_signature": "ex224|fp16_log2|grouped_cofactor_bdd|cofactor_bdd_bits15_12_11|group_selected_bits_by_sign-exp_cofactor_before_reduced_mantissa_decision_tree|synth_preset_aig|abc_xf_official_evaluate",
+  "reference_adp": 64708,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex224/aigs/ex224_cofactor_bdd_bits15_12_11_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/fp16-r2-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex224/official_eval/ex224_cofactor_bdd_bits15_12_11_synth_preset_aig/ex224_cofactor_bdd_bits15_12_11_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex224/verilog/ex224_r2_cofactor_bdd_bits15_12_11.v",
+  "variant": "cofactor_bdd_bits15_12_11",
+  "verilog_sha256": "73b1847167963412231bf5f8353d3ae52233e07d82bfab9e615322a88dd81df0"
+}

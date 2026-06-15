@@ -1,0 +1,106 @@
+case,domain,agent_id,candidate_id,simulator,result,log_path,notes
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_sem_samedelta_diffdirect_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_sem_samedelta_diffdirect_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_sem_samedelta_diffdirect_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_sem_samegrs_diffgrs_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_sem_samegrs_diffgrs_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_sem_samegrs_diffgrs_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_sem_product_dc_low_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_sem_product_dc_low_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_sem_product_dc_low_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_sem_product_bit_exception_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_sem_product_bit_exception_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_sem_product_bit_exception_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_sem_bound_direct_nested_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_sem_bound_direct_nested_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_sem_bound_direct_nested_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_sem_formula_bit_exception_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_sem_formula_bit_exception_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_sem_formula_bit_exception_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_sem_threshold_packed_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_sem_threshold_packed_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_sem_threshold_packed_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_sem_threshold_maxeff_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_sem_threshold_maxeff_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_sem_threshold_maxeff_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_sem_gap4_norm_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_sem_gap4_norm_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_sem_gap4_norm_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_sem_gap_class_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_sem_gap_class_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_sem_gap_class_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_currentbest_delaytarget_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_currentbest_delaytarget_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex240,float_fp8,fp8-semantic-r27,ex240_r27_currentbest_delaytarget_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_currentbest_delaytarget_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_currentbest_delaytarget_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex241,float_fp8,fp8-semantic-r27,ex241_r27_currentbest_delaytarget_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_currentbest_delaytarget_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_currentbest_delaytarget_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex242,float_fp8,fp8-semantic-r27,ex242_r27_currentbest_delaytarget_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_currentbest_delaytarget_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_currentbest_delaytarget_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex244,float_fp8,fp8-semantic-r27,ex244_r27_currentbest_delaytarget_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_currentbest_delaytarget_synth_preset_aig_D16,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_currentbest_delaytarget_synth_preset_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex245,float_fp8,fp8-semantic-r27,ex245_r27_currentbest_delaytarget_abc_g_aig_D20,,,,No iverilog simulation; official evaluate.py was run for final authority.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_grouped_seed12_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_grouped_seed12_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_grouped_seed12_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_minlogic_selected_bits_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_minlogic_selected_bits_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_minlogic_selected_bits_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_threshold_log_boundary_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_threshold_log_boundary_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_threshold_log_boundary_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_logcode_subnormal_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_logcode_subnormal_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-worst-r27,ex246_r27_mul_logcode_subnormal_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_nested_num_bound_residual_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_nested_num_bound_residual_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_nested_num_bound_residual_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_minlogic_selected_bits_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_minlogic_selected_bits_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_minlogic_selected_bits_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_grouped_sigpair_programs_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_grouped_sigpair_programs_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-worst-r27,ex247_r27_div_grouped_sigpair_programs_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_threshold_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_threshold_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_threshold_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_predicate_bits_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_predicate_bits_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_predicate_bits_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_small_increment_bits_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_small_increment_bits_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_small_increment_bits_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_active_table_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_active_table_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-worst-r27,ex249_r27_hypot_gap6_active_table_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex285,unknown,unknown-routing-r27,ex285_r27_lane_local_parity_low_abc_g_aig,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_lane_local_parity_low_synth_preset,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_lane_local_parity_middle_abc_g_aig,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_lane_local_parity_middle_synth_preset,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_lane_local_parity_high_abc_g_aig,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_lane_local_parity_high_synth_preset,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits0,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits1,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits2,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits3,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits4,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits5,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits6,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits7,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits8,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits9,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits10,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits11,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits0_4_8,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits1_5_9,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits2_6_10,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex285,unknown,unknown-routing-r27,ex285_r27_selective_symcof_bits3_7_11,none,,,official evaluate.py used as final authority; generated wrappers are exact by construction or from exact source modules
+ex297,unknown,unknown-symbol-r27,ex297_r27_adjrec_cell_default_d20_abc_g_aig_d20,evaluate.py,equivalent,student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/unknown-symbol-r27/ex297/logs/ex297_r27_adjrec_cell_default_d20_abc_g_aig_d20.evaluate.py.log,official evaluate used as final check
+ex297,unknown,unknown-symbol-r27,ex297_r27_phase_anf2_mod4_residual_abc_g_aig,evaluate.py,equivalent,student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/unknown-symbol-r27/ex297/logs/ex297_r27_phase_anf2_mod4_residual_abc_g_aig.evaluate.py.log,official evaluate used as final check
+ex297,unknown,unknown-symbol-r27,ex297_r27_phase_mix_cluster_cell_residual_d20_abc_g_aig_d20,evaluate.py,equivalent,student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/unknown-symbol-r27/ex297/logs/ex297_r27_phase_mix_cluster_cell_residual_d20_abc_g_aig_d20.evaluate.py.log,official evaluate used as final check
+ex299,unknown,unknown-symbol-r27,ex299_r27_phase_anf1_fullword_residual_abc_g_aig,evaluate.py,equivalent,student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/unknown-symbol-r27/ex299/logs/ex299_r27_phase_anf1_fullword_residual_abc_g_aig.evaluate.py.log,official evaluate used as final check
+ex299,unknown,unknown-symbol-r27,ex299_r27_phase_mix_fullword_split_abc_g_aig,evaluate.py,equivalent,student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/unknown-symbol-r27/ex299/logs/ex299_r27_phase_mix_fullword_split_abc_g_aig.evaluate.py.log,official evaluate used as final check

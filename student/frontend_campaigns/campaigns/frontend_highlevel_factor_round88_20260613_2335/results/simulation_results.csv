@@ -1,0 +1,5 @@
+round,run_id,agent_id,case,candidate_id,simulator,status,patterns,log_path,notes,shard_csv
+,,sub-fp8-range-r88,ex247,r88_support_screen_pending,,not_run,,,official evaluate.py is required before any candidate success claim,student/frontend_campaigns/campaigns/frontend_highlevel_factor_round88_20260613_2335/agent_shards/sub-fp8-range-r88/simulation_results.csv
+,,sub-fp8-range-r88,ex246,r88_support_screen_pending,,not_run,,,official evaluate.py is required before any candidate success claim,student/frontend_campaigns/campaigns/frontend_highlevel_factor_round88_20260613_2335/agent_shards/sub-fp8-range-r88/simulation_results.csv
+,,sub-fp8-range-r88,ex244,r88_support_screen_pending,,not_run,,,official evaluate.py is required before any candidate success claim,student/frontend_campaigns/campaigns/frontend_highlevel_factor_round88_20260613_2335/agent_shards/sub-fp8-range-r88/simulation_results.csv
+,,sub-fp8-range-r88,ex249,r88_support_screen_pending,,not_run,,,official evaluate.py is required before any candidate success claim,student/frontend_campaigns/campaigns/frontend_highlevel_factor_round88_20260613_2335/agent_shards/sub-fp8-range-r88/simulation_results.csv

@@ -1,0 +1,22 @@
+{
+  "adp": 15300,
+  "aig_sha256": "0cff21e95a401b896c549617df086ea195b44c78d5ef45863b91439963958c5f",
+  "area": 510,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex272_square_wallace_square_outside_csel14_abc_g_aig",
+  "case": "ex272",
+  "delay": 30,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex272|square_final_carry_variants|wallace_square_outside_csel14|triangular_square_partial_products_with_wider_final_carry_and_high-output_sharing|abc_g_aig|unsigned_12_square|full_square_word",
+  "reference_adp": 10880,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/runs/integer/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/official_eval/ex272_square_wallace_square_outside_csel14_abc_g_aig/ex272.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/integer-extra-r2/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/logs/ex272_square_wallace_square_outside_csel14_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/verilog/ex272_square_wallace_square_outside_csel14.v",
+  "variant": "large-word carry-select and high-output hybrid square variants beyond current csel5",
+  "verilog_sha256": "8abdae66d5c74095c839a1270f86958f38a51a259a49bec017589f993797f601"
+}

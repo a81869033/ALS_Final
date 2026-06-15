@@ -1,0 +1,15 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex285,unknown,local-ex285-extra-r40,ex285_r40_resyn2rs_area_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_compress2rs_area_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_mfs_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_mfs_rwz_mfs_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_ssw_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_fraig_mfs_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_dchoice_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_choice_if4_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_compress_l_no_dc_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_resub_deep_rf_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_dc2_scorr_resyn_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_dc2_lcorr_resyn_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_rw_resub_loop5_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-extra-r40,ex285_r40_area_then_delay_recover_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final

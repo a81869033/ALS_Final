@@ -1,0 +1,22 @@
+{
+  "adp": 11373,
+  "aig_sha256": "303baffe1bf1d24e2044504d131884d780c82e690465f28b49fabf77fb9fdd7b",
+  "area": 223,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex268_udiv_denom_split_direct_synth_preset",
+  "case": "ex268",
+  "delay": 51,
+  "domain": "integer",
+  "hypothesis": "unsigned low7_high7:a/b dbz=max",
+  "method_signature": "unsigned low7_high7:a/b dbz=max",
+  "reference_adp": 7446,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex268_ex269_frontend_udiv_split_direct_20260609_0905/ex268/aigs/ex268_udiv_denom_split_direct_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex268_ex269_frontend_udiv_split_direct_20260609_0905/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex268_ex269_frontend_udiv_split_direct_20260609_0905",
+  "source_verilog_path": "student/work/ex268_ex269_frontend_udiv_split_direct_20260609_0905/ex268/verilog/ex268_udiv_denom_split_direct.v",
+  "variant": "denom_split_direct+synth_preset",
+  "verilog_sha256": "be75a69c1c9dd18dbb8df4b4dbb349f34ed304fbd86fd4b21359592d947b238d"
+}

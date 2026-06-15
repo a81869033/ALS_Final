@@ -1,0 +1,22 @@
+{
+  "adp": 5365,
+  "aig_sha256": "8f2a29f69a5c30d968200d727c7e61bba565c7bff7e38dd2035d2602795f5b56",
+  "area": 185,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex280_prefix_parity_full_clamp_simplified_grouped_deg2_abc_g_aig",
+  "case": "ex280",
+  "delay": 29,
+  "domain": "unknown",
+  "hypothesis": "unknown_muxcoord_anf",
+  "method_signature": "unknown_muxcoord_anf",
+  "reference_adp": 2415,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex280_ex284_frontend_muxcoord_keychain_simplified_synthflow_20260609_0142/ex280/aigs/ex280_prefix_parity_full_clamp_simplified_grouped_deg2_abc_g_aig.aig",
+  "source_csv": "student/runs/unknown/ex280_ex284_frontend_muxcoord_keychain_simplified_synthflow_20260609_0142/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex280_ex284_frontend_muxcoord_keychain_simplified_synthflow_20260609_0142",
+  "source_verilog_path": "student/work/ex280_ex284_frontend_muxcoord_keychain_simplified_20260609_0142/ex280/verilog/ex280_unknown_muxcoord_anf_prefix_parity_full_clamp_simplified_grouped_deg2.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "f4291a9f309898a3f396668caacc871627d6632052d0c131fd6d8035c8c3d122"
+}

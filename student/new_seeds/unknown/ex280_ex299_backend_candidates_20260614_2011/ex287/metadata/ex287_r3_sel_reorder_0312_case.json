@@ -1,0 +1,22 @@
+{
+  "adp": 27008,
+  "aig_sha256": "9ecd0ad3032c94222b442e1e5694c1bc6a74d2a86801f4d672c0205dad763e47",
+  "area": 1688,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex287_r3_sel_reorder_0312_case",
+  "case": "ex287",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "change selector bit order while preserving k4 cofactor mapping",
+  "method_signature": "change selector bit order while preserving k4 cofactor mapping",
+  "reference_adp": 5782,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r3/ex287/aigs/ex287_r3_sel_reorder_0312_case.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-hard-r3/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r3/ex287/verilog/ex287_r3_sel_reorder_0312_case.v",
+  "variant": "selector_reorder_0312_case",
+  "verilog_sha256": "55c465b75567359ebdfa26ee2888698c1d6d07000f20432aa1f293dae251e36b"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 12800,
+  "aig_sha256": "99298c737004d430e5e404a5f79c41b87d9ed295764e5090b0a308349f0c2ca6",
+  "area": 800,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_r7_boundary_mid_quad",
+  "case": "ex285",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "Hamming-weight routing source can reduce area by replacing a middle output quartet with the exact boundary helper while keeping the current best source boundary.",
+  "method_signature": "ex285|hamming_weight_routing_output_plane_overlay|boundary_mid_quad|decision_tree_base_plus_exact_boundary_helper_mid_outputs|yosys_internal_abc_g_aig|official_evaluate|bits_4_5_6_7",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex285/aigs/ex285_r7_boundary_mid_quad.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-mid-r7/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex285/logs/ex285_r7_boundary_mid_quad.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex285/verilog/ex285_r7_boundary_mid_quad.v",
+  "variant": "boundary helper on outputs 4:5:6:7 over decision-tree base",
+  "verilog_sha256": "0af7873cd3a58a5875108c5b6b9a9ae12f327097509c2e2bbcebffe37fd52230"
+}

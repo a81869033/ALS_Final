@@ -1,0 +1,22 @@
+{
+  "adp": 3322,
+  "aig_sha256": "9976a1aa025029978e25d25e675ab6fe4a711a24a758c66808bbfd8b1bf3d10c",
+  "area": 302,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex212_r94_bf16_square_delta_pair_mode_hilo3_bits_15_bh1",
+  "case": "ex212",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_square",
+  "method_signature": "ex212|round94_frontend_structural_bf16|bf16_square|delta_pair_mode_hilo3_bits_15_bh1|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2304,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex212/official_eval/ex212_r94_bf16_square_delta_pair_mode_hilo3_bits_15_bh1/ex212.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/best.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex212/logs/ex212_r94_bf16_square_delta_pair_mode_hilo3_bits_15_bh1.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex212/verilog/ex212_r94_bf16_square_delta_pair_mode_hilo3_bits_15_bh1.v",
+  "variant": "delta-pair regrouping with explicit constant sign-bit repair",
+  "verilog_sha256": "794e67b9a26d7fecaf1ac9bc5daf928fe2976ec3ac600a144d8b12d83ff11348"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 23392,
+  "aig_sha256": "aaad860d302dd3c84a90c8e6541d4a83f20b82d0d540985c10dcffa445bf723e",
+  "area": 1462,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex238_core_boundary_low15_hi5_synth_preset",
+  "case": "ex238",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal_cube",
+  "method_signature": "fp16_reciprocal_cube",
+  "reference_adp": 16549,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex236_ex238_frontend_fp16_core_boundary_low15_20260608_0944/ex238/aigs/ex238_core_boundary_low15_hi5_synth_preset.aig",
+  "source_csv": "student/runs/fp16/ex236_ex238_frontend_fp16_core_boundary_low15_20260608_0944/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex236_ex238_frontend_fp16_core_boundary_low15_20260608_0944",
+  "source_verilog_path": "student/work/ex236_ex238_frontend_fp16_core_boundary_low15_20260608_0944/ex238/verilog/ex238_core_boundary_low15_hi5.v",
+  "variant": "core_boundary_low15_hi5_synth_preset",
+  "verilog_sha256": "702bd4f7feef8eccf2db827a98a88b9d6b1e1ef9fba2b388197a20e51f99a091"
+}

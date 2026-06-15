@@ -1,0 +1,22 @@
+{
+  "adp": 636426,
+  "aig_sha256": "2f183cba29e09021af1fc4fcdf35376e7e826fd4e73a97a3ae534e31ee5ca2b6",
+  "area": 30306,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex207_bf16_tan_split_sign_word_h4_first",
+  "case": "ex207",
+  "delay": 21,
+  "domain": "bf16",
+  "hypothesis": "bf16_tan",
+  "method_signature": "bf16_tan",
+  "reference_adp": 627817,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/archive/cleanup_20260606/ex205_ex209_frontend_bf16_semantic_20260606_0946_low_value_intermediates/student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex207/aigs/ex207_bf16_tan_split_sign_word_h4_first.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex205_ex209_frontend_bf16_semantic_20260606_0946",
+  "source_verilog_path": "student/archive/cleanup_20260606/ex205_ex209_frontend_bf16_semantic_20260606_0946_low_value_intermediates/student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex207/verilog/ex207_bf16_tan_split_sign_word_h4_first.v",
+  "variant": "split_sign_word_h4_first",
+  "verilog_sha256": "ee30cde4a6311301bb9662e3bfe13d9e25e45272a424ed9c77a4939d1dc8c169"
+}

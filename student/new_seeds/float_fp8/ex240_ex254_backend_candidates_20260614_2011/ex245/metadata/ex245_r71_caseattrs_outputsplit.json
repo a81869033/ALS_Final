@@ -1,0 +1,22 @@
+{
+  "adp": 23732,
+  "aig_sha256": "710640580ad1fde0a33b3255143e2c0b932af2e8b2a26533312f9ef8be3e0018",
+  "area": 698,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_r71_caseattrs_outputsplit",
+  "case": "ex245",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "E5M2FN packed add small-gap class source factoring",
+  "method_signature": "ex245|E5M2FN packed add|caseattrs_outputsplit|shared_sorted_field_decode_smallgap_class|repo_yosys_frontend_synth_preset|official_evaluate|full_word",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp8-mid-local-r71/ex245/aigs/ex245_r71_caseattrs_outputsplit.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round71_20260613_1312/agent_shards/sub-fp8-mid-local-r71/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round71_20260613_1312",
+  "source_verilog_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp8-mid-local-r71/ex245/verilog/ex245_r71_caseattrs_outputsplit.v",
+  "variant": "split NaN/sign output mux and add case attributes to same/diff class tables",
+  "verilog_sha256": "9636b7087adaa2c51822e77f2baae3168c3e086dbe9c9bcc468dd919f85693c5"
+}

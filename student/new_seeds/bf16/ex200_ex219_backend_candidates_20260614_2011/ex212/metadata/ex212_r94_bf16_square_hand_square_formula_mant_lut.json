@@ -1,0 +1,22 @@
+{
+  "adp": 3600,
+  "aig_sha256": "fd5234c766cefae86034b00909454fd33a8bf861cbe80d0e7af3d00bf13d3c71",
+  "area": 300,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex212_r94_bf16_square_hand_square_formula_mant_lut",
+  "case": "ex212",
+  "delay": 12,
+  "domain": "bf16",
+  "hypothesis": "bf16_square",
+  "method_signature": "ex212|round94_frontend_structural_bf16|bf16_square|hand_square_formula_mant_lut|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2304,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex212/official_eval/ex212_r94_bf16_square_hand_square_formula_mant_lut/ex212.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex212/logs/ex212_r94_bf16_square_hand_square_formula_mant_lut.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex212/verilog/ex212_r94_bf16_square_hand_square_formula_mant_lut.v",
+  "variant": "semantic square exponent-affine shell plus compact mantissa LUT",
+  "verilog_sha256": "5a91b64054898c30986d153e41763b443313ee66a4faf997d3d3210dbd5a5440"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 5941,
+  "aig_sha256": "99a67bfe668302ff9d25303ebd3651587debe268111e23477a8429e81537446c",
+  "area": 457,
+  "bundle_type": "current",
+  "candidate_id": "ex218_field_selector_abc_g_aig",
+  "case": "ex218",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cube_existing_seed_field_selector",
+  "method_signature": "ex218|bf16_reciprocal_cube_existing_seed_field_selector|legacy_value_case_field_selector|decoded_sign_exp_mant_selector|yosys_abc_g_aig|DAZ_reciprocal_cube_BF16_RNE_FTZ|full_word_value_case",
+  "reference_adp": 3222,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/fpbf-existing-r19/ex218/official_eval/ex218_field_selector_abc_g_aig/ex218.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/fpbf-existing-r19/ex218/logs/ex218_field_selector_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex299_frontend_refgap_round19_20260612_2346",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/fpbf-existing-r19/ex218/verilog/ex218_bf16_reciprocal_cube_field_selector_abcgaig_r19.v",
+  "variant": "",
+  "verilog_sha256": "6ba9a57b62c84e7024de4364caba7a889e9fee9dca03888dbf4c5ec88c7bf235"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 15892,
+  "aig_sha256": "e1f1069859899941dac88cbda11a7fc6923c39895ddfff3e110367f29c99cb26",
+  "area": 548,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex241_r27_currentbest_delaytarget_abc_g_aig_D20",
+  "case": "ex241",
+  "delay": 29,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "",
+  "reference_adp": 7224,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/fp8-semantic-r27/ex241/aigs/ex241_r27_currentbest_delaytarget_abc_g_aig_D20.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex240_ex299_frontend_gt2_round27_20260613_0619/results/evaluation_results.csv",
+  "source_evaluate_log": "student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/fp8-semantic-r27/ex241/logs/ex241_r27_currentbest_delaytarget_abc_g_aig_D20.evaluate.py.log",
+  "source_kind": "frontend_campaign_results",
+  "source_run": "ex240_ex299_frontend_gt2_round27_20260613_0619",
+  "source_verilog_path": "student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/fp8-semantic-r27/ex241/verilog/ex241_r27_currentbest_delaytarget_abc_g_aig_D20.v",
+  "variant": "",
+  "verilog_sha256": "6a27d2e9db1512491e0e71b75ac48a6dfa99206bee3a22260edc2ecadc366a06"
+}

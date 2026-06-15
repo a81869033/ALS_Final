@@ -1,0 +1,22 @@
+{
+  "adp": 3045,
+  "aig_sha256": "7baadbddc65826334fdf0b41d62a926bbd973ff5ebbf5e3059a657990ab726be",
+  "area": 145,
+  "bundle_type": "current",
+  "candidate_id": "ex252_semantic_u2_dot4_handmul_balanced_qcase_default",
+  "case": "ex252",
+  "delay": 21,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex252|frontend|frontend_handmul_popthreshold",
+  "reference_adp": 2603,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex252_ex253_frontend_handmul_popthreshold_20260608_2229/ex252/aigs/ex252_semantic_u2_dot4_handmul_balanced_qcase_default.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex252_ex253_frontend_handmul_popthreshold_20260608_2229",
+  "source_verilog_path": "student/work/ex252_ex253_frontend_handmul_popthreshold_20260608_2229/ex252/verilog/ex252_semantic_u2_dot4_handmul_balanced_qcase.v",
+  "variant": "semantic_u2_dot4_handmul_balanced_qcase_default",
+  "verilog_sha256": "13e2dfe5e5ddbb8e6154953aee789543c89c5c799618a7e3b3e3f6348e270cd0"
+}

@@ -1,0 +1,15 @@
+case,domain,round8_candidates,round8_best_candidate,round8_best_adp,frontend_best_adp_after,reference_adp,round8_improved_frontend,beats_reference,next_recommendation
+ex204,bf16,0,,,25670,15180,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex223,fp16,0,,,203756,120549,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex225,fp16,0,,,218728,116676,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex247,float_fp8,1,ex247_round11_direct_lowmag_attr_abc_g_aig,9932,8349,2975,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex249,float_fp8,2,ex249_round11_output_grouped_delta_abc_g_aig,4872,4368,2079,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex256,integer,0,,,2844,1911,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex260,integer,0,,,1144,657,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex266,integer,0,,,1480,848,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex277,integer,1,ex277_isqrt_cofbdd4_reverse_synth_preset_d12,2844,2844,1980,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex286,unknown,0,,,20190,2376,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex287,unknown,0,,,27480,5782,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex295,unknown,3,ex295_r11_bitplane_symbol_split_abc_g_aig_d14,125520,123855,68064,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex297,unknown,2,ex297_r11_evenbase_residual_split_abc_g_aig,629440,569592,225900,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex299,unknown,2,ex299_r11_evenbase_residual_split_abc_g_aig,2715748,2487261,1013807,0,0,gap remains; continue only with materially different high-level sharing/representation

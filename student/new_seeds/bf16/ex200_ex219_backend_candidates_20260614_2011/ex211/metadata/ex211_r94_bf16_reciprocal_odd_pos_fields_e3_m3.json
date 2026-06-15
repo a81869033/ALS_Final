@@ -1,0 +1,22 @@
+{
+  "adp": 13888,
+  "aig_sha256": "aea38086155e77df084bbd5ceeb9e3239a5e4c7e1d1048dd095867b497e88e7e",
+  "area": 992,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex211_r94_bf16_reciprocal_odd_pos_fields_e3_m3",
+  "case": "ex211",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal",
+  "method_signature": "ex211|round94_frontend_structural_bf16|bf16_reciprocal|odd_pos_fields_e3_m3|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2136,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex211/official_eval/ex211_r94_bf16_reciprocal_odd_pos_fields_e3_m3/ex211.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex211/logs/ex211_r94_bf16_reciprocal_odd_pos_fields_e3_m3.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex211/verilog/ex211_r94_bf16_reciprocal_odd_pos_fields_e3_m3.v",
+  "variant": "positive-domain field table with shared sign shell",
+  "verilog_sha256": "55068dbae81adfdcdb4100043c0f1b8679d02dcb32c1054adf10f9e74e045fd1"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 425696,
+  "aig_sha256": "51f1dd7da31c17bef28b60a53cdea6b7c03ed2f21d89d64fcd0d0daed3bae8c1",
+  "area": 26606,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r85_pairsel_pairxor_hiadj_10_11",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "round85_source_output_graft",
+  "method_signature": "ex297|round85_source_output_graft|pairsel_base_pairxor_hiadj_bits_10_11|base=ex297_pairsel_r73|donors=ex297_pairxor_r74:10-11|yosys_internal_abc_g_aig|official_evaluate",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_hybrid_parallel_round85_20260613_2139/sub-unknown-hybrid-r85/ex297/aigs/ex297_r85_pairsel_pairxor_hiadj_10_11.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_hybrid_parallel_round85_20260613_2139/agent_shards/sub-unknown-hybrid-r85/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_hybrid_parallel_round85_20260613_2139",
+  "source_verilog_path": "student/work/frontend_hybrid_parallel_round85_20260613_2139/sub-unknown-hybrid-r85/ex297/verilog/ex297_r85_pairsel_pairxor_hiadj_10_11.v",
+  "variant": "pairsel_base_pairxor_hiadj_bits_10_11",
+  "verilog_sha256": "2a087fa40e776d14053862e73d8b54b24ad46ea1ce9fb7d26970208951d4bf86"
+}

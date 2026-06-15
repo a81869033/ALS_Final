@@ -1,0 +1,22 @@
+{
+  "adp": 13209,
+  "aig_sha256": "86b5eab178181053feb89f54d29ab51fb0c04d6b10f9aeecc01218401118549f",
+  "area": 777,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_r4_current_boundary_d15",
+  "case": "ex285",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "",
+  "method_signature": "ex285|hamming_weight_route_current_boundary_source|single_source_delay_target|preserve_boundary_alt_source|yosys_internal_abc_g_aig_d15|official_evaluate|full_word",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-large-r4/ex285/aigs/ex285_r4_current_boundary_d15.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/unknown-large-r4/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-large-r4/ex285/logs/ex285_r4_current_boundary_d15.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-large-r4/ex285/verilog/ex285_r4_current_boundary_d15.v",
+  "variant": "source RTL resynthesis",
+  "verilog_sha256": "7ef9858d25de90087afd8f2a064d629c518af3cc8dd6b1cd4a01f5571dd11788"
+}

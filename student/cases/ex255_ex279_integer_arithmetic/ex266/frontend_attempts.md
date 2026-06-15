@@ -143,3 +143,132 @@ Result:
 - This suggests the current ex266 gap is not solved by selected high-bit
   deeper cofactors; future work needs a genuinely smaller delay-10 or delay-9
   shared classifier.
+
+## 2026-06-12 mixed-r12 official row
+
+Run ID: `ex200_ex299_frontend_refgap_round12_20260612_2015`, agent `mixed-r12`.
+
+- Method signature: `ex266|unsigned_division_restore_compare_chain|restoring_compare_subtract_chain|shared_shifted_divisor_comparisons_and_remainders|yosys_abc_g_aig|unsigned_low5_high5_div_dbz_sat|quotient_bits_msb_to_lsb`.
+- Verilog: `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/mixed-r12/ex266/verilog/ex266_udiv_restore_cmp_chain.v`.
+- AIG: `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/mixed-r12/ex266/synthflow/ex266/aigs/ex266_restore_cmp_chain_abc_g_aig.aig`.
+- Official `evaluate.py`: equivalent, `90/27/2430`; log `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/mixed-r12/ex266/logs/ex266_restore_cmp_chain_abc_g_aig.evaluate.py.log`.
+- Outcome: nonwinning. The chain proves a lower-area quotient structure is possible, but delay 27 is the blocker; future work must parallelize quotient decisions instead of serial remainder refinement.
+
+## 2026-06-12 integer-struct-r16 official rows
+
+Run ID: `ex200_ex299_frontend_refgap_round16_20260612_2233`, agent `integer-struct-r16`.
+
+- Method signature: `ex266|cofactored_quotient_thresholds_can_replace_local_BDD_truth_cubes|bhi2+a4_cofactor_threshold-comparator_word_mux|shared_constant-multiple_comparator_tree_per_quotient_word_cofactor|yosys_abc_g_aig|unsigned_low5_high5_div_dbz_sat|whole_quotient_word`.
+- Verilog: `student/work/ex200_ex299_frontend_refgap_round16_20260612_2233/integer-struct-r16/ex266/verilog/ex266_r16_cof_bhi2_a4_threshold_wordmux.v`.
+- AIG: `student/work/ex200_ex299_frontend_refgap_round16_20260612_2233/integer-struct-r16/ex266/aigs/ex266_r16_cof_bhi2_a4_threshold_wordmux_abc_g_aig.aig`.
+- Official `evaluate.py`: equivalent, `331/20/6620`; log `student/work/ex200_ex299_frontend_refgap_round16_20260612_2233/integer-struct-r16/ex266/logs/ex266_r16_cof_bhi2_a4_threshold_wordmux_abc_g_aig.evaluate.py.log`.
+- Outcome: nonwinning. Replacing the local BDD cubes inside the known `{b[4:3],a[4]}` word-mux shape with quotient-threshold comparator trees is exact but far too large and deep versus the current `148/10/1480` frontend. A deeper `bhi3+a4` threshold cofactor also lost (`321/28/8988` best), so this path should not be repeated without a much smaller local predicate derivation.
+
+## 2026-06-12 integer-near-r18 official row
+
+Run ID: `ex200_ex299_frontend_refgap_round18_20260612_2321`, agent `integer-near-r18`.
+
+- Method signature: `ex266|udiv_quotient_digit_recurrence|trial_subtract_borrow_prefix|shared_shifted_divisor_trial_subtract_remainder_chain|yosys_abc_g_and|unsigned_low5_high5_divide_dbz_sat|quotient_word`.
+- Verilog: `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/integer-near-r18/ex266/verilog/ex266_udiv_trialborrow_prefix.v`.
+- AIG: `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/integer-near-r18/ex266/aigs/ex266.aig`.
+- Official `evaluate.py`: equivalent, `96/31/2976`; log `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/integer-near-r18/ex266/logs/ex266_udiv_trialborrow_prefix.evaluate.log`.
+- Outcome: nonwinning. The borrow-out quotient digit recurrence is materially different from the round16 cofactored threshold word-mux, but the serial accepted-remainder chain is too deep. Do not repeat unchanged; any future divider recurrence needs parallel/shared quotient selection rather than five dependent subtract stages.
+
+## 2026-06-12 integer-existing-r19 checkpoint row
+
+Run ID: `ex200_ex299_frontend_refgap_round19_20260612_2346`, agent `integer-existing-r19`.
+
+- Method signature: `ex266|cofactor_wordmux_onehot_source_flow_probe|bhi2_a4_local_BDD_groups_with_masked_onehot_word_mux|explicit_onehot_group_masks_and_no_internal_abc_flow|yosys_noabc_aigmap|unsigned_low5_high5_divide_dbz_sat|quotient_word`.
+- Verilog: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/integer-existing-r19/ex266/verilog/ex266_udiv_cof_bhi2_a4_wordmux_keep_noabc.v`.
+- AIG: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/integer-existing-r19/ex266/official_eval/ex266_udiv_cof_bhi2_a4_wordmux_keep_noabc/ex266.aig`.
+- Official `evaluate.py`: equivalent, `217/18/3906`; log `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/integer-existing-r19/ex266/logs/ex266_udiv_cof_bhi2_a4_wordmux_keep_noabc.evaluate.py.log`.
+- Outcome: nonwinning. Copying the current `{b[4:3],a[4]}` local-BDD wordmux source, rewriting the final selector as one-hot masked ORs, and skipping Yosys internal ABC produced much worse QoR than `148/10/1480`. Do not repeat this one-hot/no-ABC probe unchanged.
+
+## 2026-06-13 mixed-r25 official rows
+
+Run ID: `ex200_ex299_frontend_refgap_round25_20260613_0506`, agent `mixed-r25`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/mixed-r25/ex266/notes/dossier.md`.
+- Official rows:
+  - `ex266_r25_int_highgap_udiv_ex266_hybrid_top2_b2a4_synth_preset_d10`: `148/11/1628`.
+  - `ex266_r25_int_highgap_udiv_cof_bhi2_bmid2_a_hi3_wordmux_abc_g_aig`: `303/11/3333`.
+- Shard rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round25_20260613_0506/agent_shards/mixed-r25/candidates.csv` and `evaluation_results.csv`.
+- Outcome: both rows are official equivalent but nonwinning versus current frontend `148/10/1480`. The top2 b2/a4 hybrid keeps area but adds one level; the mixed b-mid selector is too large. Next action should find a delay-9/10 local classifier inside the existing `{b[4:3],a[4]}` word mux, not add more selector bits.
+
+## 2026-06-13 mixed-r26 official rows
+
+Run ID: `ex200_ex299_frontend_refgap_round26_20260613_0539`, agent `mixed-r26`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex266/notes/dossier.md`.
+- Official rows:
+  - `ex266_r26_int_highgap_udiv_ex266_hybrid_top1_b2a4_synth_preset_d10`: `148/11/1628`.
+  - `ex266_r26_int_highgap_udiv_cof_bhi2_blo1_a_hi1_wordmux_abc_g_aig`: `182/12/2184`.
+  - `ex266_r26_int_highgap_udiv_ex266_hybrid_top1_a43_synth_preset_d10`: `142/11/1562`.
+- Shard rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/mixed-r26/candidates.csv` and `evaluation_results.csv`.
+- Outcome: all rows are official equivalent but nonwinning versus frontend `148/10/1480`. The top1-a43 row lowers area but adds one delay level; low-divisor selector is too large. Future work should target a delay-10-or-better local classifier inside the existing word-mux structure.
+
+## 2026-06-13 sub-integer-r74 official rows
+
+Run ID: `frontend_source_parallel_round74_20260613_1439`, agent `sub-integer-r74`.
+
+- `ex266_r74_qthreshold_ladder`: descending shared `q*b` threshold ladder; official `evaluate.py` equivalent, `656/41/26896`.
+- `ex266_r74_divisor_case_const`: divisor-keyed constant quotient arms; official `evaluate.py` equivalent, `244/13/3172`.
+- Shard rows: `student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1439/agent_shards/sub-integer-r74/candidates.csv`.
+- Logs: `student/work/frontend_source_parallel_round74_20260613_1439/sub-integer-r74/ex266/logs/`.
+- Outcome: both are nonwinning versus current frontend `148/10/1480`. This reinforces that broad threshold/product tests and divisor-action cases do not recover the compact local classifier inside the `{b[4:3], a[4]}` word-mux structure.
+
+## 2026-06-13 sub-integer-r75 official rows
+
+Run ID: `frontend_source_parallel_round75_20260613_1507`, agent `sub-integer-r75`.
+
+- Dossier: `student/work/frontend_source_parallel_round75_20260613_1507/sub-integer-r75/ex266/notes/dossier.md`.
+- Families:
+  - `{b[4:3],a[4]}` cofactor local classifier variants with complemented/tree wordmux implementations.
+  - Radix-4 top-two shift/subtract quotient recurrence.
+  - Narrow shift/subtract quotient recurrence.
+- Method signatures are recorded in `student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1507/agent_shards/sub-integer-r75/candidates.csv`.
+- Official rows:
+  - `ex266_udiv_ex266_cof_bhi2_a4_comp_wordmux_abc_g_aig`: `153/12/1836`.
+  - `ex266_udiv_ex266_cof_bhi2_a4_comp_wordmux_synth_preset_d10`: `148/11/1628`.
+  - `ex266_udiv_ex266_cof_bhi2_a4_tree_wordmux_abc_g_aig`: `155/12/1860`.
+  - `ex266_udiv_ex266_cof_bhi2_a4_tree_wordmux_synth_preset_d10`: `148/12/1776`.
+  - `ex266_udiv_radix4_top2_shift_abc_g_aig`: `136/23/3128`.
+  - `ex266_udiv_radix4_top2_shift_synth_preset_d10`: `140/23/3220`.
+  - `ex266_udiv_shift_subtract_narrow_abc_g_aig`: `89/28/2492`.
+  - `ex266_udiv_shift_subtract_narrow_synth_preset_d10`: `88/28/2464`.
+- Logs: `student/work/frontend_source_parallel_round75_20260613_1507/sub-integer-r75/ex266/logs/`.
+- Outcome: all rows are official `evaluate.py` equivalent but nonwinning versus frontend `148/10/1480` and current overall `1296`. Complemented/tree wordmux variants either kept area and added delay or added area; algorithmic recurrence variants had low area but excessive delay. Next action should derive smaller local cofactor predicates inside the existing selector rather than repeat broad threshold or serial recurrence families.
+
+## 2026-06-13 sub-integer-r76 official rows
+
+Run ID: `frontend_source_parallel_round76_20260613_1706`, agent `sub-integer-r76`.
+
+- Dossier: `student/work/frontend_source_parallel_round76_20260613_1706/sub-integer-r76/ex266/notes/dossier.md`.
+- Families:
+  - Denominator high-region quotient comparator prefixes with shared shifted-divisor thresholds.
+  - Decision tree over `b[4:3]` and `a[4:3]` with low-bit residual quotient cells.
+- Best r76 row: `ex266_r76_hi_cell_residual_lut_synth_preset_d10` official `148/11/1628`; outcome: nonwinning versus frontend `1480` and current `1296`.
+- Shard rows: `student/frontend_campaigns/campaigns/frontend_source_parallel_round76_20260613_1706/agent_shards/sub-integer-r76/candidates.csv` and `student/frontend_campaigns/campaigns/frontend_source_parallel_round76_20260613_1706/agent_shards/sub-integer-r76/evaluation_results.csv`.
+- Logs: `student/work/frontend_source_parallel_round76_20260613_1706/sub-integer-r76/ex266/logs`.
+- Next action: The official rows did not change the known target unless noted above; continue searching for a smaller delay-9/10 local quotient classifier, not r75 wordmux spelling changes or serial recurrence forms.
+
+## 2026-06-13 sub-integer-source-r77 official rows
+
+Run ID: `frontend_source_parallel_round77_20260613_1733`, agent `sub-integer-source-r77`.
+
+- Dossier: `student/work/frontend_source_parallel_round77_20260613_1733/sub-integer-source-r77/ex266/notes/dossier.md`.
+- Families:
+  - Current `{b[4:3],a[4]}` low-denominator cofactor cells plus high-denominator compare residuals.
+  - Grouped restoring trial-subtract residual boundaries for quotient-bit assigns.
+- Best r77 row: `ex266_r77_hi_compare_residual_abc_g_aig` official `188/12/2256`; outcome: nonwinning versus frontend `1480` and current `1296`.
+- Shard rows: `student/frontend_campaigns/campaigns/frontend_source_parallel_round77_20260613_1733/agent_shards/sub-integer-source-r77/candidates.csv` and `student/frontend_campaigns/campaigns/frontend_source_parallel_round77_20260613_1733/agent_shards/sub-integer-source-r77/evaluation_results.csv`.
+- Logs: `student/work/frontend_source_parallel_round77_20260613_1733/sub-integer-source-r77/ex266/logs`.
+- Next action: Continue searching for a compact delay-9/10 local quotient classifier; do not repeat r75 wordmux spelling or r76 high-cell residual table as-is.
+
+## 2026-06-14 arith-unary-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `arith-unary-r2`.
+
+- Families tested: low-denominator cofactor bit-BDD wordmux variants; radix-4 compact digit, denominator leading-zero smallcase, and parallel-threshold quotient source forms.
+- Official best from this shard: `ex266_udiv_cof_bhi1_ahi1_bitbdd_wordmux_synth_preset_d10` at `144/11/1584`.
+- Outcome: all rows were official equivalent but nonwinning versus frontend `148/10/1480`; the non-cofactor radix-4 best was `128/20/2560`.

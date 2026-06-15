@@ -1,0 +1,22 @@
+{
+  "adp": 425440,
+  "aig_sha256": "c7669c2613d58098d4714d9cab56525d0c10ee08e8e2eb339c95a55227074542",
+  "area": 26590,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r75_pairsel_r71_selector_plane",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit static bit-cone graft",
+  "method_signature": "ex297|cyclic_2bit_static_bitcone_graft|static selector-plane cones from r71 sel0-identity source over pairsel current best|r71 source drives even selector-plane outputs; pairsel drives odd inner-plane outputs|yosys_internal_abc_g_aig|official_evaluate|static_r71_selector_plane",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex297/aigs/ex297_r75_pairsel_r71_selector_plane.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1450/agent_shards/sub-unknown-large-redesc-r75/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex297/logs/ex297_r75_pairsel_r71_selector_plane.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round75_20260613_1450",
+  "source_verilog_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex297/verilog/ex297_r75_pairsel_r71_selector_plane.v",
+  "variant": "static_r71_selector_plane",
+  "verilog_sha256": "89f1bcaadb29c6a25a2eebd1ed730813430bb9cbb66127de46b82deca100a679"
+}

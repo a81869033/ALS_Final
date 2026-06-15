@@ -1,0 +1,22 @@
+{
+  "adp": 71104,
+  "aig_sha256": "807c917de4ab8c2b57257fffd4a553a7e33227b2f599249157feeed026855a0f",
+  "area": 4444,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex205_r96_bf16_log10_bit15_exp_formula_abc_g_aig",
+  "case": "ex205",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log10_selected_sign_formula",
+  "method_signature": "bf16_log10_selected_sign_formula",
+  "reference_adp": 47128,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex205/official_eval/ex205_r96_bf16_log10_bit15_exp_formula_abc_g_aig/ex205.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_structural_round96_20260614_0651/agent_shards/sub-bf16-smallgap-flow-r96/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_structural_round96_20260614_0651",
+  "source_verilog_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex205/verilog/ex205_r96_bf16_log10_bit15_exp_formula_abc_g_aig.v",
+  "variant": "decoded exponent formula for bit15 plus abc_g_aig",
+  "verilog_sha256": "0e5e4888c94ec6c09912ff703d028fd3f234f4e8175ad5e90735ae145794e286"
+}

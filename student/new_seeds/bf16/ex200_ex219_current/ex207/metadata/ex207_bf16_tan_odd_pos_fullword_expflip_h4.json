@@ -1,0 +1,22 @@
+{
+  "adp": 627333,
+  "aig_sha256": "a629a15283cc7f24944bb564da48e035b532488db081c502a57e804195829e0e",
+  "area": 29873,
+  "bundle_type": "current",
+  "candidate_id": "ex207_bf16_tan_odd_pos_fullword_expflip_h4",
+  "case": "ex207",
+  "delay": 21,
+  "domain": "bf16",
+  "hypothesis": "bf16_tan",
+  "method_signature": "ex207|frontend|current",
+  "reference_adp": 627817,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex207/aigs/ex207_bf16_tan_odd_pos_fullword_expflip_h4.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex207/verilog/ex207_bf16_tan_odd_pos_fullword_expflip_h4.v",
+  "variant": "odd_pos_fullword_expflip_h4",
+  "verilog_sha256": "129014138489bd0907abfa05c6f299dc3e21be4cac422e389c46ec2479b96e69"
+}

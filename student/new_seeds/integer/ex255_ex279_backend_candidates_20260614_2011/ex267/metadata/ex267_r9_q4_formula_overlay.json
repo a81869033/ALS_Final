@@ -1,0 +1,22 @@
+{
+  "adp": 4116,
+  "aig_sha256": "716dedc41166899ca1b24675ed792166682ebd3bd08765e34729a2cb66e05ee2",
+  "area": 343,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex267_r9_q4_formula_overlay",
+  "case": "ex267",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex267|unsigned_low6_high6_divide_with_dbz_saturation|current_hybrid_wordmux_with_q4_replaced_by_direct_quotient_bit_formula|reuse_current_quotient_word_except_one_top_threshold_bit|abc_g_aig|official_evaluate_py|frontend_only",
+  "reference_adp": 2651,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex267/aigs/ex267_r9_q4_formula_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex267/logs/ex267_r9_q4_formula_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex267/verilog/ex267_r9_q4_formula_overlay.v",
+  "variant": "current hybrid wordmux with q4 replaced by direct quotient bit formula",
+  "verilog_sha256": "cbcd76e31a89f1d6fe26fa197c11929a97e5afb2c3eb88d4e864b45a699496c5"
+}

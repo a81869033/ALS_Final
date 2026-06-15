@@ -1,0 +1,22 @@
+{
+  "adp": 66623,
+  "aig_sha256": "6434c1661331b02535616083eda891f6f7e2bd57cd06a0f48375ddaf45262618",
+  "area": 3919,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex229_odd_nested_low10_hi6_abc_g_aig",
+  "case": "ex229",
+  "delay": 17,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex229|fp16_tanh_odd_transition_shell|positive_exp_nested_low10_hi6|shared positive exp decode, high output run trees, and sign xor symmetry|yosys_abc_g_aig|abc_xf_official_evaluate|odd_positive_low10_hi6",
+  "reference_adp": 57968,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/aigs/ex229_odd_nested_low10_hi6_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp16-extra-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/official_eval/ex229_odd_nested_low10_hi6_abc_g_aig/ex229_odd_nested_low10_hi6_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/verilog/ex229_odd_nested_low10_hi6.v",
+  "variant": "positive_exp_nested_low10_hi6",
+  "verilog_sha256": "b86ec5e8d471005d1c8b0035ec66787f2d54d88c9e1518016d64d4ca8ae1e51e"
+}

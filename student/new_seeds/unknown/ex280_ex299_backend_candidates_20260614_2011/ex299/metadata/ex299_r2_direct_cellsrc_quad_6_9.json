@@ -1,0 +1,22 @@
+{
+  "adp": 1777446,
+  "aig_sha256": "362bf4a58df9ba1cd2a164fbe92ffa23a1ead64e36bec441e02897036a8c4c2c",
+  "area": 98747,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex299_r2_direct_cellsrc_quad_6_9",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "factor current quad 6/7/8/9 best around true local cell outputs",
+  "method_signature": "ex299|factored_celllocal_predicates|direct_cellsrc_quad_6_9|base_plus_sel2_6_7_cellsrc_8_9|yosys_internal_abc_g_aig|official_evaluate",
+  "reference_adp": 1013807,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex299-breakthrough-r2/ex299/aig/ex299_r2_direct_cellsrc_quad_6_9.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/ex299-breakthrough-r2/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex299-breakthrough-r2/ex299/logs/ex299_r2_direct_cellsrc_quad_6_9.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex299-breakthrough-r2/ex299/verilog/ex299_r2_direct_cellsrc_quad_6_9.v",
+  "variant": "bypass redundant celllocal wrapper and splice sel2 bits 6/7 plus direct cellsrc bits 8/9",
+  "verilog_sha256": "caf791361c81be91e6a292c568f85421141ffbb2399200005b2c3aeea8bcf82e"
+}

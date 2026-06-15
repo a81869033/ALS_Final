@@ -1,0 +1,22 @@
+{
+  "adp": 6552,
+  "aig_sha256": "518e983c01dd3ff047ef63972f0aa199e2c13f499b97eda566033e849223c55d",
+  "area": 252,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r2_current_r5_conemix_abc_g_aig_frontend",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|r4 current high bits with r5 low-tail truth-case residual bits|two exact division shells are flattened; only low three output bits use r5 residual|abc_g_aig_frontend|official_evaluate|r4_high_r5_low",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex247/aigs/ex247_r2_current_r5_conemix_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp8-tail-transfer-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex247/logs/ex247_r2_current_r5_conemix_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex247/verilog/ex247_r2_current_r5_conemix_abc_g_aig_frontend.v",
+  "variant": "r4 current high bits with r5 low-tail truth-case residual bits",
+  "verilog_sha256": "f4b408f209cdd92159e36bc67af893858496d3a0a9a19eadc6987571ec867867"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 2844,
+  "aig_sha256": "f6c4b3810368371479535452b3636f466bbc742776818dc0cef26214a0d10dd8",
+  "area": 237,
+  "bundle_type": "current",
+  "candidate_id": "ex277_isqrt_cofbdd4_reverse_synth_preset_d12",
+  "case": "ex277",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 1980,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round11_20260612_1944/integer-extra-r11/ex277/aigs/ex277_isqrt_cofbdd4_reverse_synth_preset_d12.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round11_20260612_1944/agent_shards/integer-extra-r11/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round11_20260612_1944",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round11_20260612_1944/integer-extra-r11/ex277/verilog/ex277_isqrt_cofbdd4_reverse.v",
+  "variant": "cofbdd4_reverse+synth_preset_d12",
+  "verilog_sha256": "ee93bb192baeadc9ace4b1b07be35e741ed7b7caeadd7fb7b756bb7940936ce4"
+}

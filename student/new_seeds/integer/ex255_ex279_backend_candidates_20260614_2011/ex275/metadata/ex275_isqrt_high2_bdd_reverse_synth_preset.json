@@ -1,0 +1,22 @@
+{
+  "adp": 344,
+  "aig_sha256": "35d2b6f7f79cd8bf595f87b82fe7808e99159f8029f78c11f881cd17add629ae",
+  "area": 43,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex275_isqrt_high2_bdd_reverse_synth_preset",
+  "case": "ex275",
+  "delay": 8,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 204,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex276_frontend_isqrt_highformula_lowbdd_20260609_1618/ex275/aigs/ex275_isqrt_high2_bdd_reverse_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex275_ex276_frontend_isqrt_highformula_lowbdd_20260609_1618/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex276_frontend_isqrt_highformula_lowbdd_20260609_1618",
+  "source_verilog_path": "student/work/ex275_ex276_frontend_isqrt_highformula_lowbdd_20260609_1618/ex275/verilog/ex275_isqrt_high2_bdd_reverse.v",
+  "variant": "high2_bdd_reverse+synth_preset",
+  "verilog_sha256": "2a26d2f689facf1b16234ea9127c898c3fabd544c8da6b838e767877849a6792"
+}

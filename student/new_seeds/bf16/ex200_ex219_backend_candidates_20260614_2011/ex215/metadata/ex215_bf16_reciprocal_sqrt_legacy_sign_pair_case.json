@@ -1,0 +1,22 @@
+{
+  "adp": 5005,
+  "aig_sha256": "ff4e8b174be6bbfd80a616f950d1dfade56951e6e845e9c4aaef9add3081b2ba",
+  "area": 385,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex215_bf16_reciprocal_sqrt_legacy_sign_pair_case",
+  "case": "ex215",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_sqrt",
+  "method_signature": "bf16_reciprocal_sqrt",
+  "reference_adp": 3150,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex215_ex219_frontend_bf16_semantic_20260606_1447/ex215/aigs/ex215_bf16_reciprocal_sqrt_legacy_sign_pair_case.aig",
+  "source_csv": "student/runs/bf16/ex215_ex219_frontend_bf16_semantic_20260606_1447/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex215_ex219_frontend_bf16_semantic_20260606_1447",
+  "source_verilog_path": "student/work/ex215_ex219_frontend_bf16_semantic_20260606_1447/ex215/verilog/ex215_bf16_reciprocal_sqrt_legacy_sign_pair_case.v",
+  "variant": "legacy_sign_pair_case",
+  "verilog_sha256": "97c859333f99d9323bfc0e1f5376dd2274ed3cb568e7d895376b1d4e4e952584"
+}

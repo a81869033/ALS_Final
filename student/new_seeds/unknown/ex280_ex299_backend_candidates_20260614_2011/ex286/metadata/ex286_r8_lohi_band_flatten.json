@@ -1,0 +1,22 @@
+{
+  "adp": 20325,
+  "aig_sha256": "9210092bfa001a8a3a60babe610d21db2790cf84757ff6673e44a3602006d216",
+  "area": 1355,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex286_r8_lohi_band_flatten",
+  "case": "ex286",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "local output-band flattening may balance selector duplication and output sharing",
+  "method_signature": "ex286|source_shape_local_output_band_flattening|lohi_two_band_case|current_frontend_best_symcof_onehot-group_source|yosys_frontend_abc_g_aig|official_evaluate|lower_upper_bands",
+  "reference_adp": 2376,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r8/ex286/aigs/ex286_r8_lohi_band_flatten.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-hard-r8/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r8/ex286/logs/ex286_r8_lohi_band_flatten.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r8/ex286/verilog/ex286_r8_lohi_band_flatten.v",
+  "variant": "two_local_output_bands_full_parallel_cases",
+  "verilog_sha256": "75ab1ae35e2756ec6962912b07a4faaa4584e9dac5fa7d093b816dd5e0e55865"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 200716,
+  "aig_sha256": "bf1391bb2c6ef0a9bdd2b60e4a5e0fdcd5b42a955bf4db2c5e2b6b1b91f386c0",
+  "area": 10564,
+  "bundle_type": "current",
+  "candidate_id": "ex223_catalog_source_d18_synth_preset_aig_d18",
+  "case": "ex223",
+  "delay": 19,
+  "domain": "fp16",
+  "hypothesis": "fp16_log",
+  "method_signature": "ex223|fp16_log|current_catalog_source_copied_into_shard_with_alternate_frontend_synthesis_flow|preserve_existing_shared_special_decode_and_mantissa_table/residual_predicates|synth_preset_aig_d18|abc_xf_official_evaluate|full_word",
+  "reference_adp": 120549,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-agent/ex223/aigs/ex223_catalog_source_d18_synth_preset_aig_d18.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/fp16/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-agent/ex223/official_eval/ex223_catalog_source_d18_synth_preset_aig_d18/ex223_catalog_source_d18_synth_preset_aig_d18.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-agent/ex223/verilog/ex223_catalog_source_d18.v",
+  "variant": "current catalog source copied into shard with alternate frontend synthesis flow",
+  "verilog_sha256": "d6114e058f07709c26f9461ced940bb2e64160fe2600268962319949481eafa3"
+}

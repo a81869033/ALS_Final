@@ -1,0 +1,22 @@
+{
+  "adp": 25670,
+  "aig_sha256": "94decc4c2f53846a18cfab7187632295a64779e4db13a345f34e039b53fcce8e",
+  "area": 1510,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex204_log2_arithbase_delta_hilo3_bits_11_14_bh3_abc_g_gates",
+  "case": "ex204",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "DAZ + log2(x) + BF16 RNE + FTZ + canonical NaN",
+  "method_signature": "ex204|bf16_log2_arithbase_delta_correction|mantissa_hilo_grouped_lut|shared exponent/mantissa delta base plus selected output-bit correction|yosys_abc_g_gates|DAZ+log2+BF16_RNE+FTZ+canonical_NaN|grouped word output with selected-bit overrides",
+  "reference_adp": 15180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/bf16-agent/ex204/aigs/ex204_log2_arithbase_delta_hilo3_bits_11_14_bh3_abc_g_gates.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/bf16-agent/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/bf16-agent/ex204/verilog/ex204_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh3.v",
+  "variant": "abc_g_gates",
+  "verilog_sha256": "04993508a2c29928d2a8b2c35a9f0fb2c3c437079180ad859bfc0969a1231dd5"
+}

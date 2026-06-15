@@ -1,0 +1,26 @@
+# Task Assignments: ex200_ex299_frontend_refgap_round6_20260612_1807
+
+- `fp16-r6` (`019ebb51-2ef7-71f3-b174-0e33077417f4`, Singer): ex223, ex224, ex225
+  - campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/fp16-r6/`
+  - work root: `student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/fp16-r6/<case>/`
+  - run root: `student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/fp16-r6/<case>/`
+- `float-fp8-r6` (`019ebb51-2fc8-7823-8bf7-be750c89a93c`, Maxwell): ex240, ex241, ex242, ex244, ex245, ex246, ex247, ex248, ex249, ex253
+  - campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/float-fp8-r6/`
+  - work root: `student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/float-fp8-r6/<case>/`
+  - run root: `student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/float-fp8-r6/<case>/`
+- `unknown-a-r6` (`019ebb51-308d-7933-9072-77bd46552191`, Carver): ex280, ex281, ex282, ex283, ex284, ex285, ex286, ex287, ex288, ex289
+  - campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/unknown-a-r6/`
+  - work root: `student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-a-r6/<case>/`
+  - run root: `student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-a-r6/<case>/`
+- `unknown-b-r6` (`019ebb51-3151-7e12-b1da-b13c41be9a52`, Goodall): ex290, ex291, ex292, ex293, ex294, ex295, ex296, ex297, ex298, ex299
+  - campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/unknown-b-r6/`
+  - work root: `student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-b-r6/<case>/`
+  - run root: `student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-b-r6/<case>/`
+- `integer-r6` (`019ebb51-32da-7f83-a8b4-724ec2c22e39`, Russell): ex256, ex260, ex261, ex266, ex270, ex276, ex277
+  - campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/integer-r6/`
+  - work root: `student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/integer-r6/<case>/`
+  - run root: `student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/integer-r6/<case>/`
+- `bf16-r6` (`019ebb51-358c-7c93-8245-29f313e605b1`, Hooke): ex200, ex204, ex205
+  - campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/bf16-r6/`
+  - work root: `student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/bf16-r6/<case>/`
+  - run root: `student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/bf16-r6/<case>/`

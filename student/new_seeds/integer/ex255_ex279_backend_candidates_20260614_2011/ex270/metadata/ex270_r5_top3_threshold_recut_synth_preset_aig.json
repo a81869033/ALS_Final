@@ -1,0 +1,22 @@
+{
+  "adp": 3184,
+  "aig_sha256": "bf4f7b6097dcd89f558f523d05b71b650baf0b04319c02859bff82536f1257bf",
+  "area": 199,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex270_r5_top3_threshold_recut_synth_preset_aig",
+  "case": "ex270",
+  "delay": 16,
+  "domain": "integer",
+  "hypothesis": "selected high-bit threshold recut over triangular square source",
+  "method_signature": "ex270|unsigned_square_x_times_x|replace_top_three_outputs_with_exact_square_range-threshold_predicates|existing_triangular_square_source_with_range_threshold_recut|synth_preset_aig|abc_xf_official_evaluate|frontend_only_no_backend",
+  "reference_adp": 2076,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-square-r5/ex270/aigs/ex270_r5_top3_threshold_recut_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-square-r5/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex204_ex299_frontend_breakthrough_20260614_1051/integer-square-r5/ex270/official_eval/ex270_r5_top3_threshold_recut_synth_preset_aig/ex270_r5_top3_threshold_recut_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-square-r5/ex270/verilog/ex270_r5_top3_threshold_recut.v",
+  "variant": "replace top three outputs with exact square range-threshold predicates",
+  "verilog_sha256": "fcd5835b46d517d03e19442a1f3ff5effc6ae9d65673ecbfd1a24c92d60d1c4e"
+}

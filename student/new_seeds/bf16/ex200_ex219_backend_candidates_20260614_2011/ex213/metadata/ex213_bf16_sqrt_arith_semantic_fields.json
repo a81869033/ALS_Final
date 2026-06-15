@@ -1,0 +1,22 @@
+{
+  "adp": 4394,
+  "aig_sha256": "21e59c283863f78eb4a0687b8aae97714648bf4e791eb0d487d79bb450b384e0",
+  "area": 338,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex213_bf16_sqrt_arith_semantic_fields",
+  "case": "ex213",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_sqrt",
+  "method_signature": "bf16_sqrt",
+  "reference_adp": 2900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex213/aigs/ex213_bf16_sqrt_arith_semantic_fields.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex213/verilog/ex213_bf16_sqrt_arith_semantic_fields.v",
+  "variant": "arith_semantic_fields",
+  "verilog_sha256": "31ffb221e022090c260285e9335d5375717fc7d15fb401dfd999c5c1092667ac"
+}

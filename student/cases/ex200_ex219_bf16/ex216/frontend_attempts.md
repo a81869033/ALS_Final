@@ -24,3 +24,12 @@ Failed or Avoided Directions:
 - Selected-bit overrides on the best seed, extra odd positive-domain hi splits, split-sign h2/h5/h6, and delta h2/h5 variants all lost.  `legacy_default_expr_exception_case` was catastrophic and should not be repeated.
 - Hand guarded cube RTL was exact but synthesized to `437/17/7429`, worse than the table-derived positive symmetry seed.  Low-bit comparator predicates created very deep paths.
 - Applying the bit14 boundary to lower-area semantic/delta bases did not beat the positive-symmetry base; they kept too much delay or added area.
+
+## 2026-06-14 bf16-extra-r2 continuation outcome
+
+Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `bf16-extra-r2`.
+
+- Tried separate-field bit14 residual, mant64-hilo2 delta-pair bit14 comparator residual, and exact decision-graph bit14 residual under `student/work/ex204_ex299_frontend_continuation_20260614_1216/bf16-extra-r2/ex216/`.
+- Official `evaluate.py` OK candidates: `ex216_r2_sepfield_e4m4s4_b14bh2` `829/16/13264`, `ex216_r2_delta_m64h2_b14cmp` `521/15/7815`, and `ex216_r2_dg_delta_m64h2_b14` `543/14/7602`.
+- No candidate improved current frontend ADP `5772`; the exact decision graph was shallower than mant64-hilo2 cmp but still too large to beat the existing cube bit14 boundary seed.
+- Shard CSVs: `student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/bf16-extra-r2/`.

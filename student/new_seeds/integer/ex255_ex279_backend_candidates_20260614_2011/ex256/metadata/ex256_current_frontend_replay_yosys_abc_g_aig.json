@@ -1,0 +1,22 @@
+{
+  "adp": 2862,
+  "aig_sha256": "2c1c9790174d500e2f58bc81e79509fd7561ee8f39425f5c2e73e1e2a5561970",
+  "area": 159,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex256_current_frontend_replay_yosys_abc_g_aig",
+  "case": "ex256",
+  "delay": 18,
+  "domain": "integer",
+  "hypothesis": "known best CSA/CLA source with Yosys abc -g aig mapping",
+  "method_signature": "ex256|known_best_synth_flow_variation|CSA_AND_row_CLA_current_frontend_replay|existing_shared_partial_products_and_CLA_final_carry|yosys_abc_g_aig|unsigned_low5_high5_multiply|full_product_word",
+  "reference_adp": 1911,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/integer-r3/ex256/aigs/ex256_current_frontend_replay_yosys_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round3_20260612_1554/agent_shards/integer-r3/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/integer-r3/ex256/logs/ex256_current_frontend_replay_yosys_abc_g_aig.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round3_20260612_1554",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/integer-r3/ex256/verilog/ex256_current_frontend_replay.v",
+  "variant": "yosys_abc_g_aig",
+  "verilog_sha256": "b6f5d5a4970197b6e150d085aecdb03c8d62cec63db3165e1aa7b4bfa515c7bd"
+}

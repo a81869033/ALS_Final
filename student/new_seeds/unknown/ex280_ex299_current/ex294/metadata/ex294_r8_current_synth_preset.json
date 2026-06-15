@@ -1,0 +1,22 @@
+{
+  "adp": 220437,
+  "aig_sha256": "36056f3ccdbfe57e1d3323d7815a1d5d96123510e7679b599d736864ad24a5a7",
+  "area": 10497,
+  "bundle_type": "current",
+  "candidate_id": "ex294_r8_current_synth_preset",
+  "case": "ex294",
+  "delay": 21,
+  "domain": "unknown",
+  "hypothesis": "selected flow probe on current octant source",
+  "method_signature": "ex294|global_state_octant_descriptor_cofactor|current_source_flow_probe|direct_current_source|yosys_synth_flatten_abc_g_aig|official_evaluate|all_outputs",
+  "reference_adp": 133365,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r8/ex294/aigs/ex294_r8_current_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r8/ex294/logs/ex294_r8_current_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r8/ex294/verilog/ex294_r8_current_synth_preset.v",
+  "variant": "",
+  "verilog_sha256": "a0cecf33bb4c9e861ea248b74c9533991c75ecb8b83bcfe7610b7ddbddd43127"
+}

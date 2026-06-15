@@ -1,0 +1,22 @@
+{
+  "adp": 4104,
+  "aig_sha256": "8486ca509730ffa9bb9d4fe2fc9c52e0d776badb6c5afa39ef6f8fe246e539ef",
+  "area": 342,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex267_udiv_cof_bhi3_bmid1_a_hi2_wordmux_abc_g_aig",
+  "case": "ex267",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "unsigned lowN_highN:a/b dbz=max",
+  "method_signature": "unsigned lowN_highN:a/b dbz=max",
+  "reference_adp": 2651,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex266_ex267_frontend_udiv_deeper_selector_20260609_1750/ex267/aigs/ex267_udiv_cof_bhi3_bmid1_a_hi2_wordmux_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex266_ex267_frontend_udiv_deeper_selector_20260609_1750/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex266_ex267_frontend_udiv_deeper_selector_20260609_1750",
+  "source_verilog_path": "student/work/ex266_ex267_frontend_udiv_deeper_selector_20260609_1750/ex267/verilog/ex267_udiv_cof_bhi3_bmid1_a_hi2_wordmux.v",
+  "variant": "udiv_cof_bhi3_bmid1_a_hi2_wordmux+abc_g_aig",
+  "verilog_sha256": "34a448d10f527e1fc2aff7d21988c0b49b17cd5fda116e7363545e2432dcdbce"
+}

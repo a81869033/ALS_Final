@@ -1,0 +1,22 @@
+{
+  "adp": 34035,
+  "aig_sha256": "7b921a63bd1440c389cb6941cf6d7a4137f9a12ccc713ce5c85d14030a3d055c",
+  "area": 2269,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex208_bf16_sinh_odd_pos_fields_e3_m3",
+  "case": "ex208",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_sinh",
+  "method_signature": "bf16_sinh",
+  "reference_adp": 24505,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/archive/cleanup_20260606/ex205_ex209_frontend_bf16_semantic_20260606_0946_low_value_intermediates/student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex208/aigs/ex208_bf16_sinh_odd_pos_fields_e3_m3.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex205_ex209_frontend_bf16_semantic_20260606_0946",
+  "source_verilog_path": "student/archive/cleanup_20260606/ex205_ex209_frontend_bf16_semantic_20260606_0946_low_value_intermediates/student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex208/verilog/ex208_bf16_sinh_odd_pos_fields_e3_m3.v",
+  "variant": "odd_pos_fields_e3_m3",
+  "verilog_sha256": "507e2ffce291e156e33e090c269473b6bcee1d709af0ddcc456357d7c8eb812d"
+}

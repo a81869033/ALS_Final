@@ -1,0 +1,13 @@
+case,domain,round19_candidates,round19_best_candidate,round19_best_adp,frontend_best_adp_after,reference_adp,round19_improved_frontend,beats_reference,next_recommendation
+ex204,bf16,1,ex204_arithbase_hilo3_abc_g_aig,25687,25670,15180,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex205,bf16,1,ex205_sep_fields_abc_g_and,75871,71104,47128,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex218,bf16,1,ex218_field_selector_abc_g_aig,5941,5941,3222,1,0,gap remains; continue only with materially different high-level sharing/representation
+ex244,float_fp8,1,ex244_round19_gapdecode_small_default,12502,10234,4272,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex248,float_fp8,1,ex248_round19_delta_neg_noabc,18040,8550,4180,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex249,float_fp8,1,ex249_round19_activegap_noabc,12280,4368,2079,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex260,integer,1,ex260_smul_bw_rev_hcla4_explicit_lowcarry_noabc,1695,1144,657,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex266,integer,1,ex266_udiv_cof_bhi2_a4_wordmux_keep_noabc,3906,1480,848,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex276,integer,1,ex276_isqrt_prefix4_ge_tree_mux_noabc,3610,1010,632,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex285,unknown,1,ex285_decision_tree_greedy_round19_abc_g_and,13906,13175,5499,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex288,unknown,1,ex288_keybdd_selected_round19_no_abc,238464,31598,16394,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex292,unknown,1,ex292_shared_bdd_round19_no_abc,214136,142170,84854,0,0,gap remains; continue only with materially different high-level sharing/representation

@@ -1,0 +1,22 @@
+{
+  "adp": 3102,
+  "aig_sha256": "e66d0587dadb43607d875681b95f15c45b1ac49c58cca160fe81ebc6712e7f3f",
+  "area": 282,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex212_bf16_square_delta_pair_mode_hilo4",
+  "case": "ex212",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_square",
+  "method_signature": "bf16_square",
+  "reference_adp": 2304,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex212/aigs/ex212_bf16_square_delta_pair_mode_hilo4.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex212/verilog/ex212_bf16_square_delta_pair_mode_hilo4.v",
+  "variant": "delta_pair_mode_hilo4",
+  "verilog_sha256": "39af1201ff84518bafe0ed31576716a36de48897c5d08a2e5f78b7352acb84dc"
+}

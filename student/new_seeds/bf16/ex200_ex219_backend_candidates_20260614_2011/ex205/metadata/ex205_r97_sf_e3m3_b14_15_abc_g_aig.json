@@ -1,0 +1,22 @@
+{
+  "adp": 71040,
+  "aig_sha256": "79e03f841f5ac0d43e49286092307ed809b735470dfdf2b65a5b83e652ba0d59",
+  "area": 4440,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex205_r97_sf_e3m3_b14_15_abc_g_aig",
+  "case": "ex205",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log10",
+  "method_signature": "ex205|selected_output_extra_bit|sep_fields_e3_m3_s0_bits_14_15_bh1|current-style field decode plus non-sign selected bit14 and sign bit15 predicates|abc_g_aig|DAZ_log10_BF16_RNE_FTZ_canonical_NaN|separate output fields",
+  "reference_adp": 47128,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_deepstruct_round97_20260614_0724/sub-bf16-logmodel-r97/ex205/aigs/ex205_r97_sf_e3m3_b14_15_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_deepstruct_round97_20260614_0724/agent_shards/sub-bf16-logmodel-r97/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_deepstruct_round97_20260614_0724",
+  "source_verilog_path": "student/work/frontend_gt15_deepstruct_round97_20260614_0724/sub-bf16-logmodel-r97/ex205/verilog/ex205_r97_sf_e3m3_b14_15_abc_g_aig.v",
+  "variant": "sep_fields_e3_m3_s0_bits_14_15_bh1",
+  "verilog_sha256": "516230ac4b8524643397c26810fa32d6dfc8db39d7a15b4eee45a6b27ea44200"
+}

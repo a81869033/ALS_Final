@@ -1,0 +1,22 @@
+{
+  "adp": 7502,
+  "aig_sha256": "2f551f167518f0883d2d022b8eefe3c8efc220f5184e23259de354c13608d639",
+  "area": 341,
+  "bundle_type": "current",
+  "candidate_id": "ex246_semantic_mul_product_dc_seed12_set11to10_synth_preset_aig",
+  "case": "ex246",
+  "delay": 22,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex246|frontend|frontend_fp8_e5m2_dc_neighbor12",
+  "reference_adp": 2805,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex246_frontend_fp8_e5m2_dc_neighbor12_20260608_2000/ex246/aigs/ex246_semantic_mul_product_dc_seed12_set11to10_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex246_frontend_fp8_e5m2_dc_neighbor12_20260608_2000",
+  "source_verilog_path": "student/work/ex246_frontend_fp8_e5m2_dc_neighbor12_20260608_2000/ex246/verilog/ex246_semantic_mul_product_dc_seed12_set11to10.v",
+  "variant": "semantic_mul_product_dc_seed12_set11to10_synth_preset_aig",
+  "verilog_sha256": "9475223c0e79c1c0bc7a95f3088ca8523dbbc7a3f4ce96b0838a30de2a68ae5c"
+}

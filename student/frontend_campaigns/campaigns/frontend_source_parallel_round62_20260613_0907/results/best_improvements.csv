@@ -1,0 +1,1 @@
+case,domain,agent_id,candidate_id,method_signature,hypothesis,representation,shared_structure,verilog_path,aig_path,evaluate_log,equivalent,simulation_pass,area,delay,adp,frontend_best_adp,new_best_adp,old_best_adp,old_frontend_adp,current_frontend_adp,reference_adp,improvement_vs_frontend,beats_current_frontend,beats_reference,notes,proposed_registry_update,new_frontend_adp

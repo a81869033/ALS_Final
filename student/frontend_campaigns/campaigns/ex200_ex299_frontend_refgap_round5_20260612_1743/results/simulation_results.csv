@@ -1,0 +1,4 @@
+case,agent_id,candidate_id,simulator,status,log_path,notes
+ex260,integer-r5,ex260_smul_corrrow_csa4_abc_g_aig,iverilog,not_run,,official evaluate.py was run directly as the first-stop result
+ex286,routing-r5,ex286_hw_layer_rank_colex_table,python_truth_descriptor_check,PASS,student/work/ex200_ex299_frontend_refgap_round5_20260612_1743/routing-r5/ex286/logs/ex286_hw_layer_rank_colex_table.diagnostic.log,all 8192 rows mapped uniquely by weight plus colex rank; popcount preserved
+ex225,unary-r5,ex225_full_bitrun_predicates_abc_g_aig,iverilog,not_run,,truth-derived generator; official evaluate.py used for equivalence

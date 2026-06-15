@@ -1,0 +1,22 @@
+{
+  "adp": 4788,
+  "aig_sha256": "e14a7a7ebb5cda8d42b4be1f05bcef928ecf0dff9728c98eb99468d2c4d6f295",
+  "area": 171,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex249_r26r_hypot_onehot_delta_synth_preset_aig",
+  "case": "ex249",
+  "delay": 28,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "",
+  "reference_adp": 2079,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex240_ex299_frontend_gt2_round26_20260613_0556/fp8-rounding-r26/ex249/aigs/ex249_r26r_hypot_onehot_delta_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex240_ex299_frontend_gt2_round26_20260613_0556/results/evaluation_results.csv",
+  "source_evaluate_log": "student/work/ex240_ex299_frontend_gt2_round26_20260613_0556/fp8-rounding-r26/ex249/logs/ex249_r26r_hypot_onehot_delta_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_results",
+  "source_run": "ex240_ex299_frontend_gt2_round26_20260613_0556",
+  "source_verilog_path": "student/work/ex240_ex299_frontend_gt2_round26_20260613_0556/fp8-rounding-r26/ex249/verilog/ex249_r26r_hypot_onehot_delta_synth_preset_aig.v",
+  "variant": "",
+  "verilog_sha256": "3180307231a1ea823bbfd5f54dc7fdb5ddaa0bb2b4d37862ee5b0fc799a85596"
+}

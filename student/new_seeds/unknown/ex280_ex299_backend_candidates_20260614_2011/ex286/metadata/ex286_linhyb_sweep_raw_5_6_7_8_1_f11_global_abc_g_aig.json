@@ -1,0 +1,22 @@
+{
+  "adp": 20070,
+  "aig_sha256": "d8d9ccafdac302bbbd5546415baf97bab634304b77e6a28a50fe34256ebadb37",
+  "area": 1338,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex286_linhyb_sweep_raw_5_6_7_8_1_f11_global_abc_g_aig",
+  "case": "ex286",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "selective_output_linear_coordinate_hybrid",
+  "method_signature": "ex286|hamming_weight_preserving_lossy_routing_normalizer|selective_output_linear_coordinate_hybrid|sweep_raw_5_6_7_8_1|policy_f11|global_base_bdd|coord_global_bdd|yosys_abc_g_aig|abc_xf_official_evaluate",
+  "reference_adp": 2376,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/aigs/ex286_linhyb_sweep_raw_5_6_7_8_1_f11_global_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex286_ex287_frontend_structural_decomp_20260614_2320/agent_shards/coordinator-ex286-linear-hybrid-sweep/evaluation_results.csv",
+  "source_evaluate_log": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/logs/ex286_linhyb_sweep_raw_5_6_7_8_1_f11_global_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex286_ex287_frontend_structural_decomp_20260614_2320",
+  "source_verilog_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/verilog/ex286_linhyb_sweep_raw_5_6_7_8_1_f11_global.v",
+  "variant": "sweep_raw_5_6_7_8_1_f11_global/abc_g_aig",
+  "verilog_sha256": "efd32e3914eeaf61a038b418944ed5ba801b0ed2276b3311ab356954c0806478"
+}

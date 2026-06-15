@@ -1,0 +1,22 @@
+{
+  "adp": 25700,
+  "aig_sha256": "72b69e9849cdfd4f620b7c69b5bc405d67ca890e44e34db1b279deac639464cc",
+  "area": 1028,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex242_semantic_div_formula_exception_compact_synth_preset_aig",
+  "case": "ex242",
+  "delay": 25,
+  "domain": "float_fp8",
+  "hypothesis": "fp8_e4m3fn_div_low_over_high",
+  "method_signature": "fp8_e4m3fn_div_low_over_high",
+  "reference_adp": 11900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex242_frontend_fp8_div_formula_compact_20260608_1253/ex242/aigs/ex242_semantic_div_formula_exception_compact_synth_preset_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex242_frontend_fp8_div_formula_compact_20260608_1253/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex242_frontend_fp8_div_formula_compact_20260608_1253",
+  "source_verilog_path": "student/work/ex242_frontend_fp8_div_formula_compact_20260608_1253/ex242/verilog/ex242_semantic_div_formula_exception_compact.v",
+  "variant": "semantic_div_formula_exception_compact_synth_preset_aig",
+  "verilog_sha256": "cd47ac9013f92b2a5490c7c8c92ffbb9beeefb498bb9a9579a602100b18df407"
+}

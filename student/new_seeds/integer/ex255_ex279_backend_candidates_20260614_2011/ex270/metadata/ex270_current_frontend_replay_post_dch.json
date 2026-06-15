@@ -1,0 +1,22 @@
+{
+  "adp": 3230,
+  "aig_sha256": "6679bc5fe080d388f828970e6ca5d85d213ad584f84e42a2e9b544efb6f91d4b",
+  "area": 190,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex270_current_frontend_replay_post_dch",
+  "case": "ex270",
+  "delay": 17,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex270|current_best_frontend_source_may_need_a_fixed_post-synthesis_rewrite|triangular_square_Wallace_csel5_replay_from_current_frontend_best|existing_shared_cross_terms_and_square_compressor_rows|post_dch|unsigned_square_x*x|full_square_word",
+  "reference_adp": 2076,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex270/aigs/ex270_current_frontend_replay_post_dch.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex270/logs/ex270_current_frontend_replay_post_dch.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex270/verilog/ex270_current_frontend_replay.v",
+  "variant": "triangular square Wallace csel5 replay from current frontend best",
+  "verilog_sha256": "1dc75b1e987069936f3fdb9955c1c41e4a60f40777d0e6fbfee8e5e6bb46c151"
+}

@@ -1,0 +1,4 @@
+item,value
+run_id,ex223_ex225_frontend_fp16_transfer_20260614_1310
+merged_files,"{'candidates.csv': 10, 'evaluation_results.csv': 10, 'best_improvements.csv': 0, 'failed_hypotheses.csv': 10, 'simulation_results.csv': 10, 'shared_structure_report.csv': 10}"
+validation_errors,0

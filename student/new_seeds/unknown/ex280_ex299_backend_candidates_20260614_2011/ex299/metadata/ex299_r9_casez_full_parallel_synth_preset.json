@@ -1,0 +1,22 @@
+{
+  "adp": 1737162,
+  "aig_sha256": "5a1d4163c54e5e063680bffbf1f35171c93b98b89cfc4d2c5d6c41aecb7b63fd",
+  "area": 96509,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex299_r9_casez_full_parallel_synth_preset",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "casez plus full/parallel decode attributes may compress nested celllocal selector tables under synth-preset.",
+  "method_signature": "ex299|cyclic_2bit_selector_cluster_current_source|casez_full_parallel_synth_preset|sel2_pairsel_celllocal_case_boundary_attrs|yosys_synth_flatten_abc_g_aig|official_evaluate|cell_pair_outputs",
+  "reference_adp": 1013807,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex299/aigs/ex299_r9_casez_full_parallel_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-wide-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex299/logs/ex299_r9_casez_full_parallel_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex299/verilog/ex299_r9_casez_full_parallel_synth_preset.v",
+  "variant": "casez full_case parallel_case on nested celllocal tables, synth-preset",
+  "verilog_sha256": "f6ec13b05ff42d0593d8b4ff288dda72f21b6f8c9a8cfa55724a93a48a010d89"
+}

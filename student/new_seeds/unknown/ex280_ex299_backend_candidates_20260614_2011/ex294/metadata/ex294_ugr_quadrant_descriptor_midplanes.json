@@ -1,0 +1,22 @@
+{
+  "adp": 235114,
+  "aig_sha256": "d5fe602e2c0e378e3a8efb5603714ed35e8daa857b36efd005a54b69cffce194",
+  "area": 10687,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_ugr_quadrant_descriptor_midplanes",
+  "case": "ex294",
+  "delay": 22,
+  "domain": "unknown",
+  "hypothesis": "global-state endpoint descriptor source-boundary mix",
+  "method_signature": "ex294|global_state_descriptor_source_boundary|quadrant_midplanes|shared_endpoint_quadrant_descriptor_selects_midplane_groups|yosys_internal_abc_g_aig|official_evaluate|bits_2_3_6_7_10_11_14_15",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r4/ex294/aigs/ex294_ugr_quadrant_descriptor_midplanes.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-global-r4/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r4/ex294/logs/ex294_ugr_quadrant_descriptor_midplanes.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r4/ex294/verilog/ex294_ugr_quadrant_descriptor_midplanes.v",
+  "variant": "new quadrant descriptor mux on middle phase planes",
+  "verilog_sha256": "0b7932fa917ac1825f706c7286921ac307840d2e4b3bbfd60a2948a5c529b6ee"
+}

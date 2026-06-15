@@ -1,0 +1,22 @@
+{
+  "adp": 2520,
+  "aig_sha256": "dae8c5efe6e981fb8a962ccf1123419573e24042cad92287e4e4477e7bdaad4f",
+  "area": 126,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex253_semantic_u2_sum8_balanced_laneqcase_abcD15_aig",
+  "case": "ex253",
+  "delay": 20,
+  "domain": "float_fp8",
+  "hypothesis": "packed_u2_sum8_times2_to_e4m3",
+  "method_signature": "packed_u2_sum8_times2_to_e4m3",
+  "reference_adp": 1845,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex252_ex253_frontend_u2_balanced_tree_20260608_2220/ex253/aigs/ex253_semantic_u2_sum8_balanced_laneqcase_abcD15_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex252_ex253_frontend_u2_balanced_tree_20260608_2220/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex252_ex253_frontend_u2_balanced_tree_20260608_2220",
+  "source_verilog_path": "student/work/ex252_ex253_frontend_u2_balanced_tree_20260608_2220/ex253/verilog/ex253_semantic_u2_sum8_balanced_laneqcase.v",
+  "variant": "semantic_u2_sum8_balanced_laneqcase_abcD15_aig",
+  "verilog_sha256": "cd1cf99e1c3741b2d062d601bb05d269f378e2b66062e53b3bcaf12c52cca6a2"
+}

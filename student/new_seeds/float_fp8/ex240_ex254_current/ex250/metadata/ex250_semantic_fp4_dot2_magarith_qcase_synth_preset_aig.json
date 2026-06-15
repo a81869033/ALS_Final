@@ -1,0 +1,22 @@
+{
+  "adp": 16933,
+  "aig_sha256": "ed8922c0a2aafa2bdab470b52c309e86ce9d0bbd3670aa2f46cf05f9a49f9931",
+  "area": 413,
+  "bundle_type": "current",
+  "candidate_id": "ex250_semantic_fp4_dot2_magarith_qcase_synth_preset_aig",
+  "case": "ex250",
+  "delay": 41,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex250|frontend|frontend_magarith",
+  "reference_adp": 20355,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex250_frontend_magarith_20260608_2303/ex250/aigs/ex250_semantic_fp4_dot2_magarith_qcase_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex250_frontend_magarith_20260608_2303",
+  "source_verilog_path": "student/work/ex250_frontend_magarith_20260608_2303/ex250/verilog/ex250_semantic_fp4_dot2_magarith_qcase.v",
+  "variant": "semantic_fp4_dot2_magarith_qcase_synth_preset_aig",
+  "verilog_sha256": "53889ce43ddad3b2bb00d76aec39f23459b184ce15fb78aaba9a4cc80c1188b4"
+}

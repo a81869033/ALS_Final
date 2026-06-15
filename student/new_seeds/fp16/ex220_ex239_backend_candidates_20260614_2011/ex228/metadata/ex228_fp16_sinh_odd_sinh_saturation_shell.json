@@ -1,0 +1,22 @@
+{
+  "adp": 139713,
+  "aig_sha256": "662a24cf3baca320f7267583acd370b25839c8e9be2de72f280a955da85a7317",
+  "area": 6653,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex228_fp16_sinh_odd_sinh_saturation_shell",
+  "case": "ex228",
+  "delay": 21,
+  "domain": "fp16",
+  "hypothesis": "fp16_sinh",
+  "method_signature": "fp16_sinh",
+  "reference_adp": 101205,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex226_ex229_frontend_fp16_shells_fix_20260607_1128/ex228/aigs/ex228_fp16_sinh_odd_sinh_saturation_shell.aig",
+  "source_csv": "student/runs/fp16/ex226_ex229_frontend_fp16_shells_fix_20260607_1128/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex226_ex229_frontend_fp16_shells_fix_20260607_1128",
+  "source_verilog_path": "student/work/ex226_ex229_frontend_fp16_shells_fix_20260607_1128/ex228/verilog/ex228_fp16_sinh_odd_sinh_saturation_shell.v",
+  "variant": "odd_sinh_saturation_shell",
+  "verilog_sha256": "e6dcd9ac86b4a8ae9a49d733b8babebba33df6d26d15c9924f9993f2a31f1f23"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 6578,
+  "aig_sha256": "0324f91b934ec075711726338affb74e40401137f1b6d56d182b82fea3343650",
+  "area": 253,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r10_guard_rows4",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|4 exact special/boundary rows guarded before the current core fallback|tiny guard table only, not the r9 residual16 overlay|guard_rows4_aig|official_evaluate|frontend_only",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex247/aigs/ex247_r10_guard_rows4.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r10/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex247/logs/ex247_r10_guard_rows4.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex247/verilog/ex247_r10_guard_rows4.v",
+  "variant": "4 exact special/boundary rows guarded before the current core fallback",
+  "verilog_sha256": "0800466fbbf24c74b2ae2c6c21beb32792297871605fa56c28de60621d188c35"
+}

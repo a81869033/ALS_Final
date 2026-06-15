@@ -29,3 +29,11 @@ Attempts:
 - Follow-up order+merge, segment-prefix, carry-select, row-level Baugh,
   serial column carry-state, Dadda hybrid, and winner-flow checks were exact
   but did not improve `164/18/2952`.
+
+## 2026-06-14 integer-extra-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `integer-extra-r2`.
+
+- Official `evaluate.py` OK rows: 24/24.
+- Best row: `ex261_smul_baugh_wooley_wallace_csel3_abc_g_aig`, `158/19/3002`; nonwinning versus current frontend `164/18/2952`.
+- Failed directions: Baugh-Wooley carry-select sizes, 4:2/outside variants, prefix/ripple-hybrid final merges, correction-order variants, and signed-correction CSA/CLA were exact but could not recover the one-cycle delay advantage of the current hCLA4 source.

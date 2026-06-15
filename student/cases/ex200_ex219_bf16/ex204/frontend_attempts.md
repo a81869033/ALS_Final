@@ -148,3 +148,83 @@ Tried and excluded:
 - Equality-style formula rewrites were exact and lowered area as far as
   `1528/18/27504`, but the 18-level delay kept them behind the current
   `1545/17/26265` best.
+
+## 2026-06-12 mixed-r12 diagnostic
+
+Run ID: `ex200_ex299_frontend_refgap_round12_20260612_2015`, agent `mixed-r12`.
+
+- Method signature: `ex204|bf16_log2_nonreplay_semantic_residual|diagnostic_only|shared_exp_mant_decode_without_sparse_copy|not_run|DAZ_log2_BF16_RNE_FTZ|blocker`.
+- Diagnostic artifact: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round12_20260612_2015/agent_shards/mixed-r12/fp_bf_unary_diagnostics.csv`.
+- Evidence: `positive_total_mode_exceptions=21293`, `sign_exp_full_groups=257`, `negative_canonical_nan=32640`.
+- Outcome: no candidate generated. This blocks another sparse/source-copy residual attempt; useful next work needs a new shallow log2 correction formula that preserves the current 17-level path.
+
+## 2026-06-13 fpbf-existing-r19 continuation candidate
+
+Run ID: `ex200_ex299_frontend_refgap_round19_20260612_2346`, agent `fpbf-existing-r19`.
+
+- Method signature: `ex204|bf16_log2_arithbase_delta_correction|mantissa_hilo_grouped_lut_module_rename|shared exponent/mantissa delta base plus selected output-bit correction|yosys_abc_g_aig|DAZ+log2+BF16_RNE+FTZ+canonical_NaN|grouped word output with selected-bit overrides`.
+- Candidate Verilog: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/fpbf-existing-r19/ex204/verilog/ex204_bf16_log2_arithbase_hilo3_abcgaig_r19.v`.
+- Official AIG: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/fpbf-existing-r19/ex204/official_eval/ex204_arithbase_hilo3_abc_g_aig/ex204.aig`.
+- Evaluate log: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/fpbf-existing-r19/ex204/logs/ex204_arithbase_hilo3_abc_g_aig.evaluate.py.log`.
+- Outcome: official `evaluate.py --case ex204` OK at `1511/17/25687`, a valid nonwinning row versus the current frontend `25670` ADP.
+- Next action: do not repeat this synth-flow variant; useful follow-up still needs a lower-delay log2 correction formula or materially different sharing.
+
+## 2026-06-13 bf16-r22 round22 outcome
+
+Run ID: `ex200_ex299_frontend_refgap_round22_20260613_0218`, agent `bf16-r22`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/bf16-r22/ex204/dossiers/ex204_round22_dossier.md`.
+- Method signatures:
+  - `ex204|bf16_log2_arithbase_delta_correction|hilo3_formulaeq_bits_11_14|shared exponent base plus equality selected-bit formulas|yosys_abc_g_AND|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output`.
+  - `ex204|bf16_log2_arithbase_delta_correction|hilo3_fullrun_bits_11_14|shared exponent base plus full-run selected-bit predicates|yosys_abc_g_AND|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output`.
+- Official `evaluate.py` rows:
+  - `ex204_bf16_log2_log2_arithbase_delta_hilo3_formulaeq_bits_11_14`: `1550/18/27900`.
+  - `ex204_bf16_log2_log2_arithbase_delta_hilo3_fullruns_bits_11_14`: `1570/18/28260`.
+- Candidate/evaluation rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/bf16-r22/candidates.csv` and `evaluation_results.csv`.
+- Outcome: both candidates are official equivalent but nonwinning versus current frontend `25670`; record the equality/full-run selected-bit detour as low-value unless a future version preserves the 17-level path.
+
+## 2026-06-13 mixed-r24 frontend improvement
+
+Run ID: `ex200_ex299_frontend_refgap_round24_20260613_0435`, agent `mixed-r24`.
+
+- Candidate: `ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2_abc_g_gates`.
+- Method signature: `ex204|bf16_log2_arithbase_delta_correction|hilo3_bits_11_14_bh2|shared exponent/mantissa delta base plus selected output-bit correction|abc_g_gates|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output`.
+- Official `evaluate.py` result: `1536/16/24576`, improving frontend best from `25670`; reference remains `15180`.
+- Paths:
+  - Verilog: `student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex204/verilog/ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2.v`
+  - AIG: `student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex204/aigs/ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2_abc_g_gates.aig`
+  - Evaluate log: `student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex204/logs/ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2_abc_g_gates.evaluate.py.log`
+  - Round24 merged results: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round24_20260613_0435/results/best_improvements.csv`
+- Outcome: the `bh2` selected-bit variant preserves a 16-level path and is now the best frontend seed, but still above reference. Future work should start from this candidate and search for area reduction without losing the 16-level delay.
+
+## 2026-06-13 mixed-r25 nonwinning follow-up
+
+Run ID: `ex200_ex299_frontend_refgap_round25_20260613_0506`, agent `mixed-r25`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/mixed-r25/ex204/notes/dossier.md`.
+- Method families tested:
+  - `ex204|bf16_log2_arithbase_delta_bit9_extension|hilo3 selected-bit correction adding bit9 to round24 bh2 seed|shared exponent base plus selected output-bit correction tables|abc_g_aig|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output`: official `1567/17/26639`.
+  - `ex204|bf16_log2_arithbase_delta_bh3_rebalance|hilo3 selected-bit correction with wider bit grouping|shared exponent base plus selected output-bit correction tables|abc_g_aig|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output`: official `1511/17/25687`.
+  - `ex204|bf16_log2_arithbase_delta_hilo4_recut|hilo4 arithmetic-base delta with round24 selected-bit grouping|shared exponent base plus selected output-bit correction tables|abc_g_aig|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output`: official `1549/17/26333`.
+- Shard rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round25_20260613_0506/agent_shards/mixed-r25/candidates.csv` and `evaluation_results.csv`.
+- Outcome: all candidates are official equivalent but nonwinning versus frontend `1536/16/24576`; adding bit9 or changing `bh`/`hilo` recuts loses the 16-level path. Next action should derive a new bit11/14 formula that preserves delay 16 or reduce area inside the exact round24 `bh2` source without changing its selected-bit cut.
+
+## 2026-06-13 mixed-r26 official rows
+
+Run ID: `ex200_ex299_frontend_refgap_round26_20260613_0539`, agent `mixed-r26`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex204/notes/dossier.md`.
+- Official rows:
+  - `ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_formula_bits_11_14_abc_g_gates`: `1534/17/26078`.
+  - `ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_pla_abc_g_gates`: `1528/17/25976`.
+  - `ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_runs_abc_g_gates`: `1528/17/25976`.
+- Failed render row: `ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_cmp_abc_g_gates` was not generated because the renderer has no `cmp` mode for `log2_arithbase_delta`.
+- Outcome: official rows are equivalent but nonwinning versus frontend `1536/16/24576`. PLA/runs save a few area nodes but add one delay level, so the round24 `bh2` gate-flow source remains best.
+
+## 2026-06-14 arith-unary-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `arith-unary-r2`.
+
+- Families tested: BF16 output-grouped truth structure with shared sign/exp high-bit run trees plus nested low-bit LUT; BF16 semantic hi/lo field/delta variants.
+- Official best from this shard: `ex204_bf16_output_grouped_low10_hi3_abc_g_aig` at `2077/16/33232`.
+- Outcome: all rows were official equivalent but nonwinning versus frontend `1536/16/24576`; the semantic/delta family best was `2332/16/37312`.

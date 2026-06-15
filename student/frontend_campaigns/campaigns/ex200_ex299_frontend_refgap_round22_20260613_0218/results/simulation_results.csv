@@ -1,0 +1,7 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex247,ex247_r22_bound_region_mux_share2,iverilog,not_run,,float-fp8-r22,ex200_ex299_frontend_refgap_round22_20260613_0218,Debug simulation skipped; official evaluate.py equivalence/QoR completed.
+ex246,ex246_r22_product_seed12_replay,iverilog,not_run,,float-fp8-r22,ex200_ex299_frontend_refgap_round22_20260613_0218,Debug simulation skipped; official evaluate.py equivalence/QoR completed.
+ex244,ex244_r22_maxeff_delta_bdd_replay,iverilog,not_run,,float-fp8-r22,ex200_ex299_frontend_refgap_round22_20260613_0218,Debug simulation skipped; official evaluate.py equivalence/QoR completed.
+ex225,ex225_blocked_no_candidate_round22,,not_run,,,ex200_ex299_frontend_refgap_round22_20260613_0218,diagnostic-only no Verilog emitted
+ex223,ex223_blocked_no_candidate_round22,,not_run,,,ex200_ex299_frontend_refgap_round22_20260613_0218,diagnostic-only no Verilog emitted
+ex224,ex224_blocked_no_candidate_round22,,not_run,,,ex200_ex299_frontend_refgap_round22_20260613_0218,diagnostic-only no Verilog emitted

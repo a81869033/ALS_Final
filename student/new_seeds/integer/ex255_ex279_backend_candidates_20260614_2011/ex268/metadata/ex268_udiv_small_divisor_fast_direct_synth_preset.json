@@ -1,0 +1,22 @@
+{
+  "adp": 11310,
+  "aig_sha256": "e5ae28de9b9dc7004d4eaac3344458acda946fbde484e9d76aa2b597d89a4aba",
+  "area": 195,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex268_udiv_small_divisor_fast_direct_synth_preset",
+  "case": "ex268",
+  "delay": 58,
+  "domain": "integer",
+  "hypothesis": "unsigned low7_high7:a/b dbz=max",
+  "method_signature": "unsigned low7_high7:a/b dbz=max",
+  "reference_adp": 7446,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex265_ex269_frontend_udiv_guard_fast_20260609_0815/ex268/aigs/ex268_udiv_small_divisor_fast_direct_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex265_ex269_frontend_udiv_guard_fast_20260609_0815/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex265_ex269_frontend_udiv_guard_fast_20260609_0815",
+  "source_verilog_path": "student/work/ex265_ex269_frontend_udiv_guard_fast_20260609_0815/ex268/verilog/ex268_udiv_small_divisor_fast_direct.v",
+  "variant": "small_divisor_fast_direct+synth_preset",
+  "verilog_sha256": "cdb85a472faba7874529b1a43784510fd75a6115d958963ec66f960ac5a23be6"
+}

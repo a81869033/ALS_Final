@@ -1,0 +1,11 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex285,unknown,local-ex285-iter-r39,ex285_r39_resyn2rs_area_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_compress2rs_area_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_mfs_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_mfs_rwz_mfs_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_ssw_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_fraig_mfs_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_dchoice_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_choice_if4_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_compress_l_no_dc_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-iter-r39,ex285_r39_resub_deep_rf_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final

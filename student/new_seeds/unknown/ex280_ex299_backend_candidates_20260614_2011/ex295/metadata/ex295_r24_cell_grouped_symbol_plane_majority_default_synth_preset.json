@@ -1,0 +1,22 @@
+{
+  "adp": 131088,
+  "aig_sha256": "29e9cf3c88f9eca985ea2772424daaa300a73002c5cfa510f4bcf26c8367c148",
+  "area": 8193,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex295_r24_cell_grouped_symbol_plane_majority_default_synth_preset",
+  "case": "ex295",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit-symbol exact split with per-cell majority defaults",
+  "method_signature": "ex295|unknown_large_r24|cell_grouped_symbol_plane_majority_default|ex295_r24_cell_grouped_symbol_plane_majority_default_synth_preset|official_evaluate_py",
+  "reference_adp": 68064,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/unknown-large-r24/ex295/aigs/ex295_r24_cell_grouped_symbol_plane_majority_default_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round24_20260613_0435/agent_shards/unknown-large-r24/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/unknown-large-r24/ex295/logs/ex295_r24_cell_grouped_symbol_plane_majority_default_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round24_20260613_0435",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/unknown-large-r24/ex295/verilog/ex295_r24_cell_grouped_symbol_plane_majority_default.v",
+  "variant": "ex295_r24_cell_grouped_symbol_plane_majority_default_synth_preset",
+  "verilog_sha256": "03400dc73ac5ce37583e66904e7b0cfc8e089bc6cdc65ffb9e924e807884fe06"
+}

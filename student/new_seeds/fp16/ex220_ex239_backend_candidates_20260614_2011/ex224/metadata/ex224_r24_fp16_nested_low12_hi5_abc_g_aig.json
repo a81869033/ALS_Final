@@ -1,0 +1,22 @@
+{
+  "adp": 98379,
+  "aig_sha256": "110344a70e6ec2f19639e126a95c3683847b6188bdb0a45f175d8866633862f8",
+  "area": 5787,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex224_r24_fp16_nested_low12_hi5_abc_g_aig",
+  "case": "ex224",
+  "delay": 17,
+  "domain": "fp16",
+  "hypothesis": "fp16_log2_field_shell_selected_lowbit",
+  "method_signature": "ex224|fp16_log2_field_shell_selected_lowbit|nested positive-normal low12 hi5 LUT plus high-bit run trees|shared sign/exp special decode and coarser mantissa-hi grouping|abc_g_aig|DAZ_log2_FP16_RNE_FTZ|word output low12 plus high-bit runs",
+  "reference_adp": 64708,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex224/aigs/ex224_r24_fp16_nested_low12_hi5_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round24_20260613_0435/agent_shards/mixed-r24/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex224/logs/ex224_r24_fp16_nested_low12_hi5_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round24_20260613_0435",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex224/verilog/ex224_r24_fp16_nested_low12_hi5.v",
+  "variant": "low12_hi5",
+  "verilog_sha256": "240585e057a9816c7db96fa87fa28286b052ae862d3c71b63da595093884778f"
+}

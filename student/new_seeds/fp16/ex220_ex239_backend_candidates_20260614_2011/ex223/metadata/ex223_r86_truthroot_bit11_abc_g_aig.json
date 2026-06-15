@@ -1,0 +1,22 @@
+{
+  "adp": 203395,
+  "aig_sha256": "ed5366c1cd782814fce90a81da1c4db278362866d7f7c957e1082ce4a189ae61",
+  "area": 10705,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex223_r86_truthroot_bit11_abc_g_aig",
+  "case": "ex223",
+  "delay": 19,
+  "domain": "fp16",
+  "hypothesis": "fp16_log",
+  "method_signature": "ex223|fp16_log_truthroot_bit11_positive_normal_root|sign_exp_mantissa_run_root_for_bit11_over_frontend_best|single_exact_low_high_boundary_root|yosys_abc_g_aig|abc_xf_official_evaluate|not_r84_highword_not_r85_outputcluster",
+  "reference_adp": 120549,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_truthroot_parallel_round86_20260613_2221/sub-fp16-int-root-r86/ex223/aigs/ex223_r86_truthroot_bit11_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_truthroot_parallel_round86_20260613_2221/agent_shards/sub-fp16-int-root-r86/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/frontend_truthroot_parallel_round86_20260613_2221/sub-fp16-int-root-r86/ex223/official_eval/ex223_r86_truthroot_bit11_abc_g_aig/ex223_r86_truthroot_bit11_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_truthroot_parallel_round86_20260613_2221",
+  "source_verilog_path": "student/work/frontend_truthroot_parallel_round86_20260613_2221/sub-fp16-int-root-r86/ex223/verilog/ex223_r86_truthroot_bit11.v",
+  "variant": "positive-normal bit11 sign-exp mantissa root",
+  "verilog_sha256": "083b51575bad2e7292cab49b476917f2d2718a67184a32118043090c818690f0"
+}

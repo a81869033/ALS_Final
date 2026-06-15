@@ -28,7 +28,44 @@
 - Do not repeat interleave/center representative-bit BDD reconstruction; exact but still duplicates too much logic.
 - Do not pursue a simple small-radius 2-bit pair-ring local rule; support spans the full ring.
 
+## 2026-06-12 Round10 unknown-state-r10
+
+- method_signature: `ex295|state/cell interleaved selector exact split|symbol_plane_default_exception|shared selector decoders|abc_g_aig|official_truth_exact_partition|all_outputs_grouped`
+- official result: `evaluate.py OK`, area `8257`, delay `15`, ADP `123855`.
+- paths:
+  - Verilog: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-state-r10/ex295/verilog/ex295_r10_symbol_plane_split_abc_g_aig.v`
+  - AIG: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-state-r10/ex295/aigs/ex295_r10_symbol_plane_split_abc_g_aig.aig`
+  - official log: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-state-r10/ex295/logs/ex295_r10_symbol_plane_split_abc_g_aig.evaluate.log`
+- outcome: New frontend best. It improves the previous frontend `138448` and current overall/backend `125685`, but remains above reference `68064`.
+- next action: Continue from the symbol-plane split only with a lower-delay/lower-area recurrence or descriptor; do not replay the same split wrapper unchanged.
+
+- method_signature: `ex295|state/cell descriptor shared BDD|cell_outside_in_mux_tree|single shared BDD node pool|abc_g_aig|official_truth_exact_bdd|all_outputs_grouped`
+- official result: `evaluate.py OK`, area `8914`, delay `19`, ADP `169366`.
+- outcome: Equivalent but worse than the new frontend best; record as low-value for this exact BDD order/source form.
+
 ## Sources
 
 - `student/results/unknown_candidates_current_summary.csv`
 - `student/results/unknown_candidates_current_best.csv`
+
+## 2026-06-12 Round18 unknown-state-r18
+
+- method_signature: `ex295|cyclic_2bit_symbol_transition_recurrence|low_depth_symbol_plane_and_transition_predicate_smoke|shared_next_state_predicates|no_synth|abc_xf_truth_diagnostic|cell_outputs`
+- outcome: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG emitted and no official candidate claimed.
+- diagnostic evidence: `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-state-r18/ex295/notes/ex295_r18_recurrence_blocker.md`
+- machine evidence: `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-state-r18/ex295/notes/ex295_r18_recurrence_blocker.json`
+- findings: full-truth low-depth local symbol-plane tests kept conflicting buckets; zero-conflict radius-2 predicate keys required 4096 contexts, equal to the full truth-row count, so this is a full descriptor/table-equivalent form rather than a compact recurrence.
+- next action: continue only with a genuinely new nonlocal state basis or a compact source-level recurrence; do not replay round10 symbol-plane split, round16 descriptor-key/cell-pair BDD, or larger BDD pools.
+
+## 2026-06-13 unknown-large-r26 cell-prefix descriptor/residual probes
+
+- campaign: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/`
+- agent/shard: `unknown-large-r26`.
+- methods:
+  - `cell_prefix_bridge` grouped by cell pairs.
+  - `cell_prefix_bridge + rotl2 residual` grouped by cell pairs.
+  - `cell_prefix_bridge` grouped by output bit modulo 4.
+- official `evaluate.py` rows: 3/3 equivalent.
+- best r26 result: `ex295_r26_cellprefix_mod4_descriptor_mod4_output_planes_abc_g_aig`, `9977/23/229471`.
+- current frontend remains `123270`; reference remains `68064`.
+- outcome: no frontend improvement. The transformed cell-prefix key loses the low-delay advantage of the current symbol-plane split.

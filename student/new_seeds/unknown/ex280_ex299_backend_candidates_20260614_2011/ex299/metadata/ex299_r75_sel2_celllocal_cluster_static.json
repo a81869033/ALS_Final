@@ -1,0 +1,22 @@
+{
+  "adp": 1777446,
+  "aig_sha256": "635f162f4216da189cb7de2963fd2b06ef98ecc95d5aa9963177fdafb986b41f",
+  "area": 98747,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex299_r75_sel2_celllocal_cluster_static",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit static bit-cone graft",
+  "method_signature": "ex299|cyclic_2bit_static_bitcone_graft|static selected output bits from cell-local source over sel2-cluster current best|sel2 cluster source provides most outputs; only bits 8/9 use cell-local cones|yosys_internal_abc_g_aig|official_evaluate|static_celllocal_cluster_bits",
+  "reference_adp": 1013807,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex299/aigs/ex299_r75_sel2_celllocal_cluster_static.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1450/agent_shards/sub-unknown-large-redesc-r75/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex299/logs/ex299_r75_sel2_celllocal_cluster_static.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round75_20260613_1450",
+  "source_verilog_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex299/verilog/ex299_r75_sel2_celllocal_cluster_static.v",
+  "variant": "static_celllocal_cluster_bits",
+  "verilog_sha256": "2b3a924b307839ef7124ba2e19918c78b6074f20b0755b6487fa9361e54b0f22"
+}

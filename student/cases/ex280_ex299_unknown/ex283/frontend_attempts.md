@@ -79,3 +79,23 @@
 
 - `student/results/unknown_candidates_current_summary.csv`
 - `student/results/unknown_candidates_current_best.csv`
+
+## 2026-06-12 19:33 +0800 Round10 unknown-gf-r10
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-gf-r10/ex283/notes/high_level_dossier.md`
+- Method signature: `ex283|quartic_gf2_event_filter|wide_roots_kept_monomial_bank|kept_shared_root_product_and_linear_form_bank|yosys_abc_g_aig|exact_full_clamp_mux_coordinate_degree2|grouped_output_xor_from_preserved_monomial_bank`
+- Candidate: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-gf-r10/ex283/verilog/ex283_r10_kept_gf2_monomial_bank.v`
+- AIG: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-gf-r10/ex283/aigs/ex283_r10_kept_gf2_monomial_bank_abc_g_aig.aig`
+- Official evaluate.py log: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-gf-r10/ex283/logs/ex283_r10_kept_gf2_monomial_bank_abc_g_aig.evaluate.log`
+- Result: equivalent, area `174`, delay `30`, ADP `5220`; does not beat campaign frontend `4500` or reference `3168`.
+- Outcome: preserving the shared GF(2) root-product/linear-form bank improved delay relative to the round3 wide-root row but raised area enough to lose ADP.
+- Next action: try a genuinely different monomial-bank basis or selected-output grouping that reduces area, not only `keep` preservation of the existing bank.
+
+## 2026-06-13 02:50:51 +0800 Round22 unknown-a-r22
+
+- method_signature: `ex283|quartic_gf2_event_filter|raw_low_degree_anf_and_simple_equivariance_screen|shared_monomial_bank_or_rotation_recurrence|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG was emitted, so no `evaluate.py` row is claimed.
+- evidence: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/unknown-a-r22/ex283/diagnostics/ex283_round22_screen.md`
+- shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/unknown-a-r22/`
+- outcome: screened raw/shared low-degree ANF monomial bank and simple rotation/reverse structural recurrence; raw ANF remains degree 4 with 6293 terms, and best simple equivariance covers only 342/32768 rows.
+- next action: do not emit another raw ANF/equivariance source; ex283 needs a materially different compressor/basis than the prior shared quadratic compressor.

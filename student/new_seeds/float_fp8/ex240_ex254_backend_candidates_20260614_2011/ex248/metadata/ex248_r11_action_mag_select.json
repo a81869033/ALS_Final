@@ -1,0 +1,22 @@
+{
+  "adp": 7884,
+  "aig_sha256": "f269f2a035429b1cb77d340ef87ab02d837e44dcb228de3b2f4b151047a33fb6",
+  "area": 292,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex248_r11_action_mag_select",
+  "case": "ex248",
+  "delay": 27,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex248|E5M2FN packed fmod low by high|payload-only core plus small action selector for zero/lt/eq/core paths|classification action is shared across all payload output bits|abc_g_aig_frontend|official_evaluate|full_word",
+  "reference_adp": 4180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex248/aigs/ex248_r11_action_mag_select.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-tail-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex248/logs/ex248_r11_action_mag_select.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex248/verilog/ex248_r11_action_mag_select.v",
+  "variant": "payload-only core plus small action selector for zero/lt/eq/core paths",
+  "verilog_sha256": "63418c1cade26f30ae66f08000f4372ebb7fb6225f9e3ab7b37eba7901fc024d"
+}

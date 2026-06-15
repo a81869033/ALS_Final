@@ -1,0 +1,22 @@
+{
+  "adp": 26880,
+  "aig_sha256": "b24e417507a37b53008d5b9a82c782e5973e41b2281d629957a3ed3b4decd9b4",
+  "area": 1680,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex287_r8_edge_layer_direct_overlay",
+  "case": "ex287",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "a compact edge-Hamming-layer descriptor may remove boundary routing pressure while falling back to current best source elsewhere",
+  "method_signature": "ex287|compact_edge_hamming_layer_descriptor|direct_edge_layer_overlay|current_frontend_best_k4_full-word_case_source|yosys_frontend_abc_g_aig|official_evaluate|edge_layers_only",
+  "reference_adp": 5782,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r8/ex287/aigs/ex287_r8_edge_layer_direct_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-hard-r8/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r8/ex287/logs/ex287_r8_edge_layer_direct_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r8/ex287/verilog/ex287_r8_edge_layer_direct_overlay.v",
+  "variant": "edge_hamming_layer_direct_case_with_current_source_fallback",
+  "verilog_sha256": "5ad3e279d66152153a26b35633adb595a827816ee8c463e56e9bb80d5c205851"
+}

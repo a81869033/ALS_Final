@@ -1,0 +1,22 @@
+{
+  "adp": 6474,
+  "aig_sha256": "9c1925779cda396bf127a2bc161ff485ee784aa5116c71cdaa1fc66e3936f81e",
+  "area": 249,
+  "bundle_type": "current",
+  "candidate_id": "ex247_r5_lowpred_truth_case_abc_g_aig_frontend",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|tail-direct lowpred-min with 16-row low residual case|low_step/pat truth table is encoded as a compact 4-bit case over the low residual only|abc_g_aig_frontend|official_evaluate|lowpred_truth_case",
+  "reference_adp": 2975,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r5/ex247/aigs/ex247_r5_lowpred_truth_case_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r5/ex247/logs/ex247_r5_lowpred_truth_case_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r5/ex247/verilog/ex247_r5_lowpred_truth_case_abc_g_aig_frontend.v",
+  "variant": "",
+  "verilog_sha256": "a4753edbf3539c6f1a78da6def36cd1d5185101a8c4862f56661fce837ea852e"
+}

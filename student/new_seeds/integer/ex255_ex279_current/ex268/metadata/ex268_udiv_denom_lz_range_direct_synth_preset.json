@@ -1,0 +1,22 @@
+{
+  "adp": 10547,
+  "aig_sha256": "11eb5f881d9b9ab9850b7051b2344b5f7b96f3a993403799993748cf166b1fa3",
+  "area": 199,
+  "bundle_type": "current",
+  "candidate_id": "ex268_udiv_denom_lz_range_direct_synth_preset",
+  "case": "ex268",
+  "delay": 53,
+  "domain": "integer",
+  "hypothesis": "unsigned low7_high7:a/b dbz=max",
+  "method_signature": "unsigned low7_high7:a/b dbz=max",
+  "reference_adp": 7446,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex268_ex269_frontend_udiv_lz_range_20260609_0915/ex268/aigs/ex268_udiv_denom_lz_range_direct_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex268_ex269_frontend_udiv_lz_range_20260609_0915/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex268_ex269_frontend_udiv_lz_range_20260609_0915",
+  "source_verilog_path": "student/work/ex268_ex269_frontend_udiv_lz_range_20260609_0915/ex268/verilog/ex268_udiv_denom_lz_range_direct.v",
+  "variant": "denom_lz_range_direct+synth_preset",
+  "verilog_sha256": "850403b218b9f4d83e588770f51b3f99187678b789d02650d1dc7ffbefa772de"
+}

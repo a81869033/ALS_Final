@@ -1,0 +1,22 @@
+{
+  "adp": 4368,
+  "aig_sha256": "06a82e64b331e0a03e888c0ad742f355d90d50895ca695d951b3d524a65f8db5",
+  "area": 168,
+  "bundle_type": "current",
+  "candidate_id": "ex249_semantic_hypot_threshold_rawexp_synth_preset_aig",
+  "case": "ex249",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex249|frontend|frontend_fp8_e5m2_curated",
+  "reference_adp": 2079,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex249_frontend_fp8_e5m2_hypot_rawexp_20260608_1712/ex249/aigs/ex249_semantic_hypot_threshold_rawexp_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex245_ex249_frontend_fp8_e5m2_curated_20260608_1715",
+  "source_verilog_path": "student/work/ex249_frontend_fp8_e5m2_hypot_rawexp_20260608_1712/ex249/verilog/ex249_semantic_hypot_threshold_rawexp.v",
+  "variant": "semantic_hypot_threshold_rawexp_synth_preset_aig",
+  "verilog_sha256": "0c520d67a730068404337320dfac78af435f742230bcd95897ea678a902ccef1"
+}

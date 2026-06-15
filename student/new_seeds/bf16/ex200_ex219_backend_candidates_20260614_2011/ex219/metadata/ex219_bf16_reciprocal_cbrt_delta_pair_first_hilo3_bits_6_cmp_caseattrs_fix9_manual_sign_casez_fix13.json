@@ -1,0 +1,22 @@
+{
+  "adp": 9690,
+  "aig_sha256": "5d52c91010ea56221cdee0327bd43e950d1a08185bbc9ab78e827db4008d97b7",
+  "area": 646,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex219_bf16_reciprocal_cbrt_delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9_manual_sign_casez_fix13",
+  "case": "ex219",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cbrt",
+  "method_signature": "bf16_reciprocal_cbrt",
+  "reference_adp": 5640,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex215_ex219_frontend_bf16_deep2_20260606_1726/ex219/aigs/ex219_bf16_reciprocal_cbrt_delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9_manual_sign_casez_fix13.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex215_ex219_frontend_bf16_deep2_20260606_1726",
+  "source_verilog_path": "student/work/ex215_ex219_frontend_bf16_deep2_20260606_1726/ex219/verilog/ex219_bf16_reciprocal_cbrt_delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9_manual_sign_casez_fix13.v",
+  "variant": "delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9_manual_sign_casez_fix13",
+  "verilog_sha256": "129fb7ca1b0d604d2a3595fcac9f31ab78e34c90402f8d2a98d04cc405f4c6af"
+}

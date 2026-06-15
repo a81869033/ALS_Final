@@ -1,0 +1,22 @@
+{
+  "adp": 1777320,
+  "aig_sha256": "6272ad58bf81aa91918c9d42d206b7ac06afc627bffbf13e90b8133aff065b1d",
+  "area": 98740,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex299_r79_static_celllocal_bits7_9",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "bounded selected-output/cofactor source mix",
+  "method_signature": "ex299|round79_selected_output_cofactor_source_mix|ex299_r79_static_celllocal_bits7_9|celllocal_bits_7_9_over_r75_sel2_static|yosys_internal_abc_g_aig|official_evaluate|bounded_distinct_from_r78_pair89",
+  "reference_adp": 1013807,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round79_20260613_1838/sub-unknown-large-bitmix-r79/ex299/aigs/ex299_r79_static_celllocal_bits7_9.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round79_20260613_1838/agent_shards/sub-unknown-large-bitmix-r79/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round79_20260613_1838/sub-unknown-large-bitmix-r79/ex299/logs/ex299_r79_static_celllocal_bits7_9.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round79_20260613_1838",
+  "source_verilog_path": "student/work/frontend_source_parallel_round79_20260613_1838/sub-unknown-large-bitmix-r79/ex299/verilog/ex299_r79_static_celllocal_bits7_9.v",
+  "variant": "celllocal_bits_7_9_over_r75_sel2_static",
+  "verilog_sha256": "adce346f9b8ca55a65479382e303ccc93744d4b6caf42a2ace5287e32d2f0c2a"
+}

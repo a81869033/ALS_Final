@@ -1,0 +1,4 @@
+case,domain,round8_candidates,round8_best_candidate,round8_best_adp,frontend_best_adp_after,reference_adp,round8_improved_frontend,beats_reference,next_recommendation
+ex247,float_fp8,1,ex247_semantic_div_bound_smallpat_split_den_synth_preset_aig,8544,8349,2975,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex249,float_fp8,1,ex249_semantic_hypot_rawexp_grouped_delta_bits_synth_preset_aig,4760,4368,2079,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex276,integer,2,ex276_r15_prefix5_case_lsb_abc_and,1496,1010,632,0,0,gap remains; continue only with materially different high-level sharing/representation

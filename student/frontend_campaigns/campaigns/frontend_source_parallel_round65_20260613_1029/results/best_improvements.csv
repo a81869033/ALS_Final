@@ -1,0 +1,1 @@
+case,agent_id,candidate_id,previous_frontend_adp,new_frontend_adp,delta_adp,ratio_to_reference,verilog_path,aig_path,evaluate_log,method_signature,notes

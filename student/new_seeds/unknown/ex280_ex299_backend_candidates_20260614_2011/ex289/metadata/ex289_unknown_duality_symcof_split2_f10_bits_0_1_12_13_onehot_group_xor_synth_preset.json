@@ -1,0 +1,22 @@
+{
+  "adp": 21560,
+  "aig_sha256": "77c740701823d7efc09d9c709a8d966de0331071490500d62daf18fb3c0b124d",
+  "area": 1078,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_synth_preset",
+  "case": "ex289",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "unknown_duality_symcof",
+  "method_signature": "unknown_duality_symcof",
+  "reference_adp": 13620,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex289_frontend_duality_symcof_split2_xorwrap_synthflow_20260609_1128/ex289/aigs/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_synth_preset.aig",
+  "source_csv": "student/runs/unknown/ex289_frontend_duality_symcof_split2_xorwrap_synthflow_20260609_1128/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex289_frontend_duality_symcof_split2_xorwrap_synthflow_20260609_1128",
+  "source_verilog_path": "student/work/ex289_frontend_duality_symcof_split2_xorwrap_20260609_1126/ex289/verilog/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor.v",
+  "variant": "synth_preset",
+  "verilog_sha256": "3db4454b2c7f889ceaf93024c906e8f275c97b5f1f631b6f0b0072f3b727da8a"
+}

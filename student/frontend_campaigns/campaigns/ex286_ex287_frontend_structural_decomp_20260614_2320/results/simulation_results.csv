@@ -1,0 +1,1 @@
+case,candidate_id,hypothesis,variant,method_signature,verilog_path,aig_path,verified_truth,equivalent,official_status,area,delay,adp,reference_adp,runtime_sec,evaluate_log,notes,agent_id,domain,high_level_description,representation,sharing_strategy,synth_flow,yosys_log,current_frontend_adp,beats_current_frontend,beats_reference

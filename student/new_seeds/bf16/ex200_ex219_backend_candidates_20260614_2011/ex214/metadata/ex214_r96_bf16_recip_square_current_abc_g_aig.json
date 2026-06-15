@@ -1,0 +1,22 @@
+{
+  "adp": 3707,
+  "aig_sha256": "470052e1309db6f31528a2e36abe087f51336447addd98a2cff64f5d65a33106",
+  "area": 337,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex214_r96_bf16_recip_square_current_abc_g_aig",
+  "case": "ex214",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_square_default_exception",
+  "method_signature": "bf16_reciprocal_square_default_exception",
+  "reference_adp": 2424,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex214/official_eval/ex214_r96_bf16_recip_square_current_abc_g_aig/ex214.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_structural_round96_20260614_0651/agent_shards/sub-bf16-smallgap-flow-r96/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_structural_round96_20260614_0651",
+  "source_verilog_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex214/verilog/ex214_r96_bf16_recip_square_current_abc_g_aig.v",
+  "variant": "current selected-bit13 source with abc_g_aig",
+  "verilog_sha256": "a92e4c2fa20197b8f1879215bedf93ee3bcee1aa45c7933f210eb5ca6b3e0e56"
+}

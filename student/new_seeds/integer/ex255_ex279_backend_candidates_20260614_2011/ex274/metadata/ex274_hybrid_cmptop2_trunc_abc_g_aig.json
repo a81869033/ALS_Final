@@ -1,0 +1,22 @@
+{
+  "adp": 41412,
+  "aig_sha256": "b622380dbcb8e5654162a27e0c8ad7efe67eda27fc42e16279a862233c7f3430",
+  "area": 986,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex274_hybrid_cmptop2_trunc_abc_g_aig",
+  "case": "ex274",
+  "delay": 42,
+  "domain": "integer",
+  "hypothesis": "wide square comparator-top recut",
+  "method_signature": "ex274|wide_square_comparator_top_recut|top2_comparator_range_bits_with_truncated_lower_square|selected_high_output_predicates_share_the_truncated_lower_arithmetic_network|abc_g_aig|unsigned_16_square|top2_comparator_plus_lower_arithmetic",
+  "reference_adp": 21630,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex274/aigs/ex274_hybrid_cmptop2_trunc_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex274/official_eval/ex274_hybrid_cmptop2_trunc_abc_g_aig/ex274_hybrid_cmptop2_trunc_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex274/verilog/ex274_hybrid_cmptop2_trunc.v",
+  "variant": "top2 comparator/range bits with truncated lower square",
+  "verilog_sha256": "87dbdfad89e280ca4fda74fe87d45010f219c8a7e5395c73d145563c77243026"
+}

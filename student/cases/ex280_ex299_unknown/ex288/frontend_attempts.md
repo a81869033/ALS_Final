@@ -161,3 +161,118 @@
 
 - `student/results/unknown_candidates_current_summary.csv`
 - `student/results/unknown_candidates_current_best.csv`
+
+## 2026-06-12 Round10 unknown-top-r10
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-top-r10/ex288/notes/high_level_dossier.md`.
+- High-level description: 15-bit Hamming-weight-preserving lossy routing/normalizer; no constant outputs; exact input swap symmetries `(4,5)`, `(6,7)`, `(8,9)`; current frontend gap is mainly area after low-delay symcof selected-bit work.
+- Families tried:
+  - `lane_component_shared_bdd`: exact shared BDD with mod-4 lane/component input order and one global node pool.
+  - `mod8_output_linear_anf_residual_bdd`: exact GF(2) mod-8 output-linear parity coordinates with shared monomial bank plus residual BDD roots.
+- Method signatures:
+  - `ex288|hamming_weight_preserving_lossy_routing_normalizer|lane_component_shared_bdd|mod4_lane_order_single_node_pool|yosys_abc_g_aig|abc_xf_official_evaluate|lane_grouped_output_roots`
+  - `ex288|hamming_weight_preserving_lossy_routing_normalizer|mod8_output_linear_anf_residual_bdd|shared_monomial_bank_plus_residual_roots|yosys_abc_g_aig|exact_output_linear_coordinates|mod8_lane_reconstruction`
+- Official results: both `evaluate.py` OK. Lane BDD `9141/24/219384`; mod8 ANF residual `7450/126/938700`.
+- Paths: candidates `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round10_20260612_1911/agent_shards/unknown-top-r10/candidates.csv`; logs under `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-top-r10/ex288/logs/`.
+- Outcome: no improvement over current frontend `31598`. The exact lane/component BDD regresses area and delay; mod8 output-coordinate ANF is exact but delay-heavy.
+- Next action: target area reduction of the existing low-delay source, not another output-coordinate repair or broad BDD variable-order replay.
+
+## 2026-06-12 Round19 unknown-existing-r19 Checkpoint
+
+- Source: copied current best key-BDD-selected symcof Verilog from `student/work/ex286_ex288_frontend_keybdd_selected_synth_20260609_1448/ex288/verilog/ex288_unknown_symcof_interleave_f10_k6_onehot_group_keybdd_7.v`.
+- Candidate: `ex288_keybdd_selected_round19_no_abc`.
+- Material change: renamed the top module for a distinct candidate and synthesized with repo `student/frontends/yosys_synth.py --no-abc` + `aigmap` flow instead of the current `abc_g_aig` best.
+- Official `evaluate.py --case ex288` result: OK, `2944/81/238464`.
+- Paths:
+  - Verilog: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/unknown-existing-r19/ex288/verilog/ex288_keybdd_selected_round19_no_abc.v`
+  - AIG: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/unknown-existing-r19/ex288/aigs/ex288_keybdd_selected_round19_no_abc.aig`
+  - Log: `student/work/ex200_ex299_frontend_refgap_round19_20260612_2346/unknown-existing-r19/ex288/logs/ex288_keybdd_selected_round19_no_abc.evaluate.py.log`
+- Outcome: exact but nonwinning versus current frontend `2257/14/31598`; no-ABC preserves equivalence but explodes delay, so it is not a useful area-reduction route.
+
+## 2026-06-13 02:50:51 +0800 Round22 unknown-a-r22
+
+- method_signature: `ex288|hamming_weight_preserving_lossy_routing_normalizer|compact_pair_state_and_lane_count_descriptor_screen|shared_pair_descriptors_and_lane_count_state|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG was emitted, so no `evaluate.py` row is claimed.
+- evidence: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/unknown-a-r22/ex288/diagnostics/ex288_round22_screen.md`
+- shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/unknown-a-r22/`
+- outcome: screened compact pair-state controlled routing and lane/count normalizer descriptors. Popcount preservation is exact, but pair-state exactness needs 13824 keys and compact lane/count majority reaches only 3092/32768 rows.
+- next action: do not emit a key-table/cofactor repeat; ex288 needs a new nonlinear routing state before candidate generation.
+
+## 2026-06-13 05:27:00 +0800 Round25 unknown-sym-r25
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round25_20260613_0506/agent_shards/unknown-sym-r25/`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-sym-r25/ex288/notes/high_level_dossier.md`.
+- High-level description: 15-bit Hamming-weight-preserving lossy routing/normalizer with known input swap symmetries `(4,5)`, `(6,7)`, and `(8,9)`.
+- Families tried:
+  - `fixed_popcount_layer_decision_forest`: shared popcount decoder plus per-weight exact decision forests.
+  - `input_xor_delta_coordinate_shared_bdd`: shared BDD for `out ^ in`, reconstructing `out = in ^ delta`.
+  - `output_gray_coordinate_shared_bdd`: shared BDD for output Gray coordinates, reconstructing with prefix XOR.
+- Method signatures:
+  - `ex288|hamming_weight_preserving_lossy_routing_normalizer|fixed_popcount_layer_decision_forest|shared_popcount_layer_decoder_and_layer_trees|yosys_abc_g_aig|official_evaluate|full_word_layer_forest`
+  - `ex288|hamming_weight_preserving_lossy_routing_normalizer|input_xor_delta_coordinate_shared_bdd|single_delta_bdd_node_pool_pair_late_order|yosys_abc_g_aig|official_evaluate|delta_xor_reconstruction`
+  - `ex288|hamming_weight_preserving_lossy_routing_normalizer|output_gray_coordinate_shared_bdd|single_gray_bdd_node_pool_pair_late_order|yosys_abc_g_aig|official_evaluate|gray_prefix_xor_reconstruction`
+- Official `evaluate.py` results: 3/3 equivalent, no frontend improvement. Results were `29457/38/1119366`, `5471/24/131304`, and `5048/50/252400`; best was `ex288_r25_delta_shared_bdd_pair_late`, still worse than current frontend `31598` and reference `16394`.
+- Paths: Verilog/AIG/logs under `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-sym-r25/ex288/`; summary rows in the campaign shard CSVs.
+- Outcome: transformed-coordinate BDDs do not reduce the area of the low-delay ex288 source; fixed-popcount layer trees are much worse. Do not repeat unchanged. Future ex288 work should target a genuinely smaller source for the existing low-delay behavior or a new nonlinear routing descriptor.
+
+
+## 2026-06-13 05:39:00 +0800 Round26 unknown-sym-r26
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/unknown-sym-r26/`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/unknown-sym-r26/ex288/notes/high_level_dossier.md`.
+- Families tried:
+  - `component_pairfield_shared_bdd`: adjacent-pair count/orientation encoded output with one shared BDD node pool.
+  - `component_pairfield_split_bdd`: same descriptor with separate count and orientation BDD node pools.
+  - `hidden_order_local_rule_screen`: no-synth blocker unless local-rule conflicts disappear.
+- Best official candidate: `ex288_r26_pairfield_split_bdd` at `4080/23/93840`; evaluate log `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/unknown-sym-r26/ex288/logs/ex288_r26_pairfield_split_bdd.evaluate.py.log`.
+- Hidden-order screen: best full exact bits `0`, conflicts `202488`, evidence `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/unknown-sym-r26/ex288/diagnostics/ex288_hidden_order_local_screen.csv`.
+- Outcome: no success is claimed unless `evaluate.py` candidate rows beat the frontend/reference columns in the shard CSVs.
+
+## 2026-06-13 Round74 sub-unknown-route-state-r74
+
+- Campaign shard: `student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1439/agent_shards/sub-unknown-route-state-r74`.
+- Dossier: `student/work/frontend_source_parallel_round74_20260613_1439/sub-unknown-route-state-r74/ex288/notes/high_level_dossier.md`.
+- Families tried: `ex288_r74_popcount3_direct_overlay`, `ex288_r74_quad_selected_outerkey_bdd`.
+- Best official `evaluate.py` row: `ex288_r74_popcount3_direct_overlay`, `2290/15/34350`.
+- Evaluate log: `student/work/frontend_source_parallel_round74_20260613_1439/sub-unknown-route-state-r74/ex288/logs/ex288_r74_popcount3_direct_overlay.evaluate.py.log`.
+- Outcome: no target-current/reference improvement; record as nonwinning exact frontend evidence.
+- Next action: avoid repeating these exact round74 signatures unless the source transform or sharing basis changes materially.
+
+## 2026-06-13 Round75 sub-unknown-r75
+
+- Campaign: `student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1507/`.
+- Scope: frontend/source-only, Yosys internal `abc -g aig`, official `evaluate.py`; no backend or post-AIG optimization.
+- `ex288_r75_keybdd_delta_lane_bits`: status `OK`, equivalent `1`, QoR `3459/23/79557`; method_signature `ex288|hamming_weight_route_descriptor_bitmix|delta_lane_roots_on_keybdd|keybdd_base_plus_delta_coordinate_lane_roots|yosys_internal_abc_g_aig|official_evaluate|lane_route_bits`; log `student/work/frontend_source_parallel_round75_20260613_1507/sub-unknown-r75/ex288/logs/ex288_r75_keybdd_delta_lane_bits.evaluate.py.log`.
+- `ex288_r75_keybdd_symcof_edge_bits`: status `OK`, equivalent `1`, QoR `2257/14/31598`; method_signature `ex288|hamming_weight_route_descriptor_bitmix|multipair_symcof_edge_roots_on_keybdd|keybdd_base_plus_symcof_edge_roots|yosys_internal_abc_g_aig|official_evaluate|edge_route_bits`; log `student/work/frontend_source_parallel_round75_20260613_1507/sub-unknown-r75/ex288/logs/ex288_r75_keybdd_symcof_edge_bits.evaluate.py.log`.
+- Outcome: no current/reference improvement versus current ADP `26224` and reference `16394`. The symcof edge variant ties the current frontend best ADP `31598`, but does not improve it.
+- Next action: keep symcof edge roots only as tie evidence; future work needs lower-delay or smaller-area reconstruction around the keybdd source.
+
+## 2026-06-13 Round76 sub-unknown-r76
+
+- Campaign: `student/frontend_campaigns/campaigns/frontend_source_parallel_round76_20260613_1706/`.
+- Scope: frontend/source-only, assigned cases `ex297`, `ex299`, `ex285`, `ex288`; no backend portfolio or post-AIG remap.
+- Families tried:
+  - exact three-pair input-swap wrapper around the active key-BDD selected source;
+  - rotate-high-split/default control source without key-BDD or output-root grafting.
+- `ex288_r76_swap456789_keybdd`: status `OK`, equivalent `1`, QoR `2267/15/34005`; method_signature `ex288|hamming_weight_route_multipair_input_swap_invariant|swap45_67_89_wrapper_keybdd|reuse exact three-pair input-swap invariants before key-BDD selected source|yosys_internal_abc_g_aig|official_evaluate|full_word`; Verilog `student/work/frontend_source_parallel_round76_20260613_1706/sub-unknown-r76/ex288/verilog/ex288_r76_swap456789_keybdd.v`; AIG `student/work/frontend_source_parallel_round76_20260613_1706/sub-unknown-r76/ex288/aigs/ex288_r76_swap456789_keybdd.aig`; log `student/work/frontend_source_parallel_round76_20260613_1706/sub-unknown-r76/ex288/logs/ex288_r76_swap456789_keybdd.evaluate.py.log`.
+- `ex288_r76_rotate_highsplit_control`: status `OK`, equivalent `1`, QoR `4327/16/69232`; method_signature `ex288|hamming_weight_route_rotated_split_control|rotate_high_split_default_control_source|rotated split/default source, no key-BDD or output-root grafts|yosys_internal_abc_g_aig|official_evaluate|full_word`; Verilog `student/work/frontend_source_parallel_round76_20260613_1706/sub-unknown-r76/ex288/verilog/ex288_r76_rotate_highsplit_control.v`; AIG `student/work/frontend_source_parallel_round76_20260613_1706/sub-unknown-r76/ex288/aigs/ex288_r76_rotate_highsplit_control.aig`; log `student/work/frontend_source_parallel_round76_20260613_1706/sub-unknown-r76/ex288/logs/ex288_r76_rotate_highsplit_control.evaluate.py.log`.
+- Outcome: no improvement versus current `26224`, frontend `31598`, or reference `16394`. Input-swap pre-normalization worsened the active key-BDD source; split/default remains far above current.
+- Next action: avoid more symmetry wrappers or split controls. Area reduction must come from replacing the key-BDD body with a smaller nonlinear routing descriptor.
+
+## 2026-06-13 Round77 sub-unknown-source-r77
+
+- Campaign: `frontend_source_parallel_round77_20260613_1733`.
+- Scope: frontend/source-only; current best source boundary variants; official `evaluate.py`; no backend portfolio or post-AIG optimization.
+- Avoided r76 fixed phase rotate/highsplit/routing wrappers and r75 static bitcone grafts as-is.
+- `ex288_r77_keydecode_residual_helper`: status `OK`, equivalent `1`, QoR `2264/16/36224`; method_signature `ex288|hamming_weight_route_keybdd_source_boundary|split_route_key_decode_from_keybdd_residual|route key OR/AND pair decode separated from the residual key-BDD with only the key bus kept|yosys_internal_abc_g_aig|official_evaluate|full_word_keydecode_helper`; Verilog `student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex288/verilog/ex288_r77_keydecode_residual_helper.v`; AIG `student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex288/aigs/ex288_r77_keydecode_residual_helper.aig`; log `student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex288/logs/ex288_r77_keydecode_residual_helper.evaluate.py.log`.
+- `ex288_r77_flat_keybdd_keep_keybus`: status `OK`, equivalent `1`, QoR `2232/15/33480`; method_signature `ex288|hamming_weight_route_keybdd_source_boundary|flattened_keybdd_with_kept_route_key_bus|current key-BDD source kept flat while preserving only the high-fanout key bus|yosys_internal_abc_g_aig|official_evaluate|full_word_flat_keybdd`; Verilog `student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex288/verilog/ex288_r77_flat_keybdd_keep_keybus.v`; AIG `student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex288/aigs/ex288_r77_flat_keybdd_keep_keybus.aig`; log `student/work/frontend_source_parallel_round77_20260613_1733/sub-unknown-source-r77/ex288/logs/ex288_r77_flat_keybdd_keep_keybus.evaluate.py.log`.
+- Outcome: best r77 shard row `ex288_r77_flat_keybdd_keep_keybus` ADP `33480` vs current `26224`, frontend `31598`, reference `16394`. No target/reference improvement.
+- Next action: continue only if a smaller nonlinear descriptor replaces the current residual body; more wrappers alone are unlikely to bridge the reference gap.
+
+## 2026-06-14 unknown-large-r4 campaign ex204_ex299_frontend_continuation_20260614_1216
+
+- Scope: frontend-only, Yosys Verilog-to-AIG plus official `evaluate.py`; no backend, seed, or registry edits.
+- Families tried:
+  - `ex288_r4_current_keybdd_d13`: current key-BDD low-delay source replay, official OK `2261/14/31654`; no improvement versus campaign frontend target `31598`.
+  - `ex288_r4_boundary_twohot_mask_mix`: boundary/twohot grouped output-mask donor mix, official OK `2269/15/34035`; no improvement.
+- Outcome: no official improvement. Avoid repeating key-BDD replay and boundary/twohot mask mixing without a materially smaller nonlinear routing descriptor.

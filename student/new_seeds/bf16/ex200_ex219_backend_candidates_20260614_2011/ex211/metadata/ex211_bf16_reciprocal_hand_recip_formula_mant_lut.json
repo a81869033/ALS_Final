@@ -1,0 +1,22 @@
+{
+  "adp": 3102,
+  "aig_sha256": "7dfa0c38bee617dcffcc06f22988106720ee8bd642fc351a9d14f4d6af82c424",
+  "area": 282,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex211_bf16_reciprocal_hand_recip_formula_mant_lut",
+  "case": "ex211",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal",
+  "method_signature": "bf16_reciprocal",
+  "reference_adp": 2136,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex211/aigs/ex211_bf16_reciprocal_hand_recip_formula_mant_lut.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex211/verilog/ex211_bf16_reciprocal_hand_recip_formula_mant_lut.v",
+  "variant": "hand_recip_formula_mant_lut",
+  "verilog_sha256": "2a8e8d5f147596dcdb03ff0c970fb7d4e9b339ea9788f6c4b0cbba4a069d0c7a"
+}

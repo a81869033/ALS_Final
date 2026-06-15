@@ -1,0 +1,22 @@
+{
+  "adp": 16200,
+  "aig_sha256": "4f81d108ff0821d9388f8468d67dd8ddf9a3ec76244f6472eaf437649be11756",
+  "area": 540,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex241_r11_r71_splitcase_muxclean",
+  "case": "ex241",
+  "delay": 30,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex241|E4M3FN packed multiply high byte times low byte|r71 case-attributed output-split product table with mux-clean frontend flow|shared sign xor, exponent sum, and product table with split final output bits|muxclean_aig|official_evaluate|full_word",
+  "reference_adp": 7224,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex241/aigs/ex241_r11_r71_splitcase_muxclean.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-hard-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex241/logs/ex241_r11_r71_splitcase_muxclean.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex241/verilog/ex241_r11_r71_splitcase_muxclean.v",
+  "variant": "r71 case-attributed output-split product table with mux-clean frontend flow",
+  "verilog_sha256": "5ae51b0d9e409497c2094cb509b5c8c88f9be7bb63a7169c0f948696d19381b9"
+}

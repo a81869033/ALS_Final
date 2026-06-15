@@ -1,0 +1,22 @@
+{
+  "adp": 4080,
+  "aig_sha256": "5d8fc65cdb87ed37dbbec6e659341efa2161fb133d699a801c35af346df13cbe",
+  "area": 340,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex267_r4_udiv_current_source_abc_g_aig",
+  "case": "ex267",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "current divider source may have lower ADP under a frontend-only mapping variant",
+  "method_signature": "ex267|unsigned low6/high6 divide with dbz saturation; current best hybrid top2 source|current_source_frontend_resynth|preserve current shared classifier; vary source frontend mapping only|abc_g_aig|abc_xf_official_evaluate|quotient_word",
+  "reference_adp": 2651,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-struct-r4/ex267/aigs/ex267_r4_udiv_current_source_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-struct-r4/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-struct-r4/ex267/logs/ex267_r4_udiv_current_source_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-struct-r4/ex267/verilog/ex267_r4_udiv_current_source_abc_g_aig.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "4eedba006bf0718ae860cd6cf5b3bde1f5214bdcc6e36fafffc55055c3d941df"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 4308,
+  "aig_sha256": "f9382998768f5eaf0f207258ad06c7f9c16b4893431535dfdf877542bf8f0dec",
+  "area": 359,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex213_r94_bf16_sqrt_sep_fields_e2_m4_s3_bits_1_bh1",
+  "case": "ex213",
+  "delay": 12,
+  "domain": "bf16",
+  "hypothesis": "bf16_sqrt",
+  "method_signature": "ex213|round94_frontend_structural_bf16|bf16_sqrt|sep_fields_e2_m4_s3_bits_1_bh1|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex213/official_eval/ex213_r94_bf16_sqrt_sep_fields_e2_m4_s3_bits_1_bh1/ex213.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex213/logs/ex213_r94_bf16_sqrt_sep_fields_e2_m4_s3_bits_1_bh1.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex213/verilog/ex213_r94_bf16_sqrt_sep_fields_e2_m4_s3_bits_1_bh1.v",
+  "variant": "mantissa regrouped separate-fields bit1 repair",
+  "verilog_sha256": "d8a45f167b85352dd643ac103dee38a2e435bee2bc6662befe28423f9fcb7db4"
+}

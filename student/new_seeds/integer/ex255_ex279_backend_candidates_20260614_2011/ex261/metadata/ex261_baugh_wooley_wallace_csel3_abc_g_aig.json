@@ -1,0 +1,22 @@
+{
+  "adp": 3002,
+  "aig_sha256": "acf9b69f3d28746363fe0a96ca0a9a2bcb5c68921c393a118c2495af98969161",
+  "area": 158,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex261_baugh_wooley_wallace_csel3_abc_g_aig",
+  "case": "ex261",
+  "delay": 19,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex261|signed_5x5_final_carry_grouping_may_beat_hCLA4|Baugh-Wooley_Wallace_with_carry-select_final_merge|shared_signed_partial_products_and_compressor_rows|abc_g_aig|signed_low5_high5_multiply|full_product_word",
+  "reference_adp": 2041,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex261/aigs/ex261_baugh_wooley_wallace_csel3_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex261/logs/ex261_baugh_wooley_wallace_csel3_abc_g_aig.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex261/verilog/ex261_baugh_wooley_wallace_csel3.v",
+  "variant": "Baugh-Wooley Wallace with carry-select final merge",
+  "verilog_sha256": "66137a38cf5c55f96b9a3c31eb2a78db2ad230f0396d2b532073c7a2bd18d215"
+}

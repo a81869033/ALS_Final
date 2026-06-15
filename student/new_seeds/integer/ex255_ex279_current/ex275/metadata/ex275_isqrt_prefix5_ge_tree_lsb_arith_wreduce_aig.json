@@ -1,0 +1,22 @@
+{
+  "adp": 301,
+  "aig_sha256": "29f035520a070290d090a9a10ef2d5c8f9b707fe3a5b31dfe3490a62e39562f5",
+  "area": 43,
+  "bundle_type": "current",
+  "candidate_id": "ex275_isqrt_prefix5_ge_tree_lsb_arith_wreduce_aig",
+  "case": "ex275",
+  "delay": 7,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 204,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex275_ex276_frontend_isqrt_newbest_gateflow_20260609_1656/ex275/aigs/ex275_isqrt_prefix5_ge_tree_lsb_arith_wreduce_aig.aig",
+  "source_csv": "student/runs/integer/ex275_ex276_frontend_isqrt_newbest_gateflow_20260609_1656/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex276_frontend_isqrt_newbest_gateflow_20260609_1656",
+  "source_verilog_path": "student/work/ex275_ex276_frontend_isqrt_newbest_gateflow_20260609_1656/ex275/verilog/ex275_isqrt_prefix5_ge_tree_lsb.v",
+  "variant": "prefix5_ge_tree_lsb+arith_wreduce_aig",
+  "verilog_sha256": "7771cfb116273d0575d07a8b0a7fb8c81507d0241f58b8301564ed43317263d8"
+}

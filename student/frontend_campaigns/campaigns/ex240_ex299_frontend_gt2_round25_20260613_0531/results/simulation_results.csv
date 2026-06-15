@@ -1,0 +1,105 @@
+case,domain,agent_id,candidate_id,simulator,result,log_path,notes
+ex245,float_fp8,fp8-wide-r25,ex245_r25w_pair_delta_maxmin_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-wide-r25,ex245_r25w_pair_delta_maxmin_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-wide-r25,ex245_r25w_pair_delta_maxmin_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-wide-r25,ex241_r25w_product_exp_table_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-wide-r25,ex241_r25w_product_exp_table_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-wide-r25,ex241_r25w_product_exp_table_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-wide-r25,ex241_r25w_product_boundary_attrs_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-wide-r25,ex241_r25w_product_boundary_attrs_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-wide-r25,ex241_r25w_product_boundary_attrs_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-wide-r25,ex242_r25w_delta_sig_table_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-wide-r25,ex242_r25w_delta_sig_table_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-wide-r25,ex242_r25w_delta_sig_table_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-wide-r25,ex242_r25w_den_nested_attrs_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-wide-r25,ex242_r25w_den_nested_attrs_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-wide-r25,ex242_r25w_den_nested_attrs_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex249,float_fp8,fp8-wide-r25,ex249_r25w_maxeff_delta_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex249,float_fp8,fp8-wide-r25,ex249_r25w_maxeff_delta_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex249,float_fp8,fp8-wide-r25,ex249_r25w_maxeff_delta_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex249,float_fp8,fp8-wide-r25,ex249_r25w_pair_delta_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex249,float_fp8,fp8-wide-r25,ex249_r25w_pair_delta_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex249,float_fp8,fp8-wide-r25,ex249_r25w_pair_delta_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex248,float_fp8,fp8-wide-r25,ex248_r25w_delta_residue_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex248,float_fp8,fp8-wide-r25,ex248_r25w_delta_residue_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex248,float_fp8,fp8-wide-r25,ex248_r25w_delta_residue_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex248,float_fp8,fp8-wide-r25,ex248_r25w_direct_pair_remainder_abc_g_and,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex248,float_fp8,fp8-wide-r25,ex248_r25w_direct_pair_remainder_abc_g_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex248,float_fp8,fp8-wide-r25,ex248_r25w_direct_pair_remainder_synth_preset_aig,not_run,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex247,float_fp8,fp8-worst-r25,ex247_unknown_shared_bdd_16x8_order_15_7_14_6_13_5_12_4_11_3_10_2_9_1_8_0_official,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex246,float_fp8,fp8-worst-r25,ex246_unknown_shared_bdd_16x8_order_15_7_14_6_13_5_12_4_11_3_10_2_9_1_8_0_official,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex244,float_fp8,fp8-worst-r25,ex244_unknown_shared_bdd_16x8_order_15_7_14_6_13_5_12_4_11_3_10_2_9_1_8_0_official,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex240,float_fp8,fp8-worst-r25,ex240_unknown_shared_bdd_16x8_order_15_7_14_6_13_5_12_4_11_3_10_2_9_1_8_0_official,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex247,float_fp8,fp8-worst-r25,ex247_resynth_noabc_aigmap,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex247,float_fp8,fp8-worst-r25,ex247_resynth_abc_g_aig,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex246,float_fp8,fp8-worst-r25,ex246_resynth_noabc_aigmap,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex246,float_fp8,fp8-worst-r25,ex246_resynth_abc_g_aig,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex244,float_fp8,fp8-worst-r25,ex244_resynth_noabc_aigmap,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex244,float_fp8,fp8-worst-r25,ex244_resynth_abc_g_aig,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex240,float_fp8,fp8-worst-r25,ex240_resynth_noabc_aigmap,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex240,float_fp8,fp8-worst-r25,ex240_resynth_abc_g_aig,iverilog,not_run,,official evaluate.py used for final equivalence/QoR
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f00_k3_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f00_k3_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f00_k4_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f00_k4_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f00_k5_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f00_k5_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f10_k3_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f10_k3_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f10_k4_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f10_k4_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f10_k5_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_interleave_f10_k5_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f00_k3_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f00_k3_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f00_k4_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f00_k4_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f00_k5_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f00_k5_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f10_k3_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f10_k3_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f10_k4_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f10_k4_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f10_k5_onehot_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symcof_sym_first_f10_k5_tree_group,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_interleave_f00,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_interleave_f10,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_natural_f00,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_natural_f10,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_reverse_f00,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_reverse_f10,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_sym_first_f00,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_unknown_symbdd_sym_first_f10,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_no_internal_abc,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_abc_g_aig,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_extra_opt_share,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_synth_preset,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_abc_g_aig_d14,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_abc_g_aig_d15,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_abc_g_aig_d16,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_abc_g_aig_d17,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_decision_tree_current_abc_g_gates,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_no_internal_abc,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_abc_g_aig,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_extra_opt_share,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_synth_preset,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_abc_g_aig_d14,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_abc_g_aig_d15,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_abc_g_aig_d16,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_abc_g_aig_d17,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f10_k4_onehot_abc_g_gates,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_no_internal_abc,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_abc_g_aig,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_extra_opt_share,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_synth_preset,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_abc_g_aig_d14,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_abc_g_aig_d15,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_abc_g_aig_d16,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_abc_g_aig_d17,not_run,1,,
+ex285,unknown,unknown-routing-r25,ex285_r25_multipair_f00_k4_onehot_abc_g_gates,not_run,1,,
+ex297,unknown,unknown-symbol-r25,ex297_r25_delta_coord_cell_grouped_abc_g_aig,exhaustive_python_model_before_official_evaluate,1,student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-symbol-r25/ex297/notes/ex297_r25_delta_coord_cell_grouped_abc_g_aig.model_check.json,official evaluate.py OK; transform=delta; group=cell_pairs; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13; order=0:1:12:13:2:3:10:11:4:5:8:9:6:7; bdd_nodes=23629
+ex297,unknown,unknown-symbol-r25,ex297_r25_gray_coord_mod4_planes_abc_g_aig,exhaustive_python_model_before_official_evaluate,1,student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-symbol-r25/ex297/notes/ex297_r25_gray_coord_mod4_planes_abc_g_aig.model_check.json,official evaluate.py OK; transform=gray_out; group=mod4_output_planes; groups=0:4:8:12/1:5:9:13/2:6:10/3:7:11; order=0:2:4:6:8:10:12:1:3:5:7:9:11:13; bdd_nodes=21944
+ex297,unknown,unknown-symbol-r25,ex297_r25_raw_coord_cell_grouped_d20_abc_g_aig_d20,exhaustive_python_model_before_official_evaluate,1,student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-symbol-r25/ex297/notes/ex297_r25_raw_coord_cell_grouped_d20_abc_g_aig_d20.model_check.json,official evaluate.py OK; transform=raw; group=cell_pairs; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13; order=0:1:12:13:2:3:10:11:4:5:8:9:6:7; bdd_nodes=23584
+ex299,unknown,unknown-symbol-r25,ex299_r25_delta_coord_cell_grouped_abc_g_aig,exhaustive_python_model_before_official_evaluate,1,student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-symbol-r25/ex299/notes/ex299_r25_delta_coord_cell_grouped_abc_g_aig.model_check.json,official evaluate.py OK; transform=delta; group=cell_pairs; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13/14:15; order=0:1:14:15:2:3:12:13:4:5:10:11:6:7:8:9; bdd_nodes=89188
+ex299,unknown,unknown-symbol-r25,ex299_r25_gray_coord_mod4_planes_abc_g_aig,exhaustive_python_model_before_official_evaluate,1,student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-symbol-r25/ex299/notes/ex299_r25_gray_coord_mod4_planes_abc_g_aig.model_check.json,official evaluate.py OK; transform=gray_out; group=mod4_output_planes; groups=0:4:8:12/1:5:9:13/2:6:10:14/3:7:11:15; order=0:2:4:6:8:10:12:14:1:3:5:7:9:11:13:15; bdd_nodes=82333
+ex299,unknown,unknown-symbol-r25,ex299_r25_raw_coord_cell_grouped_d20_abc_g_aig_d20,exhaustive_python_model_before_official_evaluate,1,student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/unknown-symbol-r25/ex299/notes/ex299_r25_raw_coord_cell_grouped_d20_abc_g_aig_d20.model_check.json,official evaluate.py OK; transform=raw; group=cell_pairs; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13/14:15; order=0:1:14:15:2:3:12:13:4:5:10:11:6:7:8:9; bdd_nodes=88874

@@ -1,0 +1,22 @@
+{
+  "adp": 1737036,
+  "aig_sha256": "0fd02584a59277daa37bd287a7c3a80191ce3114a41eb92861034b6bd3c9a683",
+  "area": 96502,
+  "bundle_type": "current",
+  "candidate_id": "ex299_r9_pairsel_center_quad_synth_preset",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "Pairsel donor on the current celllocal center quad tests a cheaper source-boundary for the high-impact center residual.",
+  "method_signature": "ex299|cyclic_2bit_symbol_sparse_bridge_overlay|pairsel_center_quad_6_7_8_9|static_pair89_base_plus_pairsel_center_quad|yosys_synth_flatten_abc_g_aig|official_evaluate|bits_6_7_8_9",
+  "reference_adp": 1013807,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex299/aigs/ex299_r9_pairsel_center_quad_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex299/logs/ex299_r9_pairsel_center_quad_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex299/verilog/ex299_r9_pairsel_center_quad_synth_preset.v",
+  "variant": "",
+  "verilog_sha256": "f975eac4d8edd3933c49305cacbfa9061bfb6a635a8bca1b9e073b9cdfbc31d2"
+}

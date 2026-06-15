@@ -1,0 +1,5 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex285,unknown,local-unknown-source-r52,ex285_ex285_current_source_resynth_default_raw,not_run,,official evaluate.py used for final verification
+ex285,unknown,local-unknown-source-r52,ex285_ex285_current_source_resynth_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex285,unknown,local-unknown-source-r52,ex285_ex285_current_source_resynth_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex285,unknown,local-unknown-source-r52,ex285_ex285_current_source_resynth_synth_preset_raw,not_run,,official evaluate.py used for final verification

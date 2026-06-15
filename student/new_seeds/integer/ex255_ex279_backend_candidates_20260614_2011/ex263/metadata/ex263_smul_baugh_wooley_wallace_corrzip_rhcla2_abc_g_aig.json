@@ -1,0 +1,22 @@
+{
+  "adp": 8760,
+  "aig_sha256": "4c643131f9b604a8e3e077f69e48480670d25e487ea25f65089cd1db08289506",
+  "area": 365,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex263_smul_baugh_wooley_wallace_corrzip_rhcla2_abc_g_aig",
+  "case": "ex263",
+  "delay": 24,
+  "domain": "integer",
+  "hypothesis": "signed low7_high7:a*b",
+  "method_signature": "signed low7_high7:a*b",
+  "reference_adp": 6840,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex260_ex263_frontend_smul_corr_order_20260609_0649/ex263/aigs/ex263_smul_baugh_wooley_wallace_corrzip_rhcla2_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex260_ex263_frontend_smul_corr_order_20260609_0649/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex260_ex263_frontend_smul_corr_order_20260609_0649",
+  "source_verilog_path": "student/work/ex260_ex263_frontend_smul_corr_order_20260609_0649/ex263/verilog/ex263_smul_baugh_wooley_wallace_corrzip_rhcla2.v",
+  "variant": "baugh_wooley_wallace_corrzip_rhcla2+abc_g_aig",
+  "verilog_sha256": "13b45f427335c636ee3cd0f7e5cdc61f7d9d65413e4a8029cb47978188cb9d20"
+}

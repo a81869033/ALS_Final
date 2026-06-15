@@ -1,14 +1,22 @@
+#include <algorithm>
 #include <chrono>
 #include <cstdint>
 #include <filesystem>
 #include <iostream>
+#include <limits>
 #include <string>
 
 #include <lorina/aiger.hpp>
 #include <mockturtle/algorithms/aig_balancing.hpp>
 #include <mockturtle/algorithms/aig_resub.hpp>
 #include <mockturtle/algorithms/cleanup.hpp>
+#include <mockturtle/algorithms/cut_rewriting.hpp>
+#include <mockturtle/algorithms/node_resynthesis/sop_factoring.hpp>
+#include <mockturtle/algorithms/node_resynthesis/xag_npn.hpp>
+#include <mockturtle/algorithms/refactoring.hpp>
 #include <mockturtle/algorithms/resubstitution.hpp>
+#include <mockturtle/algorithms/sim_resub.hpp>
+#include <mockturtle/algorithms/window_rewriting.hpp>
 #include <mockturtle/io/aiger_reader.hpp>
 #include <mockturtle/io/write_aiger.hpp>
 #include <mockturtle/networks/aig.hpp>
@@ -30,7 +38,8 @@ struct options
 void print_usage( char const* argv0 )
 {
   std::cerr << "usage: " << argv0
-            << " --input in.aig --output out.aig [--flow resub|balance|resub_balance|balance_resub]"
+            << " --input in.aig --output out.aig"
+            << " [--flow crw|wrw|rf|resub|resub2|balance|resub_balance|balance_resub|cut_rewrite|refactor|sim_resub|window_rewrite|cut_refactor|window_resub_balance]"
             << " [--max-pis N] [--max-inserts N] [--quiet]\n";
 }
 
@@ -148,12 +157,64 @@ void run_resubstitution( mockturtle::aig_network& aig, options const& opts )
   aig = mockturtle::cleanup_dangling( aig );
 }
 
+void run_resubstitution2( mockturtle::aig_network& aig, options const& opts )
+{
+  options stronger = opts;
+  stronger.max_inserts = std::max<uint32_t>( stronger.max_inserts, 4u );
+  run_resubstitution( aig, stronger );
+  run_resubstitution( aig, stronger );
+}
+
 void run_balance( mockturtle::aig_network& aig )
 {
   mockturtle::aig_balancing_params ps;
   ps.minimize_levels = true;
   ps.fast_mode = true;
   mockturtle::aig_balance( aig, ps );
+  aig = mockturtle::cleanup_dangling( aig );
+}
+
+void run_cut_rewrite( mockturtle::aig_network& aig )
+{
+  mockturtle::xag_npn_resynthesis<mockturtle::aig_network> resyn;
+  mockturtle::cut_rewriting_params ps;
+  ps.cut_enumeration_ps.cut_size = 4u;
+  ps.progress = false;
+  mockturtle::cut_rewriting_stats st;
+  aig = mockturtle::cut_rewriting( aig, resyn, ps, &st );
+  aig = mockturtle::cleanup_dangling( aig );
+}
+
+void run_refactor( mockturtle::aig_network& aig )
+{
+  mockturtle::sop_factoring<mockturtle::aig_network> resyn;
+  mockturtle::refactoring_params ps;
+  mockturtle::refactoring_stats st;
+  mockturtle::refactoring( aig, resyn, ps, &st );
+  aig = mockturtle::cleanup_dangling( aig );
+}
+
+void run_sim_resub( mockturtle::aig_network& aig, options const& opts )
+{
+  mockturtle::resubstitution_params ps;
+  ps.max_pis = opts.max_pis;
+  ps.max_inserts = std::max<uint32_t>( opts.max_inserts, 4u );
+  ps.max_divisors = std::numeric_limits<uint32_t>::max();
+  ps.progress = false;
+  ps.verbose = false;
+  mockturtle::resubstitution_stats st;
+  mockturtle::sim_resubstitution( aig, ps, &st );
+  aig = mockturtle::cleanup_dangling( aig );
+}
+
+void run_window_rewrite( mockturtle::aig_network& aig )
+{
+  mockturtle::window_rewriting_params ps;
+  ps.cut_size = 6u;
+  ps.num_levels = 5u;
+  ps.filter_cyclic_substitutions = true;
+  mockturtle::window_rewriting_stats st;
+  mockturtle::window_rewriting( aig, ps, &st );
   aig = mockturtle::cleanup_dangling( aig );
 }
 
@@ -188,6 +249,10 @@ int main( int argc, char* argv[] )
   {
     run_resubstitution( aig, opts );
   }
+  else if ( opts.flow == "resub2" )
+  {
+    run_resubstitution2( aig, opts );
+  }
   else if ( opts.flow == "balance" )
   {
     run_balance( aig );
@@ -201,6 +266,33 @@ int main( int argc, char* argv[] )
   {
     run_balance( aig );
     run_resubstitution( aig, opts );
+  }
+  else if ( opts.flow == "crw" || opts.flow == "cut_rewrite" )
+  {
+    run_cut_rewrite( aig );
+  }
+  else if ( opts.flow == "rf" || opts.flow == "refactor" )
+  {
+    run_refactor( aig );
+  }
+  else if ( opts.flow == "sim_resub" )
+  {
+    run_sim_resub( aig, opts );
+  }
+  else if ( opts.flow == "wrw" || opts.flow == "window_rewrite" )
+  {
+    run_window_rewrite( aig );
+  }
+  else if ( opts.flow == "cut_refactor" )
+  {
+    run_cut_rewrite( aig );
+    run_refactor( aig );
+  }
+  else if ( opts.flow == "window_resub_balance" )
+  {
+    run_window_rewrite( aig );
+    run_sim_resub( aig, opts );
+    run_balance( aig );
   }
   else
   {

@@ -1,0 +1,22 @@
+{
+  "adp": 15399,
+  "aig_sha256": "41e9f4335858f43a04569236c667473654234c2d60eb7375bbb4e46d6ca8070c",
+  "area": 531,
+  "bundle_type": "current",
+  "candidate_id": "ex241_r71_caseattrs_outputsplit",
+  "case": "ex241",
+  "delay": 29,
+  "domain": "float_fp8",
+  "hypothesis": "E4M3FN packed multiply nested product source factoring",
+  "method_signature": "ex241|E4M3FN packed multiply|caseattrs_outputsplit|shared_exp_sum_product_table|repo_yosys_frontend_synth_preset|official_evaluate|full_word",
+  "reference_adp": 7224,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp8-mid-local-r71/ex241/aigs/ex241_r71_caseattrs_outputsplit.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "frontend_source_parallel_round71_20260613_1312",
+  "source_verilog_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-fp8-mid-local-r71/ex241/verilog/ex241_r71_caseattrs_outputsplit.v",
+  "variant": "split NaN/sign output mux and add case attributes to exp/product tables",
+  "verilog_sha256": "57c3719dde79286178d568a1772a145efa3eaf1387fbf75573fd9ac93caf6276"
+}

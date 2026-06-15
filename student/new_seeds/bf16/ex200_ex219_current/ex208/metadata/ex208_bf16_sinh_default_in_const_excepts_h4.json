@@ -1,0 +1,22 @@
+{
+  "adp": 32505,
+  "aig_sha256": "4cd28d6af61394227a60ed101d84b1de231f56d568adba3ac596c34d0903c092",
+  "area": 2167,
+  "bundle_type": "current",
+  "candidate_id": "ex208_bf16_sinh_default_in_const_excepts_h4",
+  "case": "ex208",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_sinh",
+  "method_signature": "ex208|frontend|current",
+  "reference_adp": 24505,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex208/aigs/ex208_bf16_sinh_default_in_const_excepts_h4.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex208/verilog/ex208_bf16_sinh_default_in_const_excepts_h4.v",
+  "variant": "default_in_const_excepts_h4",
+  "verilog_sha256": "1d8f455a132af79578415fda11de655ca3f0c6e1bb23009632448e5ea8db391c"
+}

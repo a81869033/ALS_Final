@@ -1,0 +1,22 @@
+{
+  "adp": 14534,
+  "aig_sha256": "3bf4defa3f0bb59fca6d2cbec0f217db16a9868e87c5b193d5bca4b657dc30b3",
+  "area": 338,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex279_isqrt_radix4_wires_abc_g_aig",
+  "case": "ex279",
+  "delay": 43,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 10952,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618/ex279/aigs/ex279_isqrt_radix4_wires_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618",
+  "source_verilog_path": "student/work/ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618/ex279/verilog/ex279_isqrt_radix4_wires.v",
+  "variant": "radix4_wires+abc_g_aig",
+  "verilog_sha256": "085cdb35d2ab0203295a69ba7d82ca04a210ddfd82160fcdb11274575d048e86"
+}

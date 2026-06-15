@@ -1,0 +1,22 @@
+{
+  "adp": 6665,
+  "aig_sha256": "ce698ad0d95869c955f358589dc0c4386cf61345bef85bf0b61df6adfad67710",
+  "area": 215,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex282_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig",
+  "case": "ex282",
+  "delay": 31,
+  "domain": "unknown",
+  "hypothesis": "unknown_muxcoord_anf",
+  "method_signature": "unknown_muxcoord_anf",
+  "reference_adp": 2704,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex280_ex284_frontend_muxcoord_grouped_synthflow_20260609_0117/ex282/aigs/ex282_prefix_parity_reduce_full_clamp_grouped_deg2_abc_g_aig.aig",
+  "source_csv": "student/runs/unknown/ex280_ex284_frontend_muxcoord_grouped_synthflow_20260609_0117/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex280_ex284_frontend_muxcoord_grouped_synthflow_20260609_0117",
+  "source_verilog_path": "student/work/ex280_ex284_frontend_muxcoord_grouped_20260609_0117/ex282/verilog/ex282_unknown_muxcoord_anf_prefix_parity_reduce_full_clamp_grouped_deg2.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "e976d202614a2bc34b48bbfda3803d686e31fd6b9e786f86a4a475047a440a31"
+}

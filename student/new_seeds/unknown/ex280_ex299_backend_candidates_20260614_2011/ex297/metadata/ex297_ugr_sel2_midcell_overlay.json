@@ -1,0 +1,22 @@
+{
+  "adp": 425088,
+  "aig_sha256": "f4653fbd5e78dd11a726662656ceb690e59d45cd9a9b4cf25617f20446a984ec",
+  "area": 26568,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_ugr_sel2_midcell_overlay",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit phase-interleaved exact donor overlay",
+  "method_signature": "ex297|cyclic_2bit_phase_interleaved_overlay|sel2_midcells|pairsel_base_plus_sel2_midcluster_donor_on_middle_cells|yosys_internal_abc_g_aig|official_evaluate|bits_4_5_8_9",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r4/ex297/aigs/ex297_ugr_sel2_midcell_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-global-r4/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r4/ex297/logs/ex297_ugr_sel2_midcell_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r4/ex297/verilog/ex297_ugr_sel2_midcell_overlay.v",
+  "variant": "r75 sel2 donor on two separated middle cells",
+  "verilog_sha256": "3ce43c4a7b7f68ca22cd58a2e7b685fa859f0824a81c0aa9c9c9dcd7b75213c4"
+}

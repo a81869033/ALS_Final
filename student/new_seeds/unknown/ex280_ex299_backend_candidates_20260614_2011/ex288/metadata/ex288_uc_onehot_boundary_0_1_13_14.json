@@ -1,0 +1,22 @@
+{
+  "adp": 31668,
+  "aig_sha256": "27205f70494522b9b7f17115439eed484b22b9a6ac6a4af1d35922af400ef652",
+  "area": 2262,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex288_uc_onehot_boundary_0_1_13_14",
+  "case": "ex288",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "",
+  "method_signature": "frontend_hybrid:base=keybdd_current;donor=onehot_boundary_bypass;donor_bits=0,1,13,14;synth=abc_g_aig",
+  "reference_adp": 16394,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-cell-agent/ex288/aigs/ex288_uc_onehot_boundary_0_1_13_14.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/unknown-cell-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-cell-agent/ex288/logs/ex288_uc_onehot_boundary_0_1_13_14.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-cell-agent/ex288/verilog/ex288_uc_onehot_boundary_0_1_13_14.v",
+  "variant": "",
+  "verilog_sha256": "d4c3f947a05eb16113f7f2f0cb56a13e794db2cf39af3a3022cf98a10d07c69c"
+}

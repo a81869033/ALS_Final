@@ -1,0 +1,15 @@
+case,domain,round8_candidates,round8_best_candidate,round8_best_adp,frontend_best_adp_after,reference_adp,round8_improved_frontend,beats_reference,next_recommendation
+ex204,bf16,0,,,25670,15180,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex218,bf16,0,,,6071,3222,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex223,fp16,0,,,203756,120549,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex224,fp16,0,,,96224,64708,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex225,fp16,0,,,218728,116676,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex246,float_fp8,1,ex246_semantic_mul_key_bdd_product_low_then_exp_synth_preset_aig,18445,7502,2805,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex247,float_fp8,6,ex247_round12_bound_region_mux_abc_g_aig_d14,8349,8349,2975,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex253,float_fp8,1,ex253_round12_count_threshold_groups_abc_g_aig,4053,2268,1845,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex266,integer,1,ex266_restore_cmp_chain_abc_g_aig,2430,1480,848,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex274,integer,1,ex274_karatsuba8_shared_abc_g_aig,93888,41370,21630,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex276,integer,1,ex276_candidate_square_chain_abc_g_aig,2064,1010,632,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex286,unknown,1,ex286_routing_delta_shared_bdd_collision_first_abc_g_aig,134085,20190,2376,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex297,unknown,1,ex297_r12_localctx_r1_residual_bdd_abc_g_aig,764160,569592,225900,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex299,unknown,1,ex299_r12_localctx_r1_residual_bdd_abc_g_aig,3284988,2487261,1013807,0,0,gap remains; continue only with materially different high-level sharing/representation

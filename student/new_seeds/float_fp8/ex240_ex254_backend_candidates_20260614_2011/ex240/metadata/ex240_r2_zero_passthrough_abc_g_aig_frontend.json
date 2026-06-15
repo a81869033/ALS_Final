@@ -1,0 +1,22 @@
+{
+  "adp": 27900,
+  "aig_sha256": "b0d12052e86ccb90e55679aaf05248d3833fbbadf021d849fd85c185ce31c1d0",
+  "area": 620,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex240_r2_zero_passthrough_abc_g_aig_frontend",
+  "case": "ex240",
+  "delay": 45,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex240|E4M3FN packed add high byte plus low byte|zero passthrough shell around r64 sign/magnitude source|shared NaN/zero predicates plus existing same/diff normalizer|abc_g_aig_frontend|official_evaluate|full_word",
+  "reference_adp": 13299,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-breakthrough-r2/ex240/aigs/ex240_r2_zero_passthrough_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-breakthrough-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-breakthrough-r2/ex240/logs/ex240_r2_zero_passthrough_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-breakthrough-r2/ex240/verilog/ex240_r2_zero_passthrough_abc_g_aig_frontend.v",
+  "variant": "zero passthrough shell around r64 sign/magnitude source",
+  "verilog_sha256": "def875974ec81f9e5b26c5a952ddc51dff44399746b7f2a17ecf01954e8e2b71"
+}

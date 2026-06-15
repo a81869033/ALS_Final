@@ -1,0 +1,22 @@
+{
+  "adp": 136060,
+  "aig_sha256": "1b2fbdf304f676c01ce80f70863aa2319fe55ca40545561ff6ec25c1abfefa02",
+  "area": 6803,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex292_r4_mod4_planes_d19",
+  "case": "ex292",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "",
+  "method_signature": "ex292|global_state_mod4_output_planes|single_source_delay_target|preserve_mod4_bdd_pools|yosys_internal_abc_g_aig_d19|official_evaluate|mod4_planes",
+  "reference_adp": 84854,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-large-r4/ex292/aigs/ex292_r4_mod4_planes_d19.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/unknown-large-r4/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-large-r4/ex292/logs/ex292_r4_mod4_planes_d19.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-large-r4/ex292/verilog/ex292_r4_mod4_planes_d19.v",
+  "variant": "source RTL resynthesis",
+  "verilog_sha256": "405d99d9b5300d8d5aacae0e1964de1c9d4ca17c51c37ef8dd9935575f907ae3"
+}

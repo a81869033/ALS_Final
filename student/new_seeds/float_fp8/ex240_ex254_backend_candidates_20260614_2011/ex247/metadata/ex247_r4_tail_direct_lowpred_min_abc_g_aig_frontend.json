@@ -1,0 +1,22 @@
+{
+  "adp": 6526,
+  "aig_sha256": "246c71bb5ff9e4d8f567479901b1228c9f2bc6860d7f934250e86a717d3f2d16",
+  "area": 251,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r4_tail_direct_lowpred_min_abc_g_aig_frontend",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|tail-only bound table with minimized low-underflow predicates|derived region predicates and compact pat/step low residual share the tail table|abc_g_aig_frontend|official_evaluate|tail_direct_min_lowpred",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r4/ex247/aigs/ex247_r4_tail_direct_lowpred_min_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/ex247-breakthrough-r4/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r4/ex247/logs/ex247_r4_tail_direct_lowpred_min_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r4/ex247/verilog/ex247_r4_tail_direct_lowpred_min_abc_g_aig_frontend.v",
+  "variant": "tail-only bound table with minimized low-underflow predicates",
+  "verilog_sha256": "874a04a81639a3338d8751ea987e68ec35a11007204a81a025f5a6dcd9e5ee43"
+}

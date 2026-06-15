@@ -34,5 +34,21 @@ Next maintenance items:
   - `out_exp = 45 - 2*exp - (mant != 0) - (mant >= 425)`;
   - output mantissa is mantissa-only;
   - mantissa bits9/8 are run trees;
-  - mantissa low8 is nested hi5 LUT.
+ - mantissa low8 is nested hi5 LUT.
 - Improvement is small but real: `1355/17/23035` -> `1351/17/22967`.
+
+## 2026-06-14 fp16-extra-r2 campaign shard
+
+- Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `fp16-extra-r2`.
+- Method signatures:
+  - `ex234|fp16_reciprocal_square_boundary_split|core_formula_boundary_wordmode_mh5|shared core exponent formula plus boundary mantissa-high word-mode defaults|yosys_abc_g_aig|abc_xf_official_evaluate|core_formula_boundary_wordmode_mh5`
+  - `ex234|fp16_reciprocal_square_boundary_split|core_formula_boundary_wordmode_mh4|shared core exponent formula plus coarser boundary word-mode defaults|yosys_abc_g_aig|abc_xf_official_evaluate|core_formula_boundary_wordmode_mh4`
+  - `ex234|fp16_reciprocal_square_boundary_split|core_formula_boundary_wordmode_mh6|shared core exponent formula plus finer boundary word-mode defaults|yosys_abc_g_aig|abc_xf_official_evaluate|core_formula_boundary_wordmode_mh6`
+- Official `evaluate.py` OK candidates:
+  - `ex234_boundary_wordmode_mh5_abc_g_aig`: `1278/14/17892`, best in this shard.
+  - `ex234_boundary_wordmode_mh6_abc_g_aig`: `1321/14/18494`, exact but higher area.
+  - `ex234_boundary_wordmode_mh4_abc_g_aig`: `1289/16/20624`, exact but delay regresses.
+- Artifacts:
+  - `student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/`
+  - `student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/official_eval/`
+- Outcome: large frontend reduction `22967 -> 17892` by keeping the reciprocal-square core formula and replacing the exp7/exp22 full boundary tables with mantissa-high word-mode residuals.  Boundary `mh5` is the useful split; coarser `mh4` raises delay and finer `mh6` raises area.

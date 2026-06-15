@@ -1,0 +1,22 @@
+{
+  "adp": 3003,
+  "aig_sha256": "0a4f08dd8681ea9ae3926b2fd218418c86410acda3832bab7f28f1e6ca672345",
+  "area": 273,
+  "bundle_type": "current",
+  "candidate_id": "ex211_bf16_reciprocal_hand_recip_formula_signmag_lut",
+  "case": "ex211",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal",
+  "method_signature": "ex211|frontend|current",
+  "reference_adp": 2136,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex211/aigs/ex211_bf16_reciprocal_hand_recip_formula_signmag_lut.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex211/verilog/ex211_bf16_reciprocal_hand_recip_formula_signmag_lut.v",
+  "variant": "hand_recip_formula_signmag_lut",
+  "verilog_sha256": "8f8208baca0c78eafc7c069f54965d1165ca66af836b360e02d5013e65f3c7d0"
+}

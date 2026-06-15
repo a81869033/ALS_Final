@@ -1,0 +1,22 @@
+{
+  "adp": 31598,
+  "aig_sha256": "258224efa6df8879d1b3f8decd12a7edf36567c8a574d45feec6c52e803c0531",
+  "area": 2257,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex288_r75_keybdd_symcof_edge_bits",
+  "case": "ex288",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "route-class selected tiny output roots",
+  "method_signature": "ex288|hamming_weight_route_descriptor_bitmix|multipair_symcof_edge_roots_on_keybdd|keybdd_base_plus_symcof_edge_roots|yosys_internal_abc_g_aig|official_evaluate|edge_route_bits",
+  "reference_adp": 16394,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round75_20260613_1507/sub-unknown-r75/ex288/aigs/ex288_r75_keybdd_symcof_edge_bits.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1507/agent_shards/sub-unknown-r75/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round75_20260613_1507/sub-unknown-r75/ex288/logs/ex288_r75_keybdd_symcof_edge_bits.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round75_20260613_1507",
+  "source_verilog_path": "student/work/frontend_source_parallel_round75_20260613_1507/sub-unknown-r75/ex288/verilog/ex288_r75_keybdd_symcof_edge_bits.v",
+  "variant": "key-BDD current base with selected multipair symcof edge roots",
+  "verilog_sha256": "93d8dc15afd7e655f9dece5207b7f527634eff99fb61358c3c31280381caf39b"
+}

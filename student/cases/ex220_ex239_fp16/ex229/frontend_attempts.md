@@ -41,3 +41,19 @@ Next maintenance items:
 - This lowers area `3996 -> 3971`, delay `20 -> 19`, and ADP
   `79920 -> 75449`.
 - Current best seed is now the same semantic source plus the `abc_g_aig` AIG.
+
+## 2026-06-14 fp16-extra-r2 campaign shard
+
+- Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `fp16-extra-r2`.
+- Method signatures:
+  - `ex229|fp16_tanh_odd_transition_shell|positive_exp_nested_low9_hi6|shared positive exp decode, high output run trees, and sign xor symmetry|yosys_abc_g_aig|abc_xf_official_evaluate|odd_positive_low9_hi6`
+  - `ex229|fp16_tanh_odd_transition_shell|positive_exp_nested_low10_hi6|shared positive exp decode, high output run trees, and sign xor symmetry|yosys_abc_g_aig|abc_xf_official_evaluate|odd_positive_low10_hi6`
+  - `ex229|fp16_tanh_odd_transition_shell|positive_exp_wordmode_mh5|shared positive exp decode, per mant_hi residual defaults, and sign xor symmetry|yosys_abc_g_aig|abc_xf_official_evaluate|odd_positive_wordmode_mant_hi5`
+- Official `evaluate.py` OK candidates:
+  - `ex229_odd_nested_low9_hi6_abc_g_aig`: `3957/16/63312`, best in this shard.
+  - `ex229_odd_nested_low10_hi6_abc_g_aig`: `3919/17/66623`, lower area but slower.
+  - `ex229_odd_wordmode_mh5_abc_g_aig`: `3776/18/67968`, lowest area but delay cost loses ADP.
+- Artifacts:
+  - `student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/`
+  - `student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/official_eval/`
+- Outcome: new frontend reduction versus the campaign target `83748 -> 63312`, and also below the prior `75449` frontend seed.  Splitting output bit9 is useful; word-mode residuals should not be repeated unchanged.

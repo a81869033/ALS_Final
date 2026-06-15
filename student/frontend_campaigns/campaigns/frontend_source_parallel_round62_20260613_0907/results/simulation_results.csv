@@ -1,0 +1,64 @@
+case,domain,agent_id,candidate_id,source_family,simulator,simulation_type,simulation_pass,passed,status,rows_checked,mismatches,log_path,evidence_path,notes
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_outbit_grouped_split_norm_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_outbit_grouped_split_norm_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_outbit_grouped_split_norm_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_outbit_grouped_split_norm_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_branch_pack_function_split_norm_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_branch_pack_function_split_norm_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_branch_pack_function_split_norm_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_branch_pack_function_split_norm_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_same_delta_diff_quant_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_same_delta_diff_quant_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_same_delta_diff_quant_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_same_delta_diff_quant_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_field_delta_selected_residual_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_field_delta_selected_residual_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_field_delta_selected_residual_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex240,float_fp8,sub-fp8-addhyp-r62,ex240_ex240_r62_field_delta_selected_residual_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_outbit_grouped_current_delta_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_outbit_grouped_current_delta_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_outbit_grouped_current_delta_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_outbit_grouped_current_delta_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_sat_shared_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_sat_shared_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_sat_shared_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_sat_shared_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_sig_gap_threshold_formula_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_sig_gap_threshold_formula_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_sig_gap_threshold_formula_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_sig_gap_threshold_formula_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_orbits_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_orbits_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_orbits_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex244,float_fp8,sub-fp8-addhyp-r62,ex244_ex244_r62_delta_bit_orbits_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_outbit_grouped_rawexp_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_outbit_grouped_rawexp_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_outbit_grouped_rawexp_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_outbit_grouped_rawexp_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_formula_grouped_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_formula_grouped_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_formula_grouped_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_formula_grouped_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_case_grouped_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_case_grouped_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_case_grouped_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_threshold_case_grouped_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_rawexp_grouped_rendered_default_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_rawexp_grouped_rendered_extra_share_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_rawexp_grouped_rendered_abc_g_aig_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex249,float_fp8,sub-fp8-addhyp-r62,ex249_ex249_r62_rawexp_grouped_rendered_synth_preset_raw,,,,not_run,,,,,,,official evaluate.py used for final verification
+ex246,float_fp8,sub-fp8-muldiv-r62,ex246_r62_product_class_smallpat_semantic,,,,not_run,,,,,,,iverilog not used; official evaluate.py is final validation
+ex246,float_fp8,sub-fp8-muldiv-r62,ex246_r62_keybdd_exp_product,,,,not_run,,,,,,,iverilog not used; official evaluate.py is final validation
+ex247,float_fp8,sub-fp8-muldiv-r62,ex247_r62_selected_bit0_cofactor,,,,not_run,,,,,,,iverilog not used; official evaluate.py is final validation
+ex247,float_fp8,sub-fp8-muldiv-r62,ex247_r62_qclass_smallpat_nested_den,,,,not_run,,,,,,,iverilog not used; official evaluate.py is final validation
+ex285,,sub-unk285-r62,ex285_r62_output_value_cube_cover_model,,python_exhaustive_source_model,,,,PASS,4096,0,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unk285-r62/ex285/diagnostics/shared_structure_screen.md,exact output-value cube cover grouped by invariant-friendly bit-drop order
+ex285,,sub-unk285-r62,ex285_r62_singlepair45_orbit_case_model,,python_exhaustive_source_model,,,,PASS,4096,0,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unk285-r62/ex285/diagnostics/shared_structure_screen.md,"exact output grouping by the measured `(4,5)` input-swap invariant orbit"
+ex285,,sub-unk285-r62,ex285_r62_nonlin_state_mixed_case_model,,python_exhaustive_source_model,,,,PASS,4096,0,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unk285-r62/ex285/diagnostics/shared_structure_screen.md,nonlinear shared routing/state descriptor with collision-local residual cases
+ex285,,sub-unk285-r62,ex285_r62_popcount_layer_canonical_residual_screen,,python_residual_screen,,,,BLOCKED,4096,3923,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unk285-r62/ex285/diagnostics/shared_structure_screen.md,residual is too large for small-residual source emission
+ex297,unknown,sub-unklarge-r62,ex297_r62_cell_descriptor_residual_adjhist_distance2_local_blocked_no_candidate,cell_descriptor_residual,,truth-table structural screening,,not_applicable,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex297/diagnostics/ex297_r62_source_screening.csv,no Verilog emitted because residual remained table-sized
+ex297,unknown,sub-unklarge-r62,ex297_r62_compact_recurrence_state_poly_state8_blocked_no_candidate,compact_recurrence_state,,truth-table structural screening,,not_applicable,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex297/diagnostics/ex297_r62_source_screening.csv,no Verilog emitted because residual remained table-sized
+ex297,unknown,sub-unklarge-r62,ex297_r62_invariant_output_grouping_xor_same_blocked_no_candidate,invariant_output_grouping,,truth-table structural screening,,not_applicable,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex297/diagnostics/ex297_r62_source_screening.csv,no Verilog emitted because residual remained table-sized
+ex299,unknown,sub-unklarge-r62,ex299_r62_cell_descriptor_residual_adjhist_distance2_local_blocked_no_candidate,cell_descriptor_residual,,truth-table structural screening,,not_applicable,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex299/diagnostics/ex299_r62_source_screening.csv,no Verilog emitted because residual remained table-sized
+ex299,unknown,sub-unklarge-r62,ex299_r62_compact_recurrence_state_poly_state8_blocked_no_candidate,compact_recurrence_state,,truth-table structural screening,,not_applicable,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex299/diagnostics/ex299_r62_source_screening.csv,no Verilog emitted because residual remained table-sized
+ex299,unknown,sub-unklarge-r62,ex299_r62_invariant_output_grouping_xor_same_blocked_no_candidate,invariant_output_grouping,,truth-table structural screening,,not_applicable,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex299/diagnostics/ex299_r62_source_screening.csv,no Verilog emitted because residual remained table-sized
+ex297,unknown,sub-unklarge-r62,ex297_r62_adjhist_distance2_shared_default_residual,cell_descriptor_residual,,truth-derived exact construction plus official evaluate.py,,0,,,,,student/work/frontend_source_parallel_round62_20260613_0907/sub-unklarge-r62/ex297/notes/ex297_r62_adjhist_distance2_shared_default_residual.emit_summary.json,iverilog not used; official evaluate.py is the validity source

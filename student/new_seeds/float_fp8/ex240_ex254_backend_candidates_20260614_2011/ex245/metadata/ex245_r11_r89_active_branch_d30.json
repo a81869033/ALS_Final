@@ -1,0 +1,22 @@
+{
+  "adp": 23331,
+  "aig_sha256": "73251d3c74618876fd03ed7aa2402384fa154f50906cc97586c40aa7520ec2d5",
+  "area": 707,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_r11_r89_active_branch_d30",
+  "case": "ex245",
+  "delay": 33,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex245|E5M2FN packed add high byte plus low byte|r89 active same/diff/pass branch source with abc -D 30 target|shared active branch source with delay-targeted frontend ABC pass|abc_d30_AND|official_evaluate|full_word",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/aigs/ex245_r11_r89_active_branch_d30.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-hard-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/logs/ex245_r11_r89_active_branch_d30.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/verilog/ex245_r11_r89_active_branch_d30.v",
+  "variant": "r89 active same/diff/pass branch source with abc -D 30 target",
+  "verilog_sha256": "4098e927e829a7191223e30b0899a8f7756b2dba7abce9ecc7eb557e24e0ac36"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 4836,
+  "aig_sha256": "62a9e1ea0fbc1c878c3426de045a689db5805eab00adaa69abd9503eba0647b7",
+  "area": 372,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex213_r94_bf16_sqrt_sqrt_pos_nan_fields_e4_m3",
+  "case": "ex213",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_sqrt",
+  "method_signature": "ex213|round94_frontend_structural_bf16|bf16_sqrt|sqrt_pos_nan_fields_e4_m3|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex213/official_eval/ex213_r94_bf16_sqrt_sqrt_pos_nan_fields_e4_m3/ex213.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex213/logs/ex213_r94_bf16_sqrt_sqrt_pos_nan_fields_e4_m3.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex213/verilog/ex213_r94_bf16_sqrt_sqrt_pos_nan_fields_e4_m3.v",
+  "variant": "sqrt positive-domain fields with canonical negative-NaN shell",
+  "verilog_sha256": "5168903cc804ab2aaab44e32f9ef2d5ce2a3355791660ee9e076280cdc373e84"
+}

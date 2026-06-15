@@ -1,0 +1,22 @@
+{
+  "adp": 24495,
+  "aig_sha256": "bdce1198de34e2c461e89802b50f73840bb8eee78214ba4f856e96ccd89da96d",
+  "area": 1633,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex201_r94_sep_fields_e3_m3_s0_bits_2_3_bh1",
+  "case": "ex201",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp2",
+  "method_signature": "ex201|shared_bf16_exp2_field_shell|sep_fields_e3_m3_s0_bits_2_3_bh1|shared sign_exp special/default shell; bit2/bit3 residual grouped separately|yosys_abc_g_AND_aigmap|DAZ_exp2_BF16_RNE_FTZ_canonical_NaN|source_level_output_grouping",
+  "reference_adp": 16300,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-exp-log-r94/ex201/aigs/ex201_r94_sep_fields_e3_m3_s0_bits_2_3_bh1.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-exp-log-r94/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-exp-log-r94/ex201/logs/ex201_r94_sep_fields_e3_m3_s0_bits_2_3_bh1.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-exp-log-r94/ex201/verilog/ex201_r94_sep_fields_e3_m3_s0_bits_2_3_bh1.v",
+  "variant": "separate output fields plus paired low-bit predicates",
+  "verilog_sha256": "cd891a275cafe0303bd9a1e02f2e9e37bbf2fca8a36d18c7aeccf411315ba4df"
+}

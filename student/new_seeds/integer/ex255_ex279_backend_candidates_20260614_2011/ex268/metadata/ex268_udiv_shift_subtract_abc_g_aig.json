@@ -1,0 +1,22 @@
+{
+  "adp": 11328,
+  "aig_sha256": "45ece4c4292ca252526c658bc4e54a7581e1fe0a1f4928f080fe7e16b784473e",
+  "area": 192,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex268_udiv_shift_subtract_abc_g_aig",
+  "case": "ex268",
+  "delay": 59,
+  "domain": "integer",
+  "hypothesis": "unsigned low7_high7:a/b dbz=max",
+  "method_signature": "unsigned low7_high7:a/b dbz=max",
+  "reference_adp": 7446,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex268_ex269_frontend_udiv_split_shift_20260609_0825/ex268/aigs/ex268_udiv_shift_subtract_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex268_ex269_frontend_udiv_split_shift_20260609_0825/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex268_ex269_frontend_udiv_split_shift_20260609_0825",
+  "source_verilog_path": "student/work/ex268_ex269_frontend_udiv_split_shift_20260609_0825/ex268/verilog/ex268_udiv_shift_subtract.v",
+  "variant": "shift_subtract+abc_g_aig",
+  "verilog_sha256": "2b43de587c9a7eea407849fca112fbbfaca293cc16829ebaf44b46be63c694c9"
+}

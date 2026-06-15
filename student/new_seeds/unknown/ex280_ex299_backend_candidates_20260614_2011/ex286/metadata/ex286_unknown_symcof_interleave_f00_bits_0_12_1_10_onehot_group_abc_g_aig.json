@@ -1,0 +1,22 @@
+{
+  "adp": 20190,
+  "aig_sha256": "26a3d323c98e2a4ff7d70cdd0ba2fbf2b3a69c96680e8110729b7a1c783fb6cf",
+  "area": 1346,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex286_unknown_symcof_interleave_f00_bits_0_12_1_10_onehot_group_abc_g_aig",
+  "case": "ex286",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "hamming_weight_preserving_lossy_routing_normalizer",
+  "method_signature": "ex286|hamming_weight_preserving_lossy_routing_normalizer|explicit_outer_bitset_symcof_f00_bits_0_12_1_10|multi_pair_orand_key_classonehot|yosys_abc_g_aig|abc_xf_official_evaluate|full_word_class_mux",
+  "reference_adp": 2376,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex286_frontend_symcof_bitset_probe_20260612_1820/coordinator/ex286/aigs/ex286_unknown_symcof_interleave_f00_bits_0_12_1_10_onehot_group_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex286_frontend_symcof_bitset_probe_20260612_1820/coordinator/ex286/logs/ex286_unknown_symcof_interleave_f00_bits_0_12_1_10_onehot_group_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex286_frontend_symcof_bitset_probe_20260612_1820",
+  "source_verilog_path": "student/work/ex286_frontend_symcof_bitset_probe_20260612_1820/coordinator/ex286/verilog/ex286_unknown_symcof_interleave_f00_bits_0_12_1_10_onehot_group.v",
+  "variant": "multi_pair_symmetry_cofactor_explicit_outer_bitset",
+  "verilog_sha256": "725f112445ed46ddc0ea763fc1acdbe8b5fc38f36c9ea545c3c56c346f59837a"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 9074,
+  "aig_sha256": "055d5c0ff01cf90486c3d18b7c0bf3579a41fe0a1d2e229555c4c25dfc0765ee",
+  "area": 349,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex258_umul_wallace_bits_prefix_synth_preset",
+  "case": "ex258",
+  "delay": 26,
+  "domain": "integer",
+  "hypothesis": "unsigned low7_high7:a*b",
+  "method_signature": "unsigned low7_high7:a*b",
+  "reference_adp": 6289,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex255_ex259_frontend_umul_wallace_bits_20260609_0034/ex258/aigs/ex258_umul_wallace_bits_prefix_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex255_ex259_frontend_umul_wallace_bits_20260609_0034/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex255_ex259_frontend_umul_wallace_bits_20260609_0034",
+  "source_verilog_path": "student/work/ex255_ex259_frontend_umul_wallace_bits_20260609_0034/ex258/verilog/ex258_umul_wallace_bits_prefix.v",
+  "variant": "wallace_bits_prefix+synth_preset",
+  "verilog_sha256": "05a85bc71e8f879a5836a0bea002352971a1900f859cfab76fca9d335b0fc445"
+}

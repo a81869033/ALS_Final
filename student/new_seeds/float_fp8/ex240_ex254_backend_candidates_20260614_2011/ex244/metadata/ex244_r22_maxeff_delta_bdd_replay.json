@@ -1,0 +1,22 @@
+{
+  "adp": 10234,
+  "aig_sha256": "856c6f4888ae3c0301ba852ff71402aa0e283191582cf1a3388d3528e31343bc",
+  "area": 301,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_r22_maxeff_delta_bdd_replay",
+  "case": "ex244",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "E4M3FN packed hypot max-plus-delta max-eff BDD",
+  "method_signature": "ex244|E4M3FN packed hypot|round22 max-eff delta BDD replay|shared abs max/min decode max_eff gap sig4 and delta BDD bits|yosys_synth_flatten_abc_g_aig_official_evaluate|exact_e4m3fn_hypot_abs_high_low|max_plus_delta_outputs",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/float-fp8-r22/ex244/aigs/ex244_r22_maxeff_delta_bdd_replay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/float-fp8-r22/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/float-fp8-r22/ex244/logs/ex244_r22_maxeff_delta_bdd_replay.official_evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round22_20260613_0218",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/float-fp8-r22/ex244/verilog/ex244_r22_maxeff_delta_bdd_replay.v",
+  "variant": "",
+  "verilog_sha256": "8f7c7ff25f556618ff609719fdd517af5203ea9b4eda4062569e2fbf1ca25825"
+}

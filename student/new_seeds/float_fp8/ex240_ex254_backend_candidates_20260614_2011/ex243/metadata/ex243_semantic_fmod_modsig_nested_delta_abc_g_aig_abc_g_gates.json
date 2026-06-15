@@ -1,0 +1,22 @@
+{
+  "adp": 48816,
+  "aig_sha256": "212b4456caf63cdbe503c82c9d81dff45821681eb7bf896516ab1fbf546b516b",
+  "area": 1808,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex243_semantic_fmod_modsig_nested_delta_abc_g_aig_abc_g_gates",
+  "case": "ex243",
+  "delay": 27,
+  "domain": "float_fp8",
+  "hypothesis": "fp8_e4m3fn_fmod_low_by_high_abs",
+  "method_signature": "fp8_e4m3fn_fmod_low_by_high_abs",
+  "reference_adp": 53227,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex241_ex243_frontend_fp8_nested_best_synthflow_20260608_1330/ex243/aigs/ex243_semantic_fmod_modsig_nested_delta_abc_g_aig_abc_g_gates.aig",
+  "source_csv": "student/runs/float_fp8/ex241_ex243_frontend_fp8_nested_best_synthflow_20260608_1330/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex241_ex243_frontend_fp8_nested_best_synthflow_20260608_1330",
+  "source_verilog_path": "student/work/ex241_ex242_ex243_frontend_fp8_nested_tables_fix_20260608_1330/ex243/verilog/ex243_semantic_fmod_modsig_nested_delta.v",
+  "variant": "abc_g_gates",
+  "verilog_sha256": "d3b6a5fa2fc7596f1a25297c59be0aab34d7f1bbfa11cf79f1f7a9a6835a1ce9"
+}

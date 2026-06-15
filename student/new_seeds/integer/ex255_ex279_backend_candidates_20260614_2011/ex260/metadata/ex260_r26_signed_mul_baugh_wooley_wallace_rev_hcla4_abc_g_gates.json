@@ -1,0 +1,22 @@
+{
+  "adp": 1170,
+  "aig_sha256": "cc60f023331420e8ad139eb9152ae658b361b35fe9b5e101299d7d1d21f1d2e0",
+  "area": 90,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex260_r26_signed_mul_baugh_wooley_wallace_rev_hcla4_abc_g_gates",
+  "case": "ex260",
+  "delay": 13,
+  "domain": "integer",
+  "hypothesis": "signed_multiplier_current_source_gateflow",
+  "method_signature": "ex260|signed_multiplier_current_source_gateflow|current reverse Baugh-Wooley hCLA4 source under gate-set flow|shared signed partial products and hCLA final merge|abc_g_gates|signed_low4_high4_multiply|product word",
+  "reference_adp": 657,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex260/aigs/ex260_r26_signed_mul_baugh_wooley_wallace_rev_hcla4_abc_g_gates.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/mixed-r26/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex260/logs/ex260_r26_signed_mul_baugh_wooley_wallace_rev_hcla4_abc_g_gates.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round26_20260613_0539",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex260/verilog/ex260_r26_signed_mul_baugh_wooley_wallace_rev_hcla4.v",
+  "variant": "baugh_wooley_wallace_rev_hcla4",
+  "verilog_sha256": "387e1acb8fa400fe2524f00878f8e2d0a8e51a4cbd6e2624c380e46c473a0f38"
+}

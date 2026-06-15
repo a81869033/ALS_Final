@@ -1,0 +1,22 @@
+{
+  "adp": 6500,
+  "aig_sha256": "339c03a654a4edc9ccfef6a38a5e8ddfd4ea2bb4a720e51cdc8d4ac44c73cc35",
+  "area": 250,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r6_low12_grouped_mag_abc_g_aig_frontend",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|r5 low residual with output grouping targeted only at magnitude bits one and zero|upper magnitude bits remain in the compact region case while mag1 and mag0 use direct low/linear gates|abc_g_aig_frontend|official_evaluate|low12_only_output_grouping",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r6/ex247/aigs/ex247_r6_low12_grouped_mag_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/ex247-breakthrough-r6/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r6/ex247/logs/ex247_r6_low12_grouped_mag_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r6/ex247/verilog/ex247_r6_low12_grouped_mag_abc_g_aig_frontend.v",
+  "variant": "r5 low residual with output grouping targeted only at magnitude bits one and zero",
+  "verilog_sha256": "a4496ac573f9e9ca9a4a4574cc4504158cf658ef5446f1e7482a60fa2445bee0"
+}

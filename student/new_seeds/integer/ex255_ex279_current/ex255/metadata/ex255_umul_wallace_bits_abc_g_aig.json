@@ -1,0 +1,22 @@
+{
+  "adp": 1131,
+  "aig_sha256": "de4eb26c2f23e32c9d8e0db86ed26f3a2e0019b6f7127cbce1787c3cfd1c9735",
+  "area": 87,
+  "bundle_type": "current",
+  "candidate_id": "ex255_umul_wallace_bits_abc_g_aig",
+  "case": "ex255",
+  "delay": 13,
+  "domain": "integer",
+  "hypothesis": "unsigned low4_high4:a*b",
+  "method_signature": "unsigned low4_high4:a*b",
+  "reference_adp": 836,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex255_ex259_frontend_umul_wallace_bits_20260609_0034/ex255/aigs/ex255_umul_wallace_bits_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex255_ex259_frontend_umul_wallace_bits_20260609_0034/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex255_ex259_frontend_umul_wallace_bits_20260609_0034",
+  "source_verilog_path": "student/work/ex255_ex259_frontend_umul_wallace_bits_20260609_0034/ex255/verilog/ex255_umul_wallace_bits.v",
+  "variant": "wallace_bits+abc_g_aig",
+  "verilog_sha256": "c1aee061ca7313652efcddc6c4975fbde7d621204dee4379e9e070e648b6e73c"
+}

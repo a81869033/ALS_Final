@@ -1,0 +1,22 @@
+{
+  "adp": 135780,
+  "aig_sha256": "4a3b4d998f856730b0707ec7000bb051fa23b369b051f775dde81dc2bd2f29ab",
+  "area": 6789,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex292_r25_bdd_mod4_output_planes_abc_g_aig",
+  "case": "ex292",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "global state/permutation-like transform with materially regrouped BDD roots",
+  "method_signature": "ex292|global_state_transform_regrouped_bdd_roots|mod4_output_planes|four_scalar_BDD_pools_grouped_by_output_bit_modulo_4|abc_g_aig|official_truth_exact_bdd|mod4_output_planes",
+  "reference_adp": 84854,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-large-r25/ex292/eval/ex292_r25_bdd_mod4_output_planes_abc_g_aig/ex292.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round25_20260613_0506/agent_shards/unknown-large-r25/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-large-r25/ex292/logs/ex292_r25_bdd_mod4_output_planes_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round25_20260613_0506",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-large-r25/ex292/verilog/ex292_r25_bdd_mod4_output_planes.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "e071e0471fb4b44a14d712775f525a5894c00edc7ed8dccac500b808a9907708"
+}

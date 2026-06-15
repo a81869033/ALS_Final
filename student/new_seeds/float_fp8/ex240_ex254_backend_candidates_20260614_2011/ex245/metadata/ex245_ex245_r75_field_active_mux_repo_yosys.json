@@ -1,0 +1,22 @@
+{
+  "adp": 22971,
+  "aig_sha256": "00ce6d92b8afa041c752c0a0293a92e7f1d0d0b56bce0f7d3e0a90b4e342b937",
+  "area": 741,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_ex245_r75_field_active_mux_repo_yosys",
+  "case": "ex245",
+  "delay": 31,
+  "domain": "float_fp8",
+  "hypothesis": "E5M2FN packed add high byte plus low byte",
+  "method_signature": "ex245|E5M2FN packed add high byte plus low byte|ex245_r75_field_active_mux|direct_e5_field_compare_decode_plus_active_same_diff_table_gating_before_output_mux|repo_yosys_frontend_default|official_evaluate|full_word",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-fp8-addhypot-redesc-r75/ex245/aigs/ex245_ex245_r75_field_active_mux_repo_yosys.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1450/agent_shards/sub-fp8-addhypot-redesc-r75/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round75_20260613_1450/sub-fp8-addhypot-redesc-r75/ex245/logs/ex245_ex245_r75_field_active_mux_repo_yosys.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round75_20260613_1450",
+  "source_verilog_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-fp8-addhypot-redesc-r75/ex245/verilog/ex245_r75_field_active_mux.v",
+  "variant": "ex245_r75_field_active_mux",
+  "verilog_sha256": "f4070d5b379be5683574120d7d0e35d7fc95c914353e90d766d22a3cf40d832b"
+}

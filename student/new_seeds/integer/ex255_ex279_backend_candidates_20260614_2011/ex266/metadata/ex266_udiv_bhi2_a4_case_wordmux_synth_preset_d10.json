@@ -1,0 +1,22 @@
+{
+  "adp": 1617,
+  "aig_sha256": "c2b2a9bd42983b8d8f1809b507c12c6bcbafc5d4522ef2629f1d24e760cc2038",
+  "area": 147,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex266_udiv_bhi2_a4_case_wordmux_synth_preset_d10",
+  "case": "ex266",
+  "delay": 11,
+  "domain": "integer",
+  "hypothesis": "divider local cofactor recut",
+  "method_signature": "ex266|divider_local_cofactor_recut|current_b_4_3_a_4_selector_but_local_word_truth_cases_instead_of_local_bit_BDDs|one_shared_cofactor_word_mux_local_quotient_words_emitted_together|synth_preset_d10|unsigned_low5_high5_divide_dbz_sat|quotient_word_by_magnitude_cofactor",
+  "reference_adp": 848,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex266/aigs/ex266_udiv_bhi2_a4_case_wordmux_synth_preset_d10.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex266/official_eval/ex266_udiv_bhi2_a4_case_wordmux_synth_preset_d10/ex266_udiv_bhi2_a4_case_wordmux_synth_preset_d10.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex266/verilog/ex266_udiv_bhi2_a4_case_wordmux.v",
+  "variant": "current b[4:3]/a[4] selector but local word truth cases instead of local bit BDDs",
+  "verilog_sha256": "f471f354fed0ba5b0615957864d2f51b3e1733bca004244c86d76405d909da8a"
+}

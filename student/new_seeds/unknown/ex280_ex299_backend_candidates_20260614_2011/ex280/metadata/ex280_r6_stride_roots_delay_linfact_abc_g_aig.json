@@ -1,0 +1,22 @@
+{
+  "adp": 4464,
+  "aig_sha256": "e8ef8e6b22e4e4098f743eaa0e02b366f9d4da51b480ec7d8deab00a37919049",
+  "area": 186,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex280_r6_stride_roots_delay_linfact_abc_g_aig",
+  "case": "ex280",
+  "delay": 24,
+  "domain": "unknown",
+  "hypothesis": "quartic_gf2_event_filter",
+  "method_signature": "ex280|quartic_gf2_event_filter|overlap_stride_boundary_root_product_basis|shared_stride_boundary_linear_roots_with_factored_corrections|yosys_abc_g_aig|exact_full_clamp_mux_coordinate_degree2|balanced_delay_weighted_root_products",
+  "reference_adp": 2415,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-a-r6/ex280/aigs/ex280_r6_stride_roots_delay_linfact_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round6_20260612_1807/agent_shards/unknown-a-r6/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-a-r6/ex280/logs/ex280_r6_stride_roots_delay_linfact_abc_g_aig.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round6_20260612_1807",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/unknown-a-r6/ex280/verilog/ex280_r6_stride_roots_delay_linfact_abc_g_aig.v",
+  "variant": "stride_roots_delay_linfact",
+  "verilog_sha256": "a265114a34ead56fcddbf5535a1fe5bbe2520fd34480956e7e1dfa2b42752b70"
+}

@@ -1,0 +1,3 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex276,ex276_r15_prefix5_case_lsb_abc_and,,,student/work/ex200_ex299_frontend_refgap_round15_20260612_2211/coordinator-integer-r15/ex276/logs/ex276_r15_prefix5_case_lsb_abc_and.evaluate.py.log,,ex200_ex299_frontend_refgap_round15_20260612_2211,iverilog skipped; official evaluate.py is acceptance gate
+ex276,ex276_high2_segment_ladder_abc_g_and,official_evaluate.py,OK,student/work/ex200_ex299_frontend_refgap_round15_20260612_2211/integer-source-r15/ex276/logs/ex276_high2_segment_ladder_abc_g_and.evaluate.py.log,integer-source-r15,ex200_ex299_frontend_refgap_round15_20260612_2211,official exhaustive truth equivalence via evaluate.py

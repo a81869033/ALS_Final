@@ -1,0 +1,34 @@
+case,domain,agent_id,candidate_id,source_family,simulator,simulation_type,simulation_pass,passed,status,rows_checked,mismatches,log_path,evidence_path,notes
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_raw_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_raw_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_raw_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_satsplit_raw_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_satsplit_raw_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_satsplit_raw_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_gapcofactor_satsplit_raw_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_gapcofactor_satsplit_raw_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_gapcofactor_satsplit_raw_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_bitplane_incmux_raw_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_bitplane_incmux_raw_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_bitplane_incmux_raw_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_gapcofactor_satsplit_field_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_gapcofactor_satsplit_field_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_gapcofactor_satsplit_field_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_satsplit_field_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_satsplit_field_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_sigdelta_fullcase_satsplit_field_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_mixed_tail_lut_raw_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_mixed_tail_lut_raw_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_mixed_tail_lut_raw_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_mixed_tail_lut_field_default,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_mixed_tail_lut_field_abc_g_aig,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex244,float_fp8,sub-ex244-r60,ex244_r60_mixed_tail_lut_field_synth_preset,,,,not_run,,,,,,,iverilog not needed; exactness checked by official evaluate.py
+ex246,float_fp8,sub-ex246-ex247-r60,ex246_r60_product_predicate_round,,,,not_run,,,,,,,Iverilog not used; official evaluate.py is final validation.
+ex246,float_fp8,sub-ex246-ex247-r60,ex246_r60_sigpair_round_predicates,,,,not_run,,,,,,,Iverilog not used; official evaluate.py is final validation.
+ex247,float_fp8,sub-ex246-ex247-r60,ex247_r60_quotient_boundary_formula,,,,not_run,,,,,,,Iverilog not used; official evaluate.py is final validation.
+ex247,float_fp8,sub-ex246-ex247-r60,ex247_r60_quotient_region_split,,,,not_run,,,,,,,Iverilog not used; official evaluate.py is final validation.
+ex285,,sub-ex285-r60,ex285_r60_countkey_majority_pairdelta_model,,python_exhaustive_source_model,,,,PASS,4096,0,,student/work/frontend_source_parallel_round60_20260613_0825/sub-ex285-r60/ex285/diagnostics/shared_structure_screen.md,count-key majority base xor two-pair selector delta source model
+ex285,,sub-ex285-r60,ex285_r60_twopair_selector_direct_case_model,,python_exhaustive_source_model,,,,PASS,4096,0,,student/work/frontend_source_parallel_round60_20260613_0825/sub-ex285-r60/ex285/diagnostics/shared_structure_screen.md,direct two-pair swap-invariant selector table source model
+ex285,,sub-ex285-r60,ex285_r60_twopair_canoninput_delta_case_model,,python_exhaustive_source_model,,,,PASS,4096,0,,student/work/frontend_source_parallel_round60_20260613_0825/sub-ex285-r60/ex285/diagnostics/shared_structure_screen.md,mixed source: shared canonical input descriptor plus selected residual delta table
+ex297,unknown,sub-ex297-ex299-r60,ex297_r60_mixed_source_blocked_no_candidate,nonlocal mixed-source diagnostic,,truth-table structural diagnostic,,not_applicable,,,,,student/work/frontend_source_parallel_round60_20260613_0825/sub-ex297-ex299-r60/ex297/notes/ex297_r60_mixed_source_blocker.json,diagnostic only; no Verilog simulation because no candidate source was emitted
+ex299,unknown,sub-ex297-ex299-r60,ex299_r60_mixed_source_blocked_no_candidate,nonlocal mixed-source diagnostic,,truth-table structural diagnostic,,not_applicable,,,,,student/work/frontend_source_parallel_round60_20260613_0825/sub-ex297-ex299-r60/ex299/notes/ex299_r60_mixed_source_blocker.json,diagnostic only; no Verilog simulation because no candidate source was emitted

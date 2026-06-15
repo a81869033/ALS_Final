@@ -1,0 +1,22 @@
+{
+  "adp": 2268,
+  "aig_sha256": "ab75656a024f318e035572a9e11607a3daa4393d01facddfccf92f3129d87a01",
+  "area": 126,
+  "bundle_type": "current",
+  "candidate_id": "ex253_semantic_u2_sum8_popcount_laneqcase_default",
+  "case": "ex253",
+  "delay": 18,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex253|frontend|frontend_weighted_popcount",
+  "reference_adp": 1845,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex252_ex253_frontend_weighted_popcount_20260608_2224/ex253/aigs/ex253_semantic_u2_sum8_popcount_laneqcase_default.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex252_ex253_frontend_weighted_popcount_20260608_2224",
+  "source_verilog_path": "student/work/ex252_ex253_frontend_weighted_popcount_20260608_2224/ex253/verilog/ex253_semantic_u2_sum8_popcount_laneqcase.v",
+  "variant": "semantic_u2_sum8_popcount_laneqcase_default",
+  "verilog_sha256": "84d36b6fdfcfa5a53af0378691a93521538dfca05bd01010481bcb8cc286f498"
+}

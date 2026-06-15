@@ -1,0 +1,22 @@
+{
+  "adp": 23035,
+  "aig_sha256": "5150ae2643d19968ecd852a3a4d3a269cd378493a0529efaf2a6077fb797f020",
+  "area": 1355,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex234_sign_pair_case_abc_g_aig",
+  "case": "ex234",
+  "delay": 17,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal_square",
+  "method_signature": "fp16_reciprocal_square",
+  "reference_adp": 15561,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853/ex234/aigs/ex234_sign_pair_case_abc_g_aig.aig",
+  "source_csv": "student/runs/fp16/ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853",
+  "source_verilog_path": "student/work/reverse_fp16_semantic_20260604_1522_extra/ex234/verilog/ex234_fp16_reciprocal_square_sign_pair_case.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "b7f3038d5c9ff32b5cf499e8e7ffc307f27ac01fd02af63a4849feb3c9fb7aa7"
+}

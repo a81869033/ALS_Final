@@ -1,0 +1,22 @@
+{
+  "adp": 36410,
+  "aig_sha256": "dd22c8257ee258b21d2dc3010ba235475b50d48206c1f1671e6d79b5932f15dc",
+  "area": 662,
+  "bundle_type": "current",
+  "candidate_id": "ex254_semantic_e4add_fp4product_grs_magfactored_abc_g_aig",
+  "case": "ex254",
+  "delay": 55,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex254|frontend|frontend_product_magfactored",
+  "reference_adp": 38220,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex254_frontend_product_magfactored_20260608_2310/ex254/aigs/ex254_semantic_e4add_fp4product_grs_magfactored_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex254_frontend_product_magfactored_20260608_2310",
+  "source_verilog_path": "student/work/ex254_frontend_product_magfactored_20260608_2310/ex254/verilog/ex254_semantic_e4add_fp4product_grs_magfactored.v",
+  "variant": "semantic_e4add_fp4product_grs_magfactored_abc_g_aig",
+  "verilog_sha256": "0d1ae120c4acf55ed7e5a542e207b4483e05ae8bbe01a84e7e5fed84ac6e8873"
+}

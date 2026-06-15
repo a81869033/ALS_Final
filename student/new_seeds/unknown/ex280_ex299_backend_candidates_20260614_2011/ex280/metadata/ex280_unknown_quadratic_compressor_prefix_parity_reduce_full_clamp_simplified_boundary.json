@@ -1,0 +1,22 @@
+{
+  "adp": 5301,
+  "aig_sha256": "6607f27ae27b3c2250723359bd503d29faa12fb19982f64d69c21aabbc4d61d7",
+  "area": 171,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex280_unknown_quadratic_compressor_prefix_parity_reduce_full_clamp_simplified_boundary",
+  "case": "ex280",
+  "delay": 31,
+  "domain": "unknown",
+  "hypothesis": "unknown_quadratic_compressor",
+  "method_signature": "ex280|quartic_gf2_anf_monomial_sharing|full_clamp_muxcoord_quadratic_linear_form_products|shared_linear_form_products|yosys_default_abc_g_AND_then_aigmap|exact_full_clamp_mux_coordinate_degree2|multi_output_product_xor",
+  "reference_adp": 2415,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/unknown-a-agent/ex280/aigs/ex280_unknown_quadratic_compressor_prefix_parity_reduce_full_clamp_simplified_boundary.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/unknown-a-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/unknown-a-agent/ex280/logs/ex280_unknown_quadratic_compressor_prefix_parity_reduce_full_clamp_simplified_boundary.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/unknown-a-agent/ex280/verilog/ex280_unknown_quadratic_compressor_prefix_parity_reduce_full_clamp_simplified_boundary.v",
+  "variant": "prefix_parity_reduce_full_clamp_simplified_boundary",
+  "verilog_sha256": "0c84d9f46b73af696d64e6bcb360f7da2e49e2130b801f86f485d33b515c340b"
+}

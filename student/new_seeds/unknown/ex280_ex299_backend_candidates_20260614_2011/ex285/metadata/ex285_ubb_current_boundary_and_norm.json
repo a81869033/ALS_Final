@@ -1,0 +1,22 @@
+{
+  "adp": 13277,
+  "aig_sha256": "6e6fac3f37d96623d5d21546fb62de23c1e29564279d56206073a900988dc354",
+  "area": 781,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_ubb_current_boundary_and_norm",
+  "case": "ex285",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "frontend source-boundary normalization",
+  "method_signature": "ex285|frontend_source_boundary_normalization|current_boundary_helper_replay|direct_current_source_wrapper|yosys_internal_abc_g_AND|official_evaluate|all_outputs",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-breakthrough-b/ex285/aigs/ex285_ubb_current_boundary_and_norm.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-breakthrough-b/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-breakthrough-b/ex285/logs/ex285_ubb_current_boundary_and_norm.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-breakthrough-b/ex285/verilog/ex285_ubb_current_boundary_and_norm.v",
+  "variant": "current boundary helper source replay through abc AND frontend",
+  "verilog_sha256": "a03eee4f0be06ef08aa0387d2add0c346ad5c0153189880003766fb2c8e5c827"
+}

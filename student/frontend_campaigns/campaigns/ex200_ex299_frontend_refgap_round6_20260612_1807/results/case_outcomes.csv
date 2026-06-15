@@ -1,0 +1,44 @@
+case,domain,assigned_agent,round6_candidates,round6_eval_rows,round6_equiv_rows,round6_failed_rows,round6_best_candidate,round6_best_adp,frontend_best_before,frontend_best_after,reference_adp,improved_frontend,beats_reference,next_recommendation
+ex200,bf16,bf16-r6,0,3,0,4,,,54405,54405,40052,0,0,no equivalent official candidate; fix semantics before QoR work
+ex204,bf16,bf16-r6,0,4,0,4,,,25670,25670,15180,0,0,no equivalent official candidate; fix semantics before QoR work
+ex205,bf16,bf16-r6,0,4,0,4,,,71104,71104,47128,0,0,no equivalent official candidate; fix semantics before QoR work
+ex223,fp16,fp16-r6,2,2,2,1,ex223_semantic_special_nested_low14_hi5_abc_g_aig,203756,204193,203756,120549,1,0,keep as new frontend best; next change must materially reduce reference gap
+ex224,fp16,fp16-r6,2,2,2,0,ex224_semantic_special_nested_low12_hi6_abc_g_aig,102272,96224,96224,64708,0,0,equivalent but not better; do not repeat same representation family
+ex225,fp16,fp16-r6,1,1,1,2,ex225_semantic_special_nested_low14_hi5_abc_g_aig,219032,218728,218728,116676,0,0,equivalent but not better; do not repeat same representation family
+ex240,float_fp8,float-fp8-r6,0,0,0,2,,,30090,30090,13299,0,0,blocked; needs new high-level description before more RTL generation
+ex241,float_fp8,float-fp8-r6,0,0,0,2,,,15544,15544,7224,0,0,blocked; needs new high-level description before more RTL generation
+ex242,float_fp8,float-fp8-r6,0,0,0,2,,,25320,25320,11900,0,0,blocked; needs new high-level description before more RTL generation
+ex244,float_fp8,float-fp8-r6,0,0,0,3,,,10234,10234,4272,0,0,blocked; needs new high-level description before more RTL generation
+ex245,float_fp8,float-fp8-r6,0,0,0,2,,,23834,23834,11050,0,0,blocked; needs new high-level description before more RTL generation
+ex246,float_fp8,float-fp8-r6,0,0,0,3,,,7502,7502,2805,0,0,blocked; needs new high-level description before more RTL generation
+ex247,float_fp8,float-fp8-r6,0,0,0,3,,,8808,8808,2975,0,0,blocked; needs new high-level description before more RTL generation
+ex248,float_fp8,float-fp8-r6,0,0,0,3,,,8550,8550,4180,0,0,blocked; needs new high-level description before more RTL generation
+ex249,float_fp8,float-fp8-r6,0,0,0,3,,,4368,4368,2079,0,0,blocked; needs new high-level description before more RTL generation
+ex253,float_fp8,float-fp8-r6,2,2,0,0,,,2268,2268,1845,0,0,no equivalent official candidate; fix semantics before QoR work
+ex256,integer,integer-r6,0,0,0,2,,,2844,2844,1911,0,0,blocked; needs new high-level description before more RTL generation
+ex260,integer,integer-r6,0,0,0,2,,,1144,1144,657,0,0,blocked; needs new high-level description before more RTL generation
+ex261,integer,integer-r6,0,0,0,1,,,2952,2952,2041,0,0,blocked; needs new high-level description before more RTL generation
+ex266,integer,integer-r6,0,0,0,2,,,1480,1480,848,0,0,blocked; needs new high-level description before more RTL generation
+ex270,integer,integer-r6,0,0,0,1,,,3230,3230,2076,0,0,blocked; needs new high-level description before more RTL generation
+ex276,integer,integer-r6,0,0,0,1,,,1010,1010,632,0,0,blocked; needs new high-level description before more RTL generation
+ex277,integer,integer-r6,0,0,0,1,,,2844,2844,1980,0,0,blocked; needs new high-level description before more RTL generation
+ex280,unknown,unknown-a-r6,1,1,1,0,ex280_r6_stride_roots_delay_linfact_abc_g_aig,4464,2990,2990,2415,0,0,equivalent but not better; do not repeat same representation family
+ex281,unknown,unknown-a-r6,0,0,0,0,,,3328,3328,2336,0,0,blocked; needs new high-level description before more RTL generation
+ex282,unknown,unknown-a-r6,0,0,0,0,,,4032,4032,2704,0,0,blocked; needs new high-level description before more RTL generation
+ex283,unknown,unknown-a-r6,0,0,0,0,,,4500,4500,3168,0,0,blocked; needs new high-level description before more RTL generation
+ex284,unknown,unknown-a-r6,0,0,0,0,,,5440,5440,4240,0,0,blocked; needs new high-level description before more RTL generation
+ex285,unknown,unknown-a-r6,0,0,0,0,,,13175,13175,5499,0,0,blocked; needs new high-level description before more RTL generation
+ex286,unknown,unknown-a-r6,0,0,0,1,,,21705,20190,2376,1,0,keep as new frontend best; next change must materially reduce reference gap
+ex287,unknown,unknown-a-r6,0,0,0,1,,,27480,27480,5782,0,0,blocked; needs new high-level description before more RTL generation
+ex288,unknown,unknown-a-r6,0,0,0,0,,,31598,31598,16394,0,0,blocked; needs new high-level description before more RTL generation
+ex289,unknown,unknown-a-r6,0,0,0,0,,,19893,19893,13620,0,0,blocked; needs new high-level description before more RTL generation
+ex290,unknown,unknown-b-r6,0,0,0,1,,,61992,61992,42328,0,0,blocked; needs new high-level description before more RTL generation
+ex291,unknown,unknown-b-r6,0,0,0,1,,,97545,97545,66850,0,0,blocked; needs new high-level description before more RTL generation
+ex292,unknown,unknown-b-r6,0,0,0,1,,,142170,142170,84854,0,0,blocked; needs new high-level description before more RTL generation
+ex293,unknown,unknown-b-r6,0,0,0,1,,,144972,144972,112966,0,0,blocked; needs new high-level description before more RTL generation
+ex294,unknown,unknown-b-r6,0,0,0,1,,,246698,246698,133365,0,0,blocked; needs new high-level description before more RTL generation
+ex295,unknown,unknown-b-r6,0,0,0,1,,,138448,138448,68064,0,0,blocked; needs new high-level description before more RTL generation
+ex296,unknown,unknown-b-r6,0,0,0,1,,,143792,143792,104025,0,0,blocked; needs new high-level description before more RTL generation
+ex297,unknown,unknown-b-r6,0,0,0,2,,,583596,583596,225900,0,0,blocked; needs new high-level description before more RTL generation
+ex298,unknown,unknown-b-r6,0,0,0,1,,,645639,645639,442296,0,0,blocked; needs new high-level description before more RTL generation
+ex299,unknown,unknown-b-r6,0,0,0,2,,,2604734,2604734,1013807,0,0,blocked; needs new high-level description before more RTL generation

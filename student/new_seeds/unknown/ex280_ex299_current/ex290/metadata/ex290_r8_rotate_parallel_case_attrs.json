@@ -1,0 +1,22 @@
+{
+  "adp": 61264,
+  "aig_sha256": "d5e85b7fa77a5ca83c46e10a1233d7187eff5ceecca0398412464bb742a4a75c",
+  "area": 4376,
+  "bundle_type": "current",
+  "candidate_id": "ex290_r8_rotate_parallel_case_attrs",
+  "case": "ex290",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "Source-preserving parallel_case attrs may compress nested rotate-split decode without changing semantics.",
+  "method_signature": "ex290|global_state_rotate_split_source_attrs|parallel_case|rotate_high_split_nested_cases|yosys_synth_preset|official_evaluate|all_outputs",
+  "reference_adp": 42328,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex290/aigs/ex290_r8_rotate_parallel_case_attrs.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex290/logs/ex290_r8_rotate_parallel_case_attrs.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex290/verilog/ex290_r8_rotate_parallel_case_attrs.v",
+  "variant": "",
+  "verilog_sha256": "5d0b0fce2b5f28419dd1940eb7aaa9b7a9658fcb3d2fadc12837cfa8c35a81b9"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 22474,
+  "aig_sha256": "f49bad5795c936083025e272160a289f24fc7a91068be2e390e7423fe88e0753",
+  "area": 1322,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex286_bdd_3o_f11_outside_in_mid_0_1_10_onehot",
+  "case": "ex286",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "",
+  "method_signature": "ex286|hamming_weight_preserving_lossy_routing_normalizer|outer_bitset_symcof_dc_bdd_3o_f11_outside_in_mid_onehot|outer_bits_0:1:10|yosys_abc_g_aig|abc_xf_official_evaluate|full_word_class_mux",
+  "reference_adp": 2376,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/subagent-ex286-bdd/ex286/aigs/ex286_bdd_3o_f11_outside_in_mid_0_1_10_onehot.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex286_ex287_frontend_structural_decomp_20260614_2320/agent_shards/subagent-ex286-bdd/evaluation_results.csv",
+  "source_evaluate_log": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/subagent-ex286-bdd/ex286/logs/ex286_bdd_3o_f11_outside_in_mid_0_1_10_onehot.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex286_ex287_frontend_structural_decomp_20260614_2320",
+  "source_verilog_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/subagent-ex286-bdd/ex286/verilog/ex286_bdd_3o_f11_outside_in_mid_0_1_10_onehot.v",
+  "variant": "",
+  "verilog_sha256": "557a0fa0f1e65258a0866b6f5995f936ff2f2c21ac3e22329d8daaccbfd2b5eb"
+}

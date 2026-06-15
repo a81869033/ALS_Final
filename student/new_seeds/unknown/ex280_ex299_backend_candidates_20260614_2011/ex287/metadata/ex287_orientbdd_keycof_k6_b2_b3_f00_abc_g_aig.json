@@ -1,0 +1,22 @@
+{
+  "adp": 24675,
+  "aig_sha256": "21d543ca89d0f8d06b3f3c5cec63f6211e226ccd469ce2ee1a8fa4fa801c6c0d",
+  "area": 1645,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex287_orientbdd_keycof_k6_b2_b3_f00_abc_g_aig",
+  "case": "ex287",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "output_image_pair_count_orientation_encoded_symmetry_key_cofactor_bdd",
+  "method_signature": "ex287|hamming_weight_preserving_lossy_routing_normalizer|output_image_adjacent_pair_count_component_orientation|symmetry_key_k6_b2_b3_cofactor_bdd_policy_f00|fixed_decoder|yosys_abc_g_aig|abc_xf_official_evaluate",
+  "reference_adp": 5782,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-orientbdd-r1/ex287/aigs/ex287_orientbdd_keycof_k6_b2_b3_f00_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-orientbdd-r1/ex287/logs/ex287_orientbdd_keycof_k6_b2_b3_f00_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex286_ex287_frontend_structural_decomp_20260614_2320",
+  "source_verilog_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-orientbdd-r1/ex287/verilog/ex287_orientbdd_keycof_k6_b2_b3_f00.v",
+  "variant": "k6_b2_b3_f00/abc_g_aig",
+  "verilog_sha256": "48fe6c99d27e71e27c60d01d81de6b8d187da214ed778b9ffa1153d4d76b9a13"
+}

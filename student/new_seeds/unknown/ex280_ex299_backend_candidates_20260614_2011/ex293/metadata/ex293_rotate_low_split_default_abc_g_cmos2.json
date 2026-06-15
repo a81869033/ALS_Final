@@ -1,0 +1,22 @@
+{
+  "adp": 149364,
+  "aig_sha256": "dd19d13062da0fd765b71327ce3f22b492256a0c980d24d4e3a92e32a741f9f2",
+  "area": 8298,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex293_rotate_low_split_default_abc_g_cmos2",
+  "case": "ex293",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "unknown_15x15",
+  "method_signature": "unknown_15x15",
+  "reference_adp": 112966,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320/ex293/aigs/ex293_rotate_low_split_default_abc_g_cmos2.aig",
+  "source_csv": "student/runs/unknown/ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320",
+  "source_verilog_path": "student/work/reverse_unknown_20260603_1812/ex293/verilog/ex293_unknown_15x15_rotate_low_split_default.v",
+  "variant": "abc_g_cmos2",
+  "verilog_sha256": "22f42ceea2fd5853f39fcf2133320016e4b059ed4000d9a6c0e43dcfcec87ae9"
+}

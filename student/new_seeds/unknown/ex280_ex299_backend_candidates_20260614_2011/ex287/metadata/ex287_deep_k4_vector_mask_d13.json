@@ -1,0 +1,22 @@
+{
+  "adp": 27200,
+  "aig_sha256": "bb016922cc2b55b212ad1e309ee45b824be7b1406393c8a0d2c4165f1a2f3152",
+  "area": 1700,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex287_deep_k4_vector_mask_d13",
+  "case": "ex287",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "hamming_weight_preserving_lossy_routing_normalizer",
+  "method_signature": "ex287|hamming_weight_preserving_lossy_routing_normalizer|symcof_outer_k4_vector_mask_flat_or|class vector masks over lower-area k4 group BDD cofactors|yosys_abc_g_aig_d13|abc_xf_official_evaluate|full_word_vector_mask_or",
+  "reference_adp": 5782,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-ex287-agent/ex287/aigs/ex287_deep_k4_vector_mask_d13.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/unknown-ex287-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-ex287-agent/ex287/logs/ex287_deep_k4_vector_mask_d13.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-ex287-agent/ex287/verilog/ex287_deep_k4_vector_mask_d13.v",
+  "variant": "symcof_outer_k4_vector_mask_flat_or",
+  "verilog_sha256": "c4700366ed1ecd1c0c289c4ee15a53c7fd2456647efc29232399386d1556eb49"
+}

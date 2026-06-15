@@ -1,0 +1,20 @@
+case,domain,round8_candidates,round8_best_candidate,round8_best_adp,frontend_best_adp_after,reference_adp,round8_improved_frontend,beats_reference,next_recommendation
+ex204,bf16,0,,,25670,15180,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex205,bf16,0,,,71104,47128,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex218,bf16,0,,,6071,3222,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex223,fp16,0,,,203756,120549,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex225,fp16,1,ex225_outputcofactor_hi8_low8_abc_g_aig,392428,218728,116676,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex240,float_fp8,0,,,30090,13299,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex244,float_fp8,3,ex244_semantic_hypot_delta_maxeff_bdd_mixed_synth_preset_aig,10506,10234,4272,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex246,float_fp8,3,ex246_semantic_mul_sigprodcode_residual_seed12_synth_preset_aig,7644,7502,2805,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex247,float_fp8,2,ex247_semantic_div_bound_smallpat_split_den_r16_abc_and,8808,8349,2975,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex249,float_fp8,2,ex249_semantic_hypot_rawexp_grouped_delta_bits_r16_abc_and,5152,4368,2079,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex260,integer,4,ex260_r16_baugh_wooley_wallace_rev_rhcla4_synth_preset_d9,1218,1144,657,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex266,integer,4,ex266_r16_cof_bhi2_a4_threshold_wordmux_abc_g_aig,6620,1480,848,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex270,integer,1,ex270_r16_dadda_square_csel4_abc_g_aig,4356,3230,2076,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex274,integer,4,ex274_r16_hybrid_bddtop2_trunc_factored_abc_g_aig,58240,41370,21630,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex276,integer,2,ex276_r16_radix4_wires_synth_preset_d8,1581,1010,632,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex286,unknown,2,ex286_r16_output_gray_neighbor_shared_bdd_known_pairs_then_outside_in_abc_g_aig,298935,20190,2376,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex287,unknown,2,ex287_r16_output_gray_neighbor_shared_bdd_known_pairs_then_outside_in_abc_g_aig,678912,27480,5782,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex297,unknown,2,ex297_r16_descriptor_key_split_abc_g_aig,741426,569592,225900,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex299,unknown,2,ex299_r16_cell_pairs_grouped_bdd_abc_g_aig,3097198,2487261,1013807,0,0,gap remains; continue only with materially different high-level sharing/representation

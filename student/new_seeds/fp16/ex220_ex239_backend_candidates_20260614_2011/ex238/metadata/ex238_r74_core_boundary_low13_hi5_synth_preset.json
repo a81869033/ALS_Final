@@ -1,0 +1,22 @@
+{
+  "adp": 23520,
+  "aig_sha256": "c810805a9d630f3c05f77fde59e9326abd13b27a4865d165efb07951d72299aa",
+  "area": 1470,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex238_r74_core_boundary_low13_hi5_synth_preset",
+  "case": "ex238",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal_cube",
+  "method_signature": "ex238|fp16_reciprocal_cube_boundary_alt|boundary_low13_hi5|semantic_core_plus_boundary_table|yosys_synth_preset|abc_xf_official_evaluate|boundary_table_alt_cut",
+  "reference_adp": 16549,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round74_20260613_1439/sub-fp16-r74/ex238/aigs/ex238_r74_core_boundary_low13_hi5_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1439/agent_shards/sub-fp16-r74/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round74_20260613_1439",
+  "source_verilog_path": "student/work/frontend_source_parallel_round74_20260613_1439/sub-fp16-r74/ex238/verilog/ex238_r74_core_boundary_low13_hi5.v",
+  "variant": "r74_core_boundary_low13_hi5",
+  "verilog_sha256": "a54145f4ecab6a46b64889c550a86eacb0e4f9b3676c3685c2cef2ca223462bc"
+}

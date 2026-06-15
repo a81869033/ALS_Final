@@ -1,0 +1,22 @@
+{
+  "adp": 245157,
+  "aig_sha256": "196c60fe99afd9e05cf8eb7ed04072b4359078113893e89be25936c3731821f8",
+  "area": 10659,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_r9_alt_odd_planes_synth_preset",
+  "case": "ex294",
+  "delay": 23,
+  "domain": "unknown",
+  "hypothesis": "Odd-plane donor selection tests whether the mod4 grouped source is cheaper for the complement band after synth-preset.",
+  "method_signature": "ex294|global_state_output_plane_overlay|const_alt_odd_planes_synth_preset|base_plus_mod4_odd_planes_no_route_mux|yosys_synth_flatten_abc_g_aig|official_evaluate|odd_outputs",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/aigs/ex294_r9_alt_odd_planes_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-wide-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/logs/ex294_r9_alt_odd_planes_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/verilog/ex294_r9_alt_odd_planes_synth_preset.v",
+  "variant": "constant mod4 donor on odd planes, synth-preset flow",
+  "verilog_sha256": "8cc78740424996eb1899f3cc76b4c7f8e021c2e82d24cef7bf7b936e146dfc6b"
+}

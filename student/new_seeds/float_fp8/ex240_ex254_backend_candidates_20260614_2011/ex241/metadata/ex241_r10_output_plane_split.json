@@ -1,0 +1,22 @@
+{
+  "adp": 15979,
+  "aig_sha256": "2c046517e888ec0fa04b527c1beedc9f99252bc5c0cb2e2683a21a8e57f5a07e",
+  "area": 551,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex241_r10_output_plane_split",
+  "case": "ex241",
+  "delay": 29,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex241|E4M3FN packed multiply high byte times low byte|current source wrapped into high/mid/low output planes with kept plane wires|keeps the current core but asks Yosys to preserve separate output plane boundaries|plane_split_aig|official_evaluate|frontend_only",
+  "reference_adp": 7224,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex241/aigs/ex241_r10_output_plane_split.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r10/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex241/logs/ex241_r10_output_plane_split.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex241/verilog/ex241_r10_output_plane_split.v",
+  "variant": "current source wrapped into high/mid/low output planes with kept plane wires",
+  "verilog_sha256": "16838b2a11512ee591ddbe0abf8dd7b6c553c4bc57ecc8ccd25cac61d6f76468"
+}

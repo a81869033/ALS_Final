@@ -1,0 +1,22 @@
+{
+  "adp": 13203,
+  "aig_sha256": "9faa04eb7b53a84d8058ced3b6ca3006a500eefecaa77446f16e3d6348b19161",
+  "area": 489,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex264_smul_baugh_wooley_wallace_hcla4_synth_preset_d11",
+  "case": "ex264",
+  "delay": 27,
+  "domain": "integer",
+  "hypothesis": "signed low8_high8:a*b",
+  "method_signature": "signed low8_high8:a*b",
+  "reference_adp": 9724,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex260_ex264_frontend_smul_delay_target_20260609_0555/ex264/aigs/ex264_smul_baugh_wooley_wallace_hcla4_synth_preset_d11.aig",
+  "source_csv": "student/runs/integer/ex260_ex264_frontend_smul_delay_target_20260609_0555/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex260_ex264_frontend_smul_delay_target_20260609_0555",
+  "source_verilog_path": "student/work/ex260_ex264_frontend_smul_delay_target_20260609_0555/ex264/verilog/ex264_smul_baugh_wooley_wallace_hcla4.v",
+  "variant": "baugh_wooley_wallace_hcla4+synth_preset_d11",
+  "verilog_sha256": "b9a8c49cb21db5cf824cf6fe4e9850c3f4f551cd7a08a55431cffa32d2bd1443"
+}

@@ -1,0 +1,12 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex246,BLOCKED_NO_CANDIDATE,not_run,BLOCKED_NO_CANDIDATE,,,ex200_ex299_frontend_refgap_round18_20260612_2321,no Verilog candidate existed at checkpoint
+ex247,BLOCKED_NO_CANDIDATE,not_run,BLOCKED_NO_CANDIDATE,,,ex200_ex299_frontend_refgap_round18_20260612_2321,no Verilog candidate existed at checkpoint after moving from ex246
+ex287,,,BLOCKED_NO_CANDIDATE,student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-flow-r18/ex287/logs/no_candidate.log,,ex200_ex299_frontend_refgap_round18_20260612_2321,No RTL emitted
+ex286,,,BLOCKED_NO_CANDIDATE,student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-flow-r18/ex286/logs/no_candidate.log,,ex200_ex299_frontend_refgap_round18_20260612_2321,No RTL emitted
+ex223,ex223_round18_blocked_no_candidate,not_run,not_run,,fpbf-alt-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,No Verilog emitted; diagnostic-backed blocker only.
+ex218,ex218_round18_blocked_no_candidate,not_run,not_run,,fpbf-alt-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,No Verilog emitted; diagnostic-backed blocker only.
+ex266,ex266_udiv_trialborrow_prefix_yosys_abc_g_and,official_evaluate_py,,,integer-near-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,official evaluate.py OK is the validity evidence
+ex260,ex260_smul_factored_correction_shallow_yosys_abc_g_and,none,,,integer-near-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,official evaluate.py pending after checkpoint file-first write
+ex260,ex260_smul_factored_correction_shallow_yosys_abc_g_and,official_evaluate_py,,,integer-near-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,official evaluate.py OK is the validity evidence
+ex299,BLOCKED_NO_CANDIDATE,truth_diagnostic,BLOCKED_NO_CANDIDATE,student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-state-r18/ex299/notes/ex299_r18_recurrence_blocker.md,unknown-state-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,no Verilog emitted; diagnostic only
+ex295,BLOCKED_NO_CANDIDATE,truth_diagnostic,BLOCKED_NO_CANDIDATE,student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-state-r18/ex295/notes/ex295_r18_recurrence_blocker.md,unknown-state-r18,ex200_ex299_frontend_refgap_round18_20260612_2321,no Verilog emitted; diagnostic only

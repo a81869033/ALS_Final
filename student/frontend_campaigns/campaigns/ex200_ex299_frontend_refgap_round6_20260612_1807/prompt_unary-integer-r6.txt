@@ -1,0 +1,9 @@
+Work in /home/b10507053/ALS_Final_Project. Run ID `ex200_ex299_frontend_refgap_round6_20260612_1807`. You are not alone in the codebase; do not revert or overwrite other sessions. The coordinator has logged this exact prompt in prompt_log.md; do not append it again unless you receive new user input in your own thread.
+
+Read before work: AGENTS.md, student/docs/experiment_run_workflow.md, student/frontend_campaigns/GOAL.md, student/frontend_campaigns/FRONTEND_PROGRESS.md, student/frontend_campaigns/frontend_best_registry.csv, student/frontend_campaigns/current_frontend_gap.csv, round5 COORDINATOR_REPORT.md and results/failed_hypotheses.csv, then only your assigned case_index/exNNN.md and linked notes. Check method_judgments.csv/manual_judgments.csv/hypothesis_bank.csv filtered to your cases.
+
+Hard constraints: official success only via repo evaluate.py; iverilog is debug only; no old ex280-specific script; no low-value/do_not_repeat_as_is repeats without material method_signature change; do not put unverified candidates in best_improvements; write complete shard CSV rows and summary. Output only under campaign agent_shards/agent_summaries plus student/work/ex200_ex299_frontend_refgap_round6_20260612_1807/<agent_id>/<case>/ and student/runs/<domain>/ex200_ex299_frontend_refgap_round6_20260612_1807/<agent_id>/<case>/.
+
+Primary task: produce one official evaluate.py candidate if you have a materially new exact hypothesis. If not, write exact blocker rows explaining which signatures/notes block further generation. Reply after first official row or blocker.
+
+Agent id: unary-integer-r6. Cases: ex225, ex223, ex200, ex260, ex266, ex256. These are lower expected return but still high gap. Avoid full bitrun predicates, sparse residual/nested runs, high-level sign-extend/corrrow, threshold divider, and known Wallace/Dadda/CSA replay. Only try a materially new semantic normalizer or arithmetic sharing structure; otherwise write blocker rows.

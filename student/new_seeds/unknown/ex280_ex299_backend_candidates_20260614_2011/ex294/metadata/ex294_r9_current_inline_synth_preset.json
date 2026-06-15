@@ -1,0 +1,22 @@
+{
+  "adp": 221865,
+  "aig_sha256": "6a20aa66d9926bc9c3dddd35678bf65e709d86b12c728d593ee73182a4bccde8",
+  "area": 10565,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_r9_current_inline_synth_preset",
+  "case": "ex294",
+  "delay": 21,
+  "domain": "unknown",
+  "hypothesis": "Removing the direct wrapper around the r8 best flow may expose the octant descriptor top to synth-preset sharing.",
+  "method_signature": "ex294|global_state_octant_descriptor_cofactor|inline_current_source_flow_probe|direct_renamed_current_source|yosys_synth_flatten_abc_g_aig|official_evaluate|all_outputs",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/aigs/ex294_r9_current_inline_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-wide-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/logs/ex294_r9_current_inline_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex294/verilog/ex294_r9_current_inline_synth_preset.v",
+  "variant": "inline renamed r81 octant descriptor source, synth-preset flow",
+  "verilog_sha256": "dd4fb397d35913527100f29a0b2963755558dac139680a35c773741596ec1690"
+}

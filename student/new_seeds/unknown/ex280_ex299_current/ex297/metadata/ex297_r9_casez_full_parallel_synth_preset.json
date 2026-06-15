@@ -1,0 +1,22 @@
+{
+  "adp": 419008,
+  "aig_sha256": "451e6779225abc55471883f01de780f7101a7e3102fd359a4fe74d1edd339668",
+  "area": 26188,
+  "bundle_type": "current",
+  "candidate_id": "ex297_r9_casez_full_parallel_synth_preset",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "casez plus full/parallel decode attributes may compress the huge cell/bit source under synth-preset, unlike r8 default flow ties.",
+  "method_signature": "ex297|cyclic_2bit_selector_state_paired_classes|casez_full_parallel_synth_preset|cell_bit_template_case_boundary_attrs|yosys_synth_flatten_abc_g_aig|official_evaluate|cell_pair_outputs",
+  "reference_adp": 225900,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex297/aigs/ex297_r9_casez_full_parallel_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex297/logs/ex297_r9_casez_full_parallel_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex297/verilog/ex297_r9_casez_full_parallel_synth_preset.v",
+  "variant": "",
+  "verilog_sha256": "51ff4eada9986a5ed2fa11e75280e3a4fec917ed1096b5a5c3f0e1608289f4bf"
+}

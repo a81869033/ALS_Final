@@ -1,0 +1,22 @@
+{
+  "adp": 4032,
+  "aig_sha256": "7a935d147fc648ecae1052d4871024913a74f08f7dc17602c68381c1f91a89ae",
+  "area": 336,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex267_r9_q54_range_overlay_optfull",
+  "case": "ex267",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex267|unsigned_low6_high6_divide_with_dbz_saturation|current_hybrid_wordmux_with_q5/q4_replaced_by_shared_a>=b*M_range_predicates|share_b*16/b*32/b*48_compare_descriptors_for_the_winning_top_two_quotient_bits|optfull_aig|official_evaluate_py|frontend_only",
+  "reference_adp": 2651,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex267/aigs/ex267_r9_q54_range_overlay_optfull.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex267/logs/ex267_r9_q54_range_overlay_optfull.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r9/ex267/verilog/ex267_r9_q54_range_overlay_optfull.v",
+  "variant": "current hybrid wordmux with q5/q4 replaced by shared a>=b*M range predicates",
+  "verilog_sha256": "b3c260f350f7b75dd9234a1423ac260e5c5746ff707ad3490374c39e14ed3c6e"
+}

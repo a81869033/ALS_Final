@@ -1,0 +1,22 @@
+{
+  "adp": 1628,
+  "aig_sha256": "727f3f6e071cac8412bb38929c3f62579850d9d3dcf2c4e072938c24e76f08dc",
+  "area": 148,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex266_r24_int_highgap_udiv_ex266_hybrid_top1_b2a4_synth_preset_d10",
+  "case": "ex266",
+  "delay": 11,
+  "domain": "integer",
+  "hypothesis": "unsigned divider hybrid top-bit flow neighbor",
+  "method_signature": "ex266|unsigned divider hybrid top-bit flow neighbor|top quotient bit deeper cofactor and low-bit shallow cofactor|shared low/top quotient BDD groups with delay-target flow|synth_preset_d10|unsigned_low5_high5_div_dbz_sat|quotient word",
+  "reference_adp": 848,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex266/aigs/ex266_r24_int_highgap_udiv_ex266_hybrid_top1_b2a4_synth_preset_d10.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round24_20260613_0435/agent_shards/mixed-r24/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex266/logs/ex266_r24_int_highgap_udiv_ex266_hybrid_top1_b2a4_synth_preset_d10.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round24_20260613_0435",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex266/verilog/ex266_r24_int_highgap_udiv_ex266_hybrid_top1_b2a4.v",
+  "variant": "udiv_ex266_hybrid_top1_b2a4",
+  "verilog_sha256": "97061de37d8de821208c5d2a6fe5b9a5ad4957602886f2cad3906ae0d31a591b"
+}

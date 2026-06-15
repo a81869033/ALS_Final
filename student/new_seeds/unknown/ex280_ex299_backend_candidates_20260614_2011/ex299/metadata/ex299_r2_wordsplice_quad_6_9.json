@@ -1,0 +1,22 @@
+{
+  "adp": 1774260,
+  "aig_sha256": "669c8f6e91f78cd1165c97b6d5a7ccf43293666cd0e9e2ccbad6939ee0676914",
+  "area": 98570,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex299_r2_wordsplice_quad_6_9",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "make the current quad splice explicit as a packed word descriptor",
+  "method_signature": "ex299|two_level_shared_descriptor|wordsplice_quad_6_9|packed_base_celllocal_base_concat|yosys_internal_abc_g_aig|official_evaluate",
+  "reference_adp": 1013807,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex299-breakthrough-r2/ex299/aig/ex299_r2_wordsplice_quad_6_9.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/ex299-breakthrough-r2/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex299-breakthrough-r2/ex299/logs/ex299_r2_wordsplice_quad_6_9.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex299-breakthrough-r2/ex299/verilog/ex299_r2_wordsplice_quad_6_9.v",
+  "variant": "single concatenation of high base, celllocal quad, and low base",
+  "verilog_sha256": "a0b16b7cc9191cfae2361858bebf9a921a63081ce7736c31cc21b1f85ebe7af2"
+}

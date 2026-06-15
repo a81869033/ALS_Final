@@ -1,0 +1,22 @@
+{
+  "adp": 7266,
+  "aig_sha256": "35cfa2723ebf700ebc543fc9e6e3a9cfd746a115190deb413852a16502e3dfa0",
+  "area": 519,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex278_isqrt_prefix5_bitwise_oh_abc_g_aig",
+  "case": "ex278",
+  "delay": 14,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 5198,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618/ex278/aigs/ex278_isqrt_prefix5_bitwise_oh_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618",
+  "source_verilog_path": "student/work/ex275_ex279_frontend_isqrt_new_structures_all_20260609_1618/ex278/verilog/ex278_isqrt_prefix5_bitwise_oh.v",
+  "variant": "prefix5_bitwise_oh+abc_g_aig",
+  "verilog_sha256": "684e3e7072d37521afe8f852f9ae2ec0f8e005070c7d1da8b41fd0254b0b6ac9"
+}

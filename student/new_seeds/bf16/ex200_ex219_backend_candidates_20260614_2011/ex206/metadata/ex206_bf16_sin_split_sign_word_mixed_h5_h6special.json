@@ -1,0 +1,22 @@
+{
+  "adp": 566979,
+  "aig_sha256": "62a7d85ace0aa8594b73a3b32945f7a30c942d06e34def0f390aee8bc929a40e",
+  "area": 26999,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex206_bf16_sin_split_sign_word_mixed_h5_h6special",
+  "case": "ex206",
+  "delay": 21,
+  "domain": "bf16",
+  "hypothesis": "bf16_sin",
+  "method_signature": "bf16_sin",
+  "reference_adp": 539049,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/archive/cleanup_20260606/ex205_ex209_frontend_bf16_semantic_20260606_0946_low_value_intermediates/student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex206/aigs/ex206_bf16_sin_split_sign_word_mixed_h5_h6special.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex205_ex209_frontend_bf16_semantic_20260606_0946",
+  "source_verilog_path": "student/archive/cleanup_20260606/ex205_ex209_frontend_bf16_semantic_20260606_0946_low_value_intermediates/student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex206/verilog/ex206_bf16_sin_split_sign_word_mixed_h5_h6special.v",
+  "variant": "split_sign_word_mixed_h5_h6special",
+  "verilog_sha256": "7c9f5363633dad6d62e3e5413866a9a1e4aea6ad422c8c2e56580eed31ecd210"
+}

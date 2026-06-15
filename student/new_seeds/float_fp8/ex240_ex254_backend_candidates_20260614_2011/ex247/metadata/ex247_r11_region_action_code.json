@@ -1,0 +1,22 @@
+{
+  "adp": 6578,
+  "aig_sha256": "46ef62770ffb2f38bc2880a153da378778f2235b4bf79ace76bb11ef1b04401f",
+  "area": 253,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r11_region_action_code",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|encode zero/low/sat/linear region then decode magnitude|one small region action is shared by all magnitude output bits|abc_g_aig_frontend|official_evaluate|full_word",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex247/aigs/ex247_r11_region_action_code.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-tail-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex247/logs/ex247_r11_region_action_code.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex247/verilog/ex247_r11_region_action_code.v",
+  "variant": "encode zero/low/sat/linear region then decode magnitude",
+  "verilog_sha256": "f0f26c33020fd45e96d427e439250d2fd9c3e6ea6f8fe42bdebe0911dc163371"
+}

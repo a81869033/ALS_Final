@@ -1,0 +1,22 @@
+{
+  "adp": 7857,
+  "aig_sha256": "6be3970452a4e7508ca4e04d0bc6bf53b011560c685c05db24696435b618f3f8",
+  "area": 291,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex248_r6_numden_range_shell_core",
+  "case": "ex248",
+  "delay": 27,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex248|E5M2FN packed fmod low mod high|direct numerator denominator range partition shell|shared NaN divisor-zero numerator-zero less-than and equality predicates around current periodic residual core|abc_g_aig_frontend|official_evaluate|numden_range_shell_core",
+  "reference_adp": 4180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r6/ex248/aigs/ex248_r6_numden_range_shell_core.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-source-r6/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r6/ex248/logs/ex248_r6_numden_range_shell_core.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r6/ex248/verilog/ex248_r6_numden_range_shell_core.v",
+  "variant": "num/den range partition plus residual core",
+  "verilog_sha256": "4dde3ea4803928b274c6c25d95b8a4aaad19739d6d6a73bf433344b6613a0d97"
+}

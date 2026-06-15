@@ -51,3 +51,22 @@ Useful Structure:
 - For ex200, trying to lower source-level table entries generally raises delay
   or duplicates decode logic; the best area/delay tradeoff remains direct
   active mantissa cases under semantic defaults.
+
+## 2026-06-13 bf16-r22 round22 outcome
+
+Run ID: `ex200_ex299_frontend_refgap_round22_20260613_0218`, agent `bf16-r22`.
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/bf16-r22/ex200/dossiers/ex200_round22_dossier.md`.
+- Evidence: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/bf16-r22/ex200/diagnostics/ex200_round22_blocker_evidence.md`.
+- Method signature: `ex200|bf16_exp_round22_new_normalizer|no_candidate|shared_sign_exp_default_one_review|not_run|DAZ_exp_BF16_RNE_FTZ|blocked`.
+- Outcome: `BLOCKED_NO_CANDIDATE`; no Verilog candidate was generated because available round22 generator families would replay prior exact bad-QoR variants or known non-equivalent field splitting.
+- Next action: only revisit with a materially new exponent/mantissa normalizer or a proven shallow selected-bit formula for BF16 exp.
+
+## 2026-06-14 bf16-extra-r2 continuation outcome
+
+Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `bf16-extra-r2`.
+
+- Tried field residual, mant64 delta-pair residual, and capped exact decision-graph bit14 residual families under `student/work/ex204_ex299_frontend_continuation_20260614_1216/bf16-extra-r2/ex200/`.
+- Official `evaluate.py` OK candidates: `ex200_r2_sepfield_e4m3s0_b14bh2` at `3650/16/58400` and `ex200_r2_delta_m64h2_b15bh2` at `3658/20/73160`; neither improved current frontend ADP `54405`.
+- Failed direction: `ex200_r2_dg_delta_m64h2_b14` exceeded the exact decision-graph cap (`>6000` nodes) before Verilog emission.
+- Shard CSVs: `student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/bf16-extra-r2/`.

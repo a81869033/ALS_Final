@@ -1,0 +1,22 @@
+{
+  "adp": 16566,
+  "aig_sha256": "9cf4df5e55d745be19be301d902262e09c9c39f73df439b53dda69334e58d324",
+  "area": 502,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex272_square_wallace_square_outside_csel4_synth_preset_d20",
+  "case": "ex272",
+  "delay": 33,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex272|square_final_carry_variants|wallace_square_outside_csel4|one_triangular_cross_term_per_pair_with_alternate_carry-select/counter_sharing|synth_preset_d20|unsigned_12_square|full_square_word",
+  "reference_adp": 10880,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/runs/integer/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/official_eval/ex272_square_wallace_square_outside_csel4_synth_preset_d20/ex272.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/integer-extra-r2/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/logs/ex272_square_wallace_square_outside_csel4_synth_preset_d20.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex272/verilog/ex272_square_wallace_square_outside_csel4.v",
+  "variant": "square-column final-carry variants excluding current csel5 replay",
+  "verilog_sha256": "15c0174629552b117e903714de04e2316cb548fb8436b65005396cdc5496b3c0"
+}

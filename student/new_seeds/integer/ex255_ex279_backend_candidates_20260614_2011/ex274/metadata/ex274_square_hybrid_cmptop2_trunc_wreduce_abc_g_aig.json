@@ -1,0 +1,22 @@
+{
+  "adp": 41496,
+  "aig_sha256": "de896917ad8abed2baffc340181b9c540efa683cbfb915c760fdfe14181350a3",
+  "area": 988,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex274_square_hybrid_cmptop2_trunc_wreduce_abc_g_aig",
+  "case": "ex274",
+  "delay": 42,
+  "domain": "integer",
+  "hypothesis": "unsigned_square_x_times_x",
+  "method_signature": "unsigned_square_x_times_x",
+  "reference_adp": 21630,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex273_ex274_frontend_square_cmptop_trunc_20260609_1345/ex274/aigs/ex274_square_hybrid_cmptop2_trunc_wreduce_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex273_ex274_frontend_square_cmptop_trunc_20260609_1345/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex273_ex274_frontend_square_cmptop_trunc_20260609_1345",
+  "source_verilog_path": "student/work/ex273_ex274_frontend_square_cmptop_trunc_20260609_1345/ex274/verilog/ex274_square_hybrid_cmptop2_trunc.v",
+  "variant": "hybrid_cmptop2_trunc+wreduce_abc_g_aig",
+  "verilog_sha256": "2e70b964a9262bd910491963654afa287a451eae5c2a644bb2c66ea8479a4580"
+}

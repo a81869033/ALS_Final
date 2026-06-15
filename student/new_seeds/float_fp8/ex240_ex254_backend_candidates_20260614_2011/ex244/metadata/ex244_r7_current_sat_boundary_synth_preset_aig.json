@@ -1,0 +1,22 @@
+{
+  "adp": 10540,
+  "aig_sha256": "444f498702a864b20646b1f929fe6c16c5236c2ab87e0c4ef8ab655593fddb27",
+  "area": 310,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex244_r7_current_sat_boundary_synth_preset_aig",
+  "case": "ex244",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex244|fp8_source_r7|current_sat_boundary|current_bdd_with_explicit_inc_saturation_boundary|synth_preset_aig|official_evaluate",
+  "reference_adp": 4272,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex244/aigs/ex244_r7_current_sat_boundary_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-source-r7/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex244/logs/ex244_r7_current_sat_boundary_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex244/verilog/ex244_r7_current_sat_boundary.v",
+  "variant": "current_maxeff_bdd_boundary_regroup",
+  "verilog_sha256": "418cddd2f74d7ad85dc8c1d347cc84b8b7eb086591c3ce15fb0e52d7f8fb9213"
+}

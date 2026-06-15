@@ -52,3 +52,10 @@ out to be packed FP4/INT2 arithmetic, not plain FP8 conversion/add.
   ex250 `413/41/16933`, ex253 `126/18/2268`, and ex254 `662/55/36410`.
   Earlier replay also returned OK for ex251 `495/38/18810` and ex252
   `145/21/3045`.
+- 2026-06-12 Round12 `fp8-resid-r12` checked an ex253 residual output-grouping
+  variant: low/high bit popcounts feeding direct `(hi_count,lo_count)`
+  threshold predicates and grouped E4M3 output ranges, instead of the retained
+  reachable lane-sum qcase.  Official `evaluate.py` returned OK at
+  `193/21/4053`, so the idea is exact but worse than the current ex253
+  frontend `126/18/2268`.  Record this as a non-improving structural row; do
+  not repeat direct count-threshold grouping unchanged.

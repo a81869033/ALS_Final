@@ -1,0 +1,47 @@
+round,run_id,agent_id,case,domain,candidate_id,log_path,simulation_pass,notes,simulator,status,simulation_status
+round75,frontend_source_parallel_round75_20260613_1507,sub-fp16-r75,ex225,,ex225_r75_hi12_runs_low12_mtbdd_abc_g_aig,,,official evaluate.py used for final equivalence; no RTL debug mismatch required iverilog,iverilog,not_run,
+round75,frontend_source_parallel_round75_20260613_1507,sub-fp16-r75,ex225,,ex225_r75_hi8_runs_low8_mtbdd_abc_g_aig,,,official evaluate.py used for final equivalence; no RTL debug mismatch required iverilog,iverilog,not_run,
+round75,frontend_source_parallel_round75_20260613_1507,sub-fp16-r75,ex223,,ex223_r75_hi12_runs_low12_mtbdd_abc_g_aig,,,official evaluate.py used for final equivalence; no RTL debug mismatch required iverilog,iverilog,not_run,
+round75,frontend_source_parallel_round75_20260613_1507,sub-fp16-r75,ex223,,ex223_r75_hi8_runs_low8_mtbdd_abc_g_aig,,,official evaluate.py used for final equivalence; no RTL debug mismatch required iverilog,iverilog,not_run,
+,,sub-fp8-mid-r75,ex249,float_fp8,ex249_r75_clustered_po_tail,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex249,float_fp8,ex249_r75_effgap_active_shell,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex241,float_fp8,ex241_r75_zero_product_bypass,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex241,float_fp8,ex241_r75_po_clustered_product,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex240,float_fp8,ex240_r75_inline_select_po,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex240,float_fp8,ex240_r75_clustered_po_tail,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex245,float_fp8,ex245_r75_zero_pair_shell,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-mid-r75,ex245,float_fp8,ex245_r75_po_clustered_gapclass,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-fp8-worst-r75,ex247,float_fp8,ex247_r75_div_low2_graft,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex247,float_fp8,ex247_r75_div_hi5_graft,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex247,float_fp8,ex247_r75_shell_low2_cluster,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex247,float_fp8,ex247_r75_shell_hi5_cluster,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex246,float_fp8,ex246_r75_product_mant2_graft,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex246,float_fp8,ex246_r75_product_exp5_graft,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex246,float_fp8,ex246_r75_shell_mant2_cluster,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex246,float_fp8,ex246_r75_shell_exp5_cluster,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex244,float_fp8,ex244_r75_delta_low2_graft,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-fp8-worst-r75,ex244,float_fp8,ex244_r75_delta_high5_graft,,not_run,iverilog skipped; official evaluate.py is the acceptance check,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_baugh_wooley_wallace_csel2_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_baugh_wooley_wallace_csel2_synth_preset_d13,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_baugh_wooley_wallace_csel3_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_baugh_wooley_wallace_csel3_synth_preset_d13,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_baugh_wooley_wallace_csel4_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_baugh_wooley_wallace_csel4_synth_preset_d13,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_booth_radix4_csa_cla_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex260,integer,ex260_smul_booth_radix4_csa_cla_synth_preset_d13,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_ex266_cof_bhi2_a4_comp_wordmux_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_ex266_cof_bhi2_a4_comp_wordmux_synth_preset_d10,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_ex266_cof_bhi2_a4_tree_wordmux_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_ex266_cof_bhi2_a4_tree_wordmux_synth_preset_d10,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_radix4_top2_shift_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_radix4_top2_shift_synth_preset_d10,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_shift_subtract_narrow_abc_g_aig,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,sub-integer-r75,ex266,integer,ex266_udiv_shift_subtract_narrow_synth_preset_d10,,not_run,official evaluate.py used; no iverilog debug needed,,,
+,,,ex297,,ex297_r75_pairsel_uncond_sel2_midcluster,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex297,,ex297_r75_pairsel_uncond_sel2_dualcluster,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex299,,ex299_r75_sel2_uncond_pairsel_tailcluster,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex299,,ex299_r75_sel2_uncond_pairsel_lowtail,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex285,,ex285_r75_tree_symcof_edge_routebits,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex285,,ex285_r75_tree_delta_lane_bits,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex288,,ex288_r75_keybdd_delta_lane_bits,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run
+,,,ex288,,ex288_r75_keybdd_symcof_edge_bits,,,iverilog skipped; official evaluate.py used for acceptance,,,not_run

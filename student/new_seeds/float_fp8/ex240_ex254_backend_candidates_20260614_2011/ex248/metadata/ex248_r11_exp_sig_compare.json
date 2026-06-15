@@ -1,0 +1,22 @@
+{
+  "adp": 7830,
+  "aig_sha256": "5066079ea6fb51b2cab1871bec1a01dee500bc085288a5317f44933c1578219a",
+  "area": 290,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex248_r11_exp_sig_compare",
+  "case": "ex248",
+  "delay": 27,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex248|E5M2FN packed fmod low by high|replace flat 7-bit num<den comparator with exponent/significand comparator|high exponent compare gates the low two-bit compare before the periodic core|abc_g_aig_frontend|official_evaluate|full_word",
+  "reference_adp": 4180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex248/aigs/ex248_r11_exp_sig_compare.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-tail-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex248/logs/ex248_r11_exp_sig_compare.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-tail-r11/ex248/verilog/ex248_r11_exp_sig_compare.v",
+  "variant": "replace flat 7-bit num<den comparator with exponent/significand comparator",
+  "verilog_sha256": "a2049beb3be8ad30829357a3340a9082d2589d04c15254ec83f070812415ca66"
+}

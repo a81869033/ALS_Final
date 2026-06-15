@@ -1,0 +1,25 @@
+case,domain,agent_id,candidate_id,simulation_status,sim_log,notes
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_nested_default_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_nested_default_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_nested_synth_preset_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_nested_synth_preset_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_flat_default_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_flat_default_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_flat_synth_preset_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_flat_synth_preset_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_direct_default_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_direct_default_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_direct_synth_preset_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex247,float_fp8,local-targeted,ex247_r24_bound_novalid_direct_synth_preset_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_seed12_default_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_seed12_default_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_seed12_synth_preset_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_seed12_synth_preset_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_parallel_default_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_parallel_default_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_parallel_synth_preset_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_effmap_parallel_synth_preset_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_parallel_seed12_default_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_parallel_seed12_default_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_parallel_seed12_synth_preset_and,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe
+ex246,float_fp8,local-targeted,ex246_r24_product_parallel_seed12_synth_preset_aig,not_run_debug_only,,official evaluate.py was run; iverilog was not needed for this source-level probe

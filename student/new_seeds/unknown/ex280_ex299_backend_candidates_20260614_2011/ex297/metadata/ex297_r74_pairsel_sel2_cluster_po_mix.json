@@ -1,0 +1,22 @@
+{
+  "adp": 425872,
+  "aig_sha256": "4db59833fa3f8add4a03873ca3ee8152e1aa8899c9bda24aead82c7eb3a0d504",
+  "area": 26617,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r74_pairsel_sel2_cluster_po_mix",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit selector template hybrid",
+  "method_signature": "ex297|cyclic 2-bit selector template hybrid|r73 pairsel cell/bit template with selector-2 cluster-BDD PO roots for one cell|pairsel template drives most outputs; r73 sel2 cluster source drives only output bits 10 and 11|yosys_internal_abc_g_aig|official_evaluate|cell5_pair_outputs",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round74_20260613_1438/sub-unknown-hybrid-r74/ex297/aigs/ex297_r74_pairsel_sel2_cluster_po_mix.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1438/agent_shards/sub-unknown-hybrid-r74/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round74_20260613_1438/sub-unknown-hybrid-r74/ex297/logs/ex297_r74_pairsel_sel2_cluster_po_mix.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round74_20260613_1438",
+  "source_verilog_path": "student/work/frontend_source_parallel_round74_20260613_1438/sub-unknown-hybrid-r74/ex297/verilog/ex297_r74_pairsel_sel2_cluster_po_mix.v",
+  "variant": "pairsel_sel2_cluster_po_mix",
+  "verilog_sha256": "9bf1981435750692818f3615f9e7cf02889e6fbfe8d8692b54e45436b14c4469"
+}

@@ -15,3 +15,11 @@ Notes:
   a shared word mux.  This beats both plain prefix range and full BDD.
 - Additional prefix delta and one-hot/support experiments were exact but did
   not improve.  Current best is within 1.5x reference.
+
+## 2026-06-14 integer-extra-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `integer-extra-r2`.
+
+- Official `evaluate.py` OK rows: 32/32.
+- Best row: `ex277_isqrt_cofbdd5_reverse_abc_g_aig`, `257/12/3084`; nonwinning versus current frontend `237/12/2844`.
+- Failed directions: prefix3/4/5/6 shared trial comparators, support-high/ANF-high classifiers, lowmix BDD variants, range tree, radix-4 wires, and high2/cofbdd depth changes were exact but did not beat the compact cofbdd4 reverse word-mux.

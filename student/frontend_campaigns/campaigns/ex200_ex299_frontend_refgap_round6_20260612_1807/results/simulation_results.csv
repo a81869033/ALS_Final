@@ -1,0 +1,20 @@
+case,agent_id,candidate_id,simulator,status,log_path,notes
+ex200,bf16-r6,ex200_semantic_exp_corrected_field_split_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex200,bf16-r6,ex200_sep_fields_e4_m3_s0_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex200,bf16-r6,ex200_hilo4_field_mode_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex204,bf16-r6,ex204_log2_arithbase_delta_hilo3_bits_10_11_14_bh2_abc_g_gates,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex204,bf16-r6,ex204_log2_arithbase_delta_hilo3_bits_11_13_14_bh2_abc_g_gates,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex204,bf16-r6,ex204_log2_arithbase_delta_hilo3_formula_bits_10_11_14_abc_g_gates,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex204,bf16-r6,ex204_sep_fields_e4_m3_s0_bits_11_14_bh2_abc_g_gates,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex205,bf16-r6,ex205_sep_fields_e3_m4_s0_bits_15_bh1_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex205,bf16-r6,ex205_sep_fields_e4_m3_s0_bits_15_bh1_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex205,bf16-r6,ex205_log10_exp_base_delta_hilo3_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex205,bf16-r6,ex205_log10_exp_runs_mant_sep_m5_abc_g_aig,not_run,not_run,,Skipped; official evaluate.py used as equivalence authority.
+ex253,float-fp8-r6,ex253_u2_sum8_histogram_qcase_default,iverilog,not_run,,official evaluate.py used for equivalence; simulation not needed for this exact small arithmetic source
+ex253,float-fp8-r6,ex253_u2_sum8_pair_sum_qcase_default,iverilog,not_run,,official evaluate.py used for equivalence; simulation not needed for this exact small arithmetic source
+ex223,fp16-r6,ex223_semantic_special_nested_low14_hi5_abc_g_aig,iverilog,not_run,,Official evaluate.py was used directly; iverilog is debug-only for this campaign.
+ex223,fp16-r6,ex223_semantic_special_wordtrie_altorder_abc_g_aig,iverilog,not_run,,Official evaluate.py was used directly; iverilog is debug-only for this campaign.
+ex224,fp16-r6,ex224_semantic_special_nested_low12_hi6_abc_g_aig,iverilog,not_run,,Official evaluate.py was used directly; iverilog is debug-only for this campaign.
+ex224,fp16-r6,ex224_semantic_special_wordtrie_altorder_abc_g_aig,iverilog,not_run,,Official evaluate.py was used directly; iverilog is debug-only for this campaign.
+ex225,fp16-r6,ex225_semantic_special_nested_low14_hi5_abc_g_aig,iverilog,not_run,,Official evaluate.py was used directly; iverilog is debug-only for this campaign.
+ex280,unknown-a-r6,ex280_r6_stride_roots_delay_linfact_abc_g_aig,generator_python_model,PASS,,Python model checked all truth rows; iverilog not used

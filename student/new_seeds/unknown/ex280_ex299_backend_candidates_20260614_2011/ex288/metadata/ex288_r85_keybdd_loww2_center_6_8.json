@@ -1,0 +1,22 @@
+{
+  "adp": 31682,
+  "aig_sha256": "06db9c2f45f3ebcfcdcfb1a9f1fb2bb2cfa5af4aaa09a0af158a6324ea8fcfbd",
+  "area": 2263,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex288_r85_keybdd_loww2_center_6_8",
+  "case": "ex288",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "round85_source_output_graft",
+  "method_signature": "ex288|round85_source_output_graft|keybdd_base_loww2_center_bits_6_8|base=ex288_keybdd|donors=ex288_loww2_r73:6-8|yosys_internal_abc_g_aig|official_evaluate",
+  "reference_adp": 16394,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_hybrid_parallel_round85_20260613_2139/sub-unknown-hybrid-r85/ex288/aigs/ex288_r85_keybdd_loww2_center_6_8.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_hybrid_parallel_round85_20260613_2139/agent_shards/sub-unknown-hybrid-r85/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_hybrid_parallel_round85_20260613_2139",
+  "source_verilog_path": "student/work/frontend_hybrid_parallel_round85_20260613_2139/sub-unknown-hybrid-r85/ex288/verilog/ex288_r85_keybdd_loww2_center_6_8.v",
+  "variant": "keybdd_base_loww2_center_bits_6_8",
+  "verilog_sha256": "019d3ae4e1e9f25256af1b9e90d8de47e4cc5623588594e7ae7127abbad6e310"
+}

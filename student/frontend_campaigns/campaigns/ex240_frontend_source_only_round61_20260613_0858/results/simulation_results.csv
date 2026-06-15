@@ -1,0 +1,21 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_formula_norm_default_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_formula_norm_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_formula_norm_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_formula_norm_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_split_norm_default_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_split_norm_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_split_norm_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_split_norm_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_formula_norm_default_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_formula_norm_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_formula_norm_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_diff_gapcase_formula_norm_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_formula_norm_default_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_formula_norm_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_formula_norm_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_formula_norm_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_gapcase_split_norm_default_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_gapcase_split_norm_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_gapcase_split_norm_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-ex240-source-r61,ex240_ex240_r61_active_diff_gapcase_split_norm_synth_preset_raw,not_run,,official evaluate.py used for final verification

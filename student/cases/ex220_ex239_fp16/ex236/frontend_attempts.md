@@ -55,3 +55,17 @@ Next maintenance items:
 - Further improvement likely needs a shallower expression for the boundary
   clamp predicates or a way to reduce the core mantissa LUT without increasing
   delay.
+
+## 2026-06-14 fp16-extra-r2 campaign shard
+
+- Campaign: `ex204_ex299_frontend_continuation_20260614_1216`, agent `fp16-extra-r2`.
+- Method signatures:
+  - `ex236|fp16_cube_core_clamp_partition|core_clamp_hi5|shared cube exponent delta/clamp predicates with low mantissa hi5 LUT|yosys_abc_g_aig|abc_xf_official_evaluate|core_clamp_nested_hi5`
+  - `ex236|fp16_cube_core_clamp_partition|core_clamp_hi7|shared cube exponent delta/clamp predicates with low mantissa hi7 LUT|yosys_abc_g_aig|abc_xf_official_evaluate|core_clamp_nested_hi7`
+- Official `evaluate.py` OK candidates:
+  - `ex236_core_clamp_hi5_abc_g_aig`: `1493/16/23888`.
+  - `ex236_core_clamp_hi7_abc_g_aig`: `1627/15/24405`.
+- Artifacts:
+  - `student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex236/`
+  - `student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex236/official_eval/`
+- Outcome: both beat the campaign target snapshot `24496`, but neither beats the newer documented `core_clamp_hi6` frontend seed at `1432/15/21480`.  Do not promote these as current best; the useful observation is that `hi7` preserves delay 15 but area grows too much, while `hi5` lowers area but loses delay.

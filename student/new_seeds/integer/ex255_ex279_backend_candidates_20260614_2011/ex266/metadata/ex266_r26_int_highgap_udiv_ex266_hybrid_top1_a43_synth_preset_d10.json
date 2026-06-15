@@ -1,0 +1,22 @@
+{
+  "adp": 1562,
+  "aig_sha256": "779e0b41edcec4beb2b4b5eefbfac9d1036820ebf27cff2f155a618e3960d16d",
+  "area": 142,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex266_r26_int_highgap_udiv_ex266_hybrid_top1_a43_synth_preset_d10",
+  "case": "ex266",
+  "delay": 11,
+  "domain": "integer",
+  "hypothesis": "unsigned_divider_top1_a43_hybrid",
+  "method_signature": "ex266|unsigned_divider_top1_a43_hybrid|top quotient bit uses a[4:3] deeper cofactor while low bits use current shallow word mux|shared quotient-word mux with one deeper top-bit classifier|synth_preset_d10|unsigned_low5_high5_div_dbz_sat|quotient word",
+  "reference_adp": 848,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex266/aigs/ex266_r26_int_highgap_udiv_ex266_hybrid_top1_a43_synth_preset_d10.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/mixed-r26/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex266/logs/ex266_r26_int_highgap_udiv_ex266_hybrid_top1_a43_synth_preset_d10.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round26_20260613_0539",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex266/verilog/ex266_r26_int_highgap_udiv_ex266_hybrid_top1_a43.v",
+  "variant": "udiv_ex266_hybrid_top1_a43",
+  "verilog_sha256": "4f4558126369e1e732ecef85794835af76ca5dcb5d80a09b948bdcfbb712d02c"
+}

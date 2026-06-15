@@ -1,0 +1,22 @@
+{
+  "adp": 20070,
+  "aig_sha256": "9162cd3bd14b5e4c4f859a8aba8e096c00edd88459a548dd7fcd9bcb9a5e89ad",
+  "area": 1338,
+  "bundle_type": "current",
+  "candidate_id": "ex286_linhyb_sweep_raw_3_5_6_8_f00_global_abc_g_aig",
+  "case": "ex286",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "selective_output_linear_coordinate_hybrid",
+  "method_signature": "ex286|hamming_weight_preserving_lossy_routing_normalizer|selective_output_linear_coordinate_hybrid|sweep_raw_3_5_6_8|policy_f00|global_base_bdd|coord_global_bdd|yosys_abc_g_aig|abc_xf_official_evaluate",
+  "reference_adp": 2376,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/aigs/ex286_linhyb_sweep_raw_3_5_6_8_f00_global_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex286_ex287_frontend_structural_decomp_20260614_2320/results/best_improvements.csv",
+  "source_evaluate_log": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/logs/ex286_linhyb_sweep_raw_3_5_6_8_f00_global_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_best_improvement",
+  "source_run": "ex286_ex287_frontend_structural_decomp_20260614_2320",
+  "source_verilog_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/verilog/ex286_linhyb_sweep_raw_3_5_6_8_f00_global.v",
+  "variant": "sweep_raw_3_5_6_8_f00_global/abc_g_aig",
+  "verilog_sha256": "076dd04e7752e2b7793a3dba5b74b53b344c04eaa1f3c919cce860c52a4e4588"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 25976,
+  "aig_sha256": "f248fe3886ba3f00828ea4d9296a9024a2d49c61171d143350635c4d0ec64967",
+  "area": 1528,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_pla_abc_g_gates",
+  "case": "ex204",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "bf16_log2_selected_bit_pla_gateflow",
+  "method_signature": "ex204|bf16_log2_selected_bit_pla_gateflow|hilo3 arithmetic-base delta with PLA selected-bit predicates|shared exponent base plus PLA-compressed selected output bits|abc_g_gates|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output",
+  "reference_adp": 15180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex204/aigs/ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_pla_abc_g_gates.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/mixed-r26/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex204/logs/ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_pla_abc_g_gates.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round26_20260613_0539",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/mixed-r26/ex204/verilog/ex204_r26_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_pla.v",
+  "variant": "log2_arithbase_delta_hilo3_bits_11_14_pla",
+  "verilog_sha256": "ef889fd94fb093aeb9f9af5c107e378690f11de0df04974051e147ee456212f5"
+}

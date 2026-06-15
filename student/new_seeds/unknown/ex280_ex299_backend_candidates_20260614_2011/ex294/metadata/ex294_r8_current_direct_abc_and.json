@@ -1,0 +1,22 @@
+{
+  "adp": 237028,
+  "aig_sha256": "990a90014ed82dca136fc916243c52d2d5aa0a33bba126f6afd4927702c35103",
+  "area": 10774,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_r8_current_direct_abc_and",
+  "case": "ex294",
+  "delay": 22,
+  "domain": "unknown",
+  "hypothesis": "selected flow probe on current octant source",
+  "method_signature": "ex294|global_state_octant_descriptor_cofactor|current_source_flow_probe|direct_current_source|yosys_internal_abc_g_AND|official_evaluate|all_outputs",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r8/ex294/aigs/ex294_r8_current_direct_abc_and.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-large-r8/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r8/ex294/logs/ex294_r8_current_direct_abc_and.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r8/ex294/verilog/ex294_r8_current_direct_abc_and.v",
+  "variant": "direct current r81 source with Yosys abc -g AND frontend flow",
+  "verilog_sha256": "1f5c3939d1db47b37c22437ba2f0055274fa63841b27fa705c9076b05e42a7d5"
+}

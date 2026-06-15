@@ -1,0 +1,22 @@
+{
+  "adp": 336,
+  "aig_sha256": "8fd363032af0f2f89f526ab5f3c4e135d607e2e313909dccfbe5e067aa2e4f87",
+  "area": 48,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex275_isqrt_prefix3_ge_bitwise_arith_wreduce_aig",
+  "case": "ex275",
+  "delay": 7,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 204,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex276_frontend_isqrt_shared_ge_20260609_1656/ex275/aigs/ex275_isqrt_prefix3_ge_bitwise_arith_wreduce_aig.aig",
+  "source_csv": "student/runs/integer/ex275_ex276_frontend_isqrt_shared_ge_20260609_1656/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex276_frontend_isqrt_shared_ge_20260609_1656",
+  "source_verilog_path": "student/work/ex275_ex276_frontend_isqrt_shared_ge_20260609_1656/ex275/verilog/ex275_isqrt_prefix3_ge_bitwise.v",
+  "variant": "prefix3_ge_bitwise+arith_wreduce_aig",
+  "verilog_sha256": "5fb868cc9ea15850c923aaa0435a69c737b8703e1acb22a455fae5503b30ab00"
+}

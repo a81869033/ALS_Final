@@ -1,0 +1,22 @@
+{
+  "adp": 22792,
+  "aig_sha256": "8f312620d713c7940742a46e523c3a4640b669ee73aec805690d5698f4684347",
+  "area": 1628,
+  "bundle_type": "current",
+  "candidate_id": "ex235_direct_special_low8_hi6_synth_preset",
+  "case": "ex235",
+  "delay": 14,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal_sqrt",
+  "method_signature": "fp16_reciprocal_sqrt",
+  "reference_adp": 20800,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex235_ex237_ex239_frontend_fp16_direct_special_20260608_0924/ex235/aigs/ex235_direct_special_low8_hi6_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex235_ex237_ex239_frontend_fp16_direct_special_20260608_0924",
+  "source_verilog_path": "student/work/ex235_ex237_ex239_frontend_fp16_direct_special_20260608_0924/ex235/verilog/ex235_direct_special_low8_hi6.v",
+  "variant": "direct_special_low8_hi6_synth_preset",
+  "verilog_sha256": "801c948e5a585ac35f6c8045beb0e3fc198311ee82a1436bba8c275a59c74c65"
+}

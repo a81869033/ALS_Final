@@ -1,0 +1,22 @@
+{
+  "adp": 6266,
+  "aig_sha256": "052e0b8e81cb57fac60a3133d75dc65db887e525dc5e42d67ed81c6653b63acf",
+  "area": 482,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex216_r94_bf16_cube_delta_pair_mode_hilo4_cube_bit14_boundary",
+  "case": "ex216",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_cube",
+  "method_signature": "ex216|round94_frontend_structural_bf16|bf16_cube|delta_pair_mode_hilo4_cube_bit14_boundary|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 3357,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex216/official_eval/ex216_r94_bf16_cube_delta_pair_mode_hilo4_cube_bit14_boundary/ex216.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/best.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex216/logs/ex216_r94_bf16_cube_delta_pair_mode_hilo4_cube_bit14_boundary.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex216/verilog/ex216_r94_bf16_cube_delta_pair_mode_hilo4_cube_bit14_boundary.v",
+  "variant": "delta-pair source grouping with hand bit14 boundary",
+  "verilog_sha256": "d0ca820530037b2d5421d26485bc9addc9d46f9f146f7e41291e997f57eff12b"
+}

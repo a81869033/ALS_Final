@@ -1,0 +1,22 @@
+{
+  "adp": 144972,
+  "aig_sha256": "c97f57c115146c01286afd09ab0167eab2732e5a12f556568b8416de4bc263ad",
+  "area": 8054,
+  "bundle_type": "current",
+  "candidate_id": "ex293_rotate_low_split_default_synth_preset",
+  "case": "ex293",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "",
+  "method_signature": "ex293|frontend|frontend_current_synthflow",
+  "reference_adp": 112966,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320/ex293/aigs/ex293_rotate_low_split_default_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320",
+  "source_verilog_path": "student/work/reverse_unknown_20260603_1812/ex293/verilog/ex293_unknown_15x15_rotate_low_split_default.v",
+  "variant": "synth_preset",
+  "verilog_sha256": "22f42ceea2fd5853f39fcf2133320016e4b059ed4000d9a6c0e43dcfcec87ae9"
+}

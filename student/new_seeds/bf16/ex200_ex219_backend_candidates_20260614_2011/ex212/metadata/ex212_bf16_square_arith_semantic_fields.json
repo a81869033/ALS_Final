@@ -1,0 +1,22 @@
+{
+  "adp": 3600,
+  "aig_sha256": "5e7e99dd47fb5ef3bdb29f8eb51ad0764b9aa8f24630b573ca00f41b8aeaaed3",
+  "area": 300,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex212_bf16_square_arith_semantic_fields",
+  "case": "ex212",
+  "delay": 12,
+  "domain": "bf16",
+  "hypothesis": "bf16_square",
+  "method_signature": "bf16_square",
+  "reference_adp": 2304,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex212/aigs/ex212_bf16_square_arith_semantic_fields.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex212/verilog/ex212_bf16_square_arith_semantic_fields.v",
+  "variant": "arith_semantic_fields",
+  "verilog_sha256": "9802d25d5426fa190599d37bcf6716e3d7a7b5f447ac864c0d94bcc440825a98"
+}

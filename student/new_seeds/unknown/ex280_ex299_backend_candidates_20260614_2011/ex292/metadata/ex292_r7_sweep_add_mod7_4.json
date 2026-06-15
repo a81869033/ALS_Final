@@ -1,0 +1,22 @@
+{
+  "adp": 135380,
+  "aig_sha256": "def4abe6aca45da25f8e612bc6dea813725117ae18547821a847ee1ae744ef4f",
+  "area": 6769,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex292_r7_sweep_add_mod7_4",
+  "case": "ex292",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "Mask perturbation around the current adjacent/mod7 output-plane source to preserve delay 20 while reducing area.",
+  "method_signature": "ex292|global_state_output_plane_overlay_sweep|adj_2_3_10_11_mod7_0_4_7_13|mod4_base_plus_adjacent_and_mod7_selected_planes|yosys_internal_abc_g_aig|official_evaluate|sweep",
+  "reference_adp": 84854,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex292/aigs/ex292_r7_sweep_add_mod7_4.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-mid-r7/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex292/logs/ex292_r7_sweep_add_mod7_4.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r7/ex292/verilog/ex292_r7_sweep_add_mod7_4.v",
+  "variant": "add mod7 output 4",
+  "verilog_sha256": "02b887c44084afdaa424f72b9e1b70d774a13e115ca7d9641e76b03a9208bbf0"
+}

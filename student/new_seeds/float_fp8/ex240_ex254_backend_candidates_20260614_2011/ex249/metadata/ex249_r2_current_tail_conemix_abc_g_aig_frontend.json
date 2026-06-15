@@ -1,0 +1,22 @@
+{
+  "adp": 4732,
+  "aig_sha256": "2c385ad5146adcbf5f31e59a4afbf90527517806f31a1f794e56656a0bee9b04",
+  "area": 169,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex249_r2_current_tail_conemix_abc_g_aig_frontend",
+  "case": "ex249",
+  "delay": 28,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex249|E5M2FN packed hypot abs high low|current rawexp high bits with direct-tail low bits|two exact hypot shells are flattened for output-specific delta sharing|abc_g_aig_frontend|official_evaluate|current_high_tail_low",
+  "reference_adp": 2079,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex249/aigs/ex249_r2_current_tail_conemix_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp8-tail-transfer-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex249/logs/ex249_r2_current_tail_conemix_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex249/verilog/ex249_r2_current_tail_conemix_abc_g_aig_frontend.v",
+  "variant": "current rawexp high bits with direct-tail low bits",
+  "verilog_sha256": "fdbc33fbcf793b7f9273b2f0c94c631d1305540a5eff3ba354c8cec5d901d30b"
+}

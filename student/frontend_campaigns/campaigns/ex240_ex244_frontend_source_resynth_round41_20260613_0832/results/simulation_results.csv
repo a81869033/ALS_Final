@@ -1,0 +1,25 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_default_raw,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_default_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_default_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_extra_share_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_extra_share_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_abc_g_aig_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_abc_g_aig_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_synth_preset_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex244,float_fp8,local-fp8-source-r41,ex244_ex244_current_source_resynth_synth_preset_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_default_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_default_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_default_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_extra_share_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_extra_share_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_extra_share_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_abc_g_aig_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_abc_g_aig_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_abc_g_aig_compress2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_synth_preset_raw,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_synth_preset_resyn2rs_area,not_run,,official evaluate.py used for final verification
+ex240,float_fp8,local-fp8-source-r41,ex240_ex240_current_source_resynth_synth_preset_compress2rs_area,not_run,,official evaluate.py used for final verification

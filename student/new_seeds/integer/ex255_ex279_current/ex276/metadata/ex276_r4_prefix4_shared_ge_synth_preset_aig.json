@@ -1,0 +1,22 @@
+{
+  "adp": 1010,
+  "aig_sha256": "f9536ba5d4c0efc7446911d9aa5222d707fa9c1c669ee59ba38975dc7bff2104",
+  "area": 101,
+  "bundle_type": "current",
+  "candidate_id": "ex276_r4_prefix4_shared_ge_synth_preset_aig",
+  "case": "ex276",
+  "delay": 10,
+  "domain": "integer",
+  "hypothesis": "current best prefix4 shared-ge classifier may improve with source frontend mapping only",
+  "method_signature": "ex276|unsigned_floor_isqrt_10_to_5|prefix4_shared_ge_current_source_resynth|same shared hi bucket low-threshold classifier; frontend synth-flow variant|synth_preset_aig|abc_xf_official_evaluate|whole_word",
+  "reference_adp": 632,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-struct-r4/ex276/aigs/ex276_r4_prefix4_shared_ge_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-struct-r4/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-struct-r4/ex276/logs/ex276_r4_prefix4_shared_ge_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-struct-r4/ex276/verilog/ex276_r4_prefix4_shared_ge_synth_preset_aig.v",
+  "variant": "synth_preset_aig",
+  "verilog_sha256": "62c4c0e80f16f307359501fdb7bf670ba4b442871f2f396fec6c329e239e473b"
+}

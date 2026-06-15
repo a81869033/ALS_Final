@@ -1,0 +1,22 @@
+{
+  "adp": 26884,
+  "aig_sha256": "aab034550507e5f9bc5ee97dfd837730d033168c0d0e18600a87ecb8a6f2258a",
+  "area": 611,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex240_r3_shift_align_source_compress",
+  "case": "ex240",
+  "delay": 44,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex240|E4M3FN packed add|current-best source compression with variable align shifter|shared field decode same-sign GRS and compact diff normalizer|yosys_abc_g_aig_frontend|official_evaluate|output_plane_preserved",
+  "reference_adp": 13299,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-output-plane-r3/ex240/aigs/ex240_r3_shift_align_source_compress.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp8-output-plane-r3/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_continuation_20260614_1216/fp8-output-plane-r3/ex240/logs/ex240_r3_shift_align_source_compress.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-output-plane-r3/ex240/verilog/ex240_r3_shift_align_source_compress.v",
+  "variant": "replace fixed min-alignment case tree with one guarded source-level shifter",
+  "verilog_sha256": "30ee57fb08b176e41ed0bf75c2629cc57e9a7ba5a326ebca3132f153d211fb7f"
+}

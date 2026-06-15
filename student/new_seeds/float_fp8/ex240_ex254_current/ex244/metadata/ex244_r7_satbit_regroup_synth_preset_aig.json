@@ -1,0 +1,22 @@
+{
+  "adp": 9952,
+  "aig_sha256": "7236cfe7a8d9ecae4924e35b3257c0f66af85ed843df683a52097d8a655bb48a",
+  "area": 311,
+  "bundle_type": "current",
+  "candidate_id": "ex244_r7_satbit_regroup_synth_preset_aig",
+  "case": "ex244",
+  "delay": 32,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex244|fp8_source_r7|satbit_regroup|split_saturation_terms_and_bitwise_nan_payload|synth_preset_aig|official_evaluate",
+  "reference_adp": 4272,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex244/aigs/ex244_r7_satbit_regroup_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex244/logs/ex244_r7_satbit_regroup_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex244/verilog/ex244_r7_satbit_regroup.v",
+  "variant": "",
+  "verilog_sha256": "e6925b44c6ec49cc8d5c0599c3914f49f346525d0094f74b2664246038c6e8bb"
+}

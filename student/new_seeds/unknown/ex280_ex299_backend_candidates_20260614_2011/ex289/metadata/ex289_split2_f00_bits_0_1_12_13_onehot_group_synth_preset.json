@@ -1,0 +1,22 @@
+{
+  "adp": 21580,
+  "aig_sha256": "0c0cf788d645c9b72f390aa1045a3b7173b58ee3caece1b90694d9fa097eafd3",
+  "area": 1079,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex289_split2_f00_bits_0_1_12_13_onehot_group_synth_preset",
+  "case": "ex289",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "unknown_duality_symcof",
+  "method_signature": "unknown_duality_symcof",
+  "reference_adp": 13620,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex289_frontend_duality_symcof_splitbits_synthflow_20260609_1109/ex289/aigs/ex289_split2_f00_bits_0_1_12_13_onehot_group_synth_preset.aig",
+  "source_csv": "student/runs/unknown/ex289_frontend_duality_symcof_splitbits_synthflow_20260609_1109/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex289_frontend_duality_symcof_splitbits_synthflow_20260609_1109",
+  "source_verilog_path": "student/work/ex289_frontend_duality_symcof_splitbits_20260609_1108/ex289/verilog/ex289_unknown_duality_symcof_split2_f00_bits_0_1_12_13_onehot_group.v",
+  "variant": "synth_preset",
+  "verilog_sha256": "98e0b67320cdf991ebeaa1bcad657791c7f8407a14d979b8e4f8062083e20a16"
+}

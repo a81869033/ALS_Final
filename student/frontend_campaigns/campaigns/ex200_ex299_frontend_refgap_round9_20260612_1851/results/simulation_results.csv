@@ -1,0 +1,14 @@
+case,agent_id,candidate_id,simulator,status,log_path,notes
+ex247,fp8-core-r9,ex247_semantic_div_key_bdd_delta_then_sig_abc_g_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex247,fp8-core-r9,ex247_semantic_div_key_bdd_delta_then_sig_synth_preset_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex247,fp8-core-r9,ex247_semantic_div_threshold_compare_abc_g_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex247,fp8-core-r9,ex247_semantic_div_threshold_compare_synth_preset_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex246,fp8-core-r9,ex246_semantic_mul_key_bdd_exp_then_product_abc_g_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex246,fp8-core-r9,ex246_semantic_mul_key_bdd_exp_then_product_synth_preset_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex246,fp8-core-r9,ex246_semantic_mul_threshold_norm_abc_g_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex246,fp8-core-r9,ex246_semantic_mul_threshold_norm_synth_preset_aig,iverilog,not_run,,official evaluate.py was run; RTL simulation was not needed for convergence
+ex244,fp8-wide-r9,ex244_round9_lane_factored_delta_mask_default,iverilog,not_run,,Skipped in convergence pass; official evaluate.py was run.
+ex240,fp8-wide-r9,ex240_round9_split_threshold_quant_default,iverilog,not_run,,Skipped in convergence pass; official evaluate.py was run.
+ex245,fp8-wide-r9,ex245_round9_split_threshold_quant_default,iverilog,not_run,,Skipped in convergence pass; official evaluate.py was run.
+ex286,routing-r9,ex286_no_new_compact_descriptor,,not_run,,No simulation run for the blocked collision-path descriptor; non-counted debug Verilog is documented only in failed_hypotheses.csv.
+ex287,routing-r9,ex287_no_new_compact_descriptor,,not_run,,No simulation run because no Verilog was emitted for the blocked collision-path descriptor.

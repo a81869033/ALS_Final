@@ -1,0 +1,22 @@
+{
+  "adp": 4756,
+  "aig_sha256": "73145e32c4a832fe8d57109aad09d862bcecddcd6cd9167b2d638e31babc6d1d",
+  "area": 164,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex249_r26_threshold_case_synth_preset_aig",
+  "case": "ex249",
+  "delay": 29,
+  "domain": "float_fp8",
+  "hypothesis": "E5M2FN hypot with compact threshold case table",
+  "method_signature": "ex249|E5M2FN packed hypot|compact gap-threshold case table|shared max/min decode gap sig threshold table and saturation guard|yosys_multi_official_evaluate|exact_e5m2fn_hypot_abs_high_low|case_threshold_delta|synth_preset_aig",
+  "reference_adp": 2079,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex249/aigs/ex249_r26_threshold_case_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/fp8-r26/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex249/logs/ex249_r26_threshold_case_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round26_20260613_0539",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex249/verilog/ex249_r26_threshold_case_synth_preset_aig.v",
+  "variant": "threshold_case",
+  "verilog_sha256": "dc694f62847d9481c15843462602c478454860794f2e0b6df4131131162e0e2b"
+}

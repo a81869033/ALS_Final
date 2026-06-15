@@ -1,0 +1,22 @@
+{
+  "adp": 608436,
+  "aig_sha256": "da9de2509dd01fa976e2f35bb20e368beb47356fdc3421f4ef1fb70f2427a816",
+  "area": 33802,
+  "bundle_type": "current",
+  "candidate_id": "ex298_r7_rotate_split_parallel_case_attrs",
+  "case": "ex298",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "source-boundary compression of rotated split",
+  "method_signature": "ex298|open_boundary_source_split_compression|parallel_case_attrs|rotate_high_split_nested_cases|yosys_synth_preset|official_evaluate|all_outputs",
+  "reference_adp": 442296,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r7/ex298/aigs/ex298_r7_rotate_split_parallel_case_attrs.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r7/ex298/logs/ex298_r7_rotate_split_parallel_case_attrs.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r7/ex298/verilog/ex298_r7_rotate_split_parallel_case_attrs.v",
+  "variant": "",
+  "verilog_sha256": "ea70a6eb0eefccd6a7b0c9b9c158904b2d909d302bf9f8fee98d1d6e36f43b89"
+}

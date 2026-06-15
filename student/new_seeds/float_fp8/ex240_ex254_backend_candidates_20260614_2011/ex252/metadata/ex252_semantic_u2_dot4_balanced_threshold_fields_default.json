@@ -1,0 +1,22 @@
+{
+  "adp": 3168,
+  "aig_sha256": "4329ff115d8d4c211abaaddb10eef06a7118b82b63d1a917a9e3a9132b50cac3",
+  "area": 144,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex252_semantic_u2_dot4_balanced_threshold_fields_default",
+  "case": "ex252",
+  "delay": 22,
+  "domain": "float_fp8",
+  "hypothesis": "packed_u2_dot4_to_e4m3",
+  "method_signature": "packed_u2_dot4_to_e4m3",
+  "reference_adp": 2603,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex250_ex252_ex253_frontend_field_threshold_20260608_2218/ex252/aigs/ex252_semantic_u2_dot4_balanced_threshold_fields_default.aig",
+  "source_csv": "student/runs/float_fp8/ex250_ex252_ex253_frontend_field_threshold_20260608_2218/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex250_ex252_ex253_frontend_field_threshold_20260608_2218",
+  "source_verilog_path": "student/work/ex250_ex252_ex253_frontend_field_threshold_20260608_2218/ex252/verilog/ex252_semantic_u2_dot4_balanced_threshold_fields.v",
+  "variant": "semantic_u2_dot4_balanced_threshold_fields_default",
+  "verilog_sha256": "daef65b3230bbad94acab1458d341ea750c92e706c928c796c59be5c8ab889ba"
+}

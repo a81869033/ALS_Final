@@ -1,0 +1,22 @@
+{
+  "adp": 3045,
+  "aig_sha256": "b9ab4f7d21ef164266be3985c8ade1f8b094249ea6d5f588d33b5a8f7276db5c",
+  "area": 145,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex252_semantic_u2_dot4_balanced_qcase_default",
+  "case": "ex252",
+  "delay": 21,
+  "domain": "float_fp8",
+  "hypothesis": "packed_u2_dot4_to_e4m3",
+  "method_signature": "packed_u2_dot4_to_e4m3",
+  "reference_adp": 2603,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex252_ex253_frontend_u2_balanced_tree_20260608_2220/ex252/aigs/ex252_semantic_u2_dot4_balanced_qcase_default.aig",
+  "source_csv": "student/runs/float_fp8/ex252_ex253_frontend_u2_balanced_tree_20260608_2220/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex252_ex253_frontend_u2_balanced_tree_20260608_2220",
+  "source_verilog_path": "student/work/ex252_ex253_frontend_u2_balanced_tree_20260608_2220/ex252/verilog/ex252_semantic_u2_dot4_balanced_qcase.v",
+  "variant": "semantic_u2_dot4_balanced_qcase_default",
+  "verilog_sha256": "d0121c861ee1a53d89a94f064c93e9a59f43152563d1fc90c286e9a61fb01a6c"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 16140,
+  "aig_sha256": "b9f32ff978a6275b289b0cc18cd1fda8c38c5b830de00a37d12a6a1f47fb90d1",
+  "area": 538,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex241_r10_caseattrs_optfull",
+  "case": "ex241",
+  "delay": 30,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex241|E4M3FN packed multiply high byte times low byte|current source with parallel_case attributes on existing case statements|preserves existing decode but gives Yosys explicit case parallelism hints|caseattrs_optfull_aig|official_evaluate|frontend_only",
+  "reference_adp": 7224,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex241/aigs/ex241_r10_caseattrs_optfull.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r10/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex241/logs/ex241_r10_caseattrs_optfull.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex241/verilog/ex241_r10_caseattrs_optfull.v",
+  "variant": "current source with parallel_case attributes on existing case statements",
+  "verilog_sha256": "58911620ccfced826d4e3ea8348f7bfcfe7cf46e12186664d62467bae8ba2e43"
+}

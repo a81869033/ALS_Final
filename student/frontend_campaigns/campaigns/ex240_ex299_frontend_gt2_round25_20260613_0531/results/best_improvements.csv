@@ -1,0 +1,1 @@
+case,domain,agent_id,previous_adp,new_adp,delta_adp,ratio_to_reference,candidate_id,method_signature,verilog_path,aig_path,evaluate_log,notes

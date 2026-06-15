@@ -1,0 +1,22 @@
+{
+  "adp": 66555,
+  "aig_sha256": "d1dc7a6d958b122a13ecaf0b667240955890934581199e30684bdff6d49c7e63",
+  "area": 4437,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex290_rotate_high_split_default_synth_preset",
+  "case": "ex290",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "unknown_12x12",
+  "method_signature": "unknown_12x12",
+  "reference_adp": 42328,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320/ex290/aigs/ex290_rotate_high_split_default_synth_preset.aig",
+  "source_csv": "student/runs/unknown/ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex290_ex291_ex293_ex296_ex298_frontend_current_synthflow_20260608_1320",
+  "source_verilog_path": "student/work/reverse_unknown_20260603_1812/ex290/verilog/ex290_unknown_12x12_rotate_high_split_default.v",
+  "variant": "synth_preset",
+  "verilog_sha256": "3fcdcbd753ea0e08704284569a8c90884a52541c78a80663d09b51d7deba133b"
+}

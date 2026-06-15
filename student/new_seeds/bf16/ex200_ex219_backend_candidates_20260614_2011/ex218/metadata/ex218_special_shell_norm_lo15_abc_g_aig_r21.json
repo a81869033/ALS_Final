@@ -1,0 +1,22 @@
+{
+  "adp": 6664,
+  "aig_sha256": "3667e7bafe6fcf59756152b42ab1b4682f62239bd9b8a7c16bf752b7711cc618",
+  "area": 476,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex218_special_shell_norm_lo15_abc_g_aig_r21",
+  "case": "ex218",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cube_special_shell_abs_magnitude",
+  "method_signature": "ex218|bf16_reciprocal_cube_special_shell_abs_magnitude|normal_exp_mant_lo15_table|sign_nan_shell_plus_special_exp_shell|yosys_abc_g_aig|DAZ_reciprocal_cube_BF16_RNE_FTZ|15bit_abs_magnitude_case",
+  "reference_adp": 3222,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round21_20260613_0040/bf16-final-r21/ex218/official_eval/ex218_special_shell_norm_lo15_abc_g_aig_r21/ex218.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round21_20260613_0040/agent_shards/bf16-final-r21/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round21_20260613_0040/bf16-final-r21/ex218/logs/ex218_special_shell_norm_lo15_abc_g_aig_r21.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round21_20260613_0040",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round21_20260613_0040/bf16-final-r21/ex218/verilog/ex218_special_shell_norm_lo15_abc_g_aig_r21.v",
+  "variant": "normal_exp_mant_lo15_table",
+  "verilog_sha256": "78805ec6dda84af824b2b8e9a1a69f95f4aec7a96f777210df4d50ee088e7dd0"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 23529,
+  "aig_sha256": "823993444a9bc992869173f264919d02b99dc80980c317604c5068594956b6df",
+  "area": 713,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_r11_nan_or_mask",
+  "case": "ex245",
+  "delay": 33,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex245|E5M2FN packed add high byte plus low byte|replace final NaN mux with finite-output sign mask and payload OR mask|keeps current semantic roots while changing the final output cone|abc_g_aig_frontend|official_evaluate|full_word",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/aigs/ex245_r11_nan_or_mask.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-hard-r11/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/logs/ex245_r11_nan_or_mask.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-hard-r11/ex245/verilog/ex245_r11_nan_or_mask.v",
+  "variant": "replace final NaN mux with finite-output sign mask and payload OR mask",
+  "verilog_sha256": "755948d2490d8bbf640a3d31f25ee25da22310dbe86e854954e7aefc55a72b79"
+}

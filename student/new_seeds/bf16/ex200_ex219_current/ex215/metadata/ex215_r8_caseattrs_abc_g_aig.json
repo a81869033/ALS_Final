@@ -1,0 +1,22 @@
+{
+  "adp": 4668,
+  "aig_sha256": "82cd63f7d6509d910c571bb7eeadb83bbc892c452011252d3526bd415d0ac2a2",
+  "area": 389,
+  "bundle_type": "current",
+  "candidate_id": "ex215_r8_caseattrs_abc_g_aig",
+  "case": "ex215",
+  "delay": 12,
+  "domain": "bf16",
+  "hypothesis": "",
+  "method_signature": "ex215|current_source_caseattrs_probe|ex215_r8_caseattrs_abc_g_aig|preserve current source sharing; only expose case exclusivity hints|abc_g_aig|abc_xf_official_evaluate|unary_r8",
+  "reference_adp": 3150,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unary-r8/ex215/aigs/ex215_r8_caseattrs_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/bf16/ex204_ex299_frontend_breakthrough_20260614_1051/unary-r8/ex215/official_eval/ex215_r8_caseattrs_abc_g_aig/ex215_r8_caseattrs_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unary-r8/ex215/verilog/ex215_r8_caseattrs_abc_g_aig.v",
+  "variant": "",
+  "verilog_sha256": "31eb3b0d0a2a747dd4a61478f7f7d676290c350156381bd08220f86a4b0599ca"
+}

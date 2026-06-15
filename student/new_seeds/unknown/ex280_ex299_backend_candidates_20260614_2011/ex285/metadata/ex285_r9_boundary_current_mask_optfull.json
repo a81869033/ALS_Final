@@ -1,0 +1,22 @@
+{
+  "adp": 13498,
+  "aig_sha256": "b21b355b3b5f4db3b4f273e401f03b75b37cf5c4caa7f71ca347a0a0c830b6ca",
+  "area": 794,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_r9_boundary_current_mask_optfull",
+  "case": "ex285",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "Boundary-helper and current-tree exact sources are both valid; changing the output-plane cut may expose a lower ADP shared cone.",
+  "method_signature": "ex285|boundary_helper_output_mask_r9|bits_0_2_9_11|decision_tree_base_plus_route_decode_helper|yosys_frontend_optfull_aig|official_evaluate|selected_output_planes",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r9/ex285/aigs/ex285_r9_boundary_current_mask_optfull.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-hard-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r9/ex285/logs/ex285_r9_boundary_current_mask_optfull.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r9/ex285/verilog/ex285_r9_boundary_current_mask_optfull.v",
+  "variant": "current winning mask through opt-full frontend flow",
+  "verilog_sha256": "5905b1e69d1cc4cb7780ba69a804afeb1114a91c5a8e040cdb19dbc1ffce99be"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 23758,
+  "aig_sha256": "b4915335e85825f4469f807b4690116ca0926391e982d244d685af809c6dc3ea",
+  "area": 1697,
+  "bundle_type": "current",
+  "candidate_id": "ex287_orientfollow_k7_b2_b3_b11_f11_case_direct_abc_g_aig",
+  "case": "ex287",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "output_image_pair_count_orientation_encoded_symmetry_key_cofactor_bdd",
+  "method_signature": "ex287|hamming_weight_preserving_lossy_routing_normalizer|output_image_adjacent_pair_count_component_orientation|symmetry_key_k7_b2_b3_b11_f11_case_direct_cofactor_bdd_policy_f11|case_selector|direct_decoder|yosys_abc_g_aig|abc_xf_official_evaluate",
+  "reference_adp": 5782,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/subagent-ex287-orient-followup/ex287/aigs/ex287_orientfollow_k7_b2_b3_b11_f11_case_direct_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex286_ex287_frontend_structural_decomp_20260614_2320/results/best_improvements.csv",
+  "source_evaluate_log": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/subagent-ex287-orient-followup/ex287/logs/ex287_orientfollow_k7_b2_b3_b11_f11_case_direct_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_best_improvement",
+  "source_run": "ex286_ex287_frontend_structural_decomp_20260614_2320",
+  "source_verilog_path": "student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/subagent-ex287-orient-followup/ex287/verilog/ex287_orientfollow_k7_b2_b3_b11_f11_case_direct.v",
+  "variant": "k7_b2_b3_b11_f11_case_direct/abc_g_aig",
+  "verilog_sha256": "dbcdf8244738b1e6a9f227a7d62838f0d7c33d166d73cf6f081e2c6168f139c7"
+}

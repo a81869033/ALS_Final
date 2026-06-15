@@ -1,0 +1,22 @@
+{
+  "adp": 106960,
+  "aig_sha256": "9caa2eb5c4b2e6f9d5ce71049a434bd94b9eccfe62cd3f5fda35a3f7c3b0095e",
+  "area": 6685,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex291_r6_rotate_split_current_recut",
+  "case": "ex291",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "Recut the known rotate-high split implementation through the current frontend flow.",
+  "method_signature": "Recut the known rotate-high split implementation through the current frontend flow.",
+  "reference_adp": 66850,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/runs/unknown/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r6/ex291/official_eval/ex291_r6_rotate_split_current_recut/ex291.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-global-r6/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r6/ex291/logs/ex291_r6_rotate_split_current_recut.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-global-r6/ex291/verilog/ex291_r6_rotate_split_current_recut.v",
+  "variant": "",
+  "verilog_sha256": "27b795ad6fa453ecf3cb4068953c3461ef21a3dab5bbc5f72babd861cd52d6c8"
+}

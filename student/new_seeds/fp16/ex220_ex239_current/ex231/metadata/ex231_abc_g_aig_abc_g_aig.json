@@ -1,0 +1,22 @@
+{
+  "adp": 16282,
+  "aig_sha256": "c06a4581bfd508c1089970199bcdbd8cb80a7a912ac70abb3876c7b84f21f571",
+  "area": 1163,
+  "bundle_type": "current",
+  "candidate_id": "ex231_abc_g_aig_abc_g_aig",
+  "case": "ex231",
+  "delay": 14,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex231|frontend|frontend_fp16_power_nested_synthflow",
+  "reference_adp": 14066,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex231_ex233_ex234_frontend_fp16_power_nested_synthflow_20260607_2027/ex231/aigs/ex231_abc_g_aig_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex231_ex233_ex234_frontend_fp16_power_nested_synthflow_20260607_2027",
+  "source_verilog_path": "student/work/ex231_ex233_ex234_frontend_fp16_power_nested_20260607_2027/ex231/verilog/ex231_nested_bits9_hi6.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "f2791293c9fc09f473aba58ed7cec41209e2b3ffb9664fb23f4acc698f4d287d"
+}

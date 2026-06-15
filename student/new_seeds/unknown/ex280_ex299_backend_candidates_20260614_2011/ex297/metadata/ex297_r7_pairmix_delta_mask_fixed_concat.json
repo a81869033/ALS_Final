@@ -1,0 +1,22 @@
+{
+  "adp": 425808,
+  "aig_sha256": "fe909d84f0312a2fcec389200fcb15a81057c561c1b56fd329c5ffd3dbb64ab0",
+  "area": 26613,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r7_pairmix_delta_mask_fixed_concat",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "local rule table fused by shared pair predicates",
+  "method_signature": "ex297|cyclic_2bit_pairmix_vector_residual|cell_xor_bit_delta_mask|shared_pairmix_predicates_single_vector_mask|yosys_internal_abc_g_aig|official_evaluate|all_outputs_delta|fixed_concat",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r7/ex297/aigs/ex297_r7_pairmix_delta_mask_fixed_concat.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-large-r7/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r7/ex297/logs/ex297_r7_pairmix_delta_mask_fixed_concat.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-large-r7/ex297/verilog/ex297_r7_pairmix_delta_mask_fixed_concat.v",
+  "variant": "cell source xor bit-source residual under one shared vector mask (fixed 2-bit mask concatenation)",
+  "verilog_sha256": "fe7d9db718e66d7de9bb575141b2a5ec30fb0d310a1610a79fa20d9e0ed866fd"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 22530,
+  "aig_sha256": "26e5e4d149aa93be5833492d07dcf22a51d14f58af1f414e35340d73e6ec31c3",
+  "area": 1502,
+  "bundle_type": "current",
+  "candidate_id": "ex238_r27_core_boundary_low12_hi6_synth_preset_recheck",
+  "case": "ex238",
+  "delay": 15,
+  "domain": "fp16",
+  "hypothesis": "fp16_reciprocal_cube_core_boundary",
+  "method_signature": "ex238|fp16_reciprocal_cube_core_boundary|core exponent semantic formula with exp9/exp19 boundary tables low12 hi6|shared reciprocal-cube special decode, exponent delta, mantissa core formula, boundary tables|existing_synth_preset_rechecked|DAZ_reciprocal_cube_FP16_RNE_FTZ|full_word",
+  "reference_adp": 16549,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex238/official_eval/ex238_r27_core_boundary_low12_hi6_synth_preset_recheck/ex238.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex238/logs/ex238_r27_core_boundary_low12_hi6_synth_preset_recheck.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex299_frontend_refgap_round27_20260613_0613",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex238/verilog/ex238_r27_core_boundary_low12_hi6_synth_preset_recheck.v",
+  "variant": "core exponent semantic formula with exp9/exp19 boundary tables low12 hi6",
+  "verilog_sha256": "54f2fc4471547656c383796a5c8a8328ac181c944ff69402da37e584a2005350"
+}

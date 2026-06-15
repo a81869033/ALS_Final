@@ -1,0 +1,22 @@
+{
+  "adp": 564312,
+  "aig_sha256": "5ac573d4801a928ff03206e18271bda6154360be46bdc2ba6c7cf5c7fe0bb510",
+  "area": 26872,
+  "bundle_type": "current",
+  "candidate_id": "ex206_bf16_sin_odd_pos_fullword_h4",
+  "case": "ex206",
+  "delay": 21,
+  "domain": "bf16",
+  "hypothesis": "bf16_sin",
+  "method_signature": "ex206|frontend|current",
+  "reference_adp": 539049,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex206/aigs/ex206_bf16_sin_odd_pos_fullword_h4.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex206/verilog/ex206_bf16_sin_odd_pos_fullword_h4.v",
+  "variant": "odd_pos_fullword_h4",
+  "verilog_sha256": "170f35d276b2738890b0bdfbc94c7837196598b78c350df3639f91ca55b06e86"
+}

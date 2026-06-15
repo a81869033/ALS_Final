@@ -1,0 +1,22 @@
+{
+  "adp": 3247,
+  "aig_sha256": "445fcca94497ca2d5fda1c5209c61a2841861b61d7faf0abad5a35ab674684ac",
+  "area": 191,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex270_square_wallace_square_outside_csel5_abc_g_aig",
+  "case": "ex270",
+  "delay": 17,
+  "domain": "integer",
+  "hypothesis": "unsigned_square_x_times_x",
+  "method_signature": "ex270|unsigned_square_x_times_x|wallace_square_outside_csel5|square_specific_structural_rtl|abc_g_aig|square_specific_structural_rtl|square_specific_structural_rtl",
+  "reference_adp": 2076,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round8_20260612_1826/mixed-r8/ex270/ex270/aigs/ex270_square_wallace_square_outside_csel5_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round8_20260612_1826/agent_shards/mixed-r8/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round8_20260612_1826/mixed-r8/ex270/official_eval/ex270_square_wallace_square_outside_csel5_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round8_20260612_1826",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round8_20260612_1826/mixed-r8/ex270/ex270/verilog/ex270_square_wallace_square_outside_csel5.v",
+  "variant": "wallace_square_outside_csel5+abc_g_aig",
+  "verilog_sha256": "d05c8b3ba3a0a46f34429e6f38a17c69e84a322174eead7f70e0dba9cdd75d7d"
+}

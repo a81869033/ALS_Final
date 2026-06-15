@@ -1,0 +1,16 @@
+case,domain,round5_candidates,round5_best_candidate,round5_best_adp,frontend_best_adp_before,reference_adp,frontend_ratio_before,round5_improved_frontend,beats_reference,next_recommendation
+ex200,bf16,0,,,54405,40052,1.358359,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex223,fp16,0,,,204193,120549,1.693859,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex225,fp16,1,ex225_full_bitrun_predicates_abc_g_aig,542793,218728,116676,1.874661,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex246,float_fp8,1,ex246_e5m2fn_mul_ppcompress_class_seed12,8750,7502,2805,2.674510,0,0,continue FP8 semantic factoring; avoid threshold/table repeats
+ex247,float_fp8,1,ex247_e5m2fn_div_bound_region_mux,8808,9125,2975,3.067227,1,0,continue FP8 semantic factoring; avoid threshold/table repeats
+ex256,integer,0,,,2844,1911,1.488226,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex260,integer,1,ex260_smul_corrrow_csa4_abc_g_aig,1854,1144,657,1.741248,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex266,integer,0,,,1480,848,1.745283,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex280,unknown,0,,,2990,2415,1.238095,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex281,unknown,0,,,3328,2336,1.424658,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex284,unknown,1,ex284_unknown_quadratic_compressor_prefix_parity_reduce_full_clamp_boundary,9243,5440,4240,1.283019,0,0,needs new high-level hypothesis; do not repeat failed round5 direction
+ex286,unknown,1,ex286_hw_layer_rank_colex_table,2149371,21705,2376,9.135101,0,0,derive actual compact routing descriptor; stop rank/table/cofactor/Fredkin repeats
+ex287,unknown,0,,,27480,5782,4.752681,0,0,derive actual compact routing descriptor; stop rank/table/cofactor/Fredkin repeats
+ex297,unknown,1,ex297_cell_delta_anchor_bdd_abc_g_aig,973512,583596,225900,2.583426,0,0,derive true state recurrence; stop BDD/value-split repeats
+ex299,unknown,0,,,2604734,1013807,2.569260,0,0,derive true state recurrence; stop BDD/value-split repeats

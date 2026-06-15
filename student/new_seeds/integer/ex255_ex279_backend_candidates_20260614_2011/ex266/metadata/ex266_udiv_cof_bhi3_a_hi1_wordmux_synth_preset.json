@@ -1,0 +1,22 @@
+{
+  "adp": 1617,
+  "aig_sha256": "1d702ef90fab99af0d0e4d994eca62f0a4eb2ce5c11d195d0ad73ec5a3c9b283",
+  "area": 147,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex266_udiv_cof_bhi3_a_hi1_wordmux_synth_preset",
+  "case": "ex266",
+  "delay": 11,
+  "domain": "integer",
+  "hypothesis": "unsigned lowN_highN:a/b dbz=max",
+  "method_signature": "unsigned lowN_highN:a/b dbz=max",
+  "reference_adp": 848,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex266_ex267_ex276_frontend_highgap_struct_20260609_1732/ex266/aigs/ex266_udiv_cof_bhi3_a_hi1_wordmux_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex266_ex267_ex276_frontend_highgap_struct_20260609_1732/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex266_ex267_ex276_frontend_highgap_struct_20260609_1732",
+  "source_verilog_path": "student/work/ex266_ex267_ex276_frontend_highgap_struct_20260609_1732/ex266/verilog/ex266_udiv_cof_bhi3_a_hi1_wordmux.v",
+  "variant": "udiv_cof_bhi3_a_hi1_wordmux+synth_preset",
+  "verilog_sha256": "04e91ef323e104e8d6653f2e458369d27c8031bd3c93a4ab46c31bcbe418d9ed"
+}

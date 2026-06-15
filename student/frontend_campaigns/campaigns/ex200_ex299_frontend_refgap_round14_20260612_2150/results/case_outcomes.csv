@@ -1,0 +1,5 @@
+case,domain,round8_candidates,round8_best_candidate,round8_best_adp,frontend_best_adp_after,reference_adp,round8_improved_frontend,beats_reference,next_recommendation
+ex205,bf16,0,,,71104,47128,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex244,float_fp8,0,,,10234,4272,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex276,integer,0,,,1010,632,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex299,unknown,0,,,2487261,1013807,0,0,gap remains; continue only with materially different high-level sharing/representation

@@ -2,9 +2,9 @@
 
 ## Current Best
 
-- Current best frontend: `ex286_interleave_f00_k4_abc_g_aig`, area `1447`, delay `15`, ADP `21705`.
+- Current best frontend: `ex286_unknown_symcof_interleave_f00_bits_0_12_1_10_onehot_group_abc_g_aig`, area `1346`, delay `15`, ADP `20190`.
 - Reference: ADP `2376`.
-- Gap: `9.14x` reference ADP.
+- Gap: `8.50x` reference ADP.
 
 ## Already Tried
 
@@ -88,6 +88,54 @@
 - 2026-06-09 output pair-count tiny piecewise diagnostic: bounded min/max/clamp/sum-clip single/two-coordinate checks found zero exact formulas; best was pair_count_6 using `sc1_4:sc3_5` at only `5771/8192`. No comparator-style pair-count RTL seed emitted.
 - 2026-06-09 output pair-count cumulative transport diagnostic: prefix-capacity/window transport over exact bucket counts plus selector offsets found no exact formula; best was `prefix_capacity`, bucket `asc`, pair `asc`, offset `zero`, only `241/8192`. No RTL seed emitted.
 
+## 2026-06-12 Round9 routing-r9
+
+- method_signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|collision_path_ballot_descriptor|shared_home_collision_path_state|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_VERILOG`; no official `evaluate.py` candidate was run because the dossier found no materially new exact compact descriptor to emit as Verilog.
+- paths:
+  - dossier: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/routing-r9/ex286/high_level_dossier.md`
+  - failed shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/routing-r9/failed_hypotheses.csv`
+  - evaluation shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/routing-r9/evaluation_results.csv`
+  - summary: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_summaries/routing-r9.md`
+- outcome: Dossier confirmed the conservative Hamming-weight-preserving lossy-routing hypothesis and considered a collision-path / ballot-style shared descriptor. Low-weight sanity did not expose an exact path rule: one-hot-home OR/XOR matched only `62/8192` rows, with no exact central Hamming-weight layers. Emitting an exact fallback would repeat rejected bucket/table or cofactor/symcof families, so no Verilog was generated.
+- next action: Treat ex286 as blocked for this round unless a genuinely new nonlinear hidden-state basis appears. Do not continue with table/rank/colex/bucket/cofactor/symcof/Fredkin/token-count/lane-parity variants without a materially different high-level descriptor.
+
+## 2026-06-12 Round9 routing-r9 checkpoint restart
+
+- dossier: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/routing-r9/ex286/notes/high_level_dossier.md`
+- planned hypotheses:
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|round9_shared_cofactor_mux|new_selector_basis_output_grouping|official_evaluate|pair_canonical_shared_roots|full_word_grouped_outputs`
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|round9_anf_shared_roots|shared_monomial_output_groups|official_evaluate|gf2_residual_shared_terms|grouped_outputs`
+- official result: pending at dossier time; no Verilog had been emitted before this entry.
+- outcome: Dossier keeps the conservative routing hypothesis but commits this restart to two materially different candidate families: changed shared cofactor/BDD-style mux factoring and GF(2)/ANF shared roots.
+- next action: Generate and officially evaluate ex286 candidates first, then record equivalent/non-equivalent and QoR rows in the routing-r9 shard.
+
+## 2026-06-12 Round9 routing-r9 coordinator correction
+
+- method_signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|collision_path_ballot_descriptor|shared_home_collision_path_state|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_VERILOG` for the new collision-path / ballot-style descriptor; no counted successful candidate has an official `evaluate.py` log.
+- non-counted artifacts:
+  - repeated symcof debug artifacts exist under `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/routing-r9/ex286/` with generator-reported equivalent rows `1449/16/23184`, `1501/16/24016`, and `1479/17/25143`; they are worse than current frontend ADP `20190`, repeat the rejected symcof/cofactor family, and have no official `evaluate.py` log path, so they are excluded from `candidates.csv` and `evaluation_results.csv`.
+  - interrupted split-ANF artifacts exist for `identity`, `bit_reverse`, and partial `prefix_parity_reduce`; they have no official `evaluate.py` log and are excluded from counted candidate rows.
+- paths:
+  - dossier: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/routing-r9/ex286/notes/high_level_dossier.md`
+  - non-counted debug rows: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/routing-r9/failed_hypotheses.csv`
+  - summary: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_summaries/routing-r9.md`
+- outcome: The coordinator correction resolves the prior inconsistency: Verilog/AIG artifacts exist for ex286, but they are repeated or interrupted debug artifacts, not official Round9 successful candidates.
+- next action: Ignore these ex286 debug artifacts for registry merge unless someone reruns them through official `evaluate.py` with logs and a materially new high-level descriptor; do not continue symcof/ANF wrapper variants unchanged.
+
+## 2026-06-12 Round10 coordinator-paircount-anf
+
+- method_signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|paircount_linear_anf_basis_diag|component_pair_count_output_linear_basis|no_synth|blocked_before_verilog|encoded_paircount_coordinates`
+- official result: `BLOCKED_NO_VERILOG`; no official `evaluate.py` candidate was run because the diagnostic did not produce a complete low-cost RTL source.
+- paths:
+  - dossier: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/coordinator-paircount-anf/ex286/notes/high_level_dossier.md`
+  - summary CSV: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round10_20260612_1911/agent_shards/coordinator-paircount-anf/diagnostics/paircount_linear_anf_summary.csv`
+  - basis CSV: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round10_20260612_1911/agent_shards/coordinator-paircount-anf/diagnostics/paircount_linear_anf_basis.csv`
+  - failed shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round10_20260612_1911/agent_shards/coordinator-paircount-anf/failed_hypotheses.csv`
+- outcome: Component pair-count encoded output-linear ANF exposes only a partial low-degree basis. Pair-count-only nullity reaches `4/13` by degree 6 (`0x141:0x444:0x888:0x1050`, terms `156:38:19:133`), which is a semantic clue but not enough to replace the hard pair-count fields.
+- next action: Do not repeat partial pair-count coordinate repair. Continue only with a complete nonlinear basis or a constructive shared pair-count generator.
+
 ## Do Not Repeat Blindly
 
 - Rotated low split is no longer current, but remains the low-delay comparison source.
@@ -163,3 +211,208 @@
 
 - `student/results/unknown_candidates_current_summary.csv`
 - `student/results/unknown_candidates_current_best.csv`
+
+## 2026-06-12 Round10 unknown-top-r10
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-top-r10/ex286/notes/high_level_dossier.md`.
+- High-level description: 13-bit Hamming-weight-preserving lossy routing/normalizer; no constant outputs; exact input swap symmetries `(4,5)` and `(6,7)`; current frontend is still multi-pair symcof/bitset probe scale.
+- Families tried:
+  - `lane_component_shared_bdd`: exact shared BDD with mod-4 lane/component input order and one global node pool.
+  - `mod8_output_linear_anf_residual_bdd`: exact GF(2) mod-8 output-linear parity coordinates with shared monomial bank plus residual BDD roots.
+- Method signatures:
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|lane_component_shared_bdd|mod4_lane_order_single_node_pool|yosys_abc_g_aig|abc_xf_official_evaluate|lane_grouped_output_roots`
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|mod8_output_linear_anf_residual_bdd|shared_monomial_bank_plus_residual_roots|yosys_abc_g_aig|exact_output_linear_coordinates|mod8_lane_reconstruction`
+- Official results: both `evaluate.py` OK. Lane BDD `5023/21/105483`; mod8 ANF residual `4489/178/799042`.
+- Paths: candidates `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round10_20260612_1911/agent_shards/unknown-top-r10/candidates.csv`; logs under `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-top-r10/ex286/logs/`.
+- Outcome: no improvement over current frontend `20190`. The mod8 coordinate family confirms shared monomial reuse cuts residual BDD roots but creates unusable delay.
+- Next action: keep ex286 blocked on a new nonlinear hidden-state descriptor; do not continue lane-BDD, output-linear ANF repair, bucket/table, symcof/cofactor, rank/colex, Fredkin, token-count, or lane-parity variants unchanged.
+
+## 2026-06-12 Round12 routing-r12 checkpoint
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/routing-r12/ex286/notes/high_level_dossier.md`.
+- High-level description: 13-bit Hamming-weight-preserving lossy routing/normalizer; exact popcount preservation confirmed; known input swap symmetries `(4,5)` and `(6,7)` used only to choose a collision-first variable order.
+- Representation family: `routing_delta_shared_bdd`, modeling `delta = input ^ output` as one shared reduced BDD node pool and reconstructing `out = input ^ delta`. This tests movement/change state directly rather than another output-root BDD, bucket/count/rank/colex table, symcof/cofactor mux, lane-parity repair, or Fredkin replay.
+- Method signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|routing_delta_shared_bdd|collision_first_delta_node_pool|yosys_abc_g_aig|official_evaluate_delta_reconstruction|full_word_delta_xor`.
+- Official `evaluate.py` result: `OK`, area `6385`, delay `21`, ADP `134085`; equivalent but far worse than current frontend `20190`.
+  - Verilog: `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/routing-r12/ex286/verilog/ex286_routing_delta_shared_bdd_collision_first.v`
+  - AIG: `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/routing-r12/ex286/aigs/ex286_routing_delta_shared_bdd_collision_first_abc_g_aig.aig`
+  - Official evaluate log: `student/work/ex200_ex299_frontend_refgap_round12_20260612_2015/routing-r12/ex286/logs/ex286_routing_delta_shared_bdd_collision_first_abc_g_aig.official_evaluate.log`
+  - Shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round12_20260612_2015/agent_shards/routing-r12/`
+- Diagnostic evidence: exact delta descriptor has `3629` shared BDD nodes, `3040` unique deltas, and delta popcount histogram `w0:82;w2:607;w4:2084;w6:3062;w8:1920;w10:420;w12:17`.
+- Outcome: no improvement; record as `equivalent_but_no_improvement`. Only revisit delta-BDD if a new nonlinear state basis reduces the delta node pool or creates shared arithmetic movement logic.
+
+## 2026-06-12 Round13 unknown-routing-r13 checkpoint
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round13_20260612_2045/unknown-routing-r13/ex286/notes/high_level_dossier.md`.
+- Method signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|round13_assignment_rank_descriptor_probe|home_slot_pair_delta_and_rank_select_diagnostics|no_synth|blocked_before_verilog|full_word`.
+- Official result: `BLOCKED_NO_VERILOG`; no Verilog/AIG was emitted because the checkpoint diagnostics did not expose a compact exact source distinct from rejected table/cofactor/delta families.
+- Diagnostic evidence:
+  - Hamming-weight preservation remains exact (`0/8192` mismatches); exact input swaps are `(4,5)` and `(6,7)`.
+  - Compact assignment network rows are far from exact: one-hot home OR/XOR matched `62/8192`, and two-hot pair-delta XOR superposition matched `370/8192`.
+  - Shared rank/select descriptors are also far from exact: best layer-wise global shift matched `99/8192`.
+  - Small semantic home-count descriptor becomes exact only after selecting `raw2;raw1;raw8`, expanding to `4608` keys. This is a table/cofactor-scale descriptor, not a compact routing network.
+- Shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round13_20260612_2045/agent_shards/unknown-routing-r13/`.
+- Outcome: first-case checkpoint completed as a precise diagnostic-backed blocker, materially different from the round12 collision-first delta-BDD blocker.
+- Next action: continue to `ex287` only if the coordinator wants this agent to broaden again; do not emit the exact `4608`-key descriptor as Verilog.
+
+## 2026-06-12 Round17 unknown-flow-r17 hard checkpoint
+
+- Method signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|pair_transducer_and_invariant_selector_probe|shared_local_pair_state_and_weight_selectors|no_synth|blocked_before_verilog|full_word`.
+
+## 2026-06-13 Targeted Symcof Mux Probe r25
+
+- Campaign: `student/frontend_campaigns/campaigns/ex286_frontend_targeted_symcof_mux_probe_20260613_0403/`.
+- High-level description: unchanged exact Hamming-weight-preserving lossy
+  routing/normalizer with known input swap symmetries `(4,5)` and `(6,7)`.
+  This probe stayed within the current symmetry-cofactor family but changed
+  class mux style, BDD group sharing, and a small set of outer-bit selectors.
+- Method family:
+  `ex286|hamming_weight_preserving_lossy_routing_normalizer|symcof_outer_bitset_*|known_pair_symmetry_key_and_class_mux_bdd_share|yosys_abc_g_aig_official_evaluate|exact_popcount_preserving_unknown|full_word_class_mux`.
+- Official `evaluate.py` coverage: 16/16 rows were `OK`. Best observed row
+  was `ex286_r25_symcof_f00_bits_0_12_1_10_onehot_global_abc_g_aig`,
+  `1346/15/20190`, which ties the current frontend best but does not improve.
+  Verilog:
+  `student/work/ex286_frontend_targeted_symcof_mux_probe_20260613_0403/local-ex286-symcof/ex286/verilog/ex286_r25_symcof_f00_bits_0_12_1_10_onehot_global_abc_g_aig.v`;
+  AIG:
+  `student/work/ex286_frontend_targeted_symcof_mux_probe_20260613_0403/local-ex286-symcof/ex286/aigs/ex286_r25_symcof_f00_bits_0_12_1_10_onehot_global_abc_g_aig.aig`;
+  log:
+  `student/work/ex286_frontend_targeted_symcof_mux_probe_20260613_0403/local-ex286-symcof/ex286/logs/ex286_r25_symcof_f00_bits_0_12_1_10_onehot_global_abc_g_aig.evaluate.py.log`.
+- Outcome: no frontend improvement. Case/tree muxes increased delay or area;
+  global sharing sometimes reduced area to `1333..1336` but delay rose to
+  `18..19`. Selector permutations such as `0:1:10:12` and `12:0:1:10`
+  stayed near but above current (`20415` and `20445`). Do not repeat this
+  local mux/share/selector neighborhood unless paired with a new hidden-state
+  basis outside the current symcof source.
+- Official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG candidate was emitted, so no `evaluate.py` row is claimed.
+- Evidence:
+  - Diagnostic report: `student/work/ex200_ex299_frontend_refgap_round17_20260612_2300/unknown-flow-r17/ex286/diagnostics/ex286_compact_routing_probe.md`
+  - Diagnostic CSV: `student/work/ex200_ex299_frontend_refgap_round17_20260612_2300/unknown-flow-r17/ex286/diagnostics/ex286_compact_routing_probe.csv`
+  - Shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round17_20260612_2300/agent_shards/unknown-flow-r17/`
+- Diagnostic outcome: Hamming-weight preservation is exact over `8192/8192` rows and exact input swaps are `(4,5)` and `(6,7)`. The best pair-transducer probe (`outside_in_pair_scan_step_6`) still has `198` conflict keys and only `5950/8192` majority rows. Compact invariant selectors become exact only with `8192` keys, which is table-scale.
+- Next action: do not broaden this agent until the coordinator accepts the ex286 blocked checkpoint; future ex286 progress needs a genuinely new nonlinear compact state, not table/BDD/cofactor/rank/colex/round16 descriptor replay.
+
+## 2026-06-12 Round18 unknown-flow-r18 checkpoint
+
+- method_signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|round18_benes_fredkin_layer_flow_screen|shared_compare_swap_predicates_and_token_layers|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG was emitted, so no `evaluate.py` row is claimed.
+- paths:
+  - dossier: `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-flow-r18/ex286/notes/high_level_dossier.md`
+  - blocker evidence: `student/work/ex200_ex299_frontend_refgap_round18_20260612_2321/unknown-flow-r18/ex286/diagnostics/ex286_round18_blocker.md`
+  - shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round18_20260612_2321/agent_shards/unknown-flow-r18/`
+- outcome: After `ex287` blocked, round18 continued to `ex286` and screened the requested Benes/Fredkin-style layer-local token-flow direction without replaying the round17 compact transducer. The blocker is that controlled-swap evidence remains far from exact: greedy Fredkin mismatches only improved to `8014/8192`, static-feature controlled-swap sampled mismatch stayed `1301/1352`, and round17's best transducer still had `198` conflict keys. Exact fallback selectors remain table-scale (`4608` to `8192` keys).
+- next action: Progress needs a new nonlinear compact routing state before any swap-network RTL. Do not continue with small static controlled-swap, round17 compact transducer, bucket/key, rank/colex, symcof/cofactor, or lane-parity repair variants unchanged.
+
+## 2026-06-13 02:50:51 +0800 Round22 unknown-a-r22
+
+- method_signature: `ex286|hamming_weight_preserving_lossy_routing_normalizer|compact_pair_state_and_lane_count_descriptor_screen|shared_pair_descriptors_and_lane_count_state|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG was emitted, so no `evaluate.py` row is claimed.
+- evidence: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/unknown-a-r22/ex286/diagnostics/ex286_round22_screen.md`
+- shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/unknown-a-r22/`
+- outcome: screened compact pair-state controlled routing and lane/count normalizer descriptors. Popcount preservation is exact, but pair-state exactness needs 4608 keys and compact lane/count majority reaches only 1217/8192 rows.
+- next action: do not emit a key-table/cofactor repeat; ex286 needs a new nonlinear routing state before candidate generation.
+
+## 2026-06-13 04:24:00 +0800 targeted symcof inner-BDD order probe
+
+- campaign: `student/frontend_campaigns/campaigns/ex286_frontend_inner_order_probe_20260613_0424/`
+- high-level description: unchanged 13-bit Hamming-weight-preserving lossy routing/normalizer with exact input swap symmetries `(4,5)` and `(6,7)`.
+- hypothesis family: keep current explicit outer-bit symcof partition `0:12:1:10`, but reorder the inner BDD variables so class cofactors share fewer nodes. This is materially different from the previous mux/share/selector neighborhood because the outer partition is fixed and only the inner BDD order changes.
+- pre-synth diagnostic: current interleave inner order has `2257` group BDD nodes; `outside_in` order `11:2:9:3:8:4:7:5:6` reduced that to `2151`; `sym_last` order `2:3:8:9:11:4:5:6:7` reduced it to `2200`.
+- official `evaluate.py` results: 4/4 equivalent, no frontend improvement.
+  - best row: `ex286_r26_symcof_f00_bits_0_12_1_10_inner_outside_in_onehot_abc_g_aig` at `1349/16/21584`, worse than current frontend `1346/15/20190` and reference `198/12/2376`.
+  - case-mux and `sym_last` variants were worse: `21648`, `22816`, `23008` ADP.
+- paths:
+  - candidates: `student/frontend_campaigns/campaigns/ex286_frontend_inner_order_probe_20260613_0424/results/candidates.csv`
+  - best Verilog from this probe: `student/work/ex286_frontend_inner_order_probe_20260613_0424/local-ex286-innerorder/ex286/verilog/ex286_r26_symcof_f00_bits_0_12_1_10_inner_outside_in_onehot_abc_g_aig.v`
+  - best AIG from this probe: `student/work/ex286_frontend_inner_order_probe_20260613_0424/local-ex286-innerorder/ex286/aigs/ex286_r26_symcof_f00_bits_0_12_1_10_inner_outside_in_onehot_abc_g_aig.aig`
+  - best evaluate log from this probe: `student/work/ex286_frontend_inner_order_probe_20260613_0424/local-ex286-innerorder/ex286/logs/ex286_r26_symcof_f00_bits_0_12_1_10_inner_outside_in_onehot_abc_g_aig.evaluate.py.log`
+- outcome: lower BDD node count did not translate to ADP because Yosys/ABC increased critical delay from `15` to `16`. Do not repeat plain inner-order tuning around outer bits `0:12:1:10`; only revisit if paired with a delay-reducing class mux or a different hidden-state basis.
+
+## 2026-06-13 05:27:00 +0800 Round25 unknown-sym-r25
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round25_20260613_0506/agent_shards/unknown-sym-r25/`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-sym-r25/ex286/notes/high_level_dossier.md`.
+- High-level description: 13-bit Hamming-weight-preserving lossy routing/normalizer with known input swap symmetries `(4,5)` and `(6,7)`.
+- Families tried:
+  - `fixed_popcount_layer_decision_forest`: shared popcount decoder plus per-weight exact decision forests.
+  - `input_xor_delta_coordinate_shared_bdd`: shared BDD for `out ^ in`, reconstructing `out = in ^ delta`.
+  - `output_gray_coordinate_shared_bdd`: shared BDD for output Gray coordinates, reconstructing with prefix XOR.
+- Method signatures:
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|fixed_popcount_layer_decision_forest|shared_popcount_layer_decoder_and_layer_trees|yosys_abc_g_aig|official_evaluate|full_word_layer_forest`
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|input_xor_delta_coordinate_shared_bdd|single_delta_bdd_node_pool_pair_late_order|yosys_abc_g_aig|official_evaluate|delta_xor_reconstruction`
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|output_gray_coordinate_shared_bdd|single_gray_bdd_node_pool_pair_late_order|yosys_abc_g_aig|official_evaluate|gray_prefix_xor_reconstruction`
+- Official `evaluate.py` results: 3/3 equivalent, no frontend improvement. Results were `10763/34/365942`, `2748/20/54960`, and `2715/42/114030`; best was `ex286_r25_delta_shared_bdd_pair_late`, still worse than current frontend `20190` and reference `2376`.
+- Paths: Verilog/AIG/logs under `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/unknown-sym-r25/ex286/`; summary rows in the campaign shard CSVs.
+- Outcome: the tested fixed-popcount layer forest and transformed-coordinate BDD families are exact but not close to current, confirming that simple popcount layering or `out^in`/Gray coordinate transforms do not expose the reference-scale structure. Do not repeat unchanged; a future attempt needs a new nonlinear hidden state beyond symcof, delta-BDD, and layer-tree forms.
+
+
+## 2026-06-13 05:39:00 +0800 Round26 unknown-sym-r26
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/unknown-sym-r26/`.
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/unknown-sym-r26/ex286/notes/high_level_dossier.md`.
+- Families tried:
+  - `component_pairfield_shared_bdd`: adjacent-pair count/orientation encoded output with one shared BDD node pool.
+  - `component_pairfield_split_bdd`: same descriptor with separate count and orientation BDD node pools.
+  - `hidden_order_local_rule_screen`: no-synth blocker unless local-rule conflicts disappear.
+- Best official candidate: `ex286_r26_pairfield_shared_bdd` at `2308/21/48468`; evaluate log `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/unknown-sym-r26/ex286/logs/ex286_r26_pairfield_shared_bdd.evaluate.py.log`.
+- Hidden-order screen: best full exact bits `0`, conflicts `37855`, evidence `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/unknown-sym-r26/ex286/diagnostics/ex286_hidden_order_local_screen.csv`.
+- Outcome: no success is claimed unless `evaluate.py` candidate rows beat the frontend/reference columns in the shard CSVs.
+
+## 2026-06-14 09:57:48 +0800 unknown-ex286-agent
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/unknown-ex286-agent/`.
+- Dossier: `student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-ex286-agent/ex286/notes/high_level_dossier.md`.
+- High-level description: 13-bit Hamming-weight-preserving lossy routing/normalizer; exact bucket/selector guardrail is real but remains table-scale. This run avoided current symcof selector/inner-order replay and tested two bucket-descriptor source forms.
+- Families tried:
+  - `bucket_count_cover_sop`: shared home-bucket counters plus selector wires and invalid-key cube-cover SOP terms.
+  - `bucket_class_decision_dag`: shared home-bucket counters plus a reduced full-word descriptor MTBDD.
+- Method signatures:
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|bucket_count_cover_sop_selectors_first|shared_home_bucket_counters_invalid_key_cube_cover|yosys_abc_g_aig|abc_xf_official_evaluate|per_output_cover_terms`
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|bucket_class_mtbdd_selectors_then_counts|shared_home_bucket_counters_fullword_descriptor_dag|yosys_abc_g_aig|abc_xf_official_evaluate|full_word_mtbdd_leaves`
+- Official `evaluate.py` results: 2/2 equivalent, no frontend improvement.
+  - `ex286_bucket_count_cover_sop_selectors_first`: `7012/16/112192`, evaluate log `student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-ex286-agent/ex286/logs/ex286_bucket_count_cover_sop_selectors_first.evaluate.py.log`.
+  - `ex286_bucket_class_mtbdd_selectors_then_counts`: `3736/22/82192`, evaluate log `student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-ex286-agent/ex286/logs/ex286_bucket_class_mtbdd_selectors_then_counts.evaluate.py.log`.
+- Outcome: no new frontend best; `best_improvements.csv` is header-only. Do not repeat bucket count covers, key table/BDD/MTBDD, or current symcof selector neighborhoods unchanged. A future attempt needs a new nonlinear routing state or recurrence that avoids the `4608`-key bucket guardrail scale before RTL emission.
+
+## 2026-06-14 12:32:04 +0800 unknown-hard-r4
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/unknown-hard-r4/`.
+- Dossier: `student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-hard-r4/ex286/notes/high_level_dossier.md`.
+- High-level description: 13-bit Hamming-weight-preserving lossy routing/normalizer with exact input swap symmetries `(4,5)` and `(6,7)`. This run avoided unchanged symcof/onehot and raw `out^in` delta replay by screening non-identity source descriptors.
+- Families tried:
+  - `routing_residual_shared_bdd`: reconstruct `out = base(in) ^ residual(in)` with one shared residual BDD node pool. Best screened base was `paircanon_rotl1`, order `outside_in`, `1460` residual BDD nodes.
+  - `boundary_layer_residual_bypass`: exact low/high Hamming-weight boundary source decode plus middle-layer residual BDD. Best screened base was `paircanon_rotl1`, order `outside_in`, boundary `1`, `1589` residual BDD nodes.
+- Method signatures:
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|routing_residual_shared_bdd|base_paircanon_rotl1_order_outside_in_nodes_1460|yosys_abc_g_aig|official_evaluate_residual_reconstruction|full_word_residual_xor`
+  - `ex286|hamming_weight_preserving_lossy_routing_normalizer|boundary_layer_residual_bypass|base_paircanon_rotl1_order_outside_in_nodes_1589|yosys_abc_g_aig|official_evaluate_residual_reconstruction|boundary_source_decode_plus_middle_residual`
+- Official `evaluate.py` results: 2/2 equivalent, no frontend improvement.
+  - `ex286_r4_routing_residual_shared_bdd_paircanon_rotl1_outside_in_all_rows_abc_g_aig`: `2757/21/57897`.
+  - `ex286_r4_boundary_layer_residual_bypass_paircanon_rotl1_outside_in_middle_bdd_edge1_abc_g_aig`: `3151/31/97681`.
+- Paths: Verilog/AIG/logs under `student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-hard-r4/ex286/`; shard CSVs under the campaign shard above.
+- Outcome: no official improvement over current frontend `1346/15/20190`. Do not repeat non-identity paircanonical residual BDD or boundary-layer residual bypass unchanged; the source decode adds delay/area and still does not expose the missing compact nonlinear routing state.
+
+## 2026-06-14 12:50:02 +0800 unknown-hard-r5
+
+- Campaign shard: `student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/unknown-hard-r5/`.
+- Dossier: `student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-hard-r5/ex286/notes/high_level_dossier.md`.
+- Families tried: current-best source full-word case compression, bounded selector-minimized pair-key class BDD word case, output-plane XOR-mask source reuse, and restricted hard-bit residual selector table. This avoided r4 paircanon residual BDD and boundary-layer bypass.
+- Official `evaluate.py` results: 4/4 equivalent, no frontend improvement. Best row was `ex286_r5_current_source_word_case_abc_g_aig` at `1364/15/20460`, versus current frontend `1346/15/20190`. Other rows were `33192`, `33192`, and `55252` ADP.
+- Paths: Verilog/AIG/logs under `student/work/ex204_ex299_frontend_continuation_20260614_1216/unknown-hard-r5/ex286/`; run summary under `student/runs/unknown/ex204_ex299_frontend_continuation_20260614_1216/unknown-hard-r5/ex286/`.
+- Outcome: no new frontend best. The full-word case rewrite is near but larger than the existing onehot source; selector `1_3_9` and restricted residual tables are exact but area/delay dominated.
+
+## 2026-06-14 23:20:22 +0800 structural-decomp ex286 follow-up
+
+- Campaign: `student/frontend_campaigns/campaigns/ex286_ex287_frontend_structural_decomp_20260614_2320/`.
+- Families tried: rot5/state shared BDD, low11 default-xor correction, onehot route superposition, selector/case recuts, exact bucket-key cube cover, adjacent-pair component orientation encoded BDD, symmetry-key encoded cofactor BDD, two-hot collision-lift residuals, and output-image/Hamming-weight reconstruction.
+- Official best in this campaign: current-source recut tied the existing frontend best at `1346/15/20190`; no new ex286 best was found.
+- Best materially new exact rows were still worse: `ex286_orientbdd_keycof_k4_f11_abc_g_aig` at `2071/17/35207`, `ex286_orientbdd_keycof_k4_f00_abc_g_aig` at `2107/18/37926`, and `ex286_r3_image_popcount_skip4` at `1487/27/40149`.
+- Paths: merged campaign rows in `student/frontend_campaigns/campaigns/ex286_ex287_frontend_structural_decomp_20260614_2320/results/evaluation_results.csv`.
+- Do not repeat unchanged: exact bucket-key cube cover, component orientation encoded BDD/cofactor, two-hot XOR-superposition or pair-collision residual BDD, and image-field reconstruction through popcount recovery. Ex286 still needs a different hidden-state basis than the ex287 global adjacent-pair orientation clue.
+
+## 2026-06-14 23:20 structural-decomp follow-up
+
+- New frontend best: `ex286_linhyb_sweep_raw_3_5_6_8_f00_global_abc_g_aig` official evaluate.py OK, area/delay/ADP `1338/15/20070`.
+- Source Verilog: `student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/verilog/ex286_linhyb_sweep_raw_3_5_6_8_f00_global.v`
+- Source AIG: `student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/aigs/ex286_linhyb_sweep_raw_3_5_6_8_f00_global_abc_g_aig.aig`
+- Evaluate log: `student/work/ex286_ex287_frontend_structural_decomp_20260614_2320/coordinator-ex286-linear-hybrid/ex286/logs/ex286_linhyb_sweep_raw_3_5_6_8_f00_global_abc_g_aig.evaluate.py.log`
+- Method: selective output-linear/raw-coordinate hybrid over the hamming-weight-preserving routing normalizer; preserve the previous symcof/cofactor source for hard outputs and replace selected cheap output coordinates with a shared cofactored BDD bank.
+- Result: small improvement over prior frontend best `20190` by `120` ADP. Broad orient-kx, full output-linear basis, truth-keybdd, and outer-BDD variants did not beat this; future work should target the selector/critical-path structure rather than resweeping nearby raw-bit subsets.

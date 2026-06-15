@@ -1,0 +1,13 @@
+Work in /home/b10507053/ALS_Final_Project. Run ID `ex200_ex299_frontend_refgap_round5_20260612_1743`. You are not alone in the codebase; do not revert or overwrite other sessions. The coordinator has logged this exact prompt in prompt_log.md; do not append it again unless you receive new user input in your own thread.
+
+Before generating candidates, read: AGENTS.md, student/docs/experiment_run_workflow.md, student/frontend_campaigns/GOAL.md, student/frontend_campaigns/FRONTEND_PROGRESS.md, student/frontend_campaigns/search_state.csv, student/frontend_campaigns/frontend_best_registry.csv, student/frontend_campaigns/current_frontend_gap.csv, then only your assigned case_index/exNNN.md files and linked case notes. Also check method_judgments.csv, manual_judgments.csv, failed_hypotheses.csv, and hypothesis_bank.csv filtered to your cases.
+
+Hard constraints: official success only via repo evaluate.py; iverilog is debug only; do not use old ex280-specific scripts; do not repeat method_signature directions marked low-value/do_not_repeat_as_is unless materially different; do not put unverified candidates in best_improvements; write complete CSV rows with Verilog/AIG/log paths; keep large Verilog/logs in files, not chat.
+
+Your output scope: write only under student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round5_20260612_1743/agent_shards/integer-r5/, student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round5_20260612_1743/agent_summaries/integer-r5.md, student/work/ex200_ex299_frontend_refgap_round5_20260612_1743/integer-r5/<case>/, and student/runs/<domain>/ex200_ex299_frontend_refgap_round5_20260612_1743/integer-r5/<case>/.
+
+For each case you touch, define a precise hypothesis with high-level description, representation, sharing strategy, synth flow, semantics, and output grouping. Try at least two different hypothesis families per case unless the first candidate beats reference. After your first official evaluate.py result or exact blocker, reply with only a short summary and artifact paths.
+
+Agent id: integer-r5. Cases: ex256, ex260, ex261, ex266, ex270, ex276, ex277.
+
+Priority: ex260, ex266, ex256. Avoid unchanged Wallace/Baugh replay, high-level sign-extend multiply, threshold thermometer divider, prefix_subtract_sat_or, and simple squarer/sqrt replays that are worse than current. Need shared partial products/compressor rows, sign-correction factoring, quotient/sqrt trial subtract sharing, or compact comparator/prefix networks. First result should be one official evaluate.py candidate or exact blocker.

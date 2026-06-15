@@ -1,0 +1,22 @@
+{
+  "adp": 6090,
+  "aig_sha256": "9ce1dec78e77e8dfd0feeae94f0ebe4ec77cd0463af0edc38d2782eb9f1db36c",
+  "area": 435,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex216_bf16_cube_aggr_semantic_positive_symmetry_fields_manual_sign_non_nan_fix7",
+  "case": "ex216",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_cube",
+  "method_signature": "bf16_cube",
+  "reference_adp": 3357,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600/ex216/aigs/ex216_bf16_cube_aggr_semantic_positive_symmetry_fields_manual_sign_non_nan_fix7.aig",
+  "source_csv": "student/runs/bf16/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex216_ex218_ex219_frontend_bf16_deep_20260606_1600",
+  "source_verilog_path": "student/work/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600/ex216/verilog/ex216_bf16_cube_aggr_semantic_positive_symmetry_fields_manual_sign_non_nan_fix7.v",
+  "variant": "aggr_semantic_positive_symmetry_fields_manual_sign_non_nan_fix7",
+  "verilog_sha256": "c5320171dde020e871bb8c1d8016ab89c6abffe6d0aea075c26fbde5322840e3"
+}

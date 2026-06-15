@@ -1,0 +1,22 @@
+{
+  "adp": 27120,
+  "aig_sha256": "d4a7a22460f4c04a4a8ccb75bdbd8833f5191c50093e46d9f6f1cb1ab0ded408",
+  "area": 1695,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex287_r5_cell_chunk4_case",
+  "case": "ex287",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "use nibble route cells to expose local sharing while avoiding one full output-vector case",
+  "method_signature": "ex287|local_cell_selector|cell_chunk4_case|k4_vector_cofactor_case_plain|share_abc_g_aig|official_evaluate|source_rtl",
+  "reference_adp": 5782,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r5/ex287/aigs/ex287_r5_cell_chunk4_case.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-hard-r5/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r5/ex287/logs/ex287_r5_cell_chunk4_case.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r5/ex287/verilog/ex287_r5_cell_chunk4_case.v",
+  "variant": "cell_chunk4_case",
+  "verilog_sha256": "6c73a6e925cb0810d87cc76975f9e41be8b8c459541eaf1d6914a2c6752b5779"
+}

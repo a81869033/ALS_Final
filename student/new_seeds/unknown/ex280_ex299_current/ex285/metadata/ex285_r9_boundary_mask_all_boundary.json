@@ -1,0 +1,22 @@
+{
+  "adp": 12352,
+  "aig_sha256": "7ef2c62b90a98586ca26f48df86cb344f0ab0a5d5c42c6125014a9438b0e50f4",
+  "area": 772,
+  "bundle_type": "current",
+  "candidate_id": "ex285_r9_boundary_mask_all_boundary",
+  "case": "ex285",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "Boundary-helper and current-tree exact sources are both valid; changing the output-plane cut may expose a lower ADP shared cone.",
+  "method_signature": "ex285|boundary_helper_output_mask_r9|bits_0_1_2_3_4_5_6_7_8_9_10_11|decision_tree_base_plus_route_decode_helper|yosys_frontend_abc_g_aig|official_evaluate|selected_output_planes",
+  "reference_adp": 5499,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r9/ex285/aigs/ex285_r9_boundary_mask_all_boundary.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r9/ex285/logs/ex285_r9_boundary_mask_all_boundary.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-hard-r9/ex285/verilog/ex285_r9_boundary_mask_all_boundary.v",
+  "variant": "current exact boundary-helper source with a new top-level output-plane mask",
+  "verilog_sha256": "164f27da5674d38849ea54d97eba446df0856f1c53b14af8f676580ec9a7ead4"
+}

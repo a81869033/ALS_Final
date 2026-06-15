@@ -1,0 +1,22 @@
+{
+  "adp": 3072,
+  "aig_sha256": "fb373be024b117cb2b841838e4977ebb45abba08e90af6e04496ee9cc3fe7ebb",
+  "area": 256,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex277_isqrt_prefix5_range_abc_g_aig",
+  "case": "ex277",
+  "delay": 12,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 1980,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex277_frontend_isqrt_prefix_delta_20260609_1618/ex277/aigs/ex277_isqrt_prefix5_range_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex275_ex277_frontend_isqrt_prefix_delta_20260609_1618/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex277_frontend_isqrt_prefix_delta_20260609_1618",
+  "source_verilog_path": "student/work/ex275_ex277_frontend_isqrt_prefix_delta_20260609_1618/ex277/verilog/ex277_isqrt_prefix5_range.v",
+  "variant": "prefix5_range+abc_g_aig",
+  "verilog_sha256": "7adc4c85e89ce5e1b0d8fe6077db3e8e84dc6778e7d2d3657024bfb2bec9d1dd"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 16842,
+  "aig_sha256": "becfd8a674e2c3db9ecea5fe4e2ce0e014b2d7845508343674f145d8148031d5",
+  "area": 401,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex269_udiv_radix4_shift_subtract_wreduce_default",
+  "case": "ex269",
+  "delay": 42,
+  "domain": "integer",
+  "hypothesis": "unsigned low8_high8:a/b dbz=max",
+  "method_signature": "unsigned low8_high8:a/b dbz=max",
+  "reference_adp": 11760,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex267_ex269_frontend_udiv_radix4_flowcheck_20260609_1150/ex269/aigs/ex269_udiv_radix4_shift_subtract_wreduce_default.aig",
+  "source_csv": "student/runs/integer/ex267_ex269_frontend_udiv_radix4_flowcheck_20260609_1150/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex267_ex269_frontend_udiv_radix4_flowcheck_20260609_1150",
+  "source_verilog_path": "student/work/ex267_ex269_frontend_udiv_radix4_flowcheck_20260609_1150/ex269/verilog/ex269_udiv_radix4_shift_subtract.v",
+  "variant": "radix4_shift_subtract+wreduce_default",
+  "verilog_sha256": "e7953717ce46b2f66cc960a87e01a70022e19918d45a3bb154bab55fe71b5a0a"
+}

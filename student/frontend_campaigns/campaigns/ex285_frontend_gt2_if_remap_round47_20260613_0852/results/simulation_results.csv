@@ -1,0 +1,22 @@
+case,domain,agent_id,candidate_id,simulation_pass,log_path,notes
+ex285,unknown,local-ex285-if-r47,ex285_r47_resyn2rs_area_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_compress2rs_area_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_mfs_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_mfs_rwz_mfs_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_ssw_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_fraig_mfs_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_dchoice_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_choice_if4_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_compress_l_no_dc_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_resub_deep_rf_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_dc2_scorr_resyn_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_dc2_lcorr_resyn_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_rw_resub_loop5_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_area_then_delay_recover_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_gia_dc2_put_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_gia_dch_put_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_gia_dc2_rw_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_if4_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_if5_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_if6_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final
+ex285,unknown,local-ex285-if-r47,ex285_r47_dc2_if6_dc2_from_frontend_best,not_run,,AIG-preserving ABC remap; official evaluate.py is final

@@ -1,0 +1,22 @@
+{
+  "adp": 7238,
+  "aig_sha256": "8ea7df9273692e72b4c5156f18cb1538c270004fd3ded5cc5a0b303329a89a0c",
+  "area": 517,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex278_isqrt_prefix6_range_synth_preset",
+  "case": "ex278",
+  "delay": 14,
+  "domain": "integer",
+  "hypothesis": "unsigned_floor_isqrt",
+  "method_signature": "unsigned_floor_isqrt",
+  "reference_adp": 5198,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex275_ex279_frontend_isqrt_radix_prefix_20260609_1551/ex278/aigs/ex278_isqrt_prefix6_range_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex275_ex279_frontend_isqrt_radix_prefix_20260609_1551/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex275_ex279_frontend_isqrt_radix_prefix_20260609_1551",
+  "source_verilog_path": "student/work/ex275_ex279_frontend_isqrt_radix_prefix_20260609_1551/ex278/verilog/ex278_isqrt_prefix6_range.v",
+  "variant": "prefix6_range+synth_preset",
+  "verilog_sha256": "c665e7e8cc5a597dc8ca19d8ffbd62f8dea1e13f394c1a23b670fc02bfaf6b73"
+}

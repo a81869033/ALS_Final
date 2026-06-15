@@ -1,0 +1,22 @@
+{
+  "adp": 245525,
+  "aig_sha256": "2a39955b9be303dcf68ea6e7eba9a3b2dd909797197785d777cf93e16c2e72ba",
+  "area": 10675,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex294_r80_mod4_shared_mirror_cofactor",
+  "case": "ex294",
+  "delay": 23,
+  "domain": "unknown",
+  "hypothesis": "sparse mirror-pair descriptor can cofactor mod4 global-state roots",
+  "method_signature": "ex294|global_state_sparse_mirror_cofactor|shared_bdd_mod4_source_mux|shared_mirror_pair_descriptor_selects_mod4_plane|yosys_internal_abc_g_aig|official_evaluate|mod4_plane_0_4_8_12",
+  "reference_adp": 133365,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round80_20260613_1915/sub-unknown-route-r80/ex294/aigs/ex294_r80_mod4_shared_mirror_cofactor.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round80_20260613_1915/agent_shards/sub-unknown-route-r80/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round80_20260613_1915/sub-unknown-route-r80/ex294/logs/ex294_r80_mod4_shared_mirror_cofactor.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round80_20260613_1915",
+  "source_verilog_path": "student/work/frontend_source_parallel_round80_20260613_1915/sub-unknown-route-r80/ex294/verilog/ex294_r80_mod4_shared_mirror_cofactor.v",
+  "variant": "shared_bdd_mod4_mirror_source_mux",
+  "verilog_sha256": "2b66eab085b9a253ca467c5866672fe25844d1d8b4ab367ba389aff72d917371"
+}

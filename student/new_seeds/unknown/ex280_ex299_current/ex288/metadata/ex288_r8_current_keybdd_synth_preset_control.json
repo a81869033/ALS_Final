@@ -1,0 +1,22 @@
+{
+  "adp": 30422,
+  "aig_sha256": "448393ca735b340cd85bac25634c3c49acf9cf2361aec2089b0405e4fdf71e8d",
+  "area": 2173,
+  "bundle_type": "current",
+  "candidate_id": "ex288_r8_current_keybdd_synth_preset_control",
+  "case": "ex288",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "Direct current-source synth-preset control row to test whether frontend source boundary and synth preset alone improve QoR.",
+  "method_signature": "ex288|source_preserving_synth_preset_control|direct_current_source|no_output_overlay|yosys_synth_preset|official_evaluate|all_outputs",
+  "reference_adp": 16394,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex288/aigs/ex288_r8_current_keybdd_synth_preset_control.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex288/logs/ex288_r8_current_keybdd_synth_preset_control.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex288/verilog/ex288_r8_current_keybdd_synth_preset_control.v",
+  "variant": "",
+  "verilog_sha256": "34e5694ffbd3d0f7a277d9eae57fdd2020206f60e16b2c0fe0b9f213ac466789"
+}

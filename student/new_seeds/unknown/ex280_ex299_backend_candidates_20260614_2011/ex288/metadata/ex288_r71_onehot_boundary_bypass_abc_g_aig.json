@@ -1,0 +1,22 @@
+{
+  "adp": 31976,
+  "aig_sha256": "0689038c42039ec878b7b8b5ba495d1ddf9dc68200e3861289322d630e898d95",
+  "area": 2284,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex288_r71_onehot_boundary_bypass_abc_g_aig",
+  "case": "ex288",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "hamming-weight routing source local replacement",
+  "method_signature": "ex288|hamming-weight_routing_source_local_replacement|onehot_and_all-zero/all-one_boundary_bypass_wrapper|current_key-BDD-selected_symcof_base_with_tiny_exact_onehot_output_map|yosys_internal_abc_g_aig|official_evaluate|bounded_local_wrapper",
+  "reference_adp": 16394,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-unknown-local-r71/ex288/aigs/ex288_r71_onehot_boundary_bypass_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round71_20260613_1312/agent_shards/sub-unknown-local-r71/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round71_20260613_1312/sub-unknown-local-r71/ex288/logs/ex288_r71_onehot_boundary_bypass_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round71_20260613_1312",
+  "source_verilog_path": "student/work/frontend_source_parallel_round71_20260613_1312/sub-unknown-local-r71/ex288/verilog/ex288_r71_onehot_boundary_bypass_abc_g_aig.v",
+  "variant": "bounded_local_wrapper",
+  "verilog_sha256": "2a3cec63f6eb55601119c6e02c5f6aa25ae618b84c851009a6faaba2c7fd62f0"
+}

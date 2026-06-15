@@ -1,0 +1,22 @@
+{
+  "adp": 41451,
+  "aig_sha256": "900ab8d0ed71bc07c2918dba01ac7d9f3b44866872e5eca5976cd0747164df46",
+  "area": 1011,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex274_r24_square_frontend_hybrid_bddtop3_trunc_synth_preset_d16",
+  "case": "ex274",
+  "delay": 41,
+  "domain": "integer",
+  "hypothesis": "unsigned square hybrid selected-top-BDD",
+  "method_signature": "ex274|unsigned square hybrid selected-top-BDD|top3 truncated shared BDD plus arithmetic lower square|shared selected top-output BDD and arithmetic residual|synth_preset_d16|unsigned_16_square|full square word",
+  "reference_adp": 21630,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex274/aigs/ex274_r24_square_frontend_hybrid_bddtop3_trunc_synth_preset_d16.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round24_20260613_0435/agent_shards/mixed-r24/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex274/logs/ex274_r24_square_frontend_hybrid_bddtop3_trunc_synth_preset_d16.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round24_20260613_0435",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex274/verilog/ex274_r24_square_frontend_hybrid_bddtop3_trunc.v",
+  "variant": "hybrid_bddtop3_trunc",
+  "verilog_sha256": "11267e9a8acaff4d095b1caf835db35c857bfb2ffdd0ec0f7573be7695505037"
+}

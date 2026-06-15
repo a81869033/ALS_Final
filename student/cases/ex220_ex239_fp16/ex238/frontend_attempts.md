@@ -51,3 +51,16 @@ Next maintenance items:
 - The next plausible direction is to compress the exp9/exp19 boundary tables
   or derive a shallow exact rounding predicate for them.  Do not repeat
   b11/b8/b7 selected-bit expansions or generic synthflow sweeps.
+
+## 2026-06-13 sub-fp16-r74 round74
+
+Run ID: `frontend_source_parallel_round74_20260613_1439`, agent `sub-fp16-r74`.
+
+- Dossier: `student/work/frontend_source_parallel_round74_20260613_1439/sub-fp16-r74/ex238/dossier.md`.
+- Families tested:
+  - `ex238|fp16_reciprocal_cube_boundary_alt|boundary_low13_hi5|semantic_core_plus_boundary_table|yosys_synth_preset|abc_xf_official_evaluate|boundary_table_alt_cut`.
+  - `ex238|fp16_reciprocal_cube_boundary_clamp|core_clamp_hi4|semantic_core_plus_threshold_clamps|yosys_abc_g_aig|abc_xf_official_evaluate|boundary_predicate_no_table`.
+- Official `evaluate.py` results:
+  - `ex238_r74_core_boundary_low13_hi5_synth_preset`: `1470/16/23520`, equivalent.
+  - `ex238_r74_core_clamp_hi4_abc_g_aig`: `1467/18/26406`, equivalent.
+- Outcome: `low13_hi5` improves over the assigned current frontend target `24848` but remains worse than the later core-boundary case-note best `22530` and reference `16549`. The exact clamp form is lower area but delay 18, so local boundary tables remain better for ADP.

@@ -1,0 +1,93 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex240,ex240_current_same_grs_diff_param8_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_current_same_grs_diff_param8_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_current_same_grs_diff_param8_extra_opt_share,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_current_same_grs_diff_param8_no_internal_abc,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_current_same_grs_diff_param8_abc_d24,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_current_maxeff_delta_bdd_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_current_maxeff_delta_bdd_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_current_maxeff_delta_bdd_extra_opt_share,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_current_maxeff_delta_bdd_no_internal_abc,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_current_maxeff_delta_bdd_abc_d18,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_current_product_dc_seed12_set11to10_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_current_product_dc_seed12_set11to10_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_current_product_dc_seed12_set11to10_extra_opt_share,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_current_product_dc_seed12_set11to10_no_internal_abc,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_current_product_dc_seed12_set11to10_abc_d22,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_round5_bound_region_mux_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_round5_bound_region_mux_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_round5_bound_region_mux_extra_opt_share,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_round5_bound_region_mux_no_internal_abc,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_round5_bound_region_mux_abc_d18,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_field_delta_diff_table_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_field_delta_diff_table_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_sig_gap_orbit_delta_bits_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_sig_gap_orbit_delta_bits_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_low_area_seed228_product_completion_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_low_area_seed228_product_completion_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_low_area_seed228_product_completion_abc_d22,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_product_threshold_norm_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_product_threshold_norm_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_product_threshold_norm_abc_d22,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_bound_smallpat_nested_den_parallel_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_bound_smallpat_nested_den_parallel_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_bound_smallpat_nested_den_parallel_abc_d18,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_normsplit_attr_default,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_normsplit_attr_abc_g_aig,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_normsplit_attr_abc_d18,iverilog,not_run,,fp8-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,official evaluate.py was used; iverilog debug was not needed
+ex200,ex200_semantic_default_one_casez_saturation_replay_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex200,ex200_semantic_default_one_casez_saturation_replay_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex204,ex204_arithbase_delta_hilo3_bits_11_14_replay_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex204,ex204_arithbase_delta_hilo3_bits_11_14_replay_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex205,ex205_sep_fields_e3_m3_s0_bits_15_replay_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex205,ex205_sep_fields_e3_m3_s0_bits_15_replay_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex223,ex223_log_sparse_residual_low14_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex225,ex225_log_sparse_residual_low14_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex200,ex200_bf16_sparse_residual_hilo3_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex204,ex204_bf16_sparse_residual_hilo3_abc_g_gates,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex205,ex205_bf16_sparse_residual_hilo3_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex223,ex223_log_nested_low13_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex223,ex223_log_nested_low14_hi4_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex223,ex223_log_nested_low14_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex223,ex223_log_nested_low14_hi6_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex225,ex225_log_nested_low12_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex225,ex225_log_nested_low13_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex225,ex225_log_nested_low14_hi5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex225,ex225_log_nested_low14_hi6_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex260,ex260_smul_baugh_wooley_wallace_rev_hcla4_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex260,ex260_smul_baugh_wooley_wallace_rev_hcla4_synth_preset_d13,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex260,ex260_smul_case_b_signed_const_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex260,ex260_smul_case_b_signed_const_synth_preset_d13,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex260,ex260_smul_ex260_shared_bdd_outside_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex260,ex260_smul_ex260_shared_bdd_outside_synth_preset_d13,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux_synth_preset_d18,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux_abc_g_aig_d8,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_ex266_cof_bhi2_a4_bitbdd_wordmux_arith_wreduce_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_bdd_perbit_interleave_msb_synth_preset_d18,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_bdd_perbit_interleave_msb_abc_g_aig_d8,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_bdd_perbit_interleave_msb_arith_wreduce_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_radix4_shift_subtract_synth_preset_d18,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_radix4_shift_subtract_abc_g_aig_d8,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_radix4_shift_subtract_arith_wreduce_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_ex266_parallel_threshold_synth_preset_d18,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_ex266_parallel_threshold_abc_g_aig_d8,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex266,ex266_udiv_ex266_parallel_threshold_arith_wreduce_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_wallace_square_outside_csel5_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_wallace_square_outside_csel5_synth_preset_d16,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_wallace_square_outside_csel5_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_dadda_square_csel4_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_dadda_square_csel4_synth_preset_d16,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_dadda_square_csel4_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_hybrid_bddtop2_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_hybrid_bddtop2_synth_preset_d16,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_hybrid_bddtop2_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_wallace_square_factored_csel6_abc_g_aig,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_wallace_square_factored_csel6_synth_preset_d16,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex270,ex270_square_wallace_square_factored_csel6_synth_preset,not_run,not_run,,mixed-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,Skipped; official evaluate.py used as equivalence authority.
+ex285,ex285_r8_symcof_parity_b10_abc_g_aig,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used
+ex285,ex285_r8_current_laneparity_high_abc_g_aig,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used
+ex287,ex287_r8_symcof_parity_b13_abc_g_aig,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used
+ex287,ex287_r8_current_laneparity_high_abc_g_aig,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used
+ex288,ex288_r8_symcof_parity_b6_abc_g_aig_d14,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used
+ex288,ex288_r8_keybdd7_parity_b6_abc_g_aig_d14,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used
+ex288,ex288_r8_current_laneparity_high_abc_g_aig_d14,iverilog,not_run,,routing-r8,ex200_ex299_frontend_refgap_round8_20260612_1826,structural candidates were checked by local exact model and official evaluate.py; iverilog not used

@@ -1,0 +1,22 @@
+{
+  "adp": 520,
+  "aig_sha256": "5b05cf8638c687a6bfa14807e0049beee6b23eec558d3786d0387101455f1574",
+  "area": 65,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex265_udiv_cof_bhi2_ahi1_bitbdd_wordmux_abc_g_aig",
+  "case": "ex265",
+  "delay": 8,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex265|divider_magnitude_cofactor_classifier|cof_bhi2_ahi1_bitbdd_wordmux|shared_quotient_word_mux_and_local_quotient-bit_BDD_roots|abc_g_aig|unsigned_low4_high4_div_dbz_sat|full_quotient_word",
+  "reference_adp": 322,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/runs/integer/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex265/official_eval/ex265_udiv_cof_bhi2_ahi1_bitbdd_wordmux_abc_g_aig/ex265.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/integer-extra-r2/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex265/logs/ex265_udiv_cof_bhi2_ahi1_bitbdd_wordmux_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/integer-extra-r2/ex265/verilog/ex265_udiv_cof_bhi2_ahi1_bitbdd_wordmux.v",
+  "variant": "alternate magnitude cofactor and low-denominator BDD quotient classifiers",
+  "verilog_sha256": "04a2178284c10649b0a84d6bbbfde175b2f1b515a04a5ea865edee85494bb37f"
+}

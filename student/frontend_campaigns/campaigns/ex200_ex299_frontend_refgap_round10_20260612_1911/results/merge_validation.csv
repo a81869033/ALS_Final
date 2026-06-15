@@ -1,0 +1,7 @@
+metric,value
+candidate_rows,42
+evaluation_rows,42
+failed_rows,30
+best_improvement_rows,3
+missing_success_paths,0
+registry_updates,0

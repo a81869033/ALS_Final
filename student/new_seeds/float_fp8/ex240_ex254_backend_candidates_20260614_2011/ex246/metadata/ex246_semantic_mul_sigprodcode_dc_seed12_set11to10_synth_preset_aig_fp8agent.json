@@ -1,0 +1,22 @@
+{
+  "adp": 7644,
+  "aig_sha256": "c89e25d9b8901db3287ea2a4519594c1cb4b62c3f1560cd89eb48f3cca081668",
+  "area": 364,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex246_semantic_mul_sigprodcode_dc_seed12_set11to10_synth_preset_aig_fp8agent",
+  "case": "ex246",
+  "delay": 21,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex246|E5M2FN packed multiply|sigpair product-code table plus product-class completion|shared product-code decode and boundary reassembly|synth_preset_aig|exact_e5m2fn_mul_high_times_low|factored_product_code",
+  "reference_adp": 2805,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/float-fp8-agent/ex246/aigs/ex246_semantic_mul_sigprodcode_dc_seed12_set11to10_synth_preset_aig_fp8agent.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/float-fp8-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/float-fp8-agent/ex246/logs/ex246_semantic_mul_sigprodcode_dc_seed12_set11to10_synth_preset_aig_fp8agent.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/float-fp8-agent/ex246/verilog/ex246_semantic_mul_sigprodcode_dc_seed12_set11to10.v",
+  "variant": "semantic_mul_sigprodcode_dc_seed12_set11to10",
+  "verilog_sha256": "f9f3125d232af0a0c3bfdc7f0b14e5bacfb2043482221eff63c3b481612f38c6"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 13440,
+  "aig_sha256": "411e2b0d1d1c6d88108f95e3b9cd431db7094d4e3d975585a3a765a1bc639a10",
+  "area": 480,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex259_umul_wallace_bits_rev_cla_abc_g_aig",
+  "case": "ex259",
+  "delay": 28,
+  "domain": "integer",
+  "hypothesis": "unsigned low8_high8:a*b",
+  "method_signature": "unsigned low8_high8:a*b",
+  "reference_adp": 10000,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex258_ex259_frontend_umul_wallace_order_cla_20260609_0140/ex259/aigs/ex259_umul_wallace_bits_rev_cla_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex258_ex259_frontend_umul_wallace_order_cla_20260609_0140/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex258_ex259_frontend_umul_wallace_order_cla_20260609_0140",
+  "source_verilog_path": "student/work/ex258_ex259_frontend_umul_wallace_order_cla_20260609_0140/ex259/verilog/ex259_umul_wallace_bits_rev_cla.v",
+  "variant": "wallace_bits_rev_cla+abc_g_aig",
+  "verilog_sha256": "dc3b563aed0343a0bd8746b77df025aecd526d1b4109a3f773a6677680116af9"
+}

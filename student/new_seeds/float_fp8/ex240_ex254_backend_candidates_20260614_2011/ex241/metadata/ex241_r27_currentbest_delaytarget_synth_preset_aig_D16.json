@@ -1,0 +1,22 @@
+{
+  "adp": 15544,
+  "aig_sha256": "0a46f0af98e1844806fbf55e0f53594c10c804879fd2dc48cba3f74312881614",
+  "area": 536,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex241_r27_currentbest_delaytarget_synth_preset_aig_D16",
+  "case": "ex241",
+  "delay": 29,
+  "domain": "float_fp8",
+  "hypothesis": "verified FP8 semantic source with delay-targeted frontend synthesis",
+  "method_signature": "ex241|current_frontend_semantic|delay_targeted_yosys_abc|reuse verified source with ABC delay target, not generic replay|shard_official_evaluate|exact_fp8_semantics|same_output_grouping_delay_target|synth_preset_aig_D16",
+  "reference_adp": 7224,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/fp8-semantic-r27/ex241/aigs/ex241_r27_currentbest_delaytarget_synth_preset_aig_D16.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex240_ex299_frontend_gt2_round27_20260613_0619/agent_shards/fp8-semantic-r27/candidates.csv",
+  "source_evaluate_log": "student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/fp8-semantic-r27/ex241/logs/ex241_r27_currentbest_delaytarget_synth_preset_aig_D16.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex240_ex299_frontend_gt2_round27_20260613_0619",
+  "source_verilog_path": "student/work/ex240_ex299_frontend_gt2_round27_20260613_0619/fp8-semantic-r27/ex241/verilog/ex241_r27_currentbest_delaytarget_synth_preset_aig_D16.v",
+  "variant": "currentbest_delaytarget",
+  "verilog_sha256": "6a27d2e9db1512491e0e71b75ac48a6dfa99206bee3a22260edc2ecadc366a06"
+}

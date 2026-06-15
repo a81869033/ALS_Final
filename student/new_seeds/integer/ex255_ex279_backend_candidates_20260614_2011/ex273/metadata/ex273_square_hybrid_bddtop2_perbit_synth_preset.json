@@ -1,0 +1,22 @@
+{
+  "adp": 26460,
+  "aig_sha256": "9f3ac057b618e614678a0c123500b5ecc63209ff7c52eebc83d043cd6b0215c0",
+  "area": 735,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex273_square_hybrid_bddtop2_perbit_synth_preset",
+  "case": "ex273",
+  "delay": 36,
+  "domain": "integer",
+  "hypothesis": "unsigned_square_x_times_x",
+  "method_signature": "unsigned_square_x_times_x",
+  "reference_adp": 15078,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex273_ex274_frontend_square_hybrid_bddtop_perbit_20260609_1240/ex273/aigs/ex273_square_hybrid_bddtop2_perbit_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex273_ex274_frontend_square_hybrid_bddtop_perbit_20260609_1240/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex273_ex274_frontend_square_hybrid_bddtop_perbit_20260609_1240",
+  "source_verilog_path": "student/work/ex273_ex274_frontend_square_hybrid_bddtop_perbit_20260609_1240/ex273/verilog/ex273_square_hybrid_bddtop2_perbit.v",
+  "variant": "hybrid_bddtop2_perbit+synth_preset",
+  "verilog_sha256": "3d7965f05613be1d88af250b5f8aa94ad93b7a0d6b3b926ae35e37802f012244"
+}

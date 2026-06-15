@@ -49,6 +49,7 @@ Installed:
 
 - Python 3.10.20
 - Yosys 0.65
+- Icarus Verilog 12.0 (`iverilog` / `vvp`)
 - Rust/Cargo 1.96.0
 - CUDA `nvcc` 12.5.82 plus CUDA runtime/development libraries
 - Python packages needed by E-Syn smoke tests: `sympy`, `z3-solver`, `pyyaml`, `tqdm`, `ply`, `networkx`, `pydot<4`
@@ -63,10 +64,14 @@ Verified:
 
 ```bash
 student/tools/conda-env/bin/yosys -V
+student/tools/conda-env/bin/iverilog -V
+student/tools/conda-env/bin/vvp -V
 student/tools/conda-env/bin/cargo --version
 student/tools/conda-env/bin/nvcc --version
 student/tools/conda-env/bin/python -c 'import sympy, z3, yaml, tqdm, ply, networkx, pydot'
 ```
+
+Also verified `iverilog` / `vvp` with a tiny combinational Verilog smoke test.
 
 ### MockTurtle
 

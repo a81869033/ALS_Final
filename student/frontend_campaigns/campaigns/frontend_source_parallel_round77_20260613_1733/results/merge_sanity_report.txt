@@ -1,0 +1,8 @@
+candidates.csv: 54 rows
+best_improvements.csv: 0 rows
+failed_hypotheses.csv: 8 rows
+simulation_results.csv: 38 rows
+evaluation_results.csv: 54 rows
+shared_structure_report.csv: 54 rows
+missing_paths: 0
+duplicate_method_signatures: 0

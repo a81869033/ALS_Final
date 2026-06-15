@@ -1,0 +1,22 @@
+{
+  "adp": 139545,
+  "aig_sha256": "ec45078a7c0f29b86d4f9bda7a636d866586d19022752cb7bed88e4858012ded",
+  "area": 6645,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex292_r9_mod7_4_drop13_synth_preset",
+  "case": "ex292",
+  "delay": 21,
+  "domain": "unknown",
+  "hypothesis": "The r8 best adjacent/mod7 plane mix may reduce area further when exposed to synth -flatten boundary optimization.",
+  "method_signature": "ex292|global_state_output_plane_overlay_guarded_sweep|adj_2_3_10_11_mod7_0_4_7_scalar|mod4_base_plus_adjacent_and_mod7_selected_planes|yosys_synth_flatten_abc_g_aig|official_evaluate|delay20_guard",
+  "reference_adp": 84854,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex292/aigs/ex292_r9_mod7_4_drop13_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/unknown-wide-r9/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex292/logs/ex292_r9_mod7_4_drop13_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-wide-r9/ex292/verilog/ex292_r9_mod7_4_drop13_synth_preset.v",
+  "variant": "r8 best mask adj 2/3/10/11 plus mod7 0/4/7, scalar assignments, synth-preset flow",
+  "verilog_sha256": "c84ba6bcb1e2c905dddf238c843deff72d1ffc6fe79adea4eb759fbd1edbf62a"
+}

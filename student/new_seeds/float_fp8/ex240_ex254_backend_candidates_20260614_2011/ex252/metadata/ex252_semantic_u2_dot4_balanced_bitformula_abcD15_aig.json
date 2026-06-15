@@ -1,0 +1,22 @@
+{
+  "adp": 3381,
+  "aig_sha256": "a8ddc701d1dc16186db8647dde3c72e586b31f92c8b475630646678bbab9f879",
+  "area": 147,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex252_semantic_u2_dot4_balanced_bitformula_abcD15_aig",
+  "case": "ex252",
+  "delay": 23,
+  "domain": "float_fp8",
+  "hypothesis": "packed_u2_dot4_to_e4m3",
+  "method_signature": "packed_u2_dot4_to_e4m3",
+  "reference_adp": 2603,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex252_ex253_frontend_bitformula_20260608_2240/ex252/aigs/ex252_semantic_u2_dot4_balanced_bitformula_abcD15_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex252_ex253_frontend_bitformula_20260608_2240/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex252_ex253_frontend_bitformula_20260608_2240",
+  "source_verilog_path": "student/work/ex252_ex253_frontend_bitformula_20260608_2240/ex252/verilog/ex252_semantic_u2_dot4_balanced_bitformula.v",
+  "variant": "semantic_u2_dot4_balanced_bitformula_abcD15_aig",
+  "verilog_sha256": "4991cc774c2b8163a40a598cda16db04d1cbf5e2d440b2833b65774b470c21b2"
+}

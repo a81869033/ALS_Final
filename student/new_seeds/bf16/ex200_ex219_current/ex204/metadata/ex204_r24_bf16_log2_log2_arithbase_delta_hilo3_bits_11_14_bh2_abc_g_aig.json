@@ -1,0 +1,22 @@
+{
+  "adp": 24576,
+  "aig_sha256": "16c0df6628255caf7374703bbc542de0ebecd10d964acf93a2f07447606232c5",
+  "area": 1536,
+  "bundle_type": "current",
+  "candidate_id": "ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2_abc_g_aig",
+  "case": "ex204",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log2_arithbase_delta_bitgroup_flow_neighbor",
+  "method_signature": "ex204|bf16_log2_arithbase_delta_bitgroup_flow_neighbor|hilo3 selected-bit correction with bit_hi2 grouping and aig gate flow|shared exponent base plus selected output-bit correction tables|abc_g_aig|DAZ_log2_BF16_RNE_FTZ_canonical_NaN|grouped word output",
+  "reference_adp": 15180,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex204/aigs/ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex204/logs/ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex299_frontend_refgap_round24_20260613_0435",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round24_20260613_0435/mixed-r24/ex204/verilog/ex204_r24_bf16_log2_log2_arithbase_delta_hilo3_bits_11_14_bh2.v",
+  "variant": "hilo3 selected-bit correction with bit_hi2 grouping and aig gate flow",
+  "verilog_sha256": "c6d5f2602f1c4a2014acaed50ed88717a5e40953655cbad19cd9f18c03cbf38a"
+}

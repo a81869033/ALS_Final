@@ -1,0 +1,22 @@
+{
+  "adp": 71264,
+  "aig_sha256": "4ccd1b136ffe200e266bdba2a311786c13b6ddf6195d0d068f629feee98f5551",
+  "area": 4454,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex205_r95_bf16_log10_sep_fields_e4_m3_s0_bits_15_bh1_abc_g_aig",
+  "case": "ex205",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log10_field_decode_exp_recut",
+  "method_signature": "ex205|bf16_log10_field_decode_exp_recut|separate field split with exp_hi4 mant_hi3 and selected sign bit|shared field decode with finer exponent grouping|abc_g_aig|abc_xf_official_evaluate|field-reassembled word output",
+  "reference_adp": 47128,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex205/aigs/ex205_r95_bf16_log10_sep_fields_e4_m3_s0_bits_15_bh1_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_bf16_unknown_round95_20260614_0627/agent_shards/sub-bf16-log-tight-r95/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex205/logs/ex205_r95_bf16_log10_sep_fields_e4_m3_s0_bits_15_bh1_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_bf16_unknown_round95_20260614_0627",
+  "source_verilog_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex205/verilog/ex205_r95_bf16_log10_sep_fields_e4_m3_s0_bits_15_bh1.v",
+  "variant": "separate field split with exp_hi4 mant_hi3 and selected sign bit",
+  "verilog_sha256": "c1e205bb63984bb42e2229cc272cf7ca414a59df61fa7dd0fc3e41eb13e96cef"
+}

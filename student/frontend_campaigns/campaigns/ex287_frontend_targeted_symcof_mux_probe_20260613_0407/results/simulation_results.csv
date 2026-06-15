@@ -1,0 +1,23 @@
+case,domain,agent_id,candidate_id,simulation_status,sim_log,notes
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k5_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k5_case_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k5_tree_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k5_onehot_global_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k5_case_global_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k5_tree_global_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k5_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k5_case_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k5_tree_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k5_onehot_global_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k5_case_global_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k5_tree_global_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k4_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_k6_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k4_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f10_k6_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_bits_0_13_1_12_2_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_bits_0_1_13_12_2_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_bits_13_0_1_12_2_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_bits_0_13_1_12_3_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_bits_0_13_1_11_2_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates
+ex287,unknown,local-ex287-symcof,ex287_r25_symcof_f00_bits_0_13_2_12_1_onehot_group_abc_g_aig,not_run_debug_only,,official evaluate.py was run for exact candidates

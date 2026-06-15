@@ -1,0 +1,22 @@
+{
+  "adp": 6720,
+  "aig_sha256": "7db06c0b4a8f70946b0065633770f52886ab4466a378dc0d684d2ffb9de8ce80",
+  "area": 480,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex218_r95_bf16_reciprocal_cube_field_selector_r19_bits_8_cmp",
+  "case": "ex218",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cube",
+  "method_signature": "ex218|round95_power_tight_bf16|bf16_reciprocal_cube|field_selector_r19_bits_8_cmp|source_level_field_or_selected_bit_recut|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 3222,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex218/official_eval/ex218_r95_bf16_reciprocal_cube_field_selector_r19_bits_8_cmp/ex218.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_bf16_unknown_round95_20260614_0627/agent_shards/sub-bf16-power-tight-r95/best.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex218/logs/ex218_r95_bf16_reciprocal_cube_field_selector_r19_bits_8_cmp.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_bf16_unknown_round95_20260614_0627",
+  "source_verilog_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex218/verilog/ex218_r95_bf16_reciprocal_cube_field_selector_r19_bits_8_cmp.v",
+  "variant": "round19 decoded field selector plus selected bit8 comparator",
+  "verilog_sha256": "0f8b10fc8e15d0d43dce6000c5c48e87ab7fb795ecfd2695735233cfe667f30b"
+}

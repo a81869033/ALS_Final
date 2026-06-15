@@ -1,0 +1,22 @@
+{
+  "adp": 63312,
+  "aig_sha256": "9277d59a58fb8fa6d74dc7ea9ee83febeff92684931706dcaa43a297aa9faefa",
+  "area": 3957,
+  "bundle_type": "current",
+  "candidate_id": "ex229_odd_nested_low9_hi6_abc_g_aig",
+  "case": "ex229",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex229|fp16_tanh_odd_transition_shell|positive_exp_nested_low9_hi6|shared positive exp decode, high output run trees, and sign xor symmetry|yosys_abc_g_aig|abc_xf_official_evaluate|odd_positive_low9_hi6",
+  "reference_adp": 57968,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/aigs/ex229_odd_nested_low9_hi6_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/official_eval/ex229_odd_nested_low9_hi6_abc_g_aig/ex229_odd_nested_low9_hi6_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex229/verilog/ex229_odd_nested_low9_hi6.v",
+  "variant": "",
+  "verilog_sha256": "2715f7b63c12a35cbf00eb6b93b48f9ac7c46fec12e696dc020746e479f26564"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 38350,
+  "aig_sha256": "b1475606e9b76c742fb811a3b37c69e6abe368f34d8f03a1e754c3a8793f25a7",
+  "area": 650,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex254_semantic_e4add_fp4product_grs_synthD20_aig",
+  "case": "ex254",
+  "delay": 59,
+  "domain": "float_fp8",
+  "hypothesis": "e4m3_accumulator_plus_fp4_e2m1_product",
+  "method_signature": "e4m3_accumulator_plus_fp4_e2m1_product",
+  "reference_adp": 38220,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex254_frontend_fp4_product_e4add_20260608_2210/ex254/aigs/ex254_semantic_e4add_fp4product_grs_synthD20_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex254_frontend_fp4_product_e4add_20260608_2210/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex254_frontend_fp4_product_e4add_20260608_2210",
+  "source_verilog_path": "student/work/ex254_frontend_fp4_product_e4add_20260608_2210/ex254/verilog/ex254_semantic_e4add_fp4product_grs.v",
+  "variant": "semantic_e4add_fp4product_grs_synthD20_aig",
+  "verilog_sha256": "601ecfbcedcb0ebc843408ff7cfd900ec23e18760bb120ba146e6cdc050c743f"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 7830,
+  "aig_sha256": "fd2fc42edb29e04cc21a35dd8f0f7580c8678f8c88992a590bf12228589a591b",
+  "area": 290,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex248_r10_current_muxclean",
+  "case": "ex248",
+  "delay": 27,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex248|E5M2FN packed fmod low by high|current frontend best source with opt_muxtree/opt_reduce before abc -g aig|preserves current shared source while reducing mux tree shape before AIG mapping|muxclean_aig|official_evaluate|frontend_only",
+  "reference_adp": 4180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex248/aigs/ex248_r10_current_muxclean.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r10/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex248/logs/ex248_r10_current_muxclean.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r10/ex248/verilog/ex248_r10_current_muxclean.v",
+  "variant": "current frontend best source with opt_muxtree/opt_reduce before abc -g aig",
+  "verilog_sha256": "86ec7171efdb056f790e143d632d0c28ac0e1c2e46bd997a79dc4c420b68e42b"
+}

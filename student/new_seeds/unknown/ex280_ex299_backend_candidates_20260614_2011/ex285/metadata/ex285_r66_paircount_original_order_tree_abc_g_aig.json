@@ -1,0 +1,22 @@
+{
+  "adp": 13277,
+  "aig_sha256": "731afdfd60b938be1fc785c52dbb97300c45ff36dc2f68dce3ecd48e29137b0b",
+  "area": 781,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex285_r66_paircount_original_order_tree_abc_g_aig",
+  "case": "ex285",
+  "delay": 17,
+  "domain": "unknown",
+  "hypothesis": "hamming_weight_preserving_lossy_routing_normalizer",
+  "method_signature": "ex285|hamming_weight_preserving_lossy_routing_normalizer|paircount_original_order_tree|current_decision-tree_prefix_plus_shared_p45/p67_exact_pair-count_predicates|yosys_internal_abc_g_aig|official_evaluate|full_word",
+  "reference_adp": 5499,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round66_20260613_1050/sub-unk285-treefact-r66/ex285/aigs/ex285_r66_paircount_original_order_tree_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round66_20260613_1050/agent_shards/sub-unk285-treefact-r66/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round66_20260613_1050/sub-unk285-treefact-r66/ex285/logs/ex285_r66_paircount_original_order_tree_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round66_20260613_1050",
+  "source_verilog_path": "student/work/frontend_source_parallel_round66_20260613_1050/sub-unk285-treefact-r66/ex285/verilog/ex285_r66_paircount_original_order_tree.v",
+  "variant": "paircount_original_order_tree",
+  "verilog_sha256": "7f61da65fb52bbd674c825978bb10c981efb112da9f0452b262d1cb325d6c9db"
+}

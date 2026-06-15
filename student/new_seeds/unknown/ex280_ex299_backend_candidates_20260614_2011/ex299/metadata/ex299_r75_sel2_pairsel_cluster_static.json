@@ -1,0 +1,22 @@
+{
+  "adp": 1777230,
+  "aig_sha256": "ffe741ce5b718325b2bbe21c87351d5cb7913bcb5abb8f53f220221a954784d0",
+  "area": 98735,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex299_r75_sel2_pairsel_cluster_static",
+  "case": "ex299",
+  "delay": 18,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit static bit-cone graft",
+  "method_signature": "ex299|cyclic_2bit_static_bitcone_graft|static selected output bits from pairsel source over sel2-cluster current best|sel2 cluster source provides most outputs; only bits 8/9 use pairsel cones|yosys_internal_abc_g_aig|official_evaluate|static_pairsel_cluster_bits",
+  "reference_adp": 1013807,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex299/aigs/ex299_r75_sel2_pairsel_cluster_static.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round75_20260613_1450/agent_shards/sub-unknown-large-redesc-r75/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex299/logs/ex299_r75_sel2_pairsel_cluster_static.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round75_20260613_1450",
+  "source_verilog_path": "student/work/frontend_source_parallel_round75_20260613_1450/sub-unknown-large-redesc-r75/ex299/verilog/ex299_r75_sel2_pairsel_cluster_static.v",
+  "variant": "static_pairsel_cluster_bits",
+  "verilog_sha256": "3bf7ba1967e970d9382f970ee2b5b2b2bf87aefc0953e228b7672c02eef853f5"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 7938,
+  "aig_sha256": "4628371d5fdcc97b9a1b8ab02cbf6e1f9adf21fbbb3e941176fe74564b271b6f",
+  "area": 294,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex248_r26r_fmod_norm_by_rem_abc_g_aig",
+  "case": "ex248",
+  "delay": 27,
+  "domain": "float_fp8",
+  "hypothesis": "E5M2FN packed fmod low mod high",
+  "method_signature": "ex248|E5M2FN packed fmod low mod high|periodic residue with cofactored normalizer by remainder|shared divisor-period residue and rem-first normalization tables|yosys_abc_g_aig_official_evaluate|exact_e5m2fn_fmod_low_mod_high|rem_cofactored_norm|fp8_rounding_r26",
+  "reference_adp": 4180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex240_ex299_frontend_gt2_round26_20260613_0556/fp8-rounding-r26/ex248/aigs/ex248_r26r_fmod_norm_by_rem_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex240_ex299_frontend_gt2_round26_20260613_0556/agent_shards/fp8-rounding-r26/candidates.csv",
+  "source_evaluate_log": "student/work/ex240_ex299_frontend_gt2_round26_20260613_0556/fp8-rounding-r26/ex248/logs/ex248_r26r_fmod_norm_by_rem_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex240_ex299_frontend_gt2_round26_20260613_0556",
+  "source_verilog_path": "student/work/ex240_ex299_frontend_gt2_round26_20260613_0556/fp8-rounding-r26/ex248/verilog/ex248_r26r_fmod_norm_by_rem_abc_g_aig.v",
+  "variant": "fmod_norm_by_rem_abc_g_aig",
+  "verilog_sha256": "ba81b894a8e1d83e0d14ee4faf83aa107d35b63e74afc44577e9286c56cd00eb"
+}

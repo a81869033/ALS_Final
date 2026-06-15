@@ -1,0 +1,22 @@
+{
+  "adp": 3195,
+  "aig_sha256": "94e1b9bf461f2940d5cd8c2a14f063dad6c7c021f73f6d1f3e6bfdc22407e15a",
+  "area": 213,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex270_r7_bit12_threshold_overlay_abc_g_aig",
+  "case": "ex270",
+  "delay": 15,
+  "domain": "integer",
+  "hypothesis": "r5 square source with bit12 replaced by exact square range-threshold toggle",
+  "method_signature": "ex270|r5_square_source_with_bit12_replaced_by_exact_square_range-threshold_toggle|reuse_triangular_square_rows_and_overlay_one_lower_boundary_bit_below_r5_top3|abc_g_aig|abc_xf_official_evaluate|frontend_only_no_backend",
+  "reference_adp": 2076,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r7/ex270/aigs/ex270_r7_bit12_threshold_overlay_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/integer-r7/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r7/ex270/logs/ex270_r7_bit12_threshold_overlay_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/integer-r7/ex270/verilog/ex270_r7_bit12_threshold_overlay.v",
+  "variant": "r5 square source with bit12 replaced by exact square range-threshold toggle",
+  "verilog_sha256": "e4bb78b6b18a0197f0867bbdb2941b06338884b44b125aea4212a135333da6dc"
+}

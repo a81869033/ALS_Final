@@ -1,0 +1,22 @@
+{
+  "adp": 2844,
+  "aig_sha256": "f93767223130724d1ed76e21c68237aa4893e417d82bd41ee665c7bab2c196f1",
+  "area": 158,
+  "bundle_type": "current",
+  "candidate_id": "ex256_current_frontend_replay_post_dch",
+  "case": "ex256",
+  "delay": 18,
+  "domain": "integer",
+  "hypothesis": "current best frontend source may need a fixed post-synthesis rewrite",
+  "method_signature": "ex256|current_best_frontend_source_may_need_a_fixed_post-synthesis_rewrite|CSA_AND-row_CLA_replay_from_current_frontend_best|existing_shared_partial_products_and_CLA_final_carry|post_dch|unsigned_low5_high5_multiply|full_product_word",
+  "reference_adp": 1911,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex256/aigs/ex256_current_frontend_replay_post_dch.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex256/logs/ex256_current_frontend_replay_post_dch.evaluate.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/integer-agent/ex256/verilog/ex256_current_frontend_replay.v",
+  "variant": "CSA AND-row CLA replay from current frontend best",
+  "verilog_sha256": "b6f5d5a4970197b6e150d085aecdb03c8d62cec63db3165e1aa7b4bfa515c7bd"
+}

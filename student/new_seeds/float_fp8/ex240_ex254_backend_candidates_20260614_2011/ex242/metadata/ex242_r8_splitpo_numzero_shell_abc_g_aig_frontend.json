@@ -1,0 +1,22 @@
+{
+  "adp": 19005,
+  "aig_sha256": "f0e36b5745c0909f5c0bc266651b42ad20710153c07fde2d3fb88938c0b55e45",
+  "area": 905,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex242_r8_splitpo_numzero_shell_abc_g_aig_frontend",
+  "case": "ex242",
+  "delay": 21,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "r8_splitpo_axis_numzero_special_shell",
+  "reference_adp": 11900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-recent-r8/ex242/aig/ex242_r8_splitpo_numzero_shell_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-recent-r8/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-recent-r8/ex242/logs/ex242_r8_splitpo_numzero_shell_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-recent-r8/ex242/verilog/ex242_r8_splitpo_numzero_shell_abc_g_aig_frontend.v",
+  "variant": "axis difference + split hard exponent/mantissa repair functions",
+  "verilog_sha256": "51189bd25162c07a8a0c113b6f6aa36c29ebf70f03fa8a6b67e4c36bda9e524a"
+}

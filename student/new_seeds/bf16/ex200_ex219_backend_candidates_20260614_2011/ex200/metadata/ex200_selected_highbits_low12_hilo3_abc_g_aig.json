@@ -1,0 +1,22 @@
+{
+  "adp": 58425,
+  "aig_sha256": "9013e0059321c772237230b6c65704b39b175b3f6de8bfc26bbbf2cb88fe1e8b",
+  "area": 3895,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex200_selected_highbits_low12_hilo3_abc_g_aig",
+  "case": "ex200",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp_selected_bit_residual_predicate",
+  "method_signature": "ex200|bf16_exp_selected_bit_residual_predicate|low12_hilo3_highbits_15_12_runs|shared_sign_exp_decode_highbit_predicates_low12_hilo|yosys_abc_g_aig|abc_xf_official_evaluate|full_word_selected_highbits_low12",
+  "reference_adp": 40052,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unary-r3/ex200/aigs/ex200_selected_highbits_low12_hilo3_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round3_20260612_1554/agent_shards/unary-r3/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unary-r3/ex200/official_eval/ex200_selected_highbits_low12_hilo3_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round3_20260612_1554",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unary-r3/ex200/verilog/ex200_selected_highbits_low12_hilo3.v",
+  "variant": "selected_highbits_low12_hilo3",
+  "verilog_sha256": "f0a9b53f335e6e0d57d3e125380e71a35ecac060315df9b0554f81df4db6392d"
+}

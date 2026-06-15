@@ -1,0 +1,125 @@
+case,domain,agent_id,candidate_id,simulator,result,log_path,notes
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_delta_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_delta_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_delta_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_delta_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_orbits_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_orbits_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_orbits_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_sig_gap_orbits_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_packed_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_packed_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_packed_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_packed_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_maxeff_packed_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_maxeff_packed_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_maxeff_packed_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex244,float_fp8,fp8-region-r26,ex244_r26_region_threshold_maxeff_packed_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_same_delta_diff_direct8_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_same_delta_diff_direct8_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_same_delta_diff_direct8_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_same_delta_diff_direct8_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_samegrs_diffgrs_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_samegrs_diffgrs_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_samegrs_diffgrs_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_samegrs_diffgrs_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_nested_gap_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_nested_gap_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_nested_gap_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex240,float_fp8,fp8-region-r26,ex240_r26_region_nested_gap_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_gap4_norm_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_gap4_norm_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_gap4_norm_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_gap4_norm_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_pair_delta_maxmin_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_pair_delta_maxmin_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_pair_delta_maxmin_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_pair_delta_maxmin_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_full_norm_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_full_norm_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_full_norm_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex245,float_fp8,fp8-region-r26,ex245_r26_region_full_norm_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_param_exception_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_param_exception_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_param_exception_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_param_exception_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_bit_exception_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_bit_exception_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_bit_exception_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex241,float_fp8,fp8-region-r26,ex241_r26_region_product_bit_exception_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_formula_bit_exception_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_formula_bit_exception_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_formula_bit_exception_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_formula_bit_exception_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_field_nested_delta_abc_g_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_field_nested_delta_abc_g_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_field_nested_delta_synth_preset_and,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex242,float_fp8,fp8-region-r26,ex242_r26_region_div_field_nested_delta_synth_preset_aig,,,,iverilog skipped; official evaluate.py used for equivalence/QoR
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_formula_norm_grs_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_formula_norm_grs_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_formula_norm_grs_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_formula_norm_grs_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_nested_exp_residual_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_nested_exp_residual_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_nested_exp_residual_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex246,float_fp8,fp8-rounding-r26,ex246_r26r_mul_nested_exp_residual_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_threshold_grs_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_threshold_grs_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_threshold_grs_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_threshold_grs_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_bound_classid_flat_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_bound_classid_flat_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_bound_classid_flat_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex247,float_fp8,fp8-rounding-r26,ex247_r26r_div_bound_classid_flat_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_norm_by_rem_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_norm_by_rem_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_norm_by_rem_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_norm_by_rem_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_formula_norm_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_formula_norm_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_formula_norm_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex248,float_fp8,fp8-rounding-r26,ex248_r26r_fmod_formula_norm_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_onehot_delta_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_onehot_delta_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_onehot_delta_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_onehot_delta_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_smax_case_delta_abc_g_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_smax_case_delta_abc_g_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_smax_case_delta_synth_preset_and,,,,Official evaluate.py was run for final equivalence/QoR.
+ex249,float_fp8,fp8-rounding-r26,ex249_r26r_hypot_smax_case_delta_synth_preset_aig,,,,Official evaluate.py was run for final equivalence/QoR.
+ex285,unknown,unknown-routing-r26,ex285_r26_paircount_mdd_pairs_first,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_paircount_mdd_interleave,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_paircount_mdd_singles_first,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_paircount_mdd_reverse,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_bucket_descriptor_mdd_counts_first,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_bucket_descriptor_mdd_selectors_first,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit0_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit0_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit1_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit1_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit2_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit2_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit3_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit3_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit4_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit4_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit5_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit5_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit6_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit6_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit7_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit7_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit8_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit8_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit9_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit9_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit10_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit10_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit11_abc_g_aig,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex285,unknown,unknown-routing-r26,ex285_r26_parity_residual_bit11_synth_preset,none,,,official evaluate.py used as final authority; no separate iverilog simulation needed for generated exact truth-derived RTL
+ex297,unknown,unknown-symbol-r26,ex297_r26_oppdelta_cell_residual_abc_g_aig,,,,official evaluate.py OK; desc=oppdelta; base=no_base; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13; order=0:1:2:3:4:5:6:7:12:13:10:11:8:9; bdd_nodes=25985; residual_ones=113155
+ex297,unknown,unknown-symbol-r26,ex297_r26_prefix_localctx_residual_d20_abc_g_aig_d20,,,,official evaluate.py OK; desc=prefix; base=per_cell_radius1_local_majority_table; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13; order=0:1:12:13:2:3:10:11:4:5:8:9:6:7; bdd_nodes=27655; residual_ones=84175
+ex297,unknown,unknown-symbol-r26,ex297_r26_oppdelta_linear_mod4_residual_d24_abc_g_aig_d24,,,,official evaluate.py OK; desc=oppdelta; base=degree1_anf_base_terms=24; groups=0:4:8:12/1:5:9:13/2:6:10/3:7:11; order=0:1:2:3:4:5:6:7:12:13:10:11:8:9; bdd_nodes=25320; residual_ones=109097
+ex299,unknown,unknown-symbol-r26,ex299_r26_oppdelta_cell_residual_abc_g_aig,,,,official evaluate.py OK; desc=oppdelta; base=no_base; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13/14:15; order=0:1:2:3:4:5:6:7:14:15:12:13:10:11:8:9; bdd_nodes=98028; residual_ones=514912
+ex299,unknown,unknown-symbol-r26,ex299_r26_prefix_localctx_residual_d20_abc_g_aig_d20,,,,official evaluate.py OK; desc=prefix; base=per_cell_radius1_local_majority_table; groups=0:1/2:3/4:5/6:7/8:9/10:11/12:13/14:15; order=0:1:14:15:2:3:12:13:4:5:10:11:6:7:8:9; bdd_nodes=109859; residual_ones=384736
+ex299,unknown,unknown-symbol-r26,ex299_r26_oppdelta_linear_mod4_residual_d24_abc_g_aig_d24,,,,official evaluate.py OK; desc=oppdelta; base=degree1_anf_base_terms=34; groups=0:4:8:12/1:5:9:13/2:6:10:14/3:7:11:15; order=0:1:2:3:4:5:6:7:14:15:12:13:10:11:8:9; bdd_nodes=94358; residual_ones=503034

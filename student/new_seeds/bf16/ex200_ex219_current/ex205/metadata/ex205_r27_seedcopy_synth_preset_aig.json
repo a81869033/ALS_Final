@@ -1,0 +1,22 @@
+{
+  "adp": 70560,
+  "aig_sha256": "d3d095aaf0ffbac799ec741c73bc070b4459ba714b40b8760a250d77ceb84ba7",
+  "area": 4410,
+  "bundle_type": "current",
+  "candidate_id": "ex205_r27_seedcopy_synth_preset_aig",
+  "case": "ex205",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log10_sep_fields_seed_synthflow_refinement",
+  "method_signature": "ex205|bf16_log10_sep_fields_seed_synthflow_refinement|current sep-fields frontend seed module copy with alternate Yosys mapping|shared BF16 sign/exponent/mantissa field decode plus manual sign predicate|synth_preset_aig|DAZ_log10_BF16_RNE_FTZ_canonical_NaN|field_grouped_word",
+  "reference_adp": 47128,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex205/official_eval/ex205_r27_seedcopy_synth_preset_aig/ex205.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex205/logs/ex205_r27_seedcopy_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex299_frontend_refgap_round27_20260613_0613",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex205/verilog/ex205_bf16_log10_sep_fields_e3_m3_s0_bits_15_bh1__seedcopy_r27_seedcopy.v",
+  "variant": "current sep-fields frontend seed module copy with alternate Yosys mapping",
+  "verilog_sha256": "f31939a3794fe1a28296501bd3fea34f11148562176a9879864abdd5abb00207"
+}

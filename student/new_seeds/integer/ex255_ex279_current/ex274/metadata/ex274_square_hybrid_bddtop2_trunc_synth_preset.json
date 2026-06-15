@@ -1,0 +1,22 @@
+{
+  "adp": 41370,
+  "aig_sha256": "0baa0216b9a0076afeb806c86d750a9b2fbf408feccc2eaeb2cdfbf61df5b972",
+  "area": 985,
+  "bundle_type": "current",
+  "candidate_id": "ex274_square_hybrid_bddtop2_trunc_synth_preset",
+  "case": "ex274",
+  "delay": 42,
+  "domain": "integer",
+  "hypothesis": "unsigned_square_x_times_x",
+  "method_signature": "unsigned_square_x_times_x",
+  "reference_adp": 21630,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex273_ex274_frontend_square_hybrid_bddtop_trunc_20260609_1240/ex274/aigs/ex274_square_hybrid_bddtop2_trunc_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex273_ex274_frontend_square_hybrid_bddtop_trunc_20260609_1240/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex273_ex274_frontend_square_hybrid_bddtop_trunc_20260609_1240",
+  "source_verilog_path": "student/work/ex273_ex274_frontend_square_hybrid_bddtop_trunc_20260609_1240/ex274/verilog/ex274_square_hybrid_bddtop2_trunc.v",
+  "variant": "hybrid_bddtop2_trunc+synth_preset",
+  "verilog_sha256": "652feba6ac3ce3e28ed9c8850906d437eb55c8060654136b53c8bacc8c6ecd0b"
+}

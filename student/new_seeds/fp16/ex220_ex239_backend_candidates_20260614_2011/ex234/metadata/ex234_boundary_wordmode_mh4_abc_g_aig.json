@@ -1,0 +1,22 @@
+{
+  "adp": 20624,
+  "aig_sha256": "e6c4e9605fc767902564bc21ab999b8eb0644576f572ffdaae3ad02b51e47f6e",
+  "area": 1289,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex234_boundary_wordmode_mh4_abc_g_aig",
+  "case": "ex234",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex234|fp16_reciprocal_square_boundary_split|core_formula_boundary_wordmode_mh4|shared core exponent formula plus coarser boundary word-mode defaults|yosys_abc_g_aig|abc_xf_official_evaluate|core_formula_boundary_wordmode_mh4",
+  "reference_adp": 15561,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/aigs/ex234_boundary_wordmode_mh4_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp16-extra-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/official_eval/ex234_boundary_wordmode_mh4_abc_g_aig/ex234_boundary_wordmode_mh4_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex234/verilog/ex234_boundary_wordmode_mh4.v",
+  "variant": "core_formula_boundary_wordmode_mh4",
+  "verilog_sha256": "c03e3768aa8a89b94c91fe8a02c825ed9eb0939464b7955a0e9eb7067609ccd7"
+}

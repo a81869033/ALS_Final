@@ -1,0 +1,22 @@
+{
+  "adp": 981168,
+  "aig_sha256": "eb524c81b4eb48b62de5c126760d6e9f1c8d708cf3aa914c2e3e2649d075aa88",
+  "area": 40882,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex227_fp16_tan_odd_positive_table",
+  "case": "ex227",
+  "delay": 24,
+  "domain": "fp16",
+  "hypothesis": "fp16_tan",
+  "method_signature": "fp16_tan",
+  "reference_adp": 721639,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex226_ex229_frontend_fp16_shells_fix_20260607_1128/ex227/aigs/ex227_fp16_tan_odd_positive_table.aig",
+  "source_csv": "student/runs/fp16/ex226_ex229_frontend_fp16_shells_fix_20260607_1128/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex226_ex229_frontend_fp16_shells_fix_20260607_1128",
+  "source_verilog_path": "student/work/ex226_ex229_frontend_fp16_shells_fix_20260607_1128/ex227/verilog/ex227_fp16_tan_odd_positive_table.v",
+  "variant": "odd_positive_table",
+  "verilog_sha256": "21ecbeeb10ac796697a4b6c8073770ef0218da998332eff85680ff99c532ee74"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 3025,
+  "aig_sha256": "1eeeaad0e91e4bb66e8408300d6c6ffcb3357d10333a1e99215cf341ea0d312c",
+  "area": 275,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex211_bf16_reciprocal_aggr_semantic_positive_symmetry_fields",
+  "case": "ex211",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal",
+  "method_signature": "bf16_reciprocal",
+  "reference_adp": 2136,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex211/aigs/ex211_bf16_reciprocal_aggr_semantic_positive_symmetry_fields.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex211/verilog/ex211_bf16_reciprocal_aggr_semantic_positive_symmetry_fields.v",
+  "variant": "aggr_semantic_positive_symmetry_fields",
+  "verilog_sha256": "b3d7d4ed91d27f4724b2294832138df0f1d38e9cbccbb79e6d1f1ecfad4b7a63"
+}

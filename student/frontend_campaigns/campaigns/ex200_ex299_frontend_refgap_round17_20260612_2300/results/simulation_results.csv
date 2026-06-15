@@ -1,0 +1,6 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex247,BLOCKED_NO_CANDIDATE,not_run,BLOCKED_NO_CANDIDATE,,,ex200_ex299_frontend_refgap_round17_20260612_2300,no Verilog candidate existed at checkpoint
+ex225,ex225_round17_blocked_no_candidate,not_run,not_run,,fpbf-normal-r17,ex200_ex299_frontend_refgap_round17_20260612_2300,No Verilog emitted; diagnostic-backed blocker only.
+ex297,BLOCKED_NO_CANDIDATE,truth_diagnostic,BLOCKED_NO_CANDIDATE,student/work/ex200_ex299_frontend_refgap_round17_20260612_2300/unknown-state-r17/ex297/notes/ex297_r17_blocker_diagnostic.md,unknown-state-r17,ex200_ex299_frontend_refgap_round17_20260612_2300,no Verilog emitted; diagnostic only
+ex274,ex274_r17_evenodd_square_shared_cross_abc_g_aig,not_run,debug_not_used,,integer-near-r17,ex200_ex299_frontend_refgap_round17_20260612_2300,iverilog not used; official evaluate.py is the acceptance evidence
+ex286,ex286_r17_compact_routing_probe_blocked,,BLOCKED_NO_CANDIDATE,,,ex200_ex299_frontend_refgap_round17_20260612_2300,

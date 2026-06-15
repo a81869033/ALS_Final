@@ -1,0 +1,22 @@
+{
+  "adp": 93072,
+  "aig_sha256": "9e7173d2bbc85cd29f1bd8a2c44759b1559d368ee7ef1dd4e43d6ff580413224",
+  "area": 5817,
+  "bundle_type": "current",
+  "candidate_id": "ex224_expbase_xor_low12_hi6_synth_preset_aig",
+  "case": "ex224",
+  "delay": 16,
+  "domain": "fp16",
+  "hypothesis": "fp16_log2",
+  "method_signature": "ex224|fp16_log2|expbase_xor_nested_recut|expbase_xor_low12_hi6|shared_sign-exp_base_high_word_plus_exact_XOR_corrections_and_nested_low_LUT|synth_preset_aig|abc_xf_official_evaluate",
+  "reference_adp": 64708,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex224/aigs/ex224_expbase_xor_low12_hi6_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/fp16/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex224/official_eval/ex224_expbase_xor_low12_hi6_synth_preset_aig/ex224_expbase_xor_low12_hi6_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/fp16-r2-agent/ex224/verilog/ex224_r2_expbase_xor_low12_hi6.v",
+  "variant": "",
+  "verilog_sha256": "e485c1b9321dbba9d864d49d4014fa1d39842b1539180aa72918a45615b40a7e"
+}

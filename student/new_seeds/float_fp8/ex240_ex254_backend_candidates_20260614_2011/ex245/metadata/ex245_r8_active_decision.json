@@ -1,0 +1,22 @@
+{
+  "adp": 23940,
+  "aig_sha256": "9c3e93bffa8e460494afbd45ede4ad6c4ee64b12c93b37278254c6ccad7eb5a2",
+  "area": 665,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_r8_active_decision",
+  "case": "ex245",
+  "delay": 36,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex245|E5M2FN packed add high byte plus low byte|unified same/diff active decision bus around small-gap core|shared sorted decode, gap, same/diff saturation and residual predicates|repo_yosys_frontend_default|official_evaluate_py|decision_bus_active_magnitude",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-high-r8/ex245/aigs/ex245_r8_active_decision.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-high-r8/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-high-r8/ex245/logs/ex245_r8_active_decision.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-high-r8/ex245/verilog/ex245_r8_active_decision.v",
+  "variant": "unified same/diff active decision bus around small-gap core",
+  "verilog_sha256": "da732463c6eca144ad255a1075e4626294f5d5ceeafcf644de8827e8d11bd5ac"
+}

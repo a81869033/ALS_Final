@@ -1,0 +1,22 @@
+{
+  "adp": 1144,
+  "aig_sha256": "c931d6a6c2002dce2e89d724eea78e7eec802326810aac33d73fda21449d911f",
+  "area": 88,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex260_r69_mined_current_bw_rev_hcla4",
+  "case": "ex260",
+  "delay": 13,
+  "domain": "integer",
+  "hypothesis": "current_best_source_checkpoint",
+  "method_signature": "ex260|current_best_source_checkpoint|copy_preserving_current_source|mined_baugh_wooley_rev_hcla4|copied_current_frontend_aig|signed_low4_high4_multiply|product_word",
+  "reference_adp": 657,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round69_20260613_1204/sub-fp16-int-source-r69/ex260/aigs/ex260_r69_mined_current_bw_rev_hcla4.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round69_20260613_1204/agent_shards/sub-fp16-int-source-r69/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round69_20260613_1204/sub-fp16-int-source-r69/ex260/logs/ex260_r69_mined_current_bw_rev_hcla4.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round69_20260613_1204",
+  "source_verilog_path": "student/work/frontend_source_parallel_round69_20260613_1204/sub-fp16-int-source-r69/ex260/verilog/ex260_r69_mined_current_bw_rev_hcla4.v",
+  "variant": "copy_preserving_current_source",
+  "verilog_sha256": "490c9b2725e24a83e931bab323e3560b326002f2244368abda3db1291bb1aa20"
+}

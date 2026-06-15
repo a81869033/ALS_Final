@@ -1,0 +1,22 @@
+{
+  "adp": 25687,
+  "aig_sha256": "8cb55ee19c925da803c189a324b6a20f5a095f86e34fbdeaf5665df8f6082022",
+  "area": 1511,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex204_r95_bf16_log2_direct_log2_arithbase_delta_hilo3_bits_11_bh2_abc_g_aig",
+  "case": "ex204",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "bf16_log2_arithbase_selected_bit_minimal",
+  "method_signature": "ex204|bf16_log2_arithbase_selected_bit_minimal|round24 arithmetic-base hilo3 with only bit11 truth-derived correction|shared exponent base plus one selected output-bit table|abc_g_aig|abc_xf_official_evaluate|grouped word output",
+  "reference_adp": 15180,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex204/aigs/ex204_r95_bf16_log2_direct_log2_arithbase_delta_hilo3_bits_11_bh2_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_bf16_unknown_round95_20260614_0627/agent_shards/sub-bf16-log-tight-r95/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex204/logs/ex204_r95_bf16_log2_direct_log2_arithbase_delta_hilo3_bits_11_bh2_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_bf16_unknown_round95_20260614_0627",
+  "source_verilog_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-log-tight-r95/ex204/verilog/ex204_r95_bf16_log2_direct_log2_arithbase_delta_hilo3_bits_11_bh2.v",
+  "variant": "round24 arithmetic-base hilo3 with only bit11 truth-derived correction",
+  "verilog_sha256": "3670d977d2a83ce3d7ea3e80a6e1eda95ca5bfc13822dacd4e24fb19310b01f0"
+}

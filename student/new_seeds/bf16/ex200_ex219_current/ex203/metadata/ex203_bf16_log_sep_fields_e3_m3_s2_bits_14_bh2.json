@@ -1,0 +1,22 @@
+{
+  "adp": 77248,
+  "aig_sha256": "0e432877acf2234c35aa6317d5e91eb563a45ec36aff6c17557cba2608e2a7a3",
+  "area": 4544,
+  "bundle_type": "current",
+  "candidate_id": "ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_bh2",
+  "case": "ex203",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "bf16_log",
+  "method_signature": "ex203|frontend|current",
+  "reference_adp": 56948,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex203/aigs/ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_bh2.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex203/verilog/ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_bh2.v",
+  "variant": "sep_fields_e3_m3_s2_bits_14_bh2",
+  "verilog_sha256": "27bb6fe4e7b34f529dfd7eed6c66d1eccd00dbb4fda41f73bd888f65eded5839"
+}

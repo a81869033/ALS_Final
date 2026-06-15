@@ -1,0 +1,22 @@
+{
+  "adp": 63189,
+  "aig_sha256": "759c0927c8b8029d657e815faf635c93dcf22ee25cb4721f0371bcc8e03ca31d",
+  "area": 3717,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex200_bf16_exp_semantic_exp_default_one_parallel_casez_saturation",
+  "case": "ex200",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp_semantic_exp_default",
+  "method_signature": "ex200|bf16_exp_semantic_exp_default|one_parallel_casez_saturation|shared_sign_exp_decode_and_parallel_casez|yosys_abc_g_aig|abc_xf_official_evaluate|full_word_semantic_exp",
+  "reference_adp": 40052,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round4_20260612_1705/unary-r4/ex200/aigs/ex200_bf16_exp_semantic_exp_default_one_parallel_casez_saturation.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round4_20260612_1705/results/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round4_20260612_1705/unary-r4/ex200/logs/ex200_bf16_exp_semantic_exp_default_one_parallel_casez_saturation.evaluate.log",
+  "source_kind": "frontend_campaign_results",
+  "source_run": "ex200_ex299_frontend_refgap_round4_20260612_1705",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round4_20260612_1705/unary-r4/ex200/verilog/ex200_bf16_exp_semantic_exp_default_one_parallel_casez_saturation.v",
+  "variant": "one_parallel_casez_saturation",
+  "verilog_sha256": "4e42b786d41a4c71d59f79e843df360f9b2221fe3183e895e9ab957617d9a5a1"
+}

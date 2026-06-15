@@ -1,0 +1,22 @@
+{
+  "adp": 17220,
+  "aig_sha256": "c10fe22f2f21c71a5850242bd30239a2540664fae554662bed7cbab2bcdb41d3",
+  "area": 420,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex250_semantic_fp4_dot2_magprod_qunrolled_norm_synthD20_aig",
+  "case": "ex250",
+  "delay": 41,
+  "domain": "float_fp8",
+  "hypothesis": "packed_fp4_e2m1_dot2_to_e4m3",
+  "method_signature": "packed_fp4_e2m1_dot2_to_e4m3",
+  "reference_adp": 20355,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex250_frontend_magprod_quant_followup_20260608_2258/ex250/aigs/ex250_semantic_fp4_dot2_magprod_qunrolled_norm_synthD20_aig.aig",
+  "source_csv": "student/runs/float_fp8/ex250_frontend_magprod_quant_followup_20260608_2258/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex250_frontend_magprod_quant_followup_20260608_2258",
+  "source_verilog_path": "student/work/ex250_frontend_magprod_quant_followup_20260608_2258/ex250/verilog/ex250_semantic_fp4_dot2_magprod_qunrolled_norm.v",
+  "variant": "semantic_fp4_dot2_magprod_qunrolled_norm_synthD20_aig",
+  "verilog_sha256": "3196dfc529f8d346d9f8e500e8b9c017ef90d0f363cd03305db0b508882451e9"
+}

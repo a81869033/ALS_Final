@@ -1,0 +1,22 @@
+{
+  "adp": 3264,
+  "aig_sha256": "9a0423a594bb1fa4668e56991f2bdeb3ee2f4f1d111f951e7e0426bbcf8cf006",
+  "area": 272,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex211_r94_bf16_reciprocal_hand_recip_formula_signmag_add_lut",
+  "case": "ex211",
+  "delay": 12,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal",
+  "method_signature": "ex211|round94_frontend_structural_bf16|bf16_reciprocal|hand_recip_formula_signmag_add_lut|shared_shell_or_grouped_output|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2136,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex211/official_eval/ex211_r94_bf16_reciprocal_hand_recip_formula_signmag_add_lut/ex211.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_bf16_unknown_struct_round94_20260614_0552/agent_shards/sub-bf16-recip-power-r94/best.csv",
+  "source_evaluate_log": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex211/logs/ex211_r94_bf16_reciprocal_hand_recip_formula_signmag_add_lut.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_bf16_unknown_struct_round94_20260614_0552",
+  "source_verilog_path": "student/work/frontend_bf16_unknown_struct_round94_20260614_0552/sub-bf16-recip-power-r94/ex211/verilog/ex211_r94_bf16_reciprocal_hand_recip_formula_signmag_add_lut.v",
+  "variant": "exponent-affine reciprocal shell with single-add style exponent path",
+  "verilog_sha256": "dbc9a37c90c1d9b7c6e7bdf5c08c5e3ddcddb08256b72ccb2f0d8a43e7bd1995"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 134860,
+  "aig_sha256": "2461d134ba7c7d6c6910e1792d5aa80bbe72d01b60c5b83b1b01cd6de08f501a",
+  "area": 6743,
+  "bundle_type": "current",
+  "candidate_id": "ex292_r8_mod7_4_drop_mod7_13",
+  "case": "ex292",
+  "delay": 20,
+  "domain": "unknown",
+  "hypothesis": "Second-order perturbation around r7 add_mod7_4 near miss to preserve 20-level delay while reducing area.",
+  "method_signature": "ex292|global_state_output_plane_overlay_guarded_sweep|adj_2_3_10_11_mod7_0_4_7|mod4_base_plus_adjacent_and_mod7_selected_planes|yosys_internal_abc_g_aig|official_evaluate|delay20_guard",
+  "reference_adp": 84854,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex292/aigs/ex292_r8_mod7_4_drop_mod7_13.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex292/logs/ex292_r8_mod7_4_drop_mod7_13.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/unknown-mid-r8/ex292/verilog/ex292_r8_mod7_4_drop_mod7_13.v",
+  "variant": "",
+  "verilog_sha256": "901489d56b9991d4934a1e86fd96ee42245e0418500f846048bb2005902a2c22"
+}

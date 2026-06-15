@@ -1,0 +1,22 @@
+{
+  "adp": 4680,
+  "aig_sha256": "b06062f437e38686500afa717fcffac337c699a998d0daf442e30a6a227c4118",
+  "area": 180,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex249_r7_bitout_boundary_synth_preset_aig",
+  "case": "ex249",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex249|fp8_source_r7|bitout_boundary|rawexp_threshold_with_payload_bit_boundary|synth_preset_aig|official_evaluate",
+  "reference_adp": 2079,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex249/aigs/ex249_r7_bitout_boundary_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-source-r7/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex249/logs/ex249_r7_bitout_boundary_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-source-r7/ex249/verilog/ex249_r7_bitout_boundary.v",
+  "variant": "rawexp_threshold_payload_boundary",
+  "verilog_sha256": "19378bac2eb136af08a9eefb1c42753642baaf5b26751298100331d95b77cb63"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 77707,
+  "aig_sha256": "f711fdfc7714f5a43726844384bd96277a262fcb498944c66d3ab549c9908a77",
+  "area": 4571,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_pla",
+  "case": "ex203",
+  "delay": 17,
+  "domain": "bf16",
+  "hypothesis": "bf16_log",
+  "method_signature": "bf16_log",
+  "reference_adp": 56948,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex201_ex204_frontend_semantic_continue_20260605_1732/ex203/aigs/ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_pla.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex201_ex204_frontend_semantic_continue_20260605_1732",
+  "source_verilog_path": "student/work/ex201_ex204_frontend_semantic_continue_20260605_1732/ex203/verilog/ex203_bf16_log_sep_fields_e3_m3_s2_bits_14_pla.v",
+  "variant": "sep_fields_e3_m3_s2_bits_14_pla",
+  "verilog_sha256": "6501a8839d38ff7b2a32e263ad49e468551f86c02604ce44eff365284658ba94"
+}

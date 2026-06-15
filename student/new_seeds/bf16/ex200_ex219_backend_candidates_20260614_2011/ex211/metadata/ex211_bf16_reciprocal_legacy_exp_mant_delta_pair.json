@@ -1,0 +1,22 @@
+{
+  "adp": 3498,
+  "aig_sha256": "bb210419f7d7857eea7043d29f5a819ccf28eaf97bc8a1d1d5ef51789bd0e1e2",
+  "area": 318,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex211_bf16_reciprocal_legacy_exp_mant_delta_pair",
+  "case": "ex211",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal",
+  "method_signature": "bf16_reciprocal",
+  "reference_adp": 2136,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex211/aigs/ex211_bf16_reciprocal_legacy_exp_mant_delta_pair.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex211/verilog/ex211_bf16_reciprocal_legacy_exp_mant_delta_pair.v",
+  "variant": "legacy_exp_mant_delta_pair",
+  "verilog_sha256": "f2530bd1e7772608269f88e446d3ed2c69d3a28618f75bab8e7c6f0de8c57fd5"
+}

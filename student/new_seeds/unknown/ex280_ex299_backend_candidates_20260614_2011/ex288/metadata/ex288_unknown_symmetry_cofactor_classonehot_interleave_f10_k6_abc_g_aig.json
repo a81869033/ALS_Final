@@ -1,0 +1,22 @@
+{
+  "adp": 31934,
+  "aig_sha256": "8ac8dfa413d59ba46064bb195edd11d1e628f4c9ba9d19670481aa02d68049e9",
+  "area": 2281,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig",
+  "case": "ex288",
+  "delay": 14,
+  "domain": "unknown",
+  "hypothesis": "unknown_symmetry_cofactor_classonehot",
+  "method_signature": "unknown_symmetry_cofactor_classonehot",
+  "reference_adp": 16394,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex286_ex288_frontend_lowdelay_symcof_synthflow_20260609_1140/ex288/aigs/ex288_unknown_symmetry_cofactor_classonehot_interleave_f10_k6_abc_g_aig.aig",
+  "source_csv": "student/runs/unknown/ex286_ex288_frontend_lowdelay_symcof_synthflow_20260609_1140/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex286_ex288_frontend_lowdelay_symcof_synthflow_20260609_1140",
+  "source_verilog_path": "student/work/ex287_ex288_frontend_multipair_symcof_20260609_0624/ex288/verilog/ex288_unknown_symcof_interleave_f10_k6.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "1688e11882c090b5c32450f0464d82514fe0a0a278bec244d389e5b6d4376264"
+}

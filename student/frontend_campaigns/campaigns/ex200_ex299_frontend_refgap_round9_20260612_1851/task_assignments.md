@@ -1,0 +1,28 @@
+# Task Assignments: ex200_ex299_frontend_refgap_round9_20260612_1851
+
+- `routing-r9` (`019ebb77-fd05-7e91-8584-7c2d0cdefe51`, Linnaeus): ex286, ex287
+  - shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/routing-r9/`
+  - work: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/routing-r9/<case>/`
+  - required case docs:
+    - `ex286`: `student/cases/ex280_ex299_unknown/ex286/frontend_attempts.md`
+    - `ex287`: `student/cases/ex280_ex299_unknown/ex287/frontend_attempts.md`
+- `fp8-core-r9` (`019ebb77-fdf6-7e52-b4eb-7cb6a70746d3`, Faraday): ex247, ex246
+  - shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/fp8-core-r9/`
+  - work: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/fp8-core-r9/<case>/`
+  - required case docs:
+    - `ex247`: `student/cases/ex240_ex254_float_conversion_fp8_add/ex247/frontend_attempts.md`
+    - `ex246`: `student/cases/ex240_ex254_float_conversion_fp8_add/ex246/frontend_attempts.md`
+- `state-r9` (`019ebb77-feef-7040-8457-5b1223e559f4`, Ramanujan): ex297, ex299, ex285
+  - shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/state-r9/`
+  - work: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/state-r9/<case>/`
+  - required case docs:
+    - `ex297`: `student/cases/ex280_ex299_unknown/ex297/frontend_attempts.md`
+    - `ex299`: `student/cases/ex280_ex299_unknown/ex299/frontend_attempts.md`
+    - `ex285`: `student/cases/ex280_ex299_unknown/ex285/frontend_attempts.md`
+- `fp8-wide-r9` (`019ebb78-00c8-7532-b7f3-a52863550011`, Mendel): ex244, ex240, ex245
+  - shard: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round9_20260612_1851/agent_shards/fp8-wide-r9/`
+  - work: `student/work/ex200_ex299_frontend_refgap_round9_20260612_1851/fp8-wide-r9/<case>/`
+  - required case docs:
+    - `ex244`: `student/cases/ex240_ex254_float_conversion_fp8_add/ex244/frontend_attempts.md`
+    - `ex240`: `student/cases/ex240_ex254_float_conversion_fp8_add/ex240/frontend_attempts.md`
+    - `ex245`: `student/cases/ex240_ex254_float_conversion_fp8_add/ex245/frontend_attempts.md`

@@ -1,0 +1,22 @@
+{
+  "adp": 1584,
+  "aig_sha256": "aac576ec7ba0b561dec81917273bd5bd31269a6233bd707d034a4e174f589f7c",
+  "area": 144,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex266_udiv_cof_bhi1_ahi1_bitbdd_wordmux_synth_preset_d10",
+  "case": "ex266",
+  "delay": 11,
+  "domain": "integer",
+  "hypothesis": "",
+  "method_signature": "ex266|unsigned low5_high5:a/b dbz=max|cof_bhi1_ahi1_bitbdd_wordmux+synth_preset_d10|synth_preset_d10",
+  "reference_adp": 1480,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/runs/integer/ex204_ex299_frontend_continuation_20260614_1216/arith-unary-r2/official_eval/ex266/ex266_udiv_cof_bhi1_ahi1_bitbdd_wordmux_synth_preset_d10/ex266.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/arith-unary-r2/candidates.csv",
+  "source_evaluate_log": "student/work/ex204_ex299_frontend_continuation_20260614_1216/arith-unary-r2/official_eval_logs/ex266/ex266_udiv_cof_bhi1_ahi1_bitbdd_wordmux_synth_preset_d10.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/arith-unary-r2/ex266_udiv_probe/ex266/verilog/ex266_udiv_cof_bhi1_ahi1_bitbdd_wordmux.v",
+  "variant": "cof_bhi1_ahi1_bitbdd_wordmux+synth_preset_d10",
+  "verilog_sha256": "f90924f9aa17fc928cecd30d3817e22498e44b289632f4406db2ea64f3635165"
+}

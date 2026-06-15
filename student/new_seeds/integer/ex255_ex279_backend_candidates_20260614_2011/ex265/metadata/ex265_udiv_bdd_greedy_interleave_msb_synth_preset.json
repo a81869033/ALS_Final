@@ -1,0 +1,22 @@
+{
+  "adp": 531,
+  "aig_sha256": "ac30bc30908d5ccf9a3225c4c21000f372529e4a1ca855b85365e207aa01eeb3",
+  "area": 59,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex265_udiv_bdd_greedy_interleave_msb_synth_preset",
+  "case": "ex265",
+  "delay": 9,
+  "domain": "integer",
+  "hypothesis": "unsigned low4_high4:a/b dbz=max",
+  "method_signature": "unsigned low4_high4:a/b dbz=max",
+  "reference_adp": 322,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex265_ex267_frontend_udiv_bdd_greedy_20260609_0845/ex265/aigs/ex265_udiv_bdd_greedy_interleave_msb_synth_preset.aig",
+  "source_csv": "student/runs/integer/ex265_ex267_frontend_udiv_bdd_greedy_20260609_0845/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex265_ex267_frontend_udiv_bdd_greedy_20260609_0845",
+  "source_verilog_path": "student/work/ex265_ex267_frontend_udiv_bdd_greedy_20260609_0845/ex265/verilog/ex265_udiv_bdd_greedy_interleave_msb.v",
+  "variant": "bdd_greedy_interleave_msb+synth_preset",
+  "verilog_sha256": "09c7c4a8fe0eec9c7411c2fe28b2526ac7e3540c3041e26e8d481d6b66050ded"
+}

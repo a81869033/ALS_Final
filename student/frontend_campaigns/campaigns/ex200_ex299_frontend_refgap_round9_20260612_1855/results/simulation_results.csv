@@ -1,0 +1,23 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex240,ex240_same_delta_diff_norm_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex240,ex240_same_delta_diff_norm_round9_abc_g_aig,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_sig_gap_threshold_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_sig_gap_threshold_round9_abc_g_aig,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex244,ex244_sig_gap_threshold_round9_abc_d18,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_product_possible_class_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_product_possible_class_round9_abc_g_aig,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex246,ex246_key_bdd_exp_product_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_sigpair_possible_denzero_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_sigpair_possible_denzero_round9_abc_g_aig,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_bound_smallpat_nested_num_parallel_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_bound_smallpat_nested_num_parallel_round9_abc_g_aig,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_bound_smallpat_nested_num_parallel_round9_abc_d18,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex247,ex247_key_bdd_delta_sig_round9_default,iverilog,not_run,,fp8-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,official evaluate.py was used; iverilog debug was not needed
+ex285,ex285_r9_component_pair_field_blocker,truth_diagnostic,passed_descriptor_consistency,student/work/ex200_ex299_frontend_refgap_round9_20260612_1855/routing-r9/ex285/logs/ex285_component_pair_field_blocker.log,routing-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,component pair encoding checked against every truth-table output; no RTL simulation run
+ex286,ex286_r9_component_pair_field_blocker,truth_diagnostic,passed_descriptor_consistency,student/work/ex200_ex299_frontend_refgap_round9_20260612_1855/routing-r9/ex286/logs/ex286_component_pair_field_blocker.log,routing-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,component pair encoding checked against every truth-table output; no RTL simulation run
+ex287,ex287_r9_component_pair_field_blocker,truth_diagnostic,passed_descriptor_consistency,student/work/ex200_ex299_frontend_refgap_round9_20260612_1855/routing-r9/ex287/logs/ex287_component_pair_field_blocker.log,routing-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,component pair encoding checked against every truth-table output; no RTL simulation run
+ex288,ex288_r9_component_pair_field_blocker,truth_diagnostic,passed_descriptor_consistency,student/work/ex200_ex299_frontend_refgap_round9_20260612_1855/routing-r9/ex288/logs/ex288_component_pair_field_blocker.log,routing-r9,ex200_ex299_frontend_refgap_round9_20260612_1855,component pair encoding checked against every truth-table output; no RTL simulation run
+ex223,ex223_log_nested_low10_hi4_abc_g_aig,,,,,ex200_ex299_frontend_refgap_round9_20260612_1855,Official evaluate.py was used for final verification.
+ex223,ex223_log_nested_low10_hi5_abc_g_aig,,,,,ex200_ex299_frontend_refgap_round9_20260612_1855,Official evaluate.py was used for final verification.
+ex225,ex225_log_nested_low10_hi4_abc_g_aig,,,,,ex200_ex299_frontend_refgap_round9_20260612_1855,Official evaluate.py was used for final verification.
+ex225,ex225_log_nested_low10_hi5_abc_g_aig,,,,,ex200_ex299_frontend_refgap_round9_20260612_1855,Official evaluate.py was used for final verification.

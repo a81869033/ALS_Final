@@ -1,0 +1,22 @@
+{
+  "adp": 6526,
+  "aig_sha256": "17c529841971ec3f134330e081a7d900c15145a0929fe6b98a6b3e7b154194a0",
+  "area": 251,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r5_grouped_mag_assign_abc_g_aig_frontend",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|tail-direct lowpred-min with grouped magnitude assign|zero/sat/low/linear region masks directly OR into the magnitude bus|abc_g_aig_frontend|official_evaluate|grouped_mag_assign",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r5/ex247/aigs/ex247_r5_grouped_mag_assign_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/ex247-breakthrough-r5/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r5/ex247/logs/ex247_r5_grouped_mag_assign_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/ex247-breakthrough-r5/ex247/verilog/ex247_r5_grouped_mag_assign_abc_g_aig_frontend.v",
+  "variant": "tail-direct lowpred-min with grouped magnitude assign",
+  "verilog_sha256": "e36b6b18c7b6a562554022908f051c32941197dd6f60d7f2b1d63081cc4f37e1"
+}

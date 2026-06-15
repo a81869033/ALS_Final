@@ -1,0 +1,22 @@
+{
+  "adp": 6071,
+  "aig_sha256": "5557b0d6d055189e157acd2bf1026d3d23d50ab81fc70c19904e643aa3744447",
+  "area": 467,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex218_bf16_reciprocal_cube_legacy_value_case_bits_15_cmp_caseattrs_fix9",
+  "case": "ex218",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cube",
+  "method_signature": "bf16_reciprocal_cube",
+  "reference_adp": 3222,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex218/aigs/ex218_bf16_reciprocal_cube_legacy_value_case_bits_15_cmp_caseattrs_fix9.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex215_ex219_frontend_bf16_deep2_20260606_1726",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex218/verilog/ex218_bf16_reciprocal_cube_legacy_value_case_bits_15_cmp_caseattrs_fix9.v",
+  "variant": "legacy_value_case_bits_15_cmp_caseattrs_fix9",
+  "verilog_sha256": "c549df6a230590d9a2dd010020d832d2018a096f3839d35f990a5d9ed700497a"
+}

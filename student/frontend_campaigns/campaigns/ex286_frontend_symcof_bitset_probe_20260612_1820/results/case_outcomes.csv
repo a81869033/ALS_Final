@@ -1,0 +1,2 @@
+case,domain,round7_candidates,round7_best_candidate,round7_best_adp,frontend_best_adp_before,reference_adp,frontend_ratio_before,round7_improved_frontend,beats_reference,next_recommendation
+ex286,unknown,5,ex286_unknown_symcof_interleave_f00_bits_0_12_1_10_onehot_group_abc_g_aig,20190,21705,2376,9.135101,1,0,continue explicit outer-bitset neighborhood around 0:12:1:10 and look for lower delay/area; still far from reference

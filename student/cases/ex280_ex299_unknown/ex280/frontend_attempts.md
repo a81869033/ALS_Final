@@ -87,3 +87,12 @@
 - `student/results/target_ex280_structure_best.csv`
 - `student/runs/unknown/ex280_backend_opt_20260604/results/best.csv`
 - `student/archive/cleanup_20260605/ex280_backend_intermediate/results/ex280_backend_search_post_delay_mock_best.csv`
+
+## 2026-06-13 02:50:51 +0800 Round22 unknown-a-r22
+
+- method_signature: `ex280|quartic_gf2_event_filter|raw_low_degree_anf_and_simple_equivariance_screen|shared_monomial_bank_or_rotation_recurrence|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG was emitted, so no `evaluate.py` row is claimed.
+- evidence: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/unknown-a-r22/ex280/diagnostics/ex280_round22_screen.md`
+- shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/unknown-a-r22/`
+- outcome: screened raw/shared low-degree ANF monomial bank and simple rotation/reverse structural recurrence; raw ANF remains degree 4 with 2142 terms, and best simple equivariance covers only 359/4096 rows.
+- next action: do not emit another raw ANF/equivariance source; ex280 needs a materially different compressor/basis than the prior shared quadratic compressor.

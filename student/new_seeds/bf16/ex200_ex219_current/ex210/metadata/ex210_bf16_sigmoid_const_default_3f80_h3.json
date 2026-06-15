@@ -1,0 +1,22 @@
+{
+  "adp": 33480,
+  "aig_sha256": "04afbd46c7fa59308c6222947bdeaff446c4da3b7b879f49ec6ab028719efccd",
+  "area": 2232,
+  "bundle_type": "current",
+  "candidate_id": "ex210_bf16_sigmoid_const_default_3f80_h3",
+  "case": "ex210",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_sigmoid",
+  "method_signature": "ex210|frontend|current",
+  "reference_adp": 27053,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex210/aigs/ex210_bf16_sigmoid_const_default_3f80_h3.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex210/verilog/ex210_bf16_sigmoid_const_default_3f80_h3.v",
+  "variant": "const_default_3f80_h3",
+  "verilog_sha256": "3d2614729488ef6e8bb36b4a3576d92728c2ee2d8d82a66c0e31e34b69b16388"
+}

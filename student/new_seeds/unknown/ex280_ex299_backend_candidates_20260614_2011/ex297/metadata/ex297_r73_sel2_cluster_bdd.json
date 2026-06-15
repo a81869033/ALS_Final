@@ -1,0 +1,22 @@
+{
+  "adp": 425648,
+  "aig_sha256": "b6c5c5834709d91b9347502b726eeab39e4440515bf4a6f8c333cd2dcc02712b",
+  "area": 26603,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r73_sel2_cluster_bdd",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "shared local identity/selector PO-cluster replacement",
+  "method_signature": "ex297|shared local identity/selector PO-cluster replacement|selector-2 selected output-cluster BDD overlay on current exact source|single inner BDD pool replaces only one 2-bit PO cluster under sel==2|yosys_internal_abc_g_aig|official_evaluate|ex297_r73_sel2_cluster_bdd",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round73_20260613_1404/sub-unknown-r73/ex297/aigs/ex297_r73_sel2_cluster_bdd.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round73_20260613_1404/agent_shards/sub-unknown-r73/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round73_20260613_1404/sub-unknown-r73/ex297/logs/ex297_r73_sel2_cluster_bdd.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round73_20260613_1404",
+  "source_verilog_path": "student/work/frontend_source_parallel_round73_20260613_1404/sub-unknown-r73/ex297/verilog/ex297_r73_sel2_cluster_bdd.v",
+  "variant": "sel2_cluster_bdd",
+  "verilog_sha256": "9ec91a59b1dc02ad1ebb8ee5556d220bdc91f3bc4fb7275abea86b754c1dd9eb"
+}

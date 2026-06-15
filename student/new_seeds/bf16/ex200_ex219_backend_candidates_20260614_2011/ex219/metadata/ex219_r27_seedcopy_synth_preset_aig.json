@@ -1,0 +1,22 @@
+{
+  "adp": 9225,
+  "aig_sha256": "bcabe7601ca73406ba65c116864d9519f24992b0eaa94285f303dcf5c7857a39",
+  "area": 615,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex219_r27_seedcopy_synth_preset_aig",
+  "case": "ex219",
+  "delay": 15,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_cbrt_current_seed_synthflow_refinement",
+  "method_signature": "ex219|bf16_reciprocal_cbrt_current_seed_synthflow_refinement|current frontend seed module copy with alternate Yosys mapping|existing shared BF16 sign/exponent/mantissa decode and selected-bit predicates|synth_preset_aig|BF16_DAZ_FTZ_canonical_NaN|full_word",
+  "reference_adp": 5640,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex219/official_eval/ex219_r27_seedcopy_synth_preset_aig/ex219.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round27_20260613_0613/agent_shards/mixed-uncovered-r27/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex219/logs/ex219_r27_seedcopy_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round27_20260613_0613",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round27_20260613_0613/mixed-uncovered-r27/ex219/verilog/ex219_bf16_reciprocal_cbrt_delta_pair_first_hilo3_bits_6_cmp_caseattrs_fix9_r27_seedcopy.v",
+  "variant": "current frontend seed module copy with alternate Yosys mapping",
+  "verilog_sha256": "7ec6fd9e4682a0d970687ed957faf88516febc9e5bbf4bcafbad89a71d87936b"
+}

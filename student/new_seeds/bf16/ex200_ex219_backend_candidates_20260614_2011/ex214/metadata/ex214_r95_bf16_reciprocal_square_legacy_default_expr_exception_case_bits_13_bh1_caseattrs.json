@@ -1,0 +1,22 @@
+{
+  "adp": 3740,
+  "aig_sha256": "3cbd47d245d74ac6126e918ee7e91ae7e8c6b1f8c6353c42bd30898d2aeb2d56",
+  "area": 340,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex214_r95_bf16_reciprocal_square_legacy_default_expr_exception_case_bits_13_bh1_caseattrs",
+  "case": "ex214",
+  "delay": 11,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_square",
+  "method_signature": "ex214|round95_power_tight_bf16|bf16_reciprocal_square|legacy_default_expr_exception_case_bits_13_bh1_caseattrs|source_level_field_or_selected_bit_recut|yosys_aigmap_then_official_evaluate|abc_read_truth_xf",
+  "reference_adp": 2424,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex214/official_eval/ex214_r95_bf16_reciprocal_square_legacy_default_expr_exception_case_bits_13_bh1_caseattrs/ex214.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_bf16_unknown_round95_20260614_0627/agent_shards/sub-bf16-power-tight-r95/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex214/logs/ex214_r95_bf16_reciprocal_square_legacy_default_expr_exception_case_bits_13_bh1_caseattrs.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_bf16_unknown_round95_20260614_0627",
+  "source_verilog_path": "student/work/frontend_gt15_bf16_unknown_round95_20260614_0627/sub-bf16-power-tight-r95/ex214/verilog/ex214_r95_bf16_reciprocal_square_legacy_default_expr_exception_case_bits_13_bh1_caseattrs.v",
+  "variant": "same default/exception base with low-delay hi1 selected-bit13 table",
+  "verilog_sha256": "d8c170ea579782945b642be877fb7241044ef3b441d9811cc74d51f21c13ccd2"
+}

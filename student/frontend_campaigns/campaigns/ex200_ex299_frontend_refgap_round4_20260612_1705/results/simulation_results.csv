@@ -1,0 +1,5 @@
+case,agent_id,candidate_id,simulator,status,log_path,notes
+ex286,routing-r4,ex286_fredkin_route_lossless_r0,iverilog,SKIPPED,,iverilog not available on PATH; official evaluate.py was run
+ex287,routing-r4,ex287_truth_rom_direct_r0,iverilog,SKIPPED,,iverilog not available on PATH; official evaluate.py was run
+ex297,state-r4,ex297_state_r4_truth_high_split_replay,official_evaluate.py,OK,student/work/ex200_ex299_frontend_refgap_round4_20260612_1705/state-r4/ex297/logs/ex297_state_r4_truth_high_split_replay.evaluate.log,official equivalence and ADP check used instead of separate simulation
+ex299,state-r4,ex299_state_r4_value_case_replay,official_evaluate.py,OK,student/work/ex200_ex299_frontend_refgap_round4_20260612_1705/state-r4/ex299/logs/ex299_state_r4_value_case_replay.evaluate.log,official equivalence and ADP check used instead of separate simulation

@@ -1,0 +1,22 @@
+{
+  "adp": 126756,
+  "aig_sha256": "e2223dfcf73ca9428b26a09bb2ba83ec92fafc755585c64e25648937bfa0e25d",
+  "area": 7042,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex221_varying_signexp_wordmode_mh5_abc_g_aig",
+  "case": "ex221",
+  "delay": 18,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex221|fp16_exp2_field_shell|active_signexp_wordmode_mh5|shared sign-exp decode plus per mant_hi mode default residuals|yosys_abc_g_aig|abc_xf_official_evaluate|wordmode_mant_hi5",
+  "reference_adp": 105655,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex221/aigs/ex221_varying_signexp_wordmode_mh5_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp16-extra-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex221/official_eval/ex221_varying_signexp_wordmode_mh5_abc_g_aig/ex221_varying_signexp_wordmode_mh5_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex221/verilog/ex221_varying_signexp_wordmode_mh5.v",
+  "variant": "active_signexp_wordmode_mh5",
+  "verilog_sha256": "564c23cb8c4f03d377a60d7845d45a46c7d14540cf7004e0a6233890d7e4ea1e"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 125520,
+  "aig_sha256": "b5cec1662624bd694aa8746fe4a6addead79c42da11dc09f1590bf7ecaf37e37",
+  "area": 8368,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex295_r11_bitplane_symbol_split_abc_g_aig_d14",
+  "case": "ex295",
+  "delay": 15,
+  "domain": "unknown",
+  "hypothesis": "lower-delay bitplane symbol split",
+  "method_signature": "ex295|state/cell interleaved selector exact split|bitplane_majority_default_exception|per_output_bit_balanced_tables|abc_g_aig_d14|official_truth_exact_partition|per_bit_outputs",
+  "reference_adp": 68064,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round11_20260612_1944/state-r11/ex295/aigs/ex295_r11_bitplane_symbol_split_abc_g_aig_d14.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round11_20260612_1944/agent_shards/state-r11/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round11_20260612_1944/state-r11/ex295/logs/ex295_r11_bitplane_symbol_split_abc_g_aig_d14.evaluate.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round11_20260612_1944",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round11_20260612_1944/state-r11/ex295/verilog/ex295_r11_bitplane_symbol_split_abc_g_aig_d14.v",
+  "variant": "per_output_bit_majority_defaults_abc_g_aig_d14",
+  "verilog_sha256": "76c92116190bec5c8c46a01d7c38a80a14cddf7d4db60336953979cb40bb7d37"
+}

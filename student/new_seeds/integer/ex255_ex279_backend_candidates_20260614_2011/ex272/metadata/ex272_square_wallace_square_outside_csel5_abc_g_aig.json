@@ -1,0 +1,22 @@
+{
+  "adp": 16288,
+  "aig_sha256": "9297ededea04ca360c21c43d6a2ee79e98e92d735b31d89beaded6fefc6da59e",
+  "area": 509,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex272_square_wallace_square_outside_csel5_abc_g_aig",
+  "case": "ex272",
+  "delay": 32,
+  "domain": "integer",
+  "hypothesis": "unsigned_square_x_times_x",
+  "method_signature": "unsigned_square_x_times_x",
+  "reference_adp": 10880,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex270_ex274_square_carryselect2_20260609_1138/ex272/aigs/ex272_square_wallace_square_outside_csel5_abc_g_aig.aig",
+  "source_csv": "student/runs/integer/ex270_ex274_square_carryselect2_20260609_1138/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex270_ex274_square_carryselect2_20260609_1138",
+  "source_verilog_path": "student/work/ex270_ex274_square_carryselect2_20260609_1138/ex272/verilog/ex272_square_wallace_square_outside_csel5.v",
+  "variant": "wallace_square_outside_csel5+abc_g_aig",
+  "verilog_sha256": "ed071f2b9c39425a9df862a28c18859c01a48c924a9d4ef69d5af97af25a063c"
+}

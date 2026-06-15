@@ -1,0 +1,22 @@
+{
+  "adp": 2990,
+  "aig_sha256": "7c8af566a685120332793e722cddf2fcd7e5da22fe00577d0f2aad07683f662d",
+  "area": 115,
+  "bundle_type": "current",
+  "candidate_id": "ex280_gf2_overlap_roots_small_roots_balanced_linfact_abc_g_aig",
+  "case": "ex280",
+  "delay": 26,
+  "domain": "unknown",
+  "hypothesis": "quartic_gf2_event_filter",
+  "method_signature": "ex280|quartic_gf2_event_filter|overlap_root_product_basis_small_roots|shared_overlapping_linear_roots_with_factored_linear_corrections|yosys_abc_g_aig|exact_full_clamp_mux_coordinate_degree2|balanced_root_products_plus_shared_linear_correction_xor",
+  "reference_adp": 2415,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unknown-gf2-r3/ex280/aigs/ex280_gf2_overlap_roots_small_roots_balanced_linfact_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unknown-gf2-r3/ex280/logs/ex280_gf2_overlap_roots_small_roots_balanced_linfact_abc_g_aig.evaluate.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex299_frontend_refgap_round3_20260612_1554",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round3_20260612_1554/unknown-gf2-r3/ex280/verilog/ex280_gf2_overlap_roots_small_roots_balanced_linfact_abc_g_aig.v",
+  "variant": "overlap_root_product_basis_small_roots",
+  "verilog_sha256": "28200d8dbe70f7a941389c8e1a7dd104b1d053ff011852de05ccea6a8562cea2"
+}

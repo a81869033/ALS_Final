@@ -1,0 +1,22 @@
+{
+  "adp": 9945,
+  "aig_sha256": "0e38ce4fe651f37894039c1fe923c45920aa6a82d303cddc1e097883cc17d824",
+  "area": 765,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex209_bf16_tanh_legacy_sign_exp_default_expr_case",
+  "case": "ex209",
+  "delay": 13,
+  "domain": "bf16",
+  "hypothesis": "bf16_tanh",
+  "method_signature": "bf16_tanh",
+  "reference_adp": 7320,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex209/aigs/ex209_bf16_tanh_legacy_sign_exp_default_expr_case.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex205_ex209_frontend_bf16_semantic_20260606_0946",
+  "source_verilog_path": "student/work/ex205_ex209_frontend_bf16_semantic_20260606_0946/ex209/verilog/ex209_bf16_tanh_legacy_sign_exp_default_expr_case.v",
+  "variant": "legacy_sign_exp_default_expr_case",
+  "verilog_sha256": "6514623083d6edb06c80e2e969daf9f24649f6accf2e3734f62ea015ed4229ed"
+}

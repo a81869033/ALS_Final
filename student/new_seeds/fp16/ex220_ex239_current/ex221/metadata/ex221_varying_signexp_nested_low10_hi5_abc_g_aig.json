@@ -1,0 +1,22 @@
+{
+  "adp": 122598,
+  "aig_sha256": "8f6e8a13f0fc37c2c088ea7d15012b30443f68f42d9f20e6b9a170b4f195b9c3",
+  "area": 6811,
+  "bundle_type": "current",
+  "candidate_id": "ex221_varying_signexp_nested_low10_hi5_abc_g_aig",
+  "case": "ex221",
+  "delay": 18,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex221|fp16_exp2_field_shell|active_signexp_nested_low10_hi5|shared sign-exp decode plus high output run trees and low10 nested LUT|yosys_abc_g_aig|abc_xf_official_evaluate|active_signexp_low10_hi5",
+  "reference_adp": 105655,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex221/aigs/ex221_varying_signexp_nested_low10_hi5_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "student/runs/fp16/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex221/official_eval/ex221_varying_signexp_nested_low10_hi5_abc_g_aig/ex221_varying_signexp_nested_low10_hi5_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp16-extra-r2/ex221/verilog/ex221_varying_signexp_nested_low10_hi5.v",
+  "variant": "",
+  "verilog_sha256": "458606f9bfdb3f31cf9e8793e86264aa93785ff1a32229981bcc59ac70e23b11"
+}

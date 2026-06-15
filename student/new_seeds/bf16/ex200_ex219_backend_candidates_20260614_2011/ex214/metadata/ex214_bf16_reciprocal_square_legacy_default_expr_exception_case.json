@@ -1,0 +1,22 @@
+{
+  "adp": 3816,
+  "aig_sha256": "f3e6d2e6fd9ece86d83380c1127e01ab76e9da7ad88bc84fe6fb7df73bbfd963",
+  "area": 318,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex214_bf16_reciprocal_square_legacy_default_expr_exception_case",
+  "case": "ex214",
+  "delay": 12,
+  "domain": "bf16",
+  "hypothesis": "bf16_reciprocal_square",
+  "method_signature": "bf16_reciprocal_square",
+  "reference_adp": 2424,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex214/aigs/ex214_bf16_reciprocal_square_legacy_default_expr_exception_case.aig",
+  "source_csv": "student/runs/bf16/ex200_ex219_current/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex210_ex214_frontend_bf16_semantic_20260606_1315",
+  "source_verilog_path": "student/work/ex210_ex214_frontend_bf16_semantic_20260606_1315/ex214/verilog/ex214_bf16_reciprocal_square_legacy_default_expr_exception_case.v",
+  "variant": "legacy_default_expr_exception_case",
+  "verilog_sha256": "1ce143a3e23282dbf25928fba5fcdc2c794c02b30b643d9380a3244db168b712"
+}

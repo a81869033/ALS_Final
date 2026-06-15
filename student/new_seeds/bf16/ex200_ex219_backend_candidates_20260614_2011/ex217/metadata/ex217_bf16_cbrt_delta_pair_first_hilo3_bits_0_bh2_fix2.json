@@ -1,0 +1,22 @@
+{
+  "adp": 8274,
+  "aig_sha256": "6f0e9daa1973ceeb6e48115d26953eb821bfbffb6b106d5aeddc6d14717949da",
+  "area": 591,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex217_bf16_cbrt_delta_pair_first_hilo3_bits_0_bh2_fix2",
+  "case": "ex217",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_cbrt",
+  "method_signature": "bf16_cbrt",
+  "reference_adp": 5785,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex215_ex219_frontend_bf16_semantic_20260606_1447/ex217/aigs/ex217_bf16_cbrt_delta_pair_first_hilo3_bits_0_bh2_fix2.aig",
+  "source_csv": "student/runs/bf16/ex215_ex219_frontend_bf16_semantic_20260606_1447/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex215_ex219_frontend_bf16_semantic_20260606_1447",
+  "source_verilog_path": "student/work/ex215_ex219_frontend_bf16_semantic_20260606_1447/ex217/verilog/ex217_bf16_cbrt_delta_pair_first_hilo3_bits_0_bh2_fix2.v",
+  "variant": "delta_pair_first_hilo3_bits_0_bh2_fix2",
+  "verilog_sha256": "faf02fcf3f50ec65dff0c07f2e6607c70977f1edad9fab92dd3a238ebf39a445"
+}

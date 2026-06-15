@@ -1,0 +1,22 @@
+{
+  "adp": 5880,
+  "aig_sha256": "d4200dbc0bfb7130ef6d0383547ccd9812d93fe9883b398c53815c3c11bab445",
+  "area": 420,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex216_bf16_cube_aggr_semantic_positive_symmetry_fields_bits_14_cmp_fix5_manual_sign_non_nan_fix10",
+  "case": "ex216",
+  "delay": 14,
+  "domain": "bf16",
+  "hypothesis": "bf16_cube",
+  "method_signature": "bf16_cube",
+  "reference_adp": 3357,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600/ex216/aigs/ex216_bf16_cube_aggr_semantic_positive_symmetry_fields_bits_14_cmp_fix5_manual_sign_non_nan_fix10.aig",
+  "source_csv": "student/runs/bf16/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex216_ex218_ex219_frontend_bf16_deep_20260606_1600",
+  "source_verilog_path": "student/work/ex216_ex218_ex219_frontend_bf16_deep_20260606_1600/ex216/verilog/ex216_bf16_cube_aggr_semantic_positive_symmetry_fields_bits_14_cmp_fix5_manual_sign_non_nan_fix10.v",
+  "variant": "aggr_semantic_positive_symmetry_fields_bits_14_cmp_fix5_manual_sign_non_nan_fix10",
+  "verilog_sha256": "4599f28e170d7bac678f000785b29abc21ba697385d66a7e798d12d015a2dee2"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 23834,
+  "aig_sha256": "759b267cb10d326c5c7871e5dcd98eda545c660e45fbbe464d673247faabbf1a",
+  "area": 701,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex245_r26_gap_class_synth_preset_aig",
+  "case": "ex245",
+  "delay": 34,
+  "domain": "float_fp8",
+  "hypothesis": "E5M2FN add with shared gap class formulas",
+  "method_signature": "ex245|E5M2FN packed add|gap class formula with shared same/diff decode|shared sorted fields gap sig class formulas and special shell|yosys_multi_official_evaluate|exact_e5m2fn_add_high_plus_low|gap_class_outputs|synth_preset_aig",
+  "reference_adp": 11050,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex245/aigs/ex245_r26_gap_class_synth_preset_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/fp8-r26/candidates.csv",
+  "source_evaluate_log": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex245/logs/ex245_r26_gap_class_synth_preset_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_refgap_round26_20260613_0539",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex245/verilog/ex245_r26_gap_class_synth_preset_aig.v",
+  "variant": "gap_class",
+  "verilog_sha256": "50fab1b3ce9ccd743ffda0ab48f457c9e67b8c89227c080c39fb58fec3f68376"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 7800,
+  "aig_sha256": "398f14d4ce03f17f9991da88545f94ad3566dce2731dc386ac3f869c41c9adab",
+  "area": 200,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex284_prefix_parity_full_clamp_basic_abc_g_aig",
+  "case": "ex284",
+  "delay": 39,
+  "domain": "unknown",
+  "hypothesis": "unknown_quadratic_compressor",
+  "method_signature": "unknown_quadratic_compressor",
+  "reference_adp": 4240,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex280_ex284_frontend_quadratic_compressor_synthflow_20260609_0216/ex284/aigs/ex284_prefix_parity_full_clamp_basic_abc_g_aig.aig",
+  "source_csv": "student/runs/unknown/ex280_ex284_frontend_quadratic_compressor_synthflow_20260609_0216/results/best.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex280_ex284_frontend_quadratic_compressor_synthflow_20260609_0216",
+  "source_verilog_path": "student/work/ex280_ex284_frontend_quadratic_compressor_20260609_0216/ex284/verilog/ex284_unknown_quadratic_compressor_prefix_parity_full_clamp_basic.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "dd9d9d9b4d6f1229bc58beda7c876428046743d333e62f36096787838431ba69"
+}

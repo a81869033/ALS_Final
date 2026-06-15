@@ -1,0 +1,22 @@
+{
+  "adp": 75449,
+  "aig_sha256": "fc6c3b2eb66a27e05cc428d5c2fdf7fc8210723a4792b0484ad3674746433c31",
+  "area": 3971,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex229_abc_g_aig_abc_g_aig_d18",
+  "case": "ex229",
+  "delay": 19,
+  "domain": "fp16",
+  "hypothesis": "fp16_tanh",
+  "method_signature": "fp16_tanh",
+  "reference_adp": 57968,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/seeds/fp16/ex220_ex239_backend_candidates_20260608_1008/ex229/aigs/ex229_abc_g_aig_abc_g_aig_d18.aig",
+  "source_csv": "student/seeds/fp16/ex220_ex239_backend_candidates_20260608_1008/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_seeds_fallback",
+  "source_run": "student/seeds",
+  "source_verilog_path": "student/seeds/fp16/ex220_ex239_backend_candidates_20260608_1008/ex229/verilog/ex229_abc_g_aig_abc_g_aig_d18.v",
+  "variant": "abc_g_aig_d18",
+  "verilog_sha256": "035b602afe7f04b51a1daf203673d431c11b1ff9005a216f6b11eae5a56ef755"
+}

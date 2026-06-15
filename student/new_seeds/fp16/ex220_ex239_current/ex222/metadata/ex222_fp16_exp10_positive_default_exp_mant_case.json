@@ -1,0 +1,22 @@
+{
+  "adp": 233530,
+  "aig_sha256": "4b247023e14da944c31b92f825a849491729fe14fe1d4b68d2db19057d1047b0",
+  "area": 10615,
+  "bundle_type": "current",
+  "candidate_id": "ex222_fp16_exp10_positive_default_exp_mant_case",
+  "case": "ex222",
+  "delay": 22,
+  "domain": "fp16",
+  "hypothesis": "",
+  "method_signature": "ex222|frontend|frontend_fp16_semantic",
+  "reference_adp": 173621,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/aigs/ex222_fp16_exp10_positive_default_exp_mant_case.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex220_ex224_frontend_fp16_semantic_20260606_2050",
+  "source_verilog_path": "student/work/ex220_ex224_frontend_fp16_semantic_20260606_2050/ex222/verilog/ex222_fp16_exp10_positive_default_exp_mant_case.v",
+  "variant": "positive_default_exp_mant_case",
+  "verilog_sha256": "6bda8f588e4da158d658606093b58a171e73fad68900c61dbabc7d356fd13432"
+}

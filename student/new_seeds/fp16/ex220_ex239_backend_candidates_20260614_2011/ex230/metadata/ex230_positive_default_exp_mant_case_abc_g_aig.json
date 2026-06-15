@@ -1,0 +1,22 @@
+{
+  "adp": 139580,
+  "aig_sha256": "9c11cc2e4ee38f9d20bdbaf3c4b60bcd2b90c4f9be1b4d7df8d12d8229c409fc",
+  "area": 6979,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex230_positive_default_exp_mant_case_abc_g_aig",
+  "case": "ex230",
+  "delay": 20,
+  "domain": "fp16",
+  "hypothesis": "fp16_sigmoid",
+  "method_signature": "fp16_sigmoid",
+  "reference_adp": 108320,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853/ex230/aigs/ex230_positive_default_exp_mant_case_abc_g_aig.aig",
+  "source_csv": "student/runs/fp16/ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex230_ex231_ex234_frontend_fp16_oldrows_abcg_20260607_1853",
+  "source_verilog_path": "student/work/reverse_fp16_semantic_20260604_1522/ex230/verilog/ex230_fp16_sigmoid_positive_default_exp_mant_case.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "41561dfbc58339168accf757593391121e743133c49b9680434a5344286d152a"
+}

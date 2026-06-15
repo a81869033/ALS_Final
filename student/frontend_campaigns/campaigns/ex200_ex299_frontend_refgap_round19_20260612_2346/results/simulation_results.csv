@@ -1,0 +1,13 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex244,ex244_round19_gapdecode_small_default,not_run,NOT_RUN,,fp8-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,official evaluate.py was run directly on synthesized AIG
+ex218,ex218_field_selector_abc_g_aig,iverilog,not_run,,fpbf-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,skipped quick simulation; official evaluate.py equivalence passed
+ex260,ex260_smul_bw_rev_hcla4_explicit_lowcarry_noabc,not_run,not_run,,integer-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,iverilog not run; official evaluate.py equivalence and ADP recorded
+ex285,ex285_decision_tree_greedy_round19_abc_g_and,,,,,ex200_ex299_frontend_refgap_round19_20260612_2346,
+ex249,ex249_round19_activegap_noabc,not_run,NOT_RUN,,fp8-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,official evaluate.py was run directly on synthesized AIG
+ex266,ex266_udiv_cof_bhi2_a4_wordmux_keep_noabc,not_run,not_run,,integer-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,iverilog not run; official evaluate.py equivalence and ADP recorded
+ex288,ex288_keybdd_selected_round19_no_abc,,,,,ex200_ex299_frontend_refgap_round19_20260612_2346,
+ex204,ex204_arithbase_hilo3_abc_g_aig,iverilog,not_run,,fpbf-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,skipped quick simulation; official evaluate.py equivalence passed
+ex276,ex276_isqrt_prefix4_ge_tree_mux_noabc,not_run,not_run,,integer-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,iverilog not run; official evaluate.py equivalence and ADP recorded
+ex248,ex248_round19_delta_neg_noabc,not_run,NOT_RUN,,fp8-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,official evaluate.py was run directly on synthesized AIG
+ex205,ex205_sep_fields_abc_g_and,iverilog,not_run,,fpbf-existing-r19,ex200_ex299_frontend_refgap_round19_20260612_2346,skipped quick simulation; official evaluate.py equivalence passed
+ex292,ex292_shared_bdd_round19_no_abc,,,,,ex200_ex299_frontend_refgap_round19_20260612_2346,

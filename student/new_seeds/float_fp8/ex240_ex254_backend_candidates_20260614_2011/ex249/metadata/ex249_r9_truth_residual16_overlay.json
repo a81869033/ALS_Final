@@ -1,0 +1,22 @@
+{
+  "adp": 4788,
+  "aig_sha256": "60ff687d6687c477b27176aad37fe59bfbad7a175f1864a71e3e769f644e135a",
+  "area": 171,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex249_r9_truth_residual16_overlay",
+  "case": "ex249",
+  "delay": 28,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex249|E5M2FN packed hypot abs high low|16-row exact residual LUT over decoded sign/magnitude fields with current core fallback|shared decoded high/low sign and magnitude key feeding a small hard-row residual table|yosys_abc_g_aig_frontend|official_evaluate|hard_row_residual_lut",
+  "reference_adp": 2079,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r9/ex249/aigs/ex249_r9_truth_residual16_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r9/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r9/ex249/logs/ex249_r9_truth_residual16_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r9/ex249/verilog/ex249_r9_truth_residual16_overlay.v",
+  "variant": "16-row exact residual LUT over decoded sign/magnitude fields with current core fallback",
+  "verilog_sha256": "256fc7a33cbaa8d5da9ad4f6925bc63343b8ae27f721a5dba1b93ae6470d07c6"
+}

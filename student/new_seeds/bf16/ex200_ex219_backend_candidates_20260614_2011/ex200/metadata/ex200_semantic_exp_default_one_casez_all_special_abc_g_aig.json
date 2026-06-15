@@ -1,0 +1,22 @@
+{
+  "adp": 59792,
+  "aig_sha256": "6cedfad22fb5c1d98575e453b99c7b4931f800729e863d4ee3175afc0ee92e61",
+  "area": 3737,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex200_semantic_exp_default_one_casez_all_special_abc_g_aig",
+  "case": "ex200",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp_daz_rne_ftz",
+  "method_signature": "ex200|bf16_exp_unary_semantic_shell|shared_special_case_shell|shared special-case decode plus direct mantissa LUT|yosys_abc_g_aig|DAZ+exp+BF16_RNE+FTZ|full word output grouped by sign_exp/mant",
+  "reference_adp": 40052,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/bf16-agent/ex200/aigs/ex200_semantic_exp_default_one_casez_all_special_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex200_ex299_frontend_parallel_shared_20260612_1422/agent_shards/bf16-agent/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex200_ex299_frontend_parallel_shared_20260612_1422",
+  "source_verilog_path": "student/work/ex200_ex299_frontend_parallel_shared_20260612_1422/bf16-agent/ex200/verilog/ex200_bf16_exp_semantic_exp_default_one_casez_all_special.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "c5b83d37386e49fc25292f3940fdf3fc18094d43664a7b2c10ccc9eff188cd39"
+}

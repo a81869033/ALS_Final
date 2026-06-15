@@ -1,0 +1,22 @@
+{
+  "adp": 3247,
+  "aig_sha256": "68ffbbd7f2c41e10a62d2fd9693e12a90936609d221cdf00c1a8c8c2be6ed529",
+  "area": 191,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex270_wallace_square_outside_csel5_synth_preset",
+  "case": "ex270",
+  "delay": 17,
+  "domain": "integer",
+  "hypothesis": "small square final-carry flow recut",
+  "method_signature": "ex270|small_square_final_carry_flow_recut|triangular_square_Wallace_outside_columns_with_csel5_final_merge|one_cross_term_per_symmetric_pair_and_carry_select_final_word_merge|synth_preset|unsigned_8_square|full_square_word",
+  "reference_adp": 2076,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex270/aigs/ex270_wallace_square_outside_csel5_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/integer-agent/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex270/official_eval/ex270_wallace_square_outside_csel5_synth_preset/ex270_wallace_square_outside_csel5_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/integer-agent/ex270/verilog/ex270_wallace_square_outside_csel5.v",
+  "variant": "triangular square Wallace outside columns with csel5 final merge",
+  "verilog_sha256": "ce7d183475df6d0ab5a1cb2b6eb78bc72d999a2e32a871dce4251cff7b2f03ee"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 19893,
+  "aig_sha256": "116d7a789b99a8287f50e72c0ca02bb39f14e3840b43e16e09e17d8b96305059",
+  "area": 1047,
+  "bundle_type": "current",
+  "candidate_id": "ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig",
+  "case": "ex289",
+  "delay": 19,
+  "domain": "unknown",
+  "hypothesis": "",
+  "method_signature": "ex289|frontend|frontend_duality_symcof_split2_xorwrap_synthflow",
+  "reference_adp": 13620,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex289_frontend_duality_symcof_split2_xorwrap_synthflow_20260609_1128/ex289/aigs/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex289_frontend_duality_symcof_split2_xorwrap_synthflow_20260609_1128",
+  "source_verilog_path": "student/work/ex289_frontend_duality_symcof_split2_xorwrap_20260609_1126/ex289/verilog/ex289_unknown_duality_symcof_split2_f10_bits_0_1_12_13_onehot_group_xor.v",
+  "variant": "abc_g_aig",
+  "verilog_sha256": "3db4454b2c7f889ceaf93024c906e8f275c97b5f1f631b6f0b0072f3b727da8a"
+}

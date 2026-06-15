@@ -1,0 +1,22 @@
+{
+  "adp": 16008,
+  "aig_sha256": "7ff7859f22af02982fb31fd757d62453a124d3c61f1612155b27acf843556c2e",
+  "area": 552,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex241_r9_special_dag_overlay",
+  "case": "ex241",
+  "delay": 29,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex241|E4M3FN packed multiply high byte times low byte|top-level special/zero decision DAG with current exact frontend source as residual core|shared byte field decode, NaN/zero/sign predicates, and residual current-core output|repo_yosys_frontend_default|official_evaluate|special_dag_residual_core",
+  "reference_adp": 7224,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r9/ex241/aigs/ex241_r9_special_dag_overlay.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_breakthrough_20260614_1051/agent_shards/fp8-r9/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r9/ex241/logs/ex241_r9_special_dag_overlay.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_breakthrough_20260614_1051",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_breakthrough_20260614_1051/fp8-r9/ex241/verilog/ex241_r9_special_dag_overlay.v",
+  "variant": "top-level special/zero decision DAG with current exact frontend source as residual core",
+  "verilog_sha256": "d19a5062ddaa7c5c23a90976e095325c15297dcaf8b65336ffbc4e0f0fe9f149"
+}

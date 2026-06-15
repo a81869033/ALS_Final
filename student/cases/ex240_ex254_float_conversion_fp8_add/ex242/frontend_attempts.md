@@ -54,3 +54,39 @@ Current known best:
   saturation formula, then recover the lower delay of the field-table seed.
   The best opportunity is still a quotient/rounding boundary formula with
   field-table-like delay and compact-formula-like area.
+
+## 2026-06-13 Round25 fp8-r25
+
+- Campaign: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round25_20260613_0506/agent_shards/fp8-r25/`.
+- Status: `blocker_no_material_candidate`.
+- Evidence: `student/work/ex200_ex299_frontend_refgap_round25_20260613_0506/fp8-r25/ex242/notes/high_level_dossier.md`.
+- Next action: `derive a quotient-boundary formula that keeps field-table delay while reducing boundary area`.
+
+## 2026-06-13 Round25 fp8-wide-r25
+
+- Campaign: `student/frontend_campaigns/campaigns/ex240_ex299_frontend_gt2_round25_20260613_0531/agent_shards/fp8-wide-r25/`.
+- Tested method families: `6` candidates across `2` materially different representations.
+- Official `evaluate.py` rows: `3/6` OK.
+- Best observed: `ex242_r25w_delta_sig_table_synth_preset_aig`, `2001/29/58029`, improved frontend `0`, beats reference `0`.
+- Paths: Verilog `student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/fp8-wide-r25/ex242/verilog/ex242_r25w_delta_sig_table_synth_preset_aig.v`; AIG `student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/fp8-wide-r25/ex242/aigs/ex242_r25w_delta_sig_table_synth_preset_aig.aig`; log `student/work/ex240_ex299_frontend_gt2_round25_20260613_0531/fp8-wide-r25/ex242/logs/ex242_r25w_delta_sig_table_synth_preset_aig.evaluate.py.log`.
+- Next action: `try source-level arithmetic factoring only if it changes semantic coordinates or sharing materially`.
+
+
+## 2026-06-13 Round26 fp8-r26
+
+- Campaign: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/fp8-r26/`.
+- Best official candidate in this shard: `` `//`.
+- Current frontend baseline used by this worker: `25320`; reference ADP `11900`.
+- Outcome: improved frontend `0`; beats reference `0`.
+- Evidence: ``.
+- Next action: Debug non-equivalence or choose a different representation family.
+
+
+## 2026-06-13 Round26 fp8-r26
+
+- Campaign: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round26_20260613_0539/agent_shards/fp8-r26/`.
+- Best official candidate in this shard: `ex242_r26_formula_bit_exception_synth_preset_aig` `1328/25/33200`.
+- Current frontend baseline used by this worker: `25320`; reference ADP `11900`.
+- Outcome: improved frontend `0`; beats reference `0`.
+- Evidence: `student/work/ex200_ex299_frontend_refgap_round26_20260613_0539/fp8-r26/ex242/logs/ex242_r26_formula_bit_exception_synth_preset_aig.evaluate.py.log`.
+- Next action: Try a new high-level representation; do not repeat this r26 source as-is.

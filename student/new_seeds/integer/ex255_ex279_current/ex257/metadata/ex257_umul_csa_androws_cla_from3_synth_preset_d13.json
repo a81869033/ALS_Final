@@ -1,0 +1,22 @@
+{
+  "adp": 5260,
+  "aig_sha256": "d5d55258d929f6c1c920a2ee9450f00d6cfd975c090953c11339a96ce456f3ec",
+  "area": 263,
+  "bundle_type": "current",
+  "candidate_id": "ex257_umul_csa_androws_cla_from3_synth_preset_d13",
+  "case": "ex257",
+  "delay": 20,
+  "domain": "integer",
+  "hypothesis": "unsigned low6_high6:a*b",
+  "method_signature": "unsigned low6_high6:a*b",
+  "reference_adp": 3952,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/work/ex255_ex259_frontend_umul_cla_spread_20260609_0133/ex257/aigs/ex257_umul_csa_androws_cla_from3_synth_preset_d13.aig",
+  "source_csv": "student/runs/integer/ex255_ex259_frontend_umul_cla_spread_20260609_0133/results/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "student_runs",
+  "source_run": "ex255_ex259_frontend_umul_cla_spread_20260609_0133",
+  "source_verilog_path": "student/work/ex255_ex259_frontend_umul_cla_spread_20260609_0133/ex257/verilog/ex257_umul_csa_androws_cla_from3.v",
+  "variant": "csa_androws_cla_from3+synth_preset_d13",
+  "verilog_sha256": "31a7ce7fc1aa2b4d1c59f079645a1bc64ca562b6175726225b39b677e045b441"
+}

@@ -1,0 +1,10 @@
+case,domain,round8_candidates,round8_best_candidate,round8_best_adp,frontend_best_adp_after,reference_adp,round8_improved_frontend,beats_reference,next_recommendation
+ex223,fp16,0,,,203756,120549,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex225,fp16,0,,,218728,116676,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex246,float_fp8,0,,,7502,2805,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex247,float_fp8,1,ex247_r13_mixed_delta_sig_bdd_synth_preset_aig,17917,8349,2975,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex260,integer,1,ex260_smul_b_const_shared_tree_abc_g_aig,2244,1144,657,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex266,integer,0,,,1480,848,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex286,unknown,0,,,20190,2376,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex287,unknown,0,,,27480,5782,0,0,gap remains; continue only with materially different high-level sharing/representation
+ex297,unknown,0,,,569592,225900,0,0,gap remains; continue only with materially different high-level sharing/representation

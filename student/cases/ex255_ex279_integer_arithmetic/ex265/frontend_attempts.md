@@ -43,3 +43,21 @@ What changed:
   quotient word with one shared mux.
 - Best selector in the tested set was generic `cof_bhi3_ahi1_bitbdd_wordmux`.
   It preserves delay 8 and reduces area from 66 to 63.
+
+## 2026-06-13 sub-integer-r74 official rows
+
+Run ID: `frontend_source_parallel_round74_20260613_1439`, agent `sub-integer-r74`.
+
+- `ex265_r74_qthreshold_ladder`: descending shared `q*b` threshold ladder; official `evaluate.py` equivalent, `155/20/3100`.
+- `ex265_r74_divisor_case_const`: divisor-keyed constant quotient arms; official `evaluate.py` equivalent, `80/8/640`.
+- Shard rows: `student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1439/agent_shards/sub-integer-r74/candidates.csv`.
+- Logs: `student/work/frontend_source_parallel_round74_20260613_1439/sub-integer-r74/ex265/logs/`.
+- Outcome: both are nonwinning versus current frontend `63/8/504`. The divisor-case row reproduces the older delay-8 shape but with too much area; the threshold ladder is far too deep. Do not repeat these source families unchanged.
+
+## 2026-06-14 integer-extra-r2 continuation
+
+Run ID: `ex204_ex299_frontend_continuation_20260614_1216`, agent `integer-extra-r2`.
+
+- Official `evaluate.py` OK rows: 10/10.
+- Best row: `ex265_udiv_cof_bhi2_ahi1_bitbdd_wordmux_abc_g_aig`, `65/8/520`; nonwinning versus current frontend `63/8/504`.
+- Failed directions: smaller/larger cofactor selector mixes, per-bit BDD search, and denominator-leading-zero range-low-BDD stayed exact but lost area at the same delay or increased delay. Current `bhi3+ahi1` word-mux remains the compact n=4 divider point.

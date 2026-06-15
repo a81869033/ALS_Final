@@ -1,0 +1,6 @@
+case,domain,candidate_id,shared_structures,sharing_strategy,estimated_benefit,agent_id,run_id,notes
+ex240,float_fp8,ex240_round20_current_anchor_same_grs_diff_param8,byte decode plus exponent gap clamp plus sign relation plus max/min magnitude selection plus same-sign GRS predicates plus compact diff normalizer,split same-sign and diff-sign paths while sharing operand decode and special predicates,baseline_anchor,fp8-wide-r20,ex200_ex299_frontend_refgap_round20_20260613_0015,nonwinning anchor identifies diff-sign normalizer and selection as likely remaining bottleneck
+ex247,float_fp8,ex247_round20_boundary_shell_mux_default,sign xor; NaN/zero decode; effective exponent decode; 3-bit significand decode; denominator-nested boundary attributes; low-pattern reconstruction; two-stage special/core magnitude mux,shared denominator attributes and grouped output-region predicates,low,fp8-tight-r20,ex200_ex299_frontend_refgap_round20_20260613_0015,sharing was exact but did not reduce ADP
+ex286,unknown,,,,,,ex200_ex299_frontend_refgap_round20_20260613_0015,Known exact sharing forms are table/cofactor/BDD/ANF scale and nonwinning
+ex297,unknown,,,,,,ex200_ex299_frontend_refgap_round20_20260613_0015,ADP 638460 does not beat current frontend 569592
+ex299,unknown,,,,,,ex200_ex299_frontend_refgap_round20_20260613_0015,ADP 2861208 does not beat current frontend 2487261

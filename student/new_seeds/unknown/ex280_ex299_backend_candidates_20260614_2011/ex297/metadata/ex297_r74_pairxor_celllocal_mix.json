@@ -1,0 +1,22 @@
+{
+  "adp": 425744,
+  "aig_sha256": "44b7cc065322090570d46fefb9e3c1436e302c1c7cfea1b668507cc056927dd7",
+  "area": 26609,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex297_r74_pairxor_celllocal_mix",
+  "case": "ex297",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "cyclic 2-bit pair-xor cell-local hybrid",
+  "method_signature": "ex297|cyclic_2bit_pairxor_celllocal_hybrid|selector_pair_xor_po_cell_mix|pairsel_template_and_celllocal_roots|yosys_internal_abc_g_aig|official_evaluate|cell_pair_outputs",
+  "reference_adp": 225900,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round74_20260613_1439/sub-unknown-rot2-r74/ex297/aigs/ex297_r74_pairxor_celllocal_mix.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round74_20260613_1439/agent_shards/sub-unknown-rot2-r74/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round74_20260613_1439/sub-unknown-rot2-r74/ex297/logs/ex297_r74_pairxor_celllocal_mix.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round74_20260613_1439",
+  "source_verilog_path": "student/work/frontend_source_parallel_round74_20260613_1439/sub-unknown-rot2-r74/ex297/verilog/ex297_r74_pairxor_celllocal_mix.v",
+  "variant": "pairxor_celllocal",
+  "verilog_sha256": "57762b9f5e0b5d64de882fb146bc62afde5a37038ea4b55d280152a53a3d03f9"
+}

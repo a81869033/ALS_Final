@@ -1,0 +1,22 @@
+{
+  "adp": 71440,
+  "aig_sha256": "d982ae54bb8cfa4dcd6b25e50103df85af9a5cdeddb2757841fea4a8699d0e30",
+  "area": 4465,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex205_r96_bf16_log10_sep_fields_current_extra_opt_aig",
+  "case": "ex205",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_log10_field_decode",
+  "method_signature": "bf16_log10_field_decode",
+  "reference_adp": 47128,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex205/official_eval/ex205_r96_bf16_log10_sep_fields_current_extra_opt_aig/ex205.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_gt15_structural_round96_20260614_0651/agent_shards/sub-bf16-smallgap-flow-r96/candidates.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_gt15_structural_round96_20260614_0651",
+  "source_verilog_path": "student/work/frontend_gt15_structural_round96_20260614_0651/sub-bf16-smallgap-flow-r96/ex205/verilog/ex205_r96_bf16_log10_sep_fields_current_extra_opt_aig.v",
+  "variant": "current field-decode source with extra_opt_aig",
+  "verilog_sha256": "c5d1edce1fe8e1e009038b4333c87a58c72c08eab33427602401092af055f524"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 166192,
+  "aig_sha256": "cdc17465f0bcbe8e3199134fdf723c3dd8a1cd88a1540b9c258badd9b1553543",
+  "area": 10387,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex296_deep_high_rotate_source_bitmix",
+  "case": "ex296",
+  "delay": 16,
+  "domain": "unknown",
+  "hypothesis": "open-boundary split sources have complementary output cones",
+  "method_signature": "ex296|open-boundary split sources have complementary output cones|per-output bit source grouping across exact high and rotated-high split bodies|base high-split body with rotated-high boundary and upper-middle output bits|abc_g_aig|official_evaluate_py|rot_hi_bits_0_1_8_9_10_11",
+  "reference_adp": 104025,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-state-agent/ex296/aigs/ex296_deep_high_rotate_source_bitmix.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex223_ex299_frontend_parallel_deep_20260614_0943/agent_shards/unknown-state-agent/candidates.csv",
+  "source_evaluate_log": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-state-agent/ex296/logs/ex296_deep_high_rotate_source_bitmix.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex223_ex299_frontend_parallel_deep_20260614_0943",
+  "source_verilog_path": "student/work/ex223_ex299_frontend_parallel_deep_20260614_0943/unknown-state-agent/ex296/verilog/ex296_deep_high_rotate_source_bitmix.v",
+  "variant": "per-output bit source grouping across exact high and rotated-high split bodies",
+  "verilog_sha256": "4c0dc476ffcf543f3e51cd85f19e5ee20e658c78f802e1e486286f5fa49108dc"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 1131,
+  "aig_sha256": "bf2d2d3656e858d4e0573f9bd0e6b9f43e89197a44f69156233084d04673e24e",
+  "area": 87,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex260_r78_grouped_keep_common_abc_g_aig",
+  "case": "ex260",
+  "delay": 13,
+  "domain": "integer",
+  "hypothesis": "signed_low4_high4_multiply",
+  "method_signature": "ex260|signed_low4_high4_multiply|current_source_boundary_enum_grouped_keep_common|combine_output_grouping_with_common_sign/compare_wire_boundaries|yosys_abc_g_aig|abc_xf_official_evaluate|not_r75_carryselect_booth_or_wordmux_spelling_not_r76_weighted_or_residual_not_r77_same_boundary",
+  "reference_adp": 657,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round78_20260613_1744/sub-fp16-int-enum-r78/ex260/aigs/ex260_r78_grouped_keep_common_abc_g_aig.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round78_20260613_1744/agent_shards/sub-fp16-int-enum-r78/candidates.csv",
+  "source_evaluate_log": "student/runs/integer/frontend_source_parallel_round78_20260613_1744/sub-fp16-int-enum-r78/ex260/official_eval/ex260_r78_grouped_keep_common_abc_g_aig/ex260_r78_grouped_keep_common_abc_g_aig.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round78_20260613_1744",
+  "source_verilog_path": "student/work/frontend_source_parallel_round78_20260613_1744/sub-fp16-int-enum-r78/ex260/verilog/ex260_r78_grouped_keep_common.v",
+  "variant": "current_source_boundary_enum_grouped_keep_common",
+  "verilog_sha256": "e16ee4a3c8d4945b233a4556417e1debe90d2d649b16748f4596187a74276998"
+}

@@ -1,0 +1,22 @@
+{
+  "adp": 6500,
+  "aig_sha256": "ee700e97f038134b3b9b15018d6ad1efa807123ecd47691f9999b78a5ecdcc68",
+  "area": 250,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex247_r2_lowpred_step_mux_abc_g_aig_frontend",
+  "case": "ex247",
+  "delay": 26,
+  "domain": "float_fp8",
+  "hypothesis": "",
+  "method_signature": "ex247|E5M2FN packed low-over-high division|tail-direct table with low residual selected by low_step mux|step2 and step3 residual rows are named once and selected by low_step|abc_g_aig_frontend|official_evaluate|lowpred_step_mux",
+  "reference_adp": 2975,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex247/aigs/ex247_r2_lowpred_step_mux_abc_g_aig_frontend.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/ex204_ex299_frontend_continuation_20260614_1216/agent_shards/fp8-tail-transfer-r2/candidates.csv",
+  "source_evaluate_log": "student/runs/float_fp8/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex247/logs/ex247_r2_lowpred_step_mux_abc_g_aig_frontend.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "ex204_ex299_frontend_continuation_20260614_1216",
+  "source_verilog_path": "student/work/ex204_ex299_frontend_continuation_20260614_1216/fp8-tail-transfer-r2/ex247/verilog/ex247_r2_lowpred_step_mux_abc_g_aig_frontend.v",
+  "variant": "tail-direct table with low residual selected by low_step mux",
+  "verilog_sha256": "541ce6ca44cddf535a15a50b020cc5cdb3a4e2af8dba55ef2536bc4b3febdb1b"
+}

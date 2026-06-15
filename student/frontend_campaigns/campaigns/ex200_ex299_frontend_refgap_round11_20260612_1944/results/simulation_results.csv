@@ -1,0 +1,12 @@
+case,candidate_id,simulator,status,log_path,agent_id,run_id,notes
+ex286,,n/a,,,routing-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,No Verilog emitted because no permitted exact descriptor was available.
+ex287,,n/a,,,routing-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,No Verilog emitted because no permitted exact descriptor was available.
+ex295,ex295_r11_bitplane_symbol_split_abc_g_aig_d14,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows
+ex295,ex295_r11_evenbase_residual_split_abc_g_aig,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows
+ex249,ex249_round11_output_grouped_delta_abc_g_aig,not_run,skipped,,fp8-extra-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,Official evaluate.py CEC was used directly.
+ex249,ex249_round11_output_grouped_delta_synth_preset_aig,not_run,skipped,,fp8-extra-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,Official evaluate.py CEC was used directly.
+ex295,ex295_r11_evenbase_residual_split_abc_g_aig_d14,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows
+ex297,ex297_r11_evenbase_residual_split_abc_g_aig,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows
+ex297,ex297_r11_evenbase_residual_split_abc_g_aig_d14,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows
+ex299,ex299_r11_evenbase_residual_split_abc_g_aig,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows
+ex299,ex299_r11_evenbase_residual_split_abc_g_aig_d14,python_exhaustive_model,PASS,,state-r11,ex200_ex299_frontend_refgap_round11_20260612_1944,exact Python model over all truth rows

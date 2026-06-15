@@ -1,0 +1,22 @@
+{
+  "adp": 55648,
+  "aig_sha256": "f57188285096e1bb9aa740c05948d3c26b25f072c1fadb11e72042fb5cf22ced",
+  "area": 3478,
+  "bundle_type": "current",
+  "candidate_id": "ex202_bf16_exp10_sep_fields_e3_m3_s0_bits_14_15_bh4",
+  "case": "ex202",
+  "delay": 16,
+  "domain": "bf16",
+  "hypothesis": "bf16_exp10",
+  "method_signature": "ex202|frontend|current",
+  "reference_adp": 43344,
+  "selection_reason": "current_best",
+  "source_aig_path": "student/seeds/bf16/ex200_ex219_current/ex202/aigs/ex202_bf16_exp10_sep_fields_e3_m3_s0_bits_14_15_bh4.aig",
+  "source_csv": "student/frontend_campaigns/frontend_best_registry.csv",
+  "source_evaluate_log": "",
+  "source_kind": "frontend_best_registry",
+  "source_run": "ex200_ex219_current",
+  "source_verilog_path": "student/seeds/bf16/ex200_ex219_current/ex202/verilog/ex202_bf16_exp10_sep_fields_e3_m3_s0_bits_14_15_bh4.v",
+  "variant": "sep_fields_e3_m3_s0_bits_14_15_bh4",
+  "verilog_sha256": "16a15e83124b1968b787162c979f54f8376ac9294017cd3f13ad352203d9eeab"
+}

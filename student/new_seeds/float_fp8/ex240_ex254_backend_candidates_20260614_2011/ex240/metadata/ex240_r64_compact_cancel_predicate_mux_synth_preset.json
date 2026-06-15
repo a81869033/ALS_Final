@@ -1,0 +1,22 @@
+{
+  "adp": 27448,
+  "aig_sha256": "29dad5bb5e84eeda2d795d3058a5aea522f31a1375b43e4d31240ada4e6d5ec1",
+  "area": 584,
+  "bundle_type": "backend_candidates",
+  "candidate_id": "ex240_r64_compact_cancel_predicate_mux_synth_preset",
+  "case": "ex240",
+  "delay": 47,
+  "domain": "float_fp8",
+  "hypothesis": "E4M3FN packed add source restructuring",
+  "method_signature": "ex240|E4M3FN packed add|ex240_r64_compact_cancel_predicate_mux|shared field decode diff-normalizer and selected-output factoring|repo_yosys_frontend|official_evaluate|full_word|synth_preset",
+  "reference_adp": 13299,
+  "selection_reason": "backend_start_diverse_noncurrent",
+  "source_aig_path": "student/work/frontend_source_parallel_round64_20260613_1004/sub-mixed-diffroute-r64/ex240/aigs/ex240_r64_compact_cancel_predicate_mux_synth_preset.aig",
+  "source_csv": "student/frontend_campaigns/campaigns/frontend_source_parallel_round64_20260613_1004/agent_shards/sub-mixed-diffroute-r64/candidates.csv",
+  "source_evaluate_log": "student/work/frontend_source_parallel_round64_20260613_1004/sub-mixed-diffroute-r64/ex240/logs/ex240_r64_compact_cancel_predicate_mux_synth_preset.evaluate.py.log",
+  "source_kind": "frontend_campaign_shard",
+  "source_run": "frontend_source_parallel_round64_20260613_1004",
+  "source_verilog_path": "student/work/frontend_source_parallel_round64_20260613_1004/sub-mixed-diffroute-r64/ex240/verilog/ex240_r64_compact_cancel_predicate_mux.v",
+  "variant": "synth_preset",
+  "verilog_sha256": "70fc04e5da1c0f7b3cebdfddcde8979f79cc2a17f96af0203099cf7efea8a794"
+}

@@ -121,3 +121,27 @@
 
 - `student/results/unknown_candidates_current_summary.csv`
 - `student/results/unknown_candidates_current_best.csv`
+
+## 2026-06-12 Round10 unknown-top-r10
+
+- Dossier: `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-top-r10/ex289/notes/high_level_dossier.md`.
+- High-level description: 16-bit Hamming-weight-preserving lossy routing/normalizer; no constant outputs; exact input swap symmetries `(4,5)`, `(6,7)`, `(8,9)`, `(10,11)`; current best remains split2 complement/reverse duality plus XOR wrapper.
+- Families tried:
+  - `lane_component_shared_bdd`: exact shared BDD with mod-4 lane/component input order and one global node pool.
+  - `mod8_output_linear_anf_residual_bdd`: exact GF(2) mod-8 output-linear parity coordinates with shared monomial bank plus residual BDD roots.
+- Method signatures:
+  - `ex289|hamming_weight_preserving_lossy_routing_normalizer|lane_component_shared_bdd|mod4_lane_order_single_node_pool|yosys_abc_g_aig|abc_xf_official_evaluate|lane_grouped_output_roots`
+  - `ex289|hamming_weight_preserving_lossy_routing_normalizer|mod8_output_linear_anf_residual_bdd|shared_monomial_bank_plus_residual_roots|yosys_abc_g_aig|exact_output_linear_coordinates|mod8_lane_reconstruction`
+- Official results: both `evaluate.py` OK. Lane BDD `9722/26/252772`; mod8 ANF residual `9910/138/1367580`.
+- Paths: candidates `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round10_20260612_1911/agent_shards/unknown-top-r10/candidates.csv`; logs under `student/work/ex200_ex299_frontend_refgap_round10_20260612_1911/unknown-top-r10/ex289/logs/`.
+- Outcome: no improvement over current frontend `19893`. These wrappers are far weaker than split2 duality.
+- Next action: keep working from split2 duality sharing/delay if ex289 is revisited; do not repeat lane/component BDD or mod8 output-coordinate ANF residual forms.
+
+## 2026-06-13 02:50:51 +0800 Round22 unknown-a-r22
+
+- method_signature: `ex289|hamming_weight_preserving_lossy_routing_normalizer|compact_pair_state_and_lane_count_descriptor_screen|shared_pair_descriptors_and_lane_count_state|no_synth|blocked_before_verilog|full_word`
+- official result: `BLOCKED_NO_CANDIDATE`; no Verilog/AIG was emitted, so no `evaluate.py` row is claimed.
+- evidence: `student/work/ex200_ex299_frontend_refgap_round22_20260613_0218/unknown-a-r22/ex289/diagnostics/ex289_round22_screen.md`
+- shard CSVs: `student/frontend_campaigns/campaigns/ex200_ex299_frontend_refgap_round22_20260613_0218/agent_shards/unknown-a-r22/`
+- outcome: screened compact pair-state controlled routing and lane/count normalizer descriptors. Popcount preservation is exact, but pair-state exactness needs 20736 keys and compact lane/count majority reaches only 5358/65536 rows.
+- next action: do not emit a key-table/cofactor repeat; ex289 remains best pursued from split2 duality or another new nonlinear routing state, not these descriptors.
